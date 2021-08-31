@@ -1,0 +1,41 @@
+
+.btn-lost {
+  color: white;
+  background-color: #f0ad4e;
+    border-color: #f0ad4e;
+}
+.btn-lost:hover{
+    background-color: #ed9c2c;
+    border-color: #ed9c2c;
+    color: white;
+
+}
+
+.btn-login{
+    background-color: #3c8dbc;
+}
+
+.underline-small{
+  
+  display:inline-block;
+  position:relative;
+  
+}
+
+.underline-small::after{
+  content:'';
+  height:1.9px;
+  width:50%;
+  background:#3c8bdc;
+  position:absolute;
+  left:calc(60% - 40%);
+  bottom:-5px;
+
+  
+}
+@media only screen and (max-width: 768px) {
+    .wrapper{
+        overflow-x: hidden;
+    }
+}
+

@@ -1,0 +1,179 @@
+body {
+    overflow-x: hidden;
+}
+
+.dropdown-item {
+    color: #3c8dbc;
+}
+.dropdown-menu-lg .dropdown-item {
+    padding: 10px;
+}
+.box.box-primary {
+    border-top-color: #007bff;
+}
+.btn-default {
+    background-color: #f4f4f4;
+    color: #444;
+    border-color: #ddd;
+}
+
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    padding: 10px;
+}
+
+.dataTables_filter {
+    align-items: flex-end;
+}
+
+.btn.btn-primary {
+    background-color: #3c8dbc;
+}
+
+.btn-pag {
+    background-color: #3c8dbc;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+.content,
+.content-header {
+    animation: fadeInAnimation ease-in 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
+.btn-group {
+    margin-bottom: 10px;
+}
+.input-group-addon{
+    margin-right: 5px;
+    margin-top: 4px;
+}
+.datepicker td,
+.datepicker th
+{
+  padding: 5px;
+  line-height: 1;
+  width: 30px;
+  height: 30px;
+}
+
+.datepicker.dropdown-menu {
+  padding: 4px;
+  
+
+}
+.day:hover{
+    color: white;
+    background-color: #3c8dbc;
+    cursor: pointer;
+}
+.form-group{
+    margin-top: 5px;
+}
+.visib{
+    display: none;
+}
+.datepicker.dropdown-menu {
+    z-index: 9999 !important;
+}
+
+.datepicker-switch{
+    text-align: center;
+    color: #3c8dbc;
+    cursor: pointer;
+}
+.dow, .prev,.next   {
+    color: #3c8dbc;
+    cursor: pointer;
+}
+.datepicker{
+    overflow: hidden;
+    z-index: 0;
+}
+.month:hover, .century:hover, .decade:hover, .year:hover {
+    background-color: #3c8dbc;
+    cursor: pointer;
+    color: white;
+    border-radius: 2px;
+    
+}
+.century, .decade, .year, .month{
+    margin-left: 5px;
+}
+.fa-user-cog {
+    color: #3a8dbc;
+}
+@media only screen and (max-width: 768px) {
+    .wrapper{
+        overflow-x: hidden;
+    }
+    .pagination{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+}
+#pagination {
+  display: inline-block;
+    cursor: pointer;
+}
+
+#pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  font-size: 10px;
+}
+
+#pagination a.current {
+  background-color: #3a8dbc;
+  color: white;
+  border: 1px solid #3a8dbc;
+}
+
+#pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
