@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Dashboard</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
+  <!-- Custom -->
+  <link rel="stylesheet" href="../dist/css/custom.css">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Header -->
+    <header role="banner" class="site-header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="#">Submit Ticket</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Knowledge Base
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Billing </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">login </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="live-search">
+          <form class="input-group input-group-sm">
+            <input class="form-control form-control-navbar" type="search"
+              placeholder="Have a question? Ask or enter a search term." aria-label="Search">
+            <div class="input-group-append">
+              <button class="btn btn-navbar" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+    <!-- END Header -->
+
+    <div class="main-content-wrapper">
+      <div class="container">
+        <div class="content-header">
+          <div class="breadcrumb-top">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Knowledge Base </a></li>
+              <li class="breadcrumb-item"><a href="#">Article List </a></li>
+              <li class="breadcrumb-item"><a href="#">Reports </a></li>
+              <li class="breadcrumb-item active">Top Customer Analysis Report (Organization Report)</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <!-- BEGIN .post -->
+            <article>
+              <div class="knowledgebase-widget-wrapper">
+                <header id="page-header">
+                  <h1 class="page-title">Using my credit</h1>
+                  <div class="knowledgebase-meta mt-2 mb-4">
+                    <span class="date mr-3">
+                      <i class="far fa-clock fa-fw"></i>
+                      <time>January 16, 2020 01:18 pm</time>
+                    </span>
+                    <span class="category">
+                      <i class="far fa-folder-open fa-fw"></i>
+                      <a href="#" class="" title="Reports">Reports</a>
+                    </span>
+                  </div>
+                  <hr>
+                </header>
+                <div class="single-page-content">
+                  <p>Top Customer Analysis gives and helps you to understand which organization has the highest number
+                    of tickets trends in the kinds of tickets they've raised and in that tickets how many resolved,
+                    unresolved and reopened.
+                  </p>
+                  <p>
+                    It also provides how many tickets met with a response and resolution SLA and reported with the
+                    number of client and agent replies.
+                  </p>
+                  <p>
+                    Faveo Support system provides you the different chart types to view the report:
+                  </p>
+                  <ul>
+                    <li>Bar</li>
+                    <li>Horizontal Bar</li>
+                    <li>Pie</li>
+                    <li>Doughnut</li>
+                  </ul>
+                  <p>The Analytical chart is displayed for the top organizations with the tickets count.</p>
+                  <h4>Your top 5 customers will be displayed, based on the following metrics:
+                  </h4>
+                  <table class="table table-bordered table-hover">
+                    <tbody>
+                      <tr>
+                        <td><strong>Metrics</strong></td>
+                        <td><strong>What it means</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Tickets Received from the organizations</td>
+                        <td>In this, it displays the highest number of tickets created by the organizations through any
+                          channel.</td>
+                      </tr>
+                      <tr>
+                        <td>Tickets resolved for the organization</td>
+                        <td>It displays the organizations which have the highest count of resolved tickets in the chart.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Tickets unresolved count of the top organization</td>
+                        <td>Here, the highest number of tickets that were not resolved in the top organizations are
+                          displayed.&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>Tickets reopened by the organization</td>
+                        <td>The highest number of tickets reopened by the organization is displayed with the ticket
+                          count.</td>
+                      </tr>
+                      <tr>
+                        <td>Tickets met with Response SLA and replied</td>
+                        <td>It shows the top organizations which have the highest count of the tickets raised and that
+                          is met Respond SLA and replied.</td>
+                      </tr>
+                      <tr>
+                        <td>Tickets which are met with Resolution SLA&nbsp;</td>
+                        <td>Here, it shows the highest number of tickets that were met with Resolution SLA displayed in
+                          the chart for the top organization.</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p>Client Responses</p>
+                          <p>(Client Interaction on the tickets)</p>
+                        </td>
+                        <td>Displays the chart for the total number of responses added by the customer on the tickets
+                          for the top organization.</td>
+                      </tr>
+                      <tr>
+                        <td>Agent Responses (Agent Interactions)&nbsp;&nbsp;</td>
+                        <td>It gives an analytical chart about the agent responses on the tickets for the top
+                          organization.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>You can use the filters to dig deeper and find out answers to specific questions, For example,
+                    “Only to view the Opened tickets of the organization”, etc...</p>
+                  <h4>A Quick Guide to view top customer analysis report:</h4>
+                  <ul>
+                    <li>ogin to Faveo Support Portal as an Agent</li>
+                    <li>Navigate to <strong>Agent Panel > Reports > Top Customer Analysis.</strong></li>
+                  </ul>
+                  <img
+                    src="https://lh3.googleusercontent.com/W-PFlhh9O5pFq1ZAG8n_565YKTTsEEps4vXDaa58r6uEExCnWWnXTsGXUueaSwW8m1w69Iqkl_T52yLPpAby5QZD2JCOqkljlmT-vdcp36DKux5BV1w2WJmXC4mJ0if9pzl-jV02"
+                    alt="" class="img-fluid">
+                  <ul>
+                    <li>When you select the Top Customer Analysis Report following are the analytical report’s charts
+                      are displayed.</li>
+                  </ul>
+                  <h5>Received Tickets:</h5>
+                  <p>In this, the analytical report is given on the Top organizations in which the highest tickets
+                    received.
+                    <img
+                      src="https://lh6.googleusercontent.com/Qc9JdcuWQRiORPUsbKGqDZITRi6vJTZ34wQppXYEGrkkNVl7jTqhWuQYsa09PkSGYNUKWre-bMdVP8ZOtaqoviT4cmeJeZZ_n_9Lo_sjrE6Rm40Y1IyUO-fjPAbUu85YfiSTmOAT"
+                      alt="" class="img-fluid">
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <aside id="sidebar" class="sidebar">
+              <header id="page-header">
+                <h2 class="page-title"> Article Categories</h2>
+              </header>
+              <div class="widget widget_article_categories">
+                <ul class="m-0 p-0">
+                  <li>
+                    <div><span>12</span><a href="#" title="">Account Settings</a> </div>
+                  </li>
+                  <li>
+                    <div><span>5</span><a href="#" title="">Billing</a> </div>
+                  </li>
+                  <li>
+                    <div><span>6</span><a href="#" title="">Copyright &amp; Legal</a> </div>
+                  </li>
+                  <li>
+                    <div><span>7</span><a href="#" title="">Customization</a> </div>
+                  </li>
+                  <li>
+                    <div><span>12</span><a href="#" title="">Getting Started</a> </div>
+                  </li>
+                  <li>
+                    <div><span>3</span><a href="#" title="">Troubleshooting</a> </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget widget_article_categories">
+                <h4 class="widgettitle">Most Viewed</h4>
+                <ul class="m-0 p-0">
+                  <li>
+                    <a href="#" rel="bookmark">Using my credit</a>
+                    <span class="meta">
+                      <span class="nice-views"><i class="fa fa-bullseye mr-2"></i> 1197 </span>
+                    </span>
+                  </li>
+                  <li>
+                    <a href="#" rel="bookmark">Manage your email subscription preferences</a>
+                    <span class="meta">
+                      <span class="nice-views"><i class="fa fa-bullseye mr-2"></i> 894 </span>
+                    </span>
+                  </li>
+                  <li>
+                    <a href="#" rel="bookmark">Account overview</a>
+                    <span class="meta">
+                      <span class="nice-views"><i class="fa fa-bullseye mr-2"></i> 841 </span>
+                    </span>
+                  </li>
+                  <li class="clearfix format-video">
+                    <a href="#" rel="bookmark">How do I update my credit card?</a>
+                    <span class="meta">
+                      <span class="nice-views"><i class="fa fa-bullseye mr-2"></i> 827 </span>
+                    </span>
+                  </li>
+                  <li>
+                    <a href="#" rel="bookmark">Manual Payment Methods</a>
+                    <span class="meta">
+                      <span class="nice-views"><i class="fa fa-bullseye mr-2"></i> 827 </span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="widget widget_article_categories">
+                <h4 class="widgettitle">Most Liked</h4>
+                <ul class="m-0 p-0">
+                  <li>
+                    <a href="#" rel="bookmark">Using my credit</a>
+                    <span class="meta">
+                      <span class="nice-likes"><i class="fa fa-heart mr-2"></i> <span
+                          class="like-count">27</span></span>
+                    </span>
+                  </li>
+                  <li>
+                    <a href="#" rel="bookmark">Manage your email subscription preferences</a>
+                    <span class="meta">
+                      <span class="nice-likes"><i class="fa fa-heart mr-2"></i> <span class="like-count">9</span></span>
+                    </span>
+                  </li>
+                  <li>
+                    <a href="#" rel="bookmark">Account overview</a>
+                    <span class="meta">
+                      <span class="nice-likes"><i class="fa fa-heart mr-2"></i> <span
+                          class="like-count">10</span></span>
+                    </span>
+                  </li>
+                  <li>
+                    <a href="#" rel="bookmark">How do I update my credit card?</a>
+                    <span class="meta">
+                      <span class="nice-likes"><i class="fa fa-heart mr-2"></i> <span class="like-count">9</span></span>
+                    </span>
+                  </li>
+                  <li>
+                    <a href="#" rel="bookmark">Manual Payment Methods</a>
+                    <span class="meta">
+                      <span class="nice-likes"><i class="fa fa-heart mr-2"></i> <span class="like-count">7</span></span>
+                    </span>
+                  </li>
+                </ul>
+              </div> <!-- END #sidebar -->
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer class="main-f-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="f-widget">
+              <h3>PRODUCTS</h3>
+              <ul>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Faveo Helpdesk
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Faveo Servicedesk
+                  </a>
+                </li>
+                <li>
+                  <a href="https://epapermanager.com/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>ePaper
+                    Manager</a>
+                </li>
+                <li>
+                  <a href="https://www.agorainvoicing.com/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Agora Invoicing
+                  </a>
+                </li>
+                <li>
+                  <a href="http://codecanyon.net/user/ladybirdweb/portfolio">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Scripts
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="f-widget">
+              <h3>POLICIES</h3>
+              <ul>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/privacy-policy/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/terms-conditions/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Terms &amp; Conditions
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/eula/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>EULA
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/data-deletion-policy/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Data Deletion Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/data-hosting-policy/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Data Hosting Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/security/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true">
+                    </i>Secure Customer Service Software
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/cookies-policy/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Cookies Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/gdpr/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>GDPR &amp; EU Data Protection
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="f-widget">
+              <h3>SERVICES</h3>
+              <ul>
+                <li>
+                  <a href="https://www.ladybirdweb.com/services/ecommerce-website-design/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>E-commerce website design
+                    &amp;
+                    development india</a>
+                </li>
+                <li>
+                  <a href="http://www.ladybirdweb.com/web-design-development-india/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Web Design &amp; Development India
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.ladybirdweb.com/services/web-app-development/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Web Applications Development
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.ladybirdweb.com/website-maintenance-india/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Website Maintenance India
+                  </a>
+                </li>
+                <li>
+                  <a href="https://store.ladybirdwebhost.com/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Domain Registration &amp; Web Hosting
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="f-widget">
+              <h3>SUPPORT</h3>
+              <ul>
+                <li>
+                  <a href="https://support.faveohelpdesk.com/knowledgebase">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>User Manual
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.faveohelpdesk.com/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Installation Manual
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/request-a-demo/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Request A Demo
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/become-a-partner/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Become a Partner
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/our-partners/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Our Partners
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/love-open-source/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>We Love Open Source
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/faveo-helpdesk-road-map/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Faveo Road Map
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.faveohelpdesk.com/support-community-edition/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Support the Community Edition</a>
+                </li>
+                <li>
+                  <a href="https://developers.faveohelpdesk.com">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Developer Portal
+                  </a>
+                </li>
+                <li>
+                  <a href="https://forum.faveohelpdesk.com/">
+                    <i class="fa fa-angle-right mr-2" aria-hidden="true"></i>Community Forums
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-6">
+            <p class="m-0">Copyright © 2021. Ladybird Web Solution All rights reserved. Powered by Faveo</p>
+          </div>
+          <div class="col-md-6">
+            <div class="site-social text-right">
+              <ul class="m-0 p-0">
+                <li>
+                  <a href="#" target="_blank" class="btn-social btn-linkedin">
+                    <i class="fab fa-linkedin fa-fw"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="btn-social btn-twitter">
+                    <i class="fab fa-twitter fa-fw"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="btn-social btn-facebook">
+                    <i class="fab fa-facebook-f fa-fw"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="btn-social btn-youtube">
+                    <i class="fab fa-youtube fa-fw"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" class="btn-social btn-instagram">
+                    <i class="fab fa-instagram fa-fw"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- END Footer -->
+  </div>
+
+
+
+
+
+
+  <section id="content" class="main-content" role="main">
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="../plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="../plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="../plugins/sparklines/sparkline.js"></script>
+
+  <!-- jQuery Knob Chart -->
+  <script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="../plugins/moment/moment.min.js"></script>
+  <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="../plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../dist/js/adminlte.js"></script>
+</body>
+
+</html>
