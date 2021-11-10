@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+/* Layout Two Header */
+.site-header.layout-two {
+    background: transparent;
+    background-color: #f9f9f9;
+}
+
+.site-header.layout-two .navbar-nav {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.site-header.layout-two a.navbar-brand {
+    color: #353535;
+}
+
+.site-header.layout-two .live-search {
+    padding: 0px 0px 0px 0px;
+    max-width: 100%;
+}
+
+.site-header.layout-two nav.navbar .nav-item .nav-link {
+    color: #525252;
+}
+
+.site-header .navbar .navbar-brand {
+    max-width: 250px;
+}
+
+
+.site-header.layout-two nav.navbar .nav-item .nav-link {
+    color: #525252;
+    padding: 18px 20px;
+}
+
+.site-header.layout-two nav.navbar .nav-item {
+    border-right: solid 1px #ccc;
+}
+
+.site-header.layout-two nav.navbar .nav-item:last-child {
+    border: 0;
+}
+
+
+/* END Header */
+
+
+
+/* Main Content */
+#corewidgetbox {
+    margin-bottom: 3.5em;
+    padding-left: 3px;
+    padding-top: 30px;
+}
+
+.widgetrow {
+    width: 100%;
+    position: relative;
+    margin: 0 -20px 0 0
+}
+
+.widgetrowitem:focus {
+    outline: 0;
+    background-color: #eee
+}
+
+.defaultwidget {
+    background-image: url(lb-faveo/media/images/register.png)
+}
+
+.widgetrow a {
+    background-repeat: no-repeat;
+    background-position: 50% 12px;
+    font-size: 10px;
+    padding: 55px 2px 10px 2px;
+    font-weight: 400;
+    text-align: center;
+    width: 115px;
+    display: block;
+    cursor: pointer;
+    clear: none;
+    display: inline-block;
+    border: 1px solid #c9cfd7;
+    background-color: #fff;
+    border-radius: 1.1rem;
+    line-height: 14px;
+    margin: 0 6px 6px 0;
+}
+
+.widgetrow a:hover {
+    background-color: #e9ecef
+}
+
+a {
+    text-decoration: none !important;
+}
+
+h1,
+h2,
+h3 {
+    font-family: ' Source Sans Pro';
+}
+
+.myform {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 1.1rem;
+    outline: 0;
+    max-width: 500px;
+    margin-top: -30px;
+}
+
+.tx-tfm {
+    text-transform: uppercase;
+}
+
+.mybtn {
+    border-radius: 50px;
+}
+
+
+#remember_me {
+    margin-bottom: 10px;
+}
+
+.login-or {
+    position: relative;
+    color: #aaa;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.span-or {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    margin-left: -25px;
+    background-color: #fff;
+    width: 50px;
+    text-align: center;
+}
+
+.hr-or {
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.btn.btn-flat {
+    border-radius: 20px;
+    border-width: 1px;
+    box-shadow: none;
+}
+
+.google {
+    color: #666;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    outline: none;
+    border: 1px solid lightgrey;
+}
+
+.btn-social {
+    color: #666;
+    width: 100%;
+    text-align: center;
+    outline: none;
+    border: 1px solid lightgrey;
+}
+
+form .error {
+    color: #ff0000;
+}
+
+#second {
+    display: none;
+}
+
+.btn-google:hover {
+    background-color: rgb(2, 91, 2);
+    color: white;
+}
+
+.btn-login:hover {
+    color: white;
+    background-color: #d30a0a;
+    border-color: #d30a0a;
+}
+
+.btn-login {
+    color: #fff;
+    background-color: #f5460f;
+    border-color: #d30a0a;
+}
+
+/* Footer */
+
+/* END Footer */

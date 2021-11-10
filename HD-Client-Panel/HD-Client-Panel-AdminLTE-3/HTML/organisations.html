@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="ie">
+<![endif]-->
+<!--[if !(IE 8) ]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organisations | FAVEO</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/font-awesome/css/all.min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/app/css/app.css" type="text/css" />
+    <link rel="stylesheet" href="assets/app/css/edit.css" type="text/css" />
+    <link rel="stylesheet" href="./css/organisations.css" type="text/css" />
+
+    <!--[if lt IE 9]>
+	<script type="text/javascript" src="assets/app/js/html5shiv.min.js"></script>
+	<script type="text/javascript" src="assets/app/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+    <div id="page" class="hfeed site">
+        <header id="masthead" class="site-header" role="banner">
+            <div class="container">
+
+                <nav id="navbar" class="site-navigation navbar navbar-expand-lg navbar-light">
+                    <div id="logo" class="navbar-brand brand site-logo text-center">
+                        <a href="" rel="home">
+                            <img src="https://support.faveohelpdesk.com/storage/company_logos/logos/e6426102-b68a-4c1e-b30d-14df86006c1a/1827.logo.png"
+                                alt="FAVEO | LOGIN" />
+                        </a>
+                    </div><!-- #logo -->
+
+                    <button style="float: right;margin: 10px;" class="navbar-toggler custom-toggler" type="button"
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> <!-- collapse -->
+
+                    <div class="collapse navbar-collapse links" id="navbarSupportedContent"
+                        style="padding-bottom:100px;">
+                        <ul class="navbar-nav navbar-menu site-navigate ml-auto" style="border-radius:0.9rem">
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Home <span class="sr-only"></span></a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="">Submit Ticket</a></li>
+
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle nav-link" href="" id="navbarDropdown" role="button"
+                                    data-toggle="" aria-haspopup="true" aria-expanded="false">Knowledge Base</a>
+
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                                    <li>
+                                        <a class="dropdown-item" href="">anything</a>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item" tabindex="-1" href="">
+                                            anything
+                                        </a>
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown active">
+                                <a class="dropdown-toggle nav-link" href="" id="navbarDropdown" role="button"
+                                    data-toggle="" aria-haspopup="true" aria-expanded="false">Organisations</a>
+
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                                    <li>
+                                        <a class="dropdown-item" href="">anything</a>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item" tabindex="-1" href="">
+                                            anything
+                                        </a>
+
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Billing<span class="sr-only"></span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Login <span class="sr-only"></span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle nav-link" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">🎌Languages</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="">United States</a></li>
+                                    <li><a class="dropdown-item" href="">Arabic</a></li>
+                                </ul>
+                            </li>
+
+                        </ul><!-- .navbar-menu -->
+                    </div>
+
+                    <!-- .navbar-login -->
+                </nav><!-- #navbar -->
+
+                <div id="header-search" class="site-search clearfix">
+                    <!-- #header-search -->
+                    <form action="" method="get" class="search-form" role="search">
+                        <div class="form-border" style="border-radius: 0.9rem;">
+
+                            <div class="form-inline">
+                                <div class="form-group input-group" style="width: 100%;">
+                                    <input type="text" name="s" class="search-field form-control input-lg mr-3"
+                                        title="Enter search term"
+                                        placeholder="Have a question? Type your search term here..." />
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-custom "
+                                            style="border-radius: 0.9rem;">Search</button>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <div class="search-advance">
+                                <div class="row">
+
+                                    <div class="col-sm-6">
+                                        <div class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="#" class="col-sm-3 control-label">Category</label>
+                                                <div class="col-sm-9">
+                                                    <select name="category" class="form-control">
+                                                        <option value="">-- All Categories --</option>
+                                                        <option value="">Account Settings</option>
+                                                        <option value="">API Questions</option>
+                                                        <option value="">Customization</option>
+                                                        <option value="">Mobile Apps</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="#" class="col-sm-3 control-label">Format</label>
+                                                <div class="col-sm-9">
+                                                    <select name="format" class="form-control">
+                                                        <option value="">-- All Formats --</option>
+                                                        <option value="">Text</option>
+                                                        <option value="">Image</option>
+                                                        <option value="">Video</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div><!-- .search-advance -->
+
+                            <a href="#" class="search-advance-button text-center"><i
+                                    class="fa fa-chevron-circle-up fa-2x"></i></a>
+
+                        </div>
+                    </form>
+                </div><!-- #header-search -->
+            </div>
+        </header><!-- #masthead -->
+
+        <div class="site-hero clearfix">
+            <div class="container">
+                <ol class="breadcrumb breadcrumb-custom">
+                    <li class="text">You are here: </li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i>Organisations</a></li>
+
+                </ol>
+            </div>
+        </div><!-- .site-hero -->
+
+        <div id="main" class="site-main clearfix">
+            <div class="container">
+
+                <div class="content-area" style="border-radius: 0.9rem;padding-bottom: 80px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="widget-area">
+                                <section id="section-latest-news" class="section">
+                                    <h2 class="section-title h4 clearfix"><i class="line"
+                                            style="border-color: rgb(0, 154, 186);padding: top 50px;"></i>About</h2>
+                                    <div id="org_wrap" class="banner-wrapper text-center"><span
+                                            class="fa-stack fa-3x"><i><img id="org_img"
+                                                    src="https://helpdesk.productdemourl.com/Akash_Deep/public/themes/default/common/images/org.png"
+                                                    alt="Org Image" width="auto" height="auto"
+                                                    class="img-circle pack_image"></i></span><br>
+                                        <h4 title="Akash" class="banner-title h3 banner_h3" style="margin-top:20px;">
+                                            Akash
+                                        </h4>
+                                        <div class="banner-content">
+                                            <ul class="fa-ul with-line-border">
+                                                <li title="07780990938"><i title="Phone" id="org_icon"
+                                                        class="fa-li fa fa-phone text-muted"></i>
+                                                    1234567890
+                                                </li>
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <br><br><br>
+                            <div class="widget-area">
+                                <section id="section-latest-news" class="section">
+                                    <h2 class="section-title h4 clearfix"><i data-v-1de18f01="" class="line"
+                                            style="border-color: rgb(0, 154, 186);"></i>Managers</h2>
+                                    <div id="org_wrap" class="banner-wrapper text-center"><span
+                                            class="fa-stack fa-3x"><i data-v-1de18f01=""><img data-v-6ef4dd8e=""
+                                                    id="user_avatar"
+                                                    src="https://secure.gravatar.com/avatar/1b39e010cf5b52ee344d2398ea5665ae?s=80&amp;r=g&amp;d=mm"
+                                                    alt="" width="auto" height="auto"
+                                                    class="img-circle pack_image"></i></span><br data-v-1de18f01="">
+                                        <h4 title="Arqum Malik" class="banner-title h3 banner_h3"
+                                            style="margin-top:20px;">
+                                            Arqum Malik
+                                        </h4>
+                                        <div class="banner-content">
+                                            <ul class="fa-ul with-line-border">
+                                                <li title="1234566789"><i data-v-1de18f01="" title="Phone" id="org_icon"
+                                                        class="fa-li fa fa-phone text-muted"></i>
+                                                    1234566789
+                                                </li>
+                                                <li title="manager.email"><i data-v-1de18f01="" title="Email"
+                                                        id="org_icon" class="fa-li fas fa-envelope text-muted"></i>
+                                                    ajkfgyaf@gmail.com
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div id="org_members" class="widget-area">
+                                <section id="section-about" class="section">
+                                    <h2 class="section-title h4 clearfix"><i data-v-1de18f01="" class="line"
+                                            style="border-color: rgb(0, 154, 186);"></i>Users
+
+                                        <a href="F:\Prototyping\faveo-html-prototype\HD-Client-Panel\HD-Client-Panel-AdminLTE-1\pages\createuser.html"
+                                            class="btn-create btn-primary btn-sm float-right" id="user_btn" ;><i
+                                                class="fa fa-plus"></i>
+                                            Create
+                                            User
+                                        </a></h2>
+                                    <div class="textwidget">
+                                        <div id="datatable">
+                                            <div class="VueTables VueTables--server" style="display: block;">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group form-inline pull-left VueTables__search">
+                                                            <div class="VueTables__search-field"><label
+                                                                    for="VueTables__search_oCVze"
+                                                                    class=""></label><input type="text"
+                                                                    placeholder="Search query"
+                                                                    id="VueTables__search_oCVze" autocomplete="off"
+                                                                    class="VueTables__search__input form-control ">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="table-responsive">
+                                                    <table
+                                                        class="VueTables__table table table-striped table-bordered table-hover"
+                                                        style="overflow: hidden;">
+                                                        <thead>
+                                                            <tr>
+                                                                <th title="" tabindex="0" class=""
+                                                                    style="position: relative;"><span
+                                                                        class="VueTables__heading">Name</span>
+                                                                    <!---->
+                                                                    <div class="resize-handle"
+                                                                        style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                    </div>
+                                                                </th>
+                                                                <th title="" tabindex="0"
+                                                                    class="VueTables__sortable org-name"
+                                                                    style="position: relative;"><span
+                                                                        class="VueTables__heading">Username</span><span
+                                                                        class="VueTables__sort-icon pull-right glyphicon glyphicon-sort "></span>
+                                                                    <div class="resize-handle"
+                                                                        style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                    </div>
+                                                                </th>
+                                                                <th title="" tabindex="0"
+                                                                    class="VueTables__sortable org-email"
+                                                                    style="position: relative;"><span
+                                                                        class="VueTables__heading">Email</span><span
+                                                                        class="VueTables__sort-icon pull-right glyphicon glyphicon-sort "></span>
+                                                                    <div class="resize-handle"
+                                                                        style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                    </div>
+                                                                </th>
+                                                                <th title="" tabindex="0"
+                                                                    class="VueTables__sortable org-phone"
+                                                                    style="position: relative;"><span
+                                                                        class="VueTables__heading">Phone</span><span
+                                                                        class="VueTables__sort-icon pull-right glyphicon glyphicon-sort "></span>
+                                                                    <div class="resize-handle"
+                                                                        style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                    </div>
+                                                                </th>
+                                                                <th title="" tabindex="0"
+                                                                    class="VueTables__sortable org-mobile"
+                                                                    style="position: relative;"><span
+                                                                        class="VueTables__heading">Mobile</span><span
+                                                                        class="VueTables__sort-icon pull-right glyphicon glyphicon-sort "></span>
+                                                                    <div class="resize-handle"
+                                                                        style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                    </div>
+                                                                </th>
+                                                                <th title="" tabindex="0" class="VueTables__sortable "
+                                                                    style="position: relative;"><span
+                                                                        class="VueTables__heading">Last
+                                                                        activity</span><span
+                                                                        class="VueTables__sort-icon pull-right glyphicon glyphicon-sort "></span>
+                                                                    <div class="resize-handle"
+                                                                        style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                    </div>
+                                                                </th>
+                                                                <th title="" tabindex="0" class=""
+                                                                    style="position: relative;"><span
+                                                                        class="VueTables__heading">Action</span>
+                                                                    <!---->
+                                                                    <div class="resize-handle"
+                                                                        style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                    </div>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="VueTables__row ">
+                                                                <td tabindex="0" class="">Arqum Malik</td>
+                                                                <td tabindex="0" class="org-name">arqum1</td>
+                                                                <td tabindex="0" class="org-email">ajkfgyaf@gmail.com
+                                                                </td>
+                                                                <td tabindex="0" class="org-phone">---</td>
+                                                                <td tabindex="0" class="org-mobile">1234566789</td>
+                                                                <td tabindex="0" class="">November 16, 2021 10:50 am
+                                                                </td>
+                                                                <td tabindex="0" class="">
+                                                                    <div class="btn-group" column="action" index="1">
+                                                                        <!---->
+                                                                        <!---->
+                                                                        <!---->
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="VuePagination row col-md-12 ">
+                                                    <nav class="text-center">
+                                                        <ul class="pagination VuePagination__pagination"
+                                                            style="display: none;">
+                                                            <li
+                                                                class="VuePagination__pagination-item page-item  VuePagination__pagination-item-prev-chunk disabled">
+                                                                <a href="javascript:void(0);" disabled="disabled"
+                                                                    class="page-link">&lt;&lt;</a></li>
+                                                            <li
+                                                                class="VuePagination__pagination-item page-item  VuePagination__pagination-item-prev-page disabled">
+                                                                <a href="javascript:void(0);" disabled="disabled"
+                                                                    class="page-link">&lt;</a></li>
+                                                            <li class="VuePagination__pagination-item page-item active">
+                                                                <a href="javascript:void(0)" class="page-link active"
+                                                                    role="button">1</a></li>
+                                                            <li
+                                                                class="VuePagination__pagination-item page-item  VuePagination__pagination-item-next-page disabled">
+                                                                <a href="javascript:void(0);" disabled="disabled"
+                                                                    class="page-link">&gt;</a></li>
+                                                            <li
+                                                                class="VuePagination__pagination-item page-item  VuePagination__pagination-item-next-chunk disabled">
+                                                                <a href="javascript:void(0);" disabled="disabled"
+                                                                    class="page-link">&gt;&gt;</a></li>
+                                                        </ul><br>
+                                                        <p class="VuePagination__count text-center col-md-12">
+                                                            One
+                                                            record</p>
+                                                    </nav>
+                                                </div>
+                                            </div>
+                                            <!---->
+                                            <!---->
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="widget-area">
+                                <section id="section-about" class="section">
+                                    <h2 class="section-title h4 clearfix"><i class="line"
+                                            style="border-color: rgb(0, 154, 186);"></i>Tickets</h2>
+                                    <div class="textwidget">
+                                        <div id="client-tickets-table" class="">
+                                            <div data-v-6f0f2b6a="">
+                                                <!---->
+                                            </div>
+                                            <!---->
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h6 class="card-title"> Tickets </h6>
+
+                                                </div>
+                                                <div class="card-body">
+                                                    <!---->
+                                                    <div class="" id="my_tic">
+                                                        <div class="mt-2">
+                                                            <!---->
+                                                        </div>
+                                                        <div id="datatable">
+                                                            <div class="VueTables VueTables--server"
+                                                                style="display: block;">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <div
+                                                                            class="form-group form-inline pull-left VueTables__search">
+                                                                            <div class="VueTables__search-field"><label
+                                                                                    for="VueTables__search_XSART"
+                                                                                    class=""></label><input type="text"
+                                                                                    placeholder="Search query"
+                                                                                    id="VueTables__search_XSART"
+                                                                                    autocomplete="off"
+                                                                                    class="VueTables__search__input form-control ">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="table-responsive">
+                                                                    <table
+                                                                        class="VueTables__table table table-striped table-bordered table-hover"
+                                                                        style="overflow: hidden;">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th title="" tabindex="0"
+                                                                                    class="ticket-id"
+                                                                                    style="position: relative;"><span
+                                                                                        class="VueTables__heading">
+                                                                                        <div><input type="checkbox">
+                                                                                        </div>
+                                                                                    </span>
+                                                                                    <!---->
+                                                                                    <div class="resize-handle"
+                                                                                        style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                                    </div>
+                                                                                </th>
+                                                                                <th title="" tabindex="0"
+                                                                                    class="VueTables__sortable ticket-number"
+                                                                                    style="position: relative;"><span
+                                                                                        class="VueTables__heading">Ticket
+                                                                                        Id</span><span
+                                                                                        class="VueTables__sort-icon pull-right glyphicon glyphicon-sort "></span>
+                                                                                    <div class="resize-handle"
+                                                                                        style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                                    </div>
+                                                                                </th>
+                                                                                <th title="" tabindex="0"
+                                                                                    class="ticket-title"
+                                                                                    style="position: relative;"><span
+                                                                                        class="VueTables__heading">Subject</span>
+                                                                                    <!---->
+                                                                                    <div class="resize-handle"
+                                                                                        style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                                    </div>
+                                                                                </th>
+                                                                                <th title="" tabindex="0"
+                                                                                    class="ticket-user"
+                                                                                    style="position: relative;"><span
+                                                                                        class="VueTables__heading">User</span>
+                                                                                    <!---->
+                                                                                    <div class="resize-handle"
+                                                                                        style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                                    </div>
+                                                                                </th>
+                                                                                <th title="" tabindex="0"
+                                                                                    class="ticket-reply"
+                                                                                    style="position: relative;"><span
+                                                                                        class="VueTables__heading">Last
+                                                                                        replier</span>
+                                                                                    <!---->
+                                                                                    <div class="resize-handle"
+                                                                                        style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                                    </div>
+                                                                                </th>
+                                                                                <th title="" tabindex="0"
+                                                                                    class="VueTables__sortable ticket-updated"
+                                                                                    style="position: relative;"><span
+                                                                                        class="VueTables__heading">Last
+                                                                                        activity</span><span
+                                                                                        class="VueTables__sort-icon pull-right glyphicon glyphicon-sort "></span>
+                                                                                    <div class="resize-handle"
+                                                                                        style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                                    </div>
+                                                                                </th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr class="VueTables__row ">
+                                                                                <td tabindex="0" class="ticket-id">
+                                                                                    <input type="checkbox" value="106">
+                                                                                </td>
+                                                                                <td tabindex="0" class="ticket-number">
+                                                                                    <a href="/Akash_Deep/public/check-ticket/eyJpdiI6Imt3UUdPN3BYc3JQblc3bkpJcXFpSEE9PSIsInZhbHVlIjoiczFSd0E5RE1XXC83R3hsYUpESkVnRGc9PSIsIm1hYyI6IjcyZWM3Y2Q4OTNlOTBlNWZhMTUzMjk2ZmEyMjczZDg4ZjYwMGI2Njc2YzViODU5Zjk5MTc4Yjk4YTllZmE0YTUifQ=="
+                                                                                        class=""
+                                                                                        style="color:#009aba">#HDSK-AAAA-0106</a>
+                                                                                </td>
+                                                                                <td tabindex="0" class="ticket-title"><a
+                                                                                        href="/Akash_Deep/public/check-ticket/eyJpdiI6Imt3UUdPN3BYc3JQblc3bkpJcXFpSEE9PSIsInZhbHVlIjoiczFSd0E5RE1XXC83R3hsYUpESkVnRGc9PSIsIm1hYyI6IjcyZWM3Y2Q4OTNlOTBlNWZhMTUzMjk2ZmEyMjczZDg4ZjYwMGI2Njc2YzViODU5Zjk5MTc4Yjk4YTllZmE0YTUifQ=="
+                                                                                        class=""
+                                                                                        style="color:#009aba">User
+                                                                                        ticket(1)</a></td>
+                                                                                <td tabindex="0" class="ticket-user">
+                                                                                    <p>Arqum Malik</p>
+                                                                                </td>
+                                                                                <td tabindex="0" class="ticket-reply">
+                                                                                    <p>Arqum Malik</p>
+                                                                                </td>
+                                                                                <td tabindex="0" class="ticket-updated">
+                                                                                    November 16, 2021 10:48 am</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="VuePagination row col-md-12 ">
+                                                                    <nav class="text-center">
+                                                                        <ul class="pagination VuePagination__pagination"
+                                                                            style="display: none;">
+                                                                            <li
+                                                                                class="VuePagination__pagination-item page-item  VuePagination__pagination-item-prev-chunk disabled">
+                                                                                <a href="javascript:void(0);"
+                                                                                    disabled="disabled"
+                                                                                    class="page-link">&lt;&lt;</a></li>
+                                                                            <li
+                                                                                class="VuePagination__pagination-item page-item  VuePagination__pagination-item-prev-page disabled">
+                                                                                <a href="javascript:void(0);"
+                                                                                    disabled="disabled"
+                                                                                    class="page-link">&lt;</a></li>
+                                                                            <li
+                                                                                class="VuePagination__pagination-item page-item active">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="page-link active"
+                                                                                    role="button">1</a></li>
+                                                                            <li
+                                                                                class="VuePagination__pagination-item page-item  VuePagination__pagination-item-next-page disabled">
+                                                                                <a href="javascript:void(0);"
+                                                                                    disabled="disabled"
+                                                                                    class="page-link">&gt;</a></li>
+                                                                            <li
+                                                                                class="VuePagination__pagination-item page-item  VuePagination__pagination-item-next-chunk disabled">
+                                                                                <a href="javascript:void(0);"
+                                                                                    disabled="disabled"
+                                                                                    class="page-link">&gt;&gt;</a></li>
+                                                                        </ul>
+                                                                        <p
+                                                                            class="VuePagination__count text-center col-md-12">
+                                                                            One record</p>
+                                                                    </nav>
+                                                                </div>
+                                                            </div>
+                                                            <!---->
+                                                            <!---->
+                                                        </div>
+                                                    </div>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                            <!---->
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="__cov-progress"
+                        style="background-color: rgb(248, 249, 250); opacity: 0; position: fixed; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s;">
+                    </div>
+                </div>
+            </div><!-- #main -->
+
+            <footer id="colophon" class="site-footer" role="contentinfo">
+                <div class="container">
+
+                    <div id="tweets-list" class="twitterbar carousel slide" data-ride="carousel">
+                        <div id="" class="tweets-border" style="border-radius: 0.9rem;">
+                            <div class="tweets list-unstyled carousel-inner pull-left float-left">
+                                <div class="carousel-item active">
+                                    <span>RT <a href="https://twitter.com/ladybirdweb" target="_blank">@ladybirdweb</a>:
+                                        Tak enteni sam <a href="https://twitter.com/ladybirdweb"
+                                            target="_blank">@ladybirdweb</a>:
+                                        SEGERA! Akan hadir televisi online tentang Arema dan Aremania.</span>
+                                    <small class="meta"><a href="https://twitter.com/ladybirdweb"
+                                            class="text-muted">about 5 months ago</a></small>
+                                </div>
+                                <div class="carousel-item">
+                                    <span>RT <a href="https://twitter.com/ladybirdweb" target="_blank">@ladybirdweb</a>:
+                                        Mantap!
+                                        "<a href="https://twitter.com/ladybirdweb" target="_blank">@ladybirdweb</a>:
+                                        Waini...!! Ayas tunggu :-) =&gt; <a href="https://twitter.com/ladybirdweb"
+                                            target="_blank">@ladybirdweb</a>: SEGERA! Akan hadir televisi
+                                        online tentang
+                                        Arema
+                                        dan Are…</span>
+                                    <small class="meta"><a href="https://twitter.com/ladybirdweb"
+                                            class="text-muted">about 5 months ago</a></small>
+                                </div>
+                                <div class="carousel-item">
+                                    <span>RT <a href="https://twitter.com/ladybirdweb" target="_blank">@ladybirdweb</a>
+                                        <a href="https://twitter.com/ladybirdweb" target="_blank">@ladybirdweb</a> RT
+                                        <a href="https://twitter.com/ladybirdweb" target="_blank">@ladybirdweb</a>:
+                                        SEGERA!
+                                        Akan
+                                        hadir televisi online tentang Arema dan Aremani…</span>
+                                    <small class="meta"><a href="https://twitter.com/ladybirdweb"
+                                            class="text-muted">about 5 months ago</a></small>
+                                </div>
+                                <div class="carousel-item">
+                                    <span>RT <a href="https://twitter.com/ladybirdweb" target="_blank"></a>: Waini...!!
+                                        Ayas tunggu :-) =&gt; <a href="https://twitter.com/ladybirdweb"
+                                            target="_blank">@ladybirdweb</a>: SEGERA!
+                                        Akan
+                                        hadir televisi online tentang Arema dan Aremania."</span>
+                                    <small class="meta"><a href="https://twitter.com/ladybirdweb">about 5 months
+                                            ago</a></small>
+                                </div>
+                                <div class="carousel-item">
+                                    <span>Nuwus sam. "<a href="https://twitter.com/ladybirdweb"
+                                            target="_blank">@ladybirdweb</a> <a href="https://twitter.com/ladybirdweb"
+                                            target="_blank">@ladybirdweb</a> aku Folower pertamax ."</span>
+                                    <small class="meta"><a href="https://twitter.com/ladybirdweb"
+                                            class="text-muted">about 5 months ago</a></small>
+                                </div>
+                            </div><!-- .tweets -->
+                            <a href="#" class="follow-button btn btn-custom btn-lg pull-right float-right"
+                                style="border-radius: 0.9rem;">Follow</a>
+                        </div><!-- #tweets-list -->
+                        <div class="tweets-icon pull-left text-right">
+                            <i class="fab fa-twitter fa-2x text-primary"></i>
+                        </div><!-- .tweets-icon -->
+                        <ul class="tweets-control list-inline pull-right float-right mt-1">
+                            <li class="list-inline-item"><a href="#tweets-list" class="btn btn-social"
+                                    data-slide="prev"><i class="fas fa-arrow-left fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a href="#tweets-list" class="btn btn-social"
+                                    data-slide="next"><i class="fas fa-arrow-right fa-fw"></i></a></li>
+                        </ul><!-- .tweets-control -->
+                    </div><!-- .twitterbar -->
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="widget-area">
+                                <section id="section-about" class="section">
+                                    <h2 class="section-title h4 clearfix">About FAVEO</h2>
+                                    <div class="textwidget">
+                                        <p>Faveo is an ticket based support system built on the PHP based Laravel
+                                            framework. The word Faveo comes from Latin, and means "to be favourable". It
+                                            provides businesses with an automated helpdesk system to manage customer
+                                            support.It has an inbuilt knowledge base for self-service by the customer.
+                                        </p>
+
+                                        <p>The open source version is available for free download on GitHub, with
+                                            plugin modules available to extend and expand its core functionality,
+                                            including ResellerClub integration, Envato integration, LDAP
+                                            authentication, MSG91 SMS integration, and Facebook social login.</p>
+
+
+                                </section><!-- #section-about -->
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="widget-area">
+                                <section id="section-latest-news" class="section">
+                                    <h2 class="section-title h4 clearfix">Latest News</h2>
+                                    <ul class="media-list">
+                                        <li class="media">
+                                            <a class="pull-left" href="#"></a>
+                                            <div class="media-body">
+                                                <h4 class="media-heading h5"><a href="#">Ladybirdweb</a></h4>
+                                                <small class="text-muted"><i class="far fa-calendar fa-fw"></i> October
+                                                    22,
+                                                    2021</small>
+                                            </div>
+                                        </li>
+                                        <li class="media mt-4">
+                                            <a class="pull-left" href="#"></a>
+                                            <div class="media-body">
+                                                <h4 class="media-heading h5"><a href="#">Ladybirdweb</a></h4>
+                                                <small class="text-muted"><i class="far fa-calendar fa-fw"></i> October
+                                                    22,
+                                                    2021</small>
+                                            </div>
+                                        </li>
+                                        <li class="media mt-4">
+                                            <a class="pull-left" href="#"></a>
+                                            <div class="media-body">
+                                                <h4 class="media-heading h5"><a href="#">Ladybirdweb</a>
+                                                </h4>
+                                                <small class="text-muted"><i class="far fa-calendar fa-fw"></i> October
+                                                    22,
+                                                    2021</small>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </section><!-- #section-latest-news -->
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="widget-area">
+                                <section id="section-newsletter" class="section">
+                                    <h2 class="section-title h4 clearfix">Get Updates</h2>
+                                    <div class="textwidget">
+                                        <p>Subscribe to our Newsletter</p>
+                                        <form action="" method="post">
+                                            <div class="input-group">
+                                                <input type="email" class="form-control" title="Enter your email"
+                                                    placeholder="Your email..." style="border-radius:0.9rem ">
+                                                <span class="input-group-btn input-group-append">
+                                                    <button type="submit" class="btn btn-custom"
+                                                        style="border-radius:0.9rem">Subscribe</button>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </section><!-- #section-newsletter -->
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                        <hr />
+                    </div>
+
+                    <div class="row bord">
+                        <div class="site-info col-md-6">
+                            <p class="text-muted">Copyright &copy; 2021. <a href="#">Ladybird Web Solution Pvt Ltd.</a>.
+                                All Rights Reserved.
+                            </p>
+                        </div><!-- .site-info -->
+
+                        <div class="site-social text-right col-md-6">
+                            <ul class="list-inline hidden-print">
+                                <li class="list-inline-item"><a href="#" class="btn btn-social btn-facebook"><i
+                                            class="fab fa-facebook-f fa-fw"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="btn btn-social btn-twitter"><i
+                                            class="fab fa-twitter fa-fw"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="btn btn-social btn-google-plus"><i
+                                            class="fab fa-google-plus-g fa-fw"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="btn btn-social btn-linkedin"><i
+                                            class="fab fa-linkedin-in fa-fw"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="btn btn-social btn-vimeo"><i
+                                            class="fab fa-vimeo-v fa-fw"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="btn btn-social btn-youtube"><i
+                                            class="fab fa-youtube fa-fw"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="btn btn-social btn-pinterest"><i
+                                            class="fab fa-pinterest-p fa-fw"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="btn btn-social btn-dribbble"><i
+                                            class="fab fa-dribbble fa-fw"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="btn btn-social btn-flickr"><i
+                                            class="fab fa-flickr fa-fw"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="btn btn-social btn-instagram"><i
+                                            class="fab fa-instagram fa-fw"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="btn btn-social btn-rss"><i
+                                            class="fas fa-rss fa-fw"></i></a></li>
+                            </ul>
+                        </div><!-- .site-social -->
+                    </div>
+
+                </div>
+            </footer><!-- #colophon -->
+
+        </div><!-- #page -->
+
+        <!-- Script -->
+        <script type="text/javascript" src="assets/app/js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/app/js/superfish.js"></script>
+        <script type="text/javascript" src="assets/app/js/jquery.mobilemenu.js"></script>
+        <script type="text/javascript" src="assets/app/js/autocomplete.js"></script>
+        <script type="text/javascript" src="assets/app/js/app.js"></script>
+
+</body>
+
+</html>

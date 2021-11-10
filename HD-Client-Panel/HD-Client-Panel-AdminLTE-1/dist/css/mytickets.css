@@ -1,17 +1,31 @@
+body {
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 .site-header {
     background: rgb(47, 64, 233);
     background: linear-gradient(41deg, rgba(47, 64, 233, 1) 0%, rgba(170, 0, 255, 1) 100%);
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
+
+}
+
+.navbar-toggler {
+    display: block;
+    float: inline-end;
+    width: 100%;
 }
 
 .site-header nav.navbar {
-    padding: 22px 0px;
+    padding: 40px 0px;
+
 }
 
 .site-header a.navbar-brand {
+    position: absolute;
     color: #fff;
+    margin-top: 130px;
 }
 
 .site-header nav.navbar .nav-item .nav-link {
@@ -50,6 +64,7 @@
 .site-header .live-search {
     padding: 70px 0px 80px 0px;
     max-width: 700px;
+    margin-top: 100px;
 }
 
 .site-header .live-search .input-group {
@@ -107,7 +122,7 @@
 }
 
 .site-header .navbar .navbar-brand {
-    max-width: 270px;
+    max-width: 250px;
 }
 
 .layout-two.content-header {
@@ -134,120 +149,34 @@
     background: #3da6d7;
 }
 
-.main-content-wrapper .layout-two {
-    margin-top: -30px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-}
-
 /* END Header */
 
-
-.page-title {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.knowledgebase-widget-wrapper .card.card-widget {
-    box-shadow: 0px 0px 0px;
-}
-
-.knowledgebase-widget-wrapper .card.card-widget .card-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.knowledgebase-widget-wrapper .card-widget .card-header .card-title a {
-    font-size: 20px;
-    color: #000;
-    font-weight: 500;
-}
-
-.knowledgebase-widget-wrapper .card-widget li {
-    padding: 8px 20px 8px 30px;
-}
-
-.knowledgebase-widget-wrapper .card-widget li i {
-    color: #888;
-}
-
-.knowledgebase-widget-wrapper .card-widget li a {
-    color: #8c8888;
-}
-
-
-
-.sidebar .widget li {
-    list-style: none;
-    border: 1px solid #b7b7b7;
-    padding: 6px 15px 6px 15px;
-    transition: all 0.2s linear;
+.card-header {
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    padding: 0.75rem 1.25rem;
     position: relative;
-    margin-bottom: 10px;
-}
-
-.sidebar .widget li span {
-    position: absolute;
-    padding: 0 7px;
-    right: 15px;
-    font-weight: bold;
-    font-size: 8px;
-    color: #6d6d6d;
-    background: #eff2f3;
-    background-clip: padding-box;
-    border-radius: 100%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sidebar .widget li a {
-    color: #8a8a8a;
-    border: none;
-}
-
-.sidebar .widget li span.meta span,
-.sidebar .widget li span.meta {
-    position: unset;
-    width: auto;
-    height: auto;
-    background-color: transparent;
-    justify-content: end;
-    padding: 0;
-    font-size: 10px;
-    color: #b7b7b7;
-}
-
-.sidebar h2.page-title {
-    font-size: 20px;
-    padding: 11px 0px;
-    display: flex;
-    justify-content: space-between;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
 }
 
 
 
-/* single page */
-.knowledgebase-widget-wrapper h1.page-title {
-    font-size: 42px;
-    font-weight: 600;
-    margin-bottom: 0;
+.btn-tool {
+
+    color: rgba(31, 45, 61, .8);
+    font-size: .875rem;
+    margin: -.75rem 0;
+    padding: .25rem .5rem
 }
 
-.knowledgebase-meta {
-    color: #808080;
-    font-size: 14px;
+.range_btn {
+    font-size: 13px
 }
 
-.single-page-content h4 {
-    font-weight: 600;
+.btn-primary {
+    background-color: #337ab7 !important;
+    border-color: #337ab7 !important
 }
-
 
 /* Footer */
 footer.main-f-footer {
@@ -306,5 +235,7 @@ footer.main-f-footer {
     font-size: 13px;
     color: #909090;
 }
+
+
 
 /* END Footer */
