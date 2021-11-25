@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Packages | FAVEO</title>
+    <title>Billing Packages | FAVEO</title>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="assets/font-awesome/css/all.min.css" type="text/css" />
     <link rel="stylesheet" href="assets/app/css/app.css" type="text/css" />
     <link rel="stylesheet" href="assets/app/css/edit.css" type="text/css" />
-    <link rel="stylesheet" href="./css/billingpackages.css" type="text/css" />
+    <link rel="stylesheet" href="./css/mypackages.css" type="text/css" />
 
     <!--[if lt IE 9]>
 	<script type="text/javascript" src="assets/app/js/html5shiv.min.js"></script>
@@ -200,155 +200,157 @@
                 </ol>
             </div>
         </div><!-- .site-hero -->
-        <div
-        class="container"
-        style="
-          background-color: white;
-          margin-top: -30px;
-          border-radius: 1.1rem;
-          margin-left: auto;
-          position: relative;
-          max-width: 1000px;
-        " 
-      >
-        <div class="content-area">
-          <!---->
-          <div id="main-div" class=""></div>
-            <!---->
-            <!---->
-            <!---->
-            <div id="filter" class="row">
-              <div class="col-md-6"><!----></div>
-              <div class="col-md-6 input-group-search">
-                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                aria-describedby="search-addon" />
-                <span class="input-group-text border-0" id="search-addon">
-                  <i class="fas fa-search"></i>
-                </span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="container">
-                <div class="features row">
-                  <div class="col-sm-3">
-                    <div class="banner-wrapper text-center">
-                      <span class="fa-stack fa-3x"
-                        ><i
-                          ><img
-                            src="https://helpdesk.productdemourl.com/Akash_Deep/public/themes/default/client/images/package.png"
-                            alt=""
-                            class="img-circle pack_image" /></i></span
-                      ><br />
-                      <h4 class="banner-title h3 banner_h3">Faveo</h4>
-                      <div class="banner-content">
-                        <p title="Free">Price: <b>Free</b></p>
-                        <p>Validity: <b>One time</b></p>
-                        <p title="12">Allowed Tickets: <b>12</b></p>
-                      </div>
-                      <p>
-                        <a
-                          href="/Akash_Deep/public/package/1"
-                          class="btn btn-custom"
-                          
-                          ><span class="fa fa-cart-plus"></span>&nbsp;Buy now
-                        </a>
-                      </p>
+        <div class="container"
+            style="background-color:white;margin-top: -30px;border-radius: 1.1rem;margin-left: auto; position: relative;padding-top: 40px;max-width: 1000px;">
+            <div class="container" style="max-width: 900px;">
+                <div class="content-area">
+                    <!---->
+                    <div id="client-tickets-table" class="">
+                        <div tickets="">
+                            <!---->
+                        </div>
+                        <!---->
+                        <div class="card" style="border-radius: 1.1rem;">
+                            <div class="card-header">
+                                <h4 class="card-title"> <b>My Packages</b></h4>
+                            </div>
+                            <div class="card-body">
+                                <!---->
+                                <div class="" id="my_tic">
+                                    <div class="mt-2">
+                                        <!---->
+                                    </div>
+                                    <div id="datatable">
+                                        <div class="tables tables--server" style="display: block;">
+
+                                            <div class="table-responsive">
+                                                <table
+                                                    class="VueTables__table table table-striped table-bordered table-hover"
+                                                    style="overflow: hidden;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th title="" tabindex="0" class=""
+                                                                style="position: relative;"><span
+                                                                    class="VueTables__heading">Name</span>
+                                                                <!---->
+                                                                <div class="resize-handle"
+                                                                    style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                </div>
+                                                            </th>
+                                                            <th title="" tabindex="0" class=""
+                                                                style="position: relative;"><span
+                                                                    class="VueTables__heading">Invoice ID</span>
+                                                                <!---->
+                                                                <div class="resize-handle"
+                                                                    style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                </div>
+                                                            </th>
+                                                            <th title="" tabindex="0" class=""
+                                                                style="position: relative;"><span
+                                                                    class="VueTables__heading">Billing cycle</span>
+                                                                <!---->
+                                                                <div class="resize-handle"
+                                                                    style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                </div>
+                                                            </th>
+                                                            <th title="" tabindex="0" class=""
+                                                                style="position: relative;"><span
+                                                                    class="VueTables__heading">Credit type</span>
+                                                                <!---->
+                                                                <div class="resize-handle"
+                                                                    style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                </div>
+                                                            </th>
+                                                            <th title="" tabindex="0" class="VueTables__sortable "
+                                                                style="position: relative;"><span
+                                                                    class="VueTables__heading">Credits</span><span
+                                                                    class="VueTables__sort-icon pull-right glyphicon glyphicon-sort "></span>
+                                                                <div class="resize-handle"
+                                                                    style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                </div>
+                                                            </th>
+                                                            <th title="" tabindex="0" class="VueTables__sortable "
+                                                                style="position: relative;"><span
+                                                                    class="VueTables__heading">Expiry Date</span><span
+                                                                    class="VueTables__sort-icon pull-right glyphicon glyphicon-sort "></span>
+                                                                <div class="resize-handle"
+                                                                    style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                </div>
+                                                            </th>
+                                                            <th title="" tabindex="0" class=""
+                                                                style="position: relative;"><span
+                                                                    class="VueTables__heading">Order</span>
+                                                                <!---->
+                                                                <div class="resize-handle"
+                                                                    style="top: 0px; right: 0px; width: 5px; position: absolute; cursor: col-resize; user-select: none; height: 0px;">
+                                                                </div>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="VueTables__row ">
+                                                            <td tabindex="0" class="">Faveo</td>
+                                                            <td tabindex="0" class=""><a
+                                                                    href="/Akash_Deep/public/invoice/1" class=""
+                                                                    style="color:#009aba">Invoice#1</a></td>
+                                                            <td tabindex="0" class="">One time</td>
+                                                            <td tabindex="0" class="">tickets</td>
+                                                            <td tabindex="0" class="">12</td>
+                                                            <td tabindex="0" class="">--</td>
+                                                            <td tabindex="0" class=""><a href="javascript:;"
+                                                                    style="color:#009aba;text-decoration:underline">View
+                                                                    order</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="VuePagination row col-md-12 ">
+                                                <nav class="text-center">
+                                                    <ul class="pagination VuePagination__pagination"
+                                                        style="display: none;">
+                                                        <li
+                                                            class="VuePagination__pagination-item page-item  VuePagination__pagination-item-prev-chunk disabled">
+                                                            <a href="javascript:void(0);" disabled="disabled"
+                                                                class="page-link">&lt;&lt;</a></li>
+                                                        <li
+                                                            class="VuePagination__pagination-item page-item  VuePagination__pagination-item-prev-page disabled">
+                                                            <a href="javascript:void(0);" disabled="disabled"
+                                                                class="page-link">&lt;</a></li>
+                                                        <li class="VuePagination__pagination-item page-item active"><a
+                                                                href="javascript:void(0)" class="page-link active"
+                                                                role="button">1</a></li>
+                                                        <li
+                                                            class="VuePagination__pagination-item page-item  VuePagination__pagination-item-next-page disabled">
+                                                            <a href="javascript:void(0);" disabled="disabled"
+                                                                class="page-link">&gt;</a></li>
+                                                        <li
+                                                            class="VuePagination__pagination-item page-item  VuePagination__pagination-item-next-chunk disabled">
+                                                            <a href="javascript:void(0);" disabled="disabled"
+                                                                class="page-link">&gt;&gt;</a></li>
+                                                    </ul>
+                                                    <p class="VuePagination__count text-center col-md-12">One
+                                                        record</p>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <!---->
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                </div>
+                                <div class="__cov-progress"
+                                    style="background-color: rgb(248, 249, 250); opacity: 0; position: fixed; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s;">
+                                </div>
+                            </div>
+
+                            </nav>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-sm-3">
-                    <div class="banner-wrapper text-center">
-                      <span class="fa-stack fa-3x"
-                        ><i
-                          ><img
-                            src="https://helpdesk.productdemourl.com/Akash_Deep/public/themes/default/client/images/package.png"
-                            alt=""
-                            class="img-circle pack_image" /></i></span
-                      ><br />
-                      <h4 class="banner-title h3 banner_h3">Helpdesk</h4>
-                      <div class="banner-content">
-                        <p title="$10.00">Price: <b>$10.00</b></p>
-                        <p>Validity: <b>One time</b></p>
-                        <p title="2">Allowed Tickets: <b>2</b></p>
-                      </div>
-                      <p>
-                        <a
-                          href="/Akash_Deep/public/package/2"
-                          class="btn btn-custom"
-                          
-                          ><span class="fa fa-cart-plus"></span>&nbsp;Buy now
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-sm-3">
-                    <div class="banner-wrapper text-center">
-                      <span class="fa-stack fa-3x"
-                        ><i
-                          ><img
-                            src="https://helpdesk.productdemourl.com/Akash_Deep/public/themes/default/client/images/package.png"
-                            alt=""
-                            class="img-circle pack_image" /></i></span
-                      ><br />
-                      <h4 class="banner-title h3 banner_h3">Servicedes...</h4>
-                      <div class="banner-content">
-                        <p title="$20.00">Price: <b>$20.00</b></p>
-                        <p>Validity: <b>One time</b></p>
-                        <p title="2">Allowed Tickets: <b>2</b></p>
-                      </div>
-                      <p>
-                        <a
-                          href="/Akash_Deep/public/package/3"
-                          class="btn btn-custom"
-                          
-                          ><span class="fa fa-cart-plus"></span>&nbsp;Buy now
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-sm-3">
-                    <div class="banner-wrapper text-center">
-                      <span class="fa-stack fa-3x"
-                        ><i
-                          ><img
-                            src="https://helpdesk.productdemourl.com/Akash_Deep/public/themes/default/client/images/package.png"
-                            alt=""
-                            class="img-circle pack_image" /></i></span
-                      ><br />
-                      <h4 class="banner-title h3 banner_h3">Client</h4>
-                      <div class="banner-content">
-                        <p title="$100.00">Price: <b>$100.00</b></p>
-                        <p>Validity: <b>One time</b></p>
-                        <p title="4">Allowed Tickets: <b>4</b></p>
-                      </div>
-                      <p>
-                        <a
-                          href="/Akash_Deep/public/package/4"
-                          class="btn btn-custom"
-                          
-                          ><span class="fa fa-cart-plus"></span>&nbsp;Buy now
-                        </a>
-                      </p>
-                    </div>
-                  </div>
+                    <!---->
+                    <!---->
                 </div>
-              </div>
             </div>
             <!---->
-            <!---->
-          </div>
-          <div
-            class="__cov-progress"
-            style="
-              background-color: rgb(248, 249, 250);
-              opacity: 0;
-              position: fixed;
-              top: 0px;
-              left: 0px;
-              width: 0%;
-              height: 2px;
-              transition: opacity 0.6s ease 0s;
-            "
-          ></div>
         </div><br><br><br><br>
         <!-- #main -->
 
