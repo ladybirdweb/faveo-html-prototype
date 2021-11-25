@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=false;" />
+    <title>Billing Packages|FAVEO</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css" />
+    <!-- Ionicons -->
+    <link
+      rel="stylesheet"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link
+      rel="stylesheet"
+      href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
+    />
+    <!-- iCheck -->
+    <link
+      rel="stylesheet"
+      href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+    />
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css" />
+    <!-- overlayScrollbars -->
+    <link
+      rel="stylesheet"
+      href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
+    />
+    <!-- Daterange picker -->
+    <link
+      rel="stylesheet"
+      href="../plugins/daterangepicker/daterangepicker.css"
+    />
+    <!-- summernote -->
+    <link
+      rel="stylesheet"
+      href="../plugins/summernote/summernote-bs4.min.css"
+    />
+    <!-- Custom -->
+    <link rel="stylesheet" href="../dist/css/billingpackages.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header role="banner" class="site-header layout-two">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+              <img
+                src="https://support.faveohelpdesk.com/storage/company_logos/logos/e6426102-b68a-4c1e-b30d-14df86006c1a/1827.logo.png"
+                alt=""
+                class="img-fluid"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Submit Ticket</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="true"
+                    >Knowledge Base
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider">
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item active dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="true"
+                    >Billing
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Purchase Packages</a>
+                    <a class="dropdown-item" href="#">My Packages</a>
+                    <a class="dropdown-item" href="#">My Invoices</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Login </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Languages
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">United Kingdom (UK)</a>
+                    <a class="dropdown-item" href="#">United States (US)</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="live-search">
+            <form class="input-group input-group-sm">
+              <input
+                class="form-control form-control-navbar"
+                type="search"
+                placeholder="Have a question? Search Your Search Term Here..."
+                aria-label="Search"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </header>
+      <!-- Top Section -->
+      <div class="content-header layout-two">
+        <div class="container">
+          <div class="breadcrumb-top">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item active"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active"><a href="#">Packages</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!--End Of Top Section -->
+
+      <!-- Main Content -->
+      <div
+        class="container"
+        style="
+          background-color: white;
+          margin-top: -30px;
+          border-radius: 1.1rem;
+          margin-left: auto;
+          position: relative;
+          max-width: 1000px;
+        " 
+      >
+        <div class="content-area">
+          <!---->
+          <div id="main-div" class=""></div>
+            <!---->
+            <!---->
+            <!---->
+            <div id="filter" class="row">
+              <div class="col-md-6"><!----></div>
+              <div class="col-md-6 input-group rounded">
+                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                aria-describedby="search-addon" />
+                <span class="input-group-text border-0" id="search-addon">
+                  <i class="fas fa-search"></i>
+                </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="container">
+                <div class="features row">
+                  <div class="col-sm-3">
+                    <div class="banner-wrapper text-center">
+                      <span class="fa-stack fa-3x"
+                        ><i
+                          ><img
+                            src="https://helpdesk.productdemourl.com/Akash_Deep/public/themes/default/client/images/package.png"
+                            alt=""
+                            class="img-circle pack_image" /></i></span
+                      ><br />
+                      <h4 class="banner-title h3 banner_h3">Faveo</h4>
+                      <div class="banner-content">
+                        <p title="Free">Price: <b>Free</b></p>
+                        <p>Validity: <b>One time</b></p>
+                        <p title="12">Allowed Tickets: <b>12</b></p>
+                      </div>
+                      <p>
+                        <a
+                          href="/Akash_Deep/public/package/1"
+                          class="btn btn-custom"
+                          style="
+                            border-color: rgb(0, 192, 239);
+                            background-color:rgba(9, 82, 240, 0.808);
+                          "
+                          ><span class="fa fa-cart-plus"></span>&nbsp;Buy now
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="banner-wrapper text-center">
+                      <span class="fa-stack fa-3x"
+                        ><i
+                          ><img
+                            src="https://helpdesk.productdemourl.com/Akash_Deep/public/themes/default/client/images/package.png"
+                            alt=""
+                            class="img-circle pack_image" /></i></span
+                      ><br />
+                      <h4 class="banner-title h3 banner_h3">Helpdesk</h4>
+                      <div class="banner-content">
+                        <p title="$10.00">Price: <b>$10.00</b></p>
+                        <p>Validity: <b>One time</b></p>
+                        <p title="2">Allowed Tickets: <b>2</b></p>
+                      </div>
+                      <p>
+                        <a
+                          href="/Akash_Deep/public/package/2"
+                          class="btn btn-custom"
+                          style="
+                            border-color: rgb(0, 192, 239);
+                            background-color: rgba(9, 82, 240, 0.808);
+                          "
+                          ><span class="fa fa-cart-plus"></span>&nbsp;Buy now
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="banner-wrapper text-center">
+                      <span class="fa-stack fa-3x"
+                        ><i
+                          ><img
+                            src="https://helpdesk.productdemourl.com/Akash_Deep/public/themes/default/client/images/package.png"
+                            alt=""
+                            class="img-circle pack_image" /></i></span
+                      ><br />
+                      <h4 class="banner-title h3 banner_h3">Servicedes...</h4>
+                      <div class="banner-content">
+                        <p title="$20.00">Price: <b>$20.00</b></p>
+                        <p>Validity: <b>One time</b></p>
+                        <p title="2">Allowed Tickets: <b>2</b></p>
+                      </div>
+                      <p>
+                        <a
+                          href="/Akash_Deep/public/package/3"
+                          class="btn btn-custom"
+                          style="
+                            border-color: rgb(0, 192, 239);
+                            background-color: rgba(9, 82, 240, 0.808);
+                          "
+                          ><span class="fa fa-cart-plus"></span>&nbsp;Buy now
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="banner-wrapper text-center">
+                      <span class="fa-stack fa-3x"
+                        ><i
+                          ><img
+                            src="https://helpdesk.productdemourl.com/Akash_Deep/public/themes/default/client/images/package.png"
+                            alt=""
+                            class="img-circle pack_image" /></i></span
+                      ><br />
+                      <h4 class="banner-title h3 banner_h3">Client</h4>
+                      <div class="banner-content">
+                        <p title="$100.00">Price: <b>$100.00</b></p>
+                        <p>Validity: <b>One time</b></p>
+                        <p title="4">Allowed Tickets: <b>4</b></p>
+                      </div>
+                      <p>
+                        <a
+                          href="/Akash_Deep/public/package/4"
+                          class="btn btn-custom"
+                          style="
+                            border-color: rgb(0, 192, 239);
+                            background-color: rgba(9, 82, 240, 0.808);
+                          "
+                          ><span class="fa fa-cart-plus"></span>&nbsp;Buy now
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!---->
+            <!---->
+          </div>
+          <div
+            class="__cov-progress"
+            style="
+              background-color: rgb(248, 249, 250);
+              opacity: 0;
+              position: fixed;
+              top: 0px;
+              left: 0px;
+              width: 0%;
+              height: 2px;
+              transition: opacity 0.6s ease 0s;
+            "
+          ></div>
+        </div>
+      </div>
+      <!-- END Main Content Wrapper -->
+
+      <!-- Footer -->
+
+      <footer class="main-f-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="f-widget">
+                <h3>PRODUCTS</h3>
+                <ul>
+                  <li>
+                    <a href="https://www.faveohelpdesk.com/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Faveo Helpdesk
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.faveohelpdesk.com/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Faveo Servicedesk
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://epapermanager.com/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >ePaper Manager</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.agorainvoicing.com/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Agora Invoicing
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://codecanyon.net/user/ladybirdweb/portfolio">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Scripts
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="f-widget">
+                <h3>POLICIES</h3>
+                <ul>
+                  <li>
+                    <a href="https://www.faveohelpdesk.com/privacy-policy/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.faveohelpdesk.com/terms-conditions/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Terms &amp; Conditions
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.faveohelpdesk.com/eula/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >EULA
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.faveohelpdesk.com/data-deletion-policy/"
+                    >
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Data Deletion Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.faveohelpdesk.com/data-hosting-policy/"
+                    >
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Data Hosting Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.faveohelpdesk.com/security/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"> </i
+                      >Secure Customer Service Software
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.faveohelpdesk.com/cookies-policy/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Cookies Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.faveohelpdesk.com/gdpr/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >GDPR &amp; EU Data Protection
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="f-widget">
+                <h3>SERVICES</h3>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.ladybirdweb.com/services/ecommerce-website-design/"
+                    >
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >E-commerce website design &amp; development india</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.ladybirdweb.com/web-design-development-india/"
+                    >
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Web Design &amp; Development India
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.ladybirdweb.com/services/web-app-development/"
+                    >
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Web Applications Development
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.ladybirdweb.com/website-maintenance-india/"
+                    >
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Website Maintenance India
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://store.ladybirdwebhost.com/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Domain Registration &amp; Web Hosting
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="f-widget">
+                <h3>SUPPORT</h3>
+                <ul>
+                  <li>
+                    <a href="https://support.faveohelpdesk.com/knowledgebase">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >User Manual
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://docs.faveohelpdesk.com/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Installation Manual
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.faveohelpdesk.com/request-a-demo/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Request A Demo
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.faveohelpdesk.com/become-a-partner/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Become a Partner
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.faveohelpdesk.com/our-partners/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Our Partners
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.faveohelpdesk.com/love-open-source/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >We Love Open Source
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.faveohelpdesk.com/faveo-helpdesk-road-map/"
+                    >
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Faveo Road Map
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.faveohelpdesk.com/support-community-edition/"
+                    >
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Support the Community Edition</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://developers.faveohelpdesk.com">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Developer Portal
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://forum.faveohelpdesk.com/">
+                      <i class="fa fa-angle-right mr-2" aria-hidden="true"></i
+                      >Community Forums
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-md-6">
+              <p class="m-0">
+                Copyright © 2021. Ladybird Web Solution All rights reserved.
+                Powered by Faveo
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div class="site-social text-right">
+                <ul class="m-0 p-0">
+                  <li>
+                    <a href="#" target="_blank" class="btn-social btn-linkedin">
+                      <i class="fab fa-linkedin fa-fw"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="btn-social btn-twitter">
+                      <i class="fab fa-twitter fa-fw"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="btn-social btn-facebook">
+                      <i class="fab fa-facebook-f fa-fw"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="btn-social btn-youtube">
+                      <i class="fab fa-youtube fa-fw"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      target="_blank"
+                      class="btn-social btn-instagram"
+                    >
+                      <i class="fab fa-instagram fa-fw"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- END Footer -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+      $.widget.bridge("uibutton", $.ui.button);
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="../plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="../plugins/sparklines/sparkline.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="../plugins/moment/moment.min.js"></script>
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="../plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.js"></script>
+  </body>
+</html>
