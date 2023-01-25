@@ -3,16 +3,16 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../screens/Screens-bottom-tabs/Home";
 import Analytics from "../screens/Analytics";
 import Notification from "../screens/notification/Notification";
-import MyTicket from "../screens/auth/MyTicket";
+import Inbox from "../screens/inbox/Inbox";
 import Contact from "../screens/contact/Contact";
-import Account from "../screens/auth/Account/AccountSetting";
+import Account from "../screens/Account/AccountSetting";
 
 const Stack = createNativeStackNavigator();
 
-const MyTicketTabStack = () => {
+const MyInboxStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="StackTicket" component={MyTicket} />
+      <Stack.Screen name="StackInbox" component={Inbox} />
     </Stack.Navigator>
   );
 };
@@ -50,7 +50,7 @@ const AccountTabStack = () => {
 };
 
 export {
-  MyTicketTabStack,
+  MyInboxStack,
   ContactTabStack,
   AnalyticsTabStack,
   NotificationTabStack,

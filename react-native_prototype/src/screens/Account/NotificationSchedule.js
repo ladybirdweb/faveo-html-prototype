@@ -1,11 +1,11 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import COLORS from "../../../constants/Colors";
-import FontFamily from "../../../constants/FontFamily";
-import Images from "../../../constants/Images";
+import COLORS from "../../constants/Colors";
+import FontFamily from "../../constants/FontFamily";
+import Images from "../../constants/Images";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
-import BackHeaderComponent from "../../../components/BackHeaderComponent";
+import BackHeaderComponent from "../../components/BackHeaderComponent";
 
 
 const NotificationSchedule = () => {
@@ -16,13 +16,13 @@ const NotificationSchedule = () => {
   return (
     <SafeAreaView style={styles.notificationScheduleContainer} edges={['top', 'bottom']}>
       <BackHeaderComponent title="Notification schedule" onPress={onPressBack}/>
-      <View style={styles.notificationMain}>
+      <TouchableOpacity style={styles.notificationMain}>
         <Image source={Images.redAlert} style={styles.redAlertImg} />
         <Text style={styles.notificationOff}>
           Notification turned off, please tap
           {"\n"}here to turn ON in settings
         </Text>
-      </View>
+      </TouchableOpacity>
       <View style={styles.top}>
         <Text style={styles.rcvNotification}>Receive notification</Text>
       </View>

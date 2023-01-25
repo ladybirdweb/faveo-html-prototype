@@ -1,13 +1,13 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import Images from "../../../constants/Images";
-import COLORS from "../../../constants/Colors";
-import FontFamily from "../../../constants/FontFamily";
-import InputComponent from "../../../components/InputComponent";
-import ButtonComponent from "../../../components/ButtonComponent";
+import Images from "../../constants/Images";
+import COLORS from "../../constants/Colors";
+import FontFamily from "../../constants/FontFamily";
+import InputComponent from "../../components/InputComponent";
+import ButtonComponent from "../../components/ButtonComponent";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
-import BackHeaderComponent from "../../../components/BackHeaderComponent";
+import BackHeaderComponent from "../../components/BackHeaderComponent";
 
 const Profile = () => {
   const navigation = useNavigation();

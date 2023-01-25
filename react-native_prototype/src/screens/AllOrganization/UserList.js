@@ -1,11 +1,11 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import FontFamily from "../../../constants/FontFamily";
-import COLORS from "../../../constants/Colors";
-import SearchComponent from "../../../components/SearchComponent";
-import Images from "../../../constants/Images";
+import FontFamily from "../../constants/FontFamily";
+import COLORS from "../../constants/Colors";
+import SearchComponent from "../../components/SearchComponent";
+import Images from "../../constants/Images";
 import { SafeAreaView } from "react-native-safe-area-context";
-import BackHeaderComponent from "../../../components/BackHeaderComponent";
+import { useNavigation } from "@react-navigation/native";
 
 const UserList = () => {
   const navigation = useNavigation();
@@ -13,7 +13,7 @@ const UserList = () => {
     navigation.goBack();
   };
   return (
-    <View style={styles.allOrganizationContainer} edges={['top', 'bottom']} >
+    <SafeAreaView style={styles.allOrganizationContainer} edges={['top', 'bottom']} >
       <View style={styles.allOrganizationTop}>
         <TouchableOpacity onPress={onPressBack}>
         <Image source={Images.BackArrow} style={styles.menuIcon} />
@@ -27,6 +27,13 @@ const UserList = () => {
       <View style={styles.top}>
         <SearchComponent />
       </View>
+      <TouchableOpacity style={styles.organizationTitleBox}>
+        <View>
+          <Text style={styles.organizationName}>Name</Text>
+          <Text style={styles.organizationSubtitle}>User Name</Text>
+        </View>
+        <Image source={Images.Forword} />
+      </TouchableOpacity>
       <View style={styles.organizationTitleBox}>
         <View>
           <Text style={styles.organizationName}>Name</Text>
@@ -62,20 +69,13 @@ const UserList = () => {
         </View>
         <Image source={Images.Forword} />
       </View>
-      <View style={styles.organizationTitleBox}>
-        <View>
-          <Text style={styles.organizationName}>Name</Text>
-          <Text style={styles.organizationSubtitle}>User Name</Text>
-        </View>
-        <Image source={Images.Forword} />
-      </View>
-    </View>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({
   allOrganizationContainer: {
     paddingHorizontal: 25,
-    paddingVertical: 35,
+    paddingBottom: 35,
   },
   menuIcon: {
     width: 25,

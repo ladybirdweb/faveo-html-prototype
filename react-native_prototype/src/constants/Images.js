@@ -28,7 +28,7 @@ export const user = require("../assets/images/user.png");
 export const edit = require("../assets/images/edit.png");
 export const ticketNotification = require("../assets/images/ticketNotification.png");
 export const notification = require("../assets/images/notificationSchedule.png");
-export const  notificationSchedule = require("../assets/images/ticketNotification.png");
+export const notificationSchedule = require("../assets/images/ticketNotification.png");
 export const about = require("../assets/images/about.png");
 export const appLock = require("../assets/images/appLock.png");
 export const give = require("../assets/images/giveFeedback.png");
@@ -39,26 +39,26 @@ export const redAlert = require("../assets/images/alertred.png");
 export const clanguage = require("../assets/images/clanguage.png");
 export const file = require("../assets/images/file.png");
 export const attach = require("../assets/images/attach.png");
-export const cross  = require("../assets/images/cross.png");
-export const addcontact  = require("../assets/images/addcontact.png");
-export const wedit  = require("../assets/images/wedit.png");
-export const PLUS  = require("../assets/images/plus.png");
-export const Crosscontact  = require("../assets/images/Crosscontact.png");
-export const CALL  = require("../assets/images/CALL.png");
-export const createTicket  = require("../assets/images/ticket1.png");
-export const Inbox  = require("../assets/images/inbox.png");
-export const count12  = require("../assets/images/count12.png");
-export const Ellipse8  = require("../assets/images/Ellipse8.png");
-export const logout  = require("../assets/images/logout1.png");
-export const trash  = require("../assets/images/trash.png");
+export const cross = require("../assets/images/cross.png");
+export const addcontact = require("../assets/images/addcontact.png");
+export const wedit = require("../assets/images/wedit.png");
+export const PLUS = require("../assets/images/plus.png");
+export const Crosscontact = require("../assets/images/Crosscontact.png");
+export const CALL = require("../assets/images/CALL.png");
+export const createTicket = require("../assets/images/ticket1.png");
+export const Inbox = require("../assets/images/inbox.png");
+export const count12 = require("../assets/images/count12.png");
+export const Ellipse8 = require("../assets/images/Ellipse8.png");
+export const logout = require("../assets/images/logout1.png");
+export const trash = require("../assets/images/trash.png");
 export const ticket1 = require("../assets/images/ticket1.png");
 export const ticket3 = require("../assets/images/ticket3.png");
 export const ticket4 = require("../assets/images/ticket4.png");
 export const ticket5 = require("../assets/images/ticket5.png");
 export const ticket6 = require("../assets/images/ticket6.png");
 export const ticket7 = require("../assets/images/ticket7.png");
-export const ticket8  = require("../assets/images/ticket8.png");
-export const abouts  = require("../assets/images/abouts.png");
+export const ticket8 = require("../assets/images/ticket8.png");
+export const abouts = require("../assets/images/abouts.png");
 export const homeTabActive = require("../assets/images/home-tab-active.png");
 export const homeTab = require("../assets/images/home-tab.png");
 export const contactsTab = require("../assets/images/contacts-tab.png");
@@ -72,9 +72,29 @@ export const accountTabActive = require("../assets/images/account-tab-active.png
 export const Notifications = require("../assets/images/Notifications.png");
 export const Analytics = require("../assets/images/Analytics.png");
 export const threedot = require("../assets/images/3dot.png");
-
-
-
+export const noLogs = require("../assets/images/no-logs.png");
+export const Backward = require("../assets/images/backward.png");
+export const Calender = require("../assets/images/Calender.png");
+export const PlusWhite = require("../assets/images/plus-white.png");
+export const AddIcon = require("../assets/images/add-icon.png");
+export const DownArrow = require("../assets/images/down-arrow.png");
+export const AttachIcon = require("../assets/images/attachIcon.png");
+export const NotifyCustomer = require("../assets/images/notify-customer.png");
+export const Group5 = require("../assets/images/Group5.png");
+export const Group464 = require("../assets/images/Group464.png");
+export const PlusIcon = require("../assets/images/plus-icon.png");
+export const Reply = require("../assets/images/reply.png");
+export const Forward = require("../assets/images/Forward.png");
+export const AddNote = require("../assets/images/Add-Note.png");
+export const GroupClose = require("../assets/images/Group-close.png");
+export const GroupScenario = require("../assets/images/Group-Scenerio.png");
+export const LogTime = require("../assets/images/Group-log-time.png");
+export const GroupMerge = require("../assets/images/Group-Merge.png");
+export const GroupDueDate = require("../assets/images/Group-due-date.png");
+export const Email = require("../assets/images/email.png");
+export const Watchers = require("../assets/images/watcher.png");
+export const ReplyGray = require("../assets/images/reply-gray.png");
+export const AddNoteGray = require("../assets/images/add-note-gray.png");
 
 export default {
   Logo,
@@ -150,5 +170,28 @@ export default {
   accountTabActive,
   Notifications,
   Analytics,
-  threedot
+  threedot,
+  noLogs,
+  Backward,
+  Calender,
+  PlusWhite,
+  AddIcon,
+  DownArrow,
+  AttachIcon,
+  NotifyCustomer,
+  Group5,
+  Group464,
+  PlusIcon,
+  Reply,
+  Forward,
+  AddNote,
+  GroupClose,
+  GroupScenario,
+  LogTime,
+  GroupMerge,
+  GroupDueDate,
+  Email,
+  Watchers,
+  ReplyGray,
+  AddNoteGray,
 };

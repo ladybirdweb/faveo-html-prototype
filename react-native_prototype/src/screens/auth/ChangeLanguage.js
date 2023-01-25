@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   changeLanMain: {
     height: "100%",
     paddingHorizontal: 20,
-    paddingVertical: 75,
+    // paddingVertical: 75,
   },
   changeLangtopSection: {
     flexDirection: "row",

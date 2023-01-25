@@ -1,11 +1,11 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import COLORS from "../../../constants/Colors";
-import Images from "../../../constants/Images";
-import FontFamily from "../../../constants/FontFamily";
+import COLORS from "../../constants/Colors";
+import Images from "../../constants/Images";
+import FontFamily from "../../constants/FontFamily";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import BackHeaderComponent from "../../../components/BackHeaderComponent";
+import BackHeaderComponent from "../../components/BackHeaderComponent";
 const AccountSetting = () => {
   const navigation = useNavigation();
   const onPressBack = () => {

@@ -1,12 +1,12 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import Images from "../../../constants/Images";
-import FontFamily from "../../../constants/FontFamily";
-import COLORS from "../../../constants/Colors";
-import SearchComponent from "../../../components/SearchComponent";
+import Images from "../../constants/Images";
+import FontFamily from "../../constants/FontFamily";
+import COLORS from "../../constants/Colors";
+import SearchComponent from "../../components/SearchComponent";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import BackHeaderComponent from "../../../components/BackHeaderComponent";
+import BackHeaderComponent from "../../components/BackHeaderComponent";
 
 const Userdetails = () => {
   const navigation = useNavigation();

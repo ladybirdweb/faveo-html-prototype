@@ -2,8 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { StyleSheet, View, Image } from "react-native";
 import {
-  MyTicketTabStack,
-  ContactTabStack,
+  MyInboxStack,  ContactTabStack,
   AnalyticsTabStack,
   NotificationTabStack,
   AccountTabStack,
@@ -24,8 +23,8 @@ const BottomTabNavigator = () => {
       }}
     >
       <Tab.Screen
-        name="TabTicket"
-        component={MyTicketTabStack}
+        name="TabInbox"
+        component={MyInboxStack}
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={styles.tabBarView}>

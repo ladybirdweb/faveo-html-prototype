@@ -6,13 +6,13 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
-import Images from "../../../constants/Images";
-import COLORS from "../../../constants/Colors";
-import FontFamily from "../../../constants/FontFamily";
+import Images from "../../constants/Images";
+import COLORS from "../../constants/Colors";
+import FontFamily from "../../constants/FontFamily";
 import { Switch, VStack } from "native-base";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import BackHeaderComponent from "../../../components/BackHeaderComponent";
+import BackHeaderComponent from "../../components/BackHeaderComponent";
 
 const AppLock = () => {
   const navigation = useNavigation();

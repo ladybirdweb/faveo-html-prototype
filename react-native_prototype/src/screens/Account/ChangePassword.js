@@ -1,12 +1,13 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import Images from "../../../constants/Images";
-import COLORS from "../../../constants/Colors";
-import FontFamily from "../../../constants/FontFamily";
-import InputComponent from "../../../components/InputComponent";
-import ButtonComponent from "../../../components/ButtonComponent";
+import Images from "../../constants/Images";
+import COLORS from "../../constants/Colors";
+import FontFamily from "../../constants/FontFamily";
+import InputComponent from "../../components/InputComponent";
+import ButtonComponent from "../../components/ButtonComponent";
 import { useNavigation } from "@react-navigation/native";
-import BackHeaderComponent from "../../../components/BackHeaderComponent";
+import BackHeaderComponent from "../../components/BackHeaderComponent";
+import { SafeAreaView } from "react-native-safe-area-context";
 const ChangePassword = () => {
   const navigation = useNavigation();
   const onPressBack = () => {
@@ -31,7 +32,7 @@ const ChangePassword = () => {
 const styles = StyleSheet.create({
   appLockMain: {
     paddingHorizontal: 20,
-    paddingVertical: 36,
+    paddingBottom: 35,
   },
   ticketNotificationMain: {
     paddingHorizontal: 20,

@@ -41,8 +41,8 @@ const Contact = () => {
   return (
     <SafeAreaView style={styles.contactMain} edges={['top', 'bottom']}>
       <View style={styles.contactTopView}>
-        <TouchableOpacity onPress={() => navigation.openDrawer()}>
-        <Image source={Images.Menu} style={styles.menuIcon} />
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+        <Image source={Images.BackArrow} style={styles.menuIcon} />
         </TouchableOpacity>
         <Text style={styles.allContact}>All Contacts</Text>
         <Image source={Images.addcontact} />
@@ -55,35 +55,35 @@ const Contact = () => {
           <View style={styles.letterCircle}>
             <Text style={styles.letter}>A</Text>
           </View>
-          <View style={styles.alexander}>
-            <Text style={styles.alexandeText}>Alexander</Text>
+          <View style={styles.nameContainer}>
+            <Text style={styles.nameText}>Alexander</Text>
           </View>
-          <View style={styles.alexander}>
-            <Text style={styles.alexandeText}>Aiden</Text>
+          <View style={styles.nameContainer}>
+            <Text style={styles.nameText}>Aiden</Text>
           </View>
-          <View style={styles.alexander}>
-            <Text style={styles.alexandeText}>Ashe</Text>
+          <View style={styles.nameContainer}>
+            <Text style={styles.nameText}>Ashe</Text>
           </View>
-          <View style={styles.alexander}>
-            <Text style={styles.alexandeText}>Anthony</Text>
+          <View style={styles.nameContainer}>
+            <Text style={styles.nameText}>Anthony</Text>
           </View>
           <View style={styles.top}>
           <View style={styles.letterCircle}>
             <Text style={styles.letter}>B</Text>
           </View>
-            <View style={styles.alexander}>
-              <Text style={styles.alexandeText}>Bethany.</Text>
+            <View style={styles.nameContainer}>
+              <Text style={styles.nameText}>Bethany</Text>
             </View>
-            <View style={styles.alexander}>
-              <Text style={styles.alexandeText}>Bethany.</Text>
+            <View style={styles.nameContainer}>
+              <Text style={styles.nameText}>Bethany</Text>
             </View>
           </View>
         </View>
         <View style={styles.dataView}>
-          {data.map((i) => {
+          {data.map((index) => {
             return (
-              <TouchableOpacity>
-                <Text style={styles.dataContant}>{i}</Text>
+              <TouchableOpacity key={index}>
+                <Text style={styles.dataContant}>{index}</Text>
               </TouchableOpacity>
             );
           })}
@@ -114,13 +114,12 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.PTSansBold,
     color: COLORS.secondary,
   },
-  alexander: {
-    borderBottomWidth: 0.5,
+  nameContainer: {
+    borderBottomWidth: 1,
     borderBottomColor: COLORS.secondary,
-    paddingBottom: 10,
-    paddingTop: 10,
+    paddingVertical: 10,
   },
-  alexandeText: {
+  nameText: {
     fontSize: 20,
     fontFamily: FontFamily.NunitoBold,
     color: COLORS.secondary,

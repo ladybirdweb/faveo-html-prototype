@@ -5,6 +5,7 @@ const COLORS = {
     test: "#EAEAEA",
     white:"#FFFFFF",
     red:"#B93833",
-    transparent: 'transparent'
+    transparent: 'transparent',
+    grey:"#7C848F"
   };
   export default COLORS;

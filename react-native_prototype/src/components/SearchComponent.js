@@ -4,12 +4,12 @@ import Images from "../constants/Images";
 import { TextInput } from "react-native-paper";
 import FontFamily from "../constants/FontFamily";
 import COLORS from "../constants/Colors";
-const SearchComponent = () => {
+const SearchComponent = (props) => {
   return (
     <View style={styles.searchSection}>
       <Image source={Images.Search} style={styles.searchIcon} />
       <TextInput
-        placeholder="Search here"
+        placeholder={props.placeholder??"Search here"}
         style={styles.input}
         underlineColor="transparent"
         underlineColorAndroid="transparent"
@@ -24,6 +24,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#EAEAEA",
     paddingHorizontal: 13,
     borderRadius: 5,
+    height: 43,
+    borderColor: '#dadada',
+    borderWidth: 1,
   },
   searchIcon: {
     width: 15,
@@ -37,6 +40,7 @@ const styles = StyleSheet.create({
     color: COLORS.secondary,
     borderBottomWidth: 0,
     fontSize: 15,
+    height: 40,
     fontFamily: FontFamily.PTSansRegular,
   },
 });

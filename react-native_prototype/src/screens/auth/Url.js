@@ -1,21 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Text,
   ImageBackground,
   StyleSheet,
   Image,
   TouchableOpacity,
+  View,
 } from "react-native";
 import InputComponent from "../../components/InputComponent";
 import Images from "../../constants/Images";
 import { Box } from "native-base";
+import { SafeAreaView } from "react-native-safe-area-context";
 import COLORS from "../../constants/Colors";
 import FontFamily from "../../constants/FontFamily";
 import { useNavigation } from "@react-navigation/native";
 import ButtonComponent from "../../components/ButtonComponent";
+import ModalComponent from "../../components/ModalComponent";
+import AllLogs from "../../components/popUps/AllLogs";
+import SearchBy from "../../components/popUps/SearchBy";
+import DueDate from "../../components/popUps/DueDate";
+import SelectScenario from "../../components/popUps/SelectScenario";
+import AddTickets from "../../components/popUps/AddTickets";
+import InboxGroupDropdown from "../../components/popUps/InboxGroupDropdown";
+import MergeTicket from "../../components/popUps/MergeTicket";
+import {
+  emailDropDown,
+  groupDropDown,
+  propertyPopupData,
+  replyPopupData,
+  searchBy,
+  statusPopupData,
+  threeDots,
+} from "../../constants/String";
+import ClosePopup from "../../components/popUps/ClosePopup";
 
 const Url = () => {
   const navigation = useNavigation();
+  const [isModalVisible, setModalVisible] = useState(false);
   const onPressChangeLanguage = () => {
     navigation.navigate("ChangeLanguage");
   };
@@ -25,56 +46,120 @@ const Url = () => {
   const onPressNext = () => {
     navigation.navigate("SignIn");
   };
+
+  const handleModal = () => setModalVisible((prev) => !prev);
+
   return (
     <ImageBackground
       source={Images.UrlBG}
       resizeMode="cover"
       style={styles.image}
     >
-      <Image
-        source={Images.Logo}
-        style={styles.logoStyle}
-        resizeMode="contain"
-      />
-      <Box
-        style={styles.boxStyle}
-        shadow="7"
-        px="5"
-        m="0"
-        alignSelf="center"
-        width="80%"
-        height="419"
-        borderRadius="md"
-        borderWidth="0"
-        bg="white"
-      >
-        <TouchableOpacity
-          style={{ alignItems: "flex-end" }}
-          onPress={onPressChangeLanguage}
+      <SafeAreaView edges={["top", "bottom"]} style={styles.mainContainer}>
+        <View>
+          <Image
+            source={Images.Logo}
+            style={styles.logoStyle}
+            resizeMode="contain"
+          />
+        </View>
+        <Box
+          style={styles.boxStyle}
+          shadow="7"
+          px="5"
+          m="0"
+          alignSelf="center"
+          width="80%"
+          height="419"
+          borderRadius="md"
+          borderWidth="0"
+          bg="white"
         >
-          <Text style={styles.languageText}>Change Language</Text>
-        </TouchableOpacity>
-        <InputComponent label={"Faveo URL"} placeHolder="faveoapp.com" />
-        <TouchableOpacity
-          style={{ alignItems: "flex-end", marginTop: 20 }}
-          onPress={onPressForgot}
-        >
-          <Text style={styles.languageText}>Forgot faveo URL?</Text>
-        </TouchableOpacity>
-        <ButtonComponent title="Next" onPress={onPressNext} />
-      </Box>
+          <TouchableOpacity
+            style={{ alignItems: "flex-end" }}
+            onPress={onPressChangeLanguage}
+          >
+            <Text style={styles.languageText}>Change Language</Text>
+          </TouchableOpacity>
+          <InputComponent label={"Faveo URL"} placeHolder="faveoapp.com" />
+          <TouchableOpacity
+            style={{ alignItems: "flex-end", marginTop: 20 }}
+            onPress={onPressForgot}
+          >
+            <Text style={styles.languageText}>Forgot faveo URL?</Text>
+          </TouchableOpacity>
+          <ButtonComponent title="Next" onPress={onPressNext} />
+        </Box>
+        {/* .......Temporary call for testing........ */}
+        {/* for searchBy popup */}
+        {/* <ModalComponent isVisible={handleModal} customStyles={{height:"35%"}} isCross={true} children={<SearchBy list={searchBy} heading="Search By" />} /> */}
+
+        {/* for Group popup */}
+        {/* <ModalComponent isVisible={handleModal} customStyles={{height:"50%"}} isCross={true} children={<SearchBy list={groupDropDown} heading="Group"/>} /> */}
+
+        {/* for Status popup */}
+        {/* <ModalComponent
+          isVisible={handleModal}
+          customStyles={{ height: "50%" }}
+          isCross={true}
+          children={<SearchBy list={statusPopupData} heading="Status" />}
+        /> */}
+
+        {/* for property popup */}
+        {/* <ModalComponent
+          isVisible={handleModal}
+          customStyles={{ height: "50%" }}
+          isCross={true}
+          children={<SearchBy list={propertyPopupData} heading="Property" />}
+        /> */}
+
+         {/* for Reply popup */}
+         {/* <ModalComponent
+          isVisible={handleModal}
+          customStyles={{ height: "25%" }}
+          isCross={false}
+          children={<SearchBy list={replyPopupData} />}
+        /> */}
+
+         {/* for 3 dots popup */}
+         {/* <ModalComponent
+          isVisible={handleModal}
+          customStyles={{ height: "55%" }}
+          children={<SearchBy list={threeDots} isTick={true} />}
+        /> */}
+
+         {/* for 3 dots popup */}
+         {/* <ModalComponent
+          isVisible={handleModal}
+          customStyles={{ height: "25%" }}
+          children={<SearchBy list={emailDropDown} />}
+        /> */}
+
+        {/* <ModalComponent isVisible={handleModal} customStyles={{height:"85%"}} isCross={true}  children={<DueDate />} /> */}
+        {/* <ModalComponent isVisible={handleModal}  isCross={true} children={<SelectScenario />} /> */}
+        {/* <ModalComponent isVisible={handleModal}  isCross={true} children={<InboxGroupDropdown />} /> */}
+        {/* <ModalComponent isVisible={handleModal} customStyles={{height:"85%"}} isCross={true} children={<AddTickets />} /> */}
+        <ModalComponent isVisible={handleModal} customStyles={{height:"90%"}}  isCross={true} children={<AllLogs />} />
+        {/* <ModalComponent isIcon={true} isVisible={handleModal} customStyles={{height:"85%"}} isCross={true} children={<MergeTicket />} /> */}
+        {/* <ModalComponent isVisible={handleModal} customStyles={{height:"35%"}} isCross={false} children={<ClosePopup />} /> */}
+      </SafeAreaView>
     </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
+  mainContainer: {
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+  },
   image: {
     width: "100%",
     height: "100%",
-    flexDirection: "column",
+    backgroundColor: "#ffffff",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#ffffff",
   },
   logoStyle: {
     width: 200,
@@ -88,7 +173,7 @@ const styles = StyleSheet.create({
   },
   boxStyle: {
     paddingTop: 25,
-    marginTop: 75,
+    marginTop: 35,
   },
 });
 

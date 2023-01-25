@@ -6,29 +6,27 @@ import SignIn from "../screens/auth/SignIn";
 import ChangeLanguage from "../screens/auth/ChangeLanguage";
 import FaveoAccount from "../screens/auth/FaveoAccount";
 import MyTicket from "../screens/auth/MyTicket";
-import ContactMemberProfile from "../screens/auth/ContactsDictionary/ContactMemberProfile";
-import SearchComponent from "../components/SearchComponent";
-import AllOrganization from "../screens/auth/AllOrganization/AllOrganization";
-import UserList from "../screens/auth/AllOrganization/UserList";
-import Userdetails from "../screens/auth/AllOrganization/Userdetails";
-import ContactsDictionary from "../screens/auth/ContactsDictionary/ContactsDictionary";
-import AccountSetting from "../screens/auth/Account/AccountSetting";
+import ContactMemberProfile from "../screens/ContactsDictionary/ContactMemberProfile";
+import AllOrganization from "../screens/AllOrganization/AllOrganization";
+import UserList from "../screens/AllOrganization/UserList";
+import Userdetails from "../screens/AllOrganization/Userdetails";
+import ContactsDictionary from "../screens/ContactsDictionary/ContactsDictionary";
+import AccountSetting from "../screens/Account/AccountSetting";
 import TicketComponent from "../components/TicketComponent";
-import TicketNotification from "../screens/auth/Account/TicketNotification";
-import AppLock from "../screens/auth/Account/AppLock";
-import About from "../screens/auth/Account/About";
-import NotificationSchedule from "../screens/auth/Account/NotificationSchedule";
-import ChangePassword from "../screens/auth/Account/ChangePassword";
-import Profile from "../screens/auth/Account/profile";
-import Feedback from "../screens/auth/Account/Feedback";
+import TicketNotification from "../screens/Account/TicketNotification";
+import AppLock from "../screens/Account/AppLock";
+import About from "../screens/Account/About";
+import NotificationSchedule from "../screens/Account/NotificationSchedule";
+import ChangePassword from "../screens/Account/ChangePassword";
+import Profile from "../screens/Account/profile";
+import Feedback from "../screens/Account/Feedback";
 import Contact from "../screens/contact/Contact";
 import ContactProfile from "../screens/contact/ContactProfile";
-// import Profile from "../screens/auth/Account/Profile";
-// import Profile from "../screens/auth/Account/profile";
 import DrawerNavigator from "./DrawerNavigator";
 import Home from "../screens/Screens-bottom-tabs/Home";
 import Notification from "../screens/notification/Notification";
 import Analytics from "../screens/Analytics";
+import Inbox from "../screens/inbox/Inbox";
 import InboxDetails from "../screens/inbox/InboxDetails";
 
 const Stack = createNativeStackNavigator();
@@ -42,7 +40,6 @@ const MainStackNavigator = () => {
       <Stack.Screen name="ChangeLanguage" component={ChangeLanguage} />
       <Stack.Screen name="SignIn" component={SignIn} />
       <Stack.Screen name="FaveoAccount" component={FaveoAccount} />
-      <Stack.Screen name="SearchComponent" component={SearchComponent} />
       <Stack.Screen name="AllOrganization" component={AllOrganization} />
       <Stack.Screen name="UserList" component={UserList} />
       <Stack.Screen name="UserDetails" component={Userdetails} />
@@ -67,8 +64,9 @@ const MainStackNavigator = () => {
       <Stack.Screen name="Analytics" component={Analytics} />
       <Stack.Screen name="Notification" component={Notification} />
       <Stack.Screen name="Contact" component={Contact} />
-      <Stack.Screen name="MyTicket" component={DrawerNavigator} />
+      <Stack.Screen name="Inbox" component={DrawerNavigator} />
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="MyTicket" component={MyTicket} />
     </Stack.Navigator>
   );
 };

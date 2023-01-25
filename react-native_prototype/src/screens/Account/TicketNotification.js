@@ -7,12 +7,12 @@ import {
   ScrollView,
 } from "react-native";
 import React from "react";
-import COLORS from "../../../constants/Colors";
-import FontFamily from "../../../constants/FontFamily";
+import COLORS from "../../constants/Colors";
+import FontFamily from "../../constants/FontFamily";
 import { Switch, VStack } from "native-base";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
-import BackHeaderComponent from "../../../components/BackHeaderComponent";
+import BackHeaderComponent from "../../components/BackHeaderComponent";
 
 const TicketNotification = () => {
   const navigation = useNavigation();

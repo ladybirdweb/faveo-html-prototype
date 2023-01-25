@@ -1,12 +1,12 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import Images from "../../../constants/Images";
-import COLORS from "../../../constants/Colors";
-import FontFamily from "../../../constants/FontFamily";
-import ButtonComponent from "../../../components/ButtonComponent";
+import Images from "../../constants/Images";
+import COLORS from "../../constants/Colors";
+import FontFamily from "../../constants/FontFamily";
+import ButtonComponent from "../../components/ButtonComponent";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import BackHeaderComponent from "../../../components/BackHeaderComponent";
+import BackHeaderComponent from "../../components/BackHeaderComponent";
 
 const Feedback = () => {
   const navigation = useNavigation();

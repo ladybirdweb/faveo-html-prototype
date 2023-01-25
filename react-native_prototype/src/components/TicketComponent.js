@@ -4,15 +4,16 @@ import Images from "../constants/Images";
 import ButtonComponent from "./ButtonComponent";
 import COLORS from "../constants/Colors";
 import FontFamily from "../constants/FontFamily";
-const TicketComponent = () => {
+const TicketComponent = (props) => {
+  const {onPress} = props;
   return (
-    <View style={styles.ticketContainer}>
+    <TouchableOpacity style={styles.ticketContainer} onPress={onPress}>
       <View style={styles.ticketsMain}>
         <View style={styles.ticketTopLeft}>
           <Image source={Images.UserTicket} style={styles.UserTicket} />
           <Text style={styles.ticketUsername}>Sarah James</Text>
         </View>
-        <View>
+        <View style={{zIndex: -1}}>
           <ButtonComponent
             title="Overdue"
             customStyle={styles.buttonComponentStyle}
@@ -58,7 +59,7 @@ const TicketComponent = () => {
           <Text style={styles.open}>Open</Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 const styles = StyleSheet.create({

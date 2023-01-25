@@ -19,7 +19,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 const FaveoAccount = () => {
   const navigation = useNavigation();
   const onPressAllow = () => {
-    navigation.navigate("MyTicket");
+    navigation.navigate("Inbox");
   };
   return (
     <SafeAreaView style={styles.faveoMain} edges={['top', 'bottom']}>
