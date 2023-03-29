@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+  /*for making datatable side scrollable whenever it has way too many columns for screen to accomodate   */
+  .dataTables_wrapper {
+    overflow-x: auto;
+  }
+</style>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Profile | Faveo Billing</title>
+
+  <meta name="keywords" content="HTML5 Template" />
+  <meta name="description"
+    content="Register, signup here to start using Faveo Helpdesk or signin to your existing account">
+  <meta name="author" content="okler.net">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href='https://billing.faveohelpdesk.com/common/images/favicon.ico' type="image/x-icon" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+  <!-- Web Fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
+    rel="stylesheet" type="text/css">
+
+
+  <link rel="stylesheet" href="https://billing.faveohelpdesk.com/client/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="vendor/fontawesome-free/css/min.css">
+  <link rel="stylesheet" href="https://billing.faveohelpdesk.com/client/css/animate.min.css">
+  <link rel="stylesheet" href="https://billing.faveohelpdesk.com/client/css/magnific-popup.min.css">
+
+  <link rel="stylesheet" href="https://billing.faveohelpdesk.com/client/porto/css-1/theme.css">
+  <link rel="stylesheet" href="https://billing.faveohelpdesk.com/client/porto/css-1/theme-elements.css">
+  <link rel="stylesheet" href="https://billing.faveohelpdesk.com/client/porto/css-1/theme-shop.css">
+
+  <link rel="stylesheet" href="https://billing.faveohelpdesk.com/common/css/intlTelInput.css">
+
+
+
+  <link rel="stylesheet" href="https://billing.faveohelpdesk.com/client/porto/css-1/skins/default.css">
+
+  <link rel="stylesheet" href="https://billing.faveohelpdesk.com/client/porto/css/custom.css">
+
+</head>
+<style>
+  .alert {
+    font-weight: bolder;
+  }
+</style>
+
+<body>
+
+  <div class="body">
+    <header id="header"
+      data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 45, 'stickySetTop': '-45px', 'stickyChangeLogo': true}">
+      <div class="header-body" style="top: -50px;">
+        <div class="header-container container">
+          <div class="header-row">
+            <div class="header-column">
+              <div class="header-row">
+                <div class="header-logo">
+                  <a href="index.html">
+                    <img alt="Logo" width="100" height="51" data-sticky-width="70" data-sticky-height="36"
+                      data-sticky-top="30" src="https://billing.faveohelpdesk.com/common/images/faveo1.png">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="header-column justify-content-end">
+              <div class="header-row pt-3">
+                <nav class="header-nav-top">
+                  <ul class="nav nav-pills">
+
+                    <li class="nav-item nav-item-anim-icon d-none d-md-block">
+                      <span class="ws-nowrap"><i class="fas fa-envelope"></i>
+                        <a style="color: inherit" href="#">support@faveohelpdesk.com</a>
+                      </span>
+                    </li>
+                    <li class="nav-item nav-item-left-border nav-item-left-border-remove nav-item-left-border-md-show">
+                      <span class="ws-nowrap"><i class="fas fa-phone"></i>
+                        <a style="color: inherit" href="#">+91 95133 12768</a>
+                      </span>
+                    </li>
+
+                  </ul>
+                </nav>
+              </div>
+
+
+              <div class="header-row">
+                <div class="header-nav pt-1" style="margin-top: 0px; margin-bottom: -10px;">
+
+                  <button class="btn btn-sm header-btn-collapse-nav" data-toggle="collapse"
+                    data-target=".header-nav-main nav">
+                    <i class="fa fa-bars"></i>
+                  </button>
+
+                  <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1">
+                    <nav class="collapse">
+                      <ul class="nav nav-pills" id="mainNav">
+
+
+                        <li class="dropdown">
+                          <a class="dropdown-item dropdown-toggle" href="#">
+                            Store&nbsp;
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="index.html">
+                                HelpDesk Perpetual
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Helpdesk Recurring.html">
+                                HelpDesk Recurring
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Servicedesk Perpetual.html">
+                                ServiceDesk Perpetual
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Servicedesk Recurring.html">
+                                ServiceDesk Recurring
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Service.html">
+                                Services
+                              </a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="Faveo Cloud.html">
+                                Faveo Cloud
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+
+
+
+
+                        <li class="dropdown">
+                          <a class="nav-link" href="contact.html">
+                            Contact Us
+                          </a>
+
+                        </li>
+
+
+
+
+
+                        <li class="dropdown dropdown-mega dropdown-mega-shop" id="headerShop">
+                          <a class="dropdown-item dropdown-toggle" href="empty cart.html">
+                            <i class="fa fa-shopping-cart"></i> Cart (0)
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <div class="dropdown-mega-content">
+                                <table class="cart">
+                                  <tbody>
+
+
+
+                                    <tr>
+                                      <td>
+
+
+                                        <a href="index.html">Choose a Product</a>
+                                      </td>
+                                    </tr>
+
+
+
+
+                                  </tbody>
+                                </table>
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+
+
+                        <li class="dropdown">
+                          <a class="dropdown-item dropdown-toggle" href="#">
+                            My Account
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="my order.html">My Orders</a></li>
+                            <li><a class="dropdown-item" href="My Invoice.html">My Invoices</a></li>
+                            <li><a class="dropdown-item" href="my order.html">My Profile</a></li>
+                            <li><a class="dropdown-item" href="Loginpage.html">Logout</a></li>
+                          </ul>
+                        </li>
+
+
+                      </ul>
+                    </nav>
+                  </div>
+
+                  <ul class="header-social-icons social-icons d-none d-sm-block">
+                    <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank"
+                        title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank"
+                        title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank"
+                        title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div role="main" class=>
+
+      <section class="page-header page-header-modern bg-color-light-scale-1 page-header-md">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 align-self-center p-static order-2 text-center">
+              <h1 class="text-dark text-dark">
+                <strong>
+                  My Profile
+                </strong>
+              </h1>
+            </div>
+            <div class="col-md-12 align-self-center order-1">
+              <ul class="breadcrumb d-block text-center" style="font-weight: initial;">
+                <li><a href="#">Home</a></li>
+                <li class="active">My Profile</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+
+
+        <!--fail message -->
+
+        <div class="modal fade" id="domain">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Enter Domain</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+              </div>
+              <div class="modal-body">
+                <!-- Form  -->
+                <form method="GET" action="#" accept-charset="UTF-8" id="domain1">
+
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="close" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" value="Save">
+              </div>
+              </form>
+
+
+              <!-- /Form -->
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <style>
+          .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+          }
+
+          .switch input {
+            display: none;
+          }
+
+          .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+          }
+
+          .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+          }
+
+          input:checked+.slider {
+            background-color: #2196F3;
+          }
+
+          input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+          }
+
+          input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+          }
+
+          /* Rounded sliders */
+          .slider.round {
+            border-radius: 34px;
+          }
+
+          .slider.round:before {
+            border-radius: 50%;
+          }
+
+          .scrollit {
+            overflow: scroll;
+            height: 600px;
+          }
+        </style>
+        <style>
+          .required:after {
+            content: '*';
+            color: red;
+            padding: 0px;
+          }
+
+
+          .bootstrap-select.btn-group .dropdown-menu li a {
+            margin-left: -12px !important;
+          }
+
+          .btn-group>.btn:first-child {
+            margin-left: 0;
+            background-color: white;
+
+          }
+
+          .open>.dropdown-menu {
+            display: block;
+          }
+
+          .bootstrap-select.btn-group .dropdown-toggle .filter-option {
+            color: #555;
+          }
+        </style>
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+
+        <div id="alertMessage"></div>
+        <div id="error"></div>
+        <style>
+          .hide {
+
+            display: none;
+
+          }
+        </style>
+
+        <div class="modal fade" id="2fa-modal1" data-backdrop="static" data-keyboard="false">
+          <div class="modal-dialog">
+            <div class="modal-content" style="width:700px;">
+              <div class="modal-header">
+                <h4 class="modal-title">Set up Authenticator</h4>
+              </div>
+              <div class="modal-body">
+
+                <div class="form-group ">
+                  <label for="name" class="required">To continue, first verify it&#039;s you</label>
+                  <input type="password" name="password" id="user_password" placeholder="Enter Password"
+                    class="form-control" required="required">
+                </div>
+                <span id="passerror"></span>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left closeandrefresh" data-dismiss="modal"><i
+                    class="fa fa-times">&nbsp;&nbsp;</i>Close</button>
+                <button type="button"  class="btn btn-primary"><i
+                    class="fa fa-check">&nbsp;&nbsp;</i>Validate</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+
+
+        <div class="modal fade" id="2fa-recover-code-modal" data-backdrop="static" data-keyboard="false">
+          <div class="modal-dialog">
+            <div class="modal-content" style="width:700px;">
+              <div class="modal-header">
+                <h4 class="modal-title">Recovery Code</h4>
+              </div>
+              <div class="modal-body">
+                <div id="alertMessagecopied"></div>
+                <p>Recovery codes are used to access your account in the event you cannot receive two-factor
+                  authentication code.
+                  Copy your recovery code before continuing two-factor authentication setup.</p>
+
+                <div class="row">
+
+                  <div class="col-md-2"><b>Recovery Code:</b></div>
+                  <div class="col-md-8">
+
+                    <input type="text" id="recoverycode" readonly="readonly" class="form-control">
+
+                  </div>
+                  <div class="col-md-2">
+
+                    <span style="pointer-events: initial; cursor: pointer; display: block;" id="copyBtn"
+                      title="Click to copy to clipboard" onclick="copyRecoveryCode()"><i
+                        class="fa fa-clipboard"></i></span><span class="badge badge-success badge-xs pull-right"
+                      id="copied"
+                      style="display:none;margin-top:-40px;margin-left:-20px;position: absolute;">Copied</span>
+
+                    <span style="font-size: 20px; display: none;" id="loader"><i
+                        class="fa fa-circle-o-notch fa-spin"></i></span>
+                  </div>
+
+
+                </div>
+                <br>
+                <div>
+                  <p>
+                    Treat your recovery codes with the same level of attention as you would your password! We recommend
+                    saving them with a password manager such as <a href="#"
+                      target="_blank">Lastpass</a>, <a href="#" target="_blank">1Password</a>, or <a
+                      href="#" target="_blank">Keeper</a>.
+                  </p>
+                </div>
+
+                <span id="passerror"></span>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left closeandrefresh" data-dismiss="modal"><i
+                    class="fa fa-times">&nbsp;&nbsp;</i>Close</button>
+                <button type="button" id="next_rec_code" class="btn btn-primary">Next&nbsp;&nbsp;<i
+                    class="fa fa-arrow-right"></i></button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+
+
+
+        <div class="modal fade" id="2fa-modal2" data-backdrop="static" data-keyboard="false">
+          <div class="modal-dialog">
+            <div class="modal-content" style="width:700px;">
+              <div class="modal-header">
+                <h4 class="modal-title">Set up Authenticator</h4>
+              </div>
+              <div class="text-center">
+                <div class="modal-body bar-code">
+                  <ul class="col-sm-offset-3 offset-sm-2 text-left">
+                    <li>Get the Authenticator App from the Play Store.</li>
+                    <li>In the App select <b>Set up account.</b></li>
+                    <li>Choose <b>Scan a barcode.</b></li>
+                  </ul>
+                  <div id="barcode">
+                    <!--<img id="image"/>-->
+
+                    <div id="svgshow">
+
+                    </div>
+
+                  </div>
+                  <a href="javascript:;" id="cantscanit">CAN'T SCAN IT?</a>
+                </div>
+                <div class="modal-body secret-key">
+                  <div id="alertMessage2"></div>
+                  <ul class="col-sm-offset-3 offset-sm-2 text-left">
+                    <li>Tap <b>Menu</b>, then <b>Set up account.</b></li>
+                    <li>Tap <b>Enter provided key.</b></li>
+                    <li>Enter your email address and this key :</li>
+                    <br>
+
+                    <div class="col-md-6">
+
+                      <input type="text" id="secretkeyid" readonly="readonly" class="form-control" style="width: auto;">
+
+                    </div>
+                    <br><br>
+                    <li>Make sure <b>Time based</b> is turned on, and tap <b>Add</b> to finish.</li>
+                  </ul>
+                  <a href="javascript:;" id="scanbarcode">SCAN BARCODE?</a>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left closeandrefresh" data-dismiss="modal"><i
+                    class="fa fa-times">&nbsp;&nbsp;</i>Close</button>
+                <button type="button" id="scan_complete" class="btn btn-primary">Next&nbsp;&nbsp;<i
+                    class="fa fa-arrow-right"></i></button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+
+
+        <div class="modal fade" id="2fa-modal3" data-backdrop="static" data-keyboard="false">
+          <div class="modal-dialog">
+            <div class="modal-content" style="width:700px;">
+              <div class="modal-header">
+                <h4 class="modal-title">Set up Authenticator</h4>
+              </div>
+              <div class="modal-body modal-body-spacing">
+                <label for="name" class="required">Enter the 6-digit code you see in the app.</label>
+                <div class="row">
+
+                  <div class="col-sm-8 text-left form-group form-field-template">
+
+                    <input type="text" name="password" id="passcode" placeholder="Enter Passcode..."
+                      class="form-control" required="required">
+                    <span id="passcodeerror"></span>
+                  </div>
+                  <div class="col-sm-4">
+
+                    <button type="button" id="pass_btn" class="btn btn-primary pull-right float-right">
+                      <i class="fa fa-check"></i> Verify
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left closeandrefresh" data-dismiss="modal"><i
+                    class="fa fa-times">&nbsp;&nbsp;</i>Close</button>
+                <button type="button" id="prev_button" class="btn btn-primary float-right"><i
+                    class="fa fa-arrow-left"></i>&nbsp;&nbsp;Previous</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+
+
+        <div class="modal fade" id="2fa-modal4" data-backdrop="static" data-keyboard="false">
+          <div class="modal-dialog">
+            <div class="modal-content" style="width:700px;">
+              <div class="modal-header">
+                <h4 class="modal-title">Set up Authenticator</h4>
+              </div>
+              <div class="modal-body">
+
+                <div class="form-group ">
+                  You're all set. From now on, you'll use Authenticator to sign in to your Faveo Billing Account.
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left closeandrefresh" data-dismiss="modal"><i
+                    class="fa fa-times">&nbsp;&nbsp;</i>Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+
+        <div class="modal fade" id="2fa-modal5" data-backdrop="static" data-keyboard="false">
+          <div class="modal-dialog">
+            <div class="modal-content" style="width:700px;">
+              <div class="modal-header">
+                <h4 class="modal-title">Turn off Two-Factor-Authentication</h4>
+
+              </div>
+
+              <div class="modal-body">
+                <div id="alertMessage"></div>
+                <div class="form-group ">
+                  Turning off 2-Step Verification will remove the extra security on your account, and you’ll only use
+                  your password to sign in.
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-danger pull-right float-right" id="turnoff2fa"><i class="fa fa-power-off"></i>
+                  TURN OFF</button>
+                <button type="button" class="btn btn-default pull-left closeandrefresh" data-dismiss="modal"><i
+                    class="fa fa-times">&nbsp;&nbsp;</i>Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+
+
+        <div class="modal fade" id="2fa-view-code-modal" data-backdrop="static" data-keyboard="false">
+          <div class="modal-dialog">
+            <div class="modal-content" style="width:700px;">
+              <div class="modal-header">
+                <h4 class="modal-title">Recovery Code</h4>
+              </div>
+              <div class="modal-body">
+                <p>Recovery code can be used only once. Make sure to generate a new one each time you use the code to
+                  login.</p>
+
+                <div class="row">
+
+                  <div class="col-md-2"><b>Recovery Code:</b></div>
+                  <div class="col-md-4">
+
+                    <input type="text" id="newrecoverycode" readonly="readonly" class="form-control">
+
+                  </div>
+                  <div class="col-md-4">
+
+                    <button class="btn btn-primary" id="generateNewCode">Generate New</button>
+
+                  </div>
+                  <div class="col-md-2">
+                    <span class="badge badge-success badge-xs pull-right" id="copied-new"
+                      style="margin-left:20px;display:none;margin-top:-15px;position: absolute;">Copied</span>
+
+
+                    <span
+                      style="margin-left:50px;margin-top:5px; pointer-events: initial; cursor: pointer; display: block;"
+                      id="copyNewCodeBtn" title="Click to copy to clipboard" onclick="copyNewRecoveryCode()"><i
+                        class="fa fa-clipboard"></i></span><span class="badge badge-success badge-xs pull-right"
+                      id="copied"
+                      style="display:none;margin-top:-40px;margin-left:-20px;position: absolute;">Copied</span>
+
+
+
+                    <span style="font-size: 20px; display: none;" id="newloader"><i
+                        class="fa fa-circle-o-notch fa-spin"></i></span>
+                  </div>
+
+
+                </div>
+                <br>
+                <div>
+                </div>
+
+                <span id="passerror"></span>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal"><i
+                    class="fa fa-times">&nbsp;&nbsp;</i>Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+
+        <style>
+          .tab-content {
+            border: none;
+          }
+        </style>
+        <div class="row">
+          <div class="col col-md-3">
+            <div class="featured-box-primary text-left mt-5">
+              <div class="tabs tabs-vertical tabs-left">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item active">
+                    <a class="nav-link active" href="#edit-profile" data-toggle="tab"> <i class="fas fa-user"> </i>&nbsp;Edit
+                      Profile</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link" href="#change-password" data-toggle="tab"> <i class="fas fa-key">
+                      </i>&nbsp;Change Password</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link" href="#setup-2fa" data-toggle="tab"> <i class="fas fa-lock"> </i>&nbsp;Setup 2
+                      Step Verification</a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col col-md-9">
+
+
+            <div class="featured-box featured-box-primary text-left mt-5">
+              <div class="box-content">
+                <div class="tab-content" style="overflow-x: auto;border:none;">
+
+                  <div id="edit-profile" class="tab-pane active">
+                    <h4>Edit Profile</h4>
+
+
+
+                    <div class="row">
+                      <div class="col col-md-12 col-xs-12 ">
+                        <!-- first name -->
+                        <label for="first_name" class="required">First Name</label>
+
+                        <input class="form-control input-lg" id="firstName" name="first_name" type="text" value="">
+                        <h6 id="firstNameCheck"></h6>
+                      </div>
+                      <div class="col col-md-12 col-xs-12 ">
+                        <!-- last name -->
+                        <label for="last_name" class="required">Last Name</label>
+                        <input class="form-control input-lg " id="lastName" name="last_name" type="text" value="">
+                        <h6 id="lastNameCheck"></h6>
+                      </div>
+                    </div>
+
+
+                    <div class="form-row">
+                      <div class="form-group col">
+                        <label class="required">Email</label>
+                        <!-- email -->
+                        <input class="form-control input-lg " id="Email" name="email" type="text" value="">
+                        <h6 id="emailCheck"></h6>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col ">
+                        <!-- company -->
+                        <label class="required">Company</label>
+                        <input class="form-control input-lg" id="Company" name="company" type="text" value"">
+                        <h6 id="companyCheck"></h6>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col ">
+                        <!-- company -->
+                        <label class="">Industry</label>
+                         <select name="bussiness" class="form-control">
+                          <option value="">Choose</option>
+
+                          <option value="accounting">Accounting</option>
+
+                          <option value="airlinesaviation">Airlines/Aviation</option>
+
+                          <option value="alternative_dispute_resolution">Alternative Dispute Resolution</option>
+
+                          <option value="alternative_medicine">Alternative Medicine</option>
+
+                          <option value="animation">Animation</option>
+
+                          <option value="apparel_fashion">Apparel &amp; Fashion</option>
+
+                          <option value="architecture_planning">Architecture &amp; Planning</option>
+
+                          <option value="arts_crafts">Arts &amp; Crafts</option>
+
+                          <option value="automotive">Automotive</option>
+
+                          <option value="aviation_aerospace">Aviation &amp; Aerospace</option>
+
+                          <option value="banking">Banking</option>
+
+                          <option value="biotechnology">Biotechnology</option>
+
+                          <option value="broadcast_media">Broadcast Media</option>
+
+                          <option value="building_materials">Building Materials</option>
+
+                          <option value="business_supplies_equipment">Business Supplies &amp; Equipment</option>
+
+                          <option value="capital_markets">Capital Markets</option>
+
+                          <option value="chemicals">Chemicals</option>
+
+                          <option value="civic_social_organization">Civic &amp; Social Organization</option>
+
+                          <option value="civil_engineering">Civil Engineering</option>
+
+                          <option value="commercial_real_estate">Commercial Real Estate</option>
+
+                          <option value="computer_network_security">Computer &amp; Network Security</option>
+
+                          <option value="computer_games">Computer Games</option>
+
+                          <option value="computer_hardware">Computer Hardware</option>
+
+                          <option value="computer_networking">Computer Networking</option>
+
+                          <option value="computer_software">Computer Software</option>
+
+                          <option value="construction">Construction</option>
+
+                          <option value="consumer_electronics">Consumer Electronics</option>
+
+                          <option value="consumer_goods">Consumer Goods</option>
+
+                          <option value="consumer_services">Consumer Services</option>
+
+                          <option value="cosmetics">Cosmetics</option>
+
+                          <option value="dairy">Dairy</option>
+
+                          <option value="defense_space">Defense &amp; Space</option>
+
+                          <option value="design">Design</option>
+
+                          <option value="education_management">Education Management</option>
+
+                          <option value="e_learning">E-learning</option>
+
+                          <option value="electrical_electronic_manufacturing">Electrical &amp; Electronic Manufacturing
+                          </option>
+
+                          <option value="entertainment">Entertainment</option>
+
+                          <option value="environmental_services">Environmental Services</option>
+
+                          <option value="events_services">Events Services</option>
+
+                          <option value="executive_office">Executive Office</option>
+
+                          <option value="facilities_services">Facilities Services</option>
+
+                          <option value="farming">Farming</option>
+
+                          <option value="financial_services">Financial Services</option>
+
+                          <option value="fine_art">Fine Art</option>
+
+                          <option value="fishery">Fishery</option>
+
+                          <option value="food_beverages">Food &amp; Beverages</option>
+
+                          <option value="food_production">Food Production</option>
+
+                          <option value="fundraising">Fundraising</option>
+
+                          <option value="furniture">Furniture</option>
+
+                          <option value="gambling_casinos">Gambling &amp; Casinos</option>
+
+                          <option value="glass_ceramics_concrete">Glass, Ceramics &amp; Concrete</option>
+
+                          <option value="government_administration">Government Administration</option>
+
+                          <option value="government_relations">Government Relations</option>
+
+                          <option value="graphic_design">Graphic Design</option>
+
+                          <option value="health_wellness_fitness">Health, Wellness &amp; Fitness</option>
+
+                          <option value="higher_education">Higher Education</option>
+
+                          <option value="hospital_health_care">Hospital &amp; Health Care</option>
+
+                          <option value="hospitality">Hospitality</option>
+
+                          <option value="human_resources">Human Resources</option>
+
+                          <option value="import_export">Import &amp; Export</option>
+
+                          <option value="individual_family_services">Individual &amp; Family Services</option>
+
+                          <option value="industrial_automation">Industrial Automation</option>
+
+                          <option value="information_services">Information Services</option>
+
+                          <option value="information_technology_services">Information Technology &amp; Services</option>
+
+                          <option value="insurance">Insurance</option>
+
+                          <option value="international_affairs">International Affairs</option>
+
+                          <option value="nternational_trade_development">nternational Trade &amp; Development</option>
+
+                          <option value="internet">Internet</option>
+
+                          <option value="investment_bankingventure">Investment Banking/Venture</option>
+
+                          <option value="investment_management">Investment Management</option>
+
+                          <option value="judiciary">Judiciary</option>
+
+                          <option value="law_enforcement">Law Enforcement</option>
+
+                          <option value="law_practice">Law Practice</option>
+
+                          <option value="legal_services">Legal Services</option>
+
+                          <option value="legislative_office">Legislative Office</option>
+
+                          <option value="leisure_travel">Leisure &amp; Travel</option>
+
+                          <option value="libraries">Libraries</option>
+
+                          <option value="logistics_supply_chain">Logistics &amp; Supply Chain</option>
+
+                          <option value="luxury_goods_jewelry">Luxury Goods &amp; Jewelry</option>
+
+                          <option value="machinery">Machinery</option>
+
+                          <option value="management_consulting">Management Consulting</option>
+
+                          <option value="maritime">Maritime</option>
+
+                          <option value="marketing_advertising">Marketing &amp; Advertising</option>
+
+                          <option value="market_research">Market Research</option>
+
+                          <option value="mechanical_or_industrial_engineering">Mechanical or Industrial Engineering
+                          </option>
+
+                          <option value="media_production">Media Production</option>
+
+                          <option value="medical_device">Medical Device</option>
+
+                          <option value="medical_practice">Medical Practice</option>
+
+                          <option value="mental_health_care">Mental Health Care</option>
+
+                          <option value="military">Military</option>
+
+                          <option value="mining_metals">Mining &amp; Metals</option>
+
+                          <option value="motion_pictures_film">Motion Pictures &amp; Film</option>
+
+                          <option value="museums_institutions">Museums &amp; Institutions</option>
+
+                          <option value="music">Music</option>
+
+                          <option value="nanotechnology">Nanotechnology</option>
+
+                          <option value="newspapers">Newspapers</option>
+
+                          <option value="nonprofit_organization_management">Nonprofit Organization Management</option>
+
+                          <option value="oil_energy">Oil &amp; Energy</option>
+
+                          <option value="online_publishing">Online Publishing</option>
+
+                          <option value="outsourcingoffshoring">Outsourcing/Offshoring</option>
+
+                          <option value="packagefreight_delivery">Package/Freight Delivery</option>
+
+                          <option value="packaging_containers">Packaging &amp; Containers</option>
+
+                          <option value="paper_forest_products">Paper &amp; Forest Products</option>
+
+                          <option value="performing_arts">Performing Arts</option>
+
+                          <option value="pharmaceuticals">Pharmaceuticals</option>
+
+                          <option value="philanthropy">Philanthropy</option>
+
+                          <option value="photography">Photography</option>
+
+                          <option value="plastics">Plastics</option>
+
+                          <option value="political_organization">Political Organization</option>
+
+                          <option value="primarysecondary">Primary/Secondary</option>
+
+                          <option value="printing">Printing</option>
+
+                          <option value="professional_training">Professional Training</option>
+
+                          <option value="program_development">Program Development</option>
+
+                          <option value="public_policy">Public Policy</option>
+
+                          <option value="public_relations">Public Relations</option>
+
+                          <option value="public_safety">Public Safety</option>
+
+                          <option value="publishing">Publishing</option>
+
+                          <option value="railroad_manufacture">Railroad Manufacture</option>
+
+                          <option value="ranching">Ranching</option>
+
+                          <option value="real_estate">Real Estate</option>
+
+                          <option value="recreational_facilities_services">Recreational Facilities &amp; Services
+                          </option>
+
+                          <option value="religious_institutions">Religious Institutions</option>
+
+                          <option value="renewables_environment">Renewables &amp; Environment</option>
+
+                          <option value="research">Research</option>
+
+                          <option value="restaurants">Restaurants</option>
+
+                          <option value="retail">Retail</option>
+
+                          <option value="security_investigations">Security &amp; Investigations</option>
+
+                          <option value="semiconductors">Semiconductors</option>
+
+                          <option value="shipbuilding">Shipbuilding</option>
+
+                          <option value="sporting_goods">Sporting Goods</option>
+
+                          <option value="sports">Sports</option>
+
+                          <option value="staffing_recruiting">Staffing &amp; Recruiting</option>
+
+                          <option value="supermarkets">Supermarkets</option>
+
+                          <option value="telecommunications">Telecommunications</option>
+
+                          <option value="textiles">Textiles</option>
+
+                          <option value="tobacco">Tobacco</option>
+
+                          <option value="translation_localization">Translation &amp; Localization</option>
+
+                          <option value="transportationtruckingrailroad">Transportation/Trucking/Railroad</option>
+
+                          <option value="utilities">Utilities</option>
+
+                          <option value="venture_capital">Venture Capital</option>
+
+                          <option value="veterinary">Veterinary</option>
+
+                          <option value="warehousing">Warehousing</option>
+
+                          <option value="wholesale">Wholesale</option>
+
+                          <option value="wine_spirits">Wine &amp; Spirits</option>
+
+                          <option value="wireless">Wireless</option>
+
+                          <option value="writing_editing">Writing &amp; Editing</option>
+
+                          <option value="other">Others</option>
+                        </select>
+                      </div>
+                      <div class="form-group col">
+                        <label>Username</label>
+                        <!-- email -->
+                        <input class="form-control input-lg " id="user_name" name="user_name" type="text" value="">
+                        <h6 id="emailCheck"></h6>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col ">
+                        <!-- company -->
+                        <label class="">Company Type</label>
+                        <select name="company_type" class="form-control">
+
+                          <option value="">Choose</option>
+                          <option value="public-company">Public Company</option>
+
+                          <option value="self-employed">Self Employed</option>
+
+                          <option value="non-profit">Non Profit</option>
+
+                          <option value="privately-held">Privately Held</option>
+
+                          <option value="partnership">Partnership</option>
+
+                        </select>
+                      </div>
+
+                      <div class="form-group col ">
+                        <!-- company -->
+                        <label class="">Company Size</label>
+                        <select name="company_size" class="form-control">
+                          <option value="">Choose</option>
+
+                          <option value="Myself-only">Myself only</option>
+
+
+                          <option value="2-10">2-10</option>
+
+
+                          <option value="11-50">11-50</option>
+
+
+                          <option value="51-200">51-200</option>
+
+
+                          <option value="201-500">201-500</option>
+
+
+                          <option value="501-1000">501-1000</option>
+
+
+                          <option value="1001-5000">1001-5000</option>
+
+
+                          <option value="5001-10000">5001-10000</option>
+
+
+                          <option value="10001">10001+</option>
+
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group col">
+
+                        <div class="form-group ">
+                          <label for="mobile" Mobile>Mobile</label>
+                          <input id="code_hidden" name="incode" type="hidden">
+
+                          <!--<input class="form-control selected-dial-code"  id="mobile_code" value="" name="mobile" type="tel"> -->
+
+                          <input class="form-control selected-dial-code" type="text" id="incode" name="mobile" value="">
+                          <span id="invalid-msg" class="hide"></span>
+                          <span id="inerror-msg" class="hide"></span>
+                        </div>
+
+                      </div>
+
+
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col">
+                        <!-- phone number -->
+                        <label>Address</label>
+                        <textarea class="form-control input-lg" id="Address" name="address" cols="50"
+                          rows="10"></textarea>
+                        <h6 id="addressCheck"></h6>
+                      </div>
+                    </div>
+
+
+                    <div class="form-row">
+                      <div class="form-group col-md-6 ">
+                        <!-- mobile -->
+                        <label class="required">Town</label>
+                        <input class="form-control input-lg" id="Town" name="town" type="text" value="">
+                        <h6 id="townCheck"></h6>
+                      </div>
+                      <div class="form-group col-md-6 ">
+                        <!-- mobile -->
+                        <label class="required">Timezone</label>
+                        <select class="form-control input-lg" id="timezone" name="timezone_id">
+                          <optgroup label="Choose">
+                            <option value="1">(GMT-11:00) Pacific/Midway</option>
+                            <option value="2">(GMT-11:00) US/Samoa</option>
+                            <option value="3">(GMT-10:00) US/Hawaii</option>
+                            <option value="4">(GMT-09:00) US/Alaska</option>
+                            <option value="5">(GMT-08:00) US/Pacific</option>
+                            <option value="6">(GMT-08:00) America/Tijuana</option>
+                            <option value="7">(GMT-07:00) US/Arizona</option>
+                            <option value="8">(GMT-07:00) US/Mountain</option>
+                            <option value="9">(GMT-07:00) America/Chihuahua</option>
+                            <option value="10">(GMT-07:00) America/Mazatlan</option>
+                            <option value="11">(GMT-06:00) America/Mexico_City</option>
+                            <option value="12">(GMT-06:00) America/Monterrey</option>
+                            <option value="13">(GMT-06:00) Canada/Saskatchewan</option>
+                            <option value="14">(GMT-06:00) US/Central</option>
+                            <option value="15">(GMT-05:00) US/Eastern</option>
+                            <option value="16">(GMT-05:00) US/East-Indiana</option>
+                            <option value="17">(GMT-05:00) America/Bogota</option>
+                            <option value="18">(GMT-05:00) America/Lima</option>
+                            <option value="19">(GMT-04:30) America/Caracas</option>
+                            <option value="20">(GMT-04:00) Canada/Atlantic</option>
+                            <option value="21">(GMT-04:00) America/La_Paz</option>
+                            <option value="22">(GMT-04:00) America/Santiago</option>
+                            <option value="23">(GMT-03:30) Canada/Newfoundland</option>
+                            <option value="24">(GMT-03:00) America/Buenos_Aires</option>
+                            <option value="25">(GMT-03:00) Greenland</option>
+                            <option value="26">(GMT-02:00) Atlantic/Stanley</option>
+                            <option value="27">(GMT-01:00) Atlantic/Azores</option>
+                            <option value="28">(GMT-01:00) Atlantic/Cape_Verde</option>
+                            <option value="29">(GMT) Africa/Casablanca</option>
+                            <option value="30">(GMT) Europe/Dublin</option>
+                            <option value="31">(GMT) Europe/Lisbon</option>
+                            <option value="32">(GMT) Europe/London</option>
+                            <option value="33">(GMT) Africa/Monrovia</option>
+                            <option value="34">(GMT+01:00) Europe/Amsterdam</option>
+                            <option value="35">(GMT+01:00) Europe/Belgrade</option>
+                            <option value="36" selected="selected">(GMT+01:00) Europe/Berlin</option>
+                            <option value="37">(GMT+01:00) Europe/Bratislava</option>
+                            <option value="38">(GMT+01:00) Europe/Brussels</option>
+                            <option value="39">(GMT+01:00) Europe/Budapest</option>
+                            <option value="40">(GMT+01:00) Europe/Copenhagen</option>
+                            <option value="41">(GMT+01:00) Europe/Ljubljana</option>
+                            <option value="42">(GMT+01:00) Europe/Madrid</option>
+                            <option value="43">(GMT+01:00) Europe/Paris</option>
+                            <option value="44">(GMT+01:00) Europe/Prague</option>
+                            <option value="45">(GMT+01:00) Europe/Rome</option>
+                            <option value="46">(GMT+01:00) Europe/Sarajevo</option>
+                            <option value="47">(GMT+01:00) Europe/Skopje</option>
+                            <option value="48">(GMT+01:00) Europe/Stockholm</option>
+                            <option value="49">(GMT+01:00) Europe/Vienna</option>
+                            <option value="50">(GMT+01:00) Europe/Warsaw</option>
+                            <option value="51">(GMT+01:00) Europe/Zagreb</option>
+                            <option value="52">(GMT+02:00) Europe/Athens</option>
+                            <option value="53">(GMT+02:00) Europe/Bucharest</option>
+                            <option value="54">(GMT+02:00) Africa/Cairo</option>
+                            <option value="55">(GMT+02:00) Africa/Harare</option>
+                            <option value="56">(GMT+02:00) Europe/Helsinki</option>
+                            <option value="57">(GMT+02:00) Europe/Istanbul</option>
+                            <option value="58">(GMT+02:00) Asia/Jerusalem</option>
+                            <option value="59">(GMT+02:00) Europe/Kiev</option>
+                            <option value="60">(GMT+02:00) Europe/Minsk</option>
+                            <option value="61">(GMT+02:00) Europe/Riga</option>
+                            <option value="62">(GMT+02:00) Europe/Sofia</option>
+                            <option value="63">(GMT+02:00) Europe/Tallinn</option>
+                            <option value="64">(GMT+02:00) Europe/Vilnius</option>
+                            <option value="65">(GMT+03:00) Asia/Baghdad</option>
+                            <option value="66">(GMT+03:00) Asia/Kuwait</option>
+                            <option value="67">(GMT+03:00) Africa/Nairobi</option>
+                            <option value="68">(GMT+03:00) Asia/Riyadh</option>
+                            <option value="69">(GMT+03:30) Asia/Tehran</option>
+                            <option value="70">(GMT+04:00) Europe/Moscow</option>
+                            <option value="71">(GMT+04:00) Asia/Baku</option>
+                            <option value="72">(GMT+04:00) Europe/Volgograd</option>
+                            <option value="73">(GMT+04:00) Asia/Muscat</option>
+                            <option value="74">(GMT+04:00) Asia/Tbilisi</option>
+                            <option value="75">(GMT+04:00) Asia/Yerevan</option>
+                            <option value="76">(GMT+04:30) Asia/Kabul</option>
+                            <option value="77">(GMT+05:00) Asia/Karachi</option>
+                            <option value="78">(GMT+05:00) Asia/Tashkent</option>
+                            <option value="79">(GMT+05:30) Asia/Kolkata</option>
+                            <option value="80">(GMT+05:45) Asia/Kathmandu</option>
+                            <option value="81">(GMT+06:00) Asia/Yekaterinburg</option>
+                            <option value="82">(GMT+06:00) Asia/Almaty</option>
+                            <option value="83">(GMT+06:00) Asia/Dhaka</option>
+                            <option value="84">(GMT+07:00) Asia/Novosibirsk</option>
+                            <option value="85">(GMT+07:00) Asia/Bangkok</option>
+                            <option value="86">(GMT+07.00) Asia/Ho_Chi_Minh</option>
+                            <option value="87">(GMT+07:00) Asia/Jakarta</option>
+                            <option value="88">(GMT+08:00) Asia/Krasnoyarsk</option>
+                            <option value="89">(GMT+08:00) Asia/Chongqing</option>
+                            <option value="90">(GMT+08:00) Asia/Hong_Kong</option>
+                            <option value="91">(GMT+08:00) Asia/Kuala_Lumpur</option>
+                            <option value="92">(GMT+08:00) Australia/Perth</option>
+                            <option value="93">(GMT+08:00) Asia/Singapore</option>
+                            <option value="94">(GMT+08:00) Asia/Taipei</option>
+                            <option value="95">(GMT+08:00) Asia/Ulaanbaatar</option>
+                            <option value="96">(GMT+08:00) Asia/Urumqi</option>
+                            <option value="97">(GMT+09:00) Asia/Irkutsk</option>
+                            <option value="98">(GMT+09:00) Asia/Seoul</option>
+                            <option value="99">(GMT+09:00) Asia/Tokyo</option>
+                            <option value="100">(GMT+09:30) Australia/Adelaide</option>
+                            <option value="101">(GMT+09:30) Australia/Darwin</option>
+                            <option value="102">(GMT+10:00) Asia/Yakutsk</option>
+                            <option value="103">(GMT+10:00) Australia/Brisbane</option>
+                            <option value="104">(GMT+10:00) Australia/Canberra</option>
+                            <option value="105">(GMT+10:00) Pacific/Guam</option>
+                            <option value="106">(GMT+10:00) Australia/Hobart</option>
+                            <option value="107">(GMT+10:00) Australia/Melbourne</option>
+                            <option value="108">(GMT+10:00) Pacific/Port_Moresby</option>
+                            <option value="109">(GMT+10:00) Australia/Sydney</option>
+                            <option value="110">(GMT+11:00) Asia/Vladivostok</option>
+                            <option value="111">(GMT+12:00) Asia/Magadan</option>
+                            <option value="112">(GMT+12:00) Pacific/Auckland</option>
+                            <option value="113">(GMT+12:00) Pacific/Fiji</option>
+                          </optgroup>
+                        </select>
+
+
+                        <h6 id="timezoneCheck"></h6>
+                      </div>
+                    </div>
+                    <div class="form-row">
+
+                      <div class="col-md-6 form-group ">
+                        <!-- name -->
+                        <label class="required">Country</label>
+                        <input class="form-control input-lg" name="country" type="text" value="">
+                        <input class="form-control input-lg" id="country" name="country" type="hidden" value="IN">
+
+
+                        <h6 id="countryCheck"></h6>
+                      </div>
+                      <div class="col-md-6 form-group ">
+                        <label class=""><b>State</b></label>
+
+                        <select name="state" class="form-control input-lg">
+
+
+
+
+                          <option value="">Select State</option>
+
+                          <option value="IN-UL">Uttaranchal</option>
+
+                          <option value="IN-HP">Himachal Pradesh</option>
+
+                          <option value="IN-AN">Andaman and Nicobar Islands</option>
+
+                          <option value="IN-AR">Arunachal Pradesh</option>
+
+                          <option value="IN-AS">Assam</option>
+
+                          <option value="IN-BR">Bihar</option>
+
+                          <option value="IN-CT">Chhattisgarh</option>
+
+                          <option value="IN-DN">Dadra and Nagar Haveli</option>
+
+                          <option value="IN-DL">Delhi</option>
+
+                          <option value="IN-GJ">Gujarat</option>
+
+                          <option value="IN-HR">Haryana</option>
+
+                          <option value="IN-JK">Jammu and Kashmir</option>
+
+                          <option value="IN-KA">Karnataka</option>
+
+                          <option value="IN-KL">Kerala</option>
+
+                          <option value="IN-MP">Madhya Pradesh</option>
+
+                          <option value="IN-MH">Maharashtra</option>
+
+                          <option value="IN-ML">Meghalaya</option>
+
+                          <option value="IN-NL">Nagaland</option>
+
+                          <option value="IN-OR">Orissa</option>
+
+                          <option value="IN-PB">Punjab</option>
+
+                          <option value="IN-RJ">Rajasthan</option>
+
+                          <option value="IN-TN">Tamil Nadu</option>
+
+                          <option value="IN-TR">Tripura</option>
+
+                          <option value="IN-UP">Uttar Pradesh</option>
+
+                          <option value="IN-AP">Andhra Pradesh</option>
+
+                          <option value="IN-WB">West Bengal</option>
+
+                          <option value="IN-CH">Chandigarh</option>
+
+                          <option value="IN-DD">Daman and Diu</option>
+
+                          <option value="IN-GA">Goa</option>
+
+                          <option value="IN-JH">Jharkhand</option>
+
+                          <option value="IN-SK">Sikkim</option>
+
+                          <option value="IN-MZ">Mizoram</option>
+
+                          <option value="IN-MN">Manipur</option>
+
+                          <option value="IN-LD">Lakshadweep</option>
+
+                          <option value="IN-PY">Pondicherry</option>
+
+                          <option value="IN-TL">Telangana</option>
+                        </select>
+                        <h6 id="stateCheck"></h6>
+                      </div>
+
+
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-6 form-group ">
+                        <label>Zip/Postal Code</label>
+                        <input class="form-control input-lg" id="Zip" name="zip" type="text" value="">
+                        <h6 id="zipCheck"></h6>
+                      </div>
+
+                      <div class="col-md-6 form-group" id="gstin">
+                        <label>GSTIN</label>
+                        <input class="form-control input-lg" name="gstin" type="text">
+
+                        <h6 id="gstincheck"></h6>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group ">
+                        <!-- profile pic -->
+                        <label class="">Profile Picture</label> <br>
+                        <img src='https://www.gravatar.com/avatar/26dd521170f3e116472de89b4d04e394.jpg?s=80&amp;d=mm&amp;r=g'
+                          class="img-thumbnail" style="height: 50px;">
+                        <h6 id="profilePicCheck"></h6>
+
+                        <input id="profilePic" name="profile_pic" type="file">
+                        <br>
+                      </div>
+                   
+                          <div style="margin-left: 240px;" class="form-row">
+                                <div class="col-md-12">
+                                  <button type="submit" class="btn btn-primary float-right" id="submit"
+                                    style="margin-top:30px;"><i class="fa fa-refresh">&nbsp;&nbsp;</i>Update</button>
+                                </div>
+                          </div>
+                    </div>
+
+                    </form>
+                  </div>
+                  <div id="change-password" class="tab-pane ">
+                    <h4>Change Password</h4>
+
+
+                    <form method="" action="#" accept-charset="">
+                      <input name="" type="hidden" value="PATCH"><input name="_token" type="hidden"
+                        value="">
+                      <!-- old password -->
+                      <div class="form-row">
+                        <div class="form-group col ">
+                          <label class="required">Old Password</label>
+                          <input class="form-control input-lg" id="" name="old_password" type="password"
+                            value="">
+                          <h6 id=""></h6>
+
+                        </div>
+                      </div>
+                      <!-- new password -->
+                      <div class="form-row">
+                        <div class="form-group col has-feedback ">
+                          <label class="required">New Password</label>
+                          <input class="form-control input-lg" id="new_password" name="new_password" type="password"
+                            value="">
+
+                          <h6 id="newpasswordcheck"></h6>
+                        </div>
+                      </div>
+                      <!-- cofirm password -->
+                      <div class="form-row">
+                        <div class="form-group col has-feedback ">
+                          <label class="required">Confirm Password</label>
+                          <input class="form-control input-lg" id="confirm_password" name="confirm_password"
+                            type="password" value="">
+                          <h6 id="confirmpasswordcheck"></h6>
+
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <button class="btn btn-primary float-right" 
+                            id=""> <i class="fa fa-refresh"></i>&nbsp;Update</button>
+
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div id="setup-2fa" class="tab-pane ">
+                    <h4>Setup 2 Step Verification</h4>
+
+
+                    <br>
+                    <div class="form-row">
+                      <div class="col-md-10">
+                        <h6>
+                          <img src="https://billing.faveohelpdesk.com/common/images/authenticator.png"
+                            alt="Authenticator" style="margin-top: -6px!important;height:26px;"
+                            class="img-responsive img-circle img-sm">&nbsp;Authenticator App 
+                        </h6>
+                      </div>
+                      <div class="col-md-2">
+                        <label class="switch toggle_event_editing pull-right">
+
+                          <input type="checkbox" value="0" name="modules_settings" class="checkbox" id="2fa">
+                          <span class="slider round"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <script src="https://billing.faveohelpdesk.com/common/js/2fa.js"></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+        <script src="https://billing.faveohelpdesk.com/common/js/intlTelInput.js"></script>
+      </div>
+    </div>
+  <footer id="footer">
+
+    <div class="container">
+
+      <div class="footer-ribbon"><span>Get in Touch</span></div>
+      <div id="mailchimp-message"></div>
+      <div class="row py-5 my-4" style="margin-top: 50%;">
+        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+          <h5 class="text-3 mb-3">NEWSLETTER</h5>
+          <ul class="list-unstyled">
+            <p class="pr-1"> Keep up on our always evolving product features and technology. Enter your e-mail and
+              subscribe to our newsletter.</p>
+
+
+
+
+
+            <div class="alert alert-danger d-none" id="newsletterError"></div>
+            <div class="input-group input-group-rounded">
+              <input class="form-control form-control-sm" placeholder="Email Address" name="email" id="newsletterEmail"
+                type="text">
+              <span class="input-group-append">
+                <button class="btn btn-light text-color-dark" id="mailchimp-subscription"
+                  type="submit"><strong>Go!</strong></button>
+              </span>
+            </div>
+          </ul>
+        </div>
+
+
+        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+          <h5 class="text-3 mb-3">LATEST TWEETS</h5>
+          <ul class="list-unstyled">
+            <p class="pr-1"> </p>
+            <div id="tweets" class="twitter">
+            </div>
+            <br>
+          </ul>
+        </div>
+
+
+        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+          <h5 class="text-3 mb-3">CONTACT US</h5>
+          <ul class="list-unstyled">
+            <p class="pr-1">
+            <div class="widget widget_nav_menu">
+              <h3>Support</h3>
+              <div class="menu-footer-menu-container">
+                <ul class="menu">
+                  <li><a href="#">User Manual</a></li>
+                  <li><a href="#">Request A Demo</a></li>
+                  <li><a href="#">Become a Partner</a></li>
+                  <li><a href="#">Our Partners</a></li>
+                  <li><a href="#">We Love Open Source</a></li>
+                  <li><a href="#">Faveo Road Map</a></li>
+                  <li><a href="#">Support the Community Edition</a></li>
+                  <li><a href="#">Developer Portal</a></li>
+                  <li><a href="#">Community Forums</a></li>
+                </ul>
+              </div>
+            </div>
+            </p>
+
+            <br>
+            
+          </ul>
+        </div>
+
+
+
+
+        <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+          <h5 class="text-3 mb-3">FOLLOW US</h5>
+          <ul class="list-unstyled">
+            <p class="pr-1"> </p>
+
+            <br>
+            <ul class="header-social-icons social-icons d-none d-sm-block">
+              <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i
+                    class="fab fa-facebook-f"></i></a></li>
+              <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i
+                    class="fab fa-twitter"></i></a></li>
+              <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i
+                    class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container py-2">
+        <div class="row py-4">
+          <div class="col-md-12 align-items-center justify-content-center justify-content-lg-start mb-2 mb-lg-0">
+            <p>Copyright ©2023 . <a href="#" target="_blank">Ladybird Web Solution Pvt
+                Ltd</a>. All Rights Reserved.Powered by
+              <a href="https://www.ladybirdweb.com/" target="_blank"><img src="https://billing.faveohelpdesk.com/common/images/Ladybird1.png" alt="Ladybird"></a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="https://billing.faveohelpdesk.com/client/js/bootstrap.min.js"></script>
+  <script src="https://billing.faveohelpdesk.com/client/js/common.min.js"></script>
+ 
+  <script src="https://billing.faveohelpdesk.com/client/js/jquery.easy-pie-chart.min.js"></script>
+  <script src="https://billing.faveohelpdesk.com/client/js/jquery.gmap.min.js"></script>
+  <script src="https://billing.faveohelpdesk.com/client/js/jquery.lazyload.min.js"></script>
+  <script src="https://billing.faveohelpdesk.com/client/js/jquery.isotope.min.js"></script>
+  <script src="https://billing.faveohelpdesk.com/client/js/owl.carousel.min.js"></script>
+  <script src="https://billing.faveohelpdesk.com/client/js/jquery.magnific-popup.min.js"></script>
+  <script src="https://billing.faveohelpdesk.com/client/js/vide.min.js"></script>
+<!-- Vendor -->
+<script src="vendor/plugins/js/plugins.min.js"></script>
+
+<!-- Theme Base, Components and Settings -->
+<script src="js/theme.js"></script>
+
+<!-- Circle Flip Slideshow Script -->
+<script src="vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+<!-- Current Page Views -->
+<script src="js/views/view.home.js"></script>
+
+<!-- Theme Custom -->
+<script src="js/custom.js"></script>
+
+<!-- Theme Initialization Files -->
+<script src="js/theme.init.js"></script>
+</body>
+
+</html>
