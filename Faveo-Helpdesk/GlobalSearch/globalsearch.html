@@ -19,32 +19,21 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
   <style>
-    .navbar-search-block {
+    .navbar-search {
       position: absolute;
       padding: 0rem;
       left: auto;
       top: 0;
       right: 0;
       bottom: 0;
-      z-index: 10;
-      display: none;
       justify-content: center;
       flex-direction: column;
       background-color: #fff;
-      width: 360px;
       margin-right: 10px;
     }
     .dropdown-menu {
       width:360px;
       margin-right: 10px;
-    }
-
-    .navbar-search-block.navbar-search-open {
-      display: flex;
-    }
-
-    .navbar-search-block .input-group {
-      width: 100%;
     }
 
     .select-filter{
@@ -137,6 +126,20 @@
     .tooltip .tooltip-inner {
       color: white;
     }
+    
+    .form-inline .input-group {
+      margin-top: 20px;
+      width: 360px;
+    }
+
+    .my-tooltip {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+    
+
 
   </style>
 
@@ -162,7 +165,8 @@
         <a class="nav-link" data-widget="navbar-search" href="#" role="button" onclick="openInitial()">
           <i class="fas fa-search"></i>
         </a>
-        <div class="navbar-search-block navbar-search-open" style="display: none">
+        <div class="searchbar" style="display:none">
+           <div class="navbar-search navbar-search-open">
           <form class="form-inline">
             <div class="input-group input-group-sm">
               <input class="form-control form-control-navbar" type="search"  placeholder="Search" aria-label="search"/>
@@ -179,6 +183,8 @@
             </div>
           </form>
         </div>
+        </div>
+       
       </li>
 
       <div class="dropdownOption">
@@ -208,7 +214,10 @@
                     </div>
                   </div>
                   <div class="ml-auto">
-                    <i class="fas fa-cog" onclick="openCategories()" data-toggle="tooltip" data-placement="top" title="filter options" data-tooltip-class="tooltip"></i>
+                   <!-- <i class="fas fa-cog" onclick="openCategories()" data-toggle="tooltip" data-placement="top" title="Filter options" ></i> -->
+
+                   <i class="fas fa-cog" onclick="openCategories()" data-html="true" data-template='<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner" style="background-color: black; color: white;"></div></div>' title="Filter options"></i>
+
                   </div>
                 </div>
               </div>
@@ -609,72 +618,52 @@
 
 <script>
 
- function selectedFilter(filter) {
-   // Implement your logic here based on the filter parameter
-   console.log("Selected Filter: " + filter);
- }
+function selectedFilter(filter) {
+  // Implement your logic here based on the filter parameter
+  console.log("Selected Filter: " + filter);
+}
 
- function openCategories() {
-   let initialCard = document.querySelector(".initial_card");
-   let searchBy = document.querySelector(".search_by");
-   let initial = document.querySelector('.dropdown-menu');
+function openInitial() {
+  const searchBlock = document.querySelector('.searchbar');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+  const searchBy = document.querySelector('.search_by')
+  searchBlock.style.display = 'block';
+  searchBy.classList.remove('show');
+  dropdownMenu.classList.add('show');
+  searchBlock.classList.add('show');
+}
 
-   if (initialCard.style.display === "none") {
-     initialCard.style.display = "block";
-     initial.addEventListener('load', function() {
-       initialCard.style.display = "block";
-       searchBy.style.display = "none";
-     });
-   } else {
-     initialCard.style.display = "none";
-     searchBy.style.display = "block";
-   }
- }
+function openCategories() {
+  const initialCard = document.querySelector(".initial_card");
+  const searchBy = document.querySelector(".search_by");
+  const initial = document.querySelector('.dropdown-menu');
 
- function closeSearchBy() {
-   let searchByDiv = document.querySelector(".search_by");
-   searchByDiv.style.display = "none";
-   let initialCardDiv = document.querySelector(".initial_card");
-   initialCardDiv.style.display = "block";
- }
+  if (initialCard.style.display === "none") {
+    initialCard.style.display = "block";
+    initial.addEventListener('load', () => {
+      initialCard.style.display = "block";
+      searchBy.style.display = "none";
+    });
+  } else {
+    initialCard.style.display = "none";
+    searchBy.style.display = "block";
+  }
+}
 
- function openInitial() {
-   let searchBlock = document.querySelector('.navbar-search-block');
-   let dropdownMenu = document.querySelector('.dropdown-menu');
-   searchBlock.style.display = 'block';
-   dropdownMenu.classList.add('show');
+function closeSearchBy() {
+  const searchByDiv = document.querySelector(".search_by");
+  searchByDiv.style.display = "none";
+  const initialCardDiv = document.querySelector(".initial_card");
+  initialCardDiv.style.display = "block";
+}
 
-   document.removeEventListener('click', closeDropdown);
-   document.removeEventListener('keydown', closeDropdown);
- }
+function closeDropdown() {
+  const searchBlock = document.querySelector('.searchbar');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+  searchBlock.style.display = 'none';
+  dropdownMenu.classList.remove('show');
+}
 
- function closeDropdown() {
-   let searchBlock = document.querySelector('.navbar-search-block');
-   let dropdownMenu = document.querySelector('.dropdown-menu');
-   searchBlock.style.display = 'none';
-   dropdownMenu.classList.remove('show');
- }
-
- // Attach event listeners to elements
- let searchIcon = document.querySelector('.search-icon');
- let closeIcon = document.querySelector('.close-icon');
- let filterButtons = document.querySelectorAll('.filter-button');
- let categoriesButton = document.querySelector('.categories-button');
- let closeSearchByButton = document.querySelector('.close-search-by-button');
- let initialButton = document.querySelector('.initial-button');
- let closeDropdownButton = document.querySelector('.close-dropdown-button');
-
- searchIcon.addEventListener('click', openInitial);
- closeIcon.addEventListener('click', closeDropdown);
- filterButtons.forEach(function(filterButton) {
-   filterButton.addEventListener('click', function() {
-     selectedFilter(filterButton.textContent);
-   });
- });
- categoriesButton.addEventListener('click', openCategories);
- closeSearchByButton.addEventListener('click', closeSearchBy);
- initialButton.addEventListener('click', openInitial);
- closeDropdownButton.addEventListener('click', closeDropdown);
 
 </script>
 
