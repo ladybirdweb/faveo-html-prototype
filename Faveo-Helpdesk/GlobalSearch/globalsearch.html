@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Faveo | GlobalSearch</title>
+
+  <link href="https://support.faveohelpdesk.com/themes/default/common/images/favicon.ico" rel="shortcut icon">
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <style>
+    .navbar-search-block {
+      position: absolute;
+      padding: 0rem;
+      left: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      display: none;
+      justify-content: center;
+      flex-direction: column;
+      background-color: #fff;
+      width: 360px;
+      margin-right: 10px;
+    }
+    .dropdown-menu {
+      width:360px;
+      margin-right: 10px;
+    }
+
+    .navbar-search-block.navbar-search-open {
+      display: flex;
+    }
+
+    .navbar-search-block .input-group {
+      width: 100%;
+    }
+
+    .select-filter{
+      padding: 4px 8px;
+    }
+
+    .card{
+      margin-bottom: 0rem;
+    }
+
+    .card-body{
+      padding-top: 1rem;
+    }
+
+    .scrollable-ul { max-height: 280px; max-width: 360px; overflow-y: auto;overflow-x: auto; }
+
+    .scrollable-ul::-webkit-scrollbar-track
+    {
+      background-color: #f1f1f1;
+      border-radius:10px;
+    }
+
+    .scrollable-ul::-webkit-scrollbar
+    {
+      width: 6px;
+      background-color: #f1f1f1;
+    }
+
+    .scrollable-ul::-webkit-scrollbar-thumb
+    {
+      background-color: #c1c1c1;
+      border-radius: 10px;
+    }
+
+
+    .toggle-container:focus {
+      box-shadow:none;
+      outline: none;
+    }
+
+
+    .toggle-container input[type="checkbox"] {
+      display: none;
+    }
+
+    .toggle-container label{
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      border-radius: 15px;
+      background-color: #f57373;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .toggle-container label::after {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      top: 2px;
+      left: 3px;
+      transition: left 0.5s;
+    }
+
+    .toggle-container input[type="checkbox"]:checked + label[for="toggle"] {
+      background-color: #4caf50;
+    }
+
+    .toggle-container input[type="checkbox"]:checked + label[for="toggle"]::after {
+      left: calc(100% - 18px);
+    }
+
+    .toggle-container{
+      padding-right:10px;
+    }
+
+    .ml-auto, .mx-auto {
+      margin-top: 5px;
+    }
+
+    .tooltip .tooltip-inner {
+      background-color: black;
+    }
+
+    /* Change tooltip text color to white */
+    .tooltip .tooltip-inner {
+      color: white;
+    }
+
+  </style>
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button" onclick="openInitial()">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block navbar-search-open" style="display: none">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search"  placeholder="Search" aria-label="search"/>
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search">
+
+                  </i>
+                </button>
+                <button class="btn btn-navbar close_dropdown" type="button" data-widget="navbar-search" onclick="closeDropdown()">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+      <div class="dropdownOption">
+        <div class="dropdown-menu dropdown-menu-xl dropdown-menu-right">
+          <div class="initial_card">
+            <div class="card">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="btn btn-block btn-primary select-filter" onclick="selectedFilter('all')">
+                      all
+                    </div>
+                  </div>
+                  <div class="col-sm">
+                    <div class="btn btn-block btn-outline-primary select-filter" onclick="selectedFilter('ticket')">
+                      Ticket
+                    </div>
+                  </div>
+                  <div class="col-sm">
+                    <div class="btn btn-block btn-outline-primary select-filter" onclick="selectedFilter('contract')">
+                      Contract
+                    </div>
+                  </div>
+                  <div class="col-sm">
+                    <div class="btn btn-block btn-outline-primary select-filter" onclick="selectedFilter('article')">
+                      Article
+                    </div>
+                  </div>
+                  <div class="ml-auto">
+                    <i class="fas fa-cog" onclick="openCategories()" data-toggle="tooltip" data-placement="top" title="filter options" data-tooltip-class="tooltip"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+
+                <div class="scrollable-ul" id="activity_scroll_1">
+
+                <div class="dropdown-divider">
+
+                </div>
+
+                <div class="media">
+                    <img src="../../dist/img/avatar2.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+
+                  <div class="media-body">
+                    <a href="#" class="d-block">User1</a>
+                    <div>"HDSK-AAAA-0001" - open - The Schedule Subject </div>
+                  </div>
+                </div>
+
+                <div class="dropdown-divider">
+                </div>
+                 <div class="media">
+                  <img src="../../dist/img/avatar.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+
+                  <div class="media-body">
+                    <a href="#" class="d-block">User2</a>
+                    <div>"HDSK-AAAA-0002" - open - The Schedule Subject to be created</div>
+                  </div>
+                 </div>
+
+                <div class="dropdown-divider">
+                </div>
+                <div class="media">
+                  <img src="../../dist/img/avatar2.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+
+                  <div class="media-body">
+                    <a href="#" class="d-block">Ticket-2</a>
+                    <div>"HDSK-AAAA-0003" - open - The Schedule Subject </div>
+                  </div>
+                </div>
+
+                <div class="dropdown-divider">
+                </div>
+                <div class="media">
+                  <img src="../../dist/img/avatar4.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+
+                  <div class="media-body">
+                    <a href="#" class="d-block">Ticket-1</a>
+                    <div>"HDSK-AAAA-0004" - open - The Schedule Subject </div>
+                  </div>
+                </div>
+
+                <div class="dropdown-divider">
+                </div>
+                <div class="media">
+                  <img src="../../dist/img/avatar2.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+
+                  <div class="media-body">
+                    <a href="#" class="d-block">User10</a>
+                    <div class="d-block">"HDSK-AAAA-0005" - open - The Schedule Subject </div>
+                  </div>
+                </div>
+
+                <div class="dropdown-divider">
+                </div>
+                <div class="media">
+                  <img src="../../dist/img/avatar.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+
+                  <div class="media-body">
+                    <a href="#" class="d-block">agent-5</a>
+                    <div >"HDSK-AAAA-0006" - open - The Schedule Subject </div>
+                  </div>
+                </div>
+
+                <div class="dropdown-divider">
+                </div>
+                <div class="media">
+                  <img src="../../dist/img/avatar3.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">&nbsp
+
+                  <div class="media-body">
+                    <a href="#" class="d-block">User-7</a>
+                    <div>"HDSK-AAAA-0007" - open - The Schedule Subject </div>
+                  </div>
+                </div>
+
+                <div class="dropdown-divider">
+                </div>
+                <div class="media">
+                  <img src="../../dist/img/avatar4.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+
+                  <div class="media-body">
+                    <a href="#" class="d-block">User-3</a>
+                    <div>"HDSK-AAAA-0008" - open - The Schedule Subject </div>
+                  </div>
+                </div>
+
+                <div class="dropdown-divider">
+                </div>
+                <div class="media">
+                  <img src="../../dist/img/avatar5.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+
+                  <div class="media-body">
+                    <a href="#" class="d-block">User-6</a>
+                    <div>"HDSK-AAAA-0009" - open - The Schedule Subject </div>
+                  </div>
+                </div>
+
+                <div class="dropdown-divider">
+                </div>
+                <div class="media">
+                  <img src="../../dist/img/avatar5.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+
+                  <div class="media-body">
+                    <a href="#" class="d-block">agent-1</a>
+                    <div>"HDSK-AAAA-00010" - open - The Schedule Subject </div>
+                  </div>
+                </div>
+
+                <div class="dropdown-divider">
+                </div>
+                <div class="media">
+                  <img src="../../dist/img/avatar5.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+
+                  <div class="media-body">
+                    <a href="#" class="d-block">User9</a>
+                    <div>"HDSK-AAAA-00011" - open - The Schedule Subject </div>
+                  </div>
+                </div>
+
+              </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="search_by" style="display:none">
+
+            <div class="card">
+
+              <div class="card-header">
+                <b> Search By </b>
+              </div>
+
+              <div class="card-body">
+                <div class="scrollable-ul" id="activity_scroll">
+
+                  Ticket Body
+                    <div class="toggle-container float-right">
+                      <input type="checkbox" id="toggle" />
+                      <label for="toggle"></label>
+                    </div>
+                  <hr>
+                  Ticket Assignee
+                  <div class="toggle-container float-right">
+                    <input type="checkbox" id="toggle_1" />
+                    <label for="toggle_1"></label>
+                  </div>
+                  <hr>
+                  Ticket Creator
+                  <div class="toggle-container float-right">
+                    <input type="checkbox" id="toggle_2" />
+                    <label for="toggle_2"></label>
+                  </div>
+                  <hr>
+                  Ticket Department
+                  <div class="toggle-container float-right">
+                    <input type="checkbox" id="toggle_3" />
+                    <label for="toggle_3"></label>
+                  </div>
+                  <hr>
+                  Ticket Status
+                  <div class="toggle-container float-right">
+                    <input type="checkbox" id="toggle_4" />
+                    <label for="toggle_4"></label>
+                  </div>
+                  <hr>
+                  Ticket Priority
+                  <div class="toggle-container float-right">
+                    <input type="checkbox" id="toggle_5" />
+                    <label for="toggle_5"></label>
+                  </div>
+                  <hr>Ticket Custom Values
+                  <div class="toggle-container float-right">
+                    <input type="checkbox" id="toggle_6" />
+                    <label for="toggle_6"></label>
+                  </div>
+                  <hr>Article Categories
+                  <div class="toggle-container float-right">
+                    <input type="checkbox" id="toggle_7" />
+                    <label for="toggle_7"></label>
+                  </div>
+                  <hr>Article Tag
+                  <div class="toggle-container float-right">
+                    <input type="checkbox" id="toggle_8" />
+                    <label for="toggle_8"></label>
+                  </div>
+                  <hr>Article Description
+                  <div class="toggle-container float-right">
+                    <input type="checkbox" id="toggle_9" />
+                    <label for="toggle_9"></label>
+                  </div>
+                  <hr>User Custom Form Values
+                  <div class="toggle-container float-right">
+                    <input type="checkbox" id="toggle_10" />
+                    <label for="toggle_10"></label>
+                  </div>
+                  <hr>
+                </div>
+
+              </div>
+
+              <div class="card-footer">
+                <div class="btn btn-primary float-right" onclick="closeSearchBy()">
+                  save
+                </div>
+
+                <div class="btn btn-default float-left" onclick="closeSearchBy()">
+                  cancel
+                </div>
+
+              </div>
+            </div>
+            <div >
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link text-center">
+      <span class="brand-text font-weight-light">Faveo Help Desk</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../../dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Faveo</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+          <li class="nav-item">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Simple Link
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Starter Page</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Starter Page</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's
+                  content.
+                </p>
+
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+
+            <div class="card card-primary card-outline">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's
+                  content.
+                </p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div><!-- /.card -->
+          </div>
+          <!-- /.col-md-6 -->
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="m-0">Featured</h5>
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">Special title treatment</h6>
+
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+
+            <div class="card card-primary card-outline">
+              <div class="card-header">
+                <h5 class="m-0">Featured</h5>
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">Special title treatment</h6>
+
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-md-6 -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="float-right d-none d-sm-inline">
+      Version 1.0.0
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2023-2024 <a href="https://support.faveohelpdesk.com">Faveo</a>.</strong> All rights reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+
+<script>
+
+ function selectedFilter(filter) {
+   // Implement your logic here based on the filter parameter
+   console.log("Selected Filter: " + filter);
+ }
+
+ function openCategories() {
+   let initialCard = document.querySelector(".initial_card");
+   let searchBy = document.querySelector(".search_by");
+   let initial = document.querySelector('.dropdown-menu');
+
+   if (initialCard.style.display === "none") {
+     initialCard.style.display = "block";
+     initial.addEventListener('load', function() {
+       initialCard.style.display = "block";
+       searchBy.style.display = "none";
+     });
+   } else {
+     initialCard.style.display = "none";
+     searchBy.style.display = "block";
+   }
+ }
+
+ function closeSearchBy() {
+   let searchByDiv = document.querySelector(".search_by");
+   searchByDiv.style.display = "none";
+   let initialCardDiv = document.querySelector(".initial_card");
+   initialCardDiv.style.display = "block";
+ }
+
+ function openInitial() {
+   let searchBlock = document.querySelector('.navbar-search-block');
+   let dropdownMenu = document.querySelector('.dropdown-menu');
+   searchBlock.style.display = 'block';
+   dropdownMenu.classList.add('show');
+
+   document.removeEventListener('click', closeDropdown);
+   document.removeEventListener('keydown', closeDropdown);
+ }
+
+ function closeDropdown() {
+   let searchBlock = document.querySelector('.navbar-search-block');
+   let dropdownMenu = document.querySelector('.dropdown-menu');
+   searchBlock.style.display = 'none';
+   dropdownMenu.classList.remove('show');
+ }
+
+ // Attach event listeners to elements
+ let searchIcon = document.querySelector('.search-icon');
+ let closeIcon = document.querySelector('.close-icon');
+ let filterButtons = document.querySelectorAll('.filter-button');
+ let categoriesButton = document.querySelector('.categories-button');
+ let closeSearchByButton = document.querySelector('.close-search-by-button');
+ let initialButton = document.querySelector('.initial-button');
+ let closeDropdownButton = document.querySelector('.close-dropdown-button');
+
+ searchIcon.addEventListener('click', openInitial);
+ closeIcon.addEventListener('click', closeDropdown);
+ filterButtons.forEach(function(filterButton) {
+   filterButton.addEventListener('click', function() {
+     selectedFilter(filterButton.textContent);
+   });
+ });
+ categoriesButton.addEventListener('click', openCategories);
+ closeSearchByButton.addEventListener('click', closeSearchBy);
+ initialButton.addEventListener('click', openInitial);
+ closeDropdownButton.addEventListener('click', closeDropdown);
+
+</script>
+
+</body>
+</html>
