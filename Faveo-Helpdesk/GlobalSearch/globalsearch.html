@@ -48,7 +48,7 @@
       padding-top: 1rem;
     }
 
-    .scrollable-ul { max-height: 280px; max-width: 360px; overflow-y: auto;overflow-x: auto; }
+    .scrollable-ul { max-height: 280px; overflow-y: auto;overflow-x: auto; }
 
     .scrollable-ul::-webkit-scrollbar-track
     {
@@ -118,26 +118,23 @@
       margin-top: 5px;
     }
 
-    .tooltip .tooltip-inner {
-      background-color: black;
-    }
 
-    /* Change tooltip text color to white */
-    .tooltip .tooltip-inner {
-      color: white;
-    }
-    
-    .form-inline .input-group {
+   .form-inline .input-group{
+      width:360px;
       margin-top: 20px;
-      width: 360px;
-    }
-
-    .my-tooltip {
-    background-color: black;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
   }
+
+  img {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+
+  .header{
+    font-size: 1.3rem;
+  }
+
     
 
 
@@ -194,157 +191,395 @@
               <div class="card-header">
                 <div class="row">
                   <div class="col-sm">
-                    <div class="btn btn-block btn-primary select-filter" onclick="selectedFilter('all')">
-                      all
+                    <div class="btn btn-block btn-primary select-filter1" onclick="showAll()">
+                      All
                     </div>
                   </div>
                   <div class="col-sm">
-                    <div class="btn btn-block btn-outline-primary select-filter" onclick="selectedFilter('ticket')">
+                    <div class="btn btn-block btn-outline-primary select-filter2" onclick="showTicket()">
                       Ticket
                     </div>
                   </div>
                   <div class="col-sm">
-                    <div class="btn btn-block btn-outline-primary select-filter" onclick="selectedFilter('contract')">
-                      Contract
+                    <div class="btn btn-block btn-outline-primary select-filter3" onclick="showContact()">
+                      Contact
                     </div>
                   </div>
                   <div class="col-sm">
-                    <div class="btn btn-block btn-outline-primary select-filter" onclick="selectedFilter('article')">
+                    <div class="btn btn-block btn-outline-primary select-filter4" onclick="showArticle()">
                       Article
                     </div>
                   </div>
                   <div class="ml-auto">
-                   <!-- <i class="fas fa-cog" onclick="openCategories()" data-toggle="tooltip" data-placement="top" title="Filter options" ></i> -->
-
-                   <i class="fas fa-cog" onclick="openCategories()" data-html="true" data-template='<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner" style="background-color: black; color: white;"></div></div>' title="Filter options"></i>
+        
+                   <i class="fas fa-cog" onclick="openCategories()"  data-toggle="tooltip" data-placement="top" title="Search filter"></i>
 
                   </div>
                 </div>
               </div>
               <div class="card-body">
 
-                <div class="scrollable-ul" id="activity_scroll_1">
+                <div class="scrollable-ul" id="activity_scroll" >
 
-                <div class="dropdown-divider">
+                <div class="all">
 
+                <div class="header"> Ticket </div>
+
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">"HDSK-AAAA-0006"</a>
+                      <div> agent-5 </div>
+                      <div> open - The Schedule Subject </div>
+                    </div>
+                  </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">&nbsp
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">"HDSK-AAAA-0007</a>
+                      <div>User-7</div>
+                      <div>close - The Schedule Subject </div>
+                    </div>
+                  </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">"HDSK-AAAA-0008"</a>
+                      <div> User-3</div>
+                      <div>approved - The Schedule Subject </div>
+                    </div>
+                  </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">"HDSK-AAAA-0009" </a>
+                      <div>User-6</div>
+                      <div>open - The Schedule Subject </div>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-divider">
+                  </div>
+
+                  <div class="header">
+                    Contact
+                  </div>
+
+                  <div class="dropdown-divider">
+                  </div>
+  
+                  <div class="media">
+                      <img src="../../dist/img/user1-128x128.jpg" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">user-1</a>
+                      <div>user1@gmail.com</div>
+                    </div>
+                  </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                   <div class="media">
+                    <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">User-2</a>
+                      <div>user2@gmail.com</div>
+                    </div>
+                   </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="../../dist/img/user3-128x128.jpg" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">user-3</a>
+                      <div> user3@gmail.com</div>
+                    </div>
+                  </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="../../dist/img/user6-128x128.jpg" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">user-4</a>
+                      <div>user4@gmail.com</div>
+                    </div>
+                  </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="../../dist/img/user8-128x128.jpg" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">User-5</a>
+                      <div class="d-block">user5@gmail.com</div>
+                    </div>
+                  </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+
+                  <div class="header">Article</div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+
+                  <div class="media">
+                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">Article-1</a>
+                      <div>User-1</div>
+                      <div>Articel related on the functionality</div>
+                    </div>
+                  </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">Articel-2</a>
+                      <div>user-2</div>
+                      <div>Article created on the basic functionality, and also some of the conditions were related to the working oh the conditions related to thre knowledge base of the functionality</div>
+                    </div>
+                   </div>
                 </div>
 
-                <div class="media">
-                    <img src="../../dist/img/avatar2.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+                <div class="ticket">
+                  
+                    <div class="media">
+                      <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+                      <div class="media-body">
+                        <a href="#" class="d-block">"HDSK-AAAA-0004"</a>
+                        <div> User-1</div>
+                        <div>open - The Schedule Subject </div>
+                      </div>
+                  
+                  </div>
+                  
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">"HDSK-AAAA-0005"</a>
+                      <div>User-2</div>
+                      <div class="d-block">closed - The Schedule Subject </div>
+                    </div>
+                  </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">"HDSK-AAAA-0006"</a>
+                      <div>User-3</div>
+                      <div >unapproved - The Schedule Subject </div>
+                    </div>
+                  </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">&nbsp
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">"HDSK-AAAA-0007"</a>
+                      <div>User-4</div>
+                      <div>approved - The Schedule Subject </div>
+                    </div>
+                  </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">"HDSK-AAAA-0008"</a>
+                      <div>User-5</div>
+                      <div>open - The Schedule Subject </div>
+                    </div>
+                  </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">"HDSK-AAAA-0009"</a>
+                      <div>User-6</div>
+                      <div>closed - The Schedule Subject </div>
+                    </div>
+                  </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">"HDSK-AAAA-00010"</a>
+                      <div>agent-1</div>
+                      <div>open - The Schedule Subject </div>
+                    </div>
+                  </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">"HDSK-AAAA-00011"</a>
+                      <div>User9</div>
+                      <div>closed - The Schedule Subject </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact">
+
+                  <div class="media">
+                    <img src="../../dist/img/user1-128x128.jpg" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
 
                   <div class="media-body">
-                    <a href="#" class="d-block">User1</a>
-                    <div>"HDSK-AAAA-0001" - open - The Schedule Subject </div>
+                    <a href="#" class="d-block">user-1</a>
+                    <div>user1@gmail.com</div>
                   </div>
                 </div>
 
                 <div class="dropdown-divider">
                 </div>
                  <div class="media">
-                  <img src="../../dist/img/avatar.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+                  <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
 
                   <div class="media-body">
-                    <a href="#" class="d-block">User2</a>
-                    <div>"HDSK-AAAA-0002" - open - The Schedule Subject to be created</div>
+                    <a href="#" class="d-block">User-2</a>
+                    <div>user2@gmail.com</div>
                   </div>
                  </div>
 
                 <div class="dropdown-divider">
                 </div>
                 <div class="media">
-                  <img src="../../dist/img/avatar2.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+                  <img src="../../dist/img/user3-128x128.jpg" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
 
                   <div class="media-body">
-                    <a href="#" class="d-block">Ticket-2</a>
-                    <div>"HDSK-AAAA-0003" - open - The Schedule Subject </div>
+                    <a href="#" class="d-block">user-3</a>
+                    <div> user3@gmail.com</div>
                   </div>
                 </div>
 
                 <div class="dropdown-divider">
                 </div>
                 <div class="media">
-                  <img src="../../dist/img/avatar4.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+                  <img src="../../dist/img/user7-128x128.jpg" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
 
                   <div class="media-body">
-                    <a href="#" class="d-block">Ticket-1</a>
-                    <div>"HDSK-AAAA-0004" - open - The Schedule Subject </div>
+                    <a href="#" class="d-block">user-4</a>
+                    <div>user4@gmail.com</div>
                   </div>
                 </div>
 
                 <div class="dropdown-divider">
                 </div>
                 <div class="media">
-                  <img src="../../dist/img/avatar2.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+                  <img src="../../dist/img/user8-128x128.jpg" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
 
                   <div class="media-body">
-                    <a href="#" class="d-block">User10</a>
-                    <div class="d-block">"HDSK-AAAA-0005" - open - The Schedule Subject </div>
+                    <a href="#" class="d-block">User-5</a>
+                    <div class="d-block">user5@gmail.com</div>
                   </div>
                 </div>
 
-                <div class="dropdown-divider">
                 </div>
-                <div class="media">
-                  <img src="../../dist/img/avatar.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
 
-                  <div class="media-body">
-                    <a href="#" class="d-block">agent-5</a>
-                    <div >"HDSK-AAAA-0006" - open - The Schedule Subject </div>
+                <div class="article">
+                  <div class="media">
+                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">&nbsp
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">Article-1</a>
+                      <div>User-1</div>
+                      <div>Articel related on the functionality</div>
+                    </div>
                   </div>
-                </div>
-
-                <div class="dropdown-divider">
-                </div>
-                <div class="media">
-                  <img src="../../dist/img/avatar3.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">&nbsp
-
-                  <div class="media-body">
-                    <a href="#" class="d-block">User-7</a>
-                    <div>"HDSK-AAAA-0007" - open - The Schedule Subject </div>
+  
+                  <div class="dropdown-divider">
                   </div>
-                </div>
-
-                <div class="dropdown-divider">
-                </div>
-                <div class="media">
-                  <img src="../../dist/img/avatar4.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
-
-                  <div class="media-body">
-                    <a href="#" class="d-block">User-3</a>
-                    <div>"HDSK-AAAA-0008" - open - The Schedule Subject </div>
+                  <div class="media">
+                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">Article-1</a>
+                      <div>User-1</div>
+                      <div>Articel related on the functionality</div>
+                    </div>
                   </div>
-                </div>
-
-                <div class="dropdown-divider">
-                </div>
-                <div class="media">
-                  <img src="../../dist/img/avatar5.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
-
-                  <div class="media-body">
-                    <a href="#" class="d-block">User-6</a>
-                    <div>"HDSK-AAAA-0009" - open - The Schedule Subject </div>
+  
+                  <div class="dropdown-divider">
                   </div>
-                </div>
-
-                <div class="dropdown-divider">
-                </div>
-                <div class="media">
-                  <img src="../../dist/img/avatar5.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
-
-                  <div class="media-body">
-                    <a href="#" class="d-block">agent-1</a>
-                    <div>"HDSK-AAAA-00010" - open - The Schedule Subject </div>
+                  <div class="media">
+                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">Article-1</a>
+                      <div>User-1</div>
+                      <div>Articel related on the functionality</div>
+                    </div>
                   </div>
-                </div>
-
-                <div class="dropdown-divider">
-                </div>
-                <div class="media">
-                  <img src="../../dist/img/avatar5.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
-
-                  <div class="media-body">
-                    <a href="#" class="d-block">User9</a>
-                    <div>"HDSK-AAAA-00011" - open - The Schedule Subject </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">Article-1</a>
+                      <div>User-1</div>
+                      <div>Articel related on the functionality</div>
+                    </div>
+                  </div>
+  
+                  <div class="dropdown-divider">
+                  </div>
+                  <div class="media">
+                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+  
+                    <div class="media-body">
+                      <a href="#" class="d-block">Article-1</a>
+                      <div>User-1</div>
+                      <div>Articel related on the functionality</div>
+                    </div>
                   </div>
                 </div>
 
@@ -618,19 +853,139 @@
 
 <script>
 
-function selectedFilter(filter) {
-  // Implement your logic here based on the filter parameter
-  console.log("Selected Filter: " + filter);
+function showAll(){
+  const allContents = document.querySelector('.all');
+  const allTickets =  document.querySelector('.ticket');
+  const allContacts = document.querySelector('.contact');
+  const allArticles = document.querySelector('.article');
+  allContents.style.display = 'block';
+  allTickets.style.display = 'none';
+  allContacts.style.display = 'none';
+  allArticles.style.display = 'none';
+
+  const button1 = document.querySelector('.select-filter1');
+  button1.classList.replace('btn-outline-primary', 'btn-primary');
+
+  const button2 = document.querySelector('.select-filter2');
+  button2.classList.replace('btn-primary', 'btn-outline-primary');
+
+  const button3 = document.querySelector('.select-filter3');
+  button3.classList.replace('btn-primary', 'btn-outline-primary');
+
+  const button4 = document.querySelector('.select-filter4');
+  button4.classList.replace('btn-primary', 'btn-outline-primary');
+}
+
+function showTicket(){
+  const allContents = document.querySelector('.all');
+  const allTickets =  document.querySelector('.ticket');
+  const allContacts = document.querySelector('.contact');
+  const allArticles = document.querySelector('.article');
+  allContents.style.display = 'none';
+  allTickets.style.display = 'block';
+  allContacts.style.display = 'none';
+  allArticles.style.display = 'none';
+
+  const button1 = document.querySelector('.select-filter1');
+  button1.classList.replace('btn-primary', 'btn-outline-primary');
+
+  const button2 = document.querySelector('.select-filter2');
+  button2.classList.replace('btn-outline-primary', 'btn-primary');
+
+  const button3 = document.querySelector('.select-filter3');
+  button3.classList.replace('btn-primary', 'btn-outline-primary');
+
+  const button4 = document.querySelector('.select-filter4');
+  button4.classList.replace('btn-primary', 'btn-outline-primary');
+}
+
+function showContact(){
+  const allContents = document.querySelector('.all');
+  const allTickets =  document.querySelector('.ticket');
+  const allContacts = document.querySelector('.contact');
+  const allArticles = document.querySelector('.article');
+  allContents.style.display = 'none';
+  allTickets.style.display = 'none';
+  allContacts.style.display = 'block';
+  allArticles.style.display = 'none';
+
+  const button1 = document.querySelector('.select-filter1');
+  button1.classList.replace('btn-primary', 'btn-outline-primary');
+
+  const button2 = document.querySelector('.select-filter2');
+  button2.classList.replace('btn-primary', 'btn-outline-primary');
+
+  const button3 = document.querySelector('.select-filter3');
+  button3.classList.replace('btn-outline-primary', 'btn-primary');
+
+  const button4 = document.querySelector('.select-filter4');
+  button4.classList.replace('btn-primary', 'btn-outline-primary');
+}
+
+function showArticle(){
+  const allContents = document.querySelector('.all');
+  const allTickets =  document.querySelector('.ticket');
+  const allContacts = document.querySelector('.contact');
+  const allArticles = document.querySelector('.article');
+  allContents.style.display = 'none';
+  allTickets.style.display = 'none';
+  allContacts.style.display = 'none';
+  allArticles.style.display = 'block';
+
+  const button1 = document.querySelector('.select-filter1');
+  button1.classList.replace('btn-primary', 'btn-outline-primary');
+
+  const button2 = document.querySelector('.select-filter2');
+  button2.classList.replace('btn-primary', 'btn-outline-primary');
+
+  const button3 = document.querySelector('.select-filter3');
+  button3.classList.replace('btn-primary', 'btn-outline-primary');
+
+  const button4 = document.querySelector('.select-filter4');
+  button4.classList.replace('btn-outline-primary', 'btn-primary');
+  
 }
 
 function openInitial() {
   const searchBlock = document.querySelector('.searchbar');
   const dropdownMenu = document.querySelector('.dropdown-menu');
   const searchBy = document.querySelector('.search_by')
+
+  const button1 = document.querySelector('.select-filter1');
+  button1.classList.replace('btn-outline-primary', 'btn-primary');
+
+  const button2 = document.querySelector('.select-filter2');
+  button2.classList.replace('btn-primary', 'btn-outline-primary');
+
+  const button3 = document.querySelector('.select-filter3');
+  button3.classList.replace('btn-primary', 'btn-outline-primary');
+
+  const button4 = document.querySelector('.select-filter4');
+  button4.classList.replace('btn-primary', 'btn-outline-primary');
+
+  const allContents = document.querySelector('.all');
+  const allTickets =  document.querySelector('.ticket');
+  const allContacts = document.querySelector('.contact');
+  const allArticles = document.querySelector('.article');
+  allContents.style.display = 'block';
+  allTickets.style.display = 'none';
+  allContacts.style.display = 'none';
+  allArticles.style.display = 'none';
+
   searchBlock.style.display = 'block';
   searchBy.classList.remove('show');
   dropdownMenu.classList.add('show');
   searchBlock.classList.add('show');
+
+  const initialCard = document.querySelector(".initial_card");
+  const initial = document.querySelector('.dropdown-menu');
+
+  if (initialCard.style.display === "none") {
+    initialCard.style.display = "block";
+    searchBy.style.display="none";
+  } 
+
+
 }
 
 function openCategories() {
@@ -663,6 +1018,10 @@ function closeDropdown() {
   searchBlock.style.display = 'none';
   dropdownMenu.classList.remove('show');
 }
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
 
 </script>
