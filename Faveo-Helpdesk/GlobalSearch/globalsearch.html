@@ -49,7 +49,6 @@
       padding-left: 15px;
       padding-right: 15px;
       padding-bottom: 15px;
-      cursor: pointer;
     }
 
     .scrollable-ul { max-height: 280px; overflow-y: auto;overflow-x: auto; }
@@ -146,16 +145,60 @@
     color:rgb(60,141,188) !important;
   }
 
+  .btn-primary{
 
-  .dropdown-divider{
-    margin-top: 5px !important;
-    margin-bottom: 5px !important;
+    padding-top:3px;
+    padding-bottom:3px;
+
+    margin:-2px;
+    
   }
 
-  .media {
-  display: flex;
-  align-items: center;
-}
+  .btn-outline-primary{
+
+    padding-top:3px;
+    padding-bottom:3px;
+
+    margin:-2px;
+
+  }
+
+
+  /* .dropdown-divider{
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  } */
+
+  
+
+ .dropdown-item {
+
+  padding: 0;
+ }
+
+ .dropdown-menu-xl .dropdown-item{
+  padding: 0;
+ }
+
+ .media{
+  cursor: pointer;
+  padding-right:10px;
+  padding-left:10px;
+  padding-top:10px;
+  padding-bottom:8px;
+ }
+
+ .header{
+  padding-left:20px;
+ }
+
+ .media-body{
+  padding-left: 10px;
+ }
+
+ .col-sm{
+  padding:5px;
+ }
     
 
 
@@ -208,7 +251,6 @@
       <div class="dropdownOption">
         <div class="dropdown-menu dropdown-menu-xl dropdown-menu-right">
           <div class="initial_card">
-            <div class="card">
               <div class="card-header">
                 <div class="row">
                   <div class="col-sm">
@@ -238,16 +280,17 @@
                   </div>
                 </div>
               </div>
-              <div class="card-body">
 
-                <div class="scrollable-ul" id="activity_scroll" >
+              <div class="scrollable-ul mt-2" id="activity_scroll" >
+
+                  <div class="dropdown-item">
 
                 <div class="all">
 
                 <div class="header"> Ticket </div>
 
-                  <div class="dropdown-divider">
-                  </div>
+                  <!-- <div class="dropdown-divider">
+                  </div> -->
                   <div class="media">
                     <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
   
@@ -297,12 +340,12 @@
                   <div class="dropdown-divider">
                   </div>
 
-                  <div class="header">
+                  <div class="header mt-1 mb-1">
                     Contact
                   </div>
 
-                  <div class="dropdown-divider">
-                  </div>
+                  <!-- <div class="dropdown-divider">
+                  </div> -->
   
                   <div class="media">
                       <img src="../../dist/img/user1-128x128.jpg" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
@@ -365,13 +408,13 @@
                   <div class="dropdown-divider">
                   </div>
 
-                  <div class="header">Article</div>
+                  <div class="header mt-1 mb-1">Article</div>
   
-                  <div class="dropdown-divider">
-                  </div>
+                  <!-- <div class="dropdown-divider">
+                  </div> -->
 
                   <div class="media">
-                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png"  width=" 50px !important"  height="50px !important" alt="User Image">
 
   
                     <div class="media-body">
@@ -386,7 +429,7 @@
                   <div class="dropdown-divider">
                   </div>
                   <div class="media">
-                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" width=" 50px !important"  height="50px !important" alt="User Image">
   
                     <div class="media-body">
                      
@@ -400,8 +443,6 @@
 
                 <div class="ticket">
                   
-                  <div class="dropdown-divider">
-                  </div>
                   <div class="media">
                     <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
   
@@ -519,7 +560,7 @@
 
                 <div class="article">
                   <div class="media">
-                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">&nbsp
+                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" width=" 50px !important"  height="50px !important" alt="User Image">&nbsp
   
                     <div class="media-body">
                       <h3 class="dropdown-item-title text-primary"  data-toggle="tooltip" data-placement="top" title="Article-1">Article-1</h3>
@@ -531,7 +572,7 @@
                   <div class="dropdown-divider">
                   </div>
                   <div class="media">
-                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" width=" 50px !important"  height="50px !important" alt="User Image">
   
                     <div class="media-body">
                       <h3 class="dropdown-item-title text-primary"  data-toggle="tooltip" data-placement="top" title="Article-2">Article-2</h3>
@@ -544,7 +585,7 @@
                   <div class="dropdown-divider">
                   </div>
                   <div class="media">
-                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" width=" 50px !important"  height="50px !important" alt="User Image">
   
                     <div class="media-body">
                       <h3 class="dropdown-item-title text-primary"  data-toggle="tooltip" data-placement="top" title="Article-3">Article-3</h3>
@@ -557,7 +598,7 @@
                   <div class="dropdown-divider">
                   </div>
                   <div class="media">
-                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" width=" 50px !important"  height="50px !important" alt="User Image">
   
                     <div class="media-body">
                       <h3 class="dropdown-item-title text-primary"  data-toggle="tooltip" data-placement="top" title="Article-4">Article-4</h3>
@@ -570,7 +611,7 @@
                   <div class="dropdown-divider">
                   </div>
                   <div class="media">
-                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" class="img-circle elevation-2" width=" 50px !important"  height="50px !important" alt="User Image">
+                    <img src="https://www.iconsdb.com/icons/preview/caribbean-blue/document-xxl.png" width=" 50px !important"  height="50px !important" alt="User Image">
   
                     <div class="media-body">
                       <h3 class="dropdown-item-title text-primary"  data-toggle="tooltip" data-placement="top" title="Article-5">Article-5</h3>
@@ -583,7 +624,8 @@
               </div>
 
               </div>
-            </div>
+
+              </div>
           </div>
 
           <div class="search_by" style="display:none">
@@ -682,11 +724,7 @@
         </div>
       </div>
 
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
+     
     </ul>
   </nav>
   <!-- /.navbar -->
