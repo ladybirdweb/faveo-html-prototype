@@ -19,6 +19,29 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
   <style>
+    /* input::placeholder{
+        color: #4caf50;
+    } */
+    .unit { 
+  position: absolute; 
+  display: block; 
+  left: 5px; 
+  top: 10px; 
+  z-index: 9; 
+  margin-left: 20px;
+}
+.input-box { 
+  position: relative; 
+  
+}
+
+input { 
+  display: block; 
+  /* border: 1px solid #d7d6d6;  */
+  background: #fff; 
+  /* padding: 10px 10px 10px 20px;  */
+  /* width: 195px;  */
+}
     .button2 {
   width: 100px;
   height: 30px;
@@ -800,7 +823,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Create License</h1>
+            <h1 class="m-0">Edit License</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -821,7 +844,7 @@
         <div class="col-lg-12">
           <div class="card card-light">
             <div class="card-header">
-                <h3 class="card-title">Card title</h3>
+                <h3 class="card-title">Edit license1</h3>
             </div>
             <div class="card-body">
             <!-- <div>
@@ -833,136 +856,144 @@
                 Some quick example text to build on the card title and make up the bulk of the card's
                 content.
               </p> -->
-              <div class="row mt-2">
-                <div class="col-lg-6">
+             
+
+              <div class="row">
+                <div class="input-box col-lg-6">
                     <label>Software Name</label>
-                    <input class="form-control" placeholder="Software name" required/>
-                </div>
-                <div class="col-lg-6">
+                    <input class="form-control" value="aaa" autofocus="autofocus"/>
+                 </div>
+                 <div class="input-box col-lg-6">
                     <label>Category Name</label>
-                    <input class="form-control" placeholder="Category name" required/>
-                </div>
+                    <select class="form-select2 form-control" aria-label="Default select example">
+                        <option disabled >Select Manufacturer</option>
+                        <option selected value="1">ppp</option>
+                        <option value="2">qqq</option>
+                        <option value="3">rrr</option>
+                        <option value="3">sss</option>
+                      </select>
+                 </div>
               </div>
+              
               <div class="row mt-2">
-                <div class="col-lg-6">
+                <div class="input-box col-lg-6">
                     <label>Product Key</label>
-                    <textarea style="height: 40px;" class="form-control" placeholder="Product Key" required></textarea>
-                    <!-- <input class="form-control" placeholder="Product Key" /> -->
-                </div>
-                <div class="col-lg-6">
+                    <input class="form-control" value="0001" autofocus="autofocus"/>
+                 </div>
+                 <div class="input-box col-lg-6">
                     <label>Seats</label>
-                    <input class="form-control" type="number" placeholder="Seats" required/>
-                </div>
+                    <input class="form-control" type="number" value="6" autofocus="autofocus"/>
+                 </div>
               </div>
+
               <div class="row mt-2">
-                <div class="col-lg-6">
+                <div class="input-box col-lg-6">
                     <label>Company</label>
-                    <select class="form-select2 form-control" aria-label="Default select example" required>
-                        <option disabled selected>Select Company</option>
-                        <option value="1">A</option>
+                    <select class="form-select2 form-control" aria-label="Default select example">
+                        <option disabled >Select Company</option>
+                        <option value="1" selected>A</option>
                         <option value="2">B</option>
                         <option value="3">C</option>
                         <option value="3">D</option>
                       </select>
                 </div>
-                <div class="col-lg-6">
+                <div class="input-box col-lg-6">
                     <label>Manufacturer</label>
-                    <select class="form-select2 form-control" aria-label="Default select example" required>
-                        <option disabled selected>Select Manufacturer</option>
-                        <option value="1">A</option>
-                        <option value="2">B</option>
-                        <option value="3">C</option>
-                        <option value="3">D</option>
+                    <select class="form-select2 form-control" aria-label="Default select example">
+                        <option disabled>Select Manufacturer</option>
+                        <option value="1" selected>mmm</option>
+                        <option value="2">nnn</option>
+                        <option value="3">ooo</option>
                       </select>
                 </div>
               </div>
               <div class="row mt-2">
-                <div class="col-lg-6">
+                <div class="input-box col-lg-6">
                     <label>Licensed to Name</label>
-                    <input class="form-control" placeholder="Licensed to  name" required/>
+                    <input class="form-control" placeholder="Licensed to  name" value="sss" />
                 </div>
-                <div class="col-lg-6">
+                <div class="input-box col-lg-6">
                     <label>Licensed to Email</label>
-                    <input class="form-control" placeholder="Licensed to Email"  required/>
+                    <input class="form-control" placeholder="Licensed to Email" value="abc@abc.com"/>
                 </div>
               </div>
 
               <div class="row mt-2">
-                <div class="col-md-6">
+                <div class="input-box col-md-6">
                     <div class="row">
                     <div class="col-md-6 mt-3">
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                         <label>Ressignable</label>
                     </div>
-                    <div class="col-md-6 mt-3">
-                        <input type="checkbox">
+                    <div class="input-box col-md-6 mt-3">
+                        <input type="checkbox" checked>
                         <label>Maintained</label>
                     </div>
                 </div>
                 </div>
-                <div class="col-lg-6">
-                  <label>Supplier</label>
-                  <select class="form-select2 form-control" aria-label="Default select example" required>
-                      <option disabled selected>Select Supplier</option>
-                      <option value="1">A</option>
-                      <option value="2">B</option>
-                      <option value="3">C</option>
-                      <option value="3">D</option>
-                    </select>
-              </div>
+                <div class="input-box col-lg-6">
+                    <label>Supplier</label>
+                    <select class="form-select2 form-control" aria-label="Default select example">
+                        <option disabled>Select Supplier</option>
+                        <option value="1"  selected>supplier1</option>
+                        <option value="2">supplier2</option>
+                        <option value="3">supplier3</option>
+                      </select>
+                </div>
               </div>
 
               <div class="row mt-2">
-                <div class="col-lg-6">
+                <div class="input-box col-lg-6">
                     <label>Order Number</label>
-                    <input class="form-control" placeholder="Order Number" required/>
+                    <input class="form-control" placeholder="Order Number" value="1111" />
                 </div>
-                <div class="col-lg-6">
+                <div class="input-box col-lg-6">
                   <label>Purchase Cost</label>
-                  <input class="form-control" placeholder="Licensed to  name" required/>
+                  <input class="form-control" placeholder="Licensed to  name" value="" />
               </div>
               </div>
 
               <div class="row mt-2">
-                <div class="col-lg-6">
+                <div class="input-box col-lg-6">
                     <label>Purcahse Date</label>
-                    <input class="form-control" type="date" placeholder="Licensed to Email" required/>
+                    <input class="form-control" type="date" placeholder="Licensed to Email" value=""/>
                 </div>
-                <div class="col-lg-6">
+                <div class="input-box col-lg-6">
                   <label>Expiration Date</label>
-                  <input class="form-control" type="date" placeholder="Licensed to  name" required/>
+                  <input class="form-control" type="date" placeholder="Licensed to  name" value="" />
               </div>
               </div>
 
               <div class="row mt-2">
-                <div class="col-lg-6">
+                <div class="input-box col-lg-6">
                     <label>Termination Date</label>
-                    <input class="form-control" type="date" placeholder="Licensed to Email" required/>
+                    <input class="form-control" type="date" placeholder="date" value="12-12-2023"/>
                 </div>
-                <div class="col-lg-6">
+                <div class="input-box col-lg-6">
                   <label>Purchase Order Number</label>
-                  <input class="form-control" placeholder="Purchase Order Number" required/>
+                  <input class="form-control" placeholder="Purchase Order Number" value="1222"/>
               </div>
               </div>
 
               <div class="row mt-2">
-                <div class="col-lg-6">
+                <div class="input-box col-lg-6">
                     <label>Depreciation</label>
-                    <select class="form-select2 form-control" aria-label="Default select example" required>
-                        <option disabled selected>Select Depreciation</option>
-                        <option value="1">A</option>
+                    <select class="form-select2 form-control" aria-label="Default select example">
+                        <option disabled >Select Depreciation</option>
+                        <option value="1" selected>A</option>
                         <option value="2">B</option>
                         <option value="3">C</option>
                         <option value="3">D</option>
                       </select>
                 </div>
-                <div class="col-lg-6">
-                  <label>Note</label>
-                  <textarea class="form-control" placeholder="Write a Note" required></textarea>
-              </div>
+                <div class="input-box col-lg-6">
+                    <label>Note</label>
+                    <textarea style="height: 38px;" class="form-control" placeholder="Write a Note">about the license1
+                    </textarea>
+                </div>
               </div>
               <!-- <div class="row mt-2">
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                     <label>Note</label>
                     <textarea class="form-control" placeholder="Write a Note"></textarea>
                 </div>
@@ -980,7 +1011,7 @@
     </div><!-- /.container-fluid -->
 </div>
 <div class="p-3">
-    <button class="btn btn-info">Save</button>
+    <button class="btn btn-info">Update</button>
  </div>
 </div>
 
