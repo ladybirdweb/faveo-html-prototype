@@ -260,11 +260,13 @@
  }
     
  table { table-layout: fixed; }
-td { width: 33%;
+td { 
+  /* width: 33%; */
   font-size: 14px; 
   height: 38px;
 }
 th{
+  /* width: 33%; */
   font-size: 14px;
   font-weight: 400;
 }
@@ -867,33 +869,20 @@ th{
                   <thead>
                       <tr class="mt-4" style="background-color: #ffffff;">
                           <th style="text-align: center;">Name</th>
-                          <th>Product Key</th>
-                          <th>Expiration Date</th>
-                          <th>Licensed to Email</th>
-                          <th>Licensed to Name</th>
-                          <th>Manufacturer</th>
-                          <th>Total</th>
-                          <th>Available</th>
-                          <th>Checkin/Checkout</th>
-                          <th>Actions</th>
+                          <th style="text-align: center;">Expiration Date</th>
+                          <th style="text-align: center;">Author</th>
+                          <th style="text-align: center;">Created Date</th>
+                          <th style="text-align: center;">Actions</th>
                           
                       </tr>
                   </thead>
                   <tbody>
                       <tr style="background-color: #f7f7f7;">
-                          <td style="text-align: center;"><a href="#">license1</a></td>
-                          <td style="text-align: center;"><a href="#">0001</a></td>
+                          <td style="text-align: center;">license1</a></td>
                           <td style="text-align: center;">12-12-2023</td>
-                          <td style="text-align: center;">abc@abc.com</td>
-                          <td style="text-align: center;">sss</td>
-                          <td style="text-align: center;"><a href="#">ppp</a></td>
-                          <td style="text-align: center;">6</td>
-                          <td style="text-align: center;">2</td>
+                          <td style="text-align: center;"><a href="#">aaa</a></td>
+                          <td style="text-align: center;">12-01-2023</td>
                           <td style="text-align: center;">
-                            <button class="btn btn-danger">checkin</button>
-                          </td>
-                          <td style="text-align: center;">
-                            <button style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;"><i class="fas fa-copy"></i></button>&nbsp;
                             <button style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;"><i class="fas fa-edit"></i></button>&nbsp;
                             <button style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;"><i class="fas fa-trash"></i></button>
                           </td>
@@ -904,6 +893,7 @@ th{
                   </tbody>
               </table>
                
+              
               </div>
             </div>
           </div>

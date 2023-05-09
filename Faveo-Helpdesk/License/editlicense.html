@@ -838,6 +838,7 @@ input {
 
 <!-- License -->
 <div class="card p-3">
+    <form>
 <div class="content">
     <div class="container-fluid">
       <div class="row">
@@ -861,11 +862,11 @@ input {
               <div class="row">
                 <div class="input-box col-lg-6">
                     <label>Software Name</label>
-                    <input class="form-control" value="aaa" autofocus="autofocus"/>
+                    <input class="form-control" value="aaa" autofocus="autofocus" required/>
                  </div>
                  <div class="input-box col-lg-6">
                     <label>Category Name</label>
-                    <select class="form-select2 form-control" aria-label="Default select example">
+                    <select class="form-select2 form-control" aria-label="Default select example" required>
                         <option disabled >Select Manufacturer</option>
                         <option selected value="1">ppp</option>
                         <option value="2">qqq</option>
@@ -878,18 +879,18 @@ input {
               <div class="row mt-2">
                 <div class="input-box col-lg-6">
                     <label>Product Key</label>
-                    <input class="form-control" value="0001" autofocus="autofocus"/>
+                    <input class="form-control" value="0001" autofocus="autofocus" required/>
                  </div>
                  <div class="input-box col-lg-6">
                     <label>Seats</label>
-                    <input class="form-control" type="number" value="6" autofocus="autofocus"/>
+                    <input class="form-control" type="number" value="6" autofocus="autofocus" required/>
                  </div>
               </div>
 
               <div class="row mt-2">
                 <div class="input-box col-lg-6">
                     <label>Company</label>
-                    <select class="form-select2 form-control" aria-label="Default select example">
+                    <select class="form-select2 form-control" aria-label="Default select example" required>
                         <option disabled >Select Company</option>
                         <option value="1" selected>A</option>
                         <option value="2">B</option>
@@ -899,7 +900,7 @@ input {
                 </div>
                 <div class="input-box col-lg-6">
                     <label>Manufacturer</label>
-                    <select class="form-select2 form-control" aria-label="Default select example">
+                    <select class="form-select2 form-control" aria-label="Default select example" required>
                         <option disabled>Select Manufacturer</option>
                         <option value="1" selected>mmm</option>
                         <option value="2">nnn</option>
@@ -910,11 +911,11 @@ input {
               <div class="row mt-2">
                 <div class="input-box col-lg-6">
                     <label>Licensed to Name</label>
-                    <input class="form-control" placeholder="Licensed to  name" value="sss" />
+                    <input class="form-control" placeholder="Licensed to  name" value="sss" required/>
                 </div>
                 <div class="input-box col-lg-6">
                     <label>Licensed to Email</label>
-                    <input class="form-control" placeholder="Licensed to Email" value="abc@abc.com"/>
+                    <input class="form-control" placeholder="Licensed to Email" value="abc@abc.com" required/>
                 </div>
               </div>
 
@@ -933,7 +934,7 @@ input {
                 </div>
                 <div class="input-box col-lg-6">
                     <label>Supplier</label>
-                    <select class="form-select2 form-control" aria-label="Default select example">
+                    <select class="form-select2 form-control" aria-label="Default select example" required>
                         <option disabled>Select Supplier</option>
                         <option value="1"  selected>supplier1</option>
                         <option value="2">supplier2</option>
@@ -945,40 +946,40 @@ input {
               <div class="row mt-2">
                 <div class="input-box col-lg-6">
                     <label>Order Number</label>
-                    <input class="form-control" placeholder="Order Number" value="1111" />
+                    <input class="form-control" placeholder="Order Number" value="1111" required/>
                 </div>
                 <div class="input-box col-lg-6">
                   <label>Purchase Cost</label>
-                  <input class="form-control" placeholder="Licensed to  name" value="" />
+                  <input class="form-control" placeholder="Licensed to  name" value="" required/>
               </div>
               </div>
 
               <div class="row mt-2">
                 <div class="input-box col-lg-6">
                     <label>Purcahse Date</label>
-                    <input class="form-control" type="date" placeholder="Licensed to Email" value=""/>
+                    <input class="form-control" type="date" placeholder="Licensed to Email" value="" required/>
                 </div>
                 <div class="input-box col-lg-6">
                   <label>Expiration Date</label>
-                  <input class="form-control" type="date" placeholder="Licensed to  name" value="" />
+                  <input class="form-control" type="date" placeholder="Licensed to  name" value="" required/>
               </div>
               </div>
 
               <div class="row mt-2">
                 <div class="input-box col-lg-6">
                     <label>Termination Date</label>
-                    <input class="form-control" type="date" placeholder="date" value="12-12-2023"/>
+                    <input class="form-control" type="date" placeholder="date" value="" required/>
                 </div>
                 <div class="input-box col-lg-6">
                   <label>Purchase Order Number</label>
-                  <input class="form-control" placeholder="Purchase Order Number" value="1222"/>
+                  <input class="form-control" placeholder="Purchase Order Number" value="1222" required/>
               </div>
               </div>
 
               <div class="row mt-2">
                 <div class="input-box col-lg-6">
                     <label>Depreciation</label>
-                    <select class="form-select2 form-control" aria-label="Default select example">
+                    <select class="form-select2 form-control" aria-label="Default select example" required>
                         <option disabled >Select Depreciation</option>
                         <option value="1" selected>A</option>
                         <option value="2">B</option>
@@ -988,7 +989,7 @@ input {
                 </div>
                 <div class="input-box col-lg-6">
                     <label>Note</label>
-                    <textarea style="height: 38px;" class="form-control" placeholder="Write a Note">about the license1
+                    <textarea style="height: 38px;" class="form-control" placeholder="Write a Note" required>about the license1
                     </textarea>
                 </div>
               </div>
@@ -1013,6 +1014,7 @@ input {
 <div class="p-3">
     <button class="btn btn-info">Update</button>
  </div>
+</form>
 </div>
 
 
