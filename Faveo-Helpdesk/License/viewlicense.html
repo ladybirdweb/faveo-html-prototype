@@ -19,29 +19,100 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
   <style>
-    /* input::placeholder{
-        color: #4caf50;
+    /* .card{
+      overflow: scroll;
     } */
-    .unit { 
-  position: absolute; 
-  display: block; 
-  left: 5px; 
-  top: 10px; 
-  z-index: 9; 
-  margin-left: 20px;
+    @media only screen and (max-width: 600px) {
+      .tabb{
+       overflow-x:scroll;
+    }
 }
-.input-box { 
-  position: relative; 
+   
+    .table td, .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #ffffff;
+}
   
+    .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(86, 86, 86, 0.05);
+}
+    .btnn{
+     width: 100px;
+     height: 30px;
+     font-size: 14px;
+    }
+    td {
+  font-size: 14px; 
+  height: 36px;
+} 
+.tabbable-responsive {
+  display: block;
+  min-width: 100%;
+  overflow-x: auto;
+  
+  margin: 0px -21px -13px -21px;
 }
 
-input { 
-  display: block; 
-  /* border: 1px solid #d7d6d6;  */
-  background: #fff; 
-  /* padding: 10px 10px 10px 20px;  */
-  /* width: 195px;  */
+.tabbable {
+    min-width: 100%;
+    
+    .nav-tabs {
+      white-space: nowrap;
+      display: inline-block;
+      min-width: 100%;
+      
+      padding: 0px 21px;
+      
+      .nav-item {
+        display: inline-block;
+        
+        .nav-link {
+          display: inline-block;
+        }
+      }
+    }
 }
+
+small {
+  font-size: 12px;
+}
+.card {
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.15);
+}
+a {
+  color: #0da58e;
+  
+  &:hover {
+    color: #075e51;
+  }
+}
+.text-dark {
+  text-decoration: none !important;
+}
+.elmahio-ad {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  
+  .motto {
+    width: 180px;
+    font-size: 12px;
+    font-weight: bolder;
+    padding: 12px;
+  }
+}
+    a{
+        color: #3490bd;
+    }
+    .btn-primaryy{
+        background-color: #0075b0;
+        color: #fff;
+    }
+    .btn-warningg{
+        background-color: #ffc107;
+    }
     .button2 {
   width: 100px;
   height: 30px;
@@ -823,7 +894,7 @@ input {
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Edit License</h1>
+            <h1 class="m-0">Starter Page</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -837,188 +908,564 @@ input {
     <!-- /.content-header -->
 
 <!-- License -->
-<div class="card p-3">
-    <form>
+<!-- <div class="card p-3"> -->
 <div class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-9">
           <div class="card card-light">
             <div class="card-header">
-                <h3 class="card-title">Edit license1</h3>
-            </div>
+                <h3 class="card-title">license1</h3>
+              </div>
             <div class="card-body">
-            <!-- <div>
-              <h6 class="col-lg-12" class="card-title">Card title</h6>
-            </div> -->
             
 
-              <!-- <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p> -->
-             
+                <!-- <div class=" col-md-8 my-3"> -->
+  
+                    <!-- <div class="card "> -->
+                      <div class="card-header">
+                        <!-- START TABS DIV -->
+                        <div class="tabbable-responsive">
+                          <div class="tabbable">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link active" id="first-tab" data-toggle="tab" href="#first" role="tab" aria-controls="first" aria-selected="true">Info</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="second-tab" data-toggle="tab" href="#second" role="tab" aria-controls="second" aria-selected="false">Seats(2/6)</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="third-tab" data-toggle="tab" href="#third" role="tab" aria-controls="third" aria-selected="false">File Uploads</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="fourth-tab" data-toggle="tab" href="#fourth" role="tab" aria-controls="fourth" aria-selected="false">History</a>
+                              </li>
+                             
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        
+                        <div class="tab-content">
+                          <div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
+                            <table class="table table-striped">
+                                <tbody>
+                                  <tr>
+                                    <td>Manufacturer</td>
+                                    <td>ppp</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Product Key</td>
+                                    <td>0001</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Category</td>
+                                    <td>ppp</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Licensed to Name</td>
+                                    <td>sss</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Licensed to Email</td>
+                                    <td>abc@abc.com</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Expiration Date</td>
+                                    <td>12-12-2023</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Termination Date</td>
+                                    <td>12-01-2023</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Purchase Order Number</td>
+                                    <td>1222</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Purchase Date</td>
+                                    <td>12-01-2023</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Purchase Cost</td>
+                                    <td>20,000</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Order Number</td>
+                                    <td>1111</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Maintained</td>
+                                    <td>Yes</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Seats</td>
+                                    <td>6</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Reassignable</td>
+                                    <td>Yes</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Notes</td>
+                                    <td>about the license1</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                          </div>
+                          <div class="tab-pane fade tabb" id="second" role="tabpanel" aria-labelledby="second-tab" >
+                            <table class="table table-striped" >
+                              <thead>
+                                <tr>
+                                  <th>Seat</th>
+                                  <th>User</th>
+                                  <th>Asset</th>
+                                  <th>Location</th>
+                                  <th>Checkin/Checkout</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <!-- <tr style="font-weight: 600; border-top: #0075b0;">
+                                  <td>Seat</td>
+                                  <td>User</td>
+                                  <td>Asset</td>
+                                  <td>Location</td>
+                                  <td>Checkin/Checkout</td>
+                                </tr> -->
+                                <tr>
+                                  <td>Seat 1</td>
+                                  <td>User-1 </td>
+                                  <td>Asset-1 </td>
+                                  <td>Location-1 </td>
+                                  <td>
+                                     <button class="btn btn-info btnn" style="text-align: center;">Checkin</button>  
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Seat 2</td>
+                                  <td>User-2</td>
+                                  <td>Asset-2</td>
+                                  <td>Location-2</td>
+                                  <td>
+                                    <button class="btn btn-info btnn">Checkin</button>  
+                                 </td>
+                                </tr>
+                                <tr>
+                                  <td>Seat 3</td>
+                                  <td>User-3</td>
+                                  <td>Asset-3</td>
+                                  <td>Location-3</td>
+                                  <td>
+                                    <button class="btn btn-info btnn">Checkin</button>  
+                                 </td>
+                                </tr>
+                                <tr>
+                                  <td>Seat 4</td>
+                                  <td>User-4</td>
+                                  <td>Asset-4</td>
+                                  <td>Location-4</td>
+                                  <td>
+                                    <button class="btn btn-info btnn">Checkin</button>  
+                                 </td>
+                                </tr>
+                                <tr>
+                                  <td>Seat 5</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>
+                                    <button class="btn btn-danger btnn">Checkout</button>  
+                                 </td>
+                                </tr>
+                                <tr>
+                                  <td>Seat 6</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>
+                                    <button class="btn btn-danger btnn">Checkout</button>  
+                                 </td>
+                                </tr>
 
-              <div class="row">
-                <div class="input-box col-lg-6">
-                    <label>Software Name</label>
-                    <input class="form-control" value="aaa" autofocus="autofocus" required/>
-                 </div>
-                 <div class="input-box col-lg-6">
-                    <label>Category Name</label>
-                    <select class="form-select2 form-control" aria-label="Default select example" required>
-                        <option disabled >Select Manufacturer</option>
-                        <option selected value="1">ppp</option>
-                        <option value="2">qqq</option>
-                        <option value="3">rrr</option>
-                        <option value="3">sss</option>
-                      </select>
-                 </div>
-              </div>
-              
-              <div class="row mt-2">
-                <div class="input-box col-lg-6">
-                    <label>Product Key</label>
-                    <input class="form-control" value="0001" autofocus="autofocus" required/>
-                 </div>
-                 <div class="input-box col-lg-6">
-                    <label>Seats</label>
-                    <input class="form-control" type="number" value="6" autofocus="autofocus" required/>
-                 </div>
-              </div>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="tab-pane fade" id="third" role="tabpanel" aria-labelledby="third-tab">
+                            <table id="example" class="display nowrap table-bordered" style="width:100%; border: 0.5px solid rgb(189, 189, 189);">
+                              <thead>
+                                  <tr class="mt-4" style="background-color: #ffffff;">
+                                      <th style="text-align: center;">File Type</th>
+                                      <th>Image</th>
+                                      <th>File</th>
+                                      <th>File Size</th>
+                                      <th>Note</th>
+                                      <th>Download</th>
+                                      <th>Created At</th>
+                                      <th>Actions</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr style="background-color: #f7f7f7;">
+                                      <td style="text-align: center;"><a href="#">license1</a></td>
+                                      <td style="text-align: center;"><a href="#">0001</a></td>
+                                      <td style="text-align: center;">12-12-2023</td>
+                                      <td style="text-align: center;">abc@abc.com</td>
+                                      <td style="text-align: center;">sss</td>
+                                      <td style="text-align: center;"><a href="#">ppp</a></td>
+                                      <td style="text-align: center;">6</td>
+                                      <td style="text-align: center;">
+                                        <button style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;"><i class="fas fa-copy"></i></button>&nbsp;
+                                        <button style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;"><i class="fas fa-edit"></i></button>&nbsp;
+                                        <button style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;"><i class="fas fa-trash"></i></button>
+                                      </td>
+                                      
+                                  </tr>
+                               
+                      
+                              </tbody>
+                          </table>
+                          </div>
+                          <div class="tab-pane fade" id="fourth" role="tabpanel" aria-labelledby="fourth-tab">
+                            <h5 class="card-title">Fourth Tab header</h5>
+                            <p class="card-text">4444444</p>
+                          </div>
+                          
+                        </div>
+                        <!-- END TABS DIV -->
+                        
+                      </div>
+                    <!-- </div> -->
+                  <!-- </div> -->
 
-              <div class="row mt-2">
-                <div class="input-box col-lg-6">
-                    <label>Company</label>
-                    <select class="form-select2 form-control" aria-label="Default select example" required>
-                        <option disabled >Select Company</option>
-                        <option value="1" selected>A</option>
-                        <option value="2">B</option>
-                        <option value="3">C</option>
-                        <option value="3">D</option>
-                      </select>
-                </div>
-                <div class="input-box col-lg-6">
-                    <label>Manufacturer</label>
-                    <select class="form-select2 form-control" aria-label="Default select example" required>
-                        <option disabled>Select Manufacturer</option>
-                        <option value="1" selected>mmm</option>
-                        <option value="2">nnn</option>
-                        <option value="3">ooo</option>
-                      </select>
-                </div>
-              </div>
-              <div class="row mt-2">
-                <div class="input-box col-lg-6">
-                    <label>Licensed to Name</label>
-                    <input class="form-control" placeholder="Licensed to  name" value="sss" required/>
-                </div>
-                <div class="input-box col-lg-6">
-                    <label>Licensed to Email</label>
-                    <input class="form-control" placeholder="Licensed to Email" value="abc@abc.com" required/>
-                </div>
-              </div>
-
-              <div class="row mt-2">
-                <div class="input-box col-md-6">
-                    <div class="row">
-                    <div class="col-md-6 mt-3">
-                        <input type="checkbox" checked>
-                        <label>Ressignable</label>
-                    </div>
-                    <div class="input-box col-md-6 mt-3">
-                        <input type="checkbox" checked>
-                        <label>Maintained</label>
-                    </div>
-                </div>
-                </div>
-                <div class="input-box col-lg-6">
-                    <label>Supplier</label>
-                    <select class="form-select2 form-control" aria-label="Default select example" required>
-                        <option disabled>Select Supplier</option>
-                        <option value="1"  selected>supplier1</option>
-                        <option value="2">supplier2</option>
-                        <option value="3">supplier3</option>
-                      </select>
-                </div>
-              </div>
-
-              <div class="row mt-2">
-                <div class="input-box col-lg-6">
-                    <label>Order Number</label>
-                    <input class="form-control" placeholder="Order Number" value="1111" required/>
-                </div>
-                <div class="input-box col-lg-6">
-                  <label>Purchase Cost</label>
-                  <input class="form-control" placeholder="Licensed to  name" value="20,000" required/>
-              </div>
-              </div>
-
-              <div class="row mt-2">
-                <div class="input-box col-lg-6">
-                    <label>Purcahse Date</label>
-                    <input class="form-control" type="date" placeholder="Licensed to Email" value="" required/>
-                </div>
-                <div class="input-box col-lg-6">
-                  <label>Expiration Date</label>
-                  <input class="form-control" type="date" placeholder="Licensed to  name" value="" required/>
-              </div>
-              </div>
-
-              <div class="row mt-2">
-                <div class="input-box col-lg-6">
-                    <label>Termination Date</label>
-                    <input class="form-control" type="date" placeholder="date" value="" required/>
-                </div>
-                <div class="input-box col-lg-6">
-                  <label>Purchase Order Number</label>
-                  <input class="form-control" placeholder="Purchase Order Number" value="1222" required/>
-              </div>
-              </div>
-
-              <div class="row mt-2">
-                <div class="input-box col-lg-6">
-                    <label>Depreciation</label>
-                    <select class="form-select2 form-control" aria-label="Default select example" required>
-                        <option disabled >Select Depreciation</option>
-                        <option value="1" selected>A</option>
-                        <option value="2">B</option>
-                        <option value="3">C</option>
-                        <option value="3">D</option>
-                      </select>
-                </div>
-                <div class="input-box col-lg-6">
-                    <label>Note</label>
-                    <textarea style="height: 38px;" class="form-control" placeholder="Write a Note" required>about the license1
-                    </textarea>
-                </div>
-              </div>
-              <!-- <div class="row mt-2">
-                <div class="col-lg-6">
-                    <label>Note</label>
-                    <textarea class="form-control" placeholder="Write a Note"></textarea>
-                </div>
-              </div> -->
-
-
-              <!-- <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a> -->
+                  
             </div>
           </div>
         </div>
+
+        <div class="col-lg-3">
+            <div class="card card-light">
+              <!-- <div class="card-header">
+                  <h3 class="card-title">Card title</h3>
+            </div> -->
+              <div class="card-body">
+              <button class="btn btn-info" style="width: 200px;">Edit License</button><br><br>
+              <button class="btn btn-primaryy" style="width: 200px;">Clone License</button><br><br>
+              <button class="btn btn-secondary" style="width: 200px;">Checkout</button><br><br>
+              <button class="btn btn-warningg" style="width: 200px;">Checkout All Seats</button><br><br>
+              <button class="btn btn-success" style="width: 200px;">Checkin All Seats</button><br><br>
+              <button class="btn btn-danger" style="width: 200px;">Delete</button>
+                    
+              </div>
+            </div>
+          </div>
         
       </div>
       <!-- /.row -->
     </div><!-- /.container-fluid -->
 </div>
-<div class="p-3">
-    <button class="btn btn-info">Update</button>
- </div>
-</form>
+
+<div id="show_1"></div>
+
+<div id="show_2" class="hide2">
+<div>
+<div class="content" >
+    <div class="container-fluid">
+      <div class="row mt-3">
+        <div class="col-lg-12">
+          <div class="card card-light">
+            <div class="card-header">
+                <h3 class="card-title">Access permissions</h3>
+              </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Create Ticket</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Edit Ticket</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Close Ticket</label>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Transfer Ticket</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label> Delete Ticket</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label> Assign Ticket</label>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>View Unapproved Tickets</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Apply Approval Workflow</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Access Knowledge Base</label>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label> Report</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Change Due Date</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Re Assigning Tickets</label>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Global Access</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Restricted Access</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Access User Profile</label>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label> Access Organization Profile</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label> Recur Ticket</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Activate or Deactivate User Account</label>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Activate or Deactivate Agent Account</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Delete User Account</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Delete Agent Account</label>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>View All Tickets</label>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container-fluid">
+      <div class="row mt-3">
+        <div class="col-lg-12">
+          <div class="card card-light">
+            <div class="card-header">
+                <h3 class="card-title">ServiceDesk Permissions</h3>
+              </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>Create Problem</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label> Edit Problem</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>View Problems</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>Delete Problem</label>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label> Attach Problem</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>Detach Problem</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>Create Change</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>Edit Change</label>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>View Changes</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>Delete Change</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label> Attach Change</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>Detach Change</label>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>Create Release</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>Edit Release</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label> View Releases</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label> Delete Release</label>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label> Attach Release</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label> Detach Release</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>Create Asset</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>Edit Asset</label>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label> View Assets</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label> Delete Asset</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>Attach Asset</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>Detach Asset</label>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>Create Contract</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label>Edit Contract</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label> View Contracts</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="checkbox">
+                    <label> Delete Contract</label>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-4">
+                    <input type="checkbox">
+                    <label>Edit Change Details After Cab Apply</label>
+                </div>
+               
+              </div>
+
+             
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
 </div>
 
 
+</div>
 
+</div>
+
+<!-- <div class="p-3">
+   <button class="btn btn-info">Save</button>
+</div> -->
+<!-- </div> -->
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
@@ -1230,6 +1677,31 @@ $(function () {
 
 </script>
 
+<script>
+    function switch_div(show) {  
+  document.getElementById("show_"+show).style.display = "block";
+  document.getElementById("show_"+((show==1)?2:1)).style.display = "none";
+} 
+</script>
+<script>
+    document.querySelectorAll(
+    'input[type=radio][name=foo]').forEach((elem) => {
+  elem.addEventListener('click', allowUncheck);
+  // only needed if elem can be pre-checked
+  elem.previous = elem.checked;
+});
 
+function allowUncheck(e) {
+  if (this.previous) {
+    this.checked = false;
+  }
+  // need to update previous on all elements of this group
+  // (either that or store the id of the checked element)
+  document.querySelectorAll(
+      `input[type=radio][name=${this.name}]`).forEach((elem) => {
+    elem.previous = elem.checked;
+  });
+}
+</script>
 </body>
 </html>
