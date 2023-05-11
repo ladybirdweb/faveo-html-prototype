@@ -18,6 +18,16 @@
     <title>Document</title>
     
     <style>
+         
+    .table td, .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #ffffff;
+}
+  
+    .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(86, 86, 86, 0.05);
+}
       .paginate_button{
         font-size: 14px;
       }
@@ -834,7 +844,7 @@ th{
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Create License</h1>
+              <h1 class="m-0">License</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -863,14 +873,15 @@ th{
               </div> -->
               
               <!-- <h1>License Table</h1> -->
-              <table id="example" class="display nowrap table-bordered" style="width:100%; border: 0.5px solid rgb(189, 189, 189);">
+              <table id="example" class="display nowrap table-bordered" style="width:100%; border: 0.5px solid rgb(244, 243, 243);">
                   <thead>
                       <tr class="mt-4" style="background-color: #ffffff;">
                           <th style="text-align: center;">Name</th>
-                          <th>Product Key</th>
+                          <th>License Key</th>
                           <th>Expiration Date</th>
+                          <th>Expiration Date</th>
+                          <th>Renewal Date</th>
                           <th>Licensed to Email</th>
-                          <th>Licensed to Name</th>
                           <th>Manufacturer</th>
                           <th>Total</th>
                           <th>Available</th>
@@ -884,6 +895,7 @@ th{
                           <td style="text-align: center;"><a href="#">license1</a></td>
                           <td style="text-align: center;"><a href="#">0001</a></td>
                           <td style="text-align: center;">12-12-2023</td>
+                          <td style="text-align: center;">20-12-2023</td>
                           <td style="text-align: center;">abc@abc.com</td>
                           <td style="text-align: center;">sss</td>
                           <td style="text-align: center;"><a href="#">ppp</a></td>
