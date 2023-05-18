@@ -25,24 +25,91 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
   <style>
-    /* .card{
-      overflow: scroll;
-    } */
+   .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #029cc2;
+    border-color: #029cc2;
+}
+.paginate_button {
+    font-size: 14px;
+}
 
+    .card-primary:not(.card-outline)>.card-header {
+    background-color: #f8f9fa;
+}
+.card-primary:not(.card-outline)>.card-header a {
+    color: #1f2d3d;;
+}
+.card-primary:not(.card-outline)>.card-header a.active {
+    /* color: #61B8DD; */
+    color: #3490bd;
+}
+.card-light:not(.card-outline)>.card-header, .card-light:not(.card-outline)>.card-header a {
+    color: #1f2d3d;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: #e9ecef #e9ecef #dee2e6;
+}
+/* .card {
+    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+    margin-bottom: 1rem;
+}
+.card {
+    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+    margin-bottom: 1rem;
+} */
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.2);
+    border-radius: 0.25rem;
+}
+.card {
+    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+    margin-bottom: 1rem;
+}
+
+    /* .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #ffffff #ffffff #ffffff;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+}
+.nav-tabs {
+    border-bottom: 1px solid #fff;
+} */
     .page-item.active .page-link {
     z-index: 3;
     color: #fff;
     background-color: #61B8DD;
     border-color: #61B8DD;
 }
-.card-header{
+/* .card-header{
   border-bottom: #fff;
-}
+} */
 
-    table.dataTable>thead>tr>th:not(.sorting_disabled), table.dataTable>thead>tr>td:not(.sorting_disabled) {
+    /* table.dataTable>thead>tr>th:not(.sorting_disabled), table.dataTable>thead>tr>td:not(.sorting_disabled) {
     padding-right: 80px;
     font-size: 14px;
     height: 20px;
+} */
+table.dataTable>thead>tr>th:not(.sorting_disabled){
+    padding-right: 80px;
+    height: 20px;
+}
+th{
+  font-size: 14px;
+  width: 200px;
 }
 
     @media only screen and (max-width: 600px) {
@@ -62,6 +129,7 @@
       padding: 0.75rem;
       vertical-align: top;
       border-top: 1px solid #ffffff;
+      border-collapse: collapse;
     }
 
     .table-striped tbody tr:nth-of-type(odd) {
@@ -70,7 +138,6 @@
 
     .btnn {
       width: 100px;
-      height: 30px;
       font-size: 14px;
     }
 
@@ -110,10 +177,10 @@
     small {
       font-size: 12px;
     }
-
+/* 
     .card {
       box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.15);
-    }
+    } */
 
     a {
       color: #0da58e;
@@ -238,7 +305,7 @@
 
 
     .toggle-container:focus {
-      box-shadow: none;
+      /* box-shadow: none; */
       outline: none;
     }
 
@@ -1067,6 +1134,7 @@
       </div>
       <!-- /.content-header -->
 
+      
       <!-- License -->
       <!-- <div class="card p-3"> -->
       <div class="content">
@@ -1079,185 +1147,165 @@
                 </div>
                 <div class="card-body">
 
-
-                  <!-- <div class=" col-md-8 my-3"> -->
-
-                  <!-- <div class="card "> -->
-                  <div class="card-header">
-                    <!-- START TABS DIV -->
-                    <div class="tabbable-responsivee">
-                      <div class="tabbable">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                          <li class="nav-item">
-                            <a class="nav-link active" id="first-tab" data-toggle="tab" href="#first" role="tab"
-                              aria-controls="first" aria-selected="true">Info</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" id="second-tab" data-toggle="tab" href="#second" role="tab"
-                              aria-controls="second" aria-selected="false">Seats(2/6)</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" id="third-tab" data-toggle="tab" href="#third" role="tab"
-                              aria-controls="third" aria-selected="false">File Uploads</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" id="fourth-tab" data-toggle="tab" href="#fourth" role="tab"
-                              aria-controls="fourth" aria-selected="false">History</a>
-                          </li>
-
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card-body">
-
-                    <div class="tab-content">
-                      <div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
-                        <table class="table table-striped">
-                          <tbody>
-                            <tr>
-                              <td>Manufacturer</td>
-                              <td>ppp</td>
-                            </tr>
-                            <tr>
-                              <td>License Key</td>
-                              <td>0001</td>
-                            </tr>
-                            <tr>
-                              <td>Category</td>
-                              <td>ppp</td>
-                            </tr>
-                            <tr>
-                              <td>Licensed to Name</td>
-                              <td>sss</td>
-                            </tr>
-                            <tr>
-                              <td>Licensed to Email</td>
-                              <td>abc@abc.com</td>
-                            </tr>
-                            <tr>
-                              <td>Expiration Date</td>
-                              <td>12-12-2023</td>
-                            </tr>
-                            <tr>
-                              <td>Termination Date</td>
-                              <td>12-01-2023</td>
-                            </tr>
-                            <tr>
-                              <td>Purchase Order Number</td>
-                              <td>1222</td>
-                            </tr>
-                            <tr>
-                              <td>Purchase Date</td>
-                              <td>12-01-2023</td>
-                            </tr>
-                            <tr>
-                              <td>Purchase Cost</td>
-                              <td>20,000</td>
-                            </tr>
-                            <tr>
-                              <td>Order Number</td>
-                              <td>1111</td>
-                            </tr>
-                            <tr>
-                              <td>Maintained</td>
-                              <td>Yes</td>
-                            </tr>
-                            <tr>
-                              <td>Seats</td>
-                              <td>6</td>
-                            </tr>
-                            <tr>
-                              <td>Reassignable</td>
-                              <td>Yes</td>
-                            </tr>
-                            <tr>
-                              <td>Notes</td>
-                              <td>about the license1</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="tab-pane fade tabb" id="second" role="tabpanel" aria-labelledby="second-tab">
-                        <table class="table table-striped">
-                          <thead>
-                            <tr>
-                              <th>Seat</th>
-                              <th>User</th>
-                              <th>Asset</th>
-                              <th>Location</th>
-                              <th>Checkin/Checkout</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <!-- <tr style="font-weight: 600; border-top: #0075b0;">
-                                  <td>Seat</td>
-                                  <td>User</td>
-                                  <td>Asset</td>
-                                  <td>Location</td>
-                                  <td>Checkin/Checkout</td>
-                                </tr> -->
-                            <tr>
-                              <td>Seat 1</td>
-                              <td>User-1 </td>
-                              <td>Asset-1 </td>
-                              <td>Location-1 </td>
-                              <td>
-                                <button class="btn btn-info btnn" style="text-align: center;">Checkin</button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Seat 2</td>
-                              <td>User-2</td>
-                              <td>Asset-2</td>
-                              <td>Location-2</td>
-                              <td>
-                                <button class="btn btn-info btnn">Checkin</button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Seat 3</td>
-                              <td>User-3</td>
-                              <td>Asset-3</td>
-                              <td>Location-3</td>
-                              <td>
-                                <button class="btn btn-info btnn">Checkin</button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Seat 4</td>
-                              <td>User-4</td>
-                              <td>Asset-4</td>
-                              <td>Location-4</td>
-                              <td>
-                                <button class="btn btn-info btnn">Checkin</button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Seat 5</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td>
-                                <button class="btn btn-danger btnn">Checkout</button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Seat 6</td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td>
-                                <button class="btn btn-danger btnn">Checkout</button>
-                              </td>
-                            </tr>
-
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="tab-pane fade" id="third" role="tabpanel" aria-labelledby="third-tab">
-                        <table id="example2" class="table table-bordered table-hover table-responsive table-striped"
+                  <div class="row">
+                    <div class="col-12 col-sm-12">
+                      <div class="card card-primary card-tabs">
+                        <div class="card-header p-0 pt-1">
+                          <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">Info</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Seats<span style="color: gray;">(2/6)</span></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill" href="#custom-tabs-one-messages" role="tab" aria-controls="custom-tabs-one-messages" aria-selected="false">File Uploads<span style="color: gray;">(1)</span></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="custom-tabs-one-settings-tab" data-toggle="pill" href="#custom-tabs-one-settings" role="tab" aria-controls="custom-tabs-one-settings" aria-selected="false">History</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="card-body">
+                          <div class="tab-content" id="custom-tabs-one-tabContent">
+                            <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
+                              <table class="table table-striped">
+                                <tbody>
+                                  <tr>
+                                    <td>Manufacturer</td>
+                                    <td>ppp</td>
+                                  </tr>
+                                  <tr>
+                                    <td>License Key</td>
+                                    <td>0001</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Category</td>
+                                    <td>ppp</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Licensed to Name</td>
+                                    <td>sss</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Licensed to Email</td>
+                                    <td>abc@abc.com</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Expiration Date</td>
+                                    <td>12-12-2023</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Termination Date</td>
+                                    <td>12-01-2023</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Purchase Order Number</td>
+                                    <td>1222</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Purchase Date</td>
+                                    <td>12-01-2023</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Purchase Cost</td>
+                                    <td>20,000</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Order Number</td>
+                                    <td>1111</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Maintained</td>
+                                    <td>Yes</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Seats</td>
+                                    <td>6</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Reassignable</td>
+                                    <td>Yes</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Notes</td>
+                                    <td>about the license1</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
+                              <table class="table table-striped">
+                                <thead>
+                                  <tr>
+                                    <th>Seat</th>
+                                    <th>User</th>
+                                    <th>Asset</th>
+                                    <th>Location</th>
+                                    <th>Checkin/Checkout</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Seat 1</td>
+                                    <td>User-1 </td>
+                                    <td>Asset-1 </td>
+                                    <td>Location-1 </td>
+                                    <td>
+                                      <button class="btn btn-info btnn btn-sm" style="text-align: center;">Checkin</button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Seat 2</td>
+                                    <td>User-2</td>
+                                    <td>Asset-2</td>
+                                    <td>Location-2</td>
+                                    <td>
+                                      <button class="btn btn-info btnn btn-sm">Checkin</button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Seat 3</td>
+                                    <td>User-3</td>
+                                    <td>Asset-3</td>
+                                    <td>Location-3</td>
+                                    <td>
+                                      <button class="btn btn-info btnn btn-sm">Checkin</button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Seat 4</td>
+                                    <td>User-4</td>
+                                    <td>Asset-4</td>
+                                    <td>Location-4</td>
+                                    <td>
+                                      <button class="btn btn-info btnn btn-sm">Checkin</button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Seat 5</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                      <button class="btn btn-danger btnn btn-sm">Checkout</button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Seat 6</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                      <button class="btn btn-danger btnn btn-sm">Checkout</button>
+                                    </td>
+                                  </tr>
+      
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel" aria-labelledby="custom-tabs-one-messages-tab">
+                              <table id="example2" class="table table-bordered table-hover table-responsive table-striped"
                           >
                           <thead>
                             <tr>
@@ -1265,84 +1313,106 @@
                               <th>Image</th>
                               <th>File</th>
                               <th>FileSize</th>
-                              <th>Download</th>
                               <th>CreatedAt</th>
                               <th>Actions</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
-                              <td>aaa</td>
-                              <td><img src="../License/downloa.png" style="" /></td>
-                              <td>bbb</td>
-                              <td> 10mb</td>
-                              <td>date</td>
-                              <td>date</td>
+                              <td><i class="fas fa-file-pdf" style="font-size: 20px; color: gray;">pdf</i></td>
                               <td>
-                                <div class="row">
-                                <button
-                                  style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;margin-right: 10px;"><i
-                                    class="fas fa-copy"></i></button>
-                                <button
-                                  style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;margin-right: 10px;"><i
-                                    class="fas fa-edit"></i></button>
+                                <!-- <img src="../License/downloa.png" style="height: 150px;width: 150px;"/> -->
+                              </td>
+                              <td>license-uploads-licese1-2023-05-12</td>
+                              <td> 10 MB</td>
+                              <td>10-05-2023</td>
+                              <td>
+                                <div style="display: flex">
+                                
                                 <button
                                   style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;"><i
-                                    class="fas fa-trash"></i></button>
-                                  </div></td>
+                                    class="fas fa-download"></i></button>
+                                <button
+                                  style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;margin-left: 5px;"><i
+                                    class="fas fa-copy"></i></button>
+                                <button
+                                  style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;margin-left: 5px;"><i
+                                    class="fas fa-edit"></i></button>
+                                    <!-- <a class="btn btn-app">
+                                      <i class="fas fa-edit"></i> Edit
+                                    </a> -->
+                                <button
+                                    style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;margin-left: 5px;"><i
+                                      class="fas fa-trash"></i></button>
+
+                                  </div>
+                                </td>
                             </tr>
 
                           </tbody>
 
                         </table>
+                            </div>
+                            <div class="tab-pane fade" id="custom-tabs-one-settings" role="tabpanel" aria-labelledby="custom-tabs-one-settings-tab">
+                              <table id="customDatable" class="table table-bordered table-responsive table-striped"
+                        >
+                         <thead>
+                           <tr>
+                             <th>Admin</th>
+                             <th>Action</th>
+                             <th>Item</th>
+                             <th>Target</th>
+                             <th>Notes</th>
+                             <th>Date</th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                           <tr>
+                             <td>Organization</td>
+                             <td>Updated</td>
+                             <td><a href="#"><i class="fas fa-file"></i> license1</a></td>
+                             <td><a href="#"><i class="fas fa-user"></i> employee4</a></td>
+                             <td>about</td>
+                             <td>01-01-2023
+                               05:42 pm
+                             </td>
+                            
+                           </tr>
+                           <tr>
+                             <td>Organization</td>
+                             <td>Checkout</td>
+                             <td><a href="#"><i class="fas fa-file"></i> license1</a></td>
+                             <td><a href="#"><i class="fas fa-user"></i> employee2</a></td>
+                             <td>about</td>
+                             <td>17-08-2022
+                               011:30 am
+                             </td>
+                            
+                           </tr>
+                           <tr>
+                             <td>Organization</td>
+                             <td>Checkin</td>
+                             <td><a href="#"><i class="fas fa-file"></i> license1</a></td>
+                             <td><a href="#"><i class="fas fa-user"></i> employee1</a></td>
+                             <td>about</td>
+                             <td>02-05-2022
+                               04:20 pm
+                             </td>
+                            
+                           </tr>
+
+                         </tbody>
+
+                       </table>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /.card -->
                       </div>
-                      
-                      <div class="tab-pane fade" id="fourth" role="tabpanel" aria-labelledby="fourth-tab">
-                        <!-- <table id="example2" class="table table-bordered table-hover table-responsive table-striped"
-                        style="width:745px;">
-                        <thead>
-                          <tr>
-                            <th>File Type</th>
-                            <th>Image</th>
-                            <th>File</th>
-                            <th>File Size</th>
-                            <th>Download</th>
-                            <th>Created At</th>
-                            <th>Actions</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>aaa</td>
-                            <td><img src="../License/download.png" style="width: 50px; height: 50px;" /></td>
-                            <td>bbb</td>
-                            <td> 10mb</td>
-                            <td>date</td>
-                            <td>date</td>
-                            <td>
-                              <button
-                                style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;"><i
-                                  class="fas fa-copy"></i></button>&nbsp;
-                              <button
-                                style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;"><i
-                                  class="fas fa-edit"></i></button>&nbsp;
-                              <button
-                                style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;"><i
-                                  class="fas fa-trash"></i></button>
-                            </td>
-                          </tr>
-
-                        </tbody>
-
-                      </table> -->
-                      </div>
-
                     </div>
-                    <!-- END TABS DIV -->
-
+                  
                   </div>
-                  <!-- </div> -->
-                  <!-- </div> -->
+                 
 
 
                 </div>
@@ -1354,7 +1424,6 @@
 
                 <div class="card-body">
                   <button class="btn btn-info" style="width: 200px;">Edit License</button><br><br>
-                  <button class="btn btn-primaryy" style="width: 200px;">Clone License</button><br><br>
                   <button class="btn btn-secondary" style="width: 200px;">Checkout</button><br><br>
                   <button class="btn btn-warningg" style="width: 200px;">Checkout All Seats</button><br><br>
                   <button class="btn btn-success" style="width: 200px;">Checkin All Seats</button><br><br>
@@ -1365,8 +1434,7 @@
             </div>
 
           </div>
-          <!-- /.row -->
-        </div><!-- /.container-fluid -->
+        </div>
       </div>
 
       <div id="show_1"></div>
@@ -1896,6 +1964,7 @@
   <script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 
   <script>
+  
     $(function () {
       $("#example1").DataTable({
         "responsive": true, "lengthChange": false, "autoWidth": false,
@@ -1903,13 +1972,37 @@
       }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
       $('#example2').DataTable({
         "paging": true,
-        "lengthChange": false,
-        "searching": false,
+        "lengthChange": true,
+        "searching": true,
         "ordering": true,
         "info": true,
         "autoWidth": false,
         "responsive": true,
+        'columnDefs': [ {
+
+'targets': [1,5], /* column index */
+
+'orderable': false, /* true or false */
+
+}]
       });
+      $('#customDatable').DataTable({
+        
+        "paging": true,
+        "lengthChange": true,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+        'columnDefs': [ {
+
+'targets': [4], /* column index */
+
+'orderable': false, /* true or false */
+
+}]
+      })
     });
   </script>
 </body>

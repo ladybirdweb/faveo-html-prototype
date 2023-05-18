@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
   <style>
     /* input::placeholder{
         color: #4caf50;
@@ -998,41 +1001,47 @@
                       </div>
                       <div class="row mt-2">
                         <div class="col-lg-6">
-                          <label>Organization</label>
-                          <select class="form-select2 form-control" aria-label="Default select example" required>
-                            <option disabled>Select Organization</option>
-                            <option value="1">A</option>
-                            <option value="2" selected>B</option>
-                            <option value="3">C</option>
-                          </select>
+                          <div class="form-group">
+                            <label>Organization</label>
+                            <select class="form-control select2bs4" style="width: 100%;font-size: 14px;">
+                              <option selected="selected" >Search or Select</option>
+                              <option>a</option>
+                              <option>b</option>
+                              <option>c</option>
+                              <option>d</option>
+                            </select>
+                          </div>
                         </div>
                         <div class="col-lg-6">
                           <label>Manufacturer</label>
-                          <select class="form-select2 form-control" aria-label="Default select example" required>
-                            <option disabled>Select Manufacturer</option>
-                            <option value="1" selected>A</option>
-                            <option value="2">B</option>
-                            <option value="3">C</option>
-                          </select>
+                            <select class="form-control select2bs4" style="width: 100%;">
+                              <option selected="selected">Search or Select</option>
+                              <option>a</option>
+                              <option>b</option>
+                              <option>c</option>
+                              <option>d</option>
+                            </select>
                         </div>
                       </div>
-                      <div class="row mt-2">
+                      <div class="row">
                         <div class="col-lg-6">
                           <label>Vendor</label>
-                          <select class="form-select2 form-control" aria-label="Default select example" required>
-                            <option disabled>Select Vendor</option>
-                            <option value="1">A</option>
-                            <option value="2" selected>B</option>
-                            <option value="3">C</option>
-                          </select>
+                            <select class="form-control select2bs4" style="width: 100%;">
+                              <option selected="selected">Search or Select</option>
+                              <option>a</option>
+                              <option>b</option>
+                              <option>c</option>
+                              <option>d</option>
+                            </select>
                         </div>
                         <div class="col-lg-6">
                           <label>Depreciation</label>
-                          <select class="form-select2 form-control" aria-label="Default select example" required>
-                            <option disabled>Select Depreciation</option>
-                            <option value="1">A</option>
-                            <option value="2">B</option>
-                            <option value="3" selected>C</option>
+                          <select class="form-control select2bs4" style="width: 100%;">
+                            <option selected="selected">Search or Select</option>
+                            <option>a</option>
+                            <option>b</option>
+                            <option>c</option>
+                            <option>d</option>
                           </select>
                         </div>
                       </div>
@@ -1051,12 +1060,13 @@
                       <div class="row mt-2">
                         <div class="col-lg-6">
                           <label>License Type</label>
-                          <select class="form-select2 form-control" aria-label="Default select example" required>
-                            <option disabled>Select License Type</option>
-                            <option value="1">A</option>
-                            <option value="2" selected>B</option>
-                            <option value="3">C</option>
-                          </select>
+                            <select class="form-control select2bs4" style="width: 100%;">
+                              <option selected="selected">Search or Select</option>
+                              <option>a</option>
+                              <option>b</option>
+                              <option>c</option>
+                              <option>d</option>
+                            </select>
                         </div>
                         <div class="col-lg-6">
                           <label>Purcahse Date</label>
@@ -1162,6 +1172,8 @@
   <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
   <script src="../../dist/js/adminlte.min.js"></script>
+  <!-- Select2 -->
+<script src="../../plugins/select2/js/select2.full.min.js"></script>
 
   <script>
 
@@ -1340,6 +1352,12 @@
 <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 <script>tinymce.init({ selector:'textarea' });</script>
 
+<script>
+  //Initialize Select2 Elements
+  $('.select2bs4').select2({
+      theme: 'bootstrap4'
+    })
+</script>
 </body>
 
 </html>

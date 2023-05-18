@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet"/>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"> 
+
     <link href="https://support.faveohelpdesk.com/themes/default/common/images/favicon.ico" rel="shortcut icon">
 
   <!-- Google Font: Source Sans Pro -->
@@ -18,15 +20,44 @@
     <title>Document</title>
     
     <style>
+      .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #029cc2;
+    border-color: #029cc2;
+}
+a {
+    color: #3490bd;
+}
+      .table-bordered {
+    border: 1px solid #ffffff;
+}
+table.table-bordered.dataTable {
+    border-left: 0.5px solid rgb(237, 230, 230);
+}
+      table.dataTable {
+    clear: both;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    max-width: none !important;
+    border-collapse: 0 !important;
+    border-spacing: 0;
+}
+.table thead th {
+    border-bottom: 1px solid #dee2e6;
+    
+}
       .paginate_button{
         font-size: 14px;
       }
       /* .paginate_button span a{
         border: none;
       } */
-      .dataTables_info{
-        font-size: 14px;
-      }
+      
+      table.dataTable>thead>tr>th:not(.sorting_disabled), table.dataTable>thead>tr>td:not(.sorting_disabled) {
+    padding-right: 80px;
+    font-size: 14px;
+}
       input[type="search"]{
         border: 0.5px solid rgb(180, 180, 180);
         border-radius: 5px;
@@ -35,12 +66,7 @@
         content: "Note";
         /* content: hii; */
       }
-     .dataTables_filter label{
-        color: #7c7c7c;
-      }
-      /* .sorting_asc{
-        color: #4caf50;
-      } */
+
       a{
         color:#3285c5;
       }
@@ -259,17 +285,7 @@
   padding:5px;
  }
     
- table { table-layout: fixed; }
-td { 
-  /* width: 33%; */
-  font-size: 14px; 
-  height: 38px;
-}
-th{
-  /* width: 33%; */
-  font-size: 14px;
-  font-weight: 400;
-}
+ 
 
     </style>
 </head>
@@ -860,38 +876,41 @@ th{
                   <h3 class="card-title">Token List</h3>
               </div>
               <div class="card-body mt-2">
-              <!-- <div>
-                <h6 class="col-lg-12" class="card-title">Card title</h6>
-              </div> -->
+
+              <table id="example2" class="table table-bordered table-hover table-responsive table-striped"
+                >
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Created Date</th>
+                    <th>Expiration Date</th>
+                    <th>Actions</th>
               
-              <table id="example" class="display nowrap table-bordered" style="width:100%; border: 0.5px solid rgb(189, 189, 189);">
-                  <thead>
-                      <tr class="mt-4" style="background-color: #ffffff;">
-                          <th style="text-align: center;">Name</th>
-                          <th style="text-align: center;">Expiration Date</th>
-                          <th style="text-align: center;">Author</th>
-                          <th style="text-align: center;">Created Date</th>
-                          <th style="text-align: center;">Actions</th>
-                          
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr style="background-color: #f7f7f7;">
-                          <td style="text-align: center;">license1</a></td>
-                          <td style="text-align: center;">12-12-2023</td>
-                          <td style="text-align: center;"><a href="#">aaa</a></td>
-                          <td style="text-align: center;">12-01-2023</td>
-                          <td style="text-align: center;">
-                            <button style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;"><i class="fas fa-edit"></i></button>&nbsp;
-                            <button style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;"><i class="fas fa-trash"></i></button>
-                          </td>
-                          
-                      </tr>
-                   
-          
-                  </tbody>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">license1</a></td>
+                    <td><a href="#">aaa</a></td>
+                    <td>December 11, 2022 12:56 pm</td>
+                    <td> May 03, 2023 05:35 pm</td>
+                    <td style="text-align: center;">
+                      <div style="flex-direction: row;">
+                        <button style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;"><i
+                            class="fas fa-edit"></i></button>
+                        <button style="background-color: #d1cece;border: none; border-radius: 20%; height: 35px;width: 35px;"><i
+                            class="fas fa-trash"></i></button>
+                      </div>
+                    </td>
+              
+                    </div>
+                    </td>
+                  </tr>
+              
+                </tbody>
+              
               </table>
-               
               
               </div>
             </div>
@@ -933,13 +952,13 @@ th{
     </footer>
   </div>
  
-    <script>
+    <!-- <script>
       $(document).ready(function () {
     $('#example').DataTable({
         scrollX: true,
     });
 });
-    </script>
+    </script> -->
     <!-- <script src="../../plugins/jquery/jquery.min.js"></script> -->
     <!-- Bootstrap 4 -->
     <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1120,6 +1139,47 @@ th{
     
     
     </script>
+     <!-- DataTables  & Plugins -->
+  <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="../../plugins/jszip/jszip.min.js"></script>
+  <script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+  <script>
+  
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": true,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": true,
+        "responsive": true,
+        'columnDefs': [ {
+
+'targets': [4], /* column index */
+
+'orderable': false, /* true or false */
+
+}]
+      });
+      
+    });
+    
+  </script>
 </body>
 
 </html>
