@@ -1,0 +1,2170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <link href="https://support.faveohelpdesk.com/themes/default/common/images/favicon.ico" rel="shortcut icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+    <title>Document</title>
+
+    <style>
+        #txt-custom {
+            display: none;
+        }
+
+.fa-filter{
+    cursor: pointer;
+}
+button, input, optgroup, select, textarea {
+    font-size: small;
+}
+/* LINE CHART */
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #a1a1a1;
+        shape-rendering: crispEdges;
+    }
+
+    .x.axis path {
+        display: none;
+    }
+
+    .line {
+        fill: none;
+        stroke: steelblue;
+        stroke-width: 1.5px;
+    }
+    /* svg{
+        border:1px solid black;
+    } */
+    .grid {
+        fill: none;
+        shape-rendering: crispEdges;
+        stroke: lightgrey;
+        opacity: 0.7;
+        stroke-width: 1px;
+    }
+    .segmentText{
+        cursor:pointer;
+    }
+    div.tooltip {
+        position: absolute;
+        text-align: center;
+        width: 120px;
+        height: 15px;
+        padding: 5px;
+        font: 12px sans-serif;
+        background: #ddd;
+        border: solid 1px #aaa;
+        border-radius: 8px;
+        pointer-events: none;
+    }
+/* Line chart */
+
+.btnn {
+    color: #fff;
+    background-color: #3c8dbc;
+    border-color: #3c8dbc;
+    box-shadow: none;
+    margin-right: 4px!important;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    border: 1px solid transparent;
+}
+.btnn-danger{
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    box-shadow: none;
+    margin-right: 4px!important;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    border: 1px solid transparent;
+}
+
+
+        /* body { */
+        /* font: 10px sans-serif; */
+        /* overflow-x: scroll; */
+        /* } */
+        /* li{
+  font: 15px sans-serif;
+} */
+
+        /* .table-bordered {
+      border: 1px solid #ffffff;
+    } */
+        /* 
+    table.table-bordered.dataTable {
+      border-left: 0.5px solid rgb(237, 230, 230);
+    } */
+
+        /* table.dataTable {
+      clear: both;
+      margin-top: 6px !important;
+      margin-bottom: 6px !important;
+      max-width: none !important;
+      border-collapse: 0 !important;
+      border-spacing: 0;
+    } */
+
+        /* .table thead th {
+      border-bottom: 1px solid #dee2e6;
+
+    } */
+
+        /* .paginate_button {
+      font-size: 14px;
+    } */
+
+        /* .paginate_button span a{
+        border: none;
+      } */
+
+        /* table.dataTable>thead>tr>th:not(.sorting_disabled),
+    table.dataTable>thead>tr>td:not(.sorting_disabled) {
+      padding-right: 80px;
+      font-size: 14px;
+    } */
+
+
+        /* TABLE */
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            /* min-width: 400px; */
+            width: 100%;
+            overflow-x: scroll;
+            /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
+            white-space: nowrap;
+            border: 0.5px solid rgb(217, 217, 217);
+            border-radius: 5px;
+        }
+
+        .styled-table thead tr {
+            /* background-color: #009879; */
+            /* background-color: #acacac; */
+            background-color: #343a40;
+            opacity: 0.7;
+            color: #ffffff;
+            /* text-align: left; */
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+            width: 100px;
+            text-align: center;
+
+        }
+
+        .styled-table td {
+            color: #343a40;
+            border-right: solid 1px rgba(71, 71, 71, 0.3);
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        /* .styled-table tbody tr:last-of-type { */
+        /* border-bottom: 2px solid #009879; */
+        /* } */
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            /* color: #009879; */
+            color: #72ace5;
+        }
+
+        /* TABLE SCROLLBAR */
+        ::-webkit-scrollbar {
+            height: 6px;
+            width: 10px;
+            background: gray;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        ::-webkit-scrollbar-thumb:horizontal {
+            /* background: #000; */
+            background: #9d9d9d;
+            border-radius: 10px;
+        }
+
+        /* LINE CHART */
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #a1a1a1;
+            shape-rendering: crispEdges;
+        }
+
+        .x.axis path {
+            display: none;
+        }
+
+        .line {
+            fill: none;
+            stroke: steelblue;
+            stroke-width: 1.5px;
+        }
+
+        /* svg{
+        border:1px solid black;
+    } */
+        .grid {
+            fill: none;
+            shape-rendering: crispEdges;
+            stroke: lightgrey;
+            opacity: 0.7;
+            stroke-width: 1px;
+        }
+
+        .segmentText {
+            cursor: pointer;
+        }
+
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: 120px;
+            height: 15px;
+            padding: 5px;
+            font: 12px sans-serif;
+            background: #ddd;
+            border: solid 1px #aaa;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        /* Line chart */
+
+        .page-item.active .page-link {
+            z-index: 3;
+            color: #fff;
+            background-color: #029cc2;
+            border-color: #029cc2;
+        }
+
+        a {
+            color: #3490bd;
+        }
+
+        .paginate_button {
+            font-size: 14px;
+        }
+
+        input[type="search"] {
+            border: 0.5px solid rgb(180, 180, 180);
+            border-radius: 5px;
+            width: 250px;
+            height: 32px;
+            content: "Note";
+            /* content: hii; */
+        }
+
+        a {
+            color: #3285c5;
+        }
+
+        .search-header {
+            background: #dcdcdc;
+        }
+
+        .button2 {
+            width: 100px;
+            height: 30px;
+            display: inline-block;
+            background-color: black;
+            margin: 0 10px 10px 0;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        .button2:hover {
+            background-color: red;
+        }
+
+        .content2 {
+            width: 400px;
+            height: 100px;
+            display: block;
+            background-color: gray;
+        }
+
+        .hide2 {
+            display: none;
+        }
+
+        label {
+            font-size: 14px;
+        }
+
+        .navbar-search {
+            position: absolute;
+            padding: 0rem;
+            left: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #fff;
+            margin-right: 10px;
+        }
+
+        .dropdown-menu {
+            width: 360px;
+            margin-right: 10px;
+        }
+
+        .select-filter {
+            padding: 4px 8px;
+        }
+
+        .card {
+            margin-bottom: 0rem;
+        }
+
+        .second-card {
+            padding: 15px;
+        }
+
+        .scrollable-ul {
+            max-height: 280px;
+            overflow-y: auto;
+            overflow-x: auto;
+        }
+
+        .scrollable-ul::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .scrollable-ul::-webkit-scrollbar {
+            width: 6px;
+            background-color: #f1f1f1;
+        }
+
+        .scrollable-ul::-webkit-scrollbar-thumb {
+            background-color: #c1c1c1;
+            border-radius: 10px;
+        }
+
+
+        .toggle-container:focus {
+            box-shadow: none;
+            outline: none;
+        }
+
+
+        .toggle-container input[type="checkbox"] {
+            display: none;
+        }
+
+        .toggle-container label {
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            border-radius: 15px;
+            background-color: #f57373;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .toggle-container label::after {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top: 2px;
+            left: 3px;
+            transition: left 0.5s;
+        }
+
+        .toggle-container input[type="checkbox"]:checked+label[for="toggle"] {
+            background-color: #4caf50;
+        }
+
+        .toggle-container input[type="checkbox"]:checked+label[for="toggle"]::after {
+            left: calc(100% - 18px);
+        }
+
+        .toggle-container {
+            padding-right: 10px;
+        }
+
+        .ml-auto,
+        .mx-auto {
+            margin-top: 5px;
+        }
+
+
+        .form-inline .input-group {
+            width: 360px;
+            margin-top: 20px;
+        }
+
+        .card {
+            margin-bottom: 0rem;
+        }
+
+        img {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .header {
+            font-size: 1.3rem;
+        }
+
+        .text-gray {
+            font-family: Source Sans Pro;
+            font-size: 14px;
+        }
+
+        .text-primary {
+            color: rgb(60, 141, 188) !important;
+        }
+
+        .btn-primary {
+
+            padding-top: 3px;
+            padding-bottom: 3px;
+
+            margin: -2px;
+
+        }
+
+        .btn-outline-primary {
+
+            padding-top: 3px;
+            padding-bottom: 3px;
+
+            margin: -2px;
+
+        }
+
+
+        /* .dropdown-divider{
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  } */
+
+
+
+        .dropdown-item {
+
+            padding: 0;
+        }
+
+        .dropdown-menu-xl .dropdown-item {
+            padding: 0;
+        }
+
+        .media {
+            cursor: pointer;
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 8px;
+        }
+
+        .header {
+            padding-left: 20px;
+        }
+
+        .media-body {
+            padding-left: 10px;
+        }
+
+        .col-sm {
+            padding: 5px;
+        }
+
+
+        /* CIRCLE ICONS */
+        .divv {
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button" onclick="openInitial()">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="searchbar" style="display:none">
+                        <div class="navbar-search navbar-search-open">
+                            <form class="form-inline">
+                                <div class="input-group input-group-sm">
+                                    <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                        aria-label="search" />
+                                    <div class="input-group-append">
+                                        <button class="btn btn-navbar" type="submit">
+                                            <i class="fas fa-search">
+
+                                            </i>
+                                        </button>
+                                        <button class="btn btn-navbar close_dropdown" type="button"
+                                            data-widget="navbar-search" onclick="closeDropdown()">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </li>
+
+                <div class="dropdownOption">
+                    <div class="dropdown-menu dropdown-menu-xl dropdown-menu-right">
+                        <div class="initial_card">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="btn btn-block btn-primary select-filter1" onclick="showAll()">
+                                            All
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="btn btn-block btn-outline-primary select-filter2"
+                                            onclick="showTicket()">
+                                            Ticket
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="btn btn-block btn-outline-primary select-filter3"
+                                            onclick="showContact()">
+                                            Contact
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="btn btn-block btn-outline-primary select-filter4"
+                                            onclick="showArticle()">
+                                            Article
+                                        </div>
+                                    </div>
+                                    <div class="ml-auto">
+
+                                        <i class="fas fa-cog" onclick="openCategories()" data-toggle="tooltip"
+                                            data-placement="top" title="Search filter"></i>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="scrollable-ul mt-2" id="activity_scroll">
+
+                                <div class="dropdown-item">
+
+                                    <div class="all">
+
+                                        <div class="header"> Ticket </div>
+
+                                        <!-- <div class="dropdown-divider">
+                    </div> -->
+                                        <div class="media">
+                                            <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png"
+                                                class="img-circle elevation-2" width=" 50px !important"
+                                                height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="Agent-2">Agent-2</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="#HDSK-AAAA-0006: this ticket was created by agent-2"> New
+                                                    ticket has been created in the system</span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>March
+                                                        01, 2023 02:21 pm</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png"
+                                                class="img-circle elevation-2" width=" 50px !important"
+                                                height="50px !important" alt="User Image">&nbsp
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="user-2">User-2</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="#HDSK-AAAA-0007: this ticket was created by user-2"> New
+                                                    ticket has been created in the system</span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>March
+                                                        05, 2023 07:07 am</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png"
+                                                class="img-circle elevation-2" width=" 50px !important"
+                                                height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="User-3">User-3</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="#HDSK-AAAA-0009: this ticket was closed by agent"> New ticket
+                                                    has been created in the system </span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>march
+                                                        05, 2023 01:30 pm</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png"
+                                                class="img-circle elevation-2" width=" 50px !important"
+                                                height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="User-4">User-4</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="#HDSK-AAAA-00010: this ticket was updated by User-4">New
+                                                    ticket has been created in the system</span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>March
+                                                        06, 2023 08:20 am</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+
+                                        <div class="header mt-1 mb-1">
+                                            Contact
+                                        </div>
+
+                                        <!-- <div class="dropdown-divider">
+                    </div> -->
+
+                                        <div class="media">
+                                            <img src="../../dist/img/user1-128x128.jpg" class="img-circle elevation-2"
+                                                width=" 50px !important" height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="User-1">User-1</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new user Has been registered "> A new user Has been
+                                                    registered </span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>jan
+                                                        01, 2023 08:21 pm</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2"
+                                                width=" 50px !important" height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="User-2">User-2</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new user Has been registered "> A new user Has been
+                                                    registered </span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>jan
+                                                        02, 2023 09:30 pm</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="../../dist/img/user3-128x128.jpg" class="img-circle elevation-2"
+                                                width=" 50px !important" height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="User-3">User-3</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new user Has been registered "> A new user Has been
+                                                    registered </span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>jan
+                                                        05, 2023 10:23 am</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="../../dist/img/user6-128x128.jpg" class="img-circle elevation-2"
+                                                width=" 50px !important" height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="User-3">User-3</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new user Has been registered "> A new user Has been
+                                                    registered </span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>feb
+                                                        14, 2023 11:11 am</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="../../dist/img/user8-128x128.jpg" class="img-circle elevation-2"
+                                                width=" 50px !important" height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="User-5">User-5</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new user Has been registered "> A new user Has been
+                                                    registered </span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>feb
+                                                        21, 2023 1:41 pm</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+
+                                        <div class="header mt-1 mb-1">Article</div>
+
+                                        <!-- <div class="dropdown-divider">
+                    </div> -->
+
+                                        <div class="media">
+                                            <img src="../../dist/img/article.png" width=" 50px !important"
+                                                height="50px !important" alt="User Image">
+
+
+                                            <div class="media-body">
+
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="Article-1">Article-1</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new article has been created"> A new article has been
+                                                    created</span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>march
+                                                        01, 2023 06:30 am</i></p>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="../../dist/img/article.png" width=" 50px !important"
+                                                height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+
+
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="Article-2">Article-2</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new article has been created"> A new article has been
+                                                    created</span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>march
+                                                        01, 2023 12:35 pm</i></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ticket">
+
+                                        <div class="media">
+                                            <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png"
+                                                class="img-circle elevation-2" width=" 50px !important"
+                                                height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="Agent-2">Agent-2</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="#HDSK-AAAA-0006: New ticket has been created in the system">New
+                                                    ticket has been created in the system</span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>March
+                                                        01, 2023 02:21 pm</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png"
+                                                class="img-circle elevation-2" width=" 50px !important"
+                                                height="50px !important" alt="User Image">&nbsp
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="User-2">User-2</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="#HDSK-AAAA-0007: New ticket has been created in the system">New
+                                                    ticket has been created in the system </span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>March
+                                                        05, 2023 07:07 am</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png"
+                                                class="img-circle elevation-2" width=" 50px !important"
+                                                height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="User-3">User-3</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="#HDSK-AAAA-0009: New ticket has been created in the system">New
+                                                    ticket has been created in the system</span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>march
+                                                        05, 2023 01:30 pm</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/v_collection_png/128x128/shadow/ticket_blue.png"
+                                                class="img-circle elevation-2" width=" 50px !important"
+                                                height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="User-4">User-4</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="#HDSK-AAAA-00010: New ticket has been created in the system">New
+                                                    ticket has been created in the system</span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>March
+                                                        06, 2023 08:20 am</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                    </div>
+
+                                    <div class="contact">
+                                        <div class="media">
+                                            <img src="../../dist/img/user1-128x128.jpg" class="img-circle elevation-2"
+                                                width=" 50px !important" height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="User-1">User-1</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new user Has been registered "> A new user Has been
+                                                    registered </span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>jan
+                                                        01, 2023 08:21 pm</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2"
+                                                width=" 50px !important" height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="User-2">User-2</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new user Has been registered "> A new user Has been
+                                                    registered </span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>jan
+                                                        02, 2023 09:30 pm</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="../../dist/img/user3-128x128.jpg" class="img-circle elevation-2"
+                                                width=" 50px !important" height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="User-3">User-3</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new user Has been registered "> A new user Has been
+                                                    registered </span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>jan
+                                                        05, 2023 10:23 am</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="../../dist/img/user6-128x128.jpg" class="img-circle elevation-2"
+                                                width=" 50px !important" height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="User-3">User-3</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new user Has been registered "> A new user Has been
+                                                    registered </span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>feb
+                                                        14, 2023 11:11 am</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="../../dist/img/user8-128x128.jpg" class="img-circle elevation-2"
+                                                width=" 50px !important" height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="User-5">User-5</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new user Has been registered "> A new user Has been
+                                                    registered </span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>feb
+                                                        21, 2023 1:41 pm</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="article">
+                                        <div class="media">
+                                            <img src="../../dist/img/article.png" width=" 50px !important"
+                                                height="50px !important" alt="User Image">&nbsp
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="Article-1">Article-1</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new article has been created"> A new article has been
+                                                    created</span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>march
+                                                        01, 2023 06:30 am</i></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="../../dist/img/article.png" width=" 50px !important"
+                                                height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="Article-2">Article-2</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new article has been created"> A new article has been
+                                                    created</span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>march
+                                                        01, 2023 12:30 am</i></p>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="../../dist/img/article.png" width=" 50px !important"
+                                                height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="Article-3">Article-3</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new article has been created"> A new article has been
+                                                    created</span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>march
+                                                        03, 2023 03:33 pm</i></p>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="../../dist/img/article.png" width=" 50px !important"
+                                                height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="Article-4">Article-4</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new article has been created"> A new article has been
+                                                    created</span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>march
+                                                        04, 2023 04:44 am</i></p>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-divider">
+                                        </div>
+                                        <div class="media">
+                                            <img src="../../dist/img/article.png" width=" 50px !important"
+                                                height="50px !important" alt="User Image">
+
+                                            <div class="media-body">
+                                                <h3 class="dropdown-item-title text-primary" data-toggle="tooltip"
+                                                    data-placement="top" title="Article-5">Article-5</h3>
+                                                <span class="text-gray" data-toggle="tooltip" data-placement="top"
+                                                    title="A new article has been created"> A new article has been
+                                                    created</span>
+                                                <p class="text-xs text-muted"><i class="far fa-clock mr-1"></i> <i>march
+                                                        05, 2023 05:55 am</i></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="search_by" style="display:none">
+
+                            <div class="card">
+
+                                <div class="card-header">
+                                    <b> Search By </b>
+                                </div>
+
+                                <div class="card-body second-card">
+                                    <div class="scrollable-ul" id="activity_scroll">
+
+                                        Ticket Body
+                                        <div class="toggle-container float-right">
+                                            <input type="checkbox" id="toggle" />
+                                            <label for="toggle"></label>
+                                        </div>
+                                        <hr>
+                                        Ticket Assignee
+                                        <div class="toggle-container float-right">
+                                            <input type="checkbox" id="toggle_1" />
+                                            <label for="toggle_1"></label>
+                                        </div>
+                                        <hr>
+                                        Ticket Creator
+                                        <div class="toggle-container float-right">
+                                            <input type="checkbox" id="toggle_2" />
+                                            <label for="toggle_2"></label>
+                                        </div>
+                                        <hr>
+                                        Ticket Department
+                                        <div class="toggle-container float-right">
+                                            <input type="checkbox" id="toggle_3" />
+                                            <label for="toggle_3"></label>
+                                        </div>
+                                        <hr>
+                                        Ticket Status
+                                        <div class="toggle-container float-right">
+                                            <input type="checkbox" id="toggle_4" />
+                                            <label for="toggle_4"></label>
+                                        </div>
+                                        <hr>
+                                        Ticket Priority
+                                        <div class="toggle-container float-right">
+                                            <input type="checkbox" id="toggle_5" />
+                                            <label for="toggle_5"></label>
+                                        </div>
+                                        <hr>
+                                        Ticket Custom Values
+                                        <div class="toggle-container float-right">
+                                            <input type="checkbox" id="toggle_6" />
+                                            <label for="toggle_6"></label>
+                                        </div>
+                                        <hr>Article Categories
+                                        <div class="toggle-container float-right">
+                                            <input type="checkbox" id="toggle_7" />
+                                            <label for="toggle_7"></label>
+                                        </div>
+                                        <hr>Article Tag
+                                        <div class="toggle-container float-right">
+                                            <input type="checkbox" id="toggle_8" />
+                                            <label for="toggle_8"></label>
+                                        </div>
+                                        <hr>Article Description
+                                        <div class="toggle-container float-right">
+                                            <input type="checkbox" id="toggle_9" />
+                                            <label for="toggle_9"></label>
+                                        </div>
+                                        <hr>User Custom Form Values
+                                        <div class="toggle-container float-right">
+                                            <input type="checkbox" id="toggle_10" />
+                                            <label for="toggle_10"></label>
+                                        </div>
+                                        <hr>
+                                    </div>
+
+                                </div>
+
+                                <!-- <div class="card-footer">
+                  <div class="btn btn-primary float-right" onclick="closeSearchBy()">
+                    save
+                  </div>
+  
+                  <div class="btn btn-default float-left" onclick="closeSearchBy()">
+                    cancel
+                  </div>
+  
+                </div> -->
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link text-center">
+                <span class="brand-text font-weight-light">Faveo Help Desk</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="../../dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Faveo</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Simple Link
+                                    <span class="right badge badge-danger">New</span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Feedback Rating Analysis</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Starter Page</li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- License -->
+            <!-- <div class="card p-3"> -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card card-light">
+                                <div class="card-header">
+                                    <h3 class="card-title">Feedback Rating Analysis </h3>
+
+                                    <div style="float: right;">
+                                        <i class="fa fa-filter" id="icon"></i>
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body mt-2">
+
+                                    <!-- HIDDEN DIV -->
+                                    <div class="data mb-3">
+                                        <div class="card card-light">
+                                            <div class="card-header">
+                                                <h3 class="card-title">Apply Filter </h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <!-- <div class="data"> -->
+                                                <!-- <p>Hide or Show Me</p> -->
+                                                
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <label>Agent:</label>
+                                                        <input class="form-control" />
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label>Team:</label>
+                                                        <input class="form-control" />
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label>Is Answered:</label>
+                                                        <input class="form-control" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="row  mt-3">
+                                            <div class="col-md-4">
+                                                <label>Time Period : </label>
+                                                <form name="dropForm">
+                                                    <select class="form-select form-control" name="dropSelect" onchange="showDropInfo()" style="float: right;margin-left: 5px;">
+                                                        <option>-Select-</option>
+                                                        <option value="14-06-2023">Today</option>
+                                                        <option value="13-06-2023 to 14-06-2023">Yesterday</option>
+                                                        <option value="12-06-2023 to 13-06-2023">This week</option>
+                                                        <option value="05-06-2023 to 14-06-2023">Previous week</option>
+                                                        <option value="08-06-2023 to 14-06-2023">Last 7 days</option>
+                                                        <option value="01-06-2023 to 14-06-2023">This month</option>
+                                                        <option value="01-05-2023 to 14-06-2023">Previous month</option>
+                                                        <option value="16-05-2023 to 14-06-2023">Last 30 days</option>
+                                                        <option value="01-04-2023 to 14-06-2023">Last 3 months</option>
+                                                        <option value="17-03-2023 to 14-06-2023">Last 90 days</option>
+                                                        <option value="01-01-2023 to 14-06-2023">Last 6 months</option>
+                                                        <option value="01-01-2023 to 14-06-2023">This year</option>
+                                                        <option>Date Range</option>
+                                                        <option value="custom">Custom</option>
+                                                    </select>
+                                                    <label style="display:none;">Select Date Range:
+                                                        <input />
+                                                    </label>
+                                                    
+                                                </form>
+                                            
+                                            
+                                                <br><br>
+                                                <p id="pF" hidden></p>
+                                               
+                                                <div>
+                                                    <p id="pS"></p>
+                                                </div>
+                                               
+                                                <p id="pT" hidden></p>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <label>Custom Date range:</label>
+                                            <input class="form-control" type="text" name="daterange" value="Select date" />
+                                            </div>
+                                        </div>
+                                                <!-- </div> -->
+                                            </div>
+                                            <div class="card-footer">
+                                                <button class="btnn"><i class="fa fa-check"></i> Apply</button>
+                                                <button class="btnn"><i class="fas fa-code-branch"></i> Fork</button>
+                                                <button class="btnn"><i class="fa fa-undo"></i> Reset</button>
+                                                <button class="btnn-danger"><i class="fa fa-times"></i> Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /HIDDEN DIV -->
+                                 
+                                 <div style="float: right;">
+                                    <select id="select" name="cd-dropdown" class="btn btn-sm btn-default dropdown-toggle">
+                                        <option value="-1" selected>Chart Type</option>
+                                        <option value="1">View By Bar</option>
+                                        <option value="2">View By Horizontal Bar</option>
+                                        <option value="3">View By Pie </option>
+                                        <option value="4">View By Doughnut </option>
+                                        </select>
+                                       
+                                    </div>
+                                    
+<br>
+                                  
+                               
+<br>
+                                    <div data-v-ff512214="" class="data-widget">
+                                        <div data-v-fb5b0018="" data-v-ff512214="" class="row">
+                                            <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12">
+                                                <a data-v-fb5b0018=""
+                                                    href=""
+                                                    class="text-dark" rel="noopener" id="dark-text" style="cursor: pointer;">
+                                                    <div data-v-fb5b0018="" class="info-box"><!---->
+                                                        <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip">
+                                                            <span data-v-fb5b0018="" class="info-box-text">Total feedback requests sent</span>
+                                                            <span data-v-fb5b0018="" class="info-box-number">0</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12"><a data-v-fb5b0018=""
+                                                    href=""
+                                                    class="text-dark" rel="noopener" id="dark-text" style="cursor: pointer;">
+                                                    <div data-v-fb5b0018="" class="info-box"><!---->
+                                                        <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip"><span data-v-fb5b0018=""
+                                                                class="info-box-text">Total answered feedback requests</span><span data-v-fb5b0018=""
+                                                                class="info-box-number">0</span></div>
+                                                    </div>
+                                                </a></div>
+                                            <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12"><a data-v-fb5b0018=""
+                                                    href=""
+                                                    class="text-dark" rel="noopener" id="dark-text" style="cursor: pointer;">
+                                                    <div data-v-fb5b0018="" class="info-box"><!---->
+                                                        <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip"><span data-v-fb5b0018=""
+                                                                class="info-box-text">Total unanswered feedback requests</span><span data-v-fb5b0018=""
+                                                                class="info-box-number">0</span></div>
+                                                    </div>
+                                                </a></div>
+                                            <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12"><a data-v-fb5b0018=""
+                                                    href=""
+                                                    class="text-dark" rel="noopener" id="dark-text" style="cursor: pointer;">
+                                                    <div data-v-fb5b0018="" class="info-box"><!---->
+                                                        <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip"><span data-v-fb5b0018=""
+                                                                class="info-box-text">Positive feedback received</span><span data-v-fb5b0018=""
+                                                                class="info-box-number">0</span></div>
+                                                    </div>
+                                                </a></div>
+                                            <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12"><a data-v-fb5b0018=""
+                                                    href=""
+                                                    class="text-dark" rel="noopener" id="dark-text" style="cursor: pointer;">
+                                                    <div data-v-fb5b0018="" class="info-box"><!---->
+                                                        <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip"><span data-v-fb5b0018=""
+                                                                class="info-box-text">Neutral feedback received</span><span data-v-fb5b0018=""
+                                                                class="info-box-number">0</span></div>
+                                                    </div>
+                                                </a></div>
+                                            <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12"><a data-v-fb5b0018=""
+                                                    href=""
+                                                    class="text-dark" rel="noopener" id="dark-text" style="cursor: pointer;">
+                                                    <div data-v-fb5b0018="" class="info-box"><!---->
+                                                        <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip"><span data-v-fb5b0018=""
+                                                                class="info-box-text">Negative feedback received</span><span data-v-fb5b0018=""
+                                                                class="info-box-number">0</span></div>
+                                                    </div>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                    <!-- CHARTS -->
+                                        
+                                        
+                                    <!-- /CHARTS -->
+
+                                        <div class="card card-light">
+                                            <div class="card-header">
+                                                <h3 class="card-title">OverAll Satisfaction </h3>
+                                            </div>
+                                            <div class="card-body" style="min-height: 300px;">
+                                                <!-- <canvas id="overall-satisfaction" width="1804" height="600" 
+                                                    style="display: block; box-sizing: border-box; height: 300px; width: 902px; cursor: default;">
+                                                </canvas> -->
+                                                <div id="d1" class="pr-price"> 
+                                                    <!-- View By Bar -->
+                                                    <div class="divv" style="display: flex;margin-left: 10%;">
+                                                        <p><i class='fa fa-circle' style='color: rgb(44, 160, 44); font-size: 11px;'></i> 5 stars</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <p><i class='fa fa-circle' style='color: rgb(31, 119, 180);'></i> 4 stars</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <p><i class='fa fa-circle' style='color: rgb(148, 103, 189);'></i> 3 stars</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <p><i class='fa fa-circle' style='color: rgb(255, 127, 14);'></i> 2 stars</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <p><i class='fa fa-circle' style='color: rgb(214, 39, 40)'></i> 1 star</p>
+                                                      </div>
+                                                     <!-- </div> -->
+                                                      <!-- <h1>Line Chart</h1>   -->
+                                                      <div style="overflow-x: scroll;" id="divChartTrends">
+                                                        </div>
+                                                        <div class="card card-light mt-3">
+                                                            <div class="card-header">
+                                                             <h3 class="card-title">Ratings Table</h3>
+                                                            </div>
+                                                            <div class="card-body">
+                                             
+                                                           <table class="styled-table table-responsive">
+                                                             <thead>
+                                                                 <tr>
+                                                                     <th>Stars</th>
+                                                                     <th>1 may</th>
+                                                                     <th>2 may</th>
+                                                                     <th>3 may</th>
+                                                                     <th>4 may</th>
+                                                                     <th>5 may</th>
+                                                                     <th>6 may</th>
+                                                                     <th>7 may</th>
+                                                                     <th>8 may</th>
+                                                                     <th>9 may</th>
+                                                                     <th>10 may</th>
+                                                                     <th>11 may</th>
+                                                                     <th>12 may</th>
+                                                                     <th>13 may</th>
+                                                                     <th>14 may</th>
+                                                                     <th>15 may</th>
+                                                                     <th>16 may</th>
+                                                                     <th>17 may</th>
+                                                                     <th>18 may</th>
+                                                                     <th>19 may</th>
+                                                                     <th>20 may</th>
+                                                                     <th>21 may</th>
+                                                                     <th>22 may</th>
+                                                                     <th>23 may</th>
+                                                                     <th>24 may</th>
+                                                                     <th>25 may</th>
+                                                                     <th>26 may</th>
+                                                                     <th>27 may</th>
+                                                                     <th>28 may</th>
+                                                                     <th>29 may</th>
+                                                                     <th>30 may</th>
+                                                                     <th>31 may</th>
+                                                                 </tr>
+                                                             </thead>
+                                                             <tbody>
+                                                                 <tr class="active-row">
+                                                                     <td>5 Stars</td>
+                                                                     <td>2</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>1</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>3</td>
+                                                                     <td>0</td>
+                                                                     <td>1</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>4</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>1</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>3</td>
+                                                                     <td>0</td>
+                                                                     <td>1</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>4</td>
+                                                                     <td>0</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                   <td>4 Stars</td>
+                                                                   <td>0</td>
+                                                                   <td>1</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>2</td>
+                                                                   <td>0</td>
+                                                                   <td>1</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>4</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>1</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>3</td>
+                                                                     <td>0</td>
+                                                                     <td>1</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>4</td>
+                                                                     <td>0</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                   <td>3 Stars</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>3</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>1</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>2</td>
+                                                                   <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>1</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>3</td>
+                                                                     <td>0</td>
+                                                                     <td>1</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>4</td>
+                                                                     <td>0</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                   <td>2 Stars</td>
+                                                                   <td>1</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>2</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>2</td>
+                                                                   <td>1</td>
+                                                                   <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>1</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>3</td>
+                                                                     <td>0</td>
+                                                                     <td>1</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>4</td>
+                                                                     <td>0</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                   <td>1 Star</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>2</td>
+                                                                   <td>0</td>
+                                                                   <td>2</td>
+                                                                   <td>1</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>1</td>
+                                                                   <td>2</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                   <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>1</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>3</td>
+                                                                     <td>0</td>
+                                                                     <td>1</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>0</td>
+                                                                     <td>4</td>
+                                                                     <td>0</td>
+                                                                 </tr>
+                                                                 <!-- and so on... -->
+                                                             </tbody>
+                                                         </table>
+                                                            </div>
+                                                         </div>
+                                                </div>
+                                                <div id="d2" class="pr-price">View By Horizontal Bar</div>
+                                                <div id="d3" class="pr-price">View By Pie</div>
+                                                <div id="d4" class="pr-price">View By Doughnut</div>
+                                            </div>
+                                        </div>
+
+                               </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- <div class="p-3">
+      <button class="btn btn-info">Save</button>
+   </div> -->
+            <!-- </div> -->
+
+
+
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+            <div class="p-3">
+                <h5>Title</h5>
+                <p>Sidebar content</p>
+            </div>
+        </aside>
+        <!-- /.control-sidebar -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="float-right d-none d-sm-inline">
+                Version 1.0.0
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright &copy; 2023-2024 <a href="https://support.faveohelpdesk.com">Faveo</a>.</strong> All
+            rights reserved.
+        </footer>
+    </div>
+
+    <!-- <script>
+      $(document).ready(function () {
+    $('#example').DataTable({
+        scrollX: true,
+    });
+});
+    </script> -->
+    <!-- <script src="../../plugins/jquery/jquery.min.js"></script> -->
+    <!-- Bootstrap 4 -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.min.js"></script>
+
+    <script>
+
+        function showAll() {
+            const allContents = document.querySelector('.all');
+            const allTickets = document.querySelector('.ticket');
+            const allContacts = document.querySelector('.contact');
+            const allArticles = document.querySelector('.article');
+            allContents.style.display = 'block';
+            allTickets.style.display = 'none';
+            allContacts.style.display = 'none';
+            allArticles.style.display = 'none';
+
+            const button1 = document.querySelector('.select-filter1');
+            button1.classList.replace('btn-outline-primary', 'btn-primary');
+
+            const button2 = document.querySelector('.select-filter2');
+            button2.classList.replace('btn-primary', 'btn-outline-primary');
+
+            const button3 = document.querySelector('.select-filter3');
+            button3.classList.replace('btn-primary', 'btn-outline-primary');
+
+            const button4 = document.querySelector('.select-filter4');
+            button4.classList.replace('btn-primary', 'btn-outline-primary');
+        }
+
+        function showTicket() {
+            const allContents = document.querySelector('.all');
+            const allTickets = document.querySelector('.ticket');
+            const allContacts = document.querySelector('.contact');
+            const allArticles = document.querySelector('.article');
+            allContents.style.display = 'none';
+            allTickets.style.display = 'block';
+            allContacts.style.display = 'none';
+            allArticles.style.display = 'none';
+
+            const button1 = document.querySelector('.select-filter1');
+            button1.classList.replace('btn-primary', 'btn-outline-primary');
+
+            const button2 = document.querySelector('.select-filter2');
+            button2.classList.replace('btn-outline-primary', 'btn-primary');
+
+            const button3 = document.querySelector('.select-filter3');
+            button3.classList.replace('btn-primary', 'btn-outline-primary');
+
+            const button4 = document.querySelector('.select-filter4');
+            button4.classList.replace('btn-primary', 'btn-outline-primary');
+        }
+
+        function showContact() {
+            const allContents = document.querySelector('.all');
+            const allTickets = document.querySelector('.ticket');
+            const allContacts = document.querySelector('.contact');
+            const allArticles = document.querySelector('.article');
+            allContents.style.display = 'none';
+            allTickets.style.display = 'none';
+            allContacts.style.display = 'block';
+            allArticles.style.display = 'none';
+
+            const button1 = document.querySelector('.select-filter1');
+            button1.classList.replace('btn-primary', 'btn-outline-primary');
+
+            const button2 = document.querySelector('.select-filter2');
+            button2.classList.replace('btn-primary', 'btn-outline-primary');
+
+            const button3 = document.querySelector('.select-filter3');
+            button3.classList.replace('btn-outline-primary', 'btn-primary');
+
+            const button4 = document.querySelector('.select-filter4');
+            button4.classList.replace('btn-primary', 'btn-outline-primary');
+        }
+
+        function showArticle() {
+            const allContents = document.querySelector('.all');
+            const allTickets = document.querySelector('.ticket');
+            const allContacts = document.querySelector('.contact');
+            const allArticles = document.querySelector('.article');
+            allContents.style.display = 'none';
+            allTickets.style.display = 'none';
+            allContacts.style.display = 'none';
+            allArticles.style.display = 'block';
+
+            const button1 = document.querySelector('.select-filter1');
+            button1.classList.replace('btn-primary', 'btn-outline-primary');
+
+            const button2 = document.querySelector('.select-filter2');
+            button2.classList.replace('btn-primary', 'btn-outline-primary');
+
+            const button3 = document.querySelector('.select-filter3');
+            button3.classList.replace('btn-primary', 'btn-outline-primary');
+
+            const button4 = document.querySelector('.select-filter4');
+            button4.classList.replace('btn-outline-primary', 'btn-primary');
+
+        }
+
+        function openInitial() {
+            const searchBlock = document.querySelector('.searchbar');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            const searchBy = document.querySelector('.search_by')
+
+            const button1 = document.querySelector('.select-filter1');
+            button1.classList.replace('btn-outline-primary', 'btn-primary');
+
+            const button2 = document.querySelector('.select-filter2');
+            button2.classList.replace('btn-primary', 'btn-outline-primary');
+
+            const button3 = document.querySelector('.select-filter3');
+            button3.classList.replace('btn-primary', 'btn-outline-primary');
+
+            const button4 = document.querySelector('.select-filter4');
+            button4.classList.replace('btn-primary', 'btn-outline-primary');
+
+            const allContents = document.querySelector('.all');
+            const allTickets = document.querySelector('.ticket');
+            const allContacts = document.querySelector('.contact');
+            const allArticles = document.querySelector('.article');
+            allContents.style.display = 'block';
+            allTickets.style.display = 'none';
+            allContacts.style.display = 'none';
+            allArticles.style.display = 'none';
+
+            searchBlock.style.display = 'block';
+            searchBy.classList.remove('show');
+            dropdownMenu.classList.add('show');
+            searchBlock.classList.add('show');
+
+            const initialCard = document.querySelector(".initial_card");
+            const initial = document.querySelector('.dropdown-menu');
+
+            if (initialCard.style.display === "none") {
+                initialCard.style.display = "block";
+                searchBy.style.display = "none";
+            }
+
+
+        }
+
+        function openCategories() {
+            const initialCard = document.querySelector(".initial_card");
+            const searchBy = document.querySelector(".search_by");
+            const initial = document.querySelector('.dropdown-menu');
+
+            if (initialCard.style.display === "none") {
+                initialCard.style.display = "block";
+                initial.addEventListener('load', () => {
+                    initialCard.style.display = "block";
+                    searchBy.style.display = "none";
+                });
+            } else {
+                initialCard.style.display = "none";
+                searchBy.style.display = "block";
+            }
+        }
+
+        function closeSearchBy() {
+            const searchByDiv = document.querySelector(".search_by");
+            searchByDiv.style.display = "none";
+            const initialCardDiv = document.querySelector(".initial_card");
+            initialCardDiv.style.display = "block";
+        }
+
+        function closeDropdown() {
+            const searchBlock = document.querySelector('.searchbar');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            searchBlock.style.display = 'none';
+            dropdownMenu.classList.remove('show');
+        }
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+    </script>
+
+
+
+   
+
+  
+
+    <script>
+        $('.data').hide()
+        jQuery('#icon').on('click', function () {
+            jQuery('.data').toggle();
+        })
+    </script>
+
+    <script>
+        $(function () {
+  $('.pr-price').hide();
+  $('#d1').show();
+    
+  $('#select').on("change",function () {
+    $('.pr-price').hide();
+    $('#d'+$(this).val()).show();
+  }).val("-1");
+});
+    </script>
+
+    <!-- <script>
+window.onload = function() {
+  const canvas = document.getElementById("overall-satisfaction");
+  const ctx = canvas.getContext("2d");
+  const img = document.getElementById("d1");
+  ctx.drawImage(img, 10, 10);
+};
+</script> -->
+
+ <!-- Line chart -->
+ <script>
+    var Data = [
+           {
+               "name": "4 stars",
+               "WeeklyData": [
+                   { "week": "06 May 2023", "value": 11 },
+                   { "week": "13 May 2023", "value": 12 },
+                   { "week": "20 May 2023", "value": 14 },
+                   { "week": "27 May 2023", "value": 15 }
+               ]
+           },
+           {
+               "name": "2 stars",
+               "WeeklyData": [
+                   { "week": "06 May 2023", "value": 20 },
+                   { "week": "13 May 2023", "value": 16 },
+                   { "week": "20 May 2023", "value": 11 },
+                   { "week": "27 May 2023", "value": 17 }
+               ]
+           },
+           {
+               "name": "5 stars",
+               "WeeklyData": [
+                   { "week": "06 May 2023", "value": 4 },
+                   { "week": "13 May 2023", "value": 13 },
+                   { "week": "20 May 2023", "value": 6 },
+                   { "week": "27 May 2023", "value": 13 }
+               ]
+           },
+           {
+               "name": "1 star",
+               "WeeklyData": [
+                   { "week": "06 May 2023", "value": 18 },
+                   { "week": "13 May 2023", "value": 15 },
+                   { "week": "20 May 2023", "value": 7 },
+                   { "week": "27 May 2023", "value": 10 }
+               ]
+           },
+           {
+               "name": "3 stars",
+               "WeeklyData": [
+                   { "week": "06 May 2023", "value": 2 },
+                   { "week": "13 May 2023", "value": 5 },
+                   { "week": "20 May 2023", "value": 10 },
+                   { "week": "27 May 2023", "value": 7 }
+               ]
+           },
+          
+       ];
+
+   function fnDrawMultiLineChart(Data, DivID, RevenueName) {
+       var margin = { top: 20, right: 80, bottom: 30, left: 50 },
+        width = 600 - margin.left - margin.right,
+        height = 300 - margin.top - margin.bottom;
+
+       var parseDate = d3.time.format("%d-%b");
+
+       var x = d3.scale.ordinal()
+               .rangeRoundBands([0, width]);
+
+       var y = d3.scale.linear()
+               .range([height, 0]);
+
+       var color = d3.scale.category10();
+
+       var xAxis = d3.svg.axis()
+           .scale(x)
+           .orient("bottom");
+
+       var yAxis = d3.svg.axis()
+           .scale(y)
+           .orient("left")
+           .ticks(10);
+
+       // xData gives an array of distinct 'Weeks' for which trends chart is going to be made.
+       var xData = Data[0].WeeklyData.map(function (d) { return parseDate(new Date(d.week)); });
+       //console.log(xData);
+
+       var line = d3.svg.line()
+           //.interpolate("basis")
+           .x(function (d) { return x(parseDate(new Date(d.week))) + x.rangeBand() / 2; })
+           .y(function (d) { return y(d.value); });
+
+       var svg = d3.select("#" + DivID).append("svg")
+           .attr("width", width + margin.left + margin.right)
+           .attr("height", height + margin.top + margin.bottom)
+           .append("g")
+           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+       color.domain(Data.map(function (d) { return d.name; }));
+
+       x.domain(xData);
+
+       var valueMax = d3.max(Data, function (r) { return d3.max(r.WeeklyData, function (d) { return d.value; }) });
+       var valueMin = d3.min(Data, function (r) { return d3.min(r.WeeklyData, function (d) { return d.value; }) });
+       y.domain([valueMin, valueMax]);
+
+       //Drawing X Axis
+       svg.append("g")
+               .attr("class", "x axis")
+               .attr("transform", "translate(0," + height + ")")
+               .call(xAxis);
+
+       // Drawing Horizontal grid lines.
+       svg.append("g")
+           .attr("class", "GridX")
+         .selectAll("line.grid").data(y.ticks()).enter()
+           .append("line")
+           .attr(
+           {
+               "class": "grid",
+               "x1": x(xData[0]),
+               "x2": x(xData[xData.length - 1]) + x.rangeBand() / 2,
+               "y1": function (d) { return y(d); },
+               "y2": function (d) { return y(d); }
+           });
+       // Drawing Y Axis
+       svg.append("g")
+           .attr("class", "y axis")
+           .call(yAxis)
+           .append("text")
+               .attr("transform", "rotate(-90)")
+               .attr("y", 6)
+               .attr("dy", ".71em")
+               .style("text-anchor", "end")
+               .text(RevenueName);
+
+       // Drawing Lines for each segments
+       var segment = svg.selectAll(".segment")
+                       .data(Data)
+                       .enter().append("g")
+                       .attr("class", "segment");
+     
+       segment.append("path")
+               .attr("class", "line")
+               .attr("id", function (d) { return d.name; })
+               .attr("visible",1)
+               .attr("d", function (d) { return line(d.WeeklyData); })
+               .style("stroke", function (d) { return color(d.name); });
+                   // Creating Dots on line
+       segment.selectAll("dot")
+               .data(function (d) { return d.WeeklyData; })
+               .enter().append("circle")
+               .attr("r", 5)
+               .attr("cx", function (d) { return x(parseDate(new Date(d.week))) + x.rangeBand() / 2; })
+               .attr("cy", function (d) { return y(d.value); })
+               .style("stroke", "white")
+               .style("fill", function (d) { return color(this.parentNode.__data__.name); })
+               .on("mouseover", mouseover)
+               .on("mousemove", function (d) {
+                   divToolTip
+                   .text(this.parentNode.__data__.name +" : "+ d.value)
+                   .style("left", (d3.event.pageX + 15) + "px")
+                   .style("top", (d3.event.pageY - 10) + "px");
+               })
+               .on("mouseout", mouseout);
+     
+       segment.append("text")
+               .datum(function (d) { return { name: d.name, RevData: d.WeeklyData[d.WeeklyData.length - 1] }; })
+               .attr("transform", function (d) {
+                   var xpos = x(parseDate(new Date(d.RevData.week))) + x.rangeBand() / 2;
+                   return "translate(" + xpos + "," + y(d.RevData.value) + ")";
+               })
+               .attr("x", 3)
+               .attr("dy", ".35em")
+               .attr("class", "segmentText")
+               .attr("Segid", function (d) { return d.name; })
+               .text(function (d) { return d.name; });
+                          
+       d3.selectAll(".segmentText").on("click", function (d) {
+           var tempId = d3.select(this).attr("Segid");
+           var flgVisible = d3.select("#" + tempId).attr("visible");
+
+           var newOpacity = flgVisible == 1 ? 0 : 1;
+           flgVisible = flgVisible == 1 ? 0 : 1;
+
+           // Hide or show the elements
+           d3.select("#" + tempId).style("opacity", newOpacity)
+               .attr("visible", flgVisible);
+
+       });
+        // Adding Tooltip
+       var divToolTip = d3.select("body").append("div")
+                   .attr("class", "tooltip")
+                   .style("opacity", 1e-6);
+
+       function mouseover() {
+           divToolTip.transition()
+               .duration(500)
+               .style("opacity", 1);
+       }
+       function mouseout() {
+           divToolTip.transition()
+               .duration(500)
+               .style("opacity", 1e-6);
+       }
+   }
+// Calling function
+fnDrawMultiLineChart(Data, "divChartTrends", "Revenue Data");
+</script>
+<!-- /Line chart -->
+
+<script>
+    $(function() {
+      $('input[name="daterange"]').daterangepicker({
+        opens: 'right'
+      }, function(start, end, label) {
+        console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+      });
+    });
+    </script>
+
+<script>
+      function showDropInfo() {
+         var sT = dropForm.dropSelect;
+         var pF = document.getElementById('pF');
+         var pS = document.getElementById('pS');
+         var pT = document.getElementById('pT');
+        //  pF.innerHTML = ('Selected option index: ' + sT.selectedIndex);
+        //  pS.innerHTML = ('Selected Date Range : ' + sT[sT.selectedIndex].value);
+         pS.innerHTML = ('Selected Time Period : '+'<br>' + sT[sT.selectedIndex].value);
+        //  pT.innerHTML = ('Selected text: ' + sT[sT.selectedIndex].text);
+      }
+</script>
+</body>
+
+</html>
