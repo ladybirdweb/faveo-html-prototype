@@ -17,12 +17,12 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
 
     <title>Document</title>
 
@@ -102,6 +102,39 @@ button, input, optgroup, select, textarea {
     border: 1px solid transparent;
 }
 
+.select ul li.option {
+  background-color: #DEDEDE;
+  box-shadow: 0px 1px 0 #DEDEDE, 0px -1px 0 #DEDEDE;
+  -webkit-box-shadow: 0px 1px 0 #DEDEDE, 0px -1px 0 #DEDEDE;
+  -moz-box-shadow: 0px 1px 0 #DEDEDE, 0px -1px 0 #DEDEDE;
+}
+
+.select ul li.option:hover {
+  background-color: #B8B8B8;
+}
+
+.select ul li.option {
+  z-index: 1;
+  padding: 5px;
+  display: none;
+  list-style: none;
+}
+
+.select ul li:first-child {
+  display: block;
+}
+
+.select ul li {
+  cursor: default;
+}
+
+body:not(.layout-fixed) .main-sidebar {
+    min-height: 102%;
+}
+
+#data2 {
+  display: none;
+}
 
         /* body { */
         /* font: 10px sans-serif; */
@@ -1297,7 +1330,7 @@ button, input, optgroup, select, textarea {
                                             <div class="col-md-4">
                                                 <label>Time Period : </label>
                                                 <form name="dropForm">
-                                                    <select class="form-select form-control" name="dropSelect" onchange="showDropInfo()" style="float: right;margin-left: 5px;">
+                                                    <select id="dateRangeSelector" class="form-select form-control" name="dropSelect" onchange="showDropInfo()" style="float: right;margin-left: 5px;">
                                                         <option>-Select-</option>
                                                         <option value="14-06-2023">Today</option>
                                                         <option value="13-06-2023 to 14-06-2023">Yesterday</option>
@@ -1311,35 +1344,53 @@ button, input, optgroup, select, textarea {
                                                         <option value="17-03-2023 to 14-06-2023">Last 90 days</option>
                                                         <option value="01-01-2023 to 14-06-2023">Last 6 months</option>
                                                         <option value="01-01-2023 to 14-06-2023">This year</option>
-                                                        <option>Date Range</option>
                                                         <option value="custom">Custom</option>
                                                     </select>
-                                                    <label style="display:none;">Select Date Range:
-                                                        <input />
-                                                    </label>
-                                                    
                                                 </form>
-                                            
-                                            
-                                                <br><br>
-                                                <p id="pF" hidden></p>
+                                                
+                                                  
+                                                <!-- <br><br> -->
+                                                <!-- <p id="pF" hidden></p>
                                                
                                                 <div>
                                                     <p id="pS"></p>
                                                 </div>
                                                
-                                                <p id="pT" hidden></p>
+                                                <p id="pT" hidden></p>  -->
                                             </div>
 
-                                            <div class="col-md-4">
-                                                <label>Custom Date range:</label>
-                                            <input class="form-control" type="text" name="daterange" value="Select date" />
+                                            <div class="col-md-4 mt-2">
+
+                                                <div id="dateRangePickerContainer" style="display: none;">
+                                                    <br>
+                                                    <input class="form-control" type="text" id="dateRangePicker">
+                                                  </div>
                                             </div>
+
+                                            <!-- <div class="col-md-4">
+                                                <label>Custom Date range:</label>
+                                            <input type="text" name="daterange" value="01/01/2023 - 01/15/2023" />
+                                            </div> -->
+
+                                            <!-- <select id="dateRangeSelector">
+                                                <option value="none">None</option>
+                                                <option value="custom">Custom</option>
+                                                <option value="lastWeek">Last Week</option>
+                                                <option value="lastMonth">Last Month</option>
+                                              </select> -->
+                                              
+                                              <!-- <div id="dateRangePickerContainer" style="display: none;">
+                                                <input type="text" id="dateRangePicker">
+                                              </div> -->
+                                              
+                                              
+                                              
+
                                         </div>
                                                 <!-- </div> -->
                                             </div>
                                             <div class="card-footer">
-                                                <button class="btnn"><i class="fa fa-check"></i> Apply</button>
+                                                <button class="btnn" id="Button1" value="Click" onclick="switchVisible();"><i class="fa fa-check"></i> Apply</button>
                                                 <button class="btnn"><i class="fas fa-code-branch"></i> Fork</button>
                                                 <button class="btnn"><i class="fa fa-undo"></i> Reset</button>
                                                 <button class="btnn-danger"><i class="fa fa-times"></i> Cancel</button>
@@ -1348,7 +1399,16 @@ button, input, optgroup, select, textarea {
                                     </div>
                                     <!-- /HIDDEN DIV -->
                                  
-                                 <div style="float: right;">
+
+                                    <!-- <div id="data1">Data 1</div> -->
+                                    <!-- <div id="data2">Data 2</div> -->
+                                    
+                                    <!-- <input id="Button1" type="button" value="Click" onclick="switchVisible();"/> -->
+
+
+                               <!-- DATA 1   -->
+                            <div id="data1">
+                                <div style="float: right;">
                                     <select id="select" name="cd-dropdown" class="btn btn-sm btn-default dropdown-toggle">
                                         <option value="-1" selected>Chart Type</option>
                                         <option value="1">View By Bar</option>
@@ -1358,11 +1418,8 @@ button, input, optgroup, select, textarea {
                                         </select>
                                        
                                     </div>
-                                    
-<br>
-                                  
-                               
-<br>
+<br><br>
+
                                     <div data-v-ff512214="" class="data-widget">
                                         <div data-v-fb5b0018="" data-v-ff512214="" class="row">
                                             <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12">
@@ -1372,7 +1429,7 @@ button, input, optgroup, select, textarea {
                                                     <div data-v-fb5b0018="" class="info-box"><!---->
                                                         <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip">
                                                             <span data-v-fb5b0018="" class="info-box-text">Total feedback requests sent</span>
-                                                            <span data-v-fb5b0018="" class="info-box-number">0</span>
+                                                            <span data-v-fb5b0018="" class="info-box-number">20</span>
                                                         </div>
                                                     </div>
                                                 </a>
@@ -1383,7 +1440,7 @@ button, input, optgroup, select, textarea {
                                                     <div data-v-fb5b0018="" class="info-box"><!---->
                                                         <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip"><span data-v-fb5b0018=""
                                                                 class="info-box-text">Total answered feedback requests</span><span data-v-fb5b0018=""
-                                                                class="info-box-number">0</span></div>
+                                                                class="info-box-number">20</span></div>
                                                     </div>
                                                 </a></div>
                                             <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12"><a data-v-fb5b0018=""
@@ -1401,7 +1458,7 @@ button, input, optgroup, select, textarea {
                                                     <div data-v-fb5b0018="" class="info-box"><!---->
                                                         <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip"><span data-v-fb5b0018=""
                                                                 class="info-box-text">Positive feedback received</span><span data-v-fb5b0018=""
-                                                                class="info-box-number">0</span></div>
+                                                                class="info-box-number">12</span></div>
                                                     </div>
                                                 </a></div>
                                             <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12"><a data-v-fb5b0018=""
@@ -1410,7 +1467,7 @@ button, input, optgroup, select, textarea {
                                                     <div data-v-fb5b0018="" class="info-box"><!---->
                                                         <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip"><span data-v-fb5b0018=""
                                                                 class="info-box-text">Neutral feedback received</span><span data-v-fb5b0018=""
-                                                                class="info-box-number">0</span></div>
+                                                                class="info-box-number">6</span></div>
                                                     </div>
                                                 </a></div>
                                             <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12"><a data-v-fb5b0018=""
@@ -1419,15 +1476,11 @@ button, input, optgroup, select, textarea {
                                                     <div data-v-fb5b0018="" class="info-box"><!---->
                                                         <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip"><span data-v-fb5b0018=""
                                                                 class="info-box-text">Negative feedback received</span><span data-v-fb5b0018=""
-                                                                class="info-box-number">0</span></div>
+                                                                class="info-box-number">2</span></div>
                                                     </div>
                                                 </a></div>
                                         </div>
                                     </div>
-                                    <!-- CHARTS -->
-                                        
-                                        
-                                    <!-- /CHARTS -->
 
                                         <div class="card card-light">
                                             <div class="card-header">
@@ -1438,19 +1491,19 @@ button, input, optgroup, select, textarea {
                                                     style="display: block; box-sizing: border-box; height: 300px; width: 902px; cursor: default;">
                                                 </canvas> -->
                                                 <div id="d1" class="pr-price"> 
-                                                    <!-- View By Bar -->
-                                                    <div class="divv" style="display: flex;margin-left: 10%;">
+                                                    View By Bar
+                                                    <!-- <div class="divv" style="display: flex;margin-left: 10%;">
                                                         <p><i class='fa fa-circle' style='color: rgb(44, 160, 44); font-size: 11px;'></i> 5 stars</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         <p><i class='fa fa-circle' style='color: rgb(31, 119, 180);'></i> 4 stars</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         <p><i class='fa fa-circle' style='color: rgb(148, 103, 189);'></i> 3 stars</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         <p><i class='fa fa-circle' style='color: rgb(255, 127, 14);'></i> 2 stars</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         <p><i class='fa fa-circle' style='color: rgb(214, 39, 40)'></i> 1 star</p>
-                                                      </div>
+                                                      </div> -->
                                                      <!-- </div> -->
                                                       <!-- <h1>Line Chart</h1>   -->
-                                                      <div style="overflow-x: scroll;" id="divChartTrends">
-                                                        </div>
-                                                        <div class="card card-light mt-3">
+                                                      <!-- <div style="overflow-x: scroll;" id="divChartTrends">
+                                                        </div> -->
+                                                        <!-- <div class="card card-light mt-3">
                                                             <div class="card-header">
                                                              <h3 class="card-title">Ratings Table</h3>
                                                             </div>
@@ -1664,19 +1717,344 @@ button, input, optgroup, select, textarea {
                                                                      <td>4</td>
                                                                      <td>0</td>
                                                                  </tr>
-                                                                 <!-- and so on... -->
                                                              </tbody>
                                                          </table>
                                                             </div>
-                                                         </div>
+                                                         </div> -->
                                                 </div>
                                                 <div id="d2" class="pr-price">View By Horizontal Bar</div>
                                                 <div id="d3" class="pr-price">View By Pie</div>
                                                 <div id="d4" class="pr-price">View By Doughnut</div>
                                             </div>
                                         </div>
+                            </div>
+                            <!--/ DATA 1   -->
 
-                               </div>
+                            <!-- DATA 2   -->
+                            <div id="data2">
+                                data2
+
+                                <div style="float: right;">
+                                    <select id="selectt" name="cd-dropdown" class="btn btn-sm btn-default dropdown-toggle">
+                                        <option value="-1" selected>Chart Type</option>
+                                        <option value="1">View By Bar</option>
+                                        <option value="2">View By Horizontal Bar</option>
+                                        <option value="3">View By Pie </option>
+                                        <option value="4">View By Doughnut </option>
+                                        </select>
+                                </div>        
+<br><br>
+                                <div data-v-ff512214="" class="data-widget">
+                                    <div data-v-fb5b0018="" data-v-ff512214="" class="row">
+                                        <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12">
+                                            <a data-v-fb5b0018=""
+                                                href=""
+                                                class="text-dark" rel="noopener" id="dark-text" style="cursor: pointer;">
+                                                <div data-v-fb5b0018="" class="info-box"><!---->
+                                                    <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip">
+                                                        <span data-v-fb5b0018="" class="info-box-text">Total feedback requests sent</span>
+                                                        <span data-v-fb5b0018="" class="info-box-number">6</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12"><a data-v-fb5b0018=""
+                                                href=""
+                                                class="text-dark" rel="noopener" id="dark-text" style="cursor: pointer;">
+                                                <div data-v-fb5b0018="" class="info-box"><!---->
+                                                    <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip"><span data-v-fb5b0018=""
+                                                            class="info-box-text">Total answered feedback requests</span><span data-v-fb5b0018=""
+                                                            class="info-box-number">6</span></div>
+                                                </div>
+                                            </a></div>
+                                        <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12"><a data-v-fb5b0018=""
+                                                href=""
+                                                class="text-dark" rel="noopener" id="dark-text" style="cursor: pointer;">
+                                                <div data-v-fb5b0018="" class="info-box"><!---->
+                                                    <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip"><span data-v-fb5b0018=""
+                                                            class="info-box-text">Total unanswered feedback requests</span><span data-v-fb5b0018=""
+                                                            class="info-box-number">0</span></div>
+                                                </div>
+                                            </a></div>
+                                        <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12"><a data-v-fb5b0018=""
+                                                href=""
+                                                class="text-dark" rel="noopener" id="dark-text" style="cursor: pointer;">
+                                                <div data-v-fb5b0018="" class="info-box"><!---->
+                                                    <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip"><span data-v-fb5b0018=""
+                                                            class="info-box-text">Positive feedback received</span><span data-v-fb5b0018=""
+                                                            class="info-box-number">5</span></div>
+                                                </div>
+                                            </a></div>
+                                        <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12"><a data-v-fb5b0018=""
+                                                href=""
+                                                class="text-dark" rel="noopener" id="dark-text" style="cursor: pointer;">
+                                                <div data-v-fb5b0018="" class="info-box"><!---->
+                                                    <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip"><span data-v-fb5b0018=""
+                                                            class="info-box-text">Neutral feedback received</span><span data-v-fb5b0018=""
+                                                            class="info-box-number">1</span></div>
+                                                </div>
+                                            </a></div>
+                                        <div data-v-fb5b0018="" class="col-md-4 col-sm-6 col-xs-12"><a data-v-fb5b0018=""
+                                                href=""
+                                                class="text-dark" rel="noopener" id="dark-text" style="cursor: pointer;">
+                                                <div data-v-fb5b0018="" class="info-box"><!---->
+                                                    <div data-v-fb5b0018="" class="info-box-content v-popper--has-tooltip"><span data-v-fb5b0018=""
+                                                            class="info-box-text">Negative feedback received</span><span data-v-fb5b0018=""
+                                                            class="info-box-number">0</span></div>
+                                                </div>
+                                            </a></div>
+                                    </div>
+                                </div>
+
+                                    <div class="card card-light">
+                                        <div class="card-header">
+                                            <h3 class="card-title">OverAll Satisfaction </h3>
+                                        </div>
+                                        <div class="card-body" style="min-height: 300px;">
+                                            <!-- <canvas id="overall-satisfaction" width="1804" height="600" 
+                                                style="display: block; box-sizing: border-box; height: 300px; width: 902px; cursor: default;">
+                                            </canvas> -->
+                                            <div id="c1" class="pr-price"> 
+                                                View By Bar
+                                                <!-- <div class="divv" style="display: flex;margin-left: 10%;">
+                                                    <p><i class='fa fa-circle' style='color: rgb(44, 160, 44); font-size: 11px;'></i> 5 stars</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <p><i class='fa fa-circle' style='color: rgb(31, 119, 180);'></i> 4 stars</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <p><i class='fa fa-circle' style='color: rgb(148, 103, 189);'></i> 3 stars</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <p><i class='fa fa-circle' style='color: rgb(255, 127, 14);'></i> 2 stars</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <p><i class='fa fa-circle' style='color: rgb(214, 39, 40)'></i> 1 star</p>
+                                                  </div> -->
+                                                 <!-- </div> -->
+                                                  <!-- <h1>Line Chart</h1>   -->
+                                                  <!-- <div style="overflow-x: scroll;" id="divChartTrends">
+                                                    </div> -->
+                                                    <!-- <div class="card card-light mt-3">
+                                                        <div class="card-header">
+                                                         <h3 class="card-title">Ratings Table</h3>
+                                                        </div>
+                                                        <div class="card-body">
+                                         
+                                                       <table class="styled-table table-responsive">
+                                                         <thead>
+                                                             <tr>
+                                                                 <th>Stars</th>
+                                                                 <th>1 may</th>
+                                                                 <th>2 may</th>
+                                                                 <th>3 may</th>
+                                                                 <th>4 may</th>
+                                                                 <th>5 may</th>
+                                                                 <th>6 may</th>
+                                                                 <th>7 may</th>
+                                                                 <th>8 may</th>
+                                                                 <th>9 may</th>
+                                                                 <th>10 may</th>
+                                                                 <th>11 may</th>
+                                                                 <th>12 may</th>
+                                                                 <th>13 may</th>
+                                                                 <th>14 may</th>
+                                                                 <th>15 may</th>
+                                                                 <th>16 may</th>
+                                                                 <th>17 may</th>
+                                                                 <th>18 may</th>
+                                                                 <th>19 may</th>
+                                                                 <th>20 may</th>
+                                                                 <th>21 may</th>
+                                                                 <th>22 may</th>
+                                                                 <th>23 may</th>
+                                                                 <th>24 may</th>
+                                                                 <th>25 may</th>
+                                                                 <th>26 may</th>
+                                                                 <th>27 may</th>
+                                                                 <th>28 may</th>
+                                                                 <th>29 may</th>
+                                                                 <th>30 may</th>
+                                                                 <th>31 may</th>
+                                                             </tr>
+                                                         </thead>
+                                                         <tbody>
+                                                             <tr class="active-row">
+                                                                 <td>5 Stars</td>
+                                                                 <td>2</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>1</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>3</td>
+                                                                 <td>0</td>
+                                                                 <td>1</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>4</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>1</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>3</td>
+                                                                 <td>0</td>
+                                                                 <td>1</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>4</td>
+                                                                 <td>0</td>
+                                                             </tr>
+                                                             <tr>
+                                                               <td>4 Stars</td>
+                                                               <td>0</td>
+                                                               <td>1</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>2</td>
+                                                               <td>0</td>
+                                                               <td>1</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>4</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>1</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>3</td>
+                                                                 <td>0</td>
+                                                                 <td>1</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>4</td>
+                                                                 <td>0</td>
+                                                             </tr>
+                                                             <tr>
+                                                               <td>3 Stars</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>3</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>1</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>2</td>
+                                                               <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>1</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>3</td>
+                                                                 <td>0</td>
+                                                                 <td>1</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>4</td>
+                                                                 <td>0</td>
+                                                             </tr>
+                                                             <tr>
+                                                               <td>2 Stars</td>
+                                                               <td>1</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>2</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>2</td>
+                                                               <td>1</td>
+                                                               <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>1</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>3</td>
+                                                                 <td>0</td>
+                                                                 <td>1</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>4</td>
+                                                                 <td>0</td>
+                                                             </tr>
+                                                             <tr>
+                                                               <td>1 Star</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>2</td>
+                                                               <td>0</td>
+                                                               <td>2</td>
+                                                               <td>1</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>1</td>
+                                                               <td>2</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                               <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>1</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>3</td>
+                                                                 <td>0</td>
+                                                                 <td>1</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>0</td>
+                                                                 <td>4</td>
+                                                                 <td>0</td>
+                                                             </tr>
+                                                         </tbody>
+                                                     </table>
+                                                        </div>
+                                                     </div> -->
+                                            </div>
+                                            <div id="c2" class="pr-price">View By Horizontal Bar</div>
+                                            <div id="c3" class="pr-price">View By Pie</div>
+                                            <div id="c4" class="pr-price">View By Doughnut</div>
+                                        </div>
+                                    </div>
+                            </div>
+                             <!-- DATA 2   -->
+                            
+                            </div>
 
                             </div>
 
@@ -1931,6 +2309,18 @@ button, input, optgroup, select, textarea {
 });
     </script>
 
+<script>
+    $(function () {
+$('.pr-price').hide();
+$('#c1').show();
+
+$('#selectt').on("change",function () {
+$('.pr-price').hide();
+$('#c'+$(this).val()).show();
+}).val("-1");
+});
+</script>
+
     <!-- <script>
 window.onload = function() {
   const canvas = document.getElementById("overall-satisfaction");
@@ -2146,7 +2536,7 @@ fnDrawMultiLineChart(Data, "divChartTrends", "Revenue Data");
 <script>
     $(function() {
       $('input[name="daterange"]').daterangepicker({
-        opens: 'right'
+        opens: 'left'
       }, function(start, end, label) {
         console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
       });
@@ -2159,12 +2549,61 @@ fnDrawMultiLineChart(Data, "divChartTrends", "Revenue Data");
          var pF = document.getElementById('pF');
          var pS = document.getElementById('pS');
          var pT = document.getElementById('pT');
-        //  pF.innerHTML = ('Selected option index: ' + sT.selectedIndex);
-        //  pS.innerHTML = ('Selected Date Range : ' + sT[sT.selectedIndex].value);
+        
+         pF.innerHTML = ('Selected option index: ' + sT.selectedIndex);
+         pS.innerHTML = ('Selected Date Range : ' + sT[sT.selectedIndex].value);
          pS.innerHTML = ('Selected Time Period : '+'<br>' + sT[sT.selectedIndex].value);
-        //  pT.innerHTML = ('Selected text: ' + sT[sT.selectedIndex].text);
+         pT.innerHTML = ('Selected text: ' + sT[sT.selectedIndex].text);
       }
 </script>
+
+<script>
+     $('.select ul li.option').click(function() {
+    $(this).siblings().addBack().children().remove();
+    var a = $(this).siblings().toggle();
+    $(this).siblings().append('<img src="https://cdn4.iconfinder.com/data/icons/6x16-free-application-icons/16/Delete.png" style="float:right; width:12px; height:12px;">');
+    $(this).parent().prepend(this);
+  })
+</script>
+
+<script>
+    // Get the select element and date range picker container
+var dateRangeSelector = document.getElementById("dateRangeSelector");
+var dateRangePickerContainer = document.getElementById("dateRangePickerContainer");
+
+// Add an event listener to the select element
+dateRangeSelector.addEventListener("change", function() {
+  var selectedOption = this.value;
+  
+  // Hide the date range picker container by default
+  dateRangePickerContainer.style.display = "none";
+  
+  // Show the date range picker container based on the selected option
+  if (selectedOption === "custom") {
+    dateRangePickerContainer.style.display = "block";
+    // Initialize the date range picker
+    $('#dateRangePicker').daterangepicker();
+  }
+});
+
+</script>
+
+<script>
+    function switchVisible() {
+            if (document.getElementById('data1')) {
+
+                if (document.getElementById('data1').style.display == 'none') {
+                    document.getElementById('data1').style.display = 'block';
+                    document.getElementById('data2').style.display = 'none';
+                }
+                else {
+                    document.getElementById('data1').style.display = 'none';
+                    document.getElementById('data2').style.display = 'block';
+                }
+            }
+}
+</script>
+
 </body>
 
 </html>
