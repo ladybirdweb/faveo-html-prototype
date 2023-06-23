@@ -41,6 +41,65 @@ body {
     transition: margin-left .3s ease-in-out,width .3s ease-in-out;
     width: 250px;
 }
+/* .div2{
+    width: auto;
+} */
+
+#red {
+     width: 49%;
+     /* border: 5px solid red; */
+     float: left
+ }
+ .blue {
+    margin-left: 2%;
+     float: left;
+     /* border: 5px solid #00F; */
+     width: 49%;
+ }
+.wide { width:100%;
+margin-left: -2px;
+}
+  
+/* element.style {
+    margin-top: -5px;
+} */
+.card-light:not(.card-outline)>.card-header {
+    height: 44px;
+    padding-top: 6px;
+}
+#button{
+    /* color: rgb(4, 87, 142); */
+    /* font-weight: bold; */
+    background-color: rgb(235, 235, 235);
+    height: 35px;
+    width: 100px;
+    padding-top:4px;
+    padding-left: 9px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    color: #000;
+}
+
+.card-title {
+    margin-top: 10px;
+}
+@media only screen and (max-width: 600px) {
+  /* #name {
+    margin-top: 20px;
+    margin-right: -100px;
+  } */
+  
+element.style {
+    width: 101px;
+    height: 35px;
+    float: right;
+    margin-right: -101px;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 5px;
+    margin-top: 40px;
+}
+}
+
     </style>
 </head>
 
@@ -143,8 +202,10 @@ body {
                                   <div class="card card-light">
                                     <div class="card-header">
                                       <h3 class="card-title">Article - 1</h3>
-                                      <select id="name" class="form-select" style="width: 120px; height: 35px; float: right; margin-right: 25px; border: 1px solid rgb(201, 201, 201);border-radius: 5px;">
-                                        <option value="a">English</option>
+                                      <a id="button" class="button_style" style="cursor: pointer;float: right;">Hide Master</a>
+
+                                      <select id="name" class="form-select" style="width: 114px; height: 35px; float: right; margin-right: 10px; border: 1px solid rgb(201, 201, 201);border-radius: 5px;">
+                                        <!-- <option value="a">English</option> -->
                                         <option value="b">Kannada</option>
                                         <option value="c">Hindi</option>
                                         <option value="d">French</option>
@@ -152,6 +213,7 @@ body {
                                         <option value="f">German</option>
                                         <option value="e">Italian</option> -->
                                     </select>
+                                   
                                     </div>
                                     <div class="card-body">
                                            <!-- English -->
@@ -248,15 +310,150 @@ body {
                                            
                                         </div>
 
+
                                         <div id="b" class="data">
                                             <!-- Kannada -->
+                                            <!-- <button onclick="myFunctionn()">Hide master</button> -->
 
-                                            <div class="row">
-                                                <div class="col-md-6">
+                                            <!-- <input 
+                                                id="curtainInput" 
+                                                type="button" 
+                                                value="Hide master" onclick="myFunctionn()" /> -->
+
+                                               <!-- <a id="button" class="button_style" style="cursor: pointer;text-decoration: underline; float: right;">Hide Master</a> -->
+                                                <!-- <br/> -->
+                                                <div id="red">
+                                                    <label for="">Name: </label>
+                                                    <input class="form-control" value="Name - 1"/>
+    
+                                                    <label for="" class="mt-3">Category: </label>
+                                                    <input class="form-control" value="Category - 1"/>
+
+                                                    <div class="form-group  mt-2">
+                                                        <label>Author: </label>
+                                                        <select class="form-control select2bs4" style="width: 100%;">
+                                                          <option disabled>Select Author</option>
+                                                          <option>a</option>
+                                                          <option>b</option>
+                                                          <option>c</option>
+                                                        </select>
+                                                      </div>
+
+                                                      <div class="form-group">
+                                                        <label>Tags: </label>
+                                                        <select class="form-control select2bs4" style="width: 100%;">
+                                                          <option disabled>Select Tags</option>
+                                                          <option>a</option>
+                                                          <option>b</option>
+                                                          <option>c</option>
+                                                        </select>
+                                                      </div>
+
+                                                      <label for="">Summary: </label>
+                                                    <input class="form-control" value="Summary - 1"/>
+
+                                                    <label class="mt-3">Description: </label>
+                                                    <textarea class="desc" placeholder="Write a Note!">Content of the article</textarea>
+
+                                                    <div class="card card-light mt-3">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title">SEO</h3>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <label for="">Seo Title:</label>
+                                                                <input class="form-control" value="Title - 1" />
+                                                                
+                                                                <label class="mt-3" for="">Description: </label>
+                                                                <input class="form-control" value="Description - 1" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+
+                                                </div>
+
+                                                <div class="blue">
+                                                    <label for="">Name: </label>
+                                                    <input class="form-control" value="ಲೇಖನ - 1"/>
+
+                                                    <label for="" class="mt-3">Category: </label>
+                                                    <input class="form-control" value="ವರ್ಗ - 1"/>
+
+                                                    <div class="form-group mt-2">
+                                                        <label>Author: </label>
+                                                        <select class="form-control select2bs4" style="width: 100%;">
+                                                          <option disabled>Select Author</option>
+                                                          <option>a</option>
+                                                          <option>b</option>
+                                                          <option>c</option>
+                                                        </select>
+                                                      </div>
+
+                                                      <div class="form-group">
+                                                        <label>Tags: </label>
+                                                        <select class="form-control select2bs4" style="width: 100%;">
+                                                          <option disabled>Select Tags</option>
+                                                          <option>a</option>
+                                                          <option>b</option>
+                                                          <option>c</option>
+                                                        </select>
+                                                      </div>
+
+                                                      <label for="">Summary: </label>
+                                                    <input class="form-control" value="ಸಾರಾಂಶ - 1"/>
+
+                                                    <label class="mt-3">Description: </label>
+                                                    <textarea class="desc" placeholder="Write a Note!"> ಲೇಖನದ ವಿಷಯ</textarea>
+
+                                                    <div class="card card-light mt-3">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title">SEO</h3>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <label for="">Seo Title:</label>
+                                                                <input class="form-control" value="ಲೇಖನ - 1" />
+                                                                
+                                                                <label class="mt-3" for="">Description: </label>
+                                                                <input class="form-control" value="ವರ್ಗ - 1" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                        
+                                                </div>
+
+                                                
+                                        <!-- <div class="row ">
+                                            <div id="myDIVV" class="col-md-6">
+                                                <label for="">Name: </label>
+                                                <p>Name - 1</p>
+
+                                                <label for="" class="mt-3">Category: </label>
+                                                <p>Category - 1</p>
+                                            </div>
+                                            
+                                            <div class="div2 col-md-6">
+                                                <label for="">Name: </label>
+                                                    <input class="form-control" value="ಲೇಖನ - 1"/>
+
+                                                    <label for="" class="mt-3">Category: </label>
+                                                    <input class="form-control" value="ವರ್ಗ - 1"/>
+                                            </div>
+                                        </div> -->
+
+
+
+
+                                            <!-- <div class="row">
+                                                <div class="col-md-6 mt-5">
                                                     <label for="">Name: </label>
                                                     <input class="form-control" value="Name - 1"/>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-6 mt-5">
                                                     <label for="">Name: </label>
                                                     <input class="form-control" value="ಲೇಖನ - 1"/>
                                                 </div>
@@ -271,8 +468,8 @@ body {
                                                     <label for="" class="mt-3">Category: </label>
                                                     <input class="form-control" value="ವರ್ಗ - 1"/>
                                                 </div>
-                                            </div>
-                                            <div class="row mt-3">
+                                            </div> -->
+                                            <!-- <div class="row mt-3">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label>Author: </label>
@@ -295,8 +492,8 @@ body {
                                                         </select>
                                                       </div>
                                                 </div>
-                                            </div>
-                                            <div class="row mt-1">
+                                            </div> -->
+                                            <!-- <div class="row mt-1">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label>Tags: </label>
@@ -319,8 +516,8 @@ body {
                                                         </select>
                                                       </div>
                                                 </div>
-                                            </div>
-                                            <div class="row ">
+                                            </div> -->
+                                            <!-- <div class="row ">
                                                 <div class="col-md-6">
                                                     <label for="">Summary: </label>
                                                     <input class="form-control" value="Summary - 1"/>
@@ -329,8 +526,8 @@ body {
                                                     <label for="">Summary: </label>
                                                     <input class="form-control" value="ಸಾರಾಂಶ - 1"/>
                                                 </div>
-                                            </div>
-                                            <div class="row">
+                                            </div> -->
+                                            <!-- <div class="row">
                                                 <div class="col-md-6">
                                                     <label class="mt-3">Description: </label>
                                                     <textarea class="desc" placeholder="Write a Note!">Content of the article</textarea>
@@ -339,9 +536,49 @@ body {
                                                     <label class="mt-3">Description: </label>
                                                     <textarea class="desc" placeholder="Write a Note!"> ಲೇಖನದ ವಿಷಯ</textarea>
                                                 </div>
-                                            </div>
+                                            </div> -->
 
-                                            <div class="row mt-4">
+                                            
+                                            <!-- <div class="row">
+                                                <div class="col-md-6">
+                                                <div class="card card-light mt-3">
+                                                    <div class="card-header">
+                                                        <h3 class="card-title">SEO</h3>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                            <input class="form-control" value="Title - 1" />
+                                                            <p>Title - 1</p>
+                                                            
+                                                            <label class="mt-3" for="">Description: </label>
+                                                            <input class="form-control" value="Description - 1" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                <div class="card card-light mt-3">
+                                                    <div class="card-header">
+                                                        <h3 class="card-title">SEO</h3>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <label for="">Seo Title:</label>
+                                                            <input class="form-control" value="ಲೇಖನ - 1" />
+                                                            
+                                                            <label class="mt-3" for="">Description: </label>
+                                                            <input class="form-control" value="ವರ್ಗ - 1" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+<br>
+                                            <div class="row col-md-12 mt-4">
                                                 <div class="col-md-4">
                                                     <div class="form-group ">
                                                         <label>Visibility: </label>
@@ -372,44 +609,6 @@ body {
                                                 </div>
                                                
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                <div class="card card-light mt-3">
-                                                    <div class="card-header">
-                                                        <h3 class="card-title">SEO</h3>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <label for="">Seo Title:</label>
-                                                            <input class="form-control" value="Title - 1" />
-                                                            
-                                                            <label class="mt-3" for="">Description: </label>
-                                                            <input class="form-control" value="Description - 1" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                <div class="card card-light mt-3">
-                                                    <div class="card-header">
-                                                        <h3 class="card-title">SEO</h3>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <label for="">Seo Title:</label>
-                                                            <input class="form-control" value="ಲೇಖನ - 1" />
-                                                            
-                                                            <label class="mt-3" for="">Description: </label>
-                                                            <input class="form-control" value="ವರ್ಗ - 1" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                             
                                             <div class="card-footer">
                                                 <div class="btn btn-info" onclick="closeSearchBy()">
@@ -419,13 +618,15 @@ body {
 
                                         </div>
 
+
+                                   <!-- Hindi -->
                                         <div id="c" class="data">
-                                            <!-- Hindi -->
 
                                          <div class="row">
                                                 <div class="col-md-6">
                                                     <label for="">Name: </label>
                                                     <input class="form-control" value="Name - 1"/>
+                                                   
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label for="">Name: </label>
@@ -512,36 +713,6 @@ body {
                                                 </div>
                                             </div>
 
-                                            <div class="row mt-4">
-                                                <div class="col-md-4">
-                                                    <div class="form-group ">
-                                                        <label>Visibility: </label>
-                                                        <select class="form-control select2bs4" style="width: 100%;">
-                                                          <option disabled>Select Visibility</option>
-                                                          <option>All Users</option>
-                                                          <option>Logged in Users</option>
-                                                          <option>Agents</option>
-                                                          <option>Organization Members</option>
-                                                        </select>
-                                                      </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <label for="">Publish immediately: </label>
-                                                <input class="form-control" type="date"  />
-                                                </div>
-                                                <div class="col-md-4">
-                                                        <label for="">Status: </label>
-                                                        <form>
-                                                        <div>
-                                                            <input type="radio" name="radio" checked="checked" id="foo5" placeholder="Application name" />
-                                                            <label for="foo5">Published</label>
-                                                            <input style="margin-left: 30px;" type="radio" name="radio" id="foo6" placeholder="Application name" />
-                                                            <label for="foo6">Draft</label>
-                                                        </form>
-                                                        </div>
-                                                </div>
-                                               
-                                            </div>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                 <div class="card card-light mt-3">
@@ -580,6 +751,36 @@ body {
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <div class="row mt-4">
+                                                <div class="col-md-4">
+                                                    <div class="form-group ">
+                                                        <label>Visibility: </label>
+                                                        <select class="form-control select2bs4" style="width: 100%;">
+                                                          <option disabled>Select Visibility</option>
+                                                          <option>All Users</option>
+                                                          <option>Logged in Users</option>
+                                                          <option>Agents</option>
+                                                          <option>Organization Members</option>
+                                                        </select>
+                                                      </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="">Publish immediately: </label>
+                                                <input class="form-control" type="date"  />
+                                                </div>
+                                                <div class="col-md-4">
+                                                        <label for="">Status: </label>
+                                                        <form>
+                                                        <div>
+                                                            <input type="radio" name="radio" checked="checked" id="foo5" placeholder="Application name" />
+                                                            <label for="foo5">Published</label>
+                                                            <input style="margin-left: 30px;" type="radio" name="radio" id="foo6" placeholder="Application name" />
+                                                            <label for="foo6">Draft</label>
+                                                        </form>
+                                                        </div>
+                                                </div>
+                                               
                                             
                                             <div class="card-footer">
                                                 <div class="btn btn-info" onclick="closeSearchBy()">
@@ -587,6 +788,7 @@ body {
                                                   </div>
                                                 </div>                                       
                                         </div>
+                                    </div>
 
                                         <div id="d" class="data">
                                             <div class="row">
@@ -679,36 +881,7 @@ body {
                                                 </div>
                                             </div>
 
-                                            <div class="row mt-4">
-                                                <div class="col-md-4">
-                                                    <div class="form-group ">
-                                                        <label>Visibility: </label>
-                                                        <select class="form-control select2bs4" style="width: 100%;">
-                                                          <option disabled>Select Visibility</option>
-                                                          <option>All Users</option>
-                                                          <option>Logged in Users</option>
-                                                          <option>Agents</option>
-                                                          <option>Organization Members</option>
-                                                        </select>
-                                                      </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <label for="">Publish immediately: </label>
-                                                <input class="form-control" type="date"  />
-                                                </div>
-                                                <div class="col-md-4">
-                                                        <label for="">Status: </label>
-                                                        <div>
-                                                            <form>
-                                                            <input type="radio" name="radio" checked="checked" id="foo7" placeholder="Application name" />
-                                                            <label for="foo7">Published</label>
-                                                            <input style="margin-left: 30px;" type="radio" name="radio" id="foo8" placeholder="Application name" />
-                                                            <label for="foo8">Draft</label>
-                                                        </form>
-                                                        </div>
-                                                </div>
-                                               
-                                            </div>
+                                            
                                             <div class="row">
                                                 <div class="col-md-6">
                                                 <div class="card card-light mt-3">
@@ -748,17 +921,44 @@ body {
                                                 </div>
                                             </div>
                                             
+                                            <div class="row mt-4">
+                                                <div class="col-md-4">
+                                                    <div class="form-group ">
+                                                        <label>Visibility: </label>
+                                                        <select class="form-control select2bs4" style="width: 100%;">
+                                                          <option disabled>Select Visibility</option>
+                                                          <option>All Users</option>
+                                                          <option>Logged in Users</option>
+                                                          <option>Agents</option>
+                                                          <option>Organization Members</option>
+                                                        </select>
+                                                      </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="">Publish immediately: </label>
+                                                <input class="form-control" type="date"  />
+                                                </div>
+                                                <div class="col-md-4">
+                                                        <label for="">Status: </label>
+                                                        <div>
+                                                            <form>
+                                                            <input type="radio" name="radio" checked="checked" id="foo7" placeholder="Application name" />
+                                                            <label for="foo7">Published</label>
+                                                            <input style="margin-left: 30px;" type="radio" name="radio" id="foo8" placeholder="Application name" />
+                                                            <label for="foo8">Draft</label>
+                                                        </form>
+                                                        </div>
+                                                </div>
+                                               
+                                            </div>
+
                                             <div class="card-footer">
                                                 <div class="btn btn-info" onclick="closeSearchBy()">
                                                     <i class="fas fa-file"></i> Update
                                                   </div>
                                                 </div>
                                         </div>
-                                        
-                                      
 
-                                       
-                                        
                                   </div>
                                   <!-- <div class="card-footer">
                                     <div class="btn btn-info" onclick="closeSearchBy()">
@@ -906,5 +1106,43 @@ function allowUncheck(e) {
   });
 }
 </script>
+
+<script>
+    function myFunctionn() {
+      var x = document.getElementById("myDIVV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
+
+    <!-- <script>
+        document.getElementById("curtainInput").addEventListener(
+  "click",
+  function(event) {
+    if (event.target.value === "Hide master") {
+      event.target.value = "show master";
+    } else {
+      event.target.value = "Hide master";
+    }
+  },
+  false
+);
+    </script> -->
+
+    <script>
+        $(function() {
+   $("#button").click(function(){
+       var $red = $("#red"),hiding=$red.is(":visible"), 
+           text = hiding?'Show Master':'Hide Master';
+       console.log(hiding,text)
+       $(this).text(text);
+       $red.slideToggle(0.7);
+       $red.next(".blue").toggleClass("wide");
+  });
+});
+    </script>
 </body>
 </html>

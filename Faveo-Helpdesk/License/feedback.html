@@ -136,49 +136,10 @@ body:not(.layout-fixed) .main-sidebar {
   display: none;
 }
 
-        /* body { */
-        /* font: 10px sans-serif; */
-        /* overflow-x: scroll; */
-        /* } */
-        /* li{
-  font: 15px sans-serif;
-} */
+.navbar{
+    padding:0.2rem 0.2rem;
+}
 
-        /* .table-bordered {
-      border: 1px solid #ffffff;
-    } */
-        /* 
-    table.table-bordered.dataTable {
-      border-left: 0.5px solid rgb(237, 230, 230);
-    } */
-
-        /* table.dataTable {
-      clear: both;
-      margin-top: 6px !important;
-      margin-bottom: 6px !important;
-      max-width: none !important;
-      border-collapse: 0 !important;
-      border-spacing: 0;
-    } */
-
-        /* .table thead th {
-      border-bottom: 1px solid #dee2e6;
-
-    } */
-
-        /* .paginate_button {
-      font-size: 14px;
-    } */
-
-        /* .paginate_button span a{
-        border: none;
-      } */
-
-        /* table.dataTable>thead>tr>th:not(.sorting_disabled),
-    table.dataTable>thead>tr>td:not(.sorting_disabled) {
-      padding-right: 80px;
-      font-size: 14px;
-    } */
 
 
         /* TABLE */
@@ -1294,7 +1255,9 @@ body:not(.layout-fixed) .main-sidebar {
                                     <h3 class="card-title">Feedback Rating Analysis </h3>
 
                                     <div style="float: right;">
-                                        <i class="fa fa-filter" id="icon"></i>
+                                        <!-- <button id="downloadButton">Download Excel</button> -->
+                                         <i class="fa fa-download" id="downloadButton" style="cursor: pointer; margin-right: 10px;" title="Export Excel"></i>
+                                        <i class="fa fa-filter" id="icon" style="font-size: 15px;" title="Apply Filters"></i>
                                     </div>
 
                                 </div>
@@ -1314,16 +1277,33 @@ body:not(.layout-fixed) .main-sidebar {
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <label>Agent:</label>
-                                                        <input class="form-control" />
+                                                        <!-- <input class="form-control" /> -->
+                                                        <select class="form-control form-select">
+                                                            <option>-Select-</option>
+                                                            <option>abc</option>
+                                                            <option>def</option>
+                                                            <option>ghi</option>
+                                                        </select>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <label>Team:</label>
-                                                        <input class="form-control" />
+                                                        <!-- <input class="form-control" /> -->
+                                                        <select class="form-control form-select">
+                                                            <option>-Select-</option>
+                                                            <option>pqr</option>
+                                                            <option>stu</option>
+                                                            <option>xyz</option>
+                                                        </select>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <label>Is Answered:</label>
-                                                        <input class="form-control" />
+                                                        <select class="form-control form-select">
+                                                            <option>-Select-</option>
+                                                            <option>Yes</option>
+                                                            <option>No</option>
+                                                        </select>
                                                     </div>
+                                                    
                                                 </div>
 
                                                 <div class="row  mt-3">
@@ -1732,7 +1712,7 @@ body:not(.layout-fixed) .main-sidebar {
 
                             <!-- DATA 2   -->
                             <div id="data2">
-                                data2
+                                <!-- data2 -->
 
                                 <div style="float: right;">
                                     <select id="selectt" name="cd-dropdown" class="btn btn-sm btn-default dropdown-toggle">
@@ -2602,6 +2582,31 @@ dateRangeSelector.addEventListener("change", function() {
                 }
             }
 }
+</script>
+
+<script>
+    function downloadExcel() {
+  // Create a data object for the Excel content
+  var excelContent = "data:application/vnd.ms-excel;charset=utf-8," + encodeURIComponent("Excel content goes here");
+
+  // Create a link element
+  var linkElement = document.createElement('a');
+  linkElement.href = excelContent;
+  linkElement.download = 'example.xlsx'; // Specify the file name
+
+  // Append the link element to the document
+  document.body.appendChild(linkElement);
+
+  // Trigger the click event on the link element
+  linkElement.click();
+
+  // Remove the link element from the document
+  document.body.removeChild(linkElement);
+}
+
+// Attach the downloadExcel function to the button click event
+document.getElementById('downloadButton').addEventListener('click', downloadExcel);
+
 </script>
 
 </body>
