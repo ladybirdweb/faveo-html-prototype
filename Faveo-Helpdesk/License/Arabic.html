@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Faveo</title>
+     <!-- DataTables -->
+     <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"> 
+
+    <link href="https://support.faveohelpdesk.com/themes/default/common/images/favicon.ico" rel="shortcut icon">
+
+     <!-- Select2 -->
+  <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+    
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <style>
+.tooltip{position:absolute;z-index:1070;display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;
+font-style:normal;font-weight:400;line-height:1.42857143;text-align:left;text-align:start;text-decoration:none;
+text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;word-wrap:normal;
+white-space:normal;filter:alpha(opacity=0);opacity:0;line-break:auto}
+.tooltip.in{filter:alpha(opacity=90);opacity:.9}
+.tooltip.top{padding:5px 0;margin-top:-3px}
+.tooltip.right{padding:0 5px;margin-left:3px}
+.tooltip.bottom{padding:5px 0;margin-top:3px}
+.tooltip.left{padding:0 5px;margin-left:-3px}
+.tooltip-inner{max-width:200px;padding:3px 8px;color:#fff;text-align:center;background-color:#000;border-radius:4px}
+.tooltip-arrow{position:absolute;width:0;height:0;border-color:transparent;border-style:solid}
+.tooltip.top .tooltip-arrow{bottom:0;left:50%;margin-left:-5px;border-width:5px 5px 0;border-top-color:#000}
+.tooltip.top-left .tooltip-arrow{right:5px;bottom:0;margin-bottom:-5px;border-width:5px 5px 0;border-top-color:#000}
+.tooltip.top-right .tooltip-arrow{bottom:0;left:5px;margin-bottom:-5px;border-width:5px 5px 0;border-top-color:#000}
+.tooltip.right .tooltip-arrow{top:50%;left:0;margin-top:-5px;border-width:5px 5px 5px 0;border-right-color:#000}
+.tooltip.left .tooltip-arrow{top:50%;right:0;margin-top:-5px;border-width:5px 0 5px 5px;border-left-color:#000}
+.tooltip.bottom .tooltip-arrow{top:0;left:50%;margin-left:-5px;border-width:0 5px 5px;border-bottom-color:#000}
+.tooltip.bottom-left .tooltip-arrow{top:0;right:5px;margin-top:-5px;border-width:0 5px 5px;border-bottom-color:#000}
+.tooltip.bottom-right .tooltip-arrow{top:0;left:5px;margin-top:-5px;border-width:0 5px 5px;border-bottom-color:#000}
+   
+.open-button {
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: -0px;
+  right: 15px;
+  /* border: 3px solid #f1f1f1; */
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  /* background-color: white; */
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  /* background: #f1f1f1; */
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+         .icon-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .icon-dropdown i {
+      cursor: pointer;
+    }
+    
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      display: none;
+    }
+    
+    .color-option {
+      padding: 5px;
+      cursor: pointer;
+    }
+    
+    .color-option:hover {
+      background-color: #f5f5f5;
+    }
+    
+    .text-red {
+      color: red;
+    }
+    
+    .text-yellow {
+      color: yellow;
+    }
+    
+    .text-blue {
+      color: blue;
+    }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 150px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 1px;
+  margin-top: 10px;
+  border-radius: 3px;
+  border: 0.5px solid rgb(189, 188, 188);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 7px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #fafafa;}
+
+.show {display: block;}
+
+        .headerr::after{
+            display: block;
+        }
+        .content-wrapper>.content {
+    padding: 0 0.0rem;
+}
+
+body {
+   font-size: 14px;
+}
+.form-control {
+   font-size: 14px; 
+}
+/* .textarea{
+    font-size: 14px;
+} */
+.main-sidebar, .main-sidebar::before {
+    transition: margin-left .3s ease-in-out,width .3s ease-in-out;
+    width: 250px;
+}
+/* .div2{
+    width: auto;
+} */
+
+#red {
+     width: 49%;
+     /* border: 5px solid red; */
+     float: left
+ }
+ .blue {
+    margin-left: 2%;
+     float: left;
+     /* border: 5px solid #00F; */
+     width: 49%;
+ }
+.wide { width:100%;
+margin-left: -2px;
+}
+  
+/* element.style {
+    margin-top: -5px;
+} */
+.card-light:not(.card-outline)>.card-header {
+    height: 44px;
+    padding-top: 6px;
+}
+#button{
+    /* color: rgb(4, 87, 142); */
+    /* font-weight: bold; */
+    background-color: rgb(235, 235, 235);
+    height: 35px;
+    width: 100px;
+    padding-top:4px;
+    padding-left: 9px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    color: #000;
+}
+
+.card-title {
+    margin-top: 10px;
+}
+@media only screen and (max-width: 600px) {
+  /* #name {
+    margin-top: 20px;
+    margin-right: -100px;
+  } */
+  
+element.style {
+    width: 101px;
+    height: 35px;
+    float: right;
+    margin-right: -101px;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 5px;
+    margin-top: 40px;
+}
+}
+.btn-primary{
+    background-color: #3c8dbc;
+    border-color: #3c8dbc;
+    /* font-size: 15px; */
+    font-size: .875rem;
+}
+.btn-primary:hover{
+    background-color: #296182;
+    border-color: #296182;
+   
+}
+.progress-bar-primary{
+    background-color: #3c8dbc;
+}
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+<div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="index3.html" class="brand-link text-center">
+          <span class="brand-text font-weight-light">Faveo Help Desk</span>
+        </a>
+  
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+              <img src="../../dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+              <a href="#" class="d-block">Faveo</a>
+            </div>
+          </div>
+  
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+  
+              <li class="nav-item">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>
+                    Simple Link
+                    <span class="right badge badge-danger">New</span>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Article</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                      
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">Article</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <div class="content">
+            <div class="container-fluid">
+                
+                    <!-- <div class="card p-3"> -->
+                        <!-- <form> -->
+                          <div class="content">
+                            <div class="container-fluid">
+                              <div class="row">
+                                <div class="col-lg-12">
+                                  <div class="card card-light">
+                                    <div class="card-header">
+                                      <h3 class="card-title">Edit Article <i style="margin-left: 5px;" data-toggle="tooltip" data-placement="top" title="Arabic" class="flag-icon flag-icon-sa"></i> </h3>
+
+                                                    
+                                    <div style="float: right;">
+
+                                      <i class="fa fa-file open-button" data-toggle="tooltip" data-placement="top" title="Open Master File" onclick="openForm()" style="margin-right: -6px;"></i>
+
+                                      <!-- <div class="icon-dropdown" style=" margin-right: 10px;">
+                                        <i class="fas fa-palette"></i>
+                                        <div class="dropdown-menu">
+                                          <div class="color-option" data-value="redd">Hindi</div>
+                                          <div class="color-option" data-value="yellow">Spanish</div>
+                                          <div class="color-option" data-value="blue">Arabic</i></div>
+                                        </div>
+                                      </div> -->
+                                      
+                                         <i class="fa fa-eye" data-toggle="tooltip" data-placement="top" title="View" id="downloadButton" style="cursor: pointer; margin-right: 10px;"></i>
+                                        <i class="fa fa-trash" data-toggle="tooltip" data-placement="top" title="Delete" id="icon" style="cursor: pointer; font-size: 15px;"></i>
+                                       
+                                     </div>
+                                    </div>
+                                  
+                                         
+<div class="card-body">
+  <div id="redd" class="colors">
+
+      <!-- <a style="float: right;">Hindi</a> -->
+    
+    <div class="row">
+        <div class="col-sm-6 form-group form-field-template" id="Name">
+            <div><label for="Name">Name</label><label  class="text-red">*</label></div>
+            <div>
+                <div class="slot-container"><input id="text-field" name="name" class="form-control" type="text"
+                        placeholder="Enter a value"></div>
+            </div>
+        </div>
+        <div class="col-sm-6 form-group form-field-template" id="Permalink">
+            <div><label for="Permalink">Permalink</label><label class="text-red">*</label></div>
+            <div>
+                <div class="slot-container"><input class="form-control" type="text" placeholder="" maxlength="250"
+                        style="display: none !important;">
+                    <p class="row"><span class="col-md-10"
+                            id="edit_slug">https://leela.productdemourl.com/public/show/article-ar</span><span class="col-md-2"
+                            id="edit_slug"><button class="btn btn-primary btn-xs float-right" data-toggle="tooltip" data-placement="top" title="Edit"><i
+                                    class="fas fa-pencil-alt"></i> Edit</button></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4 form-group form-field-template" id="Category">
+        <div class="form-group">
+            <label>Category</label><label
+            class="text-red">*</label>
+            <select class="select2" multiple="multiple" data-placeholder="Search or Select" style="width: 100%;">
+                <option value="uncategorized">Uncategorized</option>
+                <option value="uncategorized">Software</option>
+            </select>
+          </div> 
+        </div>
+       
+        <div class="col-sm-4 form-group form-field-template" id="Category">
+            <div><label for="Category">Author</label><label
+                     class="text-red">*</label></div>
+            <div>
+                <div  class="slot-container"><select class="form-control" name="category"
+                        id="static-select">
+                        <option value="">Search or Select</option>
+                        <option value="abc">abc</option>
+                    </select>
+                </div>
+            </div>
+        </div> 
+
+        <div class="col-sm-4 form-group form-field-template" id="tags">
+            <div class="form-group">
+                <label>Tags</label><span style="margin-left: 2px; position: relative; top: 0px; color: rgb(51, 122, 183);">
+                    <i class="fas fa-question-circle" style="font-size: small; cursor: help;"></i></span>
+                <select class="select2" multiple="multiple" data-placeholder="Search or Select" style="width: 100%;">
+                    <option value="tag1">Tag1</option>
+                    <option value="tag2">Tag2</option>
+                </select>
+              </div> 
+            </div> 
+
+    </div>
+
+    <div class="row" style="margin-top: -15px;">
+        <div class="col-sm-9 form-group form-field-template" id="Summary">
+            <div><label  for="Summary">Summary</label><label
+                     class="text-red">*</label></div>
+            <div>
+                <div  class="slot-container">
+                    <div><textarea id="text-field" name="summary" class="form-control" maxlength="2000"
+                            type="textarea" placeholder="Enter a value">ملخص - 1</textarea></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ml_7">
+        <div>
+            <div class="form-group" id="reply_content_class">
+                <div class="col-md-12"><label for="Reply Content"
+                        style="color: black;">Description</label><span class="text-red"> *</span>
+                    <div  id="file-manager-container"><button type="button" class="btn btn-default"
+                            id="add-media-button-with-margin"><i class="far fa-caret-square-right"></i>&nbsp;Add
+                            Media</button><button style="margin-left: 5px;" id="article__template__button"
+                            class="btn btn-default"><i class="fas fa-align-left"
+                                aria-hidden="true"></i> Select template</button></div>
+                
+                                <div style="margin-top: 10px;">
+                                <textarea  class="desc" placeholder="Write a Note!">
+                                    محتوى المقال</textarea>
+                            </div>
+                            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3 form-group form-field-template" id="Visibility">
+            <div><label for="Visibility">Visibility</label><label
+                     class="text-red">*</label></div>
+            <div>
+                <div  class="slot-container"><select class="form-control" name="visible_to"
+                        id="static-select">
+                        <option value="">Select</option>
+                        <option value="all_users">All Users</option>
+                        <option value="logged_in_users">Logged in Users</option>
+                        <option value="agents">Agents</option>
+                        <option value="organization_members">Organization Members</option>
+                    </select></div>
+            </div>
+        </div> 
+        <div class="col-sm-3 form-group form-field-template"
+            id="Publish immediately">
+            <div    ><label  for="Publish immediately">Publish
+                    immediately</label><label  class="text-red">*</label>
+            </div>
+            <div>
+                <div  class="slot-container">
+                    <div class="mx-datepicker">
+                        <div class="mx-input-wrapper"><input name="date" type="text" autocomplete="off"
+                                class="form-control" placeholder="Select Date"> <i class="mx-icon-calendar" style="float: right; margin-top: -30px;margin-right: 10px;"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1em" height="1em">
+                                    <path
+                                        d="M940.218 107.055H730.764v-60.51H665.6v60.51H363.055v-60.51H297.89v60.51H83.78c-18.617 0-32.581 13.963-32.581 32.581v805.237c0 18.618 13.964 32.582 32.582 32.582h861.09c18.619 0 32.583-13.964 32.583-32.582V139.636c-4.655-18.618-18.619-32.581-37.237-32.581zm-642.327 65.163v60.51h65.164v-60.51h307.2v60.51h65.163v-60.51h176.873v204.8H116.364v-204.8H297.89zM116.364 912.291V442.18H912.29v470.11H116.364z">
+                                    </path>
+                                </svg></i></div> 
+                    </div><span class="error-block text-red" style="display: none;"></span>
+                </div>
+            </div>
+        </div>
+        <div    class="form-group col-sm-3"><label for="HOurs">Status</label>
+            <div><span style="display: inline;"><span   ><input class="radio_align" name="type" type="radio"
+                            value="1"> Published&nbsp; &nbsp; </span><span   ><input class="radio_align"
+                            name="type" type="radio" value="0"> Draft&nbsp; &nbsp; </span></span></div>
+        </div>
+    </div>
+   
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card card-light">
+                <div class="card-header">
+                    <h3 class="card-title">SEO</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-12 form-group form-field-template"
+                            id="Seo Title">
+                            <div><label for="Seo Title">Seo
+                                    Title</label></div>
+                            <div>
+                                <div class="slot-container"><input id="text-field" name="seo_title"
+                                        class="form-control" type="text" value="عنوان" placeholder="Enter a value">
+                                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress sm col-md-12 p-0" id="prog">
+                            <div class="progress-bar progress-bar-primary progress-bar-striped"
+                                style="width: 20%;"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 form-group form-field-template"
+                            id="Description">
+                            <div><label for="Description">Description</label></div>
+                            <div>
+                                <div class="slot-container">
+                                    <div><textarea id="text-field" name="meta_description" class="form-control"
+                                            maxlength="2000" type="textarea" placeholder="Enter a value">وصف</textarea></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress sm col-md-12 p-0" id="prog">
+                            <div class="progress-bar progress-bar-primary progress-bar-striped"
+                                style="width: 11.875%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-sm-6">
+            <div class="card card-light">
+                <div class="card-header">
+                    <h3 class="card-title">Versions</h3>
+                </div>
+                <div class="card-body scrollable-revisions" id="revision_scroll">
+                    <div >
+                        <ul class="todo-list">
+                            <li class="pointer"><span class="badge badge-secondary">v.3</span><span >Shivaleela</span>&nbsp; <small><i
+                                        class="far fa-clock"></i>&nbsp;33 days ago</small><small
+                                    class="float-right">May 24, 2023 03:07 pm</small></li>
+                            <li class="pointer"><span class="badge badge-secondary">v.2</span><span >Shivaleela</span>&nbsp; <small><i
+                                       class="far fa-clock"></i>&nbsp;33 days ago</small><small
+                                     class="float-right">May 24, 2023 03:04 pm</small></li>
+                            <li class="pointer"><span class="badge badge-secondary">v.1</span><span >Shivaleela</span>&nbsp; <small><i
+                                        class="far fa-clock"></i>&nbsp;33 days ago</small><small
+                                    class="float-right">May 24, 2023 02:51 pm</small></li>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                        </ul>
+                        <div><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="form-popup" id="myForm">
+    <form class="form-container">
+        <div class="card card-light">
+            <div class="card-header" style="background-color: #434343; color: #fff;">
+                <h3 class="card-title">Article - In English</h3>
+                <i style="float: right;margin-top: 10px;" class="fa fa-times" type="button" class="btn cancel"
+                    onclick="closeForm()"></i>
+            </div>
+            <div class="card-body" style="max-height: 350px; overflow-y: scroll;">
+                <h2 style="font-size: 20px;"> Shows the Master Content</h2>
+                <p>Here the ARticle with Default language should be displayed</p>
+                <p>Here the ARticle with Default language should be displayed</p>
+                <p>Here the ARticle with Default language should be displayed</p>
+                <p>Here the ARticle with Default language should be displayed</p>
+                <p>Here the ARticle with Default language should be displayed</p>
+                <p>Here the ARticle with Default language should be displayed</p>
+                <p>Here the ARticle with Default language should be displayed</p>
+                <p>Here the ARticle with Default language should be displayed</p>
+                <p>Here the ARticle with Default language should be displayed</p>
+                <p>Here the ARticle with Default language should be displayed</p>
+                <p>Here the ARticle with Default language should be displayed</p>
+                <p>Here the ARticle with Default language should be displayed</p>
+            </div>
+        </div>
+    </form>
+</div>
+
+</div>
+
+<div class="card-footer"><button type="button" class="btn btn-primary"><span class="fas fa-sync"></span>&nbsp;Update</button></div>
+
+
+                                  <!-- <div class="card-footer">
+                                    <div class="btn btn-info" onclick="closeSearchBy()">
+                                      <i class="fas fa-file"></i> Update
+                                    </div>
+                                  </div> -->
+                                </div>
+                
+                              </div>
+                          
+                              <!-- /.row -->
+                            </div><!-- /.container-fluid -->
+                            
+                          </div>
+                         
+                        <!-- </form> -->
+                      </div>
+                     
+                     
+                    
+            <!-- </div> -->
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+        <div class="p-3">
+            <h5>Title</h5>
+            <p>Sidebar content</p>
+        </div>
+    </aside>
+    <!-- /.control-sidebar -->
+</div>
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="float-right d-none d-sm-inline">
+            Version 1.0.0
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2023-2024 <a href="https://support.faveohelpdesk.com">Faveo</a>.</strong> All rights reserved.
+    </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+
+    <!-- DataTables  & Plugins -->
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/jszip/jszip.min.js"></script>
+    <script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+     <!-- Template Main JS File -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+  
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": true,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": true,
+        "responsive": true,
+        
+      });
+      
+    });
+    
+  </script>
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>tinymce.init({ selector:'.desc' });</script>
+
+  <script>
+    $(document).ready(function(){
+      $("#name").on('change',function(){
+          // alert($(this).val());
+          $(".data").hide();
+          $("#" + $(this).val()).fadeIn(700)
+      }).change();
+    });
+  </script>
+  <script>
+    document.querySelectorAll(
+    'input[type=radio][name=foo]').forEach((elem) => {
+  elem.addEventListener('click', allowUncheck);
+  // only needed if elem can be pre-checked
+  elem.previous = elem.checked;
+});
+
+function allowUncheck(e) {
+  if (this.previous) {
+    this.checked = false;
+  }
+  // need to update previous on all elements of this group
+  // (either that or store the id of the checked element)
+  document.querySelectorAll(
+      `input[type=radio][name=${this.name}]`).forEach((elem) => {
+    elem.previous = elem.checked;
+  });
+}
+
+document.querySelectorAll(
+    'input[type=radio][name=too]').forEach((elem) => {
+  elem.addEventListener('click', allowUncheck);
+  // only needed if elem can be pre-checked
+  elem.previous = elem.checked;
+});
+
+function allowUncheck(e) {
+  if (this.previous) {
+    this.checked = false;
+  }
+  // need to update previous on all elements of this group
+  // (either that or store the id of the checked element)
+  document.querySelectorAll(
+      `input[type=radio][name=${this.name}]`).forEach((elem) => {
+    elem.previous = elem.checked;
+  });
+}
+</script>
+
+<script>
+    function myFunctionn() {
+      var x = document.getElementById("myDIVV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
+
+
+    <script>
+        $(function() {
+            $('.select2').select2()
+
+   $("#button").click(function(){
+       var $red = $("#red"),hiding=$red.is(":visible"), 
+           text = hiding?'Show Master':'Hide Master';
+       console.log(hiding,text)
+       $(this).text(text);
+       $red.slideToggle(0.7);
+       $red.next(".blue").toggleClass("wide");
+  });
+});
+    </script>
+
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script>tinymce.init({ selector:'.desc' });</script>
+
+<!-- Select2 -->
+<script src="../../plugins/select2/js/select2.full.min.js"></script>
+
+
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script>
+
+  const showEvents = ['mouseenter', 'focus'];
+  const hideEvents = ['mouseleave', 'blur'];
+
+  showEvents.forEach((event) => {
+    button.addEventListener(event, show);
+  });
+
+  hideEvents.forEach((event) => {
+    button.addEventListener(event, hide);
+  });
+</script>
+
+<script>
+ 
+ document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.querySelector('.icon-dropdown');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const colorOptions = document.querySelectorAll('.color-option');
+    const colors = document.querySelectorAll('.colors');
+
+    dropdown.addEventListener('click', function() {
+      dropdownMenu.style.display = dropdownMenu.style.display === 'none' ? 'block' : 'none';
+    });
+
+    colorOptions.forEach(function(option) {
+      option.addEventListener('click', function() {
+        const selectedColor = this.dataset.value;
+        colors.forEach(function(color) {
+          color.style.display = color.id === selectedColor ? 'block' : 'none';
+        });
+        dropdownMenu.style.display = 'none';
+      });
+    });
+
+    document.addEventListener('click', function(event) {
+      if (!dropdown.contains(event.target)) {
+        dropdownMenu.style.display = 'none';
+      }
+    });
+
+    // Set initial display for the default color
+    const defaultColor = 'red';
+    const defaultColorDiv = document.querySelector(`#${defaultColor}`);
+    defaultColorDiv.style.display = 'block';
+  });
+</script>
+
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  </script>
+
+<script>
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+  </script>
+   <!-- ToolTip -->
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" /> -->
+   
+</body>
+</html>

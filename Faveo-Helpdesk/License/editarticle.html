@@ -21,10 +21,22 @@
     <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+    <!-- ToolTip -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" /> -->
     <style>
         .headerr::after{
             display: block;
         }
+
+        @media screen and (min-width: 300px) {
+  .search {
+   margin-top: 20px;
+  }
+}
+.tooltip{position:absolute;z-index:1070;display:block;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;font-style:normal;font-weight:400;line-height:1.42857143;text-align:left;text-align:start;text-decoration:none;text-shadow:none;text-transform:none;letter-spacing:normal;word-break:normal;word-spacing:normal;word-wrap:normal;white-space:normal;filter:alpha(opacity=0);opacity:0;line-break:auto}.tooltip.in{filter:alpha(opacity=90);opacity:.9}.tooltip.top{padding:5px 0;margin-top:-3px}.tooltip.right{padding:0 5px;margin-left:3px}.tooltip.bottom{padding:5px 0;margin-top:3px}.tooltip.left{padding:0 5px;margin-left:-3px}.tooltip-inner{max-width:200px;padding:3px 8px;color:#fff;text-align:center;background-color:#000;border-radius:4px}.tooltip-arrow{position:absolute;width:0;height:0;border-color:transparent;border-style:solid}.tooltip.top .tooltip-arrow{bottom:0;left:50%;margin-left:-5px;border-width:5px 5px 0;border-top-color:#000}.tooltip.top-left .tooltip-arrow{right:5px;bottom:0;margin-bottom:-5px;border-width:5px 5px 0;border-top-color:#000}.tooltip.top-right .tooltip-arrow{bottom:0;left:5px;margin-bottom:-5px;border-width:5px 5px 0;border-top-color:#000}.tooltip.right .tooltip-arrow{top:50%;left:0;margin-top:-5px;border-width:5px 5px 5px 0;border-right-color:#000}.tooltip.left .tooltip-arrow{top:50%;right:0;margin-top:-5px;border-width:5px 0 5px 5px;border-left-color:#000}.tooltip.bottom .tooltip-arrow{top:0;left:50%;margin-left:-5px;border-width:0 5px 5px;border-bottom-color:#000}.tooltip.bottom-left .tooltip-arrow{top:0;right:5px;margin-top:-5px;border-width:0 5px 5px;border-bottom-color:#000}.tooltip.bottom-right .tooltip-arrow{top:0;left:5px;margin-top:-5px;border-width:0 5px 5px;border-bottom-color:#000}
     </style>
 </head>
 
@@ -126,11 +138,15 @@
                                   <div class="card card-light">
                                     <div class="card-header">
                                       <h3 class="card-title">List of Articles</h3>
+                                      <div style="float: right;">
+                                        <i class="fa fa-filter" data-toggle="tooltip" data-placement="top" title="Filter" id="icon" style="cursor: pointer; font-size: 13px;margin-right: 10px;" ></i>
+                                        <i class="fa fa-plus" data-toggle="tooltip" data-placement="top" title="Create Article" id="icon" style="cursor: pointer;font-size: 13px;"></i>
+                                    </div>
                                     </div>
                                     <div class="card-body">
 
                                         <div class="row">
-                                            <div class="col-md-8">
+                                            <div class="col-md-9">
                                                 <select style="width: 60px; height: 30px; border: 1px solid #d1cece;border-radius: 3px;font-size: 14px; text-align: center;">
                                                     <option selected>10</option>
                                                     <option>20</option>
@@ -143,7 +159,7 @@
                                                     <option>Sort by Article name</option>
                                                 </select>
                                             </div>
-                                            <div class="col-md-4" >
+                                            <div class="search" style="float: right;margin-top: -5px;">
                                                 <div class="row">
                                                     <label style="font-weight: normal;">Search:</label>
                                                     <input placeholder="search here" style="padding-left: 10px ;margin-right: 5px;border: 1px solid #d1cece;border-radius: 3px;"/>
@@ -151,7 +167,7 @@
                                             </div>
                                         </div>
                                         <div class="card mt-2">
-                                            <div class="card-header headerr" style="height: 50px;">
+                                            <div class="card-header headerr" style="height: 42px;">
                                                 <h3 class="card-title" style="font-weight: 500; color: #1285be;">Article <span class="badge" style="color: #fff; background-color: #1285be; border-radius: 50%;width: 18px; height: 18px;">? </span></h3>
                                                 <p style="float: right; color: rgb(75, 75, 75); font-size: small;"><i class="far fa-clock"></i> Jan 11, 2023 02:00 pm</p>
                                             </div>
@@ -159,30 +175,39 @@
                                                
                                                     <h3 class="card-title" style="font-size: 14px;">Article - 1</h3>
                                                 
-                                                    <button class="btn btn-sm" title="Language" style="background-color: #f5f3f3;border: 1px solid #d1cece;border-radius: 3px; float: right;font-size: 14px;">
-                                                        <i class="fa fa-language" style="color: #333232;"></i> Language</button>
+                                                    <!-- <button class="btn btn-sm" title="Language" style="background-color: #f5f3f3;border: 1px solid #d1cece;border-radius: 3px; float: right;font-size: 14px;">
+                                                        <i class="fa fa-language" style="color: #333232;"></i> Language</button> -->
+
+                                                        <div style="float: right;">
+                                                          <a style="cursor: pointer; color: rgb(75, 75, 75);" href="hindi.html"><i class="fa fa-pencil-alt" data-toggle="tooltip" data-placement="top" title="Edit Hindi" style="margin-right: 5px;"></i></a>
+                                                          <a style="cursor: pointer; color: rgb(75, 75, 75);" href="Arabic.html"> <i class="fa fa-pencil-alt" data-toggle="tooltip" data-placement="top" title="Edit Arabic" style="margin-right: 5px;"></i></a>
+                                                          <a style="cursor: pointer; color: rgb(75, 75, 75);" href="Spanish.html"> <i class="fa fa-plus" data-toggle="tooltip" data-placement="top" title=" Spanish"  style="margin-right: 5px;"></i></a>
+                                                          
+                                                          <a style="cursor: pointer; color: rgb(75, 75, 75);" href="hindi.html"> <i class="fa fa-plus" data-toggle="tooltip" data-placement="top" title="Russian" style="margin-right: 5px;"></i></a>
+                                                          <a style="cursor: pointer; color: rgb(75, 75, 75);" href="hindi.html"> <i class="fa fa-plus" data-toggle="tooltip" data-placement="top" title="Italian" style="margin-right: 5px;"></i></a>
+                                                          <a style="cursor: pointer; color: rgb(75, 75, 75);" href="hindi.html"> <i class="fa fa-plus" data-toggle="tooltip" data-placement="top" title="French"></i>
+                                                        </div>
                                                
                                             </div>
                                             <div class="card-header">
                                                
                                                 <h3 class="card-title">
                                                     <div style="flex-direction: row;">
-                                                        <button class="btn btn-sm" title="Edit" style="background-color: #f5f3f3;border: 1px solid #d1cece;border-radius: 3px;">
+                                                        <button class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Edit" style="background-color: #f5f3f3;border: 1px solid #d1cece;border-radius: 3px;">
                                                           <i class="fas fa-edit" style="color: #333232;"></i> Edit</button>
-                                                        <button class="btn btn-sm" title="View" style="background-color: #f5f3f3;border: 1px solid #d1cece;border-radius: 3px;">
+                                                        <button class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="View" style="background-color: #f5f3f3;border: 1px solid #d1cece;border-radius: 3px;">
                                                             <i class="fas fa-eye" style="color: #333232;"></i> View</button>
-                                                        <button class="btn btn-sm" title="Delete" style="background-color: #f5f3f3;border: 1px solid #d1cece;border-radius: 3px;">
+                                                        <button class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="Delete" style="background-color: #f5f3f3;border: 1px solid #d1cece;border-radius: 3px;">
                                                                 <i class="fas fa-trash" style="color: #333232;"></i> Delete</button>
                                                       </div>
                                                 </h3>
                                                   
-                                                    <div class="col-md-3" style="float: right;">
-                                                        <button class="btn btn-sm" title="Comments" style="color: #055fa8;" >
-                                                           <i class="far fa-comment-dots" style="color: #055fa8;"></i> 
-                                                           <span class="badge badge-danger navbar-badge">3</span>
-                                                            <i class="far fa-comments" style="color: #055fa8;"></i>(0) Comments</button>
-                                                    
-                                            </div>
+                                                    <div class="col-md-3" style="float: right; margin-right: -50px;">
+                                                      <button class="btn btn-sm"  style="color: #055fa8;">
+                                                        <i class="far fa-comment-dots" data-toggle="tooltip" data-placement="top" title="3 Pending Comments" style="color: #055fa8;"></i>
+                                                        <span class="badge badge-danger navbar-badge">3</span>
+                                                        <i class="far fa-comments" style="color: #055fa8;" data-toggle="tooltip" data-placement="top" title="Total Comments"></i>(0) Comments</button>
+                                                    </div>
                                             <!-- <div class="card-body">
                                             <p>Article - 1</p>
                                             <div style="height: 1px; background-color: rgb(190, 195, 195); width: 100%;"></div>
@@ -278,6 +303,11 @@
       
     });
     
+  </script>
+  <script>
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
   </script>
 </body>
 </html>
