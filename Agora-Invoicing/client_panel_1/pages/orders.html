@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Login | Register | Faveo</title>
+    <title>Orders | Faveo</title>
 
     <meta name="keywords" content="Faveo" />
     <meta name="description" content="Faveo">
@@ -183,7 +183,7 @@
                                                             </li>
 
                                                             <li>
-                                                                <a href="javascript:;" class="dropdown-item">ServiceDesk Perpetual</a>
+                                                                <a href="pricing.html" class="dropdown-item">ServiceDesk Perpetual</a>
                                                             </li>
 
                                                             <li>
@@ -206,7 +206,7 @@
 
                                                     <li class="dropdown">
 
-                                                        <a class="nav-link dropdown-toggle" href="javascript:;">
+                                                        <a class="nav-link dropdown-toggle active" href="javascript:;">
                                                             My Account
                                                         </a>
 
@@ -231,7 +231,7 @@
                                                     </li>
 
                                                     <li>
-                                                        <a class="nav-link active" href="signup-in.html">Sign Up</a>
+                                                        <a class="nav-link" href="signup-in.html">Sign Up</a>
                                                     </li>
                                                 </ul>
                                             </nav>
@@ -290,7 +290,7 @@
 
                                                         <a class="btn btn-light-scale-2 text-color-hover-primary font-weight-semi-bold" href="cart.html">View Cart</a>
 
-                                                        <a class="btn btn-dark" href="checkout.html">Checkout</a>
+                                                        <a class="btn btn-light-scale-2 text-color-hover-primary" href="checkout.html">Checkout</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -322,16 +322,25 @@
     <div role="main" class="main">
 
         <div class="custom-page-header border-bottom-light">
+
             <section class="page-header page-header-modern bg-color-light-scale-1 border-0 my-0">
+
                 <div class="container my-3">
+
                     <div class="row">
+
                         <div class="col-md-12 align-self-center p-static order-2 text-center">
-                            <h1 class="font-weight-bold text-10 text-dark">Sign in or Register</h1>
+
+                            <h1 class="font-weight-bold text-10 text-dark">My Orders</h1>
                         </div>
+
                         <div class="col-md-12 align-self-center order-1">
+
                             <ul class="breadcrumb breadcrumb-light d-block text-center">
+
                                 <li><a class="text-primary" href="../index.html">Home</a></li>
-                                <li class="active text-dark">Sign in &nbsp;&nbsp;or&nbsp;&nbsp; Register</li>
+
+                                <li class="active text-dark">My Orders</li>
                             </ul>
                         </div>
                     </div>
@@ -339,197 +348,246 @@
             </section>
         </div>
 
-        <div class="container py-4">
+        <div id="examples" class="container py-4">
 
-            <div class="row justify-content-center">
+            <div class="row">
 
-                <div class="col-md-6 col-lg-5 mb-5 mb-lg-0 pe-5">
+                <div class="col">
 
-                    <h2 class="font-weight-bold text-5 mb-0">Login</h2>
+                    <div class="row">
 
-                    <form action="/" id="frmSignIn" method="post" class="needs-validation">
+                        <div class="col pb-3">
 
-                        <div class="row">
+                            <table class="table table-striped table-bordered">
 
-                            <div class="form-group col">
+                                <thead>
+                                    <tr>
+                                        <th>S.No</th>
+                                        <th>Product Name</th>
+                                        <th>Date</th>
+                                        <th>Order No</th>
+                                        <th>Version</th>
+                                        <th>Updates Expiry Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
 
-                                <label class="form-label text-color-dark text-3">Username or E-mail Address <span class="text-color-danger">*</span></label>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Helpdesk Freelancer </td>
+                                        <td>Oct 10, 2023</td>
+                                        <td>22786357</td>
+                                        <td>
+                                            <span class="badge badge-success">
+                                                <label></label>v7.1.4
+                                            </span>
+                                        </td>
+                                        <td>Oct 9, 2024</td>
+                                        <td>
+                                            <a href="order-details.html" class="btn btn-light-scale-2 btn-sm text-dark" title="View"><i class="fas fa-eye"></i></a>
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#downloadModal" class="btn btn-light-scale-2 btn-sm text-dark" title="Download"><i class="fas fa-download"></i></a>
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#renewModal" class="btn btn-light-scale-2 btn-sm text-dark" title="Renew"><i class="fas fa-sync-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Helpdesk Enterprise</td>
+                                        <td>Oct 1, 2023</td>
+                                        <td>22786357</td>
+                                        <td>
+                                            <span class="badge badge-success">
+                                                <label></label>v7.1.3
+                                            </span>
+                                        </td>
+                                        <td>Sept 30, 2024</td>
+                                        <td>
+                                            <a href="order-details.html" class="btn btn-light-scale-2 btn-sm text-dark" title="View"><i class="fas fa-eye"></i></a>
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#downloadModal" class="btn btn-light-scale-2 btn-sm text-dark" title="Download"><i class="fas fa-download"></i></a>
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#renewModal" class="btn btn-light-scale-2 btn-sm text-dark" title="Renew"><i class="fas fa-sync-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Helpdesk Advance</td>
+                                        <td>Nov 1, 2022</td>
+                                        <td>12786357</td>
+                                        <td>
+                                            <span class="badge badge-warning">
+                                                <label></label>v3.2.0
+                                            </span>
+                                        </td>
+                                        <td>Dec 30, 2023&nbsp;<span class="badge badge-danger">Expired</span></td>
+                                        <td>
+                                            <a href="order-details.html" class="btn btn-light-scale-2 btn-sm text-dark" title="View"><i class="fas fa-eye"></i></a>
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#downloadModal" class="btn btn-light-scale-2 btn-sm text-dark" title="Download"><i class="fas fa-download"></i></a>
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#renewModal" class="btn btn-light-scale-2 btn-sm text-dark" title="Renew"><i class="fas fa-sync-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                                <input type="text" value="" class="form-control form-control-lg text-4" required>
-                            </div>
-                        </div>
+                            <div class="row">
 
-                        <div class="row">
+                                <div class="col-md-6">
 
-                            <div class="form-group col">
-
-                                <label class="form-label text-color-dark text-3">Password <span class="text-color-danger">*</span></label>
-
-                                <input type="password" value="" class="form-control form-control-lg text-4" required>
-                            </div>
-                        </div>
-
-                        <div class="row justify-content-between">
-
-                            <div class="form-group col-md-auto">
-
-                                <div class="custom-control custom-checkbox">
-
-                                    <input type="checkbox" class="custom-control-input" id="rememberme">
-
-                                    <label class="form-label custom-control-label cur-pointer text-2" for="rememberme">Remember Me</label>
+                                    <span>Showing 1 to 3 of 3 records</span>
                                 </div>
-                            </div>
 
-                            <div class="form-group col-md-auto">
+                                <div class="col-md-6">
 
-                                <a class="text-decoration-none text-color-primary font-weight-semibold text-2" href="forgot.html">Forgot Password?</a>
-                            </div>
-                        </div>
+                                    <ul class="pagination float-end">
 
-                        <div class="row">
+                                        <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-left"></i></a></li>
 
-                            <div class="form-group col">
+                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
 
-                                <button type="submit" class="btn btn-light-scale-2 text-color-hover-dark btn-modern w-100 text-uppercase   font-weight-bold text-3 py-3" data-loading-text="Loading...">Login</button>
+                                        <li class="page-item"><a href="#" class="page-link">2</a></li>
 
-                                <div class="divider">
-
-                                    <span class="bg-light px-4 position-absolute left-50pct top-50pct transform3dxy-n50">or</span>
-                                </div>
-
-                                <a href="javascript:;" class="btn btn-light-scale-2 text-color-hover-primary btn-modern w-100 text-transform-none   font-weight-bold align-items-center d-inline-flex justify-content-center text-3 py-3" data-loading-text="Loading...">
-
-                                    <i class="fab fa-facebook text-5 me-2"></i> Login With Facebook
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="col-md-6 col-lg-5 ps-5">
-
-                    <h2 class="font-weight-bold text-5 mb-0">Register</h2>
-
-                    <form action="/" id="frmSignUp" method="post">
-
-                        <div class="row">
-
-                            <div class="form-group col">
-
-                                <label class="form-label text-color-dark text-3">First Name <span class="text-color-danger">*</span></label>
-
-                                <input type="text" value="" class="form-control form-control-lg text-4" required>
-                            </div>
-
-                            <div class="form-group col">
-
-                                <label class="form-label text-color-dark text-3">Last Name <span class="text-color-danger">*</span></label>
-
-                                <input type="text" value="" class="form-control form-control-lg text-4" required>
-                            </div>
-                        </div>
-
-                        <div class="row">
-
-                            <div class="form-group col">
-
-                                <label class="form-label text-color-dark text-3">E-mail address <span class="text-color-danger">*</span></label>
-
-                                <input type="text" value="" class="form-control form-control-lg text-4" required>
-                            </div>
-                        </div>
-
-                        <div class="row">
-
-                            <div class="form-group col">
-
-                                <label class="form-label text-color-dark text-3">Company Name <span class="text-color-danger">*</span></label>
-
-                                <input type="text" value="" class="form-control form-control-lg text-4" required>
-                            </div>
-                        </div>
-
-                        <div class="row">
-
-                            <div class="form-group col">
-
-                                <label class="form-label text-color-dark text-3">Address <span class="text-color-danger">*</span></label>
-
-                                <textarea maxlength="500" data-msg-required="Please enter your address." rows="3" class="form-control text-3 h-auto py-2" name="message" required=""></textarea>
-                            </div>
-                        </div>
-
-                        <div class="row">
-
-                            <div class="form-group col">
-
-                                <label class="form-label text-color-dark text-3">Country <span class="text-color-danger">*</span></label>
-
-                                <select name="size" class="form-select form-control h-auto py-2">
-                                    <option value="">India</option>
-                                    <option value="usa">United States</option>
-                                    <option value="uk">United Kingdom</option>
-                                    <option value="france">France</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="row">
-
-                            <div class="form-group col">
-
-                                <label class="form-label text-color-dark text-3">Mobile <span class="text-color-danger">*</span></label>
-
-                                <input type="number" value="" class="form-control form-control-lg text-4" required>
-                            </div>
-                        </div>
-
-                        <div class="row">
-
-                            <div class="form-group col">
-
-                                <label class="form-label text-color-dark text-3">Password <span class="text-color-danger">*</span></label>
-
-                                <input type="password" value="" class="form-control form-control-lg text-4" required>
-                            </div>
-
-                            <div class="form-group col">
-
-                                <label class="form-label text-color-dark text-3">Re-enter Password <span class="text-color-danger">*</span></label>
-
-                                <input type="password" value="" class="form-control form-control-lg text-4" required>
-                            </div>
-                        </div>
-
-                        <div class="row">
-
-                            <div class="form-group col">
-
-                                <div class="form-check">
-
-                                    <input class="form-check-input" type="checkbox" value="" name="agree" id="tabContent13Checkbox" data-msg-required="You must agree before submiting." required="">
-
-                                    <label class="form-check-label" for="tabContent13Checkbox">
-
-                                        Agree to terms and conditions
-                                    </label>
+                                        <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="row">
-
-                            <div class="form-group col">
-
-                                <button type="submit" class="btn btn-light-scale-2 text-color-hover-dark btn-modern w-100 text-uppercase   font-weight-bold text-3 py-3" data-loading-text="Loading...">Register</button>
-
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
+        </div>
 
+        <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+
+            <div class="modal-dialog modal-lg">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h4 class="modal-title" id="defaultModalLabel">Product Versions</h4>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <table class="table table-striped">
+
+                            <thead>
+                            <tr>
+                                <th>Version</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td>V4.2.0</td>
+                                <td>Helpdesk Freelancer</td>
+                                <td>Helpdesk Freelancer</td>
+                                <td>
+                                    <a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" title="Download"><i class="fas fa-download"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>V4.2.0</td>
+                                <td>Helpdesk Advance</td>
+                                <td>Helpdesk Advance V4.2.0</td>
+                                <td>
+                                    <a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" title="Download"><i class="fas fa-download"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>V4.3.0</td>
+                                <td>Helpdesk Enterprise</td>
+                                <td>Helpdesk Enterprise</td>
+                                <td>
+                                    <a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" title="Download"><i class="fas fa-download"></i></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <ul class="pagination float-end pagination-sm">
+
+                            <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+
+                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+
+                            <li class="page-item"><a href="#" class="page-link">2</a></li>
+
+                            <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="renewModal" tabindex="-1" role="dialog" aria-labelledby="renewModalLabel" aria-hidden="true">
+
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h4 class="modal-title" id="renewModalLabel">Renew</h4>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <form class="renew-form" action="" method="POST">
+
+                            <div class="contact-form-success alert alert-success d-none mt-4">
+                                <strong>Success!</strong> Your message has been sent to us.
+                            </div>
+
+                            <div class="contact-form-error alert alert-danger d-none mt-4">
+                                <strong>Error!</strong> There was an error sending your message.
+                                <span class="mail-error-message text-1 d-block"></span>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col">
+                                    <label class="form-label">Plans <span class="text-danger"> *</span></label>
+                                    <div class="custom-select-1">
+                                        <select class="form-select form-control h-auto py-2" data-msg-required="Please select a city." name="city" required>
+                                            <option value="">Select</option>
+                                            <option value="1">Helpdesk Enterprise</option>
+                                            <option value="2">Helpdesk Startup</option>
+                                            <option value="3">Helpdesk Freelancer</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group col">
+
+                                    <label class="form-label mb-1 text-2">Price</label>
+
+                                    <input type="text" disabled value="199" class="form-control text-3 h-auto py-2" name="price" required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

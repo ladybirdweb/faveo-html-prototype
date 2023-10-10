@@ -49,6 +49,13 @@
     <!-- Head Libs -->
     <script src="vendor/modernizr/modernizr.min.js"></script>
 
+    <style>
+
+        .sticky-header-active .d-sticky-header-negative-none {
+            display: block !important;
+        }
+    </style>
+
 </head>
 <body data-plugin-page-transition>
 
@@ -151,6 +158,14 @@
 
                                                 <ul class="nav nav-pills" id="mainNav">
 
+                                                    <li class="d-sticky-header-negative-none" style="display:none">
+
+                                                        <a class="nav-link" href="../index.html">
+
+                                                            <img alt="Porto" width="75" height="50" src="../img/faveo.png">
+                                                        </a>
+                                                    </li>
+
                                                     <li class="dropdown">
 
                                                         <a class="nav-link dropdown-toggle active" href="javascript:;">
@@ -160,44 +175,124 @@
                                                         <ul class="dropdown-menu border-light mt-n1">
 
                                                             <li>
-                                                                <a href="javascript:;" class="dropdown-item">HelpDesk Perpetual</a>
+                                                                <a href="./pages/pricing.html" class="dropdown-item">HelpDesk Perpetual</a>
                                                             </li>
 
                                                             <li>
-                                                                <a href="javascript:;" class="dropdown-item">HelpDesk Recurring</a>
+                                                                <a href="./pages/pricing.html" class="dropdown-item">HelpDesk Recurring</a>
                                                             </li>
 
                                                             <li>
-                                                                <a href="javascript:;" class="dropdown-item">ServiceDesk Perpetual</a>
+                                                                <a href="./pages/pricing.html" class="dropdown-item">ServiceDesk Perpetual</a>
                                                             </li>
 
                                                             <li>
-                                                                <a href="javascript:;" class="dropdown-item">ServiceDesk Recurring</a>
+                                                                <a href="./pages/pricing.html" class="dropdown-item">ServiceDesk Recurring</a>
                                                             </li>
 
                                                             <li>
-                                                                <a href="javascript:;" class="dropdown-item">Services</a>
+                                                                <a href="./pages/pricing.html" class="dropdown-item">Services</a>
                                                             </li>
 
                                                             <li>
-                                                                <a href="javascript:;" class="dropdown-item">Faveo Cloud</a>
+                                                                <a href="./pages/pricing.html" class="dropdown-item">Faveo Cloud</a>
                                                             </li>
                                                         </ul>
                                                     </li>
 
                                                     <li>
-                                                        <a class="nav-link" href="contact.html">Contact Us</a>
+                                                        <a class="nav-link" href="./pages/contact.html">Contact Us</a>
+                                                    </li>
+
+                                                    <li class="dropdown">
+
+                                                        <a class="nav-link dropdown-toggle" href="javascript:;">
+                                                            My Account
+                                                        </a>
+
+                                                        <ul class="dropdown-menu border-light mt-n1">
+
+                                                            <li>
+                                                                <a href="./pages/orders.html" class="dropdown-item">My Orders</a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="./pages/invoices.html" class="dropdown-item">My Invoices</a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="./pages/profile.html" class="dropdown-item">My Profile</a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="javascript:;" class="dropdown-item">Logout</a>
+                                                            </li>
+                                                        </ul>
                                                     </li>
 
                                                     <li>
-                                                        <a class="nav-link" href="cart.html">Cart</a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a class="nav-link" href="account.html">My Account</a>
+                                                        <a class="nav-link" href="./pages/signup-in.html">Sign Up</a>
                                                     </li>
                                                 </ul>
                                             </nav>
+                                        </div>
+
+                                        <div class="header-nav-features header-nav-features-no-border header-nav-features-lg-show-border order-1 order-lg-2 me-2 me-lg-0">
+
+                                            <div class="header-nav-feature header-nav-features-cart d-inline-flex ms-2">
+
+                                                <a href="javascript:;" class="header-nav-features-toggle text-decoration-none">
+
+                                                    <span class="text-dark opacity-8 font-weight-bold text-color-hover-primary"> Cart</span>
+
+                                                    <img src="img/icons/icon-cart.svg" width="14" alt="" class="header-nav-top-icon-img">
+
+                                                    <span class="cart-info">
+
+                                                        <span class="cart-qty">1</span>
+                                                    </span>
+                                                </a>
+
+                                                <div class="header-nav-features-dropdown right-15" id="headerTopCartDropdown">
+
+                                                    <ol class="mini-products-list">
+
+                                                        <li class="item">
+
+                                                            <a href="#" title="Camera X1000" class="product-image"><img src="img/products/product-1.jpg" alt="Camera X1000"></a>
+
+                                                            <div class="product-details">
+
+                                                                <p class="product-name">
+
+                                                                    <a href="#">Helpdesk Enterprise Advance</a>
+                                                                </p>
+
+                                                                <p class="qty-price">
+
+                                                                    1X <span class="price">$99</span>
+                                                                </p>
+
+                                                                <a href="javascript:;" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
+                                                            </div>
+                                                        </li>
+                                                    </ol>
+
+                                                    <div class="totals">
+
+                                                        <span class="label">Total:</span>
+
+                                                        <span class="price-total"><span class="price">$99</span></span>
+                                                    </div>
+
+                                                    <div class="actions">
+
+                                                        <a class="btn btn-light-scale-2 text-color-hover-primary font-weight-semi-bold" href="./pages/cart.html">View Cart</a>
+
+                                                        <a class="btn btn-dark" href="./pages/checkout.html">Checkout</a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">

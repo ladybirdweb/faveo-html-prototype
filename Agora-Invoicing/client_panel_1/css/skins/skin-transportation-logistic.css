@@ -7373,7 +7373,7 @@ ul.comments .comment-block,
 .img-thumbnail.img-thumbnail-hover-icon:before,
 .product-thumb-info,
 .accordion.accordion-modern-2 > .card .card-header a {
-	border-radius: 0 !important;
+	/*border-radius: 0 !important;*/
 }
 
 @media (min-width: 992px) {
