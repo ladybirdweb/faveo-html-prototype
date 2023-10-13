@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Invoices | Faveo</title>
+    <title>Order Complete | Faveo</title>
 
     <meta name="keywords" content="Faveo" />
     <meta name="description" content="Faveo">
@@ -53,6 +53,10 @@
 
         .sticky-header-active .d-sticky-header-negative-none {
             display: block !important;
+        }
+
+        .text-color-hover-danger:hover, html .text-hover-danger:hover {
+            color: #c10000 !important;
         }
     </style>
 
@@ -223,7 +227,7 @@
 
                                                     <li class="dropdown">
 
-                                                        <a class="nav-link dropdown-toggle active" href="javascript:;">
+                                                        <a class="nav-link dropdown-toggle" href="javascript:;">
                                                             My Account
                                                         </a>
 
@@ -265,13 +269,13 @@
 
                                                 <a href="javascript:;" class="header-nav-features-toggle text-decoration-none">
 
-                                                    <span class="text-dark opacity-8 font-weight-bold text-color-hover-primary"> Cart</span>
+                                                    <span class="opacity-8 font-weight-bold text-color-primary"> Cart</span>
 
                                                     <img src="../img/icons/icon-cart.svg" width="14" alt="" class="header-nav-top-icon-img">
 
                                                     <span class="cart-info">
 
-                                                        <span class="cart-qty">1</span>
+                                                        <span class="cart-qty">2</span>
                                                     </span>
                                                 </a>
 
@@ -281,7 +285,7 @@
 
                                                         <li class="item">
 
-                                                            <a href="#" data-bs-toggle="tooltip" title="Camera X1000" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
+                                                            <a href="#" data-bs-toggle="tooltip" title="Helpdesk Enterprise Advance" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
 
                                                             <div class="product-details">
 
@@ -298,20 +302,40 @@
                                                                 <a href="javascript:;" data-bs-toggle="tooltip" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
                                                             </div>
                                                         </li>
+
+                                                        <li class="item">
+
+                                                            <a href="#" data-bs-toggle="tooltip" title="Faveo Helpdesk Freelancer" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
+
+                                                            <div class="product-details">
+
+                                                                <p class="product-name">
+
+                                                                    <a href="#">Faveo Helpdesk Freelancer</a>
+                                                                </p>
+
+                                                                <p class="qty-price">
+
+                                                                    1X <span class="price">$10</span>
+                                                                </p>
+
+                                                                <a href="javascript:;" data-bs-toggle="tooltip" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
+                                                            </div>
+                                                        </li>
                                                     </ol>
 
                                                     <div class="totals">
 
                                                         <span class="label">Total:</span>
 
-                                                        <span class="price-total"><span class="price">$99</span></span>
+                                                        <span class="price-total"><span class="price">$109</span></span>
                                                     </div>
 
                                                     <div class="actions">
 
                                                         <a class="btn btn-light-scale-2 text-color-hover-primary font-weight-semi-bold" href="cart.html">View Cart</a>
 
-                                                        <a class="btn btn-light-scale-2 text-color-hover-primary" href="checkout.html">Checkout</a>
+                                                        <a class="btn btn-dark" href="checkout.html">Checkout</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -340,28 +364,19 @@
         </div>
     </header>
 
-    <div role="main" class="main">
+    <div role="main" class="main shop pb-4">
 
         <div class="custom-page-header border-bottom-light">
-
             <section class="page-header page-header-modern bg-color-light-scale-1 border-0 my-0">
-
                 <div class="container my-3">
-
                     <div class="row">
-
                         <div class="col-md-12 align-self-center p-static order-2 text-center">
-
-                            <h1 class="font-weight-bold text-10 text-dark">My Invoices</h1>
+                            <h1 class="font-weight-bold text-10 text-dark">View Invoice</h1>
                         </div>
-
                         <div class="col-md-12 align-self-center order-1">
-
                             <ul class="breadcrumb breadcrumb-light d-block text-center">
-
                                 <li><a class="text-primary" href="../index.html">Home</a></li>
-
-                                <li class="active text-dark">My Invoices</li>
+                                <li class="active text-dark">View Invoice</li>
                             </ul>
                         </div>
                     </div>
@@ -369,122 +384,182 @@
             </section>
         </div>
 
-        <div id="examples" class="container py-4">
+        <div id="examples" class="container py-4" style="max-width: 900px">
 
             <div class="row">
 
-                <div class="col">
+                <div class="col-lg-6 order-1 order-lg-2">
 
-                    <div class="row">
+                    <div class="overflow-hidden mb-1">
 
-                        <div class="col pb-3">
+                        <img alt="Porto" width="75" height="50" src="../img/faveo.png">
 
-                            <div class="row">
-
-                                <div class="col-sm-8"></div>
-
-                                <div class="col-4 mb-3">
-
-                                    <form role="search">
-
-                                        <div class="simple-search input-group w-auto">
-
-                                            <input class="form-control text-1 border-radius-2" id="search1" name="q" type="search" value="" placeholder="Search...">
-
-                                            <button class="btn border-radius-2" type="submit">
-
-                                                <i class="fa fa-search header-nav-top-icon"></i>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-
-                            <table class="table table-striped table-bordered">
-
-                                <thead>
-                                    <tr>
-                                        <th>Invoice No</th>
-                                        <th>Date</th>
-                                        <th>Order No</th>
-                                        <th>Total</th>
-                                        <th>Paid</th>
-                                        <th>Balance</th>
-                                        <th>Status</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr>
-                                        <td>36664089</td>
-                                        <td>Oct 10, 2023</td>
-                                        <td>22786357</td>
-                                        <td>$1000</td>
-                                        <td>$900</td>
-                                        <td>$100</td>
-                                        <td><span class="badge badge-success">Paid</span>
-                                        </td>
-                                        <td>
-                                            <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>36664034</td>
-                                        <td>August 4, 2023</td>
-                                        <td>22786327</td>
-                                        <td>$4000</td>
-                                        <td>$300</td>
-                                        <td>$500</td>
-                                        <td><span class="badge badge-success">Paid</span>
-                                        </td>
-                                        <td>
-                                            <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>36664090</td>
-                                        <td>Sept 23, 2019</td>
-                                        <td>42786357</td>
-                                        <td>$9999</td>
-                                        <td>$0</td>
-                                        <td>$9999</td>
-                                        <td><span class="badge badge-danger">Unpaid</span>
-                                        </td>
-                                        <td>
-                                            <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
-                                            <a href="checkout.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Pay Now"><i class="fas fa-credit-card"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <div class="row">
-
-                                <div class="col-md-6">
-
-                                    <span>Showing 1 to 3 of 3 records</span>
-                                </div>
-
-                                <div class="col-md-6">
-
-                                    <ul class="pagination float-end">
-
-                                        <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-left"></i></a></li>
-
-                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
-
-                                        <li class="page-item"><a href="#" class="page-link">2</a></li>
-
-                                        <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-right"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        <h2 class="font-weight-normal text-7 mb-0"><strong class="font-weight-extra-bold">Invoice</strong> <span class="text-0 text-color-grey">#36664089</span></h2>
                     </div>
                 </div>
+
+                <div class="col-lg-6 order-1 order-lg-2 text-end">
+
+                    <div class="overflow-hidden mb-2 pb-1">
+
+                        <h4 class="mb-0 text-color-grey">Date: Oct 10, 2023</h4>
+                    </div>
+
+                    <div class="overflow-hidden mb-4">
+
+                        <h2 class="font-weight-normal text-7 mb-0 text-danger"><strong class="font-weight-extra-bold">UNPAID</strong></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-3">
+
+                <div class="col-lg-6">
+
+                    <h2 class="text-color-dark font-weight-bold text-5-5 mb-1">From</h2>
+
+                    <ul class="list list-unstyled text-2 mb-0">
+
+                        <li class="mb-0"><strong>Ladybird Web Solution Pvt Ltd</strong></li>
+
+                        <li class="mb-0">No:68, 1st Floor, 10th Main, 4th Cross, Indiranagar, 2nd Stage,</li>
+
+                        <li class="mb-0">Bangalore</li>
+
+                        <li class="mb-0">Karnataka 560038</li>
+
+                        <li class="mb-0">Country: India</li>
+
+                        <li class="mb-0">Mobile: <b>+</b>91 95133 12768</li>
+
+                        <li class="mb-0">Email: support@faveohelpdesk.com</li>
+
+                        <li class="mb-0 mt-2 text-4"><b class="text-dark">GSTIN:</b> #29AACCL8960H1Z2</li>
+
+                        <li class="mb-0 text-4"><b class="text-dark">CIN:</b> #U72200KA2015PTC081705</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 mb-4 mb-lg-0">
+
+                    <h2 class="text-color-dark font-weight-bold text-5-5 mb-1">To</h2>
+
+                    <ul class="list list-unstyled text-2 mb-0">
+
+                        <li class="mb-0"><strong>Sakthivel Munusami</strong></li>
+
+                        <li class="mb-0">Hennur Cross,Near Ganapathy Temple,Bangalore.</li>
+
+                        <li class="mb-0">Karnataka 560038</li>
+
+                        <li class="mb-0">Country : India</li>
+
+                        <li class="mb-0">Mobile: +91 9738581134</li>
+
+                        <li class="mb-0">Email : sakthivel.munusamy@ladybirdweb.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card p-3 mt-3">
+
+                <table class="table table-striped">
+
+                    <thead>
+                    <tr>
+                        <th>Order No</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>22786357</td>
+                        <td>Helpdesk Advance</td>
+                        <td>$109</td>
+                        <td>1</td>
+                        <td>$109</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="row">
+
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6 text-end">
+
+                        <table class="table h6 text-dark">
+
+                            <tbody>
+                            <tr>
+
+                                <th>Subtotal</th>
+
+                                <td>₹109</td>
+                            </tr>
+
+                            <tr>
+
+                                <th>Discount</th>
+
+                                <td>₹10</td>
+                            </tr>
+
+                            <tr class="h4">
+
+                                <th class="border-0">Total</th>
+
+                                <td class="border-0">₹99</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-3 mt-3">
+
+                <table class="table">
+
+                    <thead>
+                    <tr>
+                        <th>Transaction Date</th>
+                        <th>Method</th>
+                        <th>Transaction ID</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>Oct 10, 2023</td>
+                        <td>Razorpay</td>
+                        <td>36664089</td>
+                        <td>$10</td>
+                        <td><span class="badge badge-success badge-xs">Success</span></td>
+
+                    </tr>
+                    <tr>
+                        <td>Nov 10, 2021</td>
+                        <td>Razorpay</td>
+                        <td>36664090</td>
+                        <td>$99</td>
+                        <td><span class="badge badge-danger badge-xs">Fail</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-4">
+
+                <a href="javascript:;"  class="btn btn-light-scale-2 text-color-hover-primary text-dark float-end ms-2"><i class="fa fa-download"></i> Generate PDF</a>
+
+                <a href="javascript:;" class="btn btn-light-scale-2 text-color-hover-primary text-dark float-end"><i class="fas fa-print"></i> Print</a>
+
             </div>
         </div>
     </div>

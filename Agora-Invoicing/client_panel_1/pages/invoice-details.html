@@ -118,13 +118,12 @@
                                         <ul class="nav nav-pills">
                                             <li class="nav-item dropdown">
                                                 <a class="nav-link text-2 p-0 text-color-default" href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    English
+                                                    <img src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English
                                                     <i class="fas fa-angle-down"></i>
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-end text-2" aria-labelledby="dropdownLanguage" style="">
-                                                    <a class="dropdown-item text-color-default" href="#">English</a>
-                                                    <a class="dropdown-item text-color-default" href="#">Español</a>
-                                                    <a class="dropdown-item text-color-default" href="#">Française</a>
+                                                    <a class="dropdown-item text-color-default" href="#"><img src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English</a>
+                                                    <a class="dropdown-item text-color-default" href="#"><img src="../img/blank.gif" class="flag flag-ar" alt="Arabic">&nbsp;Arabic</a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -233,6 +232,10 @@
                                                         </a>
 
                                                         <ul class="dropdown-menu border-light mt-n1">
+
+                                                            <li>
+                                                                <a href="../index.html" class="dropdown-item">Dashboard</a>
+                                                            </li>
 
                                                             <li>
                                                                 <a href="orders.html" class="dropdown-item">My Orders</a>
@@ -485,6 +488,7 @@
 
                 <div class="row">
 
+                    <div class="col-sm-6"></div>
                     <div class="col-sm-6 text-end">
 
                         <table class="table h6 text-dark">
@@ -497,11 +501,18 @@
                                 <td>₹109</td>
                             </tr>
 
+                            <tr>
+
+                                <th>Discount</th>
+
+                                <td>₹10</td>
+                            </tr>
+
                             <tr class="h4">
 
                                 <th class="border-0">Total</th>
 
-                                <td class="border-0">₹109</td>
+                                <td class="border-0">₹99</td>
                             </tr>
                             </tbody>
                         </table>
@@ -515,28 +526,29 @@
 
                     <thead>
                     <tr>
-                        <th>Invoice No</th>
-                        <th>Total</th>
+                        <th>Transaction Date</th>
                         <th>Method</th>
+                        <th>Transaction ID</th>
+                        <th>Total</th>
                         <th>Status</th>
-                        <th>Created At</th>
                     </tr>
                     </thead>
 
                     <tbody>
                     <tr>
+                        <td>Oct 10, 2023</td>
+                        <td>Razorpay</td>
                         <td>36664089</td>
                         <td>$10</td>
-                        <td>Razorpay</td>
                         <td><span class="badge badge-success badge-xs">Success</span></td>
-                        <td>Oct 10, 2023</td>
+
                     </tr>
                     <tr>
+                        <td>Nov 10, 2021</td>
+                        <td>Razorpay</td>
                         <td>36664090</td>
                         <td>$99</td>
-                        <td>Razorpay</td>
                         <td><span class="badge badge-success badge-xs">Success</span></td>
-                        <td>Nov 10, 2021</td>
                     </tr>
                     </tbody>
                 </table>
