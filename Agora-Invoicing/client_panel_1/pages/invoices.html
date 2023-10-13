@@ -107,7 +107,25 @@
                                     </a>
                                 </div>
 
-                                <div class="ms-auto d-none d-lg-inline-block"></div>
+                                <div class="ms-auto d-none d-lg-inline-block">
+
+                                    <div class="ms-auto d-none d-lg-inline-block">
+
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link text-2 p-0 text-color-default" href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    English
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end text-2" aria-labelledby="dropdownLanguage" style="">
+                                                    <a class="dropdown-item text-color-default" href="#">English</a>
+                                                    <a class="dropdown-item text-color-default" href="#">Español</a>
+                                                    <a class="dropdown-item text-color-default" href="#">Française</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
 
                                 <div class="vr opacity-2 d-none d-lg-inline-block"></div>
 
@@ -117,7 +135,7 @@
 
                                         <li class="nav-item pe-2 mx-1">
 
-                                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" title="Facebook" class="text-color-default text-color-hover-primary text-4">
+                                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Facebook" class="text-color-default text-color-hover-primary text-4">
 
                                                 <i class="fab fa-facebook-f"></i>
                                             </a>
@@ -125,7 +143,7 @@
 
                                         <li class="nav-item px-2 mx-1">
 
-                                            <a href="https://twitter.com/faveohelpdesk" target="_blank" title="Twitter" class="text-color-default text-color-hover-primary text-4">
+                                            <a href="https://twitter.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Twitter" class="text-color-default text-color-hover-primary text-4">
 
                                                 <i class="fab fa-twitter"></i>
                                             </a>
@@ -134,7 +152,7 @@
 
                                         <li class="nav-item px-2 mx-1 me-0 pe-0">
 
-                                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" title="Linkedin" class="text-color-default text-color-hover-primary text-4">
+                                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Linkedin" class="text-color-default text-color-hover-primary text-4">
 
                                                 <i class="fab fa-linkedin-in"></i>
                                             </a>
@@ -260,7 +278,7 @@
 
                                                         <li class="item">
 
-                                                            <a href="#" title="Camera X1000" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
+                                                            <a href="#" data-bs-toggle="tooltip" title="Camera X1000" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
 
                                                             <div class="product-details">
 
@@ -274,7 +292,7 @@
                                                                     1X <span class="price">$99</span>
                                                                 </p>
 
-                                                                <a href="javascript:;" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
+                                                                <a href="javascript:;" data-bs-toggle="tooltip" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
                                                             </div>
                                                         </li>
                                                     </ol>
@@ -405,7 +423,7 @@
                                         <td><span class="badge badge-success">Paid</span>
                                         </td>
                                         <td>
-                                            <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" title="View"><i class="fas fa-eye"></i></a>
+                                            <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
                                         </td>
                                     </tr>
 
@@ -419,7 +437,7 @@
                                         <td><span class="badge badge-success">Paid</span>
                                         </td>
                                         <td>
-                                            <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" title="View"><i class="fas fa-eye"></i></a>
+                                            <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
                                         </td>
                                     </tr>
 
@@ -433,8 +451,8 @@
                                         <td><span class="badge badge-danger">Unpaid</span>
                                         </td>
                                         <td>
-                                            <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" title="View"><i class="fas fa-eye"></i></a>
-                                            <a href="checkout.html" class="btn btn-light-scale-2 btn-sm text-dark" title="Pay Now"><i class="fas fa-credit-card"></i></a>
+                                            <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
+                                            <a href="checkout.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Pay Now"><i class="fas fa-credit-card"></i></a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -462,174 +480,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
-
-            <div class="modal-dialog modal-lg">
-
-                <div class="modal-content">
-
-                    <div class="modal-header">
-
-                        <h4 class="modal-title" id="defaultModalLabel">Product Versions</h4>
-
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-
-                    <div class="modal-body">
-
-                        <div class="row">
-
-                            <div class="col-sm-8"></div>
-
-                            <div class="col-4 mb-3">
-
-                                <form role="search">
-
-                                    <div class="simple-search input-group w-auto">
-
-                                        <input class="form-control text-1 border-radius-2" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
-
-                                        <button class="btn border-radius-2" type="submit">
-
-                                            <i class="fa fa-search header-nav-top-icon"></i>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-                        <table class="table table-striped">
-
-                            <thead>
-                            <tr>
-                                <th>Version</th>
-                                <th>Title</th>
-                                <th>Description</th>
-                                <th>Action</th>
-                            </tr>
-                            </thead>
-
-                            <tbody>
-                            <tr>
-                                <td>V4.2.0</td>
-                                <td>Helpdesk Freelancer</td>
-                                <td>Helpdesk Freelancer</td>
-                                <td>
-                                    <a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" title="Download"><i class="fas fa-download"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>V4.2.0</td>
-                                <td>Helpdesk Advance</td>
-                                <td>Helpdesk Advance V4.2.0</td>
-                                <td>
-                                    <a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" title="Download"><i class="fas fa-download"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>V4.3.0</td>
-                                <td>Helpdesk Enterprise</td>
-                                <td>Helpdesk Enterprise</td>
-                                <td>
-                                    <a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" title="Download"><i class="fas fa-download"></i></a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="row">
-
-                            <div class="col-md-6">
-
-                                <span>Showing 1 to 3 of 3 records</span>
-                            </div>
-
-                            <div class="col-md-6">
-
-                                <ul class="pagination float-end">
-
-                                    <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-left"></i></a></li>
-
-                                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
-
-                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-
-                                    <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-right"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer">
-
-                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="renewModal" tabindex="-1" role="dialog" aria-labelledby="renewModalLabel" aria-hidden="true">
-
-            <div class="modal-dialog">
-
-                <div class="modal-content">
-
-                    <div class="modal-header">
-
-                        <h4 class="modal-title" id="renewModalLabel">Renew</h4>
-
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-
-                    <div class="modal-body">
-
-                        <form class="renew-form" action="" method="POST">
-
-                            <div class="contact-form-success alert alert-success d-none mt-4">
-                                <strong>Success!</strong> Your message has been sent to us.
-                            </div>
-
-                            <div class="contact-form-error alert alert-danger d-none mt-4">
-                                <strong>Error!</strong> There was an error sending your message.
-                                <span class="mail-error-message text-1 d-block"></span>
-                            </div>
-
-                            <div class="row">
-                                <div class="form-group col">
-                                    <label class="form-label">Plans <span class="text-danger"> *</span></label>
-                                    <div class="custom-select-1">
-                                        <select class="form-select form-control h-auto py-2" data-msg-required="Please select a city." name="city" required>
-                                            <option value="">Select</option>
-                                            <option value="1">Helpdesk Enterprise</option>
-                                            <option value="2">Helpdesk Startup</option>
-                                            <option value="3">Helpdesk Freelancer</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-
-                                <div class="form-group col">
-
-                                    <label class="form-label mb-1 text-2">Price</label>
-
-                                    <input type="text" disabled value="199" class="form-control text-3 h-auto py-2" name="price" required>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="modal-footer">
-
-                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
                     </div>
                 </div>
             </div>
@@ -671,7 +521,7 @@
 
                         <li class="social-icons-facebook">
 
-                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" title="Facebook">
+                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Facebook">
 
                                 <i class="fab fa-facebook-f text-color-grey-lighten"></i>
                             </a>
@@ -679,7 +529,7 @@
 
                         <li class="social-icons-twitter">
 
-                            <a href="https://twitter.com/faveohelpdesk" target="_blank" title="Twitter">
+                            <a href="https://twitter.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Twitter">
 
                                 <i class="fab fa-twitter text-color-grey-lighten"></i>
                             </a>
@@ -687,7 +537,7 @@
 
                         <li class="social-icons-linkedin">
 
-                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" title="Linkedin">
+                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Linkedin">
 
                                 <i class="fab fa-linkedin text-color-grey-lighten"></i>
                             </a>

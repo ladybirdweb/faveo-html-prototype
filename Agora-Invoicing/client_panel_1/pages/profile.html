@@ -115,7 +115,25 @@
                                     </a>
                                 </div>
 
-                                <div class="ms-auto d-none d-lg-inline-block"></div>
+                                <div class="ms-auto d-none d-lg-inline-block">
+
+                                    <div class="ms-auto d-none d-lg-inline-block">
+
+                                        <ul class="nav nav-pills">
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link text-2 p-0 text-color-default" href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    English
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end text-2" aria-labelledby="dropdownLanguage" style="">
+                                                    <a class="dropdown-item text-color-default" href="#">English</a>
+                                                    <a class="dropdown-item text-color-default" href="#">Español</a>
+                                                    <a class="dropdown-item text-color-default" href="#">Française</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
 
                                 <div class="vr opacity-2 d-none d-lg-inline-block"></div>
 
@@ -125,7 +143,7 @@
 
                                         <li class="nav-item pe-2 mx-1">
 
-                                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" title="Facebook" class="text-color-default text-color-hover-primary text-4">
+                                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Facebook" class="text-color-default text-color-hover-primary text-4">
 
                                                 <i class="fab fa-facebook-f"></i>
                                             </a>
@@ -133,7 +151,7 @@
 
                                         <li class="nav-item px-2 mx-1">
 
-                                            <a href="https://twitter.com/faveohelpdesk" target="_blank" title="Twitter" class="text-color-default text-color-hover-primary text-4">
+                                            <a href="https://twitter.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Twitter" class="text-color-default text-color-hover-primary text-4">
 
                                                 <i class="fab fa-twitter"></i>
                                             </a>
@@ -142,7 +160,7 @@
 
                                         <li class="nav-item px-2 mx-1 me-0 pe-0">
 
-                                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" title="Linkedin" class="text-color-default text-color-hover-primary text-4">
+                                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Linkedin" class="text-color-default text-color-hover-primary text-4">
 
                                                 <i class="fab fa-linkedin-in"></i>
                                             </a>
@@ -268,7 +286,7 @@
 
                                                         <li class="item">
 
-                                                            <a href="#" title="Helpdesk Enterprise Advance" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
+                                                            <a href="#" data-bs-toggle="tooltip" title="Helpdesk Enterprise Advance" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
 
                                                             <div class="product-details">
 
@@ -282,13 +300,13 @@
                                                                     1X <span class="price">$99</span>
                                                                 </p>
 
-                                                                <a href="javascript:;" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
+                                                                <a href="javascript:;" data-bs-toggle="tooltip" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
                                                             </div>
                                                         </li>
 
                                                         <li class="item">
 
-                                                            <a href="#" title="Faveo Helpdesk Freelancer" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
+                                                            <a href="#" data-bs-toggle="tooltip" title="Faveo Helpdesk Freelancer" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
 
                                                             <div class="product-details">
 
@@ -302,7 +320,7 @@
                                                                     1X <span class="price">$10</span>
                                                                 </p>
 
-                                                                <a href="javascript:;" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
+                                                                <a href="javascript:;" data-bs-toggle="tooltip" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
                                                             </div>
                                                         </li>
                                                     </ol>
@@ -376,227 +394,221 @@
             </section>
         </div>
 
-        <div class="container py-4">
+        <div class="container pt-3 pb-2">
 
-            <div class="row">
+            <div class="row pt-2">
 
-                <div class="col">
+                <div class="col-lg-3 mt-4 mt-lg-0">
 
-                    <div class="row">
+                    <div class="d-flex justify-content-center mb-4" id="profile_img">
 
-                        <div class="col-lg-4">
+                        <div class="profile-image-outer-container">
 
-                            <div class="tabs tabs-vertical tabs-right tabs-navigation tabs-navigation-simple">
+                            <div class="profile-image-inner-container bg-color-primary">
 
-                                <ul class="nav nav-tabs col-sm-3" role="tablist">
+                                <img src="../img/avatars/avatar.jpg">
 
-                                    <li class="nav-item active" role="presentation">
-                                        <a class="nav-link text-dark text-color-hover-primary active" href="#profile" data-bs-toggle="tab" aria-selected="true" role="tab">
-                                            <i class="fas fa-user"></i> Edit Profile
-                                        </a>
-                                    </li>
+                                <span class="profile-image-button bg-color-dark">
 
-                                    <li class="nav-item" role="presentation">
-                                        <a class="nav-link text-dark text-color-hover-primary" href="#password" data-bs-toggle="tab" aria-selected="true" role="tab">
-                                            <i class="fas fa-key"></i> Change Password
-                                        </a>
-                                    </li>
+                                    <i class="fas fa-camera text-light"></i>
+                                </span>
+                            </div>
 
-                                    <li class="nav-item" role="presentation">
-                                        <a class="nav-link text-dark text-color-hover-primary" href="#twofa" data-bs-toggle="tab" aria-selected="true" role="tab">
-                                            <i class="fas fa-lock"></i> Setup 2 Step Verification
-                                        </a>
-                                    </li>
-                                </ul>
+                            <input type="file" id="file" class="form-control profile-image-input">
+                        </div>
+                    </div>
+
+                    <aside class="sidebar mt-2 mb-5">
+
+                        <ul class="nav nav-list flex-column">
+
+                            <li class="nav-item">
+
+                                <a class="nav-link active" id="profile_detail" href="#profile" data-bs-toggle="tab" data-hash data-hash-offset="0" data-hash-offset-lg="120" data-hash-delay="500">My Profile</a>
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a class="nav-link" id="change_password" href="#password" data-bs-toggle="tab" data-hash data-hash-offset="0" data-hash-offset-lg="120" data-hash-delay="500">Change Password</a>
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a class="nav-link" id="two_fa" href="#twofa" data-bs-toggle="tab" data-hash data-hash-offset="0" data-hash-offset-lg="120" data-hash-delay="500">Setup 2 Step Verification</a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+
+                <div class="col-lg-9">
+
+                    <div class="tab-pane tab-pane-navigation active" id="profile" role="tabpanel">
+
+                        <div class="row">
+
+                            <div class="col-lg-12 order-1 order-lg-2">
+
+                                <form role="form" class="needs-validation" novalidate="novalidate">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">First name</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control text-3 h-auto py-2" type="text" name="firstName" value="John" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Last name</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control text-3 h-auto py-2" type="text" name="lastName" value="Doe" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Email</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control text-3 h-auto py-2" type="email" name="email" value="email@gmail.com" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Company</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control text-3 h-auto py-2" type="text" name="company" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Website</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control text-3 h-auto py-2" type="url" name="website" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Address</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control text-3 h-auto py-2" type="text" name="address" value="" placeholder="Street">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2"></label>
+                                        <div class="col-lg-6">
+                                            <input class="form-control text-3 h-auto py-2" type="text" name="city" value="" placeholder="City">
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <input class="form-control text-3 h-auto py-2" type="text" name="state" value="" placeholder="State">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Time Zone</label>
+                                        <div class="col-lg-9">
+                                            <div class="custom-select-1">
+                                                <select id="user_time_zone" class="form-control text-3 h-auto py-2" name="timeZone" size="0">
+                                                    <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                                                    <option value="Alaska">(GMT-09:00) Alaska</option>
+                                                    <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                                                    <option value="Arizona">(GMT-07:00) Arizona</option>
+                                                    <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                                                    <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                                                    <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                                                    <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Username</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control text-3 h-auto py-2" type="text" name="username" value="" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Password</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control text-3 h-auto py-2" type="password" name="password" value="" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Confirm password</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control text-3 h-auto py-2" type="password" name="confirmPassword" value="" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="form-group col-lg-9">
+
+                                        </div>
+                                        <div class="form-group col-lg-3">
+                                            <button type="button" class="btn btn-light-scale-2 text-black font-weight-bold text-3 text-color-hover-primary btn-modern float-end" data-loading-text="Loading...">Update</button>
+                                        </div>
+                                    </div>
+                                </form>
+
                             </div>
                         </div>
 
-                        <div class="col-lg-8">
+                    </div>
 
-                            <div class="tab-pane tab-pane-navigation active" id="profile" role="tabpanel">
+                    <div class="tab-pane tab-pane-navigation" id="password" role="tabpanel">
 
-                                <div class="row">
+                        <div class="row">
 
-                                    <div class="col-lg-12 order-1 order-lg-2">
+                            <div class="col-lg-12 order-1 order-lg-2">
 
-                                        <div class="overflow-hidden mb-1">
-                                            <h2 class="font-weight-normal text-7 mb-0"><strong class="font-weight-extra-bold">User</strong> Profile</h2>
+                                <form role="form" class="needs-validation" novalidate="novalidate">
+
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Password</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control text-3 h-auto py-2" type="password" name="password" value="" required="">
                                         </div>
-
-                                        <form role="form" class="needs-validation" novalidate="novalidate">
-                                            <div class="form-group row">
-                                                <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">First name</label>
-                                                <div class="col-lg-9">
-                                                    <input class="form-control text-3 h-auto py-2" type="text" name="firstName" value="John" required="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Last name</label>
-                                                <div class="col-lg-9">
-                                                    <input class="form-control text-3 h-auto py-2" type="text" name="lastName" value="Doe" required="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Email</label>
-                                                <div class="col-lg-9">
-                                                    <input class="form-control text-3 h-auto py-2" type="email" name="email" value="email@gmail.com" required="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Company</label>
-                                                <div class="col-lg-9">
-                                                    <input class="form-control text-3 h-auto py-2" type="text" name="company" value="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Website</label>
-                                                <div class="col-lg-9">
-                                                    <input class="form-control text-3 h-auto py-2" type="url" name="website" value="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Address</label>
-                                                <div class="col-lg-9">
-                                                    <input class="form-control text-3 h-auto py-2" type="text" name="address" value="" placeholder="Street">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2"></label>
-                                                <div class="col-lg-6">
-                                                    <input class="form-control text-3 h-auto py-2" type="text" name="city" value="" placeholder="City">
-                                                </div>
-                                                <div class="col-lg-3">
-                                                    <input class="form-control text-3 h-auto py-2" type="text" name="state" value="" placeholder="State">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Time Zone</label>
-                                                <div class="col-lg-9">
-                                                    <div class="custom-select-1">
-                                                        <select id="user_time_zone" class="form-control text-3 h-auto py-2" name="timeZone" size="0">
-                                                            <option value="Hawaii">(GMT-10:00) Hawaii</option>
-                                                            <option value="Alaska">(GMT-09:00) Alaska</option>
-                                                            <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
-                                                            <option value="Arizona">(GMT-07:00) Arizona</option>
-                                                            <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
-                                                            <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
-                                                            <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
-                                                            <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Username</label>
-                                                <div class="col-lg-9">
-                                                    <input class="form-control text-3 h-auto py-2" type="text" name="username" value="" required="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Password</label>
-                                                <div class="col-lg-9">
-                                                    <input class="form-control text-3 h-auto py-2" type="password" name="password" value="" required="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Confirm password</label>
-                                                <div class="col-lg-9">
-                                                    <input class="form-control text-3 h-auto py-2" type="password" name="confirmPassword" value="" required="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <div class="form-group col-lg-9">
-
-                                                </div>
-                                                <div class="form-group col-lg-3">
-                                                    <button type="button" class="btn btn-light-scale-2 text-black font-weight-bold text-3 text-color-hover-primary btn-modern float-end" data-loading-text="Loading...">Update</button>
-                                                </div>
-                                            </div>
-                                        </form>
-
                                     </div>
-                                </div>
 
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">New Password</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control text-3 h-auto py-2" type="password" name="newpassword" value="" required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Confirm password</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control text-3 h-auto py-2" type="password" name="confirmPassword" value="" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="form-group col-lg-9">
+
+                                        </div>
+                                        <div class="form-group col-lg-3">
+                                            <button type="button" class="btn btn-light-scale-2 text-black font-weight-bold text-3 text-color-hover-primary btn-modern float-end" data-loading-text="Loading...">Update</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="tab-pane tab-pane-navigation" id="password" role="tabpanel">
+                    <div class="tab-pane tab-pane-navigation" id="twofa" role="tabpanel">
 
-                                <div class="row">
+                        <div class="row pt-5">
 
-                                    <div class="col-lg-12 order-1 order-lg-2">
+                            <div class="d-flex">
 
-                                        <div class="overflow-hidden mb-1">
+                                <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 mt-2">
 
-                                            <h2 class="font-weight-normal text-7 mb-0"><strong class="font-weight-extra-bold">Change</strong> Password</h2>
-                                        </div>
+                                    <img src="https://billing.faveohelpdesk.com/storage/common/images/authenticator.png" alt="Authenticator" style="margin-top: -6px!important;height:26px;" class="img-responsive img-circle img-sm">
 
-                                        <form role="form" class="needs-validation" novalidate="novalidate">
-
-                                            <div class="form-group row">
-                                                <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Password</label>
-                                                <div class="col-lg-9">
-                                                    <input class="form-control text-3 h-auto py-2" type="password" name="password" value="" required="">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row">
-                                                <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">New Password</label>
-                                                <div class="col-lg-9">
-                                                    <input class="form-control text-3 h-auto py-2" type="password" name="newpassword" value="" required="">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row">
-                                                <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Confirm password</label>
-                                                <div class="col-lg-9">
-                                                    <input class="form-control text-3 h-auto py-2" type="password" name="confirmPassword" value="" required="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <div class="form-group col-lg-9">
-
-                                                </div>
-                                                <div class="form-group col-lg-3">
-                                                    <button type="button" class="btn btn-light-scale-2 text-black font-weight-bold text-3 text-color-hover-primary btn-modern float-end" data-loading-text="Loading...">Update</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane tab-pane-navigation" id="twofa" role="tabpanel">
-
-                                <div class="overflow-hidden mb-1">
-
-                                    <h2 class="font-weight-normal text-7 mb-0"><strong class="font-weight-extra-bold">Setup</strong> Authenticator</h2>
+                                    <span class="">Authenticator App</span>
                                 </div>
 
-                                <div class="row align-items-center">
+                                <div class="form-check form-switch">
 
-                                    <div class="col-sm-5">
+                                    <input id="two_fa_switch" class="form-check-input" style="padding-right: 2rem;padding-left: 2rem;padding-top: 1rem!important;padding-bottom: 1rem!important;" type="checkbox" role="switch">
 
-                                        <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
-
-                                            <img src="https://billing.faveohelpdesk.com/storage/common/images/authenticator.png" alt="Authenticator" style="margin-top: -6px!important;height:26px;" class="img-responsive img-circle img-sm">
-
-                                            <span class="mb-2 font-weight-bold">Authenticator App</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-7">
-
-                                        <div class="form-check form-switch">
-
-                                            <a data-bs-toggle="modal" data-bs-target="#twoFaModal"><input class="form-check-input py-3" style="padding-right: 2rem; padding-left: 2rem;" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked></a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
 
         <div class="modal fade" id="twoFaModal" tabindex="-1" role="dialog" aria-labelledby="twoFaModalLabel" aria-hidden="true">
@@ -671,7 +683,7 @@
 
                         <li class="social-icons-facebook">
 
-                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" title="Facebook">
+                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Facebook">
 
                                 <i class="fab fa-facebook-f text-color-grey-lighten"></i>
                             </a>
@@ -679,7 +691,7 @@
 
                         <li class="social-icons-twitter">
 
-                            <a href="https://twitter.com/faveohelpdesk" target="_blank" title="Twitter">
+                            <a href="https://twitter.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Twitter">
 
                                 <i class="fab fa-twitter text-color-grey-lighten"></i>
                             </a>
@@ -687,7 +699,7 @@
 
                         <li class="social-icons-linkedin">
 
-                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" title="Linkedin">
+                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Linkedin">
 
                                 <i class="fab fa-linkedin text-color-grey-lighten"></i>
                             </a>
@@ -815,6 +827,40 @@
 <!-- Theme Initialization Files -->
 <script src="../js/theme.init.js"></script>
 
+<script>
+    let img_element = document.getElementById('profile_img');
+    let data_btn = document.getElementById('profile_detail');
+    let pass_btn = document.getElementById('change_password');
+    let fa_btn = document.getElementById('two_fa');
 
+    data_btn.addEventListener('click', function (){
+        toggleImageVisibility(true);
+    })
+
+    pass_btn.addEventListener('click', function (){
+        toggleImageVisibility(false);
+    })
+
+    fa_btn.addEventListener('click', function (){
+        toggleImageVisibility(false);
+    })
+
+    function toggleImageVisibility(show) {
+        img_element.classList.toggle('d-flex', show);
+        img_element.classList.toggle('d-none', !show);
+    }
+
+    const twoFaModal = document.getElementById('twoFaModal');
+
+    const twoFaCheck = document.getElementById('two_fa_switch');
+
+    twoFaCheck.addEventListener('change', function() {
+
+        if (twoFaCheck.checked) {
+
+            $(twoFaModal).modal('show');
+        }
+    });
+</script>
 </body>
 </html>
