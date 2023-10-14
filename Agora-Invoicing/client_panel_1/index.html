@@ -731,7 +731,7 @@
 
                                     <div class="modal-header">
 
-                                        <h4 class="modal-title" id="renewModalLabel">Renew</h4>
+                                        <h4 class="modal-title" id="renewModalLabel">Renew your order</h4>
 
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
                                     </div>
@@ -749,6 +749,10 @@
                                                 <span class="mail-error-message text-1 d-block"></span>
                                             </div>
 
+                                            <p><strong>Current number of agents:</strong> 10</p>
+
+                                            <p><strong>Current plan:</strong> Faveo helpdesk</p>
+
                                             <div class="row">
                                                 <div class="form-group col">
                                                     <label class="form-label">Plans <span class="text-danger"> *</span></label>
@@ -764,14 +768,21 @@
                                             </div>
 
                                             <div class="row">
-
                                                 <div class="form-group col">
-
-                                                    <label class="form-label mb-1 text-2">Price</label>
-
-                                                    <input type="text" disabled value="199" class="form-control text-3 h-auto py-2" name="price" required>
+                                                    <label class="form-label">Agents <span class="text-danger"> *</span></label>
+                                                    <div class="custom-select-1">
+                                                        <select class="form-select form-control h-auto py-2" data-msg-required="Please select a city." name="city" required>
+                                                            <option value="">Select</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
+
+                                            <p><strong>Price to be paid:</strong> $10000</p>
+
                                         </form>
                                     </div>
 
