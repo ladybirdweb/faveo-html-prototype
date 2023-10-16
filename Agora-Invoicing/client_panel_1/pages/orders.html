@@ -32,10 +32,15 @@
     <link rel="stylesheet" href="../vendor/magnific-popup/magnific-popup.min.css">
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="../css/theme.css">
-    <link rel="stylesheet" href="../css/theme-elements.css">
-    <link rel="stylesheet" href="../css/theme-blog.css">
-    <link rel="stylesheet" href="../css/theme-shop.css">
+    <link id="default-styles" rel="stylesheet" href="../css/theme.css">
+    <link id="default-styles-2" rel="stylesheet" href="../css/theme-elements.css">
+    <link id="default-styles-3" rel="stylesheet" href="../css/theme-blog.css">
+    <link id="default-styles-4" rel="stylesheet" href="../css/theme-shop.css">
+
+    <link id="rtl-styles" rel="stylesheet" href="../css/rtl-theme.css">
+    <link id="rtl-styles-2" rel="stylesheet" href="../css/rtl-theme-elements.css">
+    <link id="rtl-styles-3" rel="stylesheet" href="../css/rtl-theme-blog.css">
+    <link id="rtl-styles-4" rel="stylesheet" href="../css/rtl-theme-shop.css">
 
     <!-- Demo CSS -->
     <link rel="stylesheet" href="../css/demos/demo-transportation-logistic.css">
@@ -107,7 +112,37 @@
                                     </a>
                                 </div>
 
-                                <div class="ms-auto d-none d-lg-inline-block"></div>
+                                <div class="ms-auto d-none d-lg-inline-block">
+
+                                    <div class="ms-auto d-none d-lg-inline-block">
+
+                                        <ul class="nav nav-pills">
+
+                                            <li class="nav-item dropdown">
+
+                                                <a class="nav-link text-2 p-0 text-color-default" href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                                    <img id="flagIcon" src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English
+
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+
+                                                <div class="dropdown-menu dropdown-menu-end text-2" aria-labelledby="dropdownLanguage">
+
+                                                    <a class="dropdown-item text-color-default" href="#" id="englishOption">
+
+                                                        <img src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English
+                                                    </a>
+
+                                                    <a class="dropdown-item text-color-default" href="#" id="arabicOption">
+
+                                                        <img src="../img/blank.gif" class="flag flag-ar" alt="Arabic">&nbsp;Arabic
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
 
                                 <div class="vr opacity-2 d-none d-lg-inline-block"></div>
 
@@ -117,7 +152,7 @@
 
                                         <li class="nav-item pe-2 mx-1">
 
-                                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" title="Facebook" class="text-color-default text-color-hover-primary text-4">
+                                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Facebook" class="text-color-default text-color-hover-primary text-4">
 
                                                 <i class="fab fa-facebook-f"></i>
                                             </a>
@@ -125,7 +160,7 @@
 
                                         <li class="nav-item px-2 mx-1">
 
-                                            <a href="https://twitter.com/faveohelpdesk" target="_blank" title="Twitter" class="text-color-default text-color-hover-primary text-4">
+                                            <a href="https://twitter.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Twitter" class="text-color-default text-color-hover-primary text-4">
 
                                                 <i class="fab fa-twitter"></i>
                                             </a>
@@ -134,7 +169,7 @@
 
                                         <li class="nav-item px-2 mx-1 me-0 pe-0">
 
-                                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" title="Linkedin" class="text-color-default text-color-hover-primary text-4">
+                                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Linkedin" class="text-color-default text-color-hover-primary text-4">
 
                                                 <i class="fab fa-linkedin-in"></i>
                                             </a>
@@ -169,7 +204,7 @@
                                                     <li class="dropdown">
 
                                                         <a class="nav-link dropdown-toggle" href="javascript:;">
-                                                            Store
+                                                            &nbsp;Store&nbsp;
                                                         </a>
 
                                                         <ul class="dropdown-menu border-light mt-n1">
@@ -207,10 +242,14 @@
                                                     <li class="dropdown">
 
                                                         <a class="nav-link dropdown-toggle active" href="javascript:;">
-                                                            My Account
+                                                            &nbsp;My Account&nbsp;
                                                         </a>
 
                                                         <ul class="dropdown-menu border-light mt-n1">
+
+                                                            <li>
+                                                                <a href="../index.html" class="dropdown-item">Dashboard</a>
+                                                            </li>
 
                                                             <li>
                                                                 <a href="orders.html" class="dropdown-item">My Orders</a>
@@ -260,7 +299,7 @@
 
                                                         <li class="item">
 
-                                                            <a href="#" title="Camera X1000" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
+                                                            <a href="#" data-bs-toggle="tooltip" title="Camera X1000" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
 
                                                             <div class="product-details">
 
@@ -274,7 +313,7 @@
                                                                     1X <span class="price">$99</span>
                                                                 </p>
 
-                                                                <a href="javascript:;" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
+                                                                <a href="javascript:;" data-bs-toggle="tooltip" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
                                                             </div>
                                                         </li>
                                                     </ol>
@@ -348,298 +387,701 @@
             </section>
         </div>
 
-        <div id="examples" class="container py-4">
+        <div id="" class="container py-4">
 
-            <div class="row">
+            <div class="row pt-2">
 
-                <div class="col">
+                <div class="col-lg-3 mt-4 mt-lg-0">
 
-                    <div class="row">
+                    <aside class="sidebar mt-2 mb-5">
 
-                        <div class="col pb-3">
+                        <ul class="nav nav-list flex-column">
+
+                            <li class="nav-item">
+
+                                <a class="nav-link" href="#dashboard" data-bs-toggle="tab" data-hash data-hash-offset="0" data-hash-offset-lg="120" data-hash-delay="500">Dashboard</a>
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a class="nav-link active" href="#orders" data-bs-toggle="tab" data-hash data-hash-offset="0" data-hash-offset-lg="120" data-hash-delay="500">My Orders</a>
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a class="nav-link" href="#invoices" data-bs-toggle="tab" data-hash data-hash-offset="0" data-hash-offset-lg="120" data-hash-delay="500">My Invoices</a>
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a class="nav-link" href="#profile" data-bs-toggle="tab" data-hash data-hash-offset="0" data-hash-offset-lg="120" data-hash-delay="500">My Profile</a>
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a class="nav-link" href="javascript:;">Logout</a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+
+                <div class="col-lg-9">
+
+                    <div class="tab-pane tab-pane-navigation" id="dashboard" role="tabpanel">
+
+                        <div class="row counters with-borders">
+
+                            <div class="col-sm-4 mb-4 mb-lg-0">
+
+                                <a href="invoices.html" class="text-decoration-none">
+
+                                    <div class="card border-1 bg-color-grey">
+
+                                        <div class="card-body p-2">
+
+                                            <div class="row">
+
+                                                <div class="col-sm-4 pt-4 ps-4">
+
+                                                    <i class="icon-user-following icons text-color-grey text-10"></i>
+                                                </div>
+
+                                                <div class="col-sm-8">
+
+                                                    <strong class="text-8 text-color-grey text-end me-2" data-to="8">8</strong>
+                                                </div>
+                                            </div>
+
+                                            <h4 class="card-title mb-2 ps-2 mt-2 text-4 font-weight-bold">PENDING INVOICES</h4>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+
+                            <div class="col-sm-4 mb-4 mb-lg-0">
+
+                                <a href="orders.html" class="text-decoration-none">
+
+                                    <div class="card border-1 bg-color-grey">
+
+                                        <div class="card-body p-2">
+
+                                            <div class="row">
+
+                                                <div class="col-sm-4 pt-4 ps-4">
+
+                                                    <i class="icon-check icons text-color-grey text-10"></i>
+                                                </div>
+
+                                                <div class="col-sm-8">
+
+                                                    <strong class="text-8 text-color-grey text-end me-2" data-to="9999">9999</strong>
+                                                </div>
+                                            </div>
+
+                                            <h4 class="card-title mb-2 ps-2 mt-2 text-4 font-weight-bold">ORDERS</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-4 mb-4 mb-lg-0">
+
+                                <a href="orders.html" class="text-decoration-none">
+
+                                    <div class="card border-1 bg-color-grey">
+
+                                        <div class="card-body p-2">
+
+                                            <div class="row">
+
+                                                <div class="col-sm-4 pt-4 ps-4">
+
+                                                    <i class="icon-reload icons text-color-grey text-10"></i>
+                                                </div>
+
+                                                <div class="col-sm-8">
+
+                                                    <strong class="text-8 text-color-grey text-end me-2" data-to="178">178</strong>
+                                                </div>
+                                            </div>
+
+                                            <h4 class="card-title mb-2 ps-2 mt-2 text-4 font-weight-bold">ORDER RENEWALS</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!--                            <div class="col-sm-4 mb-4 mb-lg-0">-->
+
+                            <!--                                <div class="counter counter-side-icon counter-primary">-->
+
+                            <!--                                    <i class="fas fa-sync-alt mb-4 text-color-grey" style="font-size: 40px;"></i>-->
+
+                            <!--                                    <strong class="text-8 text-primary ms-3" data-to="4999">4999</strong>-->
+
+                            <!--                                    <label class="font-weight-bold text-4 text-black">ORDER RENEWALS</label>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
+                        </div>
+                    </div>
+
+                    <div class="tab-pane tab-pane-navigation active" id="orders" role="tabpanel">
+
+                        <div id="example" class="container py-4">
 
                             <div class="row">
 
-                                <div class="col-sm-8"></div>
+                                <div class="col">
 
-                                <div class="col-4 mb-3">
+                                    <div class="row">
 
-                                    <form role="search">
+                                        <div class="col pb-3">
 
-                                        <div class="simple-search input-group w-auto">
+                                            <div class="row">
 
-                                            <input class="form-control text-1 border-radius-2" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
+                                                <div class="col-sm-8"></div>
 
-                                            <button class="btn border-radius-2" type="submit">
+                                                <div class="col-4 mb-3">
 
-                                                <i class="fa fa-search header-nav-top-icon"></i>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                                                    <form role="search">
 
-                            <table class="table table-striped table-bordered">
+                                                        <div class="simple-search input-group w-auto">
 
-                                <thead>
-                                    <tr>
-                                        <th>S.No</th>
-                                        <th>Product Name</th>
-                                        <th>Date</th>
-                                        <th>Order No</th>
-                                        <th>Version</th>
-                                        <th>Updates Expiry Date</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
+                                                            <input class="form-control text-1 border-radius-2" id="headerSearchs" name="q" type="search" value="" placeholder="Search...">
 
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Helpdesk Freelancer </td>
-                                        <td>Oct 10, 2023</td>
-                                        <td>22786357</td>
-                                        <td>
+                                                            <button class="btn border-radius-2" type="submit">
+
+                                                                <i class="fa fa-search header-nav-top-icon"></i>
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                            <table class="table table-striped table-bordered">
+
+                                                <thead>
+                                                <tr>
+                                                    <th>S.No</th>
+                                                    <th>Product Name</th>
+                                                    <th>Date</th>
+                                                    <th>Order No</th>
+                                                    <th>Version</th>
+                                                    <th>Updates Expiry Date</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Helpdesk Freelancer </td>
+                                                    <td>Oct 10, 2023</td>
+                                                    <td>22786357</td>
+                                                    <td>
                                             <span class="badge badge-success">
                                                 <label></label>v7.1.4
                                             </span>
-                                        </td>
-                                        <td>Oct 9, 2024</td>
-                                        <td>
-                                            <a href="order-details.html" class="btn btn-light-scale-2 btn-sm text-dark" title="View"><i class="fas fa-eye"></i></a>
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#downloadModal" class="btn btn-light-scale-2 btn-sm text-dark" title="Download"><i class="fas fa-download"></i></a>
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#renewModal" class="btn btn-light-scale-2 btn-sm text-dark" title="Renew"><i class="fas fa-sync-alt"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Helpdesk Enterprise</td>
-                                        <td>Oct 1, 2023</td>
-                                        <td>22786357</td>
-                                        <td>
+                                                    </td>
+                                                    <td>Oct 9, 2024</td>
+                                                    <td>
+                                                        <a href="order-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
+                                                        <span data-bs-toggle="modal" data-bs-target="#downloadModal"><a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Download"><i class="fas fa-download"></i></a></span>
+                                                        <span data-bs-toggle="modal" data-bs-target="#renewModal"><a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Renew"><i class="fas fa-sync-alt"></i></a></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Helpdesk Enterprise</td>
+                                                    <td>Oct 1, 2023</td>
+                                                    <td>22786357</td>
+                                                    <td>
                                             <span class="badge badge-success">
                                                 <label></label>v7.1.3
                                             </span>
-                                        </td>
-                                        <td>Sept 30, 2024</td>
-                                        <td>
-                                            <a href="order-details.html" class="btn btn-light-scale-2 btn-sm text-dark" title="View"><i class="fas fa-eye"></i></a>
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#downloadModal" class="btn btn-light-scale-2 btn-sm text-dark" title="Download"><i class="fas fa-download"></i></a>
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#renewModal" class="btn btn-light-scale-2 btn-sm text-dark" title="Renew"><i class="fas fa-sync-alt"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Helpdesk Advance</td>
-                                        <td>Nov 1, 2022</td>
-                                        <td>12786357</td>
-                                        <td>
+                                                    </td>
+                                                    <td>Sept 30, 2024</td>
+                                                    <td>
+                                                        <a href="order-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
+                                                        <span data-bs-toggle="modal" data-bs-target="#downloadModal" ><a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Download"><i class="fas fa-download"></i></a></span>
+                                                        <span data-bs-toggle="modal" data-bs-target="#renewModal"><a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Renew"><i class="fas fa-sync-alt"></i></a></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Helpdesk Advance</td>
+                                                    <td>Nov 1, 2022</td>
+                                                    <td>12786357</td>
+                                                    <td>
                                             <span class="badge badge-warning">
                                                 <label></label>v3.2.0
                                             </span>
-                                        </td>
-                                        <td>Dec 30, 2023&nbsp;<span class="badge badge-danger">Expired</span></td>
-                                        <td>
-                                            <a href="order-details.html" class="btn btn-light-scale-2 btn-sm text-dark" title="View"><i class="fas fa-eye"></i></a>
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#downloadModal" class="btn btn-light-scale-2 btn-sm text-dark" title="Download"><i class="fas fa-download"></i></a>
-                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#renewModal" class="btn btn-light-scale-2 btn-sm text-dark" title="Renew"><i class="fas fa-sync-alt"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                                    </td>
+                                                    <td>Dec 30, 2023&nbsp;<span class="badge badge-danger">Expired</span></td>
+                                                    <td>
+                                                        <a href="order-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
+                                                        <span data-bs-toggle="modal" data-bs-target="#downloadModal" ><a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Download"><i class="fas fa-download"></i></a></span>
+                                                        <span data-bs-toggle="modal" data-bs-target="#renewModal"><a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Renew"><i class="fas fa-sync-alt"></i></a></span>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
 
-                            <div class="row">
+                                            <div class="row">
 
-                                <div class="col-md-6">
+                                                <div class="col-md-6">
 
-                                    <span>Showing 1 to 3 of 3 records</span>
-                                </div>
+                                                    <span>Showing 1 to 3 of 3 records</span>
+                                                </div>
 
-                                <div class="col-md-6">
+                                                <div class="col-md-6">
 
-                                    <ul class="pagination float-end">
+                                                    <ul class="pagination float-end">
 
-                                        <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                                                        <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-left"></i></a></li>
 
-                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
 
-                                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                                        <li class="page-item"><a href="#" class="page-link">2</a></li>
 
-                                        <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-right"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
-
-            <div class="modal-dialog modal-lg">
-
-                <div class="modal-content">
-
-                    <div class="modal-header">
-
-                        <h4 class="modal-title" id="defaultModalLabel">Product Versions</h4>
-
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-
-                    <div class="modal-body">
-
-                        <div class="row">
-
-                            <div class="col-sm-8"></div>
-
-                            <div class="col-4 mb-3">
-
-                                <form role="search">
-
-                                    <div class="simple-search input-group w-auto">
-
-                                        <input class="form-control text-1 border-radius-2" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
-
-                                        <button class="btn border-radius-2" type="submit">
-
-                                            <i class="fa fa-search header-nav-top-icon"></i>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-                        <table class="table table-striped">
-
-                            <thead>
-                            <tr>
-                                <th>Version</th>
-                                <th>Title</th>
-                                <th>Description</th>
-                                <th>Action</th>
-                            </tr>
-                            </thead>
-
-                            <tbody>
-                            <tr>
-                                <td>V4.2.0</td>
-                                <td>Helpdesk Freelancer</td>
-                                <td>Helpdesk Freelancer</td>
-                                <td>
-                                    <a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" title="Download"><i class="fas fa-download"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>V4.2.0</td>
-                                <td>Helpdesk Advance</td>
-                                <td>Helpdesk Advance V4.2.0</td>
-                                <td>
-                                    <a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" title="Download"><i class="fas fa-download"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>V4.3.0</td>
-                                <td>Helpdesk Enterprise</td>
-                                <td>Helpdesk Enterprise</td>
-                                <td>
-                                    <a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" title="Download"><i class="fas fa-download"></i></a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="row">
-
-                            <div class="col-md-6">
-
-                                <span>Showing 1 to 3 of 3 records</span>
-                            </div>
-
-                            <div class="col-md-6">
-
-                                <ul class="pagination float-end">
-
-                                    <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-left"></i></a></li>
-
-                                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
-
-                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-
-                                    <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-right"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer">
-
-                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="renewModal" tabindex="-1" role="dialog" aria-labelledby="renewModalLabel" aria-hidden="true">
-
-            <div class="modal-dialog">
-
-                <div class="modal-content">
-
-                    <div class="modal-header">
-
-                        <h4 class="modal-title" id="renewModalLabel">Renew</h4>
-
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-
-                    <div class="modal-body">
-
-                        <form class="renew-form" action="" method="POST">
-
-                            <div class="contact-form-success alert alert-success d-none mt-4">
-                                <strong>Success!</strong> Your message has been sent to us.
-                            </div>
-
-                            <div class="contact-form-error alert alert-danger d-none mt-4">
-                                <strong>Error!</strong> There was an error sending your message.
-                                <span class="mail-error-message text-1 d-block"></span>
-                            </div>
-
-                            <div class="row">
-                                <div class="form-group col">
-                                    <label class="form-label">Plans <span class="text-danger"> *</span></label>
-                                    <div class="custom-select-1">
-                                        <select class="form-select form-control h-auto py-2" data-msg-required="Please select a city." name="city" required>
-                                            <option value="">Select</option>
-                                            <option value="1">Helpdesk Enterprise</option>
-                                            <option value="2">Helpdesk Startup</option>
-                                            <option value="3">Helpdesk Freelancer</option>
-                                        </select>
+                                                        <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+
+                            <div class="modal-dialog modal-lg">
+
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+
+                                        <h4 class="modal-title" id="defaultModalLabel">Product Versions</h4>
+
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+                                    </div>
+
+                                    <div class="modal-body">
+
+                                        <div class="row">
+
+                                            <div class="col-sm-8"></div>
+
+                                            <div class="col-4 mb-3">
+
+                                                <form role="search">
+
+                                                    <div class="simple-search input-group w-auto">
+
+                                                        <input class="form-control text-1 border-radius-2" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
+
+                                                        <button class="btn border-radius-2" type="submit">
+
+                                                            <i class="fa fa-search header-nav-top-icon"></i>
+                                                        </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <table class="table table-striped">
+
+                                            <thead>
+                                            <tr>
+                                                <th>Version</th>
+                                                <th>Title</th>
+                                                <th>Description</th>
+                                                <th>Action</th>
+                                            </tr>
+                                            </thead>
+
+                                            <tbody>
+                                            <tr>
+                                                <td>V4.2.0</td>
+                                                <td>Helpdesk Freelancer</td>
+                                                <td>Helpdesk Freelancer</td>
+                                                <td>
+                                                    <a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Download"><i class="fas fa-download"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>V4.2.0</td>
+                                                <td>Helpdesk Advance</td>
+                                                <td>Helpdesk Advance V4.2.0</td>
+                                                <td>
+                                                    <a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Download"><i class="fas fa-download"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>V4.3.0</td>
+                                                <td>Helpdesk Enterprise</td>
+                                                <td>Helpdesk Enterprise</td>
+                                                <td>
+                                                    <a href="javascript:;" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Download"><i class="fas fa-download"></i></a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+
+                                                <span>Showing 1 to 3 of 3 records</span>
+                                            </div>
+
+                                            <div class="col-md-6">
+
+                                                <ul class="pagination float-end">
+
+                                                    <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+
+                                                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+
+                                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+
+                                                    <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer">
+
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="renewModal" tabindex="-1" role="dialog" aria-labelledby="renewModalLabel" aria-hidden="true">
+
+                            <div class="modal-dialog">
+
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+
+                                        <h4 class="modal-title" id="renewModalLabel">Renew your order</h4>
+
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+                                    </div>
+
+                                    <div class="modal-body">
+
+                                        <form class="renew-form" action="" method="POST">
+
+                                            <div class="contact-form-success alert alert-success d-none mt-4">
+                                                <strong>Success!</strong> Your message has been sent to us.
+                                            </div>
+
+                                            <div class="contact-form-error alert alert-danger d-none mt-4">
+                                                <strong>Error!</strong> There was an error sending your message.
+                                                <span class="mail-error-message text-1 d-block"></span>
+                                            </div>
+
+                                            <p class="text-black"><strong>Current number of agents:</strong> 10</p>
+
+                                            <p class="text-black"><strong>Current plan:</strong> Faveo helpdesk</p>
+
+                                            <div class="row">
+                                                <div class="form-group col">
+                                                    <label class="form-label">Plans <span class="text-danger"> *</span></label>
+                                                    <div class="custom-select-1">
+                                                        <select class="form-select form-control h-auto py-2" data-msg-required="Please select a city." name="city" required>
+                                                            <option value="">Select</option>
+                                                            <option value="1">Helpdesk Enterprise</option>
+                                                            <option value="2">Helpdesk Startup</option>
+                                                            <option value="3">Helpdesk Freelancer</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="form-group col">
+                                                    <label class="form-label">Agents <span class="text-danger"> *</span></label>
+                                                    <div class="custom-select-1">
+                                                        <select class="form-select form-control h-auto py-2" data-msg-required="Please select a city." name="city" required>
+                                                            <option value="">Select</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <p class="text-black"><strong>Price to be paid:</strong> $10000</p>
+
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer">
+
+                                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane tab-pane-navigation" id="invoices" role="tabpanel">
+
+                        <div id="examples" class="container py-4">
 
                             <div class="row">
 
-                                <div class="form-group col">
+                                <div class="col">
 
-                                    <label class="form-label mb-1 text-2">Price</label>
+                                    <div class="row">
 
-                                    <input type="text" disabled value="199" class="form-control text-3 h-auto py-2" name="price" required>
+                                        <div class="col pb-3">
+
+                                            <div class="row">
+
+                                                <div class="col-sm-8"></div>
+
+                                                <div class="col-4 mb-3">
+
+                                                    <form role="search">
+
+                                                        <div class="simple-search input-group w-auto">
+
+                                                            <input class="form-control text-1 border-radius-2" id="search1" name="q" type="search" value="" placeholder="Search...">
+
+                                                            <button class="btn border-radius-2" type="submit">
+
+                                                                <i class="fa fa-search header-nav-top-icon"></i>
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                            <table class="table table-striped table-bordered">
+
+                                                <thead>
+                                                <tr>
+                                                    <th>Invoice No</th>
+                                                    <th>Date</th>
+                                                    <th>Order No</th>
+                                                    <th>Total</th>
+                                                    <th>Paid</th>
+                                                    <th>Balance</th>
+                                                    <th>Status</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                <tr>
+                                                    <td>36664089</td>
+                                                    <td>Oct 10, 2023</td>
+                                                    <td>22786357</td>
+                                                    <td>$1000</td>
+                                                    <td>$900</td>
+                                                    <td>$100</td>
+                                                    <td><span class="badge badge-success">Paid</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>36664034</td>
+                                                    <td>August 4, 2023</td>
+                                                    <td>22786327</td>
+                                                    <td>$4000</td>
+                                                    <td>$300</td>
+                                                    <td>$500</td>
+                                                    <td><span class="badge badge-success">Paid</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>36664090</td>
+                                                    <td>Sept 23, 2019</td>
+                                                    <td>42786357</td>
+                                                    <td>$9999</td>
+                                                    <td>$0</td>
+                                                    <td>$9999</td>
+                                                    <td><span class="badge badge-danger">Unpaid</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
+                                                        <a href="checkout.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Pay Now"><i class="fas fa-credit-card"></i></a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <div class="row">
+
+                                                <div class="col-md-6">
+
+                                                    <span>Showing 1 to 3 of 3 records</span>
+                                                </div>
+
+                                                <div class="col-md-6">
+
+                                                    <ul class="pagination float-end">
+
+                                                        <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+
+                                                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
+
+                                                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+
+                                                        <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
 
-                    <div class="modal-footer">
+                    <div class="tab-pane tab-pane-navigation" id="profile" role="tabpanel">
 
-                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                        <div id="examples12" class="container py-4">
 
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                            <div class="row">
+
+                                <div class="d-flex justify-content-center mb-4" id="profile_img">
+
+                                    <div class="profile-image-outer-container">
+
+                                        <div class="profile-image-inner-container bg-color-primary">
+
+                                            <img src="../img/avatars/avatar.jpg">
+
+                                            <span class="profile-image-button bg-color-dark">
+
+                                                <i class="fas fa-camera text-light"></i>
+                                            </span>
+                                        </div>
+
+                                        <input type="file" id="file" class="form-control profile-image-input">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 order-1 order-lg-2">
+
+                                    <form role="form" class="needs-validation" novalidate="novalidate">
+                                        <div class="form-group row">
+                                            <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">First name</label>
+                                            <div class="col-lg-9">
+                                                <input class="form-control text-3 h-auto py-2" type="text" name="firstName" value="John" required="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Last name</label>
+                                            <div class="col-lg-9">
+                                                <input class="form-control text-3 h-auto py-2" type="text" name="lastName" value="Doe" required="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Email</label>
+                                            <div class="col-lg-9">
+                                                <input class="form-control text-3 h-auto py-2" type="email" name="email" value="email@gmail.com" required="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Company</label>
+                                            <div class="col-lg-9">
+                                                <input class="form-control text-3 h-auto py-2" type="text" name="company" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Website</label>
+                                            <div class="col-lg-9">
+                                                <input class="form-control text-3 h-auto py-2" type="url" name="website" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Address</label>
+                                            <div class="col-lg-9">
+                                                <input class="form-control text-3 h-auto py-2" type="text" name="address" value="" placeholder="Street">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2"></label>
+                                            <div class="col-lg-6">
+                                                <input class="form-control text-3 h-auto py-2" type="text" name="city" value="" placeholder="City">
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <input class="form-control text-3 h-auto py-2" type="text" name="state" value="" placeholder="State">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2">Time Zone</label>
+                                            <div class="col-lg-9">
+                                                <div class="custom-select-1">
+                                                    <select id="user_time_zone" class="form-control text-3 h-auto py-2" name="timeZone" size="0">
+                                                        <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                                                        <option value="Alaska">(GMT-09:00) Alaska</option>
+                                                        <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                                                        <option value="Arizona">(GMT-07:00) Arizona</option>
+                                                        <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                                                        <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                                                        <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                                                        <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Username</label>
+                                            <div class="col-lg-9">
+                                                <input class="form-control text-3 h-auto py-2" type="text" name="username" value="" required="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Password</label>
+                                            <div class="col-lg-9">
+                                                <input class="form-control text-3 h-auto py-2" type="password" name="password" value="" required="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-lg-3 col-form-label form-control-label line-height-9 pt-2 text-2 required">Confirm password</label>
+                                            <div class="col-lg-9">
+                                                <input class="form-control text-3 h-auto py-2" type="password" name="confirmPassword" value="" required="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="form-group col-lg-9">
+
+                                            </div>
+                                            <div class="form-group col-lg-3">
+                                                <button type="button" class="btn btn-light-scale-2 text-black font-weight-bold text-3 text-color-hover-primary btn-modern float-end" data-loading-text="Loading...">Update</button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -679,7 +1121,7 @@
 
                         <li class="social-icons-facebook">
 
-                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" title="Facebook">
+                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Facebook">
 
                                 <i class="fab fa-facebook-f text-color-grey-lighten"></i>
                             </a>
@@ -687,7 +1129,7 @@
 
                         <li class="social-icons-twitter">
 
-                            <a href="https://twitter.com/faveohelpdesk" target="_blank" title="Twitter">
+                            <a href="https://twitter.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Twitter">
 
                                 <i class="fab fa-twitter text-color-grey-lighten"></i>
                             </a>
@@ -695,7 +1137,7 @@
 
                         <li class="social-icons-linkedin">
 
-                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" title="Linkedin">
+                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Linkedin">
 
                                 <i class="fab fa-linkedin text-color-grey-lighten"></i>
                             </a>
@@ -823,6 +1265,47 @@
 <!-- Theme Initialization Files -->
 <script src="../js/theme.init.js"></script>
 
+<script>
 
+    var defaultStyles = document.querySelectorAll('[id^="default-styles"]');
+    var rtlStyles = document.querySelectorAll('[id^="rtl-styles"]');
+
+    const flagIcon = document.getElementById('flagIcon');
+    const englishOption = document.getElementById('englishOption');
+    const arabicOption = document.getElementById('arabicOption');
+
+    englishOption.addEventListener('click', function() {
+        flagIcon.className = 'flag flag-us';
+        flagIcon.alt = 'English';
+        flagIcon.nextSibling.textContent = ' English ';
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+    });
+
+    arabicOption.addEventListener('click', function() {
+        flagIcon.className = 'flag flag-ar';
+        flagIcon.alt = 'Arabic';
+        flagIcon.nextSibling.textContent = ' Arabic ';
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+    });
+
+    defaultStyles.forEach(function(link) {
+        link.disabled = false;
+    });
+    rtlStyles.forEach(function(link) {
+        link.disabled = true;
+    });
+</script>
 </body>
 </html>

@@ -32,10 +32,15 @@
     <link rel="stylesheet" href="../vendor/magnific-popup/magnific-popup.min.css">
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="../css/theme.css">
-    <link rel="stylesheet" href="../css/theme-elements.css">
-    <link rel="stylesheet" href="../css/theme-blog.css">
-    <link rel="stylesheet" href="../css/theme-shop.css">
+    <link id="default-styles" rel="stylesheet" href="../css/theme.css">
+    <link id="default-styles-2" rel="stylesheet" href="../css/theme-elements.css">
+    <link id="default-styles-3" rel="stylesheet" href="../css/theme-blog.css">
+    <link id="default-styles-4" rel="stylesheet" href="../css/theme-shop.css">
+
+    <link id="rtl-styles" rel="stylesheet" href="../css/rtl-theme.css">
+    <link id="rtl-styles-2" rel="stylesheet" href="../css/rtl-theme-elements.css">
+    <link id="rtl-styles-3" rel="stylesheet" href="../css/rtl-theme-blog.css">
+    <link id="rtl-styles-4" rel="stylesheet" href="../css/rtl-theme-shop.css">
 
     <!-- Demo CSS -->
     <link rel="stylesheet" href="../css/demos/demo-transportation-logistic.css">
@@ -106,7 +111,37 @@
                                     </a>
                                 </div>
 
-                                <div class="ms-auto d-none d-lg-inline-block"></div>
+                                <div class="ms-auto d-none d-lg-inline-block">
+
+                                    <div class="ms-auto d-none d-lg-inline-block">
+
+                                        <ul class="nav nav-pills">
+
+                                            <li class="nav-item dropdown">
+
+                                                <a class="nav-link text-2 p-0 text-color-default" href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                                    <img id="flagIcon" src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English
+
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+
+                                                <div class="dropdown-menu dropdown-menu-end text-2" aria-labelledby="dropdownLanguage">
+
+                                                    <a class="dropdown-item text-color-default" href="#" id="englishOption">
+
+                                                        <img src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English
+                                                    </a>
+
+                                                    <a class="dropdown-item text-color-default" href="#" id="arabicOption">
+
+                                                        <img src="../img/blank.gif" class="flag flag-ar" alt="Arabic">&nbsp;Arabic
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
 
                                 <div class="vr opacity-2 d-none d-lg-inline-block"></div>
 
@@ -116,7 +151,7 @@
 
                                         <li class="nav-item pe-2 mx-1">
 
-                                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" title="Facebook" class="text-color-default text-color-hover-primary text-4">
+                                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Facebook" class="text-color-default text-color-hover-primary text-4">
 
                                                 <i class="fab fa-facebook-f"></i>
                                             </a>
@@ -124,7 +159,7 @@
 
                                         <li class="nav-item px-2 mx-1">
 
-                                            <a href="https://twitter.com/faveohelpdesk" target="_blank" title="Twitter" class="text-color-default text-color-hover-primary text-4">
+                                            <a href="https://twitter.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Twitter" class="text-color-default text-color-hover-primary text-4">
 
                                                 <i class="fab fa-twitter"></i>
                                             </a>
@@ -133,7 +168,7 @@
 
                                         <li class="nav-item px-2 mx-1 me-0 pe-0">
 
-                                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" title="Linkedin" class="text-color-default text-color-hover-primary text-4">
+                                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Linkedin" class="text-color-default text-color-hover-primary text-4">
 
                                                 <i class="fab fa-linkedin-in"></i>
                                             </a>
@@ -206,10 +241,14 @@
                                                     <li class="dropdown">
 
                                                         <a class="nav-link dropdown-toggle" href="javascript:;">
-                                                            My Account
+                                                            &nbsp;My Account&nbsp;
                                                         </a>
 
                                                         <ul class="dropdown-menu border-light mt-n1">
+
+                                                            <li>
+                                                                <a href="../index.html" class="dropdown-item">Dashboard</a>
+                                                            </li>
 
                                                             <li>
                                                                 <a href="orders.html" class="dropdown-item">My Orders</a>
@@ -259,7 +298,7 @@
 
                                                         <li class="item">
 
-                                                            <a href="#" title="Camera X1000" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
+                                                            <a href="#" data-bs-toggle="tooltip" title="Camera X1000" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
 
                                                             <div class="product-details">
 
@@ -273,7 +312,7 @@
                                                                     1X <span class="price">$99</span>
                                                                 </p>
 
-                                                                <a href="javascript:;" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
+                                                                <a href="javascript:;" data-bs-toggle="tooltip" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
                                                             </div>
                                                         </li>
                                                     </ol>
@@ -342,11 +381,35 @@
 
             <div class="container mt-lg-4 pb-3">
 
-                <div class="row mb-5 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
+                <div class="row mb-5">
+                    <div class="col text-center">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="text-3 p-relative top-1">Monthly</div>
+                            <div class="px-2">
+                                <div class="form-check form-switch form-switch-md mb-0">
+                                    <input id="per_switch" data-content-switcher type="checkbox" class="form-check-input" checked>
+                                </div>
+                            </div>
+                            <div class="text-3 p-relative top-1">Yearly</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="price_table_1" class="row mb-5 appear-animation d-block" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="100">
 
                     <div class="col">
 
                         <div id="pricing-cards" class="owl-carousel nav-outside nav-arrows-1 custom-carousel-box-shadow-2 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="750" data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 2}, '979': {'items': 3}, '1199': {'items': 4}}, 'autoplay': false, 'autoplayTimeout': 5000, 'autoplayHoverPause': true, 'dots': false, 'nav': true, 'loop': false, 'margin': 20, 'stagePadding': '75'}">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="price_table_2" class="row mb-5 appear-animation d-none" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="100">
+
+                    <div class="col">
+
+                        <div id="pricing-cards2" class="owl-carousel nav-outside nav-arrows-1 custom-carousel-box-shadow-2 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="750" data-plugin-options="{'responsive': {'0': {'items': 1}, '479': {'items': 1}, '768': {'items': 2}, '979': {'items': 3}, '1199': {'items': 4}}, 'autoplay': false, 'autoplayTimeout': 5000, 'autoplayHoverPause': true, 'dots': false, 'nav': true, 'loop': false, 'margin': 20, 'stagePadding': '75'}">
 
                         </div>
                     </div>
@@ -390,7 +453,7 @@
 
                         <li class="social-icons-facebook">
 
-                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" title="Facebook">
+                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Facebook">
 
                                 <i class="fab fa-facebook-f text-color-grey-lighten"></i>
                             </a>
@@ -398,7 +461,7 @@
 
                         <li class="social-icons-twitter">
 
-                            <a href="https://twitter.com/faveohelpdesk" target="_blank" title="Twitter">
+                            <a href="https://twitter.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Twitter">
 
                                 <i class="fab fa-twitter text-color-grey-lighten"></i>
                             </a>
@@ -406,7 +469,7 @@
 
                         <li class="social-icons-linkedin">
 
-                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" title="Linkedin">
+                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Linkedin">
 
                                 <i class="fab fa-linkedin text-color-grey-lighten"></i>
                             </a>
@@ -535,6 +598,33 @@
 <script src="../js/theme.init.js"></script>
 
 <script>
+
+    let ptable_1 = document.getElementById('price_table_1');
+
+    let ptable_2 = document.getElementById('price_table_2');
+
+    const perCheck = document.getElementById('per_switch');
+
+    perCheck.addEventListener('change', function() {
+
+        if (perCheck.checked) {
+
+            ptable_1.classList.add('d-flex');
+            ptable_1.classList.remove('d-none');
+            ptable_2.classList.add('d-none');
+            ptable_2.classList.remove('d-flex');
+
+        } else {
+
+            ptable_1.classList.add('d-none');
+            ptable_1.classList.remove('d-flex');
+            ptable_2.classList.add('d-flex');
+            ptable_2.classList.remove('d-none');
+        }
+    });
+
+</script>
+<script>
     const wrapper = document.getElementById("pricing-cards");
 
     // Arrays of dynamic content for each pricing card
@@ -647,8 +737,13 @@
         priceLabel.className = "price-label text-decoration-line-through text-3";
         priceLabel.textContent = `₹ ${cardInfo.originalPrice}`;
 
+        const priceLabel1 = document.createElement("label");
+        priceLabel1.className = "price-label mt-2";
+        priceLabel1.textContent = 'PER YEAR';
+
         planPriceDiv.appendChild(priceSpan);
         planPriceDiv.appendChild(priceLabel);
+        planPriceDiv.appendChild(priceLabel1);
 
         contentSwitcherDiv.appendChild(planPriceDiv);
         contentSwitcherWrapperDiv.appendChild(contentSwitcherDiv);
@@ -656,7 +751,7 @@
         textCenterDiv.appendChild(contentSwitcherWrapperDiv);
 
         const ul = document.createElement("ul");
-        ul.className = cardInfo.cardPrimary ? "list list-icons list-icons-style-3 list-icons-sm ms-3" : "list list-icons list-icons-style-3 list-dark list-icons-sm ms-3";
+        ul.className = cardInfo.cardPrimary ? "list list-icons list-icons-style-3 list-icons-sm ms-3 mt-3" : "list list-icons list-icons-style-3 list-dark list-icons-sm ms-3 mt-3";
 
         cardInfo.features.forEach((feature) => {
             const li = document.createElement("li");
@@ -668,7 +763,7 @@
         textCenterBottom.className = "text-center mt-4 pt-2";
 
         const signUpBtn = document.createElement("a");
-        signUpBtn.href = "#";
+        signUpBtn.href = "checkout.html";
         signUpBtn.className = cardInfo.cardPrimary ? "btn btn-light-scale-2 text-color-hover-primary btn-modern" : "btn btn-light-scale-2 text-color-hover-dark btn-modern";
         signUpBtn.textContent = cardInfo.buttonText;
 
@@ -684,6 +779,207 @@
 
         wrapper.appendChild(colDiv);
     }
+</script>
+
+<script>
+    const wrapper2 = document.getElementById("pricing-cards2");
+
+    // Arrays of dynamic content for each pricing card
+    const cardData2 = [
+        {
+            title: "Basic",
+            price: "0",
+            originalPrice: "0",
+            features: [
+                "10GB Disk Space",
+                "100GB Monthly Bandwith",
+                "20 Email Accounts",
+                "Unlimited Subdomains"
+            ],
+            buttonText: "Order Now"
+        },
+        {
+            title: "Freelancer",
+            price: "1",
+            originalPrice: "2",
+            features: [
+                "10GB Disk Space",
+                "100GB Monthly Bandwith",
+                "20 Email Accounts",
+                "Unlimited Subdomains"
+            ],
+            buttonText: "Order Now"
+        },
+        {
+            title: "Standard",
+            price: "29",
+            originalPrice: "49",
+            features: [
+                "10GB Disk Space",
+                "100GB Monthly Bandwith",
+                "20 Email Accounts",
+                "Unlimited Subdomains"
+            ],
+            titleClassName : 'text-color-primary',
+            priceColor : 'text-color-primary',
+            cardPrimary : true,
+            buttonText: "Order Now"
+        },
+        {
+            title: "Advance",
+            price: "109",
+            originalPrice: "149",
+            features: [
+                "10GB Disk Space",
+                "100GB Monthly Bandwith",
+                "20 Email Accounts",
+                "Unlimited Subdomains"
+            ],
+            buttonText: "Order Now"
+        },
+        {
+            title: "Premium",
+            price: "1999",
+            originalPrice: "2500",
+            features: [
+                "10GB Disk Space",
+                "100GB Monthly Bandwith",
+                "20 Email Accounts",
+                "Unlimited Subdomains"
+            ],
+            buttonText: "Order Now"
+        },
+        // Add more card data objects for each card
+    ];
+
+    for (let i = 0; i < cardData2.length; i++) {
+
+        const cardInfo = cardData2[i];
+
+        const colDiv = document.createElement("div");
+        colDiv.className = "col p-relative top-10 pb-3";
+
+        const cardDiv = document.createElement("div");
+        cardDiv.className = "card border-radius-0 anim-hover-translate-top-10px transition-3ms";
+
+        const cardBodyDiv = document.createElement("div");
+        cardBodyDiv.className = "card-body py-5";
+
+        const pricingBlockDiv = document.createElement("div");
+        pricingBlockDiv.className = "pricing-block";
+
+        const textCenterDiv = document.createElement("div");
+        textCenterDiv.className = "text-center";
+
+        const h4 = document.createElement("h4");
+        h4.className = cardInfo.titleClassName ? "font-weight-bold " + cardInfo.titleClassName : "font-weight-bold";
+        h4.textContent = cardInfo.title;
+
+        const contentSwitcherWrapperDiv = document.createElement("div");
+        contentSwitcherWrapperDiv.className = "content-switcher-wrapper";
+        contentSwitcherWrapperDiv.style.height = "78.4062px";
+
+        const contentSwitcherDiv = document.createElement("div");
+        contentSwitcherDiv.className = "content-switcher left-50pct transform3dx-n50 initialized active";
+        contentSwitcherDiv.setAttribute("data-content-switcher-id", "pricingTable1");
+        contentSwitcherDiv.setAttribute("data-content-switcher-rel", "1");
+
+        const planPriceDiv = document.createElement("div");
+        planPriceDiv.className = "plan-price bg-transparent mb-4";
+
+        const priceSpan = document.createElement("span");
+        priceSpan.className = cardInfo.priceColor ? "price " + cardInfo.priceColor : "price";
+        priceSpan.innerHTML = `<span class="price-unit">₹</span>${cardInfo.price}`;
+
+        const priceLabel = document.createElement("label");
+        priceLabel.className = "price-label text-decoration-line-through text-3";
+        priceLabel.textContent = `₹ ${cardInfo.originalPrice}`;
+
+        const priceLabel1 = document.createElement("label");
+        priceLabel1.className = "price-label mt-2";
+        priceLabel1.textContent = 'PER MONTH';
+
+        planPriceDiv.appendChild(priceSpan);
+        planPriceDiv.appendChild(priceLabel);
+        planPriceDiv.appendChild(priceLabel1);
+
+        contentSwitcherDiv.appendChild(planPriceDiv);
+        contentSwitcherWrapperDiv.appendChild(contentSwitcherDiv);
+        textCenterDiv.appendChild(h4);
+        textCenterDiv.appendChild(contentSwitcherWrapperDiv);
+
+        const ul = document.createElement("ul");
+        ul.className = cardInfo.cardPrimary ? "list list-icons list-icons-style-3 list-icons-sm ms-3 mt-3" : "list list-icons list-icons-style-3 list-dark list-icons-sm ms-3 mt-3";
+
+        cardInfo.features.forEach((feature) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<i class="fas fa-check"></i> ${feature}`;
+            ul.appendChild(li);
+        });
+
+        const textCenterBottom = document.createElement("div");
+        textCenterBottom.className = "text-center mt-4 pt-2";
+
+        const signUpBtn = document.createElement("a");
+        signUpBtn.href = "checkout.html";
+        signUpBtn.className = cardInfo.cardPrimary ? "btn btn-light-scale-2 text-color-hover-primary btn-modern" : "btn btn-light-scale-2 text-color-hover-dark btn-modern";
+        signUpBtn.textContent = cardInfo.buttonText;
+
+        textCenterBottom.appendChild(signUpBtn);
+
+        pricingBlockDiv.appendChild(textCenterDiv);
+        pricingBlockDiv.appendChild(ul);
+        pricingBlockDiv.appendChild(textCenterBottom);
+
+        cardBodyDiv.appendChild(pricingBlockDiv);
+        cardDiv.appendChild(cardBodyDiv);
+        colDiv.appendChild(cardDiv);
+
+        wrapper2.appendChild(colDiv);
+    }
+</script>
+
+<script>
+
+    var defaultStyles = document.querySelectorAll('[id^="default-styles"]');
+    var rtlStyles = document.querySelectorAll('[id^="rtl-styles"]');
+
+    const flagIcon = document.getElementById('flagIcon');
+    const englishOption = document.getElementById('englishOption');
+    const arabicOption = document.getElementById('arabicOption');
+
+    englishOption.addEventListener('click', function() {
+        flagIcon.className = 'flag flag-us';
+        flagIcon.alt = 'English';
+        flagIcon.nextSibling.textContent = ' English ';
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+    });
+
+    arabicOption.addEventListener('click', function() {
+        flagIcon.className = 'flag flag-ar';
+        flagIcon.alt = 'Arabic';
+        flagIcon.nextSibling.textContent = ' Arabic ';
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+    });
+
+    defaultStyles.forEach(function(link) {
+        link.disabled = false;
+    });
+    rtlStyles.forEach(function(link) {
+        link.disabled = true;
+    });
 </script>
 </body>
 </html>

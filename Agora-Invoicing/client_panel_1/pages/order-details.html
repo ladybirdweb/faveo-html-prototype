@@ -32,10 +32,15 @@
     <link rel="stylesheet" href="../vendor/magnific-popup/magnific-popup.min.css">
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="../css/theme.css">
-    <link rel="stylesheet" href="../css/theme-elements.css">
-    <link rel="stylesheet" href="../css/theme-blog.css">
-    <link rel="stylesheet" href="../css/theme-shop.css">
+    <link id="default-styles" rel="stylesheet" href="../css/theme.css">
+    <link id="default-styles-2" rel="stylesheet" href="../css/theme-elements.css">
+    <link id="default-styles-3" rel="stylesheet" href="../css/theme-blog.css">
+    <link id="default-styles-4" rel="stylesheet" href="../css/theme-shop.css">
+
+    <link id="rtl-styles" rel="stylesheet" href="../css/rtl-theme.css">
+    <link id="rtl-styles-2" rel="stylesheet" href="../css/rtl-theme-elements.css">
+    <link id="rtl-styles-3" rel="stylesheet" href="../css/rtl-theme-blog.css">
+    <link id="rtl-styles-4" rel="stylesheet" href="../css/rtl-theme-shop.css">
 
     <!-- Demo CSS -->
     <link rel="stylesheet" href="../css/demos/demo-transportation-logistic.css">
@@ -115,7 +120,37 @@
                                     </a>
                                 </div>
 
-                                <div class="ms-auto d-none d-lg-inline-block"></div>
+                                <div class="ms-auto d-none d-lg-inline-block">
+
+                                    <div class="ms-auto d-none d-lg-inline-block">
+
+                                        <ul class="nav nav-pills">
+
+                                            <li class="nav-item dropdown">
+
+                                                <a class="nav-link text-2 p-0 text-color-default" href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                                    <img id="flagIcon" src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English
+
+                                                    <i class="fas fa-angle-down"></i>
+                                                </a>
+
+                                                <div class="dropdown-menu dropdown-menu-end text-2" aria-labelledby="dropdownLanguage">
+
+                                                    <a class="dropdown-item text-color-default" href="#" id="englishOption">
+
+                                                        <img src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English
+                                                    </a>
+
+                                                    <a class="dropdown-item text-color-default" href="#" id="arabicOption">
+
+                                                        <img src="../img/blank.gif" class="flag flag-ar" alt="Arabic">&nbsp;Arabic
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
 
                                 <div class="vr opacity-2 d-none d-lg-inline-block"></div>
 
@@ -125,7 +160,7 @@
 
                                         <li class="nav-item pe-2 mx-1">
 
-                                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" title="Facebook" class="text-color-default text-color-hover-primary text-4">
+                                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Facebook" class="text-color-default text-color-hover-primary text-4">
 
                                                 <i class="fab fa-facebook-f"></i>
                                             </a>
@@ -133,7 +168,7 @@
 
                                         <li class="nav-item px-2 mx-1">
 
-                                            <a href="https://twitter.com/faveohelpdesk" target="_blank" title="Twitter" class="text-color-default text-color-hover-primary text-4">
+                                            <a href="https://twitter.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Twitter" class="text-color-default text-color-hover-primary text-4">
 
                                                 <i class="fab fa-twitter"></i>
                                             </a>
@@ -142,7 +177,7 @@
 
                                         <li class="nav-item px-2 mx-1 me-0 pe-0">
 
-                                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" title="Linkedin" class="text-color-default text-color-hover-primary text-4">
+                                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Linkedin" class="text-color-default text-color-hover-primary text-4">
 
                                                 <i class="fab fa-linkedin-in"></i>
                                             </a>
@@ -177,7 +212,7 @@
                                                     <li class="dropdown">
 
                                                         <a class="nav-link dropdown-toggle" href="javascript:;">
-                                                            Store
+                                                            &nbsp;Store&nbsp;
                                                         </a>
 
                                                         <ul class="dropdown-menu border-light mt-n1">
@@ -215,10 +250,14 @@
                                                     <li class="dropdown">
 
                                                         <a class="nav-link dropdown-toggle active" href="javascript:;">
-                                                            My Account
+                                                            &nbsp;My Account&nbsp;
                                                         </a>
 
                                                         <ul class="dropdown-menu border-light mt-n1">
+
+                                                            <li>
+                                                                <a href="../index.html" class="dropdown-item">Dashboard</a>
+                                                            </li>
 
                                                             <li>
                                                                 <a href="orders.html" class="dropdown-item">My Orders</a>
@@ -268,7 +307,7 @@
 
                                                         <li class="item">
 
-                                                            <a href="#" title="Helpdesk Enterprise Advance" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
+                                                            <a href="#" data-bs-toggle="tooltip" title="Helpdesk Enterprise Advance" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
 
                                                             <div class="product-details">
 
@@ -282,13 +321,13 @@
                                                                     1X <span class="price">$99</span>
                                                                 </p>
 
-                                                                <a href="javascript:;" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
+                                                                <a href="javascript:;" data-bs-toggle="tooltip" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
                                                             </div>
                                                         </li>
 
                                                         <li class="item">
 
-                                                            <a href="#" title="Faveo Helpdesk Freelancer" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
+                                                            <a href="#" data-bs-toggle="tooltip" title="Faveo Helpdesk Freelancer" class="product-image"><img src="../img/products/product-1.jpg" alt="Camera X1000"></a>
 
                                                             <div class="product-details">
 
@@ -302,7 +341,7 @@
                                                                     1X <span class="price">$10</span>
                                                                 </p>
 
-                                                                <a href="javascript:;" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
+                                                                <a href="javascript:;" data-bs-toggle="tooltip" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
                                                             </div>
                                                         </li>
                                                     </ol>
@@ -367,36 +406,36 @@
             </section>
         </div>
 
-        <div class="container py-4">
+        <div class="container pt-3 pb-2">
 
             <div class="row justify-content-center">
 
-                <div class="col-lg-12 alert alert-info">
+                <div class="col-lg-12 alert bg-color-light-scale-2">
 
                     <div class="d-flex flex-column flex-md-row justify-content-between">
 
                         <div class="text-center">
                             <span>
                                 Order Number <br>
-                                <strong class="text-color-dark">#31891</strong>
+                                <strong>#31891</strong>
                             </span>
                         </div>
                         <div class="text-center mt-4 mt-md-0">
                             <span>
                                 Date <br>
-                                <strong class="text-color-dark">October 10, 2023</strong>
+                                <strong>October 10, 2023</strong>
                             </span>
                         </div>
                         <div class="text-center mt-4 mt-md-0">
                             <span>
                                 Status <br>
-                                <strong class="text-color-dark">Executed</strong>
+                                <strong>Executed</strong>
                             </span>
                         </div>
                         <div class="text-center mt-4 mt-md-0">
                             <span>
                                 Expiry Date <br>
-                                <strong class="text-color-dark">October 10, 2024</strong>
+                                <strong>October 10, 2024</strong>
                             </span>
                         </div>
                     </div>
@@ -404,426 +443,66 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
+            <div class="row pt-2">
 
-                <div class="col">
+                <div class="col-lg-3 mt-4 mt-lg-0">
 
-                    <div class="row">
+                    <aside class="sidebar mt-2 mb-5">
 
-                        <div class="col-lg-4">
+                        <ul class="nav nav-list flex-column">
 
-                            <div class="tabs tabs-vertical tabs-right tabs-navigation tabs-navigation-simple">
+                            <li class="nav-item">
 
-                                <ul class="nav nav-tabs col-sm-3" role="tablist">
+                                <a class="nav-link active" href="#license" data-bs-toggle="tab" data-hash data-hash-offset="0"
+                                   data-hash-offset-lg="120" data-hash-delay="500">License Details
+                                </a>
+                            </li>
 
-                                    <li class="nav-item active" role="presentation">
-                                        <a class="nav-link text-dark text-color-hover-primary active" href="#license" data-bs-toggle="tab" aria-selected="true" role="tab">
-                                            <i class="fas fa-file"></i> License Details
-                                        </a>
-                                    </li>
+                            <li class="nav-item">
 
-                                    <li class="nav-item" role="presentation">
-                                        <a class="nav-link text-dark text-color-hover-primary" href="#users" data-bs-toggle="tab" aria-selected="true" role="tab">
-                                            <i class="fas fa-users"></i> User Details
-                                        </a>
-                                    </li>
+                                <a class="nav-link" href="#users" data-bs-toggle="tab" data-hash data-hash-offset="0"
+                                   data-hash-offset-lg="120" data-hash-delay="500">User Details
+                                </a>
+                            </li>
 
-                                    <li class="nav-item" role="presentation">
-                                        <a class="nav-link text-dark text-color-hover-primary" href="#invoice" data-bs-toggle="tab" aria-selected="true" role="tab">
-                                            <i class="fas fa-credit-card"></i> Invoice List
-                                        </a>
-                                    </li>
+                            <li class="nav-item">
 
-                                    <li class="nav-item" role="presentation">
-                                        <a class="nav-link text-dark text-color-hover-primary" href="#receipt" data-bs-toggle="tab" aria-selected="true" role="tab">
-                                            <i class="fas fa-suitcase"></i> Payment Receipts
-                                        </a>
-                                    </li>
+                                <a class="nav-link" href="#invoice" data-bs-toggle="tab" data-hash data-hash-offset="0"
+                                   data-hash-offset-lg="120" data-hash-delay="500">Invoice List
+                                </a>
+                            </li>
 
-                                    <li class="nav-item" role="presentation">
-                                        <a class="nav-link text-dark text-color-hover-primary" href="#renew" data-bs-toggle="tab" aria-selected="true" role="tab">
-                                            <i class="fas fa-bell"></i> Auto Renewal
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                            <li class="nav-item">
 
-                        <div class="col-lg-8">
+                                <a class="nav-link" href="#receipt" data-bs-toggle="tab" data-hash data-hash-offset="0"
+                                   data-hash-offset-lg="120" data-hash-delay="500">Payment Receipts
+                                </a>
+                            </li>
 
-                            <div class="tab-pane tab-pane-navigation active" id="license" role="tabpanel">
+                            <li class="nav-item">
 
-                                <h4>License Details</h4>
+                                <a class="nav-link" href="#cloud" data-bs-toggle="tab" data-hash data-hash-offset="0"
+                                   data-hash-offset-lg="120" data-hash-delay="500">Cloud Settings
+                                </a>
+                            </li>
 
-                                <div class="row">
+                            <li class="nav-item">
 
-                                    <div class="col">
+                                <a class="nav-link" href="#renew" data-bs-toggle="tab" data-hash data-hash-offset="0"
+                                   data-hash-offset-lg="120" data-hash-delay="500">Auto Renewal
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
 
-                                        <div class="row align-items-center">
+                <div class="col-lg-9 mt-2">
 
-                                            <div class="col-sm-5">
+                    <div class="tab-pane tab-pane-navigation active" id="license" role="tabpanel">
 
-                                                <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
+                        <div class="row">
 
-                                                    <span class="mb-2 font-weight-bold">License Code:</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-7">
-
-                                                DTYE-QEZS-OUSQ-0000
-
-                                                <a class="btn btn-light-scale-2 text-black btn-sm ms-4" title="Copy">
-                                                    <i class="fas fa-copy"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div class="row"><div class="col"><hr class="solid my-3"></div></div>
-
-                                        <div class="row align-items-center">
-
-                                            <div class="col-sm-5">
-
-                                                <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
-
-                                                    <span class="mb-2 font-weight-bold">Licensed Domain/IP:</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-7">
-
-                                                <a class="btn btn-primary btn-sm" title="Copy" data-bs-toggle="modal" data-bs-target="#reissueModal">
-                                                    <i class="fas fa-copy"></i> Reissue License
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div class="row"><div class="col"><hr class="solid my-3"></div></div>
-
-                                        <div class="row align-items-center">
-
-                                            <div class="col-sm-5">
-
-                                                <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
-
-                                                    <span class="mb-2 font-weight-bold">License Expiry Date:</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-7">
-
-                                                November 23, 2023
-                                            </div>
-                                        </div>
-
-                                        <div class="row"><div class="col"><hr class="solid my-3"></div></div>
-
-                                        <div class="row align-items-center">
-
-                                            <div class="col-sm-5">
-
-                                                <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
-
-                                                    <span class="mb-2 font-weight-bold">Update Expiry Date:</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-7">
-
-                                                November 23, 2023 <span class="badge badge-danger badge-sm">Expired</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="row"><div class="col"><hr class="solid my-3"></div></div>
-
-                                        <table class="table">
-
-                                            <thead>
-                                                <tr>
-                                                    <th>Installation Path</th>
-                                                    <th>Installation IP</th>
-                                                    <th>Current Version</th>
-                                                    <th>Last Active</th>
-                                                </tr>
-                                            </thead>
-
-                                            <tbody>
-                                                <tr>
-                                                    <td><a href="javascript:;">https//:sakthi.desk</a></td>
-                                                    <td>223.178.82.249</td>
-                                                    <td>v5.0.0</td>
-                                                    <td>Oct 31, 2022 <span class="badge badge-info badge-xs">Active</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="javascript:;">https//:sakthi.desk</a></td>
-                                                    <td>223.178.82.249</td>
-                                                    <td>v5.0.0</td>
-                                                    <td>Oct 31, 2022 <span class="badge badge-info badge-xs">Active</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="javascript:;">https//:sakthi.desk</a></td>
-                                                    <td>223.178.82.249</td>
-                                                    <td>v5.0.0</td>
-                                                    <td>Oct 31, 2022 <span class="badge badge-info badge-xs">Active</span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane tab-pane-navigation" id="users" role="tabpanel">
-
-                                <h4>User Details</h4>
-
-                                <div class="row">
-
-                                    <div class="col">
-
-                                        <div class="row align-items-center">
-
-                                            <div class="col-sm-5">
-
-                                                <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
-
-                                                    <span class="mb-2 font-weight-bold">Name:</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-7">Sakthivel</div>
-                                        </div>
-
-                                        <div class="row"><div class="col"><hr class="solid my-3"></div></div>
-
-                                        <div class="row align-items-center">
-
-                                            <div class="col-sm-5">
-
-                                                <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
-
-                                                    <span class="mb-2 font-weight-bold">Email:</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-7">sakthivel.munusamy@ladybirdweb.com</div>
-                                        </div>
-
-                                        <div class="row"><div class="col"><hr class="solid my-3"></div></div>
-
-                                        <div class="row align-items-center">
-
-                                            <div class="col-sm-5">
-
-                                                <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
-
-                                                    <span class="mb-2 font-weight-bold">Mobile:</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-7">(+91) 9738581134</div>
-                                        </div>
-
-                                        <div class="row"><div class="col"><hr class="solid my-3"></div></div>
-
-                                        <div class="row align-items-center">
-
-                                            <div class="col-sm-5">
-
-                                                <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
-
-                                                    <span class="mb-2 font-weight-bold">Address:</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-7">Hennur Cross,Near Ganapathy Temple,Bangalore.</div>
-                                        </div>
-
-                                        <div class="row"><div class="col"><hr class="solid my-3"></div></div>
-
-                                        <div class="row align-items-center">
-
-                                            <div class="col-sm-5">
-
-                                                <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
-
-                                                    <span class="mb-2 font-weight-bold">Country:</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-7">India</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane tab-pane-navigation" id="invoice" role="tabpanel">
-
-                                <h4>Invoice List</h4>
-
-                                <div class="row">
-
-                                    <div class="col-sm-8"></div>
-
-                                    <div class="col-4 mb-3">
-
-                                        <form role="search">
-
-                                            <div class="simple-search input-group w-auto">
-
-                                                <input class="form-control text-1 border-radius-2" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
-
-                                                <button class="btn border-radius-2" type="submit">
-
-                                                    <i class="fa fa-search header-nav-top-icon"></i>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-
-                                <table class="table">
-
-                                    <thead>
-                                        <tr>
-                                            <th>Number</th>
-                                            <th>Product</th>
-                                            <th>Date</th>
-                                            <th>Total</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <td>36664089</td>
-                                            <td>Helpdesk Freelancer</td>
-                                            <td>Oct 10, 2023</td>
-                                            <td>$10</td>
-                                            <td><span class="badge badge-success badge-xs">Paid</span></td>
-                                            <td>
-                                                <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-black"><i class="fas fa-eye"></i> </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>36664089</td>
-                                            <td>Helpdesk Advance</td>
-                                            <td>August 10, 2021</td>
-                                            <td>$99</td>
-                                            <td><span class="badge badge-danger badge-xs">Unpaid</span></td>
-                                            <td>
-                                                <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-black"><i class="fas fa-eye"></i> </a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                <div class="row">
-
-                                    <div class="col-md-6">
-
-                                        <span>Showing 1 to 2 of 2 records</span>
-                                    </div>
-
-                                    <div class="col-md-6">
-
-                                        <ul class="pagination float-end">
-
-                                            <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-left"></i></a></li>
-
-                                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
-
-                                            <li class="page-item"><a href="#" class="page-link">2</a></li>
-
-                                            <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-right"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane tab-pane-navigation" id="receipt" role="tabpanel">
-
-                                <h4>Payment Receipts</h4>
-
-                                <div class="row">
-
-                                    <div class="col-sm-8"></div>
-
-                                    <div class="col-4 mb-3">
-
-                                        <form role="search">
-
-                                            <div class="simple-search input-group w-auto">
-
-                                                <input class="form-control text-1 border-radius-2" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
-
-                                                <button class="btn border-radius-2" type="submit">
-
-                                                    <i class="fa fa-search header-nav-top-icon"></i>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-
-                                <table class="table">
-
-                                    <thead>
-                                    <tr>
-                                        <th>Invoice No</th>
-                                        <th>Total</th>
-                                        <th>Method</th>
-                                        <th>Status</th>
-                                        <th>Created At</th>
-                                    </tr>
-                                    </thead>
-
-                                    <tbody>
-                                    <tr>
-                                        <td>36664089</td>
-                                        <td>$10</td>
-                                        <td>Razorpay</td>
-                                        <td><span class="badge badge-success badge-xs">Success</span></td>
-                                        <td>Oct 10, 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>36664090</td>
-                                        <td>$99</td>
-                                        <td>Razorpay</td>
-                                        <td><span class="badge badge-success badge-xs">Success</span></td>
-                                        <td>Nov 10, 2021</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-
-                                <div class="row">
-
-                                    <div class="col-md-6">
-
-                                        <span>Showing 1 to 2 of 2 records</span>
-                                    </div>
-
-                                    <div class="col-md-6">
-
-                                        <ul class="pagination float-end">
-
-                                            <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-left"></i></a></li>
-
-                                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
-
-                                            <li class="page-item"><a href="#" class="page-link">2</a></li>
-
-                                            <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-right"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane tab-pane-navigation" id="renew" role="tabpanel">
-
-                                <h4>Auto Renewal</h4>
+                            <div class="col">
 
                                 <div class="row align-items-center">
 
@@ -831,17 +510,456 @@
 
                                         <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
 
-                                            <span class="mb-2 font-weight-bold">Status of Auto Renewal</span>
+                                            <span class="mb-2 font-weight-bold">License Code:</span>
                                         </div>
                                     </div>
 
                                     <div class="col-sm-7">
 
-                                        <div class="form-check form-switch">
+                                        DTYE-QEZS-OUSQ-0000
 
-                                            <a data-bs-toggle="modal" data-bs-target="#autorenewModal"><input class="form-check-input py-3" style="padding-right: 2rem; padding-left: 2rem;" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked></a>
+                                        <a class="btn btn-light-scale-2 text-black btn-sm ms-4" data-bs-toggle="tooltip" title="Copy">
+                                            <i class="fas fa-copy"></i>
+                                        </a>
+
+                                        <span data-bs-toggle="modal" data-bs-target="#reissueModal">
+
+                                            <a class="btn btn-light-scale-2 btn-sm text-black btn-sm" data-bs-toggle="tooltip" title="Reissue License">
+
+                                                <i class="fas fa-id-card-alt"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="row"><div class="col"><hr class="solid my-3"></div></div>
+
+                                <div class="row align-items-center">
+
+                                    <div class="col-sm-5">
+
+                                        <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
+
+                                            <span class="mb-2 font-weight-bold">License Expiry Date:</span>
                                         </div>
                                     </div>
+
+                                    <div class="col-sm-7">
+
+                                        November 23, 2023
+                                    </div>
+                                </div>
+
+                                <div class="row"><div class="col"><hr class="solid my-3"></div></div>
+
+                                <div class="row align-items-center">
+
+                                    <div class="col-sm-5">
+
+                                        <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
+
+                                            <span class="mb-2 font-weight-bold">Update Expiry Date:</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7">
+
+                                        November 23, 2023 <span class="badge badge-danger badge-sm">Expired</span>
+                                    </div>
+                                </div>
+
+                                <div class="row"><div class="col"><hr class="solid my-3"></div></div>
+
+                                <table class="table">
+
+                                    <thead>
+                                    <tr>
+                                        <th class="ps-0">Installation Path</th>
+                                        <th>Installation IP</th>
+                                        <th>Current Version</th>
+                                        <th>Last Active</th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td class="ps-0"><a href="javascript:;">https//:sakthi.desk</a></td>
+                                        <td>223.178.82.249</td>
+                                        <td>v5.0.0</td>
+                                        <td>Oct 31, 2022 <span class="badge badge-success badge-xs">Active</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-0"><a href="javascript:;">https//:sakthi.desk</a></td>
+                                        <td>223.178.82.249</td>
+                                        <td>v5.0.0</td>
+                                        <td>Oct 31, 2022 <span class="badge badge-success badge-xs">Active</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-0"><a href="javascript:;">https//:sakthi.desk</a></td>
+                                        <td>223.178.82.249</td>
+                                        <td>v5.0.0</td>
+                                        <td>Oct 31, 2022 <span class="badge badge-success badge-xs">Active</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane tab-pane-navigation" id="users" role="tabpanel">
+
+                        <div class="row">
+
+                            <div class="col">
+
+                                <div class="row align-items-center">
+
+                                    <div class="col-sm-5">
+
+                                        <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
+
+                                            <span class="mb-2 font-weight-bold">Name:</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7">Sakthivel</div>
+                                </div>
+
+                                <div class="row"><div class="col"><hr class="solid my-3"></div></div>
+
+                                <div class="row align-items-center">
+
+                                    <div class="col-sm-5">
+
+                                        <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
+
+                                            <span class="mb-2 font-weight-bold">Email:</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7">sakthivel.munusamy@ladybirdweb.com</div>
+                                </div>
+
+                                <div class="row"><div class="col"><hr class="solid my-3"></div></div>
+
+                                <div class="row align-items-center">
+
+                                    <div class="col-sm-5">
+
+                                        <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
+
+                                            <span class="mb-2 font-weight-bold">Mobile:</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7">(+91) 9738581134</div>
+                                </div>
+
+                                <div class="row"><div class="col"><hr class="solid my-3"></div></div>
+
+                                <div class="row align-items-center">
+
+                                    <div class="col-sm-5">
+
+                                        <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
+
+                                            <span class="mb-2 font-weight-bold">Address:</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7">Hennur Cross,Near Ganapathy Temple,Bangalore.</div>
+                                </div>
+
+                                <div class="row"><div class="col"><hr class="solid my-3"></div></div>
+
+                                <div class="row align-items-center">
+
+                                    <div class="col-sm-5">
+
+                                        <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 border-right-light">
+
+                                            <span class="mb-2 font-weight-bold">Country:</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7">India</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane tab-pane-navigation" id="invoice" role="tabpanel">
+
+                        <div class="row">
+
+                            <div class="col-sm-8"></div>
+
+                            <div class="col-4 mb-3">
+
+                                <form role="search">
+
+                                    <div class="simple-search input-group w-auto">
+
+                                        <input class="form-control text-1 border-radius-2" id="headerSearch1" name="q" type="search" value="" placeholder="Search...">
+
+                                        <button class="btn border-radius-2" type="submit">
+
+                                            <i class="fa fa-search header-nav-top-icon"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <table class="table">
+
+                            <thead>
+                            <tr>
+                                <th>Number</th>
+                                <th>Product</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td>36664089</td>
+                                <td>Helpdesk Freelancer</td>
+                                <td>Oct 10, 2023</td>
+                                <td>$10</td>
+                                <td><span class="badge badge-success badge-xs">Paid</span></td>
+                                <td>
+                                    <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-black"><i class="fas fa-eye"></i> </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>36664089</td>
+                                <td>Helpdesk Advance</td>
+                                <td>August 10, 2021</td>
+                                <td>$99</td>
+                                <td><span class="badge badge-danger badge-xs">Unpaid</span></td>
+                                <td>
+                                    <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-black"><i class="fas fa-eye"></i> </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+
+                                <span>Showing 1 to 2 of 2 records</span>
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <ul class="pagination float-end">
+
+                                    <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+
+                                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+
+                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+
+                                    <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane tab-pane-navigation" id="receipt" role="tabpanel">
+
+                        <div class="row">
+
+                            <div class="col-sm-8"></div>
+
+                            <div class="col-4 mb-3">
+
+                                <form role="search">
+
+                                    <div class="simple-search input-group w-auto">
+
+                                        <input class="form-control text-1 border-radius-2" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
+
+                                        <button class="btn border-radius-2" type="submit">
+
+                                            <i class="fa fa-search header-nav-top-icon"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <table class="table">
+
+                            <thead>
+                            <tr>
+                                <th>Invoice No</th>
+                                <th>Total</th>
+                                <th>Method</th>
+                                <th>Status</th>
+                                <th>Created At</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td>36664089</td>
+                                <td>$10</td>
+                                <td>Razorpay</td>
+                                <td><span class="badge badge-success badge-xs">Success</span></td>
+                                <td>Oct 10, 2023</td>
+                            </tr>
+                            <tr>
+                                <td>36664090</td>
+                                <td>$99</td>
+                                <td>Razorpay</td>
+                                <td><span class="badge badge-success badge-xs">Success</span></td>
+                                <td>Nov 10, 2021</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+
+                                <span>Showing 1 to 2 of 2 records</span>
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <ul class="pagination float-end">
+
+                                    <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+
+                                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+
+                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+
+                                    <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane tab-pane-navigation" id="cloud" role="tabpanel">
+
+                        <div class="row pb-4">
+
+                            <div class="col-7"></div>
+
+                            <div class="col-5">
+
+                                <div class="text-end">
+
+                                    <span class="font-weight-normal text-4">Plan Expiry : <strong class="font-weight-bold">Oct 14, 2027</strong> </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-lg-6 mb-5 mb-lg-0">
+
+                                <div class="card border-radius-1 bg-color-light box-shadow-6 box-shadow-hover cur-pointer" data-bs-toggle="modal" data-bs-target="#cloudModal1">
+
+                                    <div class="card-body p-relative zindex-1 p-3">
+
+                                        <div class="feature-box feature-box-style-6 text-center d-block">
+
+                                            <div class="feature-box-icon justify-content-center">
+
+                                                <i class="fas fa-globe text-primary"></i>
+                                            </div>
+
+                                            <div class="feature-box-info">
+
+                                                <h4 class="text-4 mt-3 mb-2 text-color-grey">Change Cloud Domain</h4>
+
+                                                <p class="mb-2"><strong class="text-black text-2">Current domain:</strong> https://www.domain.com</p>
+
+                                                <p class="mb-0 text-2">Click here to start customising your cloud domain. Please note that there will be a short 5-minute downtime while we work our magic</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-5 mb-lg-0">
+
+                                <div class="card border-radius-1 bg-color-light box-shadow-6 box-shadow-hover cur-pointer" data-bs-toggle="modal" data-bs-target="#cloudModal2">
+
+                                    <div class="card-body p-relative zindex-1 p-3">
+
+                                        <div class="feature-box feature-box-style-6 text-center d-block">
+
+                                            <div class="feature-box-icon justify-content-center">
+
+                                                <i class="fas fa-users text-primary"></i>
+                                            </div>
+
+                                            <div class="feature-box-info">
+
+                                                <h4 class="text-4 mt-3 mb-2 text-color-grey">Increase/Decrease Agents</h4>
+
+                                                <p class="mb-2"><strong class="text-black text-2">Current number of agents: </strong>5</p>
+
+                                                <p class="mb-0 text-2">Update your agent count by clicking here. Upgrades incur costs, and downgrades in between billing cycles aren't refunded.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-5 mb-lg-0 mt-3">
+
+                                <div class="card border-radius-1 bg-color-light box-shadow-6 box-shadow-hover cur-pointer" data-bs-toggle="modal" data-bs-target="#cloudModal3">
+
+                                    <div class="card-body p-relative zindex-1 p-3">
+
+                                        <div class="feature-box feature-box-style-6 text-center d-block">
+
+                                            <div class="feature-box-icon justify-content-center">
+
+                                                <i class="fas fa-cloud-upload-alt text-primary"></i>
+                                            </div>
+
+                                            <div class="feature-box-info">
+
+                                                <h4 class="text-4 mt-3 mb-2 text-color-grey">Upgrade/Downgrade Cloud Plan</h4>
+
+                                                <p class="mb-2"><strong class="text-black text-2">Current Plan:</strong> Faveo Cloud HelpDesk Yearly</p>
+
+                                                <p class="mb-0 text-2">Click here to change your cloud plan. Upgrades may cost extra. Downgrades auto-credited based on billing balance for future use in credits.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane tab-pane-navigation" id="renew" role="tabpanel">
+
+                        <div class="row pt-5">
+
+                            <div class="d-flex">
+
+                                <div class="pe-3 pe-sm-5 pb-3 pb-sm-0 mt-2">
+
+                                    <span class="">Status of Auto Renewal</span>
+                                </div>
+
+                                <div class="form-check form-switch">
+
+                                    <input id="renew_btn" class="form-check-input" style="padding-right: 2rem;padding-left: 2rem;padding-top: 1rem!important;padding-bottom: 1rem!important;" type="checkbox" role="switch">
+
                                 </div>
                             </div>
                         </div>
@@ -887,6 +1005,139 @@
                         <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
 
                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="cloudModal1" tabindex="-1" role="dialog" aria-labelledby="cloudModalLabel1" aria-hidden="true">
+
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h4 class="modal-title" id="cloudModalLabel1">Change Cloud Domain</h4>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <p>If you wish to purchase a domain, you can Click here. And after the domain is set up, you will have to point your CNAME to our cloud Learn more.</p>
+
+                        <p class="text-black"><strong>Current Cloud Domain:</strong> https://www.domain.com</p>
+
+                        <div class="row">
+
+                            <div class="form-group col">
+
+                                <label class="form-label">Enter your new domain name <span class="text-danger"> *</span></label>
+
+                                <div class="input-group mb-3">
+
+                                    <span class="input-group-text text-3" id="basic-addon3">https://</span>
+
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-globe"></i> Change Domain</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="cloudModal2" tabindex="-1" role="dialog" aria-labelledby="cloudModalLabel2" aria-hidden="true">
+
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h4 class="modal-title" id="cloudModalLabel2">Change Number of Agents</h4>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <p class="text-black"><strong>Current number of agents:</strong> 5</p>
+
+                        <p class="text-black"><strong>Price per agent: </strong>₹1,600</p>
+
+                        <div class="row">
+
+                            <div class="form-group col">
+
+                                <label class="form-label">Choose your desired number of agents <span class="text-danger"> *</span></label>
+
+                                <input type="number" value="" maxlength="100" class="form-control" name="agents">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-users"></i> Update Agents</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="cloudModal3" tabindex="-1" role="dialog" aria-labelledby="cloudModalLabel3" aria-hidden="true">
+
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h4 class="modal-title" id="cloudModalLabel3">Upgrade or downgrade your cloud plan</h4>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <p class="text-black"><strong>Current Plan: </strong>Faveo Cloud HelpDesk Yearly</p>
+
+                        <div class="row">
+
+                            <div class="form-group col">
+
+                                <label class="form-label">Select a new plan <span class="text-danger"> *</span></label>
+
+                                <div class="custom-select-1">
+
+                                    <select class="form-select form-control h-auto py-2" name="plan">
+
+                                        <option value="">Select</option>
+
+                                        <option value="1" selected>Faveo Cloud ServiceDesk Yearly (Plan price-per agent: ₹18,000)</option>
+
+                                        <option value="2">Faveo Cloud ServiceDesk Monthly (Plan price-per agent: ₹16,000)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-black"><strong>Total Credits remaining on your current plan: </strong>₹31,956</p>
+
+                        <p class="text-black"><strong>Price for the new plan: </strong>₹3,59,508</p>
+
+                        <p class="text-black"><strong>Price to be paid: </strong>₹3,27,551</p>
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="fas fa-users"></i> Update Agents</button>
                     </div>
                 </div>
             </div>
@@ -956,7 +1207,7 @@
 
                         <li class="social-icons-facebook">
 
-                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" title="Facebook">
+                            <a href="https://www.facebook.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Facebook">
 
                                 <i class="fab fa-facebook-f text-color-grey-lighten"></i>
                             </a>
@@ -964,7 +1215,7 @@
 
                         <li class="social-icons-twitter">
 
-                            <a href="https://twitter.com/faveohelpdesk" target="_blank" title="Twitter">
+                            <a href="https://twitter.com/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Twitter">
 
                                 <i class="fab fa-twitter text-color-grey-lighten"></i>
                             </a>
@@ -972,7 +1223,7 @@
 
                         <li class="social-icons-linkedin">
 
-                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" title="Linkedin">
+                            <a href="https://www.linkedin.com/showcase/faveohelpdesk" target="_blank" data-bs-toggle="tooltip" title="Linkedin">
 
                                 <i class="fab fa-linkedin text-color-grey-lighten"></i>
                             </a>
@@ -1100,6 +1351,61 @@
 <!-- Theme Initialization Files -->
 <script src="../js/theme.init.js"></script>
 
+<script>
+    const autorenewModal = document.getElementById('autorenewModal');
 
+    const renewCheck = document.getElementById('renew_btn');
+
+    renewCheck.addEventListener('change', function() {
+
+        if (renewCheck.checked) {
+
+            $(autorenewModal).modal('show');
+        }
+    });
+</script>
+
+<script>
+
+    var defaultStyles = document.querySelectorAll('[id^="default-styles"]');
+    var rtlStyles = document.querySelectorAll('[id^="rtl-styles"]');
+
+    const flagIcon = document.getElementById('flagIcon');
+    const englishOption = document.getElementById('englishOption');
+    const arabicOption = document.getElementById('arabicOption');
+
+    englishOption.addEventListener('click', function() {
+        flagIcon.className = 'flag flag-us';
+        flagIcon.alt = 'English';
+        flagIcon.nextSibling.textContent = ' English ';
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+    });
+
+    arabicOption.addEventListener('click', function() {
+        flagIcon.className = 'flag flag-ar';
+        flagIcon.alt = 'Arabic';
+        flagIcon.nextSibling.textContent = ' Arabic ';
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+    });
+
+    defaultStyles.forEach(function(link) {
+        link.disabled = false;
+    });
+    rtlStyles.forEach(function(link) {
+        link.disabled = true;
+    });
+</script>
 </body>
 </html>
