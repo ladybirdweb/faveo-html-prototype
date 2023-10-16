@@ -32,10 +32,15 @@
     <link rel="stylesheet" href="../vendor/magnific-popup/magnific-popup.min.css">
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="../css/theme.css">
-    <link rel="stylesheet" href="../css/theme-elements.css">
-    <link rel="stylesheet" href="../css/theme-blog.css">
-    <link rel="stylesheet" href="../css/theme-shop.css">
+    <link id="default-styles" rel="stylesheet" href="../css/theme.css">
+    <link id="default-styles-2" rel="stylesheet" href="../css/theme-elements.css">
+    <link id="default-styles-3" rel="stylesheet" href="../css/theme-blog.css">
+    <link id="default-styles-4" rel="stylesheet" href="../css/theme-shop.css">
+
+    <link id="rtl-styles" rel="stylesheet" href="../css/rtl-theme.css">
+    <link id="rtl-styles-2" rel="stylesheet" href="../css/rtl-theme-elements.css">
+    <link id="rtl-styles-3" rel="stylesheet" href="../css/rtl-theme-blog.css">
+    <link id="rtl-styles-4" rel="stylesheet" href="../css/rtl-theme-shop.css">
 
     <!-- Demo CSS -->
     <link rel="stylesheet" href="../css/demos/demo-transportation-logistic.css">
@@ -116,14 +121,27 @@
                                     <div class="ms-auto d-none d-lg-inline-block">
 
                                         <ul class="nav nav-pills">
+
                                             <li class="nav-item dropdown">
+
                                                 <a class="nav-link text-2 p-0 text-color-default" href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <img src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English
+
+                                                    <img id="flagIcon" src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English
+
                                                     <i class="fas fa-angle-down"></i>
                                                 </a>
-                                                <div class="dropdown-menu dropdown-menu-end text-2" aria-labelledby="dropdownLanguage" style="">
-                                                    <a class="dropdown-item text-color-default" href="#"><img src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English</a>
-                                                    <a class="dropdown-item text-color-default" href="#"><img src="../img/blank.gif" class="flag flag-ar" alt="Arabic">&nbsp;Arabic</a>
+
+                                                <div class="dropdown-menu dropdown-menu-end text-2" aria-labelledby="dropdownLanguage">
+
+                                                    <a class="dropdown-item text-color-default" href="#" id="englishOption">
+
+                                                        <img src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English
+                                                    </a>
+
+                                                    <a class="dropdown-item text-color-default" href="#" id="arabicOption">
+
+                                                        <img src="../img/blank.gif" class="flag flag-ar" alt="Arabic">&nbsp;Arabic
+                                                    </a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -190,7 +208,7 @@
                                                     <li class="dropdown">
 
                                                         <a class="nav-link dropdown-toggle" href="javascript:;">
-                                                            Store
+                                                            &nbsp;Store&nbsp;
                                                         </a>
 
                                                         <ul class="dropdown-menu border-light mt-n1">
@@ -228,7 +246,7 @@
                                                     <li class="dropdown">
 
                                                         <a class="nav-link dropdown-toggle" href="javascript:;">
-                                                            My Account
+                                                            &nbsp;My Account&nbsp;
                                                         </a>
 
                                                         <ul class="dropdown-menu border-light mt-n1">
@@ -675,6 +693,47 @@
 <!-- Theme Initialization Files -->
 <script src="../js/theme.init.js"></script>
 
+<script>
 
+    var defaultStyles = document.querySelectorAll('[id^="default-styles"]');
+    var rtlStyles = document.querySelectorAll('[id^="rtl-styles"]');
+
+    const flagIcon = document.getElementById('flagIcon');
+    const englishOption = document.getElementById('englishOption');
+    const arabicOption = document.getElementById('arabicOption');
+
+    englishOption.addEventListener('click', function() {
+        flagIcon.className = 'flag flag-us';
+        flagIcon.alt = 'English';
+        flagIcon.nextSibling.textContent = ' English ';
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+    });
+
+    arabicOption.addEventListener('click', function() {
+        flagIcon.className = 'flag flag-ar';
+        flagIcon.alt = 'Arabic';
+        flagIcon.nextSibling.textContent = ' Arabic ';
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+    });
+
+    defaultStyles.forEach(function(link) {
+        link.disabled = false;
+    });
+    rtlStyles.forEach(function(link) {
+        link.disabled = true;
+    });
+</script>
 </body>
 </html>

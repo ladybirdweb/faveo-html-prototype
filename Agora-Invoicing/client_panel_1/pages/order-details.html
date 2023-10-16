@@ -32,10 +32,15 @@
     <link rel="stylesheet" href="../vendor/magnific-popup/magnific-popup.min.css">
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="../css/theme.css">
-    <link rel="stylesheet" href="../css/theme-elements.css">
-    <link rel="stylesheet" href="../css/theme-blog.css">
-    <link rel="stylesheet" href="../css/theme-shop.css">
+    <link id="default-styles" rel="stylesheet" href="../css/theme.css">
+    <link id="default-styles-2" rel="stylesheet" href="../css/theme-elements.css">
+    <link id="default-styles-3" rel="stylesheet" href="../css/theme-blog.css">
+    <link id="default-styles-4" rel="stylesheet" href="../css/theme-shop.css">
+
+    <link id="rtl-styles" rel="stylesheet" href="../css/rtl-theme.css">
+    <link id="rtl-styles-2" rel="stylesheet" href="../css/rtl-theme-elements.css">
+    <link id="rtl-styles-3" rel="stylesheet" href="../css/rtl-theme-blog.css">
+    <link id="rtl-styles-4" rel="stylesheet" href="../css/rtl-theme-shop.css">
 
     <!-- Demo CSS -->
     <link rel="stylesheet" href="../css/demos/demo-transportation-logistic.css">
@@ -120,14 +125,27 @@
                                     <div class="ms-auto d-none d-lg-inline-block">
 
                                         <ul class="nav nav-pills">
+
                                             <li class="nav-item dropdown">
+
                                                 <a class="nav-link text-2 p-0 text-color-default" href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <img src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English
+
+                                                    <img id="flagIcon" src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English
+
                                                     <i class="fas fa-angle-down"></i>
                                                 </a>
-                                                <div class="dropdown-menu dropdown-menu-end text-2" aria-labelledby="dropdownLanguage" style="">
-                                                    <a class="dropdown-item text-color-default" href="#"><img src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English</a>
-                                                    <a class="dropdown-item text-color-default" href="#"><img src="../img/blank.gif" class="flag flag-ar" alt="Arabic">&nbsp;Arabic</a>
+
+                                                <div class="dropdown-menu dropdown-menu-end text-2" aria-labelledby="dropdownLanguage">
+
+                                                    <a class="dropdown-item text-color-default" href="#" id="englishOption">
+
+                                                        <img src="../img/blank.gif" class="flag flag-us" alt="English">&nbsp;English
+                                                    </a>
+
+                                                    <a class="dropdown-item text-color-default" href="#" id="arabicOption">
+
+                                                        <img src="../img/blank.gif" class="flag flag-ar" alt="Arabic">&nbsp;Arabic
+                                                    </a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -194,7 +212,7 @@
                                                     <li class="dropdown">
 
                                                         <a class="nav-link dropdown-toggle" href="javascript:;">
-                                                            Store
+                                                            &nbsp;Store&nbsp;
                                                         </a>
 
                                                         <ul class="dropdown-menu border-light mt-n1">
@@ -232,7 +250,7 @@
                                                     <li class="dropdown">
 
                                                         <a class="nav-link dropdown-toggle active" href="javascript:;">
-                                                            My Account
+                                                            &nbsp;My Account&nbsp;
                                                         </a>
 
                                                         <ul class="dropdown-menu border-light mt-n1">
@@ -1009,7 +1027,7 @@
 
                         <p>If you wish to purchase a domain, you can Click here. And after the domain is set up, you will have to point your CNAME to our cloud Learn more.</p>
 
-                        <p><strong>Current Cloud Domain:</strong> https://www.domain.com</p>
+                        <p class="text-black"><strong>Current Cloud Domain:</strong> https://www.domain.com</p>
 
                         <div class="row">
 
@@ -1050,9 +1068,9 @@
 
                     <div class="modal-body">
 
-                        <p><strong>Current number of agents:</strong> 5</p>
+                        <p class="text-black"><strong>Current number of agents:</strong> 5</p>
 
-                        <p><strong>Price per agent: </strong>₹1,600</p>
+                        <p class="text-black"><strong>Price per agent: </strong>₹1,600</p>
 
                         <div class="row">
 
@@ -1088,7 +1106,7 @@
 
                     <div class="modal-body">
 
-                        <p><strong>Current Plan: </strong>Faveo Cloud HelpDesk Yearly</p>
+                        <p class="text-black"><strong>Current Plan: </strong>Faveo Cloud HelpDesk Yearly</p>
 
                         <div class="row">
 
@@ -1110,11 +1128,11 @@
                             </div>
                         </div>
 
-                        <p><strong>Total Credits remaining on your current plan: </strong>₹31,956</p>
+                        <p class="text-black"><strong>Total Credits remaining on your current plan: </strong>₹31,956</p>
 
-                        <p><strong>Price for the new plan: </strong>₹3,59,508</p>
+                        <p class="text-black"><strong>Price for the new plan: </strong>₹3,59,508</p>
 
-                        <p><strong>Price to be paid: </strong>₹3,27,551</p>
+                        <p class="text-black"><strong>Price to be paid: </strong>₹3,27,551</p>
                     </div>
 
                     <div class="modal-footer">
@@ -1344,6 +1362,49 @@
 
             $(autorenewModal).modal('show');
         }
+    });
+</script>
+
+<script>
+
+    var defaultStyles = document.querySelectorAll('[id^="default-styles"]');
+    var rtlStyles = document.querySelectorAll('[id^="rtl-styles"]');
+
+    const flagIcon = document.getElementById('flagIcon');
+    const englishOption = document.getElementById('englishOption');
+    const arabicOption = document.getElementById('arabicOption');
+
+    englishOption.addEventListener('click', function() {
+        flagIcon.className = 'flag flag-us';
+        flagIcon.alt = 'English';
+        flagIcon.nextSibling.textContent = ' English ';
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+    });
+
+    arabicOption.addEventListener('click', function() {
+        flagIcon.className = 'flag flag-ar';
+        flagIcon.alt = 'Arabic';
+        flagIcon.nextSibling.textContent = ' Arabic ';
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+    });
+
+    defaultStyles.forEach(function(link) {
+        link.disabled = false;
+    });
+    rtlStyles.forEach(function(link) {
+        link.disabled = true;
     });
 </script>
 </body>
