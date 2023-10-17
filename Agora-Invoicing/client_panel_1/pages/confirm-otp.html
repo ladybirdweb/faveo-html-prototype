@@ -418,17 +418,17 @@
                             </div>
                         </form>
 
-                        <button id="verifyButton" onclick="verifyOTP()" class="btn btn-dark btn-modern w-100 text-uppercase font-weight-bold text-3 mt-3">Verify OTP</button>
+                        <button id="verifyButton" onclick="verifyOTP()" class="btn btn-dark btn-modern w-100 text-uppercase text-3 mt-3">Verify OTP</button>
 
                         <p id="message"></p>
 
                         <p class="text-2 mb-2">Didn't receive the OTP? <span class="font-weight-bold text-black text-4" id="timer">10</span> seconds</p>
 
-                        <button id="resendButton" onclick="resendOTP()" disabled class="btn btn-dark btn-modern w-100 text-uppercase font-weight-bold text-3 mt-2">
+                        <button id="resendButton" onclick="resendOTP()" disabled class="btn btn-dark btn-outline btn-modern w-100 text-uppercase font-weight-bold text-3 mt-2">
                             Resend OTP
                         </button>
 
-                        <a href="javascript:;" class="btn btn-dark btn-modern w-100 text-uppercase font-weight-bold text-3 mt-2">
+                        <a href="javascript:;" class="btn btn-dark btn-outline btn-modern w-100 text-uppercase font-weight-bold text-3 mt-2">
                             <i class="fas fa-phone text-5 me-2"></i> Receive OTP via Voice Call
                         </a>
                     </div>
@@ -737,7 +737,7 @@
         setTimeout(()=>{
 
             document.getElementById("alert-resend").classList.toggle('d-none');
-            
+
         },2000)
 
         document.getElementById("resendButton").disabled = true;
