@@ -328,7 +328,7 @@
 
                                                         <a class="btn btn-dark btn-modern text-uppercase font-weight-semi-bold" href="cart.html">View Cart</a>
 
-                                                        <a class="btn btn-dark" href="checkout.html">Checkout</a>
+                                                        <a class="btn btn-primary" href="checkout.html">Checkout</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -539,13 +539,11 @@
 
                                 <form id="newsletterForm" class="form-style-3 w-100" action="../php/newsletter-subscribe.php" method="POST" novalidate="novalidate">
 
-                                    <div class="d-flex">
+<div class="input-group">
 
-                                        <input class="form-control bg-color-light box-shadow-none" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
+                                        <input class="form-control bg-light border" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="email">
 
-                                        <button class="btn btn-primary custom-form-control-newsletter-btn btn-px-3 btn-py-2 font-weight-bold" type="submit">
-                                            GO
-                                        </button>
+                                        <button class="btn btn-primary" type="submit"><strong>GO!</strong></button>
                                     </div>
                                 </form>
                             </div>
@@ -764,7 +762,7 @@
 
         const signUpBtn = document.createElement("a");
         signUpBtn.href = "checkout.html";
-        signUpBtn.className = cardInfo.cardPrimary ? "btn btn-light-scale-2 text-color-hover-primary btn-modern" : "btn btn-light-scale-2 text-color-hover-dark btn-modern";
+        signUpBtn.className = cardInfo.cardPrimary ? "btn btn-primary btn-modern py-2 px-4" : "btn btn-dark btn-modern btn-outline py-2 px-4";
         signUpBtn.textContent = cardInfo.buttonText;
 
         textCenterBottom.appendChild(signUpBtn);
@@ -922,7 +920,7 @@
 
         const signUpBtn = document.createElement("a");
         signUpBtn.href = "checkout.html";
-        signUpBtn.className = cardInfo.cardPrimary ? "btn btn-light-scale-2 text-color-hover-primary btn-modern" : "btn btn-light-scale-2 text-color-hover-dark btn-modern";
+        signUpBtn.className = cardInfo.cardPrimary ? "btn btn-primary btn-modern py-2 px-4" : "btn btn-dark btn-modern btn-outline py-2 px-4";
         signUpBtn.textContent = cardInfo.buttonText;
 
         textCenterBottom.appendChild(signUpBtn);
