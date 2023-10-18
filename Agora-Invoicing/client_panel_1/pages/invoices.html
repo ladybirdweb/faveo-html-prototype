@@ -327,7 +327,7 @@
 
                                                     <div class="actions">
 
-                                                        <a class="btn btn-light-scale-2 text-color-hover-primary font-weight-semi-bold" href="cart.html">View Cart</a>
+                                                        <a class="btn btn-dark btn-modern text-uppercase font-weight-semi-bold" href="cart.html">View Cart</a>
 
                                                         <a class="btn btn-light-scale-2 text-color-hover-primary" href="checkout.html">Checkout</a>
                                                     </div>
@@ -560,6 +560,7 @@
                                                 </div>
                                             </div>
 
+                                            <div class="table-responsive">
                                             <table class="table table-striped table-bordered">
 
                                                 <thead>
@@ -628,6 +629,7 @@
                                                 </tr>
                                                 </tbody>
                                             </table>
+                                            </div>
 
                                             <div class="row">
 
@@ -692,6 +694,7 @@
                                             </div>
                                         </div>
 
+                                        <div class="table-responsive">
                                         <table class="table table-striped">
 
                                             <thead>
@@ -730,6 +733,7 @@
                                             </tr>
                                             </tbody>
                                         </table>
+                                        </div>
 
                                         <div class="row">
 
@@ -850,7 +854,25 @@
 
                                             <div class="row">
 
-                                                <div class="col-sm-8"></div>
+                                                <div class="col-sm-3">
+
+                                                    <div class="form-group col">
+
+                                                        <div class="custom-select-1">
+
+                                                            <select id="view_select" class="form-select form-control h-auto py-2 valid" data-msg-required="Please select a city." name="city" required="" aria-invalid="false">
+
+                                                                <option value="All" selected>View All</option>
+
+                                                                <option value="Paid">Paid</option>
+
+                                                                <option value="Unpaid">Unpaid</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-5"></div>
 
                                                 <div class="col-4 mb-3">
 
@@ -869,6 +891,7 @@
                                                 </div>
                                             </div>
 
+                                            <div class="table-responsive">
                                             <table class="table table-striped table-bordered">
 
                                                 <thead>
@@ -884,7 +907,68 @@
                                                 </tr>
                                                 </thead>
 
-                                                <tbody>
+                                                <tbody id="view_paid" class="d-none">
+                                                <tr>
+                                                    <td>36664089</td>
+                                                    <td>Oct 10, 2023</td>
+                                                    <td>22786357</td>
+                                                    <td>$1000</td>
+                                                    <td>$900</td>
+                                                    <td>$100</td>
+                                                    <td><span class="badge badge-success">Paid</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>36664034</td>
+                                                    <td>August 4, 2023</td>
+                                                    <td>22786327</td>
+                                                    <td>$4000</td>
+                                                    <td>$300</td>
+                                                    <td>$500</td>
+                                                    <td><span class="badge badge-success">Paid</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+
+                                                <tbody id="view_unpaid" class="d-none">
+                                                <tr>
+                                                    <td>36664090</td>
+                                                    <td>Sept 23, 2019</td>
+                                                    <td>42786357</td>
+                                                    <td>$9999</td>
+                                                    <td>$0</td>
+                                                    <td>$9999</td>
+                                                    <td><span class="badge badge-danger">Unpaid</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
+                                                        <a href="checkout.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Pay Now"><i class="fas fa-credit-card"></i></a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>36664045</td>
+                                                    <td>Sept 23, 2019</td>
+                                                    <td>4278622257</td>
+                                                    <td>$2399</td>
+                                                    <td>$0</td>
+                                                    <td>$3499</td>
+                                                    <td><span class="badge badge-danger">Unpaid</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
+                                                        <a href="checkout.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Pay Now"><i class="fas fa-credit-card"></i></a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                                <tbody id="view_all">
                                                 <tr>
                                                     <td>36664089</td>
                                                     <td>Oct 10, 2023</td>
@@ -927,14 +1011,32 @@
                                                         <a href="checkout.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Pay Now"><i class="fas fa-credit-card"></i></a>
                                                     </td>
                                                 </tr>
+
+                                                <tr>
+                                                    <td>36664045</td>
+                                                    <td>Sept 23, 2019</td>
+                                                    <td>4278622257</td>
+                                                    <td>$2399</td>
+                                                    <td>$0</td>
+                                                    <td>$3499</td>
+                                                    <td><span class="badge badge-danger">Unpaid</span>
+                                                    </td>
+                                                    <td>
+                                                        <a href="invoice-details.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="View"><i class="fas fa-eye"></i></a>
+                                                        <a href="checkout.html" class="btn btn-light-scale-2 btn-sm text-dark" data-bs-toggle="tooltip" title="Pay Now"><i class="fas fa-credit-card"></i></a>
+                                                    </td>
+                                                </tr>
                                                 </tbody>
                                             </table>
+                                            </div>
 
                                             <div class="row">
 
                                                 <div class="col-md-6">
 
-                                                    <span>Showing 1 to 3 of 3 records</span>
+                                                    <span id="four_record">Showing 1 to 4 of 4 records</span>
+
+                                                    <span id="two_record" class="d-none">Showing 1 to 2 of 2 records</span>
                                                 </div>
 
                                                 <div class="col-md-6">
@@ -1207,13 +1309,11 @@
 
                                 <form id="newsletterForm" class="form-style-3 w-100" action="../php/newsletter-subscribe.php" method="POST" novalidate="novalidate">
 
-                                    <div class="d-flex">
+<div class="input-group">
 
-                                        <input class="form-control bg-color-light box-shadow-none" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
+                                        <input class="form-control bg-light border" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="email">
 
-                                        <button class="btn btn-primary custom-form-control-newsletter-btn btn-px-3 btn-py-2 font-weight-bold" type="submit">
-                                            GO
-                                        </button>
+                                        <button class="btn btn-primary" type="submit"><strong>GO!</strong></button>
                                     </div>
                                 </form>
                             </div>
@@ -1265,6 +1365,90 @@
 <!-- Theme Initialization Files -->
 <script src="../js/theme.init.js"></script>
 
+<script>
+
+    let selectedFilter = document.getElementById("view_select");
+
+    selectedFilter.addEventListener("change", function() {
+
+        const paid = document.getElementById('view_paid');
+        const unpaid = document.getElementById('view_unpaid');
+        const all = document.getElementById('view_all');
+        const record_4 = document.getElementById('four_record');
+        const record_2 = document.getElementById('two_record');
+
+        var selectedValue = selectedFilter.value;
+
+        if(selectedValue === 'All') {
+
+            if (!paid.classList.contains("d-none")) {
+                paid.classList.add("d-none");
+            }
+
+            if (!unpaid.classList.contains("d-none")) {
+                unpaid.classList.add("d-none");
+            }
+
+            if (all.classList.contains("d-none")) {
+                all.classList.remove("d-none");
+            }
+
+            if (record_4.classList.contains("d-none")) {
+                record_4.classList.remove("d-none");
+            }
+
+            if (!record_2.classList.contains("d-none")) {
+                record_2.classList.add("d-none");
+            }
+        }
+
+        if(selectedValue === 'Paid') {
+
+            if (paid.classList.contains("d-none")) {
+                paid.classList.remove("d-none")
+            }
+
+            if (!unpaid.classList.contains("d-none")) {
+                unpaid.classList.add("d-none");
+            }
+
+            if (!all.classList.contains("d-none")) {
+                all.classList.add("d-none");
+            }
+
+            if (!record_4.classList.contains("d-none")) {
+                record_4.classList.add("d-none");
+            }
+
+            if (record_2.classList.contains("d-none")) {
+                record_2.classList.remove("d-none");
+            }
+        }
+
+        if(selectedValue === 'Unpaid') {
+
+            if (!paid.classList.contains("d-none")) {
+                paid.classList.add("d-none");
+            }
+
+            if (unpaid.classList.contains("d-none")) {
+                unpaid.classList.remove("d-none");
+            }
+
+            if (!all.classList.contains("d-none")) {
+                all.classList.add("d-none");
+            }
+
+            if (!record_4.classList.contains("d-none")) {
+                record_4.classList.add("d-none");
+            }
+
+            if (record_2.classList.contains("d-none")) {
+                record_2.classList.remove("d-none");
+            }
+        }
+    });
+</script>
 <script>
 
     var defaultStyles = document.querySelectorAll('[id^="default-styles"]');
