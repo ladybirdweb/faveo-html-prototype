@@ -1,3 +1,27 @@
 a:hover {
     color: #0056b3 !important
 }
+
+.is-danger {
+    margin-left: 2px;
+    color: #d73925;
+}
+
+.modal-backdrop {
+    display: none !important;
+}
+
+.modal-backdrop.show {
+    opacity: 0 !important;
+    z-index: unset !important;
+}
+
+.form-border {
+    z-index: 1 !important;
+}
+
+.modal.fade.show {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.pointer-cursor { cursor: pointer; }
