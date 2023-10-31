@@ -25,3 +25,7 @@ a:hover {
 }
 
 .pointer-cursor { cursor: pointer; }
+
+.btn-custom:hover { color: white !important; }
+
+.breadcrumb-custom>li a:hover { color: #fff !important;}

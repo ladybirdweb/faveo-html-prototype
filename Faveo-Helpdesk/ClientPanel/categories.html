@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit Ticket | Faveo</title>
+    <title>Category List | Faveo</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
@@ -62,9 +62,9 @@
                             <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
 
-                        <li class="nav-item active"><a class="nav-link" href="submit-ticket.html">Submit Ticket</a></li>
+                        <li class="nav-item"><a class="nav-link" href="submit-ticket.html">Submit Ticket</a></li>
 
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown active">
 
                             <a class="dropdown-toggle nav-link" href="knowledge-base.html" id="navbarDropdown" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">Knowledge Base</a>
 
@@ -223,7 +223,11 @@
 
                 <li class="text">You are here: </li>
 
-                <li class="active"><a href="#">Submit a Ticket</a></li>
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="knowledge-base.html"><i class="fas fa-chevron-right"></i>Knowledge Base</a></li>
+
+                <li class="active"><i class="fas fa-chevron-right"></i>Category List</li>
             </ol>
         </div>
     </div>
@@ -236,225 +240,16 @@
 
                 <div class="row">
 
-                    <div id="content" class="site-content col-md-9">
+                    <div id="content" class="site-content col-md-12">
 
-                        <div id="respond" class="comment-respond form-border bg-white">
-
-                            <form id="commentform" class="comment-form">
-
-                                <h2 class="comments-title section-title h3">
-
-                                    <i class="line"></i>Submit Ticket
-                                </h2>
-
-                                <div class="row mb-3">
-
-                                    <label class="col-sm-3 col-form-label">Requester <span class="is-danger">*</span></label>
-
-                                    <div class="col-sm-9">
-
-                                        <div class="input-group mb-3">
-
-                                            <input type="text" class="form-control" placeholder="Enter your Username/Email or Register">
-
-                                            <span class="input-group-text pointer-cursor" id="basic-addon2" data-bs-toggle="modal" data-bs-target="#exampleModal">Register</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-
-                                    <label class="col-sm-3 col-form-label">Subject <span class="is-danger">*</span></label>
-
-                                    <div class="col-sm-9">
-
-                                        <input type="text" class="form-control" placeholder="Enter Subject">
-                                    </div>
-                                </div>
-
-                                <fieldset class="row mb-3">
-
-                                    <legend class="col-form-label col-sm-3 pt-0">Ticket is for <span class="is-danger">*</span></legend>
-
-                                    <div class="col-sm-9">
-
-                                        <div class="form-check">
-
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-
-                                            <label class="form-check-label" for="gridRadios1">
-
-                                                Bug/Error
-                                            </label>
-                                        </div>
-
-                                        <div class="form-check">
-
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-
-                                            <label class="form-check-label" for="gridRadios2">
-
-                                                Enhancement
-                                            </label>
-                                        </div>
-
-                                        <div class="form-check">
-
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-
-                                            <label class="form-check-label" for="gridRadios3">
-
-                                                feature Request
-                                            </label>
-                                        </div>
-                                    </div>
-                                </fieldset>
-
-                                <div class="row mb-3">
-
-                                    <label class="col-sm-3 col-form-label">Custom Checkbox <span class="is-danger">*</span></label>
-
-                                    <div class="col-sm-9">
-
-                                        <div class="form-check mt-1">
-
-                                            <input class="form-check-input" type="checkbox" id="gridCheck1" checked>
-
-                                            <label class="form-check-label" for="gridCheck1">
-
-                                                Example checkbox
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-
-                                    <label class="col-sm-3 col-form-label">Description <span class="is-danger">*</span></label>
-
-                                    <div class="col-sm-9">
-
-                                        <textarea class="form-control" placeholder="Enter Description"></textarea>
-                                    </div>
-                                </div>
-
-
-                                <div class="text-end">
-
-                                    <button type="submit" class="btn btn-custom"><i class="fas fa-save"></i> Submit</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div id="sidebar" class="site-sidebar col-md-3">
-
-                        <div class="form-border bg-white">
-
-                            <form>
-
-                                <h2 class="section-title h3">
-
-                                    <i class="line"></i>Have a Ticket
-                                </h2>
-
-                                <div class="mb-3">
-
-                                    <label class="form-label">Ticket Number <span class="is-danger">*</span></label>
-
-                                    <input type="text" class="form-control" placeholder="Enter a value">
-                                </div>
-
-                                <div class="mb-3">
-
-                                    <label class="form-label">Email Address <span class="is-danger">*</span></label>
-
-                                    <input type="text" class="form-control" placeholder="Enter a value">
-                                </div>
-
-                                <div class="col-12">
-
-                                    <button type="submit" class="btn btn-custom"><i class="fas fa-save"></i> Submit</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <!-- Register Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-                        <div class="modal-dialog">
-
-                            <div class="modal-content">
-
-                                <div class="modal-header">
-
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Register</h1>
-
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-                                </div>
-
-                                <div class="modal-body">
-
-                                    <form>
-
-                                        <div class="row mb-3">
-
-                                            <label class="col-sm-3 col-form-label">First Name <span class="is-danger">*</span></label>
-
-                                            <div class="col-sm-9">
-
-                                                <input type="text" class="form-control" placeholder="First name">
-                                            </div>
-                                        </div>
-
-                                        <div class="row mb-3">
-
-                                            <label class="col-sm-3 col-form-label">Last Name <span class="is-danger">*</span></label>
-
-                                            <div class="col-sm-9">
-
-                                                <input type="text" class="form-control" placeholder="Last name">
-                                            </div>
-                                        </div>
-
-                                        <div class="row mb-3">
-
-                                            <label class="col-sm-3 col-form-label">Username <span class="is-danger">*</span></label>
-
-                                            <div class="col-sm-9">
-
-                                                <input type="text" class="form-control" placeholder="User name">
-                                            </div>
-                                        </div>
-
-                                        <div class="row mb-3">
-
-                                            <label class="col-sm-3 col-form-label">Email <span class="is-danger">*</span></label>
-
-                                            <div class="col-sm-9">
-
-                                                <input type="text" class="form-control" placeholder="Email address">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-
-                                <div class="modal-footer justify-content-between">
-
-                                    <button type="button" class="bg-light border btn btn-default" data-bs-dismiss="modal"><i class="fas fa-times"></i> Close</button>
-
-                                    <button type="button" class="btn btn-primary"><i class="fas fa-save"></i> Submit</button>
-                                </div>
-                            </div>
+                        <div class="row" id="categories-container">
+                            <!-- Your content will be dynamically generated here -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <footer id="colophon" class="site-footer" role="contentinfo">
 
@@ -696,5 +491,85 @@
     }
 </script>
 
+<script>
+    // Sample data for categories
+    const categoriesData = [
+        {
+            title: 'Account Settings',
+            items: [
+                'Can I Change My Username?',
+                'How Secure Is My Password?',
+                'Where Can I Upload My Avatar?',
+                'What Technologies Are Used?',
+                'What Are The API Limits?',
+                'Why Was My Developer Application Rejected?',
+            ],
+        },
+        {
+            title: 'API Questions',
+            items: [
+                'Using Javascript',
+                'Using Images',
+                'Using Video',
+                'What Technologies Are Used?',
+                'What Are The API Limits?',
+                'Why Was My Developer Application Rejected?',
+            ],
+        },
+        {
+            title: 'Customization',
+            items: [
+                'Using Javascript',
+                'Using Images',
+                'Using Video',
+                'Can I Change My Username?',
+                'How Secure Is My Password?',
+                'Where Can I Upload My Avatar?',
+            ],
+        },
+        {
+            title: 'Mobile Apps',
+            items: [
+                'How Do I Download The Andoird App?',
+                'Incompatibilities With Horizon Phones',
+                'How To Download Our iPad App',
+                
+            ],
+        },
+    ];
+
+    // Function to generate HTML for a category
+    function generateCategory(category) {
+        return `
+            <div class="col-md-6">
+                <section class="box-categories">
+                    <h1 class="section-title h4 clearfix">
+                        <i class="line"></i>
+                        <i class="far fa-folder-open fa-fw text-muted"></i>
+                        <small class="pull-end float-end"><i class="far fa-hdd fa-fw"></i> ${category.items.length}</small>
+                        ${category.title}
+                    </h1>
+                    <ul class="fa-ul">
+                        ${category.items.map(item => `
+                            <li>
+                                <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
+                                <h3 class="h5"><a href="#">${item}</a></h3>
+                            </li>
+                        `).join('')}
+                    </ul>
+                    <p class="more-link text-center"><a href="#" class="btn btn-custom btn-sm">View All</a></p>
+                </section>
+            </div>
+        `;
+    }
+
+    // Function to generate the entire category container
+    function generateCategoryContainer(categoriesData) {
+        return categoriesData.map(category => generateCategory(category)).join('');
+    }
+
+    // Insert the generated HTML into the categories container
+    document.getElementById('categories-container').innerHTML = generateCategoryContainer(categoriesData);
+</script>
 </body>
 </html>
