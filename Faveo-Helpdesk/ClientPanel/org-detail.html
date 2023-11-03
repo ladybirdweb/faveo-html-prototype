@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category List | Faveo</title>
+    <title>Organization Details | Faveo</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
@@ -64,7 +64,7 @@
 
                         <li class="nav-item"><a class="nav-link" href="submit-ticket.html">Submit Ticket</a></li>
 
-                        <li class="nav-item dropdown active">
+                        <li class="nav-item dropdown">
 
                             <a class="dropdown-toggle nav-link" href="knowledge-base.html" id="navbarDropdown" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">Knowledge Base</a>
 
@@ -82,7 +82,7 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown active">
 
                             <a class="dropdown-toggle nav-link" href="javascript:;" id="navbarDropdown1" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">Organizations</a>
 
@@ -132,11 +132,11 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                <li><a class="dropdown-item" href="categories.html?lang=ar" id="arabicOption">
+                                <li><a class="dropdown-item" href="org-detail.html?lang=ar" id="arabicOption">
                                     <img src="./assets/img/ar.png" alt="Img"> Arabic
                                 </a></li>
 
-                                <li><a class="dropdown-item" href="categories.html?lang=en" id="englishOption">
+                                <li><a class="dropdown-item" href="org-detail.html?lang=en" id="englishOption">
                                     <img src="./assets/img/en.png" alt="Img"> English
                                 </a></li>
                             </ul>
@@ -239,9 +239,7 @@
 
                 <li><a href="index.html">Home</a></li>
 
-                <li><a href="knowledge-base.html"><i class="fas fa-chevron-right"></i>Knowledge Base</a></li>
-
-                <li class="active"><i class="fas fa-chevron-right"></i>Category List</li>
+                <li class="active"><i class="fas fa-chevron-right"></i>Organization Details</li>
             </ol>
         </div>
     </div>
@@ -254,10 +252,186 @@
 
                 <div class="row">
 
-                    <div id="content" class="site-content col-md-12">
+                    <div id="content" class="site-content col-md-3">
 
-                        <div class="row" id="categories-container">
-                            <!-- Your content will be dynamically generated here -->
+                        <h2 class="section-title h4 clearfix"><i class="line" ></i>About</h2>
+
+                        <div class="bg-light border rounded shadow-sm py-3 px-4 text-center">
+
+                            <img src="./assets/img/org.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+
+                            <h5 class="mb-3">Ladybird</h5>
+
+                            <ul class="list-group list-group-flush border-top">
+
+                                <li class="list-group-item mb-0 bg-light">
+
+                                    <dl class="row mb-0">
+
+                                        <dt class="col-sm-2"><i class="fas fa-phone"></i></dt>
+
+                                        <dd class="col-sm-10">+91 9898907651</dd>
+                                    </dl>
+                                </li>
+
+                                <li class="list-group-item mb-0 bg-light">
+
+                                    <dl class="row mb-0">
+
+                                        <dt class="col-sm-2"><i class="fas fa-globe"></i></dt>
+
+                                        <dd class="col-sm-10">https://ladybird.org</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h2 class="section-title h4 clearfix mt-4"><i class="line" ></i>Managers</h2>
+
+                        <div class="bg-light border rounded shadow-sm py-3 px-4 text-center">
+
+                            <img src="https://secure.gravatar.com/avatar/bc09b60fe64b5cf2993593bf89946b91?s=80&r=g&d=mm" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+
+                            <h5 class="mb-3">Sakthivel Munusami</h5>
+
+                            <ul class="list-group list-group-flush border-top">
+
+                                <li class="list-group-item mb-0 bg-light">
+
+                                    <dl class="row mb-0">
+
+                                        <dt class="col-sm-2"><i class="fas fa-phone"></i></dt>
+
+                                        <dd class="col-sm-10">+91 9898907651</dd>
+                                    </dl>
+                                </li>
+
+                                <li class="list-group-item mb-0 bg-light">
+
+                                    <dl class="row mb-0">
+
+                                        <dt class="col-sm-2"><i class="fas fa-envelope"></i></dt>
+
+                                        <dd class="col-sm-10">sakthi@gmail.com</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="sidebar" class="site-sidebar col-md-9">
+
+                        <h2 class="section-title h4 clearfix"><i class="line" ></i>Contacts
+
+                            <a href="org-user.html" class="btn btn-custom border float-end org-user-btn"><i class="fas fa-plus"></i> Add User</a>
+                        </h2>
+
+                        <div class="mt-2 mb-4">
+
+                            <div class="row float-end mr-0 mb-3">
+
+                                <div class="input-group">
+
+                                            <span class="input-group-text bg-white text-gray">
+
+                                                <i class="fa fa-search text-muted"></i>
+                                            </span>
+
+                                    <input type="search" class="form-control border-start-0" placeholder="Search...">
+                                </div>
+                            </div>
+
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Username</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Mobile</th>
+                                    <th scope="col">Phone</th>
+                                    <th scope="col">Last Activity</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td scope="row">User one</td>
+                                    <td>One User</td>
+                                    <td>user@gmail.com</td>
+                                    <td>+91 76545678987</td>
+                                    <td>876545678</td>
+                                    <td>November 01, 2023 09:09 am</td>
+                                    <td>
+                                        <a href="org-user.html" class="btn btn-light border btn-sm" title="Edit"><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-sm-6">
+
+                                <span>1 record</span>
+                            </div>
+                        </div>
+
+                        <h2 class="section-title h4 clearfix mt-5"><i class="line" ></i>Tickets</h2>
+
+                        <div class="mt-2 mb-4">
+
+                            <div class="row float-end mr-0 mb-3">
+
+                                <div class="input-group">
+
+                                            <span class="input-group-text bg-white text-gray">
+
+                                                <i class="fa fa-search text-muted"></i>
+                                            </span>
+
+                                    <input type="search" class="form-control border-start-0" placeholder="Search...">
+                                </div>
+                            </div>
+
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Ticket Number</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Requester</th>
+                                    <th scope="col">Last replier</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Last activity</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td scope="row">#HDSK-AAAA-0001</td>
+                                    <td><a href="ticket-detail.html">Ticket one (1)</a></td>
+                                    <td>Sakthi</td>
+                                    <td>Manish</td>
+                                    <td>Closed</td>
+                                    <td>May 01, 2023 09:09 am</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">#HDSK-AAAA-0002</td>
+                                    <td><a href="ticket-detail.html">Lorem ipsum dolor (34)</a></td>
+                                    <td>Viji</td>
+                                    <td>Dheekshit</td>
+                                    <td>Open</td>
+                                    <td>June 31, 2023 12:34 am</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-sm-6">
+
+                                <span>2 records</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -503,86 +677,6 @@
 
         },1000)
     }
-</script>
-
-<script>
-    // Sample data for categories
-    const categoriesData = [
-        {
-            title: 'Account Settings',
-            items: [
-                'Can I Change My Username?',
-                'How Secure Is My Password?',
-                'Where Can I Upload My Avatar?',
-                'What Technologies Are Used?',
-                'What Are The API Limits?',
-                'Why Was My Developer Application Rejected?',
-            ],
-        },
-        {
-            title: 'API Questions',
-            items: [
-                'Using Javascript',
-                'Using Images',
-                'Using Video',
-                'What Technologies Are Used?',
-                'What Are The API Limits?',
-                'Why Was My Developer Application Rejected?',
-            ],
-        },
-        {
-            title: 'Customization',
-            items: [
-                'Using Javascript',
-                'Using Images',
-                'Using Video',
-                'Can I Change My Username?',
-                'How Secure Is My Password?',
-                'Where Can I Upload My Avatar?',
-            ],
-        },
-        {
-            title: 'Mobile Apps',
-            items: [
-                'How Do I Download The Andoird App?',
-                'Incompatibilities With Horizon Phones',
-                'How To Download Our iPad App'
-            ],
-        },
-    ];
-
-    // Function to generate HTML for a category
-    function generateCategory(category) {
-        return `
-            <div class="col-md-6">
-                <section class="box-categories">
-                    <h1 class="section-title h4 clearfix">
-                        <i class="line"></i>
-                        <a href="category-detail.html"><i class="far fa-folder-open fa-fw text-muted"></i>
-                        <small class="pull-end float-end"><i class="far fa-hdd fa-fw"></i> ${category.items.length}</small>
-                        ${category.title}</a>
-                    </h1>
-                    <ul class="fa-ul">
-                        ${category.items.map(item => `
-                            <li>
-                                <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
-                                <h3 class="h5"><a href="#">${item}</a></h3>
-                            </li>
-                        `).join('')}
-                    </ul>
-                    <p class="more-link text-center"><a href="category-detail.html" class="btn btn-custom btn-sm">View All</a></p>
-                </section>
-            </div>
-        `;
-    }
-
-    // Function to generate the entire category container
-    function generateCategoryContainer(categoriesData) {
-        return categoriesData.map(category => generateCategory(category)).join('');
-    }
-
-    // Insert the generated HTML into the categories container
-    document.getElementById('categories-container').innerHTML = generateCategoryContainer(categoriesData);
 </script>
 </body>
 </html>

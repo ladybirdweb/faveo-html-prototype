@@ -24,7 +24,7 @@
     <![endif]-->
 </head>
 
-<body style="display: none">
+<body class="text-xs" style="display: none">
 
 <div id="page" class="hfeed site">
 
@@ -84,7 +84,7 @@
 
                         <li class="nav-item dropdown">
 
-                            <a class="dropdown-toggle nav-link" href="organizations.html" id="navbarDropdown1" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">Organizations</a>
+                            <a class="dropdown-toggle nav-link" href="javascript:;" id="navbarDropdown1" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">Organizations</a>
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
@@ -102,7 +102,21 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                Test
+                                <div class="banner-wrapper user-data text-center clearfix border-0">
+
+                                    <img src="assets/img/avatar.png" alt="" height="60" width="60" class="avatar rounded-5">
+
+                                    <p class="mt-2 mb-0">Hello</p>
+
+                                    <h3 class="banner-title h4">Sakthivel</h3>
+
+                                    <div class="banner-content mt-3 btn-group">
+
+                                        <a href="javascript:;" class="btn btn-custom btn-sm profile-drop-btn">Log out</a></p>
+
+                                        <a href="my-profile.html" class="btn btn-custom btn-sm profile-drop-btn ms-1">Profile</a></p>
+                                    </div>
+                                </div>
                             </ul>
                         </li>
 
@@ -118,11 +132,11 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                <li><a class="dropdown-item" href="index.html?lang=ar" id="arabicOption">
+                                <li><a class="dropdown-item" href="knowledge-base.html?lang=ar" id="arabicOption">
                                     <img src="./assets/img/ar.png" alt="Img"> Arabic
                                 </a></li>
 
-                                <li><a class="dropdown-item" href="index.html?lang=en" id="englishOption">
+                                <li><a class="dropdown-item" href="knowledge-base.html?lang=en" id="englishOption">
                                     <img src="./assets/img/en.png" alt="Img"> English
                                 </a></li>
                             </ul>
@@ -275,12 +289,12 @@
                             <section id="section-tags" class="section">
                                 <h2 class="section-title h4 clearfix">Tags</h2>
                                 <div class="tagcloud">
-                                    <a href="#" class="btn btn-tag btn-sm">basic</a>
-                                    <a href="#" class="btn btn-tag btn-sm">beginner</a>
-                                    <a href="#" class="btn btn-tag btn-sm">blogging</a>
-                                    <a href="#" class="btn btn-tag btn-sm">colour</a>
-                                    <a href="#" class="btn btn-tag btn-sm">css</a>
-                                    <a href="#" class="btn btn-tag btn-sm">date</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">basic</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">beginner</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">blogging</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">colour</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">css</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">date</a>
                                 </div>
                             </section>
                         </div>
@@ -575,19 +589,19 @@
                 <section class="box-categories">
                     <h1 class="section-title h4 clearfix">
                         <i class="line"></i>
-                        <i class="far fa-folder-open fa-fw text-muted"></i>
+                        <a href="category-detail.html"><i class="far fa-folder-open fa-fw text-muted"></i>
                         <small class="pull-end float-end"><i class="far fa-hdd fa-fw"></i> ${category.items.length}</small>
-                        ${category.title}
+                        ${category.title}</a>
                     </h1>
                     <ul class="fa-ul">
                         ${category.items.map(item => `
                             <li>
                                 <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
-                                <h3 class="h5"><a href="#">${item}</a></h3>
+                                <h3 class="h5"><a href="article-detail.html">${item}</a></h3>
                             </li>
                         `).join('')}
                     </ul>
-                    <p class="more-link text-center"><a href="#" class="btn btn-custom btn-sm">View All</a></p>
+                    <p class="more-link text-center"><a href="category-detail.html" class="btn btn-custom btn-sm">View All</a></p>
                 </section>
             </div>
         `;

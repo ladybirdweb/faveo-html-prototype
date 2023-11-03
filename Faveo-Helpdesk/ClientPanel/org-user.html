@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category List | Faveo</title>
+    <title>User Create | Faveo</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
@@ -64,7 +64,7 @@
 
                         <li class="nav-item"><a class="nav-link" href="submit-ticket.html">Submit Ticket</a></li>
 
-                        <li class="nav-item dropdown active">
+                        <li class="nav-item dropdown">
 
                             <a class="dropdown-toggle nav-link" href="knowledge-base.html" id="navbarDropdown" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">Knowledge Base</a>
 
@@ -82,7 +82,7 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown active">
 
                             <a class="dropdown-toggle nav-link" href="javascript:;" id="navbarDropdown1" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">Organizations</a>
 
@@ -132,11 +132,11 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                <li><a class="dropdown-item" href="categories.html?lang=ar" id="arabicOption">
+                                <li><a class="dropdown-item" href="org-user.html?lang=ar" id="arabicOption">
                                     <img src="./assets/img/ar.png" alt="Img"> Arabic
                                 </a></li>
 
-                                <li><a class="dropdown-item" href="categories.html?lang=en" id="englishOption">
+                                <li><a class="dropdown-item" href="org-user.html?lang=en" id="englishOption">
                                     <img src="./assets/img/en.png" alt="Img"> English
                                 </a></li>
                             </ul>
@@ -239,9 +239,7 @@
 
                 <li><a href="index.html">Home</a></li>
 
-                <li><a href="knowledge-base.html"><i class="fas fa-chevron-right"></i>Knowledge Base</a></li>
-
-                <li class="active"><i class="fas fa-chevron-right"></i>Category List</li>
+                <li class="active"><i class="fas fa-chevron-right"></i>User Create/Edit</li>
             </ol>
         </div>
     </div>
@@ -256,9 +254,47 @@
 
                     <div id="content" class="site-content col-md-12">
 
-                        <div class="row" id="categories-container">
-                            <!-- Your content will be dynamically generated here -->
-                        </div>
+                        <header class="archive-header">
+
+                            <h1 class="archive-title">User Create/Edit</h1>
+                        </header>
+
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="inputPassword4">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress2" class="form-label">Address 2</label>
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputCity" class="form-label">City</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputState" class="form-label">State</label>
+                                <select id="inputState" class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="inputZip" class="form-label">Zip</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-custom float-end"><i class="fas fa-save"></i> Save</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -503,86 +539,6 @@
 
         },1000)
     }
-</script>
-
-<script>
-    // Sample data for categories
-    const categoriesData = [
-        {
-            title: 'Account Settings',
-            items: [
-                'Can I Change My Username?',
-                'How Secure Is My Password?',
-                'Where Can I Upload My Avatar?',
-                'What Technologies Are Used?',
-                'What Are The API Limits?',
-                'Why Was My Developer Application Rejected?',
-            ],
-        },
-        {
-            title: 'API Questions',
-            items: [
-                'Using Javascript',
-                'Using Images',
-                'Using Video',
-                'What Technologies Are Used?',
-                'What Are The API Limits?',
-                'Why Was My Developer Application Rejected?',
-            ],
-        },
-        {
-            title: 'Customization',
-            items: [
-                'Using Javascript',
-                'Using Images',
-                'Using Video',
-                'Can I Change My Username?',
-                'How Secure Is My Password?',
-                'Where Can I Upload My Avatar?',
-            ],
-        },
-        {
-            title: 'Mobile Apps',
-            items: [
-                'How Do I Download The Andoird App?',
-                'Incompatibilities With Horizon Phones',
-                'How To Download Our iPad App'
-            ],
-        },
-    ];
-
-    // Function to generate HTML for a category
-    function generateCategory(category) {
-        return `
-            <div class="col-md-6">
-                <section class="box-categories">
-                    <h1 class="section-title h4 clearfix">
-                        <i class="line"></i>
-                        <a href="category-detail.html"><i class="far fa-folder-open fa-fw text-muted"></i>
-                        <small class="pull-end float-end"><i class="far fa-hdd fa-fw"></i> ${category.items.length}</small>
-                        ${category.title}</a>
-                    </h1>
-                    <ul class="fa-ul">
-                        ${category.items.map(item => `
-                            <li>
-                                <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
-                                <h3 class="h5"><a href="#">${item}</a></h3>
-                            </li>
-                        `).join('')}
-                    </ul>
-                    <p class="more-link text-center"><a href="category-detail.html" class="btn btn-custom btn-sm">View All</a></p>
-                </section>
-            </div>
-        `;
-    }
-
-    // Function to generate the entire category container
-    function generateCategoryContainer(categoriesData) {
-        return categoriesData.map(category => generateCategory(category)).join('');
-    }
-
-    // Insert the generated HTML into the categories container
-    document.getElementById('categories-container').innerHTML = generateCategoryContainer(categoriesData);
 </script>
 </body>
 </html>

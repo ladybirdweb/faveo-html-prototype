@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category List | Faveo</title>
+    <title>Article Detail | Faveo</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
@@ -132,11 +132,11 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                <li><a class="dropdown-item" href="categories.html?lang=ar" id="arabicOption">
+                                <li><a class="dropdown-item" href="article-detail.html?lang=ar" id="arabicOption">
                                     <img src="./assets/img/ar.png" alt="Img"> Arabic
                                 </a></li>
 
-                                <li><a class="dropdown-item" href="categories.html?lang=en" id="englishOption">
+                                <li><a class="dropdown-item" href="article-detail.html?lang=en" id="englishOption">
                                     <img src="./assets/img/en.png" alt="Img"> English
                                 </a></li>
                             </ul>
@@ -241,7 +241,9 @@
 
                 <li><a href="knowledge-base.html"><i class="fas fa-chevron-right"></i>Knowledge Base</a></li>
 
-                <li class="active"><i class="fas fa-chevron-right"></i>Category List</li>
+                <li><a href="categories.html"><i class="fas fa-chevron-right"></i>Categories</a></li>
+
+                <li class="active"><i class="fas fa-chevron-right"></i>Detail</li>
             </ol>
         </div>
     </div>
@@ -251,19 +253,142 @@
         <div class="container">
 
             <div class="content-area">
-
                 <div class="row">
 
-                    <div id="content" class="site-content col-md-12">
+                    <div id="content" class="site-content col-md-9">
 
-                        <div class="row" id="categories-container">
-                            <!-- Your content will be dynamically generated here -->
+                        <article class="hentry">
+
+                            <header class="entry-header">
+
+                                <h1 class="entry-title">Aliquam Rhoncus Quis Mi Nec Sodales</h1>
+
+                                <div class="entry-meta text-muted">
+
+                                    <span class="date"><i class="far fa-clock fa-fw"></i> <time datetime="2013-09-19T20:01:58+00:00">September 19, 2013 at 8:01 pm</time></span>
+
+                                    <span class="category"><i class="far fa-folder-open fa-fw"></i> <a href="#">Mobile Apps</a></span>
+
+                                    <span class="btn btn-tag btn-sm tag" title="tag">tag</span>
+                                </div>
+                            </header>
+
+                            <div class="entry-content clearfix">
+
+                                <div class="form-border mb-3">
+
+                                    <div>
+                                        <em>Nulla bibendum vel ipsum ut suscipit. Nunc eu massa quis odio sollicitudin feugiat. Maecenas sit amet nunc nec urna placerat convallis at sit amet sem. Aenean luctus, eros vitae lobortis aliquet, purus dui rutrum libero, quis scelerisque est ipsum ut dui. Donec ligula velit, tincidunt et nisi quis, porta varius augue. Morbi volutpat fringilla velit.</em>
+                                    </div>
+                                </div>
+
+                                <p>Donec dapibus consectetur tempor. In tincidunt in purus sagittis suscipit. Aenean sit amet lorem turpis. Aliquam enim justo, laoreet in pharetra eu, semper at neque. Nunc posuere ipsum nulla, quis commodo urna laoreet nec. Sed lectus nunc, placerat ut dignissim ut, dictum sodales lacus. Duis blandit volutpat sapien a dapibus. Suspendisse tincidunt imperdiet nibh mollis malesuada.</p>
+
+                                <p>You can using this code:</p>
+
+                                <pre>
+                                    &lt;div <span class="text-danger">class=</span><span class="text-primary">"form-group"</span>&gt;
+                                      ...
+                                    &lt;/div&gt;
+                                </pre>
+
+                                <p>This stylesheet code for <code>.form-group</code>:</p>
+                                <pre>
+                                    .<span class="text-danger">form-group</span> {
+                                      <span class="text-primary">margin-bottom</span>: 10px;
+                                    }
+                                </pre>
+                                <p>Phasellus feugiat lobortis libero quis laoreet. Quisque ac fringilla purus. Integer eleifend, arcu eu egestas vestibulum, libero magna rhoncus magna, id pellentesque diam ante rutrum arcu. In hac habitasse platea dictumst. In vestibulum turpis nunc.</p>
+                            </div>
+                        </article>
+
+                        <hr>
+
+                        <div id="comments" class="comments-area">
+
+                            <ol id="comments-list" class="comment-list">
+                                <!-- This is the container where the comments will be added dynamically -->
+                            </ol>
+
+                            <div id="respond" class="comment-respond form-border">
+
+                                <h3 id="reply-title" class="comment-reply-title section-title">Leave a Reply</h3>
+
+                                <form action="" method="post" id="commentform" class="comment-form">
+
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+
+                                            <div class="banner-wrapper user-data text-center clearfix">
+
+                                                <img src="assets/img/avatar.png" alt="" height="60" width="60" class="avatar rounded-5" />
+
+                                                <h3 class="banner-title h4 mt-3"><a href="#">Sakthi</a></h3>
+
+                                                <div class="banner-content mt-3">
+
+                                                    <p>You are not <strong>Sakthi</strong>?
+
+                                                        <br /><a href="#" class="btn btn-custom btn-sm">Log out</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-8">
+
+                                            <div class="form-group">
+
+                                                <label for="comment-comment">Comment <span class="is-danger"> *</span> </label>
+
+                                                <textarea class="form-control" id="comment-comment" cols="30" rows="8"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-end">
+
+                                        <button type="submit" class="btn btn-custom btn-lg">Post Comment</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sidebar" class="site-sidebar col-md-3">
+
+                        <div class="widget-area">
+
+                            <section id="section-categories" class="section">
+
+                                <h2 class="section-title h4 clearfix">Categories (4) <small class="pull-end float-end"><i class="far fa-hdd fa-fw"></i></small></h2>
+
+                                <ul class="nav nav-pills nav-stacked nav-categories">
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">6</span>Account Settings</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">5</span>API Questions</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">3</span>Customization</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">11</span>Mobile Apps</a></li>
+                                </ul>
+                            </section>
+
+                            <section id="section-articles" class="section">
+
+                                <h2 class="section-title h4 clearfix">Articles</h2>
+
+                                <ul class="nav nav-pills nav-stacked nav-categories">
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">6</span>Account Settings</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">5</span>API Questions</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">3</span>Customization</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">11</span>Mobile Apps</a></li>
+                                </ul>
+                            </section>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <footer id="colophon" class="site-footer" role="contentinfo">
 
@@ -505,84 +630,91 @@
     }
 </script>
 
+
 <script>
-    // Sample data for categories
-    const categoriesData = [
+    // Content for the comments
+    const commentsContent = [
         {
-            title: 'Account Settings',
-            items: [
-                'Can I Change My Username?',
-                'How Secure Is My Password?',
-                'Where Can I Upload My Avatar?',
-                'What Technologies Are Used?',
-                'What Are The API Limits?',
-                'Why Was My Developer Application Rejected?',
-            ],
+            author: "John Pantau",
+            date: "October 23, 2013 at 1:50 am",
+            content: "Fusce rutrum lectus id nibh ullamcorper aliquet. Pellentesque pretium mauris et augue fringilla non bibendum turpis iaculis. Donec sit amet nunc lorem. Sed fringilla vehicula est at pellentesque. Aenean imperdiet elementum arcu id facilisis. Mauris sed leo eros."
         },
         {
-            title: 'API Questions',
-            items: [
-                'Using Javascript',
-                'Using Images',
-                'Using Video',
-                'What Technologies Are Used?',
-                'What Are The API Limits?',
-                'Why Was My Developer Application Rejected?',
-            ],
+            author: "Alice Johnson",
+            date: "September 15, 2014 at 3:30 pm",
+            content: "Suspendisse et malesuada nisi. Sed efficitur, ligula sit amet accumsan blandit, mi turpis suscipit nunc, eu varius eros tortor ac nulla."
         },
         {
-            title: 'Customization',
-            items: [
-                'Using Javascript',
-                'Using Images',
-                'Using Video',
-                'Can I Change My Username?',
-                'How Secure Is My Password?',
-                'Where Can I Upload My Avatar?',
-            ],
+            author: "Michael Smith",
+            date: "December 8, 2015 at 8:20 am",
+            content: "Duis in efficitur libero. Nulla ultrices, felis eu cursus congue, felis felis placerat erat, non rhoncus dui erat quis libero."
         },
         {
-            title: 'Mobile Apps',
-            items: [
-                'How Do I Download The Andoird App?',
-                'Incompatibilities With Horizon Phones',
-                'How To Download Our iPad App'
-            ],
+            author: "Emily Brown",
+            date: "March 7, 2016 at 2:45 pm",
+            content: "Praesent congue massa nec enim congue, eget volutpat ex hendrerit. Sed elementum, nulla eget semper fermentum, augue metus semper enim, vel mattis quam ex nec nulla."
         },
+        {
+            author: "David Wilson",
+            date: "May 19, 2017 at 11:10 am",
+            content: "Vestibulum non facilisis augue. Curabitur in tellus neque. Aenean euismod, justo non mattis fermentum, felis metus semper ex, nec dignissim justo justo non libero."
+        },
+        {
+            author: "Sophia Lee",
+            date: "July 2, 2018 at 6:55 pm",
+            content: "Cras eget urna eu felis feugiat consequat. Fusce nec libero quis libero rhoncus luctus. Nulla tincidunt mi ac eros hendrerit euismod."
+        },
+        {
+            author: "Oliver Davis",
+            date: "January 11, 2019 at 9:30 am",
+            content: "Mauris ac justo in dui egestas tristique. Sed consequat sapien eu metus rhoncus, et volutpat elit vulputate."
+        },
+        {
+            author: "Ava Rodriguez",
+            date: "April 5, 2020 at 4:20 pm",
+            content: "Suspendisse non tellus at metus tincidunt facilisis. Duis consequat libero id ante dictum, nec tincidunt quam ultricies."
+        },
+        {
+            author: "Noah Taylor",
+            date: "June 27, 2021 at 7:15 am",
+            content: "Vivamus nec lectus id velit semper suscipit. Fusce eu dolor ut urna bibendum feugiat."
+        },
+        {
+            author: "Mia Hall",
+            date: "September 9, 2022 at 5:40 pm",
+            content: "Nunc nec urna quis turpis suscipit fringilla. Aenean a turpis sit amet risus posuere mattis. Sed sagittis risus ut elit convallis, in dapibus tellus accumsan."
+        }
+        // Add more content for the other comments here
     ];
 
-    // Function to generate HTML for a category
-    function generateCategory(category) {
-        return `
-            <div class="col-md-6">
-                <section class="box-categories">
-                    <h1 class="section-title h4 clearfix">
-                        <i class="line"></i>
-                        <a href="category-detail.html"><i class="far fa-folder-open fa-fw text-muted"></i>
-                        <small class="pull-end float-end"><i class="far fa-hdd fa-fw"></i> ${category.items.length}</small>
-                        ${category.title}</a>
-                    </h1>
-                    <ul class="fa-ul">
-                        ${category.items.map(item => `
-                            <li>
-                                <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
-                                <h3 class="h5"><a href="#">${item}</a></h3>
-                            </li>
-                        `).join('')}
-                    </ul>
-                    <p class="more-link text-center"><a href="category-detail.html" class="btn btn-custom btn-sm">View All</a></p>
-                </section>
-            </div>
-        `;
-    }
+    const commentsList = document.getElementById("comments-list");
 
-    // Function to generate the entire category container
-    function generateCategoryContainer(categoriesData) {
-        return categoriesData.map(category => generateCategory(category)).join('');
-    }
+    // Create 10 comments with different content
+    for (let i = 0; i < 10; i++) {
+        const comment = document.createElement("li");
+        comment.classList.add("comment");
 
-    // Insert the generated HTML into the categories container
-    document.getElementById('categories-container').innerHTML = generateCategoryContainer(categoriesData);
+        comment.innerHTML = `
+                <article class="comment-body">
+                    <footer class="comment-meta">
+                        <div class="comment-author">
+                            <img src="assets/img/avatar.png" alt="" height="50" width="50" class="avatar" />
+                            <b class="fn"><a href="javascript:;" rel="external" class="url">${commentsContent[i].author}</a></b>
+                        </div>
+                        <div class="comment-metadata">
+                            <small class="date text-muted">
+                                <time datetime="2013-10-23T01:50:50+00:00">${commentsContent[i].date}</time>
+                            </small>
+                        </div>
+                    </footer>
+                    <div class="comment-content">
+                        <p>${commentsContent[i].content}</p>
+                    </div>
+                </article>
+            `;
+
+        commentsList.appendChild(comment);
+    }
 </script>
 </body>
 </html>

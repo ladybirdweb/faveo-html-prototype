@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category List | Faveo</title>
+    <title>Articles List | Faveo</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
@@ -132,11 +132,11 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                <li><a class="dropdown-item" href="categories.html?lang=ar" id="arabicOption">
+                                <li><a class="dropdown-item" href="articles.html?lang=ar" id="arabicOption">
                                     <img src="./assets/img/ar.png" alt="Img"> Arabic
                                 </a></li>
 
-                                <li><a class="dropdown-item" href="categories.html?lang=en" id="englishOption">
+                                <li><a class="dropdown-item" href="articles.html?lang=en" id="englishOption">
                                     <img src="./assets/img/en.png" alt="Img"> English
                                 </a></li>
                             </ul>
@@ -241,7 +241,7 @@
 
                 <li><a href="knowledge-base.html"><i class="fas fa-chevron-right"></i>Knowledge Base</a></li>
 
-                <li class="active"><i class="fas fa-chevron-right"></i>Category List</li>
+                <li class="active"><i class="fas fa-chevron-right"></i>Articles List</li>
             </ol>
         </div>
     </div>
@@ -254,16 +254,90 @@
 
                 <div class="row">
 
-                    <div id="content" class="site-content col-md-12">
+                    <div id="content" class="site-content col-md-9">
 
-                        <div class="row" id="categories-container">
-                            <!-- Your content will be dynamically generated here -->
+                        <header class="archive-header">
+
+                            <h1 class="archive-title">Articles</h1>
+                        </header>
+
+                        <div class="archive-list archive-article">
+
+                            <div id="sections-container">
+                                <!-- This is the container where the sections will be added dynamically -->
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-sm-6">
+
+                                <span>Showing 1 to 10 of 30 entries</span>
+                            </div>
+
+                            <div class="col-sm-6">
+
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-end">
+                                        <li class="page-item disabled">
+                                            <a class="page-link">Previous</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sidebar" class="site-sidebar col-md-3">
+
+                        <div class="widget-area">
+
+                            <section id="section-categories" class="section">
+
+                                <h2 class="section-title h4 clearfix">Categories (5) <small class="pull-end float-end"><i class="far fa-hdd fa-fw"></i></small></h2>
+
+                                <ul class="nav nav-pills nav-stacked nav-categories">
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-end float-end">6</span>Account Settings</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">5</span>API Questions</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">3</span>Customization</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">11</span>Mobile Apps</a></li>
+                                </ul>
+                            </section>
+
+                            <section id="section-tags" class="section">
+                                <h2 class="section-title h4 clearfix">Tags</h2>
+                                <div class="tagcloud">
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">basic</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">beginner</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">blogging</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">colour</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">css</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">date</a>
+                                </div>
+                            </section>
+
+                            <section id="section-articles" class="section">
+                                <h2 class="section-title h4 clearfix">Popular Articles</h2>
+                                <ul class="nav nav-pills nav-stacked nav-categories">
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-end float-end">6</span>Account Settings</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">5</span>API Questions</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">3</span>Customization</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">11</span>Mobile Apps</a></li>
+                                </ul>
+                            </section>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <footer id="colophon" class="site-footer" role="contentinfo">
 
@@ -506,83 +580,98 @@
 </script>
 
 <script>
-    // Sample data for categories
-    const categoriesData = [
+    // Content for the sections
+    const sectionContent = [
         {
-            title: 'Account Settings',
-            items: [
-                'Can I Change My Username?',
-                'How Secure Is My Password?',
-                'Where Can I Upload My Avatar?',
-                'What Technologies Are Used?',
-                'What Are The API Limits?',
-                'Why Was My Developer Application Rejected?',
-            ],
+            title: "How Do I Download The Android App?",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",
+            date: "about 5 days ago",
+            category: "Mobile Apps"
         },
         {
-            title: 'API Questions',
-            items: [
-                'Using Javascript',
-                'Using Images',
-                'Using Video',
-                'What Technologies Are Used?',
-                'What Are The API Limits?',
-                'Why Was My Developer Application Rejected?',
-            ],
+            title: "Getting Started with Web Development",
+            description: "Learn the basics of web development and get started on your journey to becoming a web developer.",
+            date: "about 2 weeks ago",
+            category: "Web Development"
         },
         {
-            title: 'Customization',
-            items: [
-                'Using Javascript',
-                'Using Images',
-                'Using Video',
-                'Can I Change My Username?',
-                'How Secure Is My Password?',
-                'Where Can I Upload My Avatar?',
-            ],
+            title: "Exploring the Great Outdoors",
+            description: "Discover the beauty of nature and embark on outdoor adventures in stunning locations.",
+            date: "about 3 weeks ago",
+            category: "Travel"
         },
         {
-            title: 'Mobile Apps',
-            items: [
-                'How Do I Download The Andoird App?',
-                'Incompatibilities With Horizon Phones',
-                'How To Download Our iPad App'
-            ],
+            title: "Tasty and Healthy Recipes",
+            description: "Explore delicious and nutritious recipes for a healthier lifestyle.",
+            date: "about 1 month ago",
+            category: "Cooking"
         },
+        {
+            title: "Latest Tech Gadgets and Innovations",
+            description: "Stay updated with the latest tech gadgets and innovations that are shaping the future.",
+            date: "about 2 months ago",
+            category: "Technology"
+        },
+        {
+            title: "Art and Creativity Showcase",
+            description: "Get inspired by amazing artworks and creative projects from talented artists.",
+            date: "about 3 months ago",
+            category: "Art"
+        },
+        {
+            title: "Fitness and Wellness Tips",
+            description: "Improve your physical and mental well-being with expert fitness and wellness tips.",
+            date: "about 4 months ago",
+            category: "Health"
+        },
+        {
+            title: "Traveling on a Budget",
+            description: "Learn how to travel the world without breaking the bank with budget-friendly tips.",
+            date: "about 5 months ago",
+            category: "Travel"
+        },
+        {
+            title: "Coding and Programming Tutorials",
+            description: "Master coding and programming with step-by-step tutorials and examples.",
+            date: "about 6 months ago",
+            category: "Programming"
+        },
+        {
+            title: "Home Improvement and DIY Projects",
+            description: "Upgrade your home with DIY projects and home improvement ideas.",
+            date: "about 7 months ago",
+            category: "Home Improvement"
+        }
     ];
 
-    // Function to generate HTML for a category
-    function generateCategory(category) {
-        return `
-            <div class="col-md-6">
-                <section class="box-categories">
-                    <h1 class="section-title h4 clearfix">
-                        <i class="line"></i>
-                        <a href="category-detail.html"><i class="far fa-folder-open fa-fw text-muted"></i>
-                        <small class="pull-end float-end"><i class="far fa-hdd fa-fw"></i> ${category.items.length}</small>
-                        ${category.title}</a>
-                    </h1>
-                    <ul class="fa-ul">
-                        ${category.items.map(item => `
-                            <li>
-                                <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
-                                <h3 class="h5"><a href="#">${item}</a></h3>
-                            </li>
-                        `).join('')}
-                    </ul>
-                    <p class="more-link text-center"><a href="category-detail.html" class="btn btn-custom btn-sm">View All</a></p>
-                </section>
-            </div>
-        `;
-    }
+    const sectionsContainer = document.getElementById("sections-container");
 
-    // Function to generate the entire category container
-    function generateCategoryContainer(categoriesData) {
-        return categoriesData.map(category => generateCategory(category)).join('');
-    }
+    // Create 10 sections with different content
+    for (let i = 0; i < 10; i++) {
+        const section = document.createElement("article");
+        section.classList.add("hentry");
 
-    // Insert the generated HTML into the categories container
-    document.getElementById('categories-container').innerHTML = generateCategoryContainer(categoriesData);
+        section.innerHTML = `
+                <header class="entry-header">
+                    <i class="fa fa-list-alt fa-2x fa-fw float-start text-muted"></i>
+                    <h2 class="entry-title h4">
+                        <a href="article-detail.html" rel="bookmark">${sectionContent[i].title}</a>
+                    </h2>
+                </header>
+                <blockquote class="blockquote archive-description mb-2">
+                    <p>${sectionContent[i].description}</p>
+                    <a href="javascript:;" class="fs-6">Read more</a>
+                </blockquote>
+                <footer class="entry-footer">
+                    <div class="entry-meta text-muted">
+                        <span class="date"><i class="far fa-clock fa-fw"></i> <time datetime="2013-10-22T20:01:58+00:00">${sectionContent[i].date}</time></span>
+                        <span class="category"><i class="far fa-folder-open fa-fw"></i> <a href="#">${sectionContent[i].category}</a></span>
+                    </div>
+                </footer>
+            `;
+
+        sectionsContainer.appendChild(section);
+    }
 </script>
 </body>
 </html>
