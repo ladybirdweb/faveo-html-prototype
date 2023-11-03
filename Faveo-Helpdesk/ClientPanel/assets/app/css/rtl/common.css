@@ -215,3 +215,11 @@ td {
 }
 
 .ticket-change-status-btn { margin-top: -5px !important; }
+
+.lh-xl { line-height: 3 !important; }
+
+.btn-social:hover {
+    background-color: #fff!important;
+    color: #000!important;
+    font-weight: 600;
+}

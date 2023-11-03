@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit Ticket | Faveo</title>
+    <title>Email Verification | Faveo</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
@@ -47,7 +47,6 @@
                     <span class="navbar-toggler-icon"></span>
                 </button> <!-- collapse -->
 
-
                 <span class="switcher-toggle m-none" onclick="myFunction()">
 
 						<span class="icon"></span>
@@ -62,7 +61,7 @@
                             <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
 
-                        <li class="nav-item active"><a class="nav-link" href="submit-ticket.html">Submit Ticket</a></li>
+                        <li class="nav-item"><a class="nav-link" href="submit-ticket.html">Submit Ticket</a></li>
 
                         <li class="nav-item dropdown">
 
@@ -132,11 +131,11 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                <li><a class="dropdown-item" href="submit-ticket.html?lang=ar" id="arabicOption">
+                                <li><a class="dropdown-item" href="verify-email.html?lang=ar" id="arabicOption">
                                     <img src="./assets/img/ar.png" alt="Img"> Arabic
                                 </a></li>
 
-                                <li><a class="dropdown-item" href="submit-ticket.html?lang=en" id="englishOption">
+                                <li><a class="dropdown-item" href="verify-email.html?lang=en" id="englishOption">
                                     <img src="./assets/img/en.png" alt="Img"> English
                                 </a></li>
                             </ul>
@@ -237,7 +236,9 @@
 
                 <li class="text">You are here: </li>
 
-                <li class="active"><a href="#">Submit a Ticket</a></li>
+                <li><a href="index.html">Home</a></li>
+
+                <li class="active"><i class="fas fa-chevron-right"></i>Verify Email</li>
             </ol>
         </div>
     </div>
@@ -250,233 +251,73 @@
 
                 <div class="row">
 
-                    <div id="content" class="site-content col-md-9">
+                    <div id="content" class="site-content col-md-6 offset-md-3">
 
-                        <div id="respond" class="comment-respond form-border bg-white">
+                        <div id="core-widget-box">
 
-                            <form id="commentform" class="comment-form">
+                            <div class="widget-row text-center">
 
-                                <h2 class="comments-title section-title h3">
+                                <span><a href="register.html" class="register-widget">Register</a></span>
 
-                                    <i class="line"></i>Submit Ticket
-                                </h2>
+                                <span><a href="submit-ticket.html" class="submit-ticket-widget">Submit Ticket</a></span>
 
-                                <div class="row mb-3">
+                                <span><a href="my-tickets.html" class="my-tickets-widget">My Tickets</a></span>
 
-                                    <label class="col-sm-3 col-form-label">Requester <span class="is-danger">*</span></label>
-
-                                    <div class="col-sm-9">
-
-                                        <div class="input-group mb-3">
-
-                                            <input type="text" class="form-control" placeholder="Enter your Username/Email or Register">
-
-                                            <span class="input-group-text pointer-cursor" id="basic-addon2" data-bs-toggle="modal" data-bs-target="#exampleModal">Register</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-
-                                    <label class="col-sm-3 col-form-label">Subject <span class="is-danger">*</span></label>
-
-                                    <div class="col-sm-9">
-
-                                        <input type="text" class="form-control" placeholder="Enter Subject">
-                                    </div>
-                                </div>
-
-                                <fieldset class="row mb-3">
-
-                                    <legend class="col-form-label col-sm-3 pt-0">Ticket is for <span class="is-danger">*</span></legend>
-
-                                    <div class="col-sm-9">
-
-                                        <div class="form-check">
-
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-
-                                            <label class="form-check-label" for="gridRadios1">
-
-                                                Bug/Error
-                                            </label>
-                                        </div>
-
-                                        <div class="form-check">
-
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-
-                                            <label class="form-check-label" for="gridRadios2">
-
-                                                Enhancement
-                                            </label>
-                                        </div>
-
-                                        <div class="form-check">
-
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-
-                                            <label class="form-check-label" for="gridRadios3">
-
-                                                feature Request
-                                            </label>
-                                        </div>
-                                    </div>
-                                </fieldset>
-
-                                <div class="row mb-3">
-
-                                    <label class="col-sm-3 col-form-label">Custom Checkbox <span class="is-danger">*</span></label>
-
-                                    <div class="col-sm-9">
-
-                                        <div class="form-check mt-1">
-
-                                            <input class="form-check-input" type="checkbox" id="gridCheck1" checked>
-
-                                            <label class="form-check-label" for="gridCheck1">
-
-                                                Example checkbox
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-
-                                    <label class="col-sm-3 col-form-label">Description <span class="is-danger">*</span></label>
-
-                                    <div class="col-sm-9">
-
-                                        <textarea class="form-control" placeholder="Enter Description"></textarea>
-                                    </div>
-                                </div>
-
-
-                                <div class="text-end">
-
-                                    <button type="submit" class="btn btn-custom"><i class="fas fa-save"></i> Submit</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div id="sidebar" class="site-sidebar col-md-3">
-
-                        <div class="form-border bg-white">
-
-                            <form>
-
-                                <h2 class="section-title h3">
-
-                                    <i class="line"></i>Have a Ticket
-                                </h2>
-
-                                <div class="mb-3">
-
-                                    <label class="form-label">Ticket Number <span class="is-danger">*</span></label>
-
-                                    <input type="text" class="form-control" placeholder="Enter a value">
-                                </div>
-
-                                <div class="mb-3">
-
-                                    <label class="form-label">Email Address <span class="is-danger">*</span></label>
-
-                                    <input type="text" class="form-control" placeholder="Enter a value">
-                                </div>
-
-                                <div class="col-12">
-
-                                    <button type="submit" class="btn btn-custom"><i class="fas fa-save"></i> Submit</button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="form-border bg-white mt-3">
-
-                            <h2 class="section-title h3">
-
-                                <i class="line"></i>Ticket Summary
-                            </h2>
-
-                            <ul class="nav nav-pills nav-stacked nav-categories">
-                                <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-end float-end">6</span>Open Tickets</a></li>
-                                <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">5</span>Closed Tickets</a></li>
-                                <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">3</span>Deleted Tickets</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Register Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-                        <div class="modal-dialog">
-
-                            <div class="modal-content">
-
-                                <div class="modal-header">
-
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Register</h1>
-
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-                                </div>
-
-                                <div class="modal-body">
-
-                                    <form>
-
-                                        <div class="row mb-3">
-
-                                            <label class="col-sm-3 col-form-label">First Name <span class="is-danger">*</span></label>
-
-                                            <div class="col-sm-9">
-
-                                                <input type="text" class="form-control" placeholder="First name">
-                                            </div>
-                                        </div>
-
-                                        <div class="row mb-3">
-
-                                            <label class="col-sm-3 col-form-label">Last Name <span class="is-danger">*</span></label>
-
-                                            <div class="col-sm-9">
-
-                                                <input type="text" class="form-control" placeholder="Last name">
-                                            </div>
-                                        </div>
-
-                                        <div class="row mb-3">
-
-                                            <label class="col-sm-3 col-form-label">Username <span class="is-danger">*</span></label>
-
-                                            <div class="col-sm-9">
-
-                                                <input type="text" class="form-control" placeholder="User name">
-                                            </div>
-                                        </div>
-
-                                        <div class="row mb-3">
-
-                                            <label class="col-sm-3 col-form-label">Email <span class="is-danger">*</span></label>
-
-                                            <div class="col-sm-9">
-
-                                                <input type="text" class="form-control" placeholder="Email address">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-
-                                <div class="modal-footer justify-content-between">
-
-                                    <button type="button" class="bg-light border btn btn-default" data-bs-dismiss="modal"><i class="fas fa-times"></i> Close</button>
-
-                                    <button type="button" class="btn btn-primary"><i class="fas fa-save"></i> Submit</button>
-                                </div>
+                                <span><a href="knowledge-base.html" class="kb-widget">Knowledge Base</a></span>
                             </div>
                         </div>
+
+                        <form class="contact-form form-border hidden-print" id="verifyMail">
+
+                            <h3 class="text-center">Hello!
+
+                                <p class="fs-5 lh-base p-3"> We have sent an activation link to sakthi@gmail.com. Please check your mailbox and click on the link to activate your account then try again. </p>
+
+                            </h3>
+
+                            <button type="submit" class="btn btn-custom float-end w-100">Resend activation link</button>
+
+
+                            <div class="mt-2 text-center">
+
+                                <p>or</p>
+
+                                <a href="javascript:;" id="updateMailBtn">Update your mail</a>
+                            </div>
+                        </form>
+
+                        <form class="contact-form form-border hidden-print d-none" id="updateMail">
+
+                            <h3 class="text-center mb-4">Update Email</h3>
+
+                            <p>You must provide a distinct email address and your current password to verify this update request.</p>
+
+                            <div class="form-group">
+
+                                <label class="form-label">New Email Address <span class="is-danger">*</span></label>
+
+                                <input type="text" class="form-control" placeholder="Email">
+                            </div>
+
+                            <div class="form-group">
+
+                                <label class="form-label">Current Password <span class="is-danger">*</span></label>
+
+                                <div class="input-group">
+
+                                    <input type="password" class="form-control" name="login-pass" id="upd-pass-field" placeholder="Password">
+
+                                    <div class="input-group-text"><i class="fas fa-eye-slash pointer-cursor" id="upd-pass-eye"></i></div>
+                                </div>
+                            </div>
+
+                            <div class="mt-2 pb-3">
+
+                                <a href="login.html">Account already activated?</a>
+
+                                <button type="submit" class="btn btn-custom float-end w-25">UPDATE</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -630,6 +471,9 @@
             rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/custom.css',
         },
         {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/widget-box.css',
+        },
+        {
             rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/common.css',
         },
         {
@@ -650,6 +494,9 @@
         },
         {
             rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/rtl/custom.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/rtl/widget-box.css',
         },
         {
             rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/rtl/common.css',
@@ -724,5 +571,29 @@
     }
 </script>
 
+<script>
+
+    document.getElementById('updateMailBtn').addEventListener('click', function () {
+
+        document.getElementById('updateMail').classList.toggle('d-none');
+
+        document.getElementById('verifyMail').classList.toggle('d-none');
+    })
+
+    document.getElementById('verify-pass-eye').addEventListener('click', function () {
+        var icon = this;
+        var passwordInput = document.getElementById('verify-pass-field');
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        } else {
+            passwordInput.type = 'password';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        }
+    });
+</script>
 </body>
 </html>
