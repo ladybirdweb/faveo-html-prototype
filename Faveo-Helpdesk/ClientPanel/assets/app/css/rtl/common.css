@@ -223,3 +223,7 @@ td {
     color: #000!important;
     font-weight: 600;
 }
+
+#logo>a>img { width: 150px !important; }
+
+.w-10 { width: 10% !important; }

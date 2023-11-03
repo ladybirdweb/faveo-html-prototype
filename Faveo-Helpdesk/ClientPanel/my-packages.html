@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Reset | Faveo</title>
+    <title>My Packages | Faveo</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
@@ -16,7 +16,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
-
 
     <!--[if lt IE 9]>
     <script type="text/javascript" src="assets/app/js/html5shiv.min.js"></script>
@@ -93,7 +92,7 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown active">
 
                             <a class="dropdown-toggle nav-link" href="javascript:;" id="navbarDropdown3" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">Billing</a>
 
@@ -145,11 +144,11 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                <li><a class="dropdown-item" href="password-reset.html?lang=ar" id="arabicOption">
+                                <li><a class="dropdown-item" href="verify-2fa.html?lang=ar" id="arabicOption">
                                     <img src="./assets/img/ar.png" alt="Img"> Arabic
                                 </a></li>
 
-                                <li><a class="dropdown-item" href="password-reset.html?lang=en" id="englishOption">
+                                <li><a class="dropdown-item" href="verify-2fa.html?lang=en" id="englishOption">
                                     <img src="./assets/img/en.png" alt="Img"> English
                                 </a></li>
                             </ul>
@@ -252,7 +251,7 @@
 
                 <li><a href="index.html">Home</a></li>
 
-                <li class="active"><i class="fas fa-chevron-right"></i>Password Reset</li>
+                <li class="active"><i class="fas fa-chevron-right"></i>My Packages</li>
             </ol>
         </div>
     </div>
@@ -265,58 +264,13 @@
 
                 <div class="row">
 
-                    <div id="content" class="site-content col-md-6 offset-md-3">
+                    <div id="content" class="site-content col-md-12">
 
-                        <div id="core-widget-box">
-
-                            <div class="widget-row text-center">
-
-                                <span><a href="register.html" class="register-widget">Register</a></span>
-
-                                <span><a href="submit-ticket.html" class="submit-ticket-widget">Submit Ticket</a></span>
-
-                                <span><a href="my-tickets.html" class="my-tickets-widget">My Tickets</a></span>
-
-                                <span><a href="knowledge-base.html" class="kb-widget">Knowledge Base</a></span>
-                            </div>
-                        </div>
-
-                        <form class="contact-form form-border hidden-print">
-
-                            <h3 class="text-center mb-4">Reset password</h3>
-
-                            <div class="form-group">
-
-                                <label class="form-label">New Password <span class="is-danger">*</span></label>
-
-                                <div class="input-group">
-
-                                    <input type="password" class="form-control" name="login-pass" id="reset-pass-field" placeholder="New Password">
-
-                                    <div class="input-group-text"><i class="fas fa-eye-slash pointer-cursor" id="reset-pass-eye"></i></div>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-
-                                <label class="form-label">Confirm Password <span class="is-danger">*</span></label>
-
-                                <div class="input-group">
-
-                                    <input type="password" class="form-control" name="login-pass" id="reset-cpass-field" placeholder="Confirm Password">
-
-                                    <div class="input-group-text"><i class="fas fa-eye-slash pointer-cursor" id="reset-cpass-eye"></i></div>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="btn btn-custom w-100">RESET PASSWORD</button>
-                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <footer id="colophon" class="site-footer" role="contentinfo">
 
@@ -464,9 +418,6 @@
             rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/custom.css',
         },
         {
-            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/widget-box.css',
-        },
-        {
             rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/common.css',
         },
         {
@@ -487,9 +438,6 @@
         },
         {
             rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/rtl/custom.css',
-        },
-        {
-            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/rtl/widget-box.css',
         },
         {
             rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/rtl/common.css',
@@ -563,39 +511,5 @@
         },1000)
     }
 </script>
-
-<script>
-
-    document.getElementById('reset-pass-eye').addEventListener('click', function () {
-        var icon = this;
-        var passwordInput = document.getElementById('reset-pass-field');
-
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            icon.classList.remove('fa-eye-slash');
-            icon.classList.add('fa-eye');
-        } else {
-            passwordInput.type = 'password';
-            icon.classList.remove('fa-eye');
-            icon.classList.add('fa-eye-slash');
-        }
-    });
-
-    document.getElementById('reset-cpass-eye').addEventListener('click', function () {
-        var icon = this;
-        var passwordInput = document.getElementById('reset-cpass-field');
-
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            icon.classList.remove('fa-eye-slash');
-            icon.classList.add('fa-eye');
-        } else {
-            passwordInput.type = 'password';
-            icon.classList.remove('fa-eye');
-            icon.classList.add('fa-eye-slash');
-        }
-    });
-</script>
-
 </body>
 </html>

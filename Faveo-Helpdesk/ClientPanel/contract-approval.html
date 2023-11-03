@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Tickets | Faveo</title>
+    <title>Contract Approval | Faveo</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
@@ -57,7 +57,7 @@
 
                     <ul class="navbar-nav navbar-menu site-navigate ml-auto">
 
-                        <li class="nav-item">
+                        <li class="nav-item active">
 
                             <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
@@ -108,7 +108,7 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item active"><a class="nav-link" href="my-tickets.html">My Tickets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="my-tickets.html">My Tickets</a></li>
 
                         <li class="nav-item dropdown">
 
@@ -146,11 +146,11 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                <li><a class="dropdown-item" href="my-tickets.html?lang=ar" id="arabicOption">
+                                <li><a class="dropdown-item" href="contract-approval.html?lang=ar" id="arabicOption">
                                     <img src="./assets/img/ar.png" alt="Img"> Arabic
                                 </a></li>
 
-                                <li><a class="dropdown-item" href="my-tickets.html?lang=en" id="englishOption">
+                                <li><a class="dropdown-item" href="contract-approval.html?lang=en" id="englishOption">
                                     <img src="./assets/img/en.png" alt="Img"> English
                                 </a></li>
                             </ul>
@@ -251,9 +251,9 @@
 
                 <li class="text">You are here: </li>
 
-                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="index.html">Home</a></li>
 
-                <li class="active"><i class="fas fa-chevron-right"></i>My Tickets</li>
+                <li class="active"><i class="fas fa-chevron-right"></i>Contract Approval</li>
             </ol>
         </div>
     </div>
@@ -264,358 +264,121 @@
 
             <div class="content-area">
 
-                <div class="card">
+                <div class="row">
 
-                    <div class="card-header">
+                    <div id="content" class="site-content col-md-12">
 
-                        <h3 class="card-title">Tickets</h3>
+                        <article class="henry">
 
-                        <div class="card-tools">
+                            <header class="entry-header">
 
-                            <button type="button" class="btn btn-tool" id="filter-btn">
-                                <i class="fas fa-filter"></i>
-                            </button>
-                        </div>
-                    </div>
+                                <h1 class="entry-title"><i class="fas fa-file-alt"></i> Contract For Approval</h1>
+                            </header>
 
-                    <div class="card-body">
+                            <div class="entry-content clearfix">
 
-                        <div class="card mb-4 d-none" id="filter-box">
+                                <div class="alert alert-info">
 
-                            <div class="card-header">
+                                    <div class="row">
 
-                                <h3 class="card-title">Filter</h3>
+                                        <div class="col-md-4">
 
-                            </div>
+                                            <b>Start Date : </b><span>October 29, 2023 06:30 pm</span>
+                                        </div>
 
-                            <div class="card-body">
+                                        <div class="col-md-4">
 
-                                <form class="row g-3">
+                                            <b>Expiry Date : </b><span>November 04, 2023 09:00 pm</span>
+                                        </div>
 
-                                    <div class="col-md-6">
+                                        <div class="col-md-4">
 
-                                        <label class="form-label">Subject</label>
-
-                                        <input type="text" class="form-control" name="subject">
-                                    </div>
-
-                                    <div class="col-md-6">
-
-                                        <label class="form-label">Ticket ID</label>
-
-                                        <input type="text" class="form-control" name="id">
-                                    </div>
-
-                                    <div class="col-md-6">
-
-                                        <label class="form-label">Status</label>
-
-                                        <select class="form-select">
-
-                                            <option selected>Choose...</option>
-
-                                            <option>...</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-md-6">
-
-                                        <label class="form-label">Requester</label>
-
-                                        <select class="form-select">
-
-                                            <option selected>Choose...</option>
-
-                                            <option>...</option>
-                                        </select>
-                                    </div>
-                                </form>
-                            </div>
-
-                            <div class="card-footer text-muted">
-
-                                <button type="button" class="btn btn-default border" id="apply-btn">
-
-                                    <i class="fas fa-check"></i> Apply
-                                </button>
-
-                                <button type="button" class="btn btn-default border">
-
-                                    <i class="fas fa-undo"></i> Reset
-                                </button>
-
-                                <button type="button" class="btn btn-default border" id="cancel-btn">
-
-                                    <i class="fas fa-times"></i> Cancel
-                                </button>
-                            </div>
-                        </div>
-
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-
-                            <li class="nav-item" role="presentation">
-
-                                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#open-tab" type="button">
-
-                                    <i class="far fa-clock"></i> Open
-
-                                    <span class="badge badge-pill tab_count ml-1">30</span>
-                                </button>
-                            </li>
-
-                            <li class="nav-item" role="presentation">
-
-                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#closed-tab" type="button">
-
-                                    <i class="fas fa-sync"></i> Closed
-
-                                    <span class="badge badge-pill tab_count ml-1">2</span>
-                                </button>
-                            </li>
-
-                            <li class="nav-item" role="presentation">
-
-                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#deleted-tab" type="button">
-
-                                    <i class="fas fa-trash-alt"></i> Deleted
-
-                                    <span class="badge badge-pill tab_count ml-1">1</span>
-                                </button>
-                            </li>
-
-                            <li class="ms-auto">
-
-                                <div class="dropdown">
-
-                                    <a class="btn btn-light border dropdown-toggle ticket-change-status-btn" href="javascript:;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fas fa-exchange-alt"></i> Change Status
-
-                                        <span class="caret"></span>
-                                    </a>
-
-                                    <ul class="dropdown-menu">
-
-                                        <li><a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#statusModal"><i class="fas fa-clock text-success"></i> Open</a></li>
-
-                                        <li><a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#statusModal"><i class="fas fa-undo text-warning"></i> Close</a></li>
-
-                                        <li><a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#statusModal"><i class="fas fa-trash-alt text-danger"></i> Deleted</a></li>
-                                    </ul>
-
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="statusModal" tabindex="-1" aria-labelledby="statusModalLabel" aria-hidden="true">
-
-                                        <div class="modal-dialog">
-
-                                            <div class="modal-content">
-
-                                                <div class="modal-header">
-
-                                                    <h1 class="modal-title fs-5" id="exampleModalLiveLabel">Change Status</h1>
-
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-                                                </div>
-
-                                                <div class="modal-body text-start">
-
-                                                    <p>Are you sure?</p>
-                                                </div>
-
-                                                <div class="modal-footer">
-
-                                                    <button type="button" class="btn btn-light border" data-bs-dismiss="modal">
-                                                        <i class="fas fa-times"></i> Close
-                                                    </button>
-
-                                                    <button type="button" class="btn btn-primary">
-                                                        <i class="fas fa-check"></i> Proceed
-                                                    </button>
-                                                </div>
-                                            </div>
+                                            <b>Contract type : </b><span>Maintenance</span>
                                         </div>
                                     </div>
-                                </div>
-
-                            </li>
-                        </ul>
-
-                        <div class="tab-content" id="myTabContent">
-
-                            <div class="tab-pane fade show active" id="open-tab">
-
-                                <div class="mt-4 mb-4">
-
-                                    <div class="row float-end mr-0 mb-3">
-
-                                        <div class="input-group">
-
-                                            <span class="input-group-text bg-white text-gray">
-
-                                                <i class="fa fa-search text-muted"></i>
-                                            </span>
-
-                                            <input type="search" class="form-control border-start-0" placeholder="Search...">
-                                        </div>
-                                    </div>
-
-                                    <table class="table table-bordered">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Ticket Number</th>
-                                            <th scope="col">Subject</th>
-                                            <th scope="col">Requester</th>
-                                            <th scope="col">Last replier</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Last activity</th>
-                                        </tr>
-                                        </thead>
-
-                                        <tbody id="table-body">
-                                        <!-- This is the container where the table rows will be added dynamically -->
-                                        </tbody>
-                                    </table>
                                 </div>
 
                                 <div class="row">
 
                                     <div class="col-sm-6">
 
-                                        <span>Showing 1 to 10 of 30 entries</span>
+                                        <ul class="list-group list-group-flush">
+
+                                            <li class="list-group-item mb-0">
+                                                <dl class="row mb-0">
+                                                    <dt class="col-sm-5">Vendor</dt>
+                                                    <dd class="col-sm-7 text-success">vendor</dd>
+                                                </dl>
+                                            </li>
+
+                                            <li class="list-group-item mb-0">
+                                                <dl class="row mb-0">
+                                                    <dt class="col-sm-5">Contract status </dt>
+                                                    <dd class="col-sm-7">Draft</dd>
+                                                </dl>
+                                            </li>
+
+                                            <li class="list-group-item mb-0">
+                                                <dl class="row mb-0">
+                                                    <dt class="col-sm-5">License Type </dt>
+                                                    <dd class="col-sm-7">Commercial</dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
                                     </div>
 
                                     <div class="col-sm-6">
 
-                                        <nav aria-label="Page navigation example">
-                                            <ul class="pagination justify-content-end">
-                                                <li class="page-item disabled">
-                                                    <a class="page-link">Previous</a>
-                                                </li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#">Next</a>
-                                                </li>
-                                            </ul>
-                                        </nav>
+                                        <ul class="list-group list-group-flush">
+
+                                            <li class="list-group-item mb-0">
+                                                <dl class="row mb-0">
+                                                    <dt class="col-sm-5">Cost</dt>
+                                                    <dd class="col-sm-7">98765</dd>
+                                                </dl>
+                                            </li>
+
+                                            <li class="list-group-item mb-0">
+                                                <dl class="row mb-0">
+                                                    <dt class="col-sm-5">Contract Creator</dt>
+                                                    <dd class="col-sm-7">Demo Admin</dd>
+                                                </dl>
+                                            </li>
+
+                                            <li class="list-group-item mb-0">
+                                                <dl class="row mb-0">
+                                                    <dt class="col-sm-5">License count</dt>
+                                                    <dd class="col-sm-7">12</dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="tab-pane fade" id="closed-tab">
+                                <div class="row mt-4">
 
-                                <div class="mt-4 mb-4">
+                                    <form>
 
-                                    <div class="row float-end mr-0 mb-3">
+                                        <div class="form-group mb-2">
 
-                                        <div class="input-group">
+                                            <label class="form-label">Comment<span class="is-danger">*</span> </label>
 
-                                            <span class="input-group-text bg-white text-gray">
-
-                                                <i class="fa fa-search text-muted"></i>
-                                            </span>
-
-                                            <input type="search" class="form-control border-start-0" placeholder="Search...">
+                                            <textarea class="form-control" placeholder="Leave a comment here"></textarea>
                                         </div>
-                                    </div>
 
-                                    <table class="table table-bordered">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Ticket Number</th>
-                                            <th scope="col">Subject</th>
-                                            <th scope="col">Requester</th>
-                                            <th scope="col">Last replier</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Last activity</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td scope="row">#HDSK-AAAA-0001</td>
-                                            <td><a href="ticket-detail.html">Closed ticket one(1)</a></td>
-                                            <td>Sakthivel Munusami</td>
-                                            <td>Manish Prashanth</td>
-                                            <td>Closed</td>
-                                            <td>November 01, 2023 09:09 am</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">#HDSK-AAAA-0002</td>
-                                            <td><a href="ticket-detail.html">Lorem ipsum dolor sit amet (34)</a></td>
-                                            <td>Viji</td>
-                                            <td>Dheekshit</td>
-                                            <td>Closed</td>
-                                            <td>October 31, 2023 12:34 am</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                        <button type="submit" class="btn btn-success"><i class="fas fa-check"></i> Approve</button>
 
-                                <div class="row">
-
-                                    <div class="col-sm-6">
-
-                                        <span>2 records</span>
-                                    </div>
+                                        <button type="submit" class="btn btn-danger"><i class="fas fa-times"></i> Reject</button>
+                                    </form>
                                 </div>
                             </div>
-
-                            <div class="tab-pane fade" id="deleted-tab">
-
-                                <div class="mt-4 mb-4">
-
-                                    <div class="row float-end mr-0 mb-3">
-
-                                        <div class="input-group">
-
-                                            <span class="input-group-text bg-white text-gray">
-
-                                                <i class="fa fa-search text-muted"></i>
-                                            </span>
-
-                                            <input type="search" class="form-control border-start-0" placeholder="Search...">
-                                        </div>
-                                    </div>
-
-                                    <table class="table table-bordered">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Ticket Number</th>
-                                            <th scope="col">Subject</th>
-                                            <th scope="col">Requester</th>
-                                            <th scope="col">Last replier</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Last activity</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td scope="row">#HDSK-AAAA-0001</td>
-                                            <td><a href="ticket-detail.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. (0)</a></td>
-                                            <td>Sakthivel Munusami</td>
-                                            <td>Manish Prashanth</td>
-                                            <td>Deleted</td>
-                                            <td>November 01, 2023 09:09 am</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <div class="row">
-
-                                    <div class="col-sm-6">
-
-                                        <span>1 record</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <footer id="colophon" class="site-footer" role="contentinfo">
 
@@ -857,131 +620,5 @@
     }
 </script>
 
-<script>
-    // Content for the table rows
-    const tableContent = [
-        {
-            ticketNumber: "#HDSK-AAAA-0001",
-            ticketName: "Ticket number one (1)",
-            assignedTo: "Sakthivel Munusami",
-            createdBy: "Manish Prashanth",
-            status: "Open",
-            createdDate: "November 01, 2023 09:09 am"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0002",
-            ticketName: "Ticket number two (2)",
-            assignedTo: "Alice Johnson",
-            createdBy: "John Pantau",
-            status: "Open",
-            createdDate: "October 15, 2023 02:30 pm"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0003",
-            ticketName: "Ticket number three (3)",
-            assignedTo: "Michael Smith",
-            createdBy: "Emily Brown",
-            status: "Open",
-            createdDate: "August 21, 2023 11:45 am"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0004",
-            ticketName: "Ticket number four (4)",
-            assignedTo: "Sophia Lee",
-            createdBy: "Oliver Davis",
-            status: "Open",
-            createdDate: "June 9, 2023 04:15 pm"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0005",
-            ticketName: "Ticket number five (5)",
-            assignedTo: "David Wilson",
-            createdBy: "Ava Rodriguez",
-            status: "Open",
-            createdDate: "May 5, 2023 08:00 am"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0006",
-            ticketName: "Ticket number six (6)",
-            assignedTo: "Noah Taylor",
-            createdBy: "Mia Hall",
-            status: "Open",
-            createdDate: "April 3, 2023 01:20 pm"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0007",
-            ticketName: "Ticket number seven (7)",
-            assignedTo: "Ella Martinez",
-            createdBy: "William Turner",
-            status: "Open",
-            createdDate: "March 15, 2023 09:45 am"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0008",
-            ticketName: "Ticket number eight (8)",
-            assignedTo: "Isabella Adams",
-            createdBy: "James Clark",
-            status: "Open",
-            createdDate: "February 12, 2023 03:30 pm"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0009",
-            ticketName: "Ticket number nine (9)",
-            assignedTo: "Liam Baker",
-            createdBy: "Chloe White",
-            status: "Open",
-            createdDate: "January 8, 2023 10:10 am"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0010",
-            ticketName: "Ticket number ten (10)",
-            assignedTo: "Emma Lewis",
-            createdBy: "Alexander Hall",
-            status: "Open",
-            createdDate: "December 1, 2022 02:20 pm"
-        },
-        // Add more content for the other table rows here
-    ];
-
-    const tableBody = document.getElementById("table-body");
-
-    // Create 15 table rows with different content
-    for (let i = 0; i < 10; i++) {
-        const row = document.createElement("tr");
-
-        row.innerHTML = `
-                <td scope="row">${tableContent[i].ticketNumber}</td>
-                <td><a href="ticket-detail.html">${tableContent[i].ticketName}</a></td>
-                <td>${tableContent[i].assignedTo}</td>
-                <td>${tableContent[i].createdBy}</td>
-                <td>${tableContent[i].status}</td>
-                <td>${tableContent[i].createdDate}</td>
-            `;
-
-        tableBody.appendChild(row);
-    }
-</script>
-
-<script>
-
-    document.getElementById('filter-btn').addEventListener('click', function (){
-
-        toggleFilter()
-    });
-
-    document.getElementById('apply-btn').addEventListener('click', function (){
-
-        toggleFilter()
-    });
-
-    document.getElementById('cancel-btn').addEventListener('click', function (){
-
-        toggleFilter()
-    });
-
-    function toggleFilter() {
-        document.getElementById('filter-box').classList.toggle('d-none');
-    }
-</script>
 </body>
 </html>

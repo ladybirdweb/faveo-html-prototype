@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Tickets | Faveo</title>
+    <title>Package Details | Faveo</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
@@ -16,7 +16,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
-
 
     <!--[if lt IE 9]>
     <script type="text/javascript" src="assets/app/js/html5shiv.min.js"></script>
@@ -46,7 +45,6 @@
 
                     <span class="navbar-toggler-icon"></span>
                 </button> <!-- collapse -->
-
 
                 <span class="switcher-toggle m-none" onclick="myFunction()">
 
@@ -94,7 +92,7 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown active">
 
                             <a class="dropdown-toggle nav-link" href="javascript:;" id="navbarDropdown3" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">Billing</a>
 
@@ -108,7 +106,7 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item active"><a class="nav-link" href="my-tickets.html">My Tickets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="my-tickets.html">My Tickets</a></li>
 
                         <li class="nav-item dropdown">
 
@@ -146,11 +144,11 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                <li><a class="dropdown-item" href="my-tickets.html?lang=ar" id="arabicOption">
+                                <li><a class="dropdown-item" href="verify-2fa.html?lang=ar" id="arabicOption">
                                     <img src="./assets/img/ar.png" alt="Img"> Arabic
                                 </a></li>
 
-                                <li><a class="dropdown-item" href="my-tickets.html?lang=en" id="englishOption">
+                                <li><a class="dropdown-item" href="verify-2fa.html?lang=en" id="englishOption">
                                     <img src="./assets/img/en.png" alt="Img"> English
                                 </a></li>
                             </ul>
@@ -253,7 +251,7 @@
 
                 <li><a href="index.html">Home</a></li>
 
-                <li class="active"><i class="fas fa-chevron-right"></i>My Tickets</li>
+                <li class="active"><i class="fas fa-chevron-right"></i>Package Details</li>
             </ol>
         </div>
     </div>
@@ -264,352 +262,95 @@
 
             <div class="content-area">
 
-                <div class="card">
+                <div class="row">
 
-                    <div class="card-header">
+                    <div id="content" class="site-content col-md-12">
 
-                        <h3 class="card-title">Tickets</h3>
+                        <header class="archive-header">
 
-                        <div class="card-tools">
+                            <h1 class="archive-title">Selected package</h1>
+                        </header>
 
-                            <button type="button" class="btn btn-tool" id="filter-btn">
-                                <i class="fas fa-filter"></i>
-                            </button>
-                        </div>
-                    </div>
+                        <div class="archive-list archive-news">
 
-                    <div class="card-body">
+                            <article class="hentry">
 
-                        <div class="card mb-4 d-none" id="filter-box">
+                                <div class="row">
 
-                            <div class="card-header">
+                                    <div class="col-sm-2">
 
-                                <h3 class="card-title">Filter</h3>
+                                        <img src="./assets/img/package.png" alt="" width="360" height="225" class="entry-thumbnail float-start w-100">
 
-                            </div>
-
-                            <div class="card-body">
-
-                                <form class="row g-3">
-
-                                    <div class="col-md-6">
-
-                                        <label class="form-label">Subject</label>
-
-                                        <input type="text" class="form-control" name="subject">
                                     </div>
 
-                                    <div class="col-md-6">
+                                    <div class="col-sm-10">
 
-                                        <label class="form-label">Ticket ID</label>
+                                        <header class="entry-header">
 
-                                        <input type="text" class="form-control" name="id">
-                                    </div>
 
-                                    <div class="col-md-6">
+                                            <h2 class="entry-title h3"><a href="javascript:;" rel="bookmark">Package 1</a></h2>
+                                        </header>
 
-                                        <label class="form-label">Status</label>
+                                        <footer class="entry-footer">
 
-                                        <select class="form-select">
+                                            <div class="entry-meta text-muted">
 
-                                            <option selected>Choose...</option>
+                                                <small class="date"><i class="far fa-calendar fa-fw me-1"></i><time datetime="2013-10-22T20:01:58+00:00">November 03, 2023 10:36 am</time></small>
 
-                                            <option>...</option>
-                                        </select>
-                                    </div>
+                                                <small class="date"><i class="far fa-clock fa-fw me-1"></i><time >Monthly</time></small>
 
-                                    <div class="col-md-6">
+                                                <small class="date"><i class="fas fa-ticket-alt fa-fw me-1"></i><time>100</time></small>
 
-                                        <label class="form-label">Requester</label>
-
-                                        <select class="form-select">
-
-                                            <option selected>Choose...</option>
-
-                                            <option>...</option>
-                                        </select>
-                                    </div>
-                                </form>
-                            </div>
-
-                            <div class="card-footer text-muted">
-
-                                <button type="button" class="btn btn-default border" id="apply-btn">
-
-                                    <i class="fas fa-check"></i> Apply
-                                </button>
-
-                                <button type="button" class="btn btn-default border">
-
-                                    <i class="fas fa-undo"></i> Reset
-                                </button>
-
-                                <button type="button" class="btn btn-default border" id="cancel-btn">
-
-                                    <i class="fas fa-times"></i> Cancel
-                                </button>
-                            </div>
-                        </div>
-
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-
-                            <li class="nav-item" role="presentation">
-
-                                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#open-tab" type="button">
-
-                                    <i class="far fa-clock"></i> Open
-
-                                    <span class="badge badge-pill tab_count ml-1">30</span>
-                                </button>
-                            </li>
-
-                            <li class="nav-item" role="presentation">
-
-                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#closed-tab" type="button">
-
-                                    <i class="fas fa-sync"></i> Closed
-
-                                    <span class="badge badge-pill tab_count ml-1">2</span>
-                                </button>
-                            </li>
-
-                            <li class="nav-item" role="presentation">
-
-                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#deleted-tab" type="button">
-
-                                    <i class="fas fa-trash-alt"></i> Deleted
-
-                                    <span class="badge badge-pill tab_count ml-1">1</span>
-                                </button>
-                            </li>
-
-                            <li class="ms-auto">
-
-                                <div class="dropdown">
-
-                                    <a class="btn btn-light border dropdown-toggle ticket-change-status-btn" href="javascript:;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fas fa-exchange-alt"></i> Change Status
-
-                                        <span class="caret"></span>
-                                    </a>
-
-                                    <ul class="dropdown-menu">
-
-                                        <li><a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#statusModal"><i class="fas fa-clock text-success"></i> Open</a></li>
-
-                                        <li><a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#statusModal"><i class="fas fa-undo text-warning"></i> Close</a></li>
-
-                                        <li><a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#statusModal"><i class="fas fa-trash-alt text-danger"></i> Deleted</a></li>
-                                    </ul>
-
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="statusModal" tabindex="-1" aria-labelledby="statusModalLabel" aria-hidden="true">
-
-                                        <div class="modal-dialog">
-
-                                            <div class="modal-content">
-
-                                                <div class="modal-header">
-
-                                                    <h1 class="modal-title fs-5" id="exampleModalLiveLabel">Change Status</h1>
-
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-                                                </div>
-
-                                                <div class="modal-body text-start">
-
-                                                    <p>Are you sure?</p>
-                                                </div>
-
-                                                <div class="modal-footer">
-
-                                                    <button type="button" class="btn btn-light border" data-bs-dismiss="modal">
-                                                        <i class="fas fa-times"></i> Close
-                                                    </button>
-
-                                                    <button type="button" class="btn btn-primary">
-                                                        <i class="fas fa-check"></i> Proceed
-                                                    </button>
-                                                </div>
+                                                <small class="date"><i class="fas fa-money-bill-alt me-1"></i><time datetime="2013-10-22T20:01:58+00:00">$1,111.00</time></small>
                                             </div>
-                                        </div>
+                                        </footer>
+
+
+                                        <div class="entry-summary clearfix">
+
+                                            <p>Phasellus feugiat lobortis libero quis laoreet. Quisque ac fringilla purus. Integer eleifend, arcu eu egestas vestibulum, libero magna rhoncus magna, id pellentesque diam ante rutrum arcu. In hac habitasse platea dictumst. In vestibulum turpis nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames …</p>
+
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="checkbox" value="" id="orgCheck">
+
+                                                <label class="form-check-label" for="orgCheck">
+                                                    Purchase for an Organization
+                                                </label>
+                                            </div>
+
+                                            <div class="col-md-6 mb-3 mt-2 d-none" id="org">
+
+                                                <label for="inputState" class="form-label">Organizations</label>
+
+                                                <select id="inputState" class="form-select">
+
+                                                    <option selected>Choose...</option>
+
+                                                    <option>Faveo</option>
+
+                                                    <option>Ladybird</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-check">
+
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+
+                                                <label class="form-check-label" for="flexCheckDefault1">
+
+                                                    <a href="javascript:;"> I understand and agree to terms and conditions</a>
+                                                </label>
+                                            </div>
+
+                                            <p class="text-end">
+
+                                                <a href="checkout.html" class="btn btn-custom"><i class="fas fa-forward"></i> CHECKOUT</a>
+                                            </p>
+                                        </div><!-- .entry-summary -->
                                     </div>
                                 </div>
-
-                            </li>
-                        </ul>
-
-                        <div class="tab-content" id="myTabContent">
-
-                            <div class="tab-pane fade show active" id="open-tab">
-
-                                <div class="mt-4 mb-4">
-
-                                    <div class="row float-end mr-0 mb-3">
-
-                                        <div class="input-group">
-
-                                            <span class="input-group-text bg-white text-gray">
-
-                                                <i class="fa fa-search text-muted"></i>
-                                            </span>
-
-                                            <input type="search" class="form-control border-start-0" placeholder="Search...">
-                                        </div>
-                                    </div>
-
-                                    <table class="table table-bordered">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Ticket Number</th>
-                                            <th scope="col">Subject</th>
-                                            <th scope="col">Requester</th>
-                                            <th scope="col">Last replier</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Last activity</th>
-                                        </tr>
-                                        </thead>
-
-                                        <tbody id="table-body">
-                                        <!-- This is the container where the table rows will be added dynamically -->
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <div class="row">
-
-                                    <div class="col-sm-6">
-
-                                        <span>Showing 1 to 10 of 30 entries</span>
-                                    </div>
-
-                                    <div class="col-sm-6">
-
-                                        <nav aria-label="Page navigation example">
-                                            <ul class="pagination justify-content-end">
-                                                <li class="page-item disabled">
-                                                    <a class="page-link">Previous</a>
-                                                </li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#">Next</a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane fade" id="closed-tab">
-
-                                <div class="mt-4 mb-4">
-
-                                    <div class="row float-end mr-0 mb-3">
-
-                                        <div class="input-group">
-
-                                            <span class="input-group-text bg-white text-gray">
-
-                                                <i class="fa fa-search text-muted"></i>
-                                            </span>
-
-                                            <input type="search" class="form-control border-start-0" placeholder="Search...">
-                                        </div>
-                                    </div>
-
-                                    <table class="table table-bordered">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Ticket Number</th>
-                                            <th scope="col">Subject</th>
-                                            <th scope="col">Requester</th>
-                                            <th scope="col">Last replier</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Last activity</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td scope="row">#HDSK-AAAA-0001</td>
-                                            <td><a href="ticket-detail.html">Closed ticket one(1)</a></td>
-                                            <td>Sakthivel Munusami</td>
-                                            <td>Manish Prashanth</td>
-                                            <td>Closed</td>
-                                            <td>November 01, 2023 09:09 am</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">#HDSK-AAAA-0002</td>
-                                            <td><a href="ticket-detail.html">Lorem ipsum dolor sit amet (34)</a></td>
-                                            <td>Viji</td>
-                                            <td>Dheekshit</td>
-                                            <td>Closed</td>
-                                            <td>October 31, 2023 12:34 am</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <div class="row">
-
-                                    <div class="col-sm-6">
-
-                                        <span>2 records</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane fade" id="deleted-tab">
-
-                                <div class="mt-4 mb-4">
-
-                                    <div class="row float-end mr-0 mb-3">
-
-                                        <div class="input-group">
-
-                                            <span class="input-group-text bg-white text-gray">
-
-                                                <i class="fa fa-search text-muted"></i>
-                                            </span>
-
-                                            <input type="search" class="form-control border-start-0" placeholder="Search...">
-                                        </div>
-                                    </div>
-
-                                    <table class="table table-bordered">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Ticket Number</th>
-                                            <th scope="col">Subject</th>
-                                            <th scope="col">Requester</th>
-                                            <th scope="col">Last replier</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Last activity</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td scope="row">#HDSK-AAAA-0001</td>
-                                            <td><a href="ticket-detail.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. (0)</a></td>
-                                            <td>Sakthivel Munusami</td>
-                                            <td>Manish Prashanth</td>
-                                            <td>Deleted</td>
-                                            <td>November 01, 2023 09:09 am</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <div class="row">
-
-                                    <div class="col-sm-6">
-
-                                        <span>1 record</span>
-                                    </div>
-                                </div>
-                            </div>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -858,130 +599,20 @@
 </script>
 
 <script>
-    // Content for the table rows
-    const tableContent = [
-        {
-            ticketNumber: "#HDSK-AAAA-0001",
-            ticketName: "Ticket number one (1)",
-            assignedTo: "Sakthivel Munusami",
-            createdBy: "Manish Prashanth",
-            status: "Open",
-            createdDate: "November 01, 2023 09:09 am"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0002",
-            ticketName: "Ticket number two (2)",
-            assignedTo: "Alice Johnson",
-            createdBy: "John Pantau",
-            status: "Open",
-            createdDate: "October 15, 2023 02:30 pm"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0003",
-            ticketName: "Ticket number three (3)",
-            assignedTo: "Michael Smith",
-            createdBy: "Emily Brown",
-            status: "Open",
-            createdDate: "August 21, 2023 11:45 am"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0004",
-            ticketName: "Ticket number four (4)",
-            assignedTo: "Sophia Lee",
-            createdBy: "Oliver Davis",
-            status: "Open",
-            createdDate: "June 9, 2023 04:15 pm"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0005",
-            ticketName: "Ticket number five (5)",
-            assignedTo: "David Wilson",
-            createdBy: "Ava Rodriguez",
-            status: "Open",
-            createdDate: "May 5, 2023 08:00 am"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0006",
-            ticketName: "Ticket number six (6)",
-            assignedTo: "Noah Taylor",
-            createdBy: "Mia Hall",
-            status: "Open",
-            createdDate: "April 3, 2023 01:20 pm"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0007",
-            ticketName: "Ticket number seven (7)",
-            assignedTo: "Ella Martinez",
-            createdBy: "William Turner",
-            status: "Open",
-            createdDate: "March 15, 2023 09:45 am"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0008",
-            ticketName: "Ticket number eight (8)",
-            assignedTo: "Isabella Adams",
-            createdBy: "James Clark",
-            status: "Open",
-            createdDate: "February 12, 2023 03:30 pm"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0009",
-            ticketName: "Ticket number nine (9)",
-            assignedTo: "Liam Baker",
-            createdBy: "Chloe White",
-            status: "Open",
-            createdDate: "January 8, 2023 10:10 am"
-        },
-        {
-            ticketNumber: "#HDSK-AAAA-0010",
-            ticketName: "Ticket number ten (10)",
-            assignedTo: "Emma Lewis",
-            createdBy: "Alexander Hall",
-            status: "Open",
-            createdDate: "December 1, 2022 02:20 pm"
-        },
-        // Add more content for the other table rows here
-    ];
 
-    const tableBody = document.getElementById("table-body");
+    // Get references to the checkbox and the organization select element
+    const checkbox = document.getElementById("orgCheck");
+    const organizationSelect = document.getElementById("org");
 
-    // Create 15 table rows with different content
-    for (let i = 0; i < 10; i++) {
-        const row = document.createElement("tr");
-
-        row.innerHTML = `
-                <td scope="row">${tableContent[i].ticketNumber}</td>
-                <td><a href="ticket-detail.html">${tableContent[i].ticketName}</a></td>
-                <td>${tableContent[i].assignedTo}</td>
-                <td>${tableContent[i].createdBy}</td>
-                <td>${tableContent[i].status}</td>
-                <td>${tableContent[i].createdDate}</td>
-            `;
-
-        tableBody.appendChild(row);
-    }
-</script>
-
-<script>
-
-    document.getElementById('filter-btn').addEventListener('click', function (){
-
-        toggleFilter()
+    // Add an event listener to the checkbox
+    checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+            organizationSelect.classList.remove("d-none");
+        } else {
+            organizationSelect.classList.add("d-none");
+        }
     });
 
-    document.getElementById('apply-btn').addEventListener('click', function (){
-
-        toggleFilter()
-    });
-
-    document.getElementById('cancel-btn').addEventListener('click', function (){
-
-        toggleFilter()
-    });
-
-    function toggleFilter() {
-        document.getElementById('filter-box').classList.toggle('d-none');
-    }
 </script>
 </body>
 </html>
