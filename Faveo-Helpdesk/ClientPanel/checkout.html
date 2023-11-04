@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Packages | Faveo</title>
+    <title>Checkout | Faveo</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
@@ -144,11 +144,11 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                <li><a class="dropdown-item" href="my-packages.html?lang=ar" id="arabicOption">
+                                <li><a class="dropdown-item" href="checkout.html?lang=ar" id="arabicOption">
                                     <img src="./assets/img/ar.png" alt="Img"> Arabic
                                 </a></li>
 
-                                <li><a class="dropdown-item" href="my-packages.html?lang=en" id="englishOption">
+                                <li><a class="dropdown-item" href="checkout.html?lang=en" id="englishOption">
                                     <img src="./assets/img/en.png" alt="Img"> English
                                 </a></li>
                             </ul>
@@ -251,7 +251,7 @@
 
                 <li><a href="index.html">Home</a></li>
 
-                <li class="active"><i class="fas fa-chevron-right"></i>My Packages</li>
+                <li class="active"><i class="fas fa-chevron-right"></i>Checkout</li>
             </ol>
         </div>
     </div>
@@ -268,204 +268,150 @@
 
                         <header class="archive-header">
 
-                            <h1 class="archive-title">My Packages</h1>
+                            <div class="row">
+
+                                <div class="col-sm-7">
+                                    <h1 class="archive-title">Checkout</h1>
+                                </div>
+
+                                <div class="col-sm-5">
+
+                                    <div class="text-end">
+
+                                        <button type="button" class="btn btn-custom"><i class="fas fa-print"></i> PRINT</button>
+
+                                        <button type="button" class="btn btn-custom"><i class="fas fa-file-pdf"></i> GENERATE PDF</button>
+                                    </div>
+
+                                </div>
+                            </div>
                         </header>
 
-                        <div class="card card-light">
+                        <div class="alert alert-info mt-3">
 
-                            <div class="card-header">
+                            <div class="row">
 
-                                <h3 class="card-title">Personal Packages</h3>
+                                <div class="col-md-4">
+
+                                    <b>Package Name : </b><span>Package 1</span>
+                                </div>
+
+                                <div class="col-md-4">
+
+                                    <b>Validity : </b><span>Monthly</span>
+                                </div>
+
+                                <div class="col-md-4">
+
+                                    <b>Price : </b><span>$1,111.00</span>
+                                </div>
                             </div>
+                        </div>
+
+                        <div class="card mt-3">
 
                             <div class="card-body">
 
-                                <div class="mt-2 mb-4">
-
-                                    <div class="row float-end mr-0 mb-3">
-
-                                        <div class="input-group">
-
-                                            <span class="input-group-text bg-white text-gray">
-
-                                                <i class="fa fa-search text-muted"></i>
-                                            </span>
-
-                                            <input type="search" class="form-control border-start-0" placeholder="Search...">
-                                        </div>
-                                    </div>
-
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Name</th>
-                                                <th scope="col">Invoice ID</th>
-                                                <th scope="col">Billing cycle</th>
-                                                <th scope="col">Credit type</th>
-                                                <th scope="col">Credits</th>
-                                                <th scope="col">Expiry Date</th>
-                                                <th scope="col">Expiry Date Monthly Wise</th>
-                                                <th scope="col">Order</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td scope="row">Test package 2</td>
-                                                <td><a href="invoice-details.html">Invoice#1</a></td>
-                                                <td>One time</td>
-                                                <td>Tickets</td>
-                                                <td>22</td>
-                                                <td>November 01, 2023 09:09 am</td>
-                                                <td>November 01, 2023 09:09 am</td>
-                                                <td>
-                                                    <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#orderModal">View order</a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="row">Test package for testing</td>
-                                                <td><a href="invoice-details.html">Invoice#2</a></td>
-                                                <td>One time</td>
-                                                <td>Users</td>
-                                                <td>123</td>
-                                                <td>October 01, 2023 11:33 am</td>
-                                                <td>October 01, 2023 04:34 am</td>
-                                                <td>
-                                                    <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#orderModal">View order</a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
                                 <div class="row">
 
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
 
-                                        <span>2 records</span>
+                                        <h2 class="section-title h4 clearfix"><i class="line"></i><i class="line"></i>From</h2>
+
+                                        <p><b>Helpdesk</b></p>
+
+                                        <p>Phone : <b> +91 7654567876</b></p>
+
+                                        <p>Address : <b> Bangalore</b></p>
+                                    </div>
+
+                                    <div class="col-sm-4">
+
+                                        <h2 class="section-title h4 clearfix"><i class="line"></i><i class="line"></i>To</h2>
+
+                                        <p><b>Sakthivel Munusami</b></p>
+
+                                        <p>Phone : <b> +91 7654567876</b></p>
+
+                                        <p>Email : <b> sakthi@gmail.com</b></p>
+                                    </div>
+
+                                    <div class="col-sm-4">
+
+                                        <h2 class="section-title h4 clearfix"><i class="line"></i><i class="line"></i>Invoice details</h2>
+
+                                        <p class="text-danger fs-2"><b>Unpaid</b></p>
+
+                                        <p>Creation Date : <b>November 04, 2023 04:47 am</b></p>
+
+                                        <p>Due Date : <b>November 05, 2023 04:47 am</b></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card card-light mt-3">
-
-                            <div class="card-header">
-
-                                <h3 class="card-title">Organization Packages</h3>
-                            </div>
+                        <div class="card mt-3">
 
                             <div class="card-body">
 
-                                <div class="mt-2 mb-4">
-
-                                    <div class="row float-end mr-0 mb-3">
-
-                                        <div class="input-group">
-
-                                            <span class="input-group-text bg-white text-gray">
-
-                                                <i class="fa fa-search text-muted"></i>
-                                            </span>
-
-                                            <input type="search" class="form-control border-start-0" placeholder="Search...">
-                                        </div>
-                                    </div>
-
-                                    <table class="table table-bordered">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Invoice ID</th>
-                                            <th scope="col">Billing cycle</th>
-                                            <th scope="col">Credit type</th>
-                                            <th scope="col">Credits</th>
-                                            <th scope="col">Expiry Date</th>
-                                            <th scope="col">Expiry Date Monthly Wise</th>
-                                            <th scope="col">Order</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td scope="row">Org package for testing</td>
-                                            <td><a href="invoice-details.html">Invoice#3</a></td>
-                                            <td>One time</td>
-                                            <td>Tickets</td>
-                                            <td>3</td>
-                                            <td>August 01, 2023 09:33 am</td>
-                                            <td>September 01, 2023 05:46 am</td>
-                                            <td>
-                                                <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#orderModal">View order</a>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
                                 <div class="row">
 
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-12">
 
-                                        <span>1 record</span>
+                                        <h2 class="section-title h4 clearfix"><i class="line"></i><i class="line"></i>Payment Details</h2>
+
+                                        <ul class="list-group list-group-flush">
+
+                                            <li class="list-group-item mb-0 ps-0">
+
+                                                <dl class="row mb-0">
+
+                                                    <dt class="col-sm-5">Paid amount : </dt>
+
+                                                    <dd class="col-sm-7">$0.00</dd>
+                                                </dl>
+                                            </li>
+
+                                            <li class="list-group-item mb-0 ps-0">
+
+                                                <dl class="row mb-0">
+
+                                                    <dt class="col-sm-5">Balance : </dt>
+
+                                                    <dd class="col-sm-7">$1,111.00</dd>
+                                                </dl>
+                                            </li>
+
+                                            <li class="list-group-item mb-0 ps-0">
+
+                                                <dl class="row mb-0">
+
+                                                    <dt class="col-sm-5">Total : </dt>
+
+                                                    <dd class="col-sm-7">$1,111.00</dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+                        <div class="text-end mt-3">
 
-                            <div class="modal-dialog modal-lg">
+                            <select id="inputState" class="form-select d-inline w-25">
 
-                                <div class="modal-content">
+                                <option selected>Select Payment Method</option>
 
-                                    <div class="modal-header">
+                                <option>Cash</option>
 
-                                        <h1 class="modal-title fs-5" id="orderLabel">Order details</h1>
+                                <option>BankTransfer</option>
 
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <option>Bill</option>
+                            </select>
 
-                                    </div>
-
-                                    <div class="modal-body text-start">
-
-                                        <div class="table-responsive">
-
-                                            <table class="table">
-
-                                                <thead class="table-light">
-                                                <tr>
-                                                    <th>Package name</th>
-                                                    <th>Validity</th>
-                                                    <th>Credit type</th>
-                                                    <th>Credit left</th>
-                                                    <th>Expiry Date</th>
-                                                </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                <tr>
-                                                    <td>Test package 2</td>
-                                                    <td >One time</td>
-                                                    <td >Tickets</td>
-                                                    <td >22</td>
-                                                    <td >August 01, 2023 09:33 am</td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-
-                                    <div class="modal-footer">
-
-                                        <button type="button" class="btn btn-light border" data-bs-dismiss="modal">
-                                            <i class="fas fa-times"></i> Close
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                            <button type="button" class="btn btn-custom mb-1"><i class="fas fa-money-bill"></i> PAY NOW</button>
                         </div>
-
                     </div>
                 </div>
             </div>

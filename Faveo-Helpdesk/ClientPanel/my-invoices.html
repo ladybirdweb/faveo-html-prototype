@@ -144,11 +144,11 @@
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                <li><a class="dropdown-item" href="verify-2fa.html?lang=ar" id="arabicOption">
+                                <li><a class="dropdown-item" href="my-invoices.html?lang=ar" id="arabicOption">
                                     <img src="./assets/img/ar.png" alt="Img"> Arabic
                                 </a></li>
 
-                                <li><a class="dropdown-item" href="verify-2fa.html?lang=en" id="englishOption">
+                                <li><a class="dropdown-item" href="my-invoices.html?lang=en" id="englishOption">
                                     <img src="./assets/img/en.png" alt="Img"> English
                                 </a></li>
                             </ul>
@@ -266,6 +266,125 @@
 
                     <div id="content" class="site-content col-md-12">
 
+                        <header class="archive-header">
+
+                            <h1 class="archive-title">My Invoices</h1>
+                        </header>
+
+                        <div class="mt-2 mb-4">
+
+                            <div class="row float-end mr-0 mb-3">
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text bg-white text-gray">
+
+                                        <i class="fa fa-search text-muted"></i>
+                                    </span>
+
+                                    <input type="search" class="form-control border-start-0" placeholder="Search...">
+                                </div>
+                            </div>
+
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Invoice ID</th>
+                                    <th scope="col">Created At</th>
+                                    <th scope="col">Due by</th>
+                                    <th scope="col">Total Amount</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td scope="row"><a href="invoice-details.html">Invoice#1</a></td>
+                                    <td>November 04, 2023 05:28 am</td>
+                                    <td>November 05, 2023 05:28 am</td>
+                                    <td>$1,111.00</td>
+                                    <td><span class="btn btn-danger btn-sm">Unpaid</span></td>
+                                    <td>
+                                        <a href="javascript:;" class="btn btn-light border btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td scope="row"><a href="invoice-details.html">Invoice#2</a></td>
+                                    <td>November 04, 2023 04:47 am</td>
+                                    <td>November 05, 2023 04:47 am</td>
+                                    <td>$1,111.00</td>
+                                    <td><span class="btn btn-danger btn-sm">Unpaid</span></td>
+                                    <td>
+                                        <a href="javascript:;" class="btn btn-light border btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td scope="row"><a href="invoice-details.html">Invoice#3</a></td>
+                                    <td>November 04, 2023 04:34 am</td>
+                                    <td>November 05, 2023 04:34 am</td>
+                                    <td>$1,111.00</td>
+                                    <td><span class="btn btn-danger btn-sm">Unpaid</span></td>
+                                    <td>
+                                        <a href="javascript:;" class="btn btn-light border btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td scope="row"><a href="invoice-details.html">Invoice#4</a></td>
+                                    <td>November 03, 2023 10:37 am</td>
+                                    <td>November 04, 2023 10:37 am</td>
+                                    <td>$765,432.00</td>
+                                    <td><span class="btn btn-success btn-sm">Paid</span></td>
+                                    <td>
+                                        <a href="javascript:;" class="btn btn-light border btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-sm-6">
+
+                                <span>1 record</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+
+                        <div class="modal-dialog">
+
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+
+                                    <h1 class="modal-title fs-5" id="deleteLabel">Delete</h1>
+
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                                </div>
+
+                                <div class="modal-body text-start">
+
+                                    <p>Are you sure?</p>
+                                </div>
+
+                                <div class="modal-footer justify-content-between">
+
+                                    <button type="button" class="btn btn-light border" data-bs-dismiss="modal">
+                                        <i class="fas fa-times"></i> Close
+                                    </button>
+
+                                    <button type="button" class="btn btn-danger border" data-bs-dismiss="modal">
+                                        <i class="fas fa-times"></i> Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
