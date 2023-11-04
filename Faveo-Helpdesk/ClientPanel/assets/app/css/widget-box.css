@@ -1,0 +1,59 @@
+#core-widget-box {
+    margin-top: 2em;
+    margin-bottom: 4em;
+    padding-left: 3px
+}
+
+.widget-row {
+    width: 100%;
+    position: relative;
+    margin: 0 -20px 0 0
+}
+
+.widget-row-item:focus {
+    outline: 0;
+    background-color: #eee
+}
+
+.default-widget {
+    background-image: url("../../img/register.png")
+}
+
+.submit-ticket-widget {
+    background-image: url("../../img/submitticket.png")
+}
+
+.kb-widget {
+    background-image: url("../../img/knowledgebase.png")
+}
+
+.register-widget {
+    background-image: url("../../img/register.png")
+}
+
+.my-tickets-widget {
+    background-image: url("../../img/news.png")
+}
+
+.widget-row a {
+    background-repeat: no-repeat;
+    background-position: 50% 12px;
+    padding: 55px 2px 10px 2px;
+    font-weight: 400;
+    text-align: center;
+    width: 115px;
+    cursor: pointer;
+    clear: none;
+    display: inline-block;
+    border: 1px solid #c9cfd7;
+    background-color: #fff;
+    border-radius: 4px;
+    line-height: 14px;
+    margin: 0 6px 6px 0;
+    font-size: .83em;
+    font-family: "segoe ui","helvetica neue",arial,helvetica,sans-serif
+}
+
+.widget-row a:hover {
+    background-color: #e9ecef
+}

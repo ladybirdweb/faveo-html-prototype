@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/Agora-Invoicing/Client-Panel/php" isTestSource="false" packagePrefix="DrewM" />
-      <sourceFolder url="file://$MODULE_DIR$/Agora-Invoicing/Client-Panel/php/php-mailer/src" isTestSource="false" packagePrefix="PHPMailer\PHPMailer\" />
-      <sourceFolder url="file://$MODULE_DIR$/Agora-Invoicing/Client-Panel/php/php-mailer/test" isTestSource="true" packagePrefix="PHPMailer\Test\" />
-      <sourceFolder url="file://$MODULE_DIR$/Agora-Invoicing/Client-Panel/php/tweet-php/lib/tmhOAuth/" isTestSource="false" />
-    </content>
+    <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

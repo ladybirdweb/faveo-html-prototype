@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="ie">
+<![endif]-->
+<!--[if !(IE 8) ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Details | Faveo</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="assets/app/js/html5shiv.min.js"></script>
+    <script type="text/javascript" src="assets/app/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="text-xs" style="display: none">
+
+<div id="page" class="hfeed site">
+
+    <header id="masthead" class="site-header" role="banner">
+
+        <div class="container">
+
+            <nav id="navbar" class="site-navigation navbar navbar-expand-lg navbar-light">
+
+                <div id="logo" class="navbar-brand brand site-logo text-start">
+
+                    <a href="index.html" rel="home">
+
+                        <img src="assets/img/faveo.png" alt="Image" />
+                    </a>
+                </div><!-- #logo -->
+
+                <button style="float: right;margin: 10px;" class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button> <!-- collapse -->
+
+
+                <span class="switcher-toggle m-none" onclick="myFunction()">
+
+						<span class="icon"></span>
+					</span>
+
+                <div class="collapse navbar-collapse links justify-content-end" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav navbar-menu site-navigate ml-auto">
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="submit-ticket.html">Submit Ticket</a></li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="dropdown-toggle nav-link" href="knowledge-base.html" id="navbarDropdown" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">Knowledge Base</a>
+
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+
+                                <li>
+
+                                    <a class="dropdown-item" href="categories.html">Categories</a>
+                                </li>
+
+                                <li>
+
+                                    <a class="dropdown-item" href="articles.html">Articles</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="dropdown-toggle nav-link" href="javascript:;" id="navbarDropdown1" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">Organizations</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                <li><a class="dropdown-item" href="org-detail.html">Faveo</a></li>
+
+                                <li><a class="dropdown-item" href="org-detail.html">Ladybird</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="dropdown-toggle nav-link" href="javascript:;" id="navbarDropdown3" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">Billing</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+
+                                <li><a class="dropdown-item" href="purchase-packages.html">Purchase Packages</a></li>
+
+                                <li><a class="dropdown-item" href="my-packages.html">My Packages</a></li>
+
+                                <li><a class="dropdown-item" href="my-invoices.html">My Invoices</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item active"><a class="nav-link" href="my-tickets.html">My Tickets</a></li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="dropdown-toggle nav-link" href="my-profile.html" id="navbarDropdown2" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">My Profile</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                <div class="banner-wrapper user-data text-center clearfix border-0">
+
+                                    <img src="assets/img/avatar.png" alt="" height="60" width="60" class="avatar rounded-5">
+
+                                    <p class="mt-2 mb-0">Hello</p>
+
+                                    <h3 class="banner-title h4">Sakthivel</h3>
+
+                                    <div class="banner-content mt-3 btn-group">
+
+                                        <a href="javascript:;" class="btn btn-custom btn-sm profile-drop-btn">Log out</a></p>
+
+                                        <a href="my-profile.html" class="btn btn-custom btn-sm profile-drop-btn ms-1">Profile</a></p>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="dropdown-toggle nav-link" href="#" id="navbarDropdownlang" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                <img id="flagIcon" src="./assets/img/en.png" alt="no">
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                <li><a class="dropdown-item" href="ticket-detail.html?lang=ar" id="arabicOption">
+                                    <img src="./assets/img/ar.png" alt="Img"> Arabic
+                                </a></li>
+
+                                <li><a class="dropdown-item" href="ticket-detail.html?lang=en" id="englishOption">
+                                    <img src="./assets/img/en.png" alt="Img"> English
+                                </a></li>
+                            </ul>
+                        </li>
+                    </ul><!-- .navbar-menu -->
+
+                    <span class="switcher-toggle desk_none" onclick="myFunction()">
+                          <span class="icon"></span>
+                        </span>
+                </div>
+
+                <ul class="nav navbar-nav navbar-login d-lg-none">
+
+                    <li class="nav-item"><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+
+            <div id="header-search" class="site-search clearfix">
+
+                <form action="" method="get" class="search-form" role="search">
+
+                    <div class="form-border">
+
+                        <div class="form-inline">
+
+                            <div class="form-group input-group" style="width: 100%;">
+
+                                <input type="text" name="s" class="search-field form-control input-lg mr-3" title="Enter search term" placeholder="Have a question? Type your search term here..." />
+
+                                <span class="input-group-btn">
+
+								        <button type="submit" class="btn btn-custom ">Search</button>
+                                    </span>
+                            </div>
+                        </div>
+
+                        <div class="search-advance">
+
+                            <div class="row">
+
+                                <div class="col-sm-6">
+
+                                    <div class="form-horizontal">
+
+                                        <div class="form-group">
+
+                                            <label class="col-sm-3 control-label">Category</label>
+
+                                            <div class="col-sm-9">
+
+                                                <select name="category" class="form-control">
+                                                    <option value="">-- All Categories --</option>
+                                                    <option value="">Account Settings</option>
+                                                    <option value="">API Questions</option>
+                                                    <option value="">Customization</option>
+                                                    <option value="">Mobile Apps</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+
+                                    <div class="form-horizontal">
+
+                                        <div class="form-group">
+
+                                            <label class="col-sm-3 control-label">Format</label>
+
+                                            <div class="col-sm-9">
+
+                                                <select name="format" class="form-control">
+                                                    <option value="">-- All Formats --</option>
+                                                    <option value="">Text</option>
+                                                    <option value="">Image</option>
+                                                    <option value="">Video</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="search-advance-button text-center"><i class="fa fa-chevron-circle-up fa-2x"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-hero clearfix">
+
+        <div class="container">
+
+            <ol class="breadcrumb breadcrumb-custom">
+
+                <li class="text">You are here: </li>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="my-tickets.html"><i class="fas fa-chevron-right"></i>My Tickets</a></li>
+
+                <li class="active"><i class="fas fa-chevron-right"></i>Ticket Details</li>
+            </ol>
+        </div>
+    </div>
+
+    <div id="main" class="site-main clearfix">
+
+        <div class="container">
+
+            <div class="content-area">
+
+                <div class="row">
+
+                    <div class="site-content col-md-12">
+
+                        <article class="henry">
+
+                            <header class="entry-header">
+
+                                <div class="row">
+
+                                    <div class="col-sm-7">
+
+                                        <h1 class="entry-title"><i class="fas fa-ticket-alt"></i> Test ticket one <span class="fs-3 text-body-tertiary fw-normal">(HDSK-AAAA-0001)</span></h1>
+
+                                    </div>
+
+                                    <div class="col-sm-5 text-end">
+
+                                       <div class="btn-group">
+
+                                           <div class="dropdown">
+
+                                               <a class="btn btn-light border dropdown-toggle" href="javascript:;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                   <i class="fas fa-exchange-alt"></i> Change Status
+
+                                                   <span class="caret"></span>
+                                               </a>
+
+                                               <ul class="dropdown-menu">
+
+                                                   <li><a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#statusModal"><i class="fas fa-clock text-success"></i> Open</a></li>
+
+                                                   <li><a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#statusModal"><i class="fas fa-undo text-warning"></i> Close</a></li>
+
+                                                   <li><a class="dropdown-item" href="javascript:;" data-bs-toggle="modal" data-bs-target="#statusModal"><i class="fas fa-trash-alt text-danger"></i> Deleted</a></li>
+                                               </ul>
+
+                                               <!-- Modal -->
+                                               <div class="modal fade" id="statusModal" tabindex="-1" aria-labelledby="statusModalLabel" aria-hidden="true">
+
+                                                   <div class="modal-dialog">
+
+                                                       <div class="modal-content">
+
+                                                           <div class="modal-header">
+
+                                                               <h1 class="modal-title fs-5" id="exampleModalLiveLabel">Change Status</h1>
+
+                                                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                                                           </div>
+
+                                                           <div class="modal-body text-start">
+
+                                                               <p>Are you sure?</p>
+                                                           </div>
+
+                                                           <div class="modal-footer">
+
+                                                               <button type="button" class="btn btn-light border" data-bs-dismiss="modal">
+                                                                   <i class="fas fa-times"></i> Close
+                                                               </button>
+
+                                                               <button type="button" class="btn btn-primary">
+                                                                   <i class="fas fa-check"></i> Proceed
+                                                               </button>
+                                                           </div>
+                                                       </div>
+                                                   </div>
+                                               </div>
+                                           </div>
+
+                                           <button type="button" class="btn btn-light border mx-1 rounded" id="custom-detail-btn">
+
+                                               <i class="fas fa-eye"></i> <span id="button-text">View Custom Field Details</span>
+                                           </button>
+                                       </div>
+
+                                        <div class="mt-2 mb-2">
+
+                                            <span class="fw-semibold">Overall Rating : </span>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star-half-alt text-warning"></i>
+                                        </div>
+
+                                        <div class="mt-2 mb-2">
+
+                                            <span class="fw-semibold">Rating : </span>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="far fa-star text-warning"></i>
+                                            <i class="far fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+
+                            <div class="entry-content clearfix">
+
+                                <div class="row">
+
+                                    <div class="col-sm-6">
+
+                                        <ul class="list-group list-group-flush">
+
+                                            <li class="list-group-item mb-0">
+                                                <dl class="row mb-0">
+                                                    <dt class="col-sm-5">Status</dt>
+                                                    <dd class="col-sm-7 text-success">Open</dd>
+                                                </dl>
+                                            </li>
+
+                                            <li class="list-group-item mb-0">
+                                                <dl class="row mb-0">
+                                                    <dt class="col-sm-5">Priority</dt>
+                                                    <dd class="col-sm-7">Emergency</dd>
+                                                </dl>
+                                            </li>
+
+                                            <li class="list-group-item mb-0">
+                                                <dl class="row mb-0">
+                                                    <dt class="col-sm-5">Help Topic</dt>
+                                                    <dd class="col-sm-7">Support query</dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-sm-6">
+
+                                        <ul class="list-group list-group-flush">
+
+                                            <li class="list-group-item mb-0">
+                                                <dl class="row mb-0">
+                                                    <dt class="col-sm-5">Department</dt>
+                                                    <dd class="col-sm-7">Support</dd>
+                                                </dl>
+                                            </li>
+
+                                            <li class="list-group-item mb-0">
+                                                <dl class="row mb-0">
+                                                    <dt class="col-sm-5">Created Date</dt>
+                                                    <dd class="col-sm-7">November 01, 2023 09:09 am</dd>
+                                                </dl>
+                                            </li>
+
+                                            <li class="list-group-item mb-0">
+                                                <dl class="row mb-0">
+                                                    <dt class="col-sm-5">Last message</dt>
+                                                    <dd class="col-sm-7">Sakthi Viji</dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="row d-none" id="custom-data">
+                                    <hr>
+                                    <div class="col-sm-6">
+
+                                        <ul class="list-group list-group-flush">
+
+                                            <li class="list-group-item mb-0">
+                                                <dl class="row mb-0">
+                                                    <dt class="col-sm-5">Custom Field One</dt>
+                                                    <dd class="col-sm-7">Custom data</dd>
+                                                </dl>
+                                            </li>
+
+                                            <li class="list-group-item mb-0">
+                                                <dl class="row mb-0">
+                                                    <dt class="col-sm-5">Custom Field Three</dt>
+                                                    <dd class="col-sm-7">Custom text</dd>
+                                                </dl>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-sm-6">
+
+                                    <ul class="list-group list-group-flush">
+
+                                        <li class="list-group-item mb-0">
+                                            <dl class="row mb-0">
+                                                <dt class="col-sm-5">Custom Field Two</dt>
+                                                <dd class="col-sm-7 text-success">Two</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <div id="comments" class="comments-area">
+
+                            <ol id="reply-list" class="comment-list">
+                                <!-- This is the container where the comments will be added dynamically -->
+                            </ol>
+
+                            <div class="text-end mb-4">
+
+                                <button type="button" class="btn btn-light border" id="reply-btn"><i class="fas fa-reply"></i> Reply</button>
+                            </div>
+
+                            <div id="reply-box" class="comment-respond form-border d-none">
+
+                                <h3 id="reply-title" class="comment-reply-title section-title">Leave a Reply
+
+                                    <button class="btn btn-light border btn-sm float-end mx-1" id="reply-close-btn">
+
+                                        <i class="fas fa-times"></i>
+                                    </button>
+
+                                    <button class="btn btn-light border btn-sm float-end mx-1" id="reply-cc-btn">
+
+                                        CC
+                                    </button>
+                                </h3>
+
+                                <form action="" method="post" id="reply-form" class="comment-form">
+
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+
+                                            <div class="form-group mb-2 d-none" id="cc-field">
+
+                                                <select class="form-select">
+                                                    <option selected>Requester</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group mb-3">
+
+                                                <textarea class="form-control" cols="30" rows="8" placeholder="Enter description..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+
+                                        <button type="submit" class="btn btn-custom"> <i class="fas fa-file"></i> Attach Files</button>
+
+                                        <i>Maximum File Upload size : 20 MB</i>
+
+                                        <button type="submit" class="btn btn-custom btn-lg float-end"> <i class="fas fa-reply"></i> Reply</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="colophon" class="site-footer" role="contentinfo">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+                    <div class="widget-area">
+
+                        <section id="section-about" class="section">
+
+                            <h2 class="section-title h4 clearfix">About Faveo <i class="line"></i></h2>
+
+                            <div class="textwidget">
+
+                                <p>Vestibulum id velit cursus tortor tincidunt semper. Duis tempor, est eu pretium condimentum, mauris nunc tempus purus, eu dictum mi nibh sed arcu.</p>
+
+                                <p>Vivamus sagittis vestibulum nisl, eu pellentesque nibh. Duis tincidunt congue sapien id adipiscing. Phasellus varius, magna a cursus aliquet, lectus felis sodales orci, a bibendum orci ipsum id libero.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="widget-area">
+
+                        <section id="section-latest-news" class="section">
+
+                            <h2 class="section-title h4 clearfix">Latest News <i class="line"></i></h2>
+
+                            <div class="textwidget">
+
+                                <p>Vestibulum id velit cursus tortor tincidunt semper. Duis tempor, est eu pretium condimentum, mauris nunc tempus purus, eu dictum mi nibh sed arcu.</p>
+
+                                <p>Vivamus sagittis vestibulum nisl, eu pellentesque nibh. Duis tincidunt congue sapien id adipiscing. Phasellus varius, magna a cursus aliquet, lectus felis sodales orci, a bibendum orci ipsum id libero.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="widget-area">
+
+                        <section id="section-newsletter" class="section">
+
+                            <h2 class="section-title h4 clearfix">Get Updates <i class="line"></i></h2>
+
+                            <div class="textwidget">
+
+                                <p>Vivamus suscipit dictum orci in imperdiet. Nulla ut lacus nibh. Vivamus quis adipiscing libero, egestas sodales nulla. Nullam ut erat nisi.</p>
+
+                                <p>Vivamus sagittis vestibulum nisl, eu pellentesque nibh. Duis tincidunt congue sapien id adipiscing. Phasellus varius, magna a cursus aliquet, lectus felis sodales orci, a bibendum orci ipsum id libero.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="widget-area">
+
+                        <section id="section-newsletter1" class="section">
+
+                            <h2 class="section-title h4 clearfix">Last Footer <i class="line"></i></h2>
+
+                            <div class="textwidget">
+
+                                <p>Vivamus suscipit dictum orci in imperdiet. Nulla ut lacus nibh. Vivamus quis adipiscing libero, egestas sodales nulla. Nullam ut erat nisi.</p>
+
+                                <p>Vestibulum id velit cursus tortor tincidunt semper. Duis tempor, est eu pretium condimentum, mauris nunc tempus purus, eu dictum mi nibh sed arcu.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="row bord">
+
+                <div class="site-info col-md-6">
+
+                    <p class="text-muted">Copyright &copy; 2023
+
+                        <a href="https://www.faveohelpdesk.com/" target="_blank" class="text-primary">Faveo</a>. All Rights Reserved.
+                    </p>
+                </div><!-- .site-info -->
+
+                <div class="site-social text-end col-md-6">
+                    <ul class="list-inline hidden-print">
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-facebook"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-twitter"><i class="fab fa-twitter fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-google-plus"><i class="fab fa-google-plus-g fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-linkedin"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-vimeo"><i class="fab fa-vimeo-v fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-youtube"><i class="fab fa-youtube fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-pinterest"><i class="fab fa-pinterest-p fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-dribbble"><i class="fab fa-dribbble fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-flickr"><i class="fab fa-flickr fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-instagram"><i class="fab fa-instagram fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-rss"><i class="fas fa-rss fa-fw"></i></a></li>
+                    </ul>
+                </div><!-- .site-social -->
+            </div>
+
+        </div>
+    </footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<!-- Script -->
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
+<!-- <script type="text/javascript" src="assets/app/js/jquery-3.4.1.min.js"></script> -->
+
+<script type="text/javascript" src="assets/app/js/jquery.min.js"></script>
+
+<script type="text/javascript" src="assets/app/js/popper.min.js"></script>
+
+<script type="text/javascript" src="assets/app/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="assets/app/js/custom.js"></script>
+<script type="text/javascript" src="assets/app/js/superfish.js"></script>
+<script type="text/javascript" src="assets/app/js/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="assets/app/js/autocomplete.js"></script>
+<script type="text/javascript" src="assets/app/js/app.js"></script>
+
+
+<script async>
+
+    let normalCSS = [
+        {
+            rel: 'stylesheet',type: 'text/css', href: 'assets/bootstrap/css/bootstrap.min.css'
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/app.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/edit.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/custom.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/common.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/font-awesome/css/all.min.css'
+        }
+        // Add more objects for additional links
+    ];
+
+    let rtlCSS = [
+        {
+            rel: 'stylesheet',type: 'text/css', href: 'assets/bootstrap/css/bootstrap.rtl.min.css'
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/rtl/app.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/rtl/edit.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/rtl/custom.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/rtl/common.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/font-awesome/css/all.min.css'
+        }
+        // Add more objects for additional links
+    ];
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const body = document.body;
+
+    const flagIcon = document.getElementById('flagIcon');
+
+    if(urlParams.get('lang') && urlParams.get('lang') === 'ar') {
+
+        var existingLinks = document.querySelectorAll('link[rel="stylesheet"]');
+        existingLinks.forEach(function (link) {
+            link.parentNode.removeChild(link);
+        });
+
+        flagIcon.src = './assets/img/ar.png';
+
+        flagIcon.alt = 'Arabic';
+
+        body.setAttribute('dir', 'rtl');
+
+        rtlCSS.forEach(function (linkData) {
+            var link = document.createElement('link');
+            link.rel = linkData.rel;
+            link.type = linkData.type;
+            link.href = linkData.href;
+            // Append the link element to the document's head
+            document.head.appendChild(link);
+        });
+
+        setTimeout(()=>{
+
+            body.style.display = 'block';
+
+        },1000)
+
+    } else {
+
+        var existingLinks1 = document.querySelectorAll('link[rel="stylesheet"]');
+        existingLinks1.forEach(function (link) {
+            link.parentNode.removeChild(link);
+        });
+
+        flagIcon.src = './assets/img/en.png';
+
+        flagIcon.alt = 'English';
+
+        body.removeAttribute('dir');
+
+        normalCSS.forEach(function (linkData) {
+            var link = document.createElement('link');
+            link.rel = linkData.rel;
+            link.type = linkData.type;
+            link.href = linkData.href;
+            // Append the link element to the document's head
+            document.head.appendChild(link);
+        });
+
+        setTimeout(()=>{
+
+            body.style.display = 'block';
+
+        },1000)
+    }
+</script>
+
+<script>
+
+    let customData = document.getElementById('custom-data');
+
+    document.getElementById('custom-detail-btn').addEventListener('click', function () {
+
+        let icon = this.querySelector('i');
+
+        let buttonText = document.getElementById('button-text');
+
+        customData.classList.toggle('d-none');
+
+        if (buttonText.textContent.includes('View Custom Field Details')) {
+            buttonText.textContent = "Hide Custom Details";
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        } else {
+            buttonText.textContent = "View Custom Field Details";
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+        }
+    });
+</script>
+
+<script>
+    // Content for the comments
+    const commentsContent = [
+        {
+            author: "John Pantau",
+            date: "October 23, 2013 at 1:50 am",
+            content: "Fusce rutrum lectus id nibh ullamcorper aliquet. Pellentesque pretium mauris et augue fringilla non bibendum turpis iaculis. Donec sit amet nunc lorem. Sed fringilla vehicula est at pellentesque. Aenean imperdiet elementum arcu id facilisis. Mauris sed leo eros.",
+            meta_class: 'bg-success',
+            rating_class: 'd-none',
+            attach_class: 'd-none'
+        },
+        {
+            author: "Alice Johnson",
+            date: "September 15, 2014 at 3:30 pm",
+            content: "Suspendisse et malesuada nisi. Sed efficitur, ligula sit amet accumsan blandit, mi turpis suscipit nunc, eu varius eros tortor ac nulla.",
+            meta_class: 'bg-info',
+            rating_class: '',
+            attach_class: 'd-none'
+        },
+        {
+            author: "Michael Smith",
+            date: "December 8, 2015 at 8:20 am",
+            content: "Duis in efficitur libero. Nulla ultrices, felis eu cursus congue, felis felis placerat erat, non rhoncus dui erat quis libero.",
+            meta_class: 'bg-info',
+            rating_class: '',
+            attach_class: 'd-none'
+        },
+        {
+            author: "Emily Brown",
+            date: "March 7, 2016 at 2:45 pm",
+            content: "Praesent congue massa nec enim congue, eget volutpat ex hendrerit. Sed elementum, nulla eget semper fermentum, augue metus semper enim, vel mattis quam ex nec nulla.",
+            meta_class: 'bg-success',
+            rating_class: 'd-none',
+            attach_class: 'd-none'
+        },
+        {
+            author: "David Wilson",
+            date: "May 19, 2017 at 11:10 am",
+            content: "Vestibulum non facilisis augue. Curabitur in tellus neque. Aenean euismod, justo non mattis fermentum, felis metus semper ex, nec dignissim justo justo non libero.",
+            meta_class: 'bg-info',
+            rating_class: '',
+            attach_class: ''
+        }
+        // Add more content for the other comments here
+    ];
+
+    const replyList = document.getElementById("reply-list");
+
+    // Create 10 comments with different content
+    for (let i = 0; i < 5; i++) {
+        const comment = document.createElement("li");
+        comment.classList.add("comment");
+
+        comment.innerHTML = `
+                <article class="comment-body">
+                    <footer class="comment-meta ${commentsContent[i].meta_class} bg-opacity-10">
+                        <div class="comment-author">
+                            <img src="assets/img/avatar.png" alt="" height="50" width="50" class="avatar" />
+                            <b class="fn"><a href="javascript:;" rel="external" class="url">${commentsContent[i].author}</a></b>
+                            <div class="mt-2 float-end ${commentsContent[i].rating_class}">
+                                <span class="fw-semibold">Reply Rating : </span>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <div class="comment-metadata">
+                            <small class="date text-muted">
+                                <time datetime="2013-10-23T01:50:50+00:00">${commentsContent[i].date}</time>
+                            </small>
+                        </div>
+                    </footer>
+                    <div class="comment-content">
+                        <p>${commentsContent[i].content}</p>
+                    </div>
+
+                    <ul class="mailbox-attachments clearfix ${commentsContent[i].attach_class}">
+
+                        <li>
+
+                            <span class="mailbox-attachment-icon has-img">
+
+                                <a href="javascript:;">
+
+                                    <img id="img_at" src="./assets/img/pdf.png" alt="Attachment">
+                                </a>
+                            </span>
+
+                            <div class="mailbox-attachment-info">
+
+                                <a class="mailbox-attachment-name">Attachment</a>
+
+                                <span class="mailbox-attachment-size">99.72 KB
+
+                                    <a href="javascript:;" target="_blank" class="btn btn-default btn-xs float-end btn_blue info_btn">
+
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+
+                        <li>
+
+                            <span class="mailbox-attachment-icon has-img">
+
+                                <a href="javascript:;">
+
+                                    <img id="img_at" src="./assets/img/pdf.png" alt="Attachment">
+                                </a>
+                            </span>
+
+                            <div class="mailbox-attachment-info">
+
+                                <a class="mailbox-attachment-name">Attach 2</a>
+
+                                <span class="mailbox-attachment-size">123.2 KB
+
+                                    <a href="javascript:;" target="_blank" class="btn btn-default btn-xs float-end btn_blue info_btn">
+
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+
+                        <li>
+
+                            <span class="mailbox-attachment-icon has-img">
+
+                                <a href="javascript:;">
+
+                                    <img id="img_at" src="./assets/img/pdf.png" alt="Attachment">
+                                </a>
+                            </span>
+
+                            <div class="mailbox-attachment-info">
+
+                                <a class="mailbox-attachment-name">Attach 2</a>
+
+                                <span class="mailbox-attachment-size">1 MB
+
+                                    <a href="javascript:;" target="_blank" class="btn btn-default btn-xs float-end btn_blue info_btn">
+
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+            `;
+
+        replyList.appendChild(comment);
+    }
+
+    document.getElementById('reply-btn').addEventListener('click', function (){
+
+        document.getElementById('reply-box').classList.toggle('d-none');
+    });
+
+    document.getElementById('reply-close-btn').addEventListener('click', function (){
+
+        document.getElementById('reply-box').classList.toggle('d-none');
+    });
+
+    document.getElementById('reply-cc-btn').addEventListener('click', function (){
+
+        document.getElementById('cc-field').classList.toggle('d-none');
+    });
+</script>
+</body>
+</html>

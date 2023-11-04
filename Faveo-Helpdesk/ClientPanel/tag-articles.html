@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="ie">
+<![endif]-->
+<!--[if !(IE 8) ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tagged Articles List | Faveo</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="assets/app/js/html5shiv.min.js"></script>
+    <script type="text/javascript" src="assets/app/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="text-xs" style="display: none">
+
+<div id="page" class="hfeed site">
+
+    <header id="masthead" class="site-header" role="banner">
+
+        <div class="container">
+
+            <nav id="navbar" class="site-navigation navbar navbar-expand-lg navbar-light">
+
+                <div id="logo" class="navbar-brand brand site-logo text-start">
+
+                    <a href="index.html" rel="home">
+
+                        <img src="assets/img/faveo.png" alt="Image" />
+                    </a>
+                </div><!-- #logo -->
+
+                <button style="float: right;margin: 10px;" class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button> <!-- collapse -->
+
+
+                <span class="switcher-toggle m-none" onclick="myFunction()">
+
+						<span class="icon"></span>
+					</span>
+
+                <div class="collapse navbar-collapse links justify-content-end" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav navbar-menu site-navigate ml-auto">
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="submit-ticket.html">Submit Ticket</a></li>
+
+                        <li class="nav-item dropdown active">
+
+                            <a class="dropdown-toggle nav-link" href="knowledge-base.html" id="navbarDropdown" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">Knowledge Base</a>
+
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+
+                                <li>
+
+                                    <a class="dropdown-item" href="categories.html">Categories</a>
+                                </li>
+
+                                <li>
+
+                                    <a class="dropdown-item" href="articles.html">Articles</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="dropdown-toggle nav-link" href="javascript:;" id="navbarDropdown1" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">Organizations</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                <li><a class="dropdown-item" href="org-detail.html">Faveo</a></li>
+
+                                <li><a class="dropdown-item" href="org-detail.html">Ladybird</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="dropdown-toggle nav-link" href="javascript:;" id="navbarDropdown3" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">Billing</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+
+                                <li><a class="dropdown-item" href="purchase-packages.html">Purchase Packages</a></li>
+
+                                <li><a class="dropdown-item" href="my-packages.html">My Packages</a></li>
+
+                                <li><a class="dropdown-item" href="my-invoices.html">My Invoices</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="my-tickets.html">My Tickets</a></li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="dropdown-toggle nav-link" href="my-profile.html" id="navbarDropdown2" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">My Profile</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                <div class="banner-wrapper user-data text-center clearfix border-0">
+
+                                    <img src="assets/img/avatar.png" alt="" height="60" width="60" class="avatar rounded-5">
+
+                                    <p class="mt-2 mb-0">Hello</p>
+
+                                    <h3 class="banner-title h4">Sakthivel</h3>
+
+                                    <div class="banner-content mt-3 btn-group">
+
+                                        <a href="javascript:;" class="btn btn-custom btn-sm profile-drop-btn">Log out</a></p>
+
+                                        <a href="my-profile.html" class="btn btn-custom btn-sm profile-drop-btn ms-1">Profile</a></p>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+
+
+                        <li class="nav-item dropdown">
+
+                            <a class="dropdown-toggle nav-link" href="#" id="navbarDropdownlang" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                <img id="flagIcon" src="./assets/img/en.png" alt="no">
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                <li><a class="dropdown-item" href="tag-articles.html?lang=ar" id="arabicOption">
+                                    <img src="./assets/img/ar.png" alt="Img"> Arabic
+                                </a></li>
+
+                                <li><a class="dropdown-item" href="tag-articles.html?lang=en" id="englishOption">
+                                    <img src="./assets/img/en.png" alt="Img"> English
+                                </a></li>
+                            </ul>
+                        </li>
+                    </ul><!-- .navbar-menu -->
+
+                    <span class="switcher-toggle desk_none" onclick="myFunction()">
+                          <span class="icon"></span>
+                        </span>
+                </div>
+
+                <ul class="nav navbar-nav navbar-login d-lg-none">
+
+                    <li class="nav-item"><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+
+            <div id="header-search" class="site-search clearfix">
+
+                <form action="" method="get" class="search-form" role="search">
+
+                    <div class="form-border">
+
+                        <div class="form-inline">
+
+                            <div class="form-group input-group" style="width: 100%;">
+
+                                <input type="text" name="s" class="search-field form-control input-lg mr-3" title="Enter search term" placeholder="Have a question? Type your search term here..." />
+
+                                <span class="input-group-btn">
+
+								        <button type="submit" class="btn btn-custom ">Search</button>
+                                    </span>
+                            </div>
+                        </div>
+
+                        <div class="search-advance">
+
+                            <div class="row">
+
+                                <div class="col-sm-6">
+
+                                    <div class="form-horizontal">
+
+                                        <div class="form-group">
+
+                                            <label class="col-sm-3 control-label">Category</label>
+
+                                            <div class="col-sm-9">
+
+                                                <select name="category" class="form-control">
+                                                    <option value="">-- All Categories --</option>
+                                                    <option value="">Account Settings</option>
+                                                    <option value="">API Questions</option>
+                                                    <option value="">Customization</option>
+                                                    <option value="">Mobile Apps</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+
+                                    <div class="form-horizontal">
+
+                                        <div class="form-group">
+
+                                            <label class="col-sm-3 control-label">Format</label>
+
+                                            <div class="col-sm-9">
+
+                                                <select name="format" class="form-control">
+                                                    <option value="">-- All Formats --</option>
+                                                    <option value="">Text</option>
+                                                    <option value="">Image</option>
+                                                    <option value="">Video</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="search-advance-button text-center"><i class="fa fa-chevron-circle-up fa-2x"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-hero clearfix">
+
+        <div class="container">
+
+            <ol class="breadcrumb breadcrumb-custom">
+
+                <li class="text">You are here: </li>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="knowledge-base.html"><i class="fas fa-chevron-right"></i>Knowledge Base</a></li>
+
+                <li class="active"><i class="fas fa-chevron-right"></i>Tagged Articles List</li>
+            </ol>
+        </div>
+    </div>
+
+    <div id="main" class="site-main clearfix">
+
+        <div class="container">
+
+            <div class="content-area">
+
+                <div class="row">
+
+                    <div id="content" class="site-content col-md-9">
+
+                        <header class="archive-header">
+
+                            <h1 class="archive-title">Article tagged : tag</h1>
+                        </header>
+
+                        <div class="archive-list archive-article">
+
+                            <div id="sections-container">
+                                <!-- This is the container where the sections will be added dynamically -->
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-sm-6">
+
+                                <span>Showing 1 to 10 of 30 entries</span>
+                            </div>
+
+                            <div class="col-sm-6">
+
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-end">
+                                        <li class="page-item disabled">
+                                            <a class="page-link">Previous</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sidebar" class="site-sidebar col-md-3">
+
+                        <div class="widget-area">
+
+                            <section id="section-categories" class="section">
+
+                                <h2 class="section-title h4 clearfix">Categories (5) <small class="pull-end float-end"><i class="far fa-hdd fa-fw"></i></small></h2>
+
+                                <ul class="nav nav-pills nav-stacked nav-categories">
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-end float-end">6</span>Account Settings</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">5</span>API Questions</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">3</span>Customization</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">11</span>Mobile Apps</a></li>
+                                </ul>
+                            </section>
+
+                            <section id="section-tags" class="section">
+                                <h2 class="section-title h4 clearfix">Tags</h2>
+                                <div class="tagcloud">
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">basic</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">beginner</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">blogging</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">colour</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">css</a>
+                                    <a href="tag-articles.html" class="btn btn-tag btn-sm">date</a>
+                                </div>
+                            </section>
+
+                            <section id="section-articles" class="section">
+                                <h2 class="section-title h4 clearfix">Popular Articles</h2>
+                                <ul class="nav nav-pills nav-stacked nav-categories">
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-end float-end">6</span>Account Settings</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">5</span>API Questions</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">3</span>Customization</a></li>
+                                    <li class="d-flex justify-content-between align-items-center"><a class="list-group-item list-group-item-action" href="#"><span class="badge badge-pill pull-right float-end">11</span>Mobile Apps</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="colophon" class="site-footer" role="contentinfo">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+                    <div class="widget-area">
+
+                        <section id="section-about" class="section">
+
+                            <h2 class="section-title h4 clearfix">About Faveo <i class="line"></i></h2>
+
+                            <div class="textwidget">
+
+                                <p>Vestibulum id velit cursus tortor tincidunt semper. Duis tempor, est eu pretium condimentum, mauris nunc tempus purus, eu dictum mi nibh sed arcu.</p>
+
+                                <p>Vivamus sagittis vestibulum nisl, eu pellentesque nibh. Duis tincidunt congue sapien id adipiscing. Phasellus varius, magna a cursus aliquet, lectus felis sodales orci, a bibendum orci ipsum id libero.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="widget-area">
+
+                        <section id="section-latest-news" class="section">
+
+                            <h2 class="section-title h4 clearfix">Latest News <i class="line"></i></h2>
+
+                            <div class="textwidget">
+
+                                <p>Vestibulum id velit cursus tortor tincidunt semper. Duis tempor, est eu pretium condimentum, mauris nunc tempus purus, eu dictum mi nibh sed arcu.</p>
+
+                                <p>Vivamus sagittis vestibulum nisl, eu pellentesque nibh. Duis tincidunt congue sapien id adipiscing. Phasellus varius, magna a cursus aliquet, lectus felis sodales orci, a bibendum orci ipsum id libero.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="widget-area">
+
+                        <section id="section-newsletter" class="section">
+
+                            <h2 class="section-title h4 clearfix">Get Updates <i class="line"></i></h2>
+
+                            <div class="textwidget">
+
+                                <p>Vivamus suscipit dictum orci in imperdiet. Nulla ut lacus nibh. Vivamus quis adipiscing libero, egestas sodales nulla. Nullam ut erat nisi.</p>
+
+                                <p>Vivamus sagittis vestibulum nisl, eu pellentesque nibh. Duis tincidunt congue sapien id adipiscing. Phasellus varius, magna a cursus aliquet, lectus felis sodales orci, a bibendum orci ipsum id libero.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="widget-area">
+
+                        <section id="section-newsletter1" class="section">
+
+                            <h2 class="section-title h4 clearfix">Last Footer <i class="line"></i></h2>
+
+                            <div class="textwidget">
+
+                                <p>Vivamus suscipit dictum orci in imperdiet. Nulla ut lacus nibh. Vivamus quis adipiscing libero, egestas sodales nulla. Nullam ut erat nisi.</p>
+
+                                <p>Vestibulum id velit cursus tortor tincidunt semper. Duis tempor, est eu pretium condimentum, mauris nunc tempus purus, eu dictum mi nibh sed arcu.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="row bord">
+
+                <div class="site-info col-md-6">
+
+                    <p class="text-muted">Copyright &copy; 2023
+
+                        <a href="https://www.faveohelpdesk.com/" target="_blank" class="text-primary">Faveo</a>. All Rights Reserved.
+                    </p>
+                </div><!-- .site-info -->
+
+                <div class="site-social text-end col-md-6">
+                    <ul class="list-inline hidden-print">
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-facebook"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-twitter"><i class="fab fa-twitter fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-google-plus"><i class="fab fa-google-plus-g fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-linkedin"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-vimeo"><i class="fab fa-vimeo-v fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-youtube"><i class="fab fa-youtube fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-pinterest"><i class="fab fa-pinterest-p fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-dribbble"><i class="fab fa-dribbble fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-flickr"><i class="fab fa-flickr fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-instagram"><i class="fab fa-instagram fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn btn-social btn-rss"><i class="fas fa-rss fa-fw"></i></a></li>
+                    </ul>
+                </div><!-- .site-social -->
+            </div>
+
+        </div>
+    </footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<!-- Script -->
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
+<!-- <script type="text/javascript" src="assets/app/js/jquery-3.4.1.min.js"></script> -->
+
+<script type="text/javascript" src="assets/app/js/jquery.min.js"></script>
+
+<script type="text/javascript" src="assets/app/js/popper.min.js"></script>
+
+<script type="text/javascript" src="assets/app/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="assets/app/js/custom.js"></script>
+<script type="text/javascript" src="assets/app/js/superfish.js"></script>
+<script type="text/javascript" src="assets/app/js/jquery.mobilemenu.js"></script>
+<script type="text/javascript" src="assets/app/js/autocomplete.js"></script>
+<script type="text/javascript" src="assets/app/js/app.js"></script>
+
+
+<script async>
+
+    let normalCSS = [
+        {
+            rel: 'stylesheet',type: 'text/css', href: 'assets/bootstrap/css/bootstrap.min.css'
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/app.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/edit.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/custom.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/common.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/font-awesome/css/all.min.css'
+        }
+        // Add more objects for additional links
+    ];
+
+    let rtlCSS = [
+        {
+            rel: 'stylesheet',type: 'text/css', href: 'assets/bootstrap/css/bootstrap.rtl.min.css'
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/rtl/app.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/rtl/edit.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/rtl/custom.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/app/css/rtl/common.css',
+        },
+        {
+            rel: 'stylesheet', type: 'text/css', href: 'assets/font-awesome/css/all.min.css'
+        }
+        // Add more objects for additional links
+    ];
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const body = document.body;
+
+    const flagIcon = document.getElementById('flagIcon');
+
+    if(urlParams.get('lang') && urlParams.get('lang') === 'ar') {
+
+        var existingLinks = document.querySelectorAll('link[rel="stylesheet"]');
+        existingLinks.forEach(function (link) {
+            link.parentNode.removeChild(link);
+        });
+
+        flagIcon.src = './assets/img/ar.png';
+
+        flagIcon.alt = 'Arabic';
+
+        body.setAttribute('dir', 'rtl');
+
+        rtlCSS.forEach(function (linkData) {
+            var link = document.createElement('link');
+            link.rel = linkData.rel;
+            link.type = linkData.type;
+            link.href = linkData.href;
+            // Append the link element to the document's head
+            document.head.appendChild(link);
+        });
+
+        setTimeout(()=>{
+
+            body.style.display = 'block';
+
+        },1000)
+
+    } else {
+
+        var existingLinks1 = document.querySelectorAll('link[rel="stylesheet"]');
+        existingLinks1.forEach(function (link) {
+            link.parentNode.removeChild(link);
+        });
+
+        flagIcon.src = './assets/img/en.png';
+
+        flagIcon.alt = 'English';
+
+        body.removeAttribute('dir');
+
+        normalCSS.forEach(function (linkData) {
+            var link = document.createElement('link');
+            link.rel = linkData.rel;
+            link.type = linkData.type;
+            link.href = linkData.href;
+            // Append the link element to the document's head
+            document.head.appendChild(link);
+        });
+
+        setTimeout(()=>{
+
+            body.style.display = 'block';
+
+        },1000)
+    }
+</script>
+
+<script>
+    // Content for the sections
+    const sectionContent = [
+        {
+            title: "How Do I Download The Android App?",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",
+            date: "about 5 days ago",
+            category: "Mobile Apps"
+        },
+        {
+            title: "Getting Started with Web Development",
+            description: "Learn the basics of web development and get started on your journey to becoming a web developer.",
+            date: "about 2 weeks ago",
+            category: "Web Development"
+        },
+        {
+            title: "Exploring the Great Outdoors",
+            description: "Discover the beauty of nature and embark on outdoor adventures in stunning locations.",
+            date: "about 3 weeks ago",
+            category: "Travel"
+        },
+        {
+            title: "Tasty and Healthy Recipes",
+            description: "Explore delicious and nutritious recipes for a healthier lifestyle.",
+            date: "about 1 month ago",
+            category: "Cooking"
+        },
+        {
+            title: "Latest Tech Gadgets and Innovations",
+            description: "Stay updated with the latest tech gadgets and innovations that are shaping the future.",
+            date: "about 2 months ago",
+            category: "Technology"
+        },
+        {
+            title: "Art and Creativity Showcase",
+            description: "Get inspired by amazing artworks and creative projects from talented artists.",
+            date: "about 3 months ago",
+            category: "Art"
+        },
+        {
+            title: "Fitness and Wellness Tips",
+            description: "Improve your physical and mental well-being with expert fitness and wellness tips.",
+            date: "about 4 months ago",
+            category: "Health"
+        },
+        {
+            title: "Traveling on a Budget",
+            description: "Learn how to travel the world without breaking the bank with budget-friendly tips.",
+            date: "about 5 months ago",
+            category: "Travel"
+        },
+        {
+            title: "Coding and Programming Tutorials",
+            description: "Master coding and programming with step-by-step tutorials and examples.",
+            date: "about 6 months ago",
+            category: "Programming"
+        },
+        {
+            title: "Home Improvement and DIY Projects",
+            description: "Upgrade your home with DIY projects and home improvement ideas.",
+            date: "about 7 months ago",
+            category: "Home Improvement"
+        }
+    ];
+
+    const sectionsContainer = document.getElementById("sections-container");
+
+    // Create 10 sections with different content
+    for (let i = 0; i < 10; i++) {
+        const section = document.createElement("article");
+        section.classList.add("hentry");
+
+        section.innerHTML = `
+                <header class="entry-header">
+                    <i class="fa fa-list-alt fa-2x fa-fw float-start text-muted"></i>
+                    <h2 class="entry-title h4">
+                        <a href="article-detail.html" rel="bookmark">${sectionContent[i].title}</a>
+                    </h2>
+                </header>
+                <blockquote class="blockquote archive-description mb-2">
+                    <p>${sectionContent[i].description}</p>
+                    <a href="javascript:;" class="fs-6">Read more</a>
+                </blockquote>
+                <footer class="entry-footer">
+                    <div class="entry-meta text-muted">
+                        <span class="date"><i class="far fa-clock fa-fw"></i> <time datetime="2013-10-22T20:01:58+00:00">${sectionContent[i].date}</time></span>
+                        <span class="category"><i class="far fa-folder-open fa-fw"></i> <a href="#">${sectionContent[i].category}</a></span>
+                    </div>
+                </footer>
+            `;
+
+        sectionsContainer.appendChild(section);
+    }
+</script>
+</body>
+</html>
