@@ -23,9 +23,9 @@
 
     <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
 
-<!--    <link rel="stylesheet" id="rtl-styles" href="../dist/css/adminlte-rtl.css">-->
+    <link rel="stylesheet" id="rtl-styles" href="../dist/css/adminlte-rtl.css">
 
-<!--    <link rel="stylesheet" id="rtl-styles-1" href="../plugins/bs-stepper/css/bs-stepper-rtl.css">-->
+    <link rel="stylesheet" id="rtl-styles-1" href="../plugins/bs-stepper/css/bs-stepper-rtl.css">
 
     <link rel="stylesheet" id="default-styles" href="../dist/css/adminlte.css">
 
@@ -51,7 +51,7 @@
 
         .login-logo {
             position: sticky;
-            z-index: 999999;
+            z-index: 999;
             background: #e9ecef;
             padding-top: 10px;
             top: 0;
@@ -63,18 +63,17 @@
             right: 50px;
             z-index: 1031;
         }
+
         .fixed-plugin .fa-cog{
             color: #2D2D2D;
             background-color: rgba(0,0,0,.2);
             padding: 10px;
             border-radius: 0 0 6px 6px;
         }
-
-
     </style>
 </head>
 
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" dir="ltr">
 
 <div class="login-box">
 
@@ -653,51 +652,64 @@
                 <i class="fa fa-cog fa-2x"> </i>
             </a>
 
-            <ul class="dropdown-menu">
-                <li class="header-title">Examples</li>
-                <li class="active">
-                    <a href="wizard-create-profile.html">
-                        <img src="assets/img/wizard-create-profile.png">
-                        Create Profile
-                    </a>
-                </li>
-                <li>
-                    <a href="wizard-find-desk.html">
-                        <img src="assets/img/wizard-find-desk.png">
-                        Find Desk
-                    </a>
-                </li>
-                <li>
-                    <a href="wizard-list-place.html">
-                        <img src="assets/img/wizard-list-place.png">
-                        List Your Place
-                    </a>
-                </li>
-                <li class="header-title">Colors</li>
-                <li class="adjustments-line">
-                    <a href="javascript:void(0)" class="switch-trigger">
-                        <div class="text-center">
-                            <span class="badge filter badge-blue" data-color="blue"></span>
-                            <span class="badge filter badge-azure" data-color="azure"></span>
-                            <span class="badge filter badge-green" data-color="green"></span>
-                            <span class="badge filter badge-orange active" data-color="orange"></span>
-                            <span class="badge filter badge-red" data-color="red"></span>
-                        </div>
-                        <div class="clearfix"></div>
-                    </a>
-                </li>
-                <li class="tutorial">
-                    <div class="text-center">
-                        <a href="documentation/elements.html" target="_blank" class="btn btn-default btn-fill btn-block">Documentation</a>
-                    </div>
-                </li>
-                <li class="license">
-                    Personal License
-                    <div class="text-center">
-                        <a href="https://www.creative-tim.com/product/paper-bootstrap-wizard" target="_blank" class="btn btn-info btn-fill btn-block">Download, it's free!</a>
-                    </div>
-                </li>
-            </ul>
+            <div class="dropdown-menu dropdown-menu-right p-0" style="left: inherit; right: 0px;">
+
+                <a href="javascript:;" class="dropdown-item" id="englishOption">
+
+                    <i class="flag-icon flag-icon-us mr-2"></i> English
+                </a>
+
+                <a href="javascript:;" class="dropdown-item" id="arabicOption">
+
+                    <i class="flag-icon flag-icon-ar mr-2"></i> Arabic
+                </a>
+            </div>
+
+<!--            <ul class="dropdown-menu">-->
+<!--                <li class="header-title">Examples</li>-->
+<!--                <li class="active">-->
+<!--                    <a href="wizard-create-profile.html">-->
+<!--                        <img src="assets/img/wizard-create-profile.png">-->
+<!--                        Create Profile-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="wizard-find-desk.html">-->
+<!--                        <img src="assets/img/wizard-find-desk.png">-->
+<!--                        Find Desk-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="wizard-list-place.html">-->
+<!--                        <img src="assets/img/wizard-list-place.png">-->
+<!--                        List Your Place-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="header-title">Colors</li>-->
+<!--                <li class="adjustments-line">-->
+<!--                    <a href="javascript:void(0)" class="switch-trigger">-->
+<!--                        <div class="text-center">-->
+<!--                            <span class="badge filter badge-blue" data-color="blue"></span>-->
+<!--                            <span class="badge filter badge-azure" data-color="azure"></span>-->
+<!--                            <span class="badge filter badge-green" data-color="green"></span>-->
+<!--                            <span class="badge filter badge-orange active" data-color="orange"></span>-->
+<!--                            <span class="badge filter badge-red" data-color="red"></span>-->
+<!--                        </div>-->
+<!--                        <div class="clearfix"></div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tutorial">-->
+<!--                    <div class="text-center">-->
+<!--                        <a href="documentation/elements.html" target="_blank" class="btn btn-default btn-fill btn-block">Documentation</a>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--                <li class="license">-->
+<!--                    Personal License-->
+<!--                    <div class="text-center">-->
+<!--                        <a href="https://www.creative-tim.com/product/paper-bootstrap-wizard" target="_blank" class="btn btn-info btn-fill btn-block">Download, it's free!</a>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--            </ul>-->
         </div>
     </div>
 </div>
@@ -710,6 +722,52 @@
 <script src="../dist/js/adminlte.min.js"></script>
 
 <script src="../plugins/bs-stepper/js/bs-stepper.min.js"></script>
+
+<script>
+
+    var body = document.body;
+    var currentDir = body.getAttribute('dir');
+
+    var defaultStyles = document.querySelectorAll('[id^="default-styles"]');
+    var rtlStyles = document.querySelectorAll('[id^="rtl-styles"]');
+
+    const flagIcon = document.getElementById('flagIcon');
+    const englishOption = document.getElementById('englishOption');
+    const arabicOption = document.getElementById('arabicOption');
+
+    englishOption.addEventListener('click', function() {
+        // flagIcon.className = 'flag-icon flag-icon-us';
+        // flagIcon.alt = 'English';
+        body.setAttribute('dir', 'ltr');
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+    });
+
+    arabicOption.addEventListener('click', function() {
+        // flagIcon.className = 'flag-icon flag-icon-ar';
+        // flagIcon.alt = 'Arabic';
+        body.setAttribute('dir', 'rtl');
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+    });
+
+    defaultStyles.forEach(function(link) {
+        link.disabled = false;
+    });
+    rtlStyles.forEach(function(link) {
+        link.disabled = true;
+    });
+</script>
 
 <script>
 
