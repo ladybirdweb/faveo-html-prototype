@@ -1,3 +1,22 @@
 table {
     min-width: max-content !important;
 }
+
+@media (max-width: 991px) {
+
+    #main-logo {
+        display: none !important;
+    }
+
+    .demo-icons { display: block; }
+}
+
+@media (min-width: 991px) {
+
+    #mob-logo {
+        display: none !important;
+    }
+
+    .demo-icons { display: none; }
+}
+
