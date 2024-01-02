@@ -34,10 +34,12 @@
 
             .control-sidebar { width: 30% !important; }
         }
+
+        .box-icon-color { color: #1f2d3db3 !important; }
     </style>
 </head>
 
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini sidebar-collapse">
 
 <div class="wrapper">
 
@@ -126,7 +128,7 @@
 
                             <div class="dropdown-menu" role="menu">
 
-                                <a href="#" class="dropdown-item">Edit</a>
+                                <a href="dashboard-edit.html" class="dropdown-item">Edit</a>
                             </div>
                         </div>
                     </div>
@@ -150,80 +152,110 @@
 
                 <div class="row">
 
-                    <div class="col-12 col-sm-2">
+                    <div class="col-12 col-sm-3">
 
-                        <div class="info-box">
+                        <div class="info-box" data-toggle="tooltip" title="Deployed Assets">
+
+                            <span class="info-box-icon bg-light box-icon-color">
+
+                                <i class="fas fa-server"></i>
+                            </span>
 
                             <div class="info-box-content">
 
-                                <span class="info-box-text text-muted">Deployed Assets</span>
+                                <span class="info-box-text">Deployed Assets</span>
 
-                                <span class="info-box-number text-primary mb-0 text-lg">2300</span>
+                                <span class="info-box-number">1,410</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-sm-2">
+                    <div class="col-12 col-sm-3">
 
-                        <div class="info-box">
+                        <div class="info-box" data-toggle="tooltip" title="Open Problems">
+
+                            <span class="info-box-icon bg-light box-icon-color">
+
+                                <i class="fas fa-bug"></i>
+                            </span>
 
                             <div class="info-box-content">
 
-                                <span class="info-box-text text-muted">Open Problems</span>
+                                <span class="info-box-text">Open Problems</span>
 
-                                <span class="info-box-number text-primary mb-0 text-lg">45</span>
+                                <span class="info-box-number">45</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-sm-2">
+                    <div class="col-12 col-sm-3">
 
-                        <div class="info-box">
+                        <div class="info-box" data-toggle="tooltip" title="Open Changes">
+
+                            <span class="info-box-icon bg-light box-icon-color">
+
+                                <i class="fas fa-sync"></i>
+                            </span>
 
                             <div class="info-box-content">
 
-                                <span class="info-box-text text-muted">Open Changes</span>
+                                <span class="info-box-text">Open Changes</span>
 
-                                <span class="info-box-number text-primary mb-0 text-lg">0</span>
+                                <span class="info-box-number">0</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-sm-2">
+                    <div class="col-12 col-sm-3">
 
-                        <div class="info-box">
+                        <div class="info-box" data-toggle="tooltip" title="Open Releases">
+
+                            <span class="info-box-icon bg-light box-icon-color">
+
+                                <i class="fas fa-newspaper"></i>
+                            </span>
 
                             <div class="info-box-content">
 
-                                <span class="info-box-text text-muted">Open Releases</span>
+                                <span class="info-box-text">Open Releases</span>
 
-                                <span class="info-box-number text-primary mb-0 text-lg">987</span>
+                                <span class="info-box-number">987</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-sm-2">
+                    <div class="col-12 col-sm-3">
 
-                        <div class="info-box">
+                        <div class="info-box" data-toggle="tooltip" title="Active Contracts">
+
+                            <span class="info-box-icon bg-light box-icon-color">
+
+                                <i class="fas fa-paperclip"></i>
+                            </span>
 
                             <div class="info-box-content">
 
-                                <span class="info-box-text text-muted">Active Contracts</span>
+                                <span class="info-box-text">Active Contracts</span>
 
-                                <span class="info-box-number text-primary mb-0 text-lg">56</span>
+                                <span class="info-box-number">56</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-12 col-sm-2">
+                    <div class="col-12 col-sm-3">
 
-                        <div class="info-box">
+                        <div class="info-box" data-toggle="tooltip" title="Total Software License">
+
+                            <span class="info-box-icon bg-light box-icon-color">
+
+                                <i class="fas fa-clipboard-list"></i>
+                            </span>
 
                             <div class="info-box-content">
 
-                                <span class="info-box-text text-muted">Total Software License</span>
+                                <span class="info-box-text">Total Software License</span>
 
-                                <span class="info-box-number text-primary mb-0 text-lg">23451</span>
+                                <span class="info-box-number">23451</span>
                             </div>
                         </div>
                     </div>
@@ -611,6 +643,12 @@
 </div>
 
 <script src="../../plugins/jquery/jquery.min.js"></script>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 

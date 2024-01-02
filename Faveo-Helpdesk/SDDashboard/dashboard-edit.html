@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Faveo</title>
+
+    <link href="https://support.faveohelpdesk.com/themes/default/common/images/favicon.ico" rel="shortcut icon">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+    <style>
+
+        .progress-group { margin-bottom: 1rem !important; }
+
+        .progress { border-radius: 0.25rem !important; }
+
+        .body-h {
+            min-height: 290px !important;
+            height: 290px !important;
+            max-height: 290px !important;
+        }
+
+        @media only screen and (min-width: 768px) {
+
+            .control-sidebar { width: 30% !important; }
+        }
+
+        .box-icon-color { color: #1f2d3db3 !important; }
+
+        .p-30-10 { padding: 30px 10px; }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini sidebar-collapse">
+
+<div class="wrapper">
+
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+
+        <ul class="navbar-nav">
+
+            <li class="nav-item">
+
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+
+                <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+        <a href="javascript:;" class="brand-link text-center">
+
+            <span class="brand-text font-weight-light">Faveo</span>
+        </a>
+
+        <div class="sidebar">
+
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+
+                <div class="image">
+
+                    <img src="../../dist/img/avatar.png" class="img-circle elevation-2" alt="User Image">
+                </div>
+
+                <div class="info">
+
+                    <a href="javascript:;" class="d-block">Sakthivel Munusami</a>
+                </div>
+            </div>
+
+            <nav class="mt-2">
+
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                    <li class="nav-item">
+
+                        <a href="dashboard.html" class="nav-link active">
+
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+
+                            <p>Dashboard
+                                <span class="right badge badge-danger">New</span>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <div class="content-wrapper">
+
+        <div class="content-header">
+
+            <div class="container-fluid">
+
+                <div class="row mb-2">
+
+                    <div class="col-sm-6 d-flex">
+
+                        <h1 class="m-0">My Dashboard</h1>
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <ol class="breadcrumb float-sm-right">
+
+                            <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+
+                            <li class="breadcrumb-item active">Edit</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="container-fluid">
+
+                <div class="row">
+
+                    <div class="col-sm-9">
+
+                        <div class="row connectedSortable">
+
+                            <div class="col-md-4">
+
+                                <div class="card">
+
+                                    <div class="card-header border-0">
+
+                                        <h5 class="card-title">
+
+                                            <span class="text-muted text-xs">
+                                              <i class="fas fa-ellipsis-v"></i>
+                                              <i class="fas fa-ellipsis-v"></i>
+                                            </span> &nbsp;
+                                            New & My Open Problems by Priority
+                                        </h5>
+
+                                        <div class="card-tools">
+
+                                            <button type="button" class="btn btn-tool">
+
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-body body-h">
+
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+
+                                                <div class="progress-group">
+
+                                                    <span class="progress-text text-muted text-sm">Low</span>
+
+                                                    <span class="float-right">7</span>
+
+                                                    <div class="progress progress-sm">
+
+                                                        <div class="progress-bar" style="width: 80%"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="progress-group">
+
+                                                    <span class="progress-text text-muted text-sm">Medium</span>
+
+                                                    <span class="float-right">10</span>
+
+                                                    <div class="progress progress-sm">
+
+                                                        <div class="progress-bar" style="width: 75%"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="progress-group">
+
+                                                    <span class="progress-text text-muted text-sm">High</span>
+
+                                                    <span class="float-right">567</span>
+
+                                                    <div class="progress progress-sm">
+
+                                                        <div class="progress-bar" style="width: 60%"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="progress-group">
+
+                                                    <span class="progress-text text-muted text-sm">Urgent</span>
+
+                                                    <span class="float-right">0</span>
+
+                                                    <div class="progress progress-sm">
+
+                                                        <div class="progress-bar bg-warning" style="width: 0%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <div class="card">
+
+                                    <div class="card-header border-0">
+
+                                        <h5 class="card-title">
+                                            <span class="text-muted text-xs">
+                                              <i class="fas fa-ellipsis-v"></i>
+                                              <i class="fas fa-ellipsis-v"></i>
+                                            </span> &nbsp;
+                                            My Open Changes by Priority
+                                        </h5>
+
+                                        <div class="card-tools">
+
+                                            <button type="button" class="btn btn-tool">
+
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-body">
+
+                                        <div class="chartjs-size-monitor">
+
+                                            <div class="chartjs-size-monitor-expand"><div class=""></div></div>
+
+                                            <div class="chartjs-size-monitor-shrink"><div class=""></div></div>
+                                        </div>
+
+                                        <canvas id="changeDonutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 623px;" width="1246" height="500" class="chartjs-render-monitor"></canvas>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <div class="card">
+
+                                    <div class="card-header border-0">
+
+                                        <h5 class="card-title">
+                                            <span class="text-muted text-xs">
+                                              <i class="fas fa-ellipsis-v"></i>
+                                              <i class="fas fa-ellipsis-v"></i>
+                                            </span> &nbsp;
+                                            My Open Releases by Priority
+                                        </h5>
+
+                                        <div class="card-tools">
+
+                                            <button type="button" class="btn btn-tool">
+
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-body">
+
+                                        <div class="chartjs-size-monitor">
+
+                                            <div class="chartjs-size-monitor-expand"><div class=""></div></div>
+
+                                            <div class="chartjs-size-monitor-shrink"><div class=""></div></div>
+                                        </div>
+
+                                        <canvas id="releaseDonutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 623px;" width="1246" height="500" class="chartjs-render-monitor"></canvas>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <div class="card">
+
+                                    <div class="card-header border-0">
+
+                                        <h5 class="card-title">
+                                            <span class="text-muted text-xs">
+                                              <i class="fas fa-ellipsis-v"></i>
+                                              <i class="fas fa-ellipsis-v"></i>
+                                            </span> &nbsp;
+                                            My All Contracts by Status
+                                        </h5>
+
+                                        <div class="card-tools">
+
+                                            <button type="button" class="btn btn-tool">
+
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-body">
+
+                                        <div class="chartjs-size-monitor">
+
+                                            <div class="chartjs-size-monitor-expand"><div class=""></div></div>
+
+                                            <div class="chartjs-size-monitor-shrink"><div class=""></div></div>
+                                        </div>
+
+                                        <canvas id="contractDonutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 623px;" width="1246" height="500" class="chartjs-render-monitor"></canvas>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+
+                        <div class="card card-light">
+
+                            <div class="card-header">
+
+                                <h3 class="card-title">Add Widgets</h3>
+                            </div>
+
+                            <div class="card-body">
+
+                                <div class="row">
+
+                                    <div class="col-sm-12">
+
+                                        <a href="javascript:;" onmouseenter="onEnter('bar')" onmouseleave="onLeave('bar')"
+                                           data-toggle="modal" data-target="#bar-widget-add">
+
+                                            <div id="bar-name" class="small-box bg-light">
+
+                                                <div class="inner">
+
+                                                    <h5 class="p-30-10">Bar Chart</h5>
+                                                </div>
+
+                                                <div class="icon">
+
+                                                    <i class="far fa-chart-bar"></i>
+                                                </div>
+                                            </div>
+
+                                            <div id="bar-icon" class="info-box bg-light d-none">
+
+                                                <div class="info-box-content">
+
+                                                    <span class="info-box-text text-center text-muted p-30-10">
+
+                                                        <i class="fas fa-plus fa-2x"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-sm-12">
+
+                                        <a href="javascript:;" onmouseenter="onEnter('donut')" onmouseleave="onLeave('donut')"
+                                           data-toggle="modal" data-target="#donut-widget-add">
+
+                                            <div id="donut-name" class="small-box bg-light">
+
+                                                <div class="inner">
+
+                                                    <h5 class="p-30-10">Donut Chart</h5>
+                                                </div>
+
+                                                <div class="icon">
+
+                                                    <i class="fas fa-chart-pie"></i>
+                                                </div>
+                                            </div>
+
+                                            <div id="donut-icon" class="info-box bg-light d-none">
+
+                                                <div class="info-box-content">
+
+                                                    <span class="info-box-text text-center text-muted p-30-10">
+
+                                                        <i class="fas fa-plus fa-2x"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="bar-widget-add" aria-modal="true" role="dialog">
+
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h4 class="modal-title">Bar Chart</h4>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="row">
+
+                            <div class="col-sm-12">
+
+                                <div class="form-group">
+
+                                    <label>Module</label>
+
+                                    <select class="form-control">
+                                        <option>Problems</option>
+                                        <option>Assets</option>
+                                        <option>Changes</option>
+                                        <option>Contracts</option>
+                                        <option>Releases</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+
+                                <div class="form-group">
+
+                                    <label>Title (X Axis)</label>
+
+                                    <select class="form-control">
+                                        <option>Opened - {{module}}</option>
+                                        <option>Closed - {{module}}</option>
+                                        <option>Unassigned - {{module}}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+
+                                <div class="form-group">
+
+                                    <label>Categorised by (Y Axis)</label>
+
+                                    <select class="form-control">
+                                        <option>Agent</option>
+                                        <option>Priority</option>
+                                        <option>Department</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+
+                                <div class="form-group">
+
+                                    <label>Widget Label<span class="text-red"> *</span></label>
+
+                                    <input type="text" class="form-control" placeholder="Enter Label..."/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer justify-content-between">
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                        <button type="button" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="donut-widget-add" aria-modal="true" role="dialog">
+
+            <div class="modal-dialog">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h4 class="modal-title">Donut Chart</h4>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="row">
+
+                            <div class="col-sm-12">
+
+                                <div class="form-group">
+
+                                    <label>Module</label>
+
+                                    <select class="form-control">
+                                        <option>Problems</option>
+                                        <option>Assets</option>
+                                        <option>Changes</option>
+                                        <option>Contracts</option>
+                                        <option>Releases</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+
+                                <div class="form-group">
+
+                                    <label>Title</label>
+
+                                    <select class="form-control">
+                                        <option>Opened - {{module}}</option>
+                                        <option>Closed - {{module}}</option>
+                                        <option>Unassigned - {{module}}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+
+                                <div class="form-group">
+
+                                    <label>Categorised by</label>
+
+                                    <select class="form-control">
+                                        <option>Agent</option>
+                                        <option>Priority</option>
+                                        <option>Department</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+
+                                <div class="form-group">
+
+                                    <label>Widget Label<span class="text-red"> *</span></label>
+
+                                    <input type="text" class="form-control" placeholder="Enter Label..."/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer justify-content-between">
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                        <button type="button" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+
+        <div class="float-right d-none d-sm-inline">
+            Version 1.0.0
+        </div>
+
+        <strong>Copyright &copy; 2023-2024 <a href="https://support.faveohelpdesk.com">Faveo</a>.</strong> All rights reserved.
+    </footer>
+</div>
+
+<script src="../../plugins/jquery/jquery.min.js"></script>
+
+<script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    function onEnter(value) {
+
+        if(value === 'bar') {
+
+            document.getElementById('bar-name').classList.add('d-none');
+            document.getElementById('bar-icon').classList.remove('d-none');
+
+        } else if(value === 'donut') {
+
+            document.getElementById('donut-name').classList.add('d-none');
+            document.getElementById('donut-icon').classList.remove('d-none');
+        }
+    }
+
+    function onLeave(value) {
+
+        if(value === 'bar') {
+
+            document.getElementById('bar-name').classList.remove('d-none');
+            document.getElementById('bar-icon').classList.add('d-none');
+
+        } else if(value === 'donut') {
+
+            document.getElementById('donut-name').classList.remove('d-none');
+            document.getElementById('donut-icon').classList.add('d-none');
+        }
+    }
+</script>
+
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="../../dist/js/adminlte.min.js"></script>
+
+<script src="../../plugins/chart.js/Chart.min.js"></script>
+
+<script src="../../dist/js/pages/dashboard-edit.js"></script>
+
+<script>
+    $(function () {
+        //-------------
+        //- DONUT CHART -
+        //-------------
+        var changeDonutChartCanvas = $('#changeDonutChart').get(0).getContext('2d')
+        var donutData        = {
+            labels: [
+                'Low',
+                'Medium',
+                'High',
+                'Urgent'
+            ],
+            datasets: [
+                {
+                    data: [30,45,78,34],
+                    backgroundColor : ['#00a65a', '#00c0ef','#f39c12', '#f56954'],
+                }
+            ]
+        }
+        var donutOptions     = {
+            maintainAspectRatio : false,
+            responsive : true,
+        }
+
+        new Chart(changeDonutChartCanvas, {
+            type: 'doughnut',
+            data: donutData,
+            options: donutOptions
+        })
+
+        var releaseDonutChartCanvas = $('#releaseDonutChart').get(0).getContext('2d')
+        var releaseDonutData        = {
+            labels: [
+                'Low',
+                'Medium',
+                'High',
+                'Urgent'
+            ],
+            datasets: [
+                {
+                    data: [3,15,38,84],
+                    backgroundColor : ['#00a65a', '#00c0ef','#f39c12', '#f56954'],
+                }
+            ]
+        }
+        var releaseDonutOptions     = {
+            maintainAspectRatio : false,
+            responsive : true,
+        }
+
+        new Chart(releaseDonutChartCanvas, {
+            type: 'doughnut',
+            data: releaseDonutData,
+            options: releaseDonutOptions
+        })
+
+        var contractDonutChartCanvas = $('#contractDonutChart').get(0).getContext('2d')
+        var contractDonutData        = {
+            labels: [
+                'Active',
+                'Approved',
+                'Draft',
+                'Expired',
+                'Rejected',
+                'Terminated'
+            ],
+            datasets: [
+                {
+                    data: [38,84,38,13,67,45],
+                    backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+                }
+            ]
+        }
+        var contractDonutOptions     = {
+            maintainAspectRatio : false,
+            responsive : true,
+        }
+
+        new Chart(contractDonutChartCanvas, {
+            type: 'doughnut',
+            data: contractDonutData,
+            options: contractDonutOptions
+        })
+    })
+</script>
+</body>
+</html>
