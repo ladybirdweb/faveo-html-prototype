@@ -45,7 +45,15 @@
 			   height: 50px !important;
 			}
 
-			.bs-stepper .step-trigger { font-weight: normal !important; }
+			.bs-stepper .step-trigger {
+				font-weight: normal !important;
+				padding-right:10px !important;
+				padding-left:10px !important;
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+
+			.bs-stepper .line { min-height: 2px !important; }
 		</style>
 	</head>
 
@@ -112,10 +120,10 @@
 									<div class="step" data-target="#server">
 										
 										<button type="button" class="step-trigger" role="tab" aria-controls="server" id="server-trigger">
-											
+
 											<span class="bs-stepper-circle">1</span>
-											
-											<span class="bs-stepper-label">Server</span>
+
+											<span class="bs-stepper-label">Server Requirements</span>
 										</button>
 									</div>
 									
@@ -124,10 +132,10 @@
 									<div class="step" data-target="#license">
 										
 										<button type="button" class="step-trigger" role="tab" aria-controls="license" id="license-trigger">
-											
+
 											<span class="bs-stepper-circle">2</span>
-											
-											<span class="bs-stepper-label">Agreement</span>
+
+											<span class="bs-stepper-label">License Agreement</span>
 										</button>
 									</div>
 
@@ -136,10 +144,10 @@
 									<div class="step" data-target="#database">
 										
 										<button type="button" class="step-trigger" role="tab" aria-controls="database" id="database-trigger">
-											
+
 											<span class="bs-stepper-circle">3</span>
-											
-											<span class="bs-stepper-label">DB Setup</span>
+
+											<span class="bs-stepper-label">Database Setup</span>
 										</button>
 									</div>
 
@@ -148,10 +156,10 @@
 									<div class="step" data-target="#start">
 										
 										<button type="button" class="step-trigger" role="tab" aria-controls="start" id="start-trigger">
-											
+
 											<span class="bs-stepper-circle">4</span>
-											
-											<span class="bs-stepper-label">Quick Start</span>
+
+											<span class="bs-stepper-label">Getting Started</span>
 										</button>
 									</div>
 
@@ -163,7 +171,7 @@
 
 											<span class="bs-stepper-circle">5</span>
 
-											<span class="bs-stepper-label">License</span>
+											<span class="bs-stepper-label">License Code</span>
 										</button>
 									</div>
 
