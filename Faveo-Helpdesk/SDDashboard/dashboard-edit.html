@@ -18,6 +18,10 @@
 
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 
+<!--    <script src="../../node_modules/gridstack/dist/gridstack-all.js"></script>-->
+
+<!--    <link href="../../node_modules/gridstack/dist/gridstack.min.css" rel="stylesheet"/>-->
+
     <style>
 
         .progress-group { margin-bottom: 1rem !important; }
@@ -143,205 +147,8 @@
 
                     <div class="col-sm-9">
 
-                        <div class="row connectedSortable">
-
-                            <div class="col-md-4">
-
-                                <div class="card">
-
-                                    <div class="card-header border-0">
-
-                                        <h5 class="card-title">
-
-                                            <span class="text-muted text-xs">
-                                              <i class="fas fa-ellipsis-v"></i>
-                                              <i class="fas fa-ellipsis-v"></i>
-                                            </span> &nbsp;
-                                            New & My Open Problems by Priority
-                                        </h5>
-
-                                        <div class="card-tools">
-
-                                            <button type="button" class="btn btn-tool">
-
-                                                <i class="fas fa-trash-alt"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-body body-h">
-
-                                        <div class="row">
-
-                                            <div class="col-md-12">
-
-                                                <div class="progress-group">
-
-                                                    <span class="progress-text text-muted text-sm">Low</span>
-
-                                                    <span class="float-right">7</span>
-
-                                                    <div class="progress progress-sm">
-
-                                                        <div class="progress-bar" style="width: 80%"></div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="progress-group">
-
-                                                    <span class="progress-text text-muted text-sm">Medium</span>
-
-                                                    <span class="float-right">10</span>
-
-                                                    <div class="progress progress-sm">
-
-                                                        <div class="progress-bar" style="width: 75%"></div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="progress-group">
-
-                                                    <span class="progress-text text-muted text-sm">High</span>
-
-                                                    <span class="float-right">567</span>
-
-                                                    <div class="progress progress-sm">
-
-                                                        <div class="progress-bar" style="width: 60%"></div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="progress-group">
-
-                                                    <span class="progress-text text-muted text-sm">Urgent</span>
-
-                                                    <span class="float-right">0</span>
-
-                                                    <div class="progress progress-sm">
-
-                                                        <div class="progress-bar bg-warning" style="width: 0%"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-
-                                <div class="card">
-
-                                    <div class="card-header border-0">
-
-                                        <h5 class="card-title">
-                                            <span class="text-muted text-xs">
-                                              <i class="fas fa-ellipsis-v"></i>
-                                              <i class="fas fa-ellipsis-v"></i>
-                                            </span> &nbsp;
-                                            My Open Changes by Priority
-                                        </h5>
-
-                                        <div class="card-tools">
-
-                                            <button type="button" class="btn btn-tool">
-
-                                                <i class="fas fa-trash-alt"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-body">
-
-                                        <div class="chartjs-size-monitor">
-
-                                            <div class="chartjs-size-monitor-expand"><div class=""></div></div>
-
-                                            <div class="chartjs-size-monitor-shrink"><div class=""></div></div>
-                                        </div>
-
-                                        <canvas id="changeDonutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 623px;" width="1246" height="500" class="chartjs-render-monitor"></canvas>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-
-                                <div class="card">
-
-                                    <div class="card-header border-0">
-
-                                        <h5 class="card-title">
-                                            <span class="text-muted text-xs">
-                                              <i class="fas fa-ellipsis-v"></i>
-                                              <i class="fas fa-ellipsis-v"></i>
-                                            </span> &nbsp;
-                                            My Open Releases by Priority
-                                        </h5>
-
-                                        <div class="card-tools">
-
-                                            <button type="button" class="btn btn-tool">
-
-                                                <i class="fas fa-trash-alt"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-body">
-
-                                        <div class="chartjs-size-monitor">
-
-                                            <div class="chartjs-size-monitor-expand"><div class=""></div></div>
-
-                                            <div class="chartjs-size-monitor-shrink"><div class=""></div></div>
-                                        </div>
-
-                                        <canvas id="releaseDonutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 623px;" width="1246" height="500" class="chartjs-render-monitor"></canvas>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-
-                                <div class="card">
-
-                                    <div class="card-header border-0">
-
-                                        <h5 class="card-title">
-                                            <span class="text-muted text-xs">
-                                              <i class="fas fa-ellipsis-v"></i>
-                                              <i class="fas fa-ellipsis-v"></i>
-                                            </span> &nbsp;
-                                            My All Contracts by Status
-                                        </h5>
-
-                                        <div class="card-tools">
-
-                                            <button type="button" class="btn btn-tool">
-
-                                                <i class="fas fa-trash-alt"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-body">
-
-                                        <div class="chartjs-size-monitor">
-
-                                            <div class="chartjs-size-monitor-expand"><div class=""></div></div>
-
-                                            <div class="chartjs-size-monitor-shrink"><div class=""></div></div>
-                                        </div>
-
-                                        <canvas id="contractDonutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 623px;" width="1246" height="500" class="chartjs-render-monitor"></canvas>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+<!--                        <div class="grid-stack"></div>-->
+                        <div class="row connectedSortable" id="dynamicCardsContainer"></div>
                     </div>
 
                     <div class="col-sm-3">
@@ -366,7 +173,7 @@
 
                                                 <div class="inner">
 
-                                                    <h5 class="p-30-10">Bar Chart</h5>
+                                                    <h6 class="p-30-10">Bar Chart</h6>
                                                 </div>
 
                                                 <div class="icon">
@@ -397,7 +204,7 @@
 
                                                 <div class="inner">
 
-                                                    <h5 class="p-30-10">Donut Chart</h5>
+                                                    <h6 class="p-30-10">Donut Chart</h6>
                                                 </div>
 
                                                 <div class="icon">
@@ -506,7 +313,7 @@
 
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
-                        <button type="button" class="btn btn-primary">Add</button>
+                        <button type="button" class="btn btn-primary" onclick="updateBarChartData()" data-dismiss="modal">Add</button>
                     </div>
                 </div>
             </div>
@@ -592,7 +399,7 @@
 
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
-                        <button type="button" class="btn btn-primary">Add</button>
+                        <button type="button" class="btn btn-primary" onclick="updateDonutChartData()" data-dismiss="modal">Add</button>
                     </div>
                 </div>
             </div>
@@ -644,6 +451,146 @@
             document.getElementById('donut-name').classList.remove('d-none');
             document.getElementById('donut-icon').classList.add('d-none');
         }
+    }
+</script>
+
+
+<script>
+    // Sample data for charts
+    const chartData = [
+        { type: 'chart', title: 'New & My Open Problems by Priority', className: 'col-sm-4', values: [7, 10, 567, 0], percentages: [80, 75, 60, 0] },
+        { type: 'chart', title: 'My Open Changes by Priority', className: 'col-sm-4', chartId: 'changeDonutChart' },
+        { type: 'chart', title: 'My Open Releases by Priority', className: 'col-sm-4', chartId: 'releaseDonutChart' },
+        { type: 'chart', title: 'My All Contracts by Status', className: 'col-sm-4', chartId: 'contractDonutChart' },
+        // { type: 'card', className: 'col-sm-3', title: "Test", icon: 'fas fa-clipboard-list', count: 1000 }
+    ];
+
+    // Function to create a card with progress groups
+    function createCard(data) {
+        const card = document.createElement('div');
+        if(data.type === 'chart') {
+            card.className = data.className;
+            card.innerHTML = `
+            <div class="card">
+                <div class="card-header border-0">
+                    <h5 class="card-title">
+                        <span class="text-muted text-xs">
+                            <i class="fas fa-ellipsis-v"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </span> &nbsp;
+                        ${data.title}
+                    </h5>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" onclick="removeCardByTitle('${data.title}')">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body body-h">
+                    <div class="row">
+                        <div class="col-md-12">
+                            ${data.values ? data.values.map((value, index) => `
+                                <div class="progress-group">
+                                    <span class="progress-text text-muted text-sm">${['Low', 'Medium', 'High', 'Urgent'][index]}</span>
+                                    <span class="float-right">${value}</span>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar ${index === 3 ? 'bg-warning' : ''}" style="width: ${data.percentages[index]}%"></div>
+                                    </div>
+                                </div>
+                            `).join('') : `<canvas id="${data.chartId}" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 623px;" width="1246" height="500" class="chartjs-render-monitor"></canvas>`}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        } else {
+
+            card.className = data.className;
+            card.innerHTML = `
+                <div class="info-box" data-toggle="tooltip" title="${data.title}">
+
+                            <span class="info-box-icon bg-light box-icon-color">
+
+                                <i class="${ data.icon }"></i>
+                            </span>
+
+                    <div class="info-box-content">
+
+                        <span class="info-box-text">${ data.title }</span>
+
+                        <span class="info-box-number">${ data.count }</span>
+                    </div>
+                </div>
+        `;
+        }
+
+        return card;
+    }
+
+    // Loop through the data and append cards to the container
+    const container = document.getElementById('dynamicCardsContainer');
+    chartData.forEach(data => {
+        const card = createCard(data);
+        container.appendChild(card);
+    });
+
+    function removeCardByTitle(title) {
+
+        const container = document.getElementById('dynamicCardsContainer');
+
+        const cards = container.getElementsByClassName('card');
+
+        // Iterate through cards and remove the one with the specified title
+        for (let i = 0; i < cards.length; i++) {
+            const cardTitle = cards[i].querySelector('.card-title').textContent.trim();
+            if (cardTitle === title) {
+                container.removeChild(cards[i].parentNode);
+                break; // Stop after removing the first matching card
+            }
+        }
+    }
+
+    let counter = 1;
+    // Function to update the chartData array and regenerate the cards
+    function updateBarChartData() {
+
+        const card = createCard({ className: 'col-sm-4', type: 'chart', title: 'New Bar Chart ' + counter++, values: [7, 10, 567, 0], percentages: [80, 75, 60, 0] })
+
+        document.getElementById('dynamicCardsContainer').appendChild(card)
+
+    }
+
+    function updateDonutChartData() {
+
+        const card = createCard({ className: 'col-sm-4', type: 'chart', title: 'New Donut Chart ' + counter++, chartId: 'newDonutChart' })
+
+        document.getElementById('dynamicCardsContainer').appendChild(card);
+
+        var newDonutChartCanvas = $('#newDonutChart').get(0).getContext('2d')
+        var newDonutData        = {
+            labels: [
+                'Low',
+                'Medium',
+                'High',
+                'Urgent'
+            ],
+            datasets: [
+                {
+                    data: [30,45,78,34],
+                    backgroundColor : ['#00a65a', '#00c0ef','#f39c12', '#f56954'],
+                }
+            ]
+        }
+        var newDonutOptions     = {
+            maintainAspectRatio : false,
+            responsive : true,
+        }
+
+        new Chart(newDonutChartCanvas, {
+            type: 'doughnut',
+            data: newDonutData,
+            options: newDonutOptions
+        })
     }
 </script>
 
@@ -741,5 +688,23 @@
         })
     })
 </script>
+
+<!--<script type="text/javascript">-->
+
+<!--    let grid = GridStack.init({-->
+<!--        column: 12-->
+<!--    });-->
+
+<!--    GridStack.setupDragIn('.newWidget', { appendTo: 'body', helper: 'clone' });-->
+
+<!--    let items = [-->
+<!--        {x: 0, y: 0, w: 4, h: 1, content: '<div class="info-box"><div class="info-box-content"><span class="info-box-text">Box 1</span></div></div>', noResize: true},-->
+<!--        {x: 4, y: 0, w: 4, h: 1, noResize: true, content: '<div class="info-box"><div class="info-box-content"><span class="info-box-text">Box 2</span></div></div>'},-->
+<!--        {x: 8, y: 0, w: 4, h: 1, noResize: true, content: '<div class="info-box"><div class="info-box-content"><span class="info-box-text">Box 3</span></div></div>'},-->
+<!--        {x: 0, y: 1, w: 2, h: 1, noResize: true, content: '<div class="info-box"><div class="info-box-content"><span class="info-box-text">Box 4</span></div></div>'},-->
+<!--        {x: 2, y: 1, w: 2, h: 1, noResize: true, content: '<div class="info-box"><div class="info-box-content"><span class="info-box-text">Box 5</span></div></div>'},-->
+<!--    ];-->
+<!--    grid.load(items);-->
+<!--</script>-->
 </body>
 </html>
