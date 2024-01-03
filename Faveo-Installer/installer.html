@@ -103,7 +103,7 @@
 					
 					<div class="container">
 		  				
-		  				<div class="row">
+		  				<div class="">
 			 				
 			 				<div class="bs-stepper">
 				
@@ -115,7 +115,7 @@
 											
 											<span class="bs-stepper-circle">1</span>
 											
-											<span class="bs-stepper-label">Server Requirements</span>
+											<span class="bs-stepper-label">Server</span>
 										</button>
 									</div>
 									
@@ -127,7 +127,7 @@
 											
 											<span class="bs-stepper-circle">2</span>
 											
-											<span class="bs-stepper-label">License Agreement</span>
+											<span class="bs-stepper-label">Agreement</span>
 										</button>
 									</div>
 
@@ -139,7 +139,7 @@
 											
 											<span class="bs-stepper-circle">3</span>
 											
-											<span class="bs-stepper-label">Database Setup</span>
+											<span class="bs-stepper-label">DB Setup</span>
 										</button>
 									</div>
 
@@ -151,30 +151,30 @@
 											
 											<span class="bs-stepper-circle">4</span>
 											
-											<span class="bs-stepper-label">Getting Started</span>
+											<span class="bs-stepper-label">Quick Start</span>
 										</button>
 									</div>
 
 									<div class="line"></div>
-									
+
 									<div class="step" data-target="#code">
-										
+
 										<button type="button" class="step-trigger" role="tab" aria-controls="code" id="code-trigger">
-											
+
 											<span class="bs-stepper-circle">5</span>
-											
-											<span class="bs-stepper-label">License Code</span>
+
+											<span class="bs-stepper-label">License</span>
 										</button>
 									</div>
 
 									<div class="line"></div>
-									
+
 									<div class="step" data-target="#final">
-										
+
 										<button type="button" class="step-trigger" role="tab" aria-controls="final" id="final-trigger">
-											
+
 											<span class="bs-stepper-circle">6</span>
-											
+
 											<span class="bs-stepper-label">Final</span>
 										</button>
 									</div>
@@ -188,152 +188,121 @@
 
 											<div class="card-body">
 
-												<p class="text-center lead">Your Helpdesk is Ready!</p>
-
-												<div class="alert" style="background:#f5f5f5;">
-													All right, sparky! You’ve made it through the installation.
-												</div>
+												<p class="text-center lead">Server Requirements</p>
 
 												<div class="row">
 
-													<div class="col-6">
+													<table class="table table-bordered">
 
-														<p class="lead">Learn More</p>
+	                  							<thead style="background: #f5f5f5;">
 
-														<p><i class="fas fa-video"></i>&nbsp;&nbsp;<a href="javascript:;">Video walk through</a></p>
-														<p><i class="fas fa-newspaper"></i>&nbsp;&nbsp;<a href="javascript:;">Knowledge base</a></p>
-														<p><i class="fas fa-envelope"></i>&nbsp;&nbsp;<a href="javascript:;">Email Support</a></p>
-													</div>
+	                    								<tr><th style="width:50%;">Directory</th><th>Permissions</th></tr>
+	                  							</thead>
 
-													<div class="col-6">
+	                  							<tbody>
 
-														<p class="lead">Next Step</p>
+	                    								<tr>
 
-														<div class="btn btn-primary btn-lg btn-block">Login to Helpdesk &nbsp;<i class="fas fa-arrow-right"></i></div>
-													</div>
+	                      								<td>C:\wamp64\www\sakthi-desk\storage</td>
+
+	                      								<td class="text-success">Read/Write</td>
+	                    								</tr>
+
+	                    								<tr>
+
+	                      								<td>C:\wamp64\www\sakthi-desk\bootstrap</td>
+
+	                      								<td class="text-success">Read/Write</td>
+	                    								</tr>
+	                  							</tbody>
+	                							</table>
 												</div>
+
+                							<div class="row">
+
+                								<table class="table table-bordered">
+
+	                  							<thead style="background: #f5f5f5;">
+
+	                    								<tr><th style="width:50%;">Requisites</th><th>Status</th></tr>
+	                  							</thead>
+
+	                  							<tbody>
+
+	                    								<tr>
+
+	                      								<td>Establish connection to Helpdesk License Manager</td>
+
+	                      								<td class="text-success">Connection Successful</td>
+	                    								</tr>
+
+	                    								<tr>
+
+	                      								<td>PHP Version</td>
+
+	                      								<td class="text-success">7.3.21</td>
+	                    								</tr>
+
+	                    								<tr>
+
+	                      								<td>Maximum execution time</td>
+
+	                      								<td class="text-success">120 (Maximum execution time is as per requirement)</td>
+	                    								</tr>
+	                  							</tbody>
+	                							</table>
+                							</div>
+
+                							<div class="row">
+
+                								<table class="table table-bordered">
+
+	                  							<thead style="background: #f5f5f5;">
+
+	                    								<tr><th style="width:50%;">PHP Extensions</th><th>Status</th></tr>
+	                  							</thead>
+
+	                  							<tbody>
+
+	                    								<tr>
+
+	                      								<td>ldap</td>
+
+	                      								<td class="text-success">Enabled</td>
+	                    								</tr>
+
+	                    								<tr>
+
+	                      								<td>mysqli</td>
+
+	                      								<td class="text-success">Enabled</td>
+	                    								</tr>
+
+	                    								<tr>
+
+	                      								<td>redis</td>
+
+	                      								<td>
+
+	                      									<p class="text-warning">Not Enabled</p>
+
+																	<p>To enable this, please install the extension on your server and update 'C:\wamp64\bin\apache\apache2.4.46\bin\php.ini' to enable redis</p>
+
+																	<a href="javascript:;">How to install PHP extensions on my server?</a>
+	                      								</td>
+	                    								</tr>
+	                  							</tbody>
+	                							</table>
+                							</div>
+											</div>
+
+											<div class="card-footer">
+
+												<button class="btn btn-primary float-right" onclick="stepper.next()">Continue&nbsp;
+													<i class="fas fa-arrow-right"></i>
+												</button>
 											</div>
 										</div>
-
-<!--										<div class="card">-->
-
-<!--											<div class="card-body">-->
-<!--												-->
-<!--												<p class="text-center lead">Server Requirements</p>-->
-
-<!--												<div class="row">-->
-<!--													-->
-<!--													<table class="table table-bordered">-->
-<!--                  						-->
-<!--	                  							<thead style="background: #f5f5f5;">-->
-<!--	                    								-->
-<!--	                    								<tr><th style="width:50%;">Directory</th><th>Permissions</th></tr>-->
-<!--	                  							</thead>-->
-<!--	                  							-->
-<!--	                  							<tbody>-->
-<!--	                    								-->
-<!--	                    								<tr>-->
-<!--	                      								-->
-<!--	                      								<td>C:\wamp64\www\sakthi-desk\storage</td>-->
-<!--	                      								-->
-<!--	                      								<td class="text-success">Read/Write</td>-->
-<!--	                    								</tr>-->
-
-<!--	                    								<tr>-->
-<!--	                      								-->
-<!--	                      								<td>C:\wamp64\www\sakthi-desk\bootstrap</td>-->
-<!--	                      								-->
-<!--	                      								<td class="text-success">Read/Write</td>-->
-<!--	                    								</tr>-->
-<!--	                  							</tbody>-->
-<!--	                							</table>-->
-<!--												</div>-->
-
-<!--                							<div class="row">-->
-<!--                								-->
-<!--                								<table class="table table-bordered">-->
-<!--                  						-->
-<!--	                  							<thead style="background: #f5f5f5;">-->
-<!--	                    								-->
-<!--	                    								<tr><th style="width:50%;">Requisites</th><th>Status</th></tr>-->
-<!--	                  							</thead>-->
-<!--	                  							-->
-<!--	                  							<tbody>-->
-<!--	                    								-->
-<!--	                    								<tr>-->
-<!--	                      								-->
-<!--	                      								<td>Establish connection to Helpdesk License Manager</td>-->
-<!--	                      								-->
-<!--	                      								<td class="text-success">Connection Successful</td>-->
-<!--	                    								</tr>-->
-
-<!--	                    								<tr>-->
-<!--	                      								-->
-<!--	                      								<td>PHP Version</td>-->
-<!--	                      								-->
-<!--	                      								<td class="text-success">7.3.21</td>-->
-<!--	                    								</tr>-->
-
-<!--	                    								<tr>-->
-<!--	                      								-->
-<!--	                      								<td>Maximum execution time</td>-->
-<!--	                      								-->
-<!--	                      								<td class="text-success">120 (Maximum execution time is as per requirement)</td>-->
-<!--	                    								</tr>-->
-<!--	                  							</tbody>-->
-<!--	                							</table>-->
-<!--                							</div>-->
-
-<!--                							<div class="row">-->
-<!--	                								-->
-<!--                								<table class="table table-bordered">-->
-<!--               						-->
-<!--	                  							<thead style="background: #f5f5f5;">-->
-<!--	                    								-->
-<!--	                    								<tr><th style="width:50%;">PHP Extensions</th><th>Status</th></tr>-->
-<!--	                  							</thead>-->
-<!--	                  							-->
-<!--	                  							<tbody>-->
-<!--	                    								-->
-<!--	                    								<tr>-->
-<!--	                      								-->
-<!--	                      								<td>ldap</td>-->
-<!--	                      								-->
-<!--	                      								<td class="text-success">Enabled</td>-->
-<!--	                    								</tr>-->
-
-<!--	                    								<tr>-->
-<!--	                      								-->
-<!--	                      								<td>mysqli</td>-->
-<!--	                      								-->
-<!--	                      								<td class="text-success">Enabled</td>-->
-<!--	                    								</tr>-->
-
-<!--	                    								<tr>-->
-<!--	                      								-->
-<!--	                      								<td>redis</td>-->
-<!--	                      								-->
-<!--	                      								<td>-->
-<!--	                      									-->
-<!--	                      									<p class="text-warning">Not Enabled</p>-->
-<!--																		-->
-<!--																	<p>To enable this, please install the extension on your server and update 'C:\wamp64\bin\apache\apache2.4.46\bin\php.ini' to enable redis</p>-->
-
-<!--																	<a href="javascript:;">How to install PHP extensions on my server?</a>-->
-<!--	                      								</td>-->
-<!--	                    								</tr>-->
-<!--	                  							</tbody>-->
-<!--	                							</table>-->
-<!--                							</div>-->
-<!--											</div>-->
-
-<!--											<div class="card-footer">-->
-<!--												-->
-<!--												<button class="btn btn-primary float-right" onclick="stepper.next()">Continue&nbsp; -->
-<!--													<i class="fas fa-arrow-right"></i>-->
-<!--												</button>-->
-<!--											</div>-->
-<!--										</div>-->
 									</div>
 
 									<div id="license" class="content" role="tabpanel" aria-labelledby="license-trigger">
@@ -680,7 +649,7 @@
                   								
                   								<p class="lead">Next Step</p>
 
-                  								<div class="btn btn-primary btn-lg btn-block">Login to Helpdesk &nbsp;<i class="fas fa-arrow-right"></i></div>
+                  								<div class="btn btn-primary">Login to Helpdesk &nbsp;<i class="fas fa-arrow-right"></i></div>
                 								</div>
               								</div>
 											</div>
