@@ -54,23 +54,6 @@
 			}
 
 			.bs-stepper .line { min-height: 2px !important; }
-
-			#progress {
-				-webkit-appearance:none;
-				position: absolute;
-				width: 94%;
-				z-index: 5;
-				height: 4px;
-				margin-left: 67px;
-				margin-bottom: 18px;
-			}
-			#progress::-webkit-progress-value {
-				background-color: darkgrey;
-				transition: .5s ease;
-			}
-			#progress::-webkit-progress-bar {
-				background-color: #dee2e6;
-			}
 		</style>
 	</head>
 
@@ -134,8 +117,6 @@
 
 								<div class="bs-stepper-header" role="tablist">
 
-									<progress id="progress" value=0 max=100></progress>
-
 									<div class="step" data-target="#server">
 										
 										<button type="button" class="step-trigger" role="tab" aria-controls="server" id="server-trigger">
@@ -146,7 +127,7 @@
 										</button>
 									</div>
 									
-<!--									<div class="line"></div>-->
+									<div class="line"></div>
 									
 									<div class="step" data-target="#license">
 										
@@ -158,7 +139,7 @@
 										</button>
 									</div>
 
-<!--									<div class="line"></div>-->
+									<div class="line"></div>
 									
 									<div class="step" data-target="#database">
 										
@@ -170,7 +151,7 @@
 										</button>
 									</div>
 
-<!--									<div class="line"></div>-->
+									<div class="line"></div>
 									
 									<div class="step" data-target="#start">
 										
@@ -182,7 +163,7 @@
 										</button>
 									</div>
 
-<!--									<div class="line"></div>-->
+									<div class="line"></div>
 
 									<div class="step" data-target="#code">
 
@@ -194,7 +175,7 @@
 										</button>
 									</div>
 
-<!--									<div class="line"></div>-->
+									<div class="line"></div>
 
 									<div class="step" data-target="#final">
 
