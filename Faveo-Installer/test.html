@@ -18,82 +18,19 @@
 
     <link rel="stylesheet" id="rtl-styles" href="../dist/css/adminlte-rtl.css">
 
-    <link rel="stylesheet" id="rtl-styles-1" href="../plugins/bs-stepper/css/bs-stepper-rtl.css">
+    <link rel="stylesheet" id="rtl-styles-1" href="./custom-rtl.css">
+
+    <link rel="stylesheet" id="rtl-styles-2" href="../plugins/bs-stepper/css/bs-stepper-rtl.css">
 
     <link rel="stylesheet" id="default-styles" href="../dist/css/adminlte.css">
 
-    <link rel="stylesheet" id="default-styles-1" href="../plugins/bs-stepper/css/bs-stepper.css">
+    <link rel="stylesheet" id="default-styles-1" href="./custom.css">
+
+    <link rel="stylesheet" id="default-styles-2" href="../plugins/bs-stepper/css/bs-stepper.css">
 
     <link rel="stylesheet" href="../plugins/flag-icon-css/css/flag-icon.min.css">
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
-
-    <style>
-
-        .install-img {
-            margin-top: 5px !important;
-            height: 50px !important;
-        }
-
-        .steps {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-        .step-button {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: none;
-            background-color: #aaaeb1;
-            transition: .4s;
-            color: #fff;
-        }
-        .step-button[aria-expanded="true"] {
-            width: 45px;
-            height: 45px;
-            background-color: #007bff;
-            color: #fff;
-        }
-        .done {
-            background-color: #aaaeb1 !important;
-            color: #fff !important;
-        }
-        .step-item {
-            z-index: 10;
-            text-align: center;
-        }
-        #progress {
-            -webkit-appearance:none;
-            position: absolute;
-            width: 94%;
-            z-index: 5;
-            height: 4px;
-            margin-left: 67px;
-            margin-bottom: 18px;
-        }
-        #progress::-webkit-progress-value {
-            background-color: darkgrey;
-            transition: .5s ease;
-        }
-        #progress::-webkit-progress-bar {
-            background-color: #dee2e6;
-
-        }
-
-        @media only screen and (max-width: 767px) {
-            .step-title {
-                display: none;
-            }
-
-            #progress {
-                margin-bottom: 0 !important;
-            }
-        }
-    </style>
 </head>
 
 <body class="layout-top-nav text-sm layout-navbar-fixed" dir="ltr">
@@ -146,7 +83,7 @@
 
             <div class="content">
 
-                <div class="container pt-3">
+                <div class="container pt-3 pb-3">
 
                     <div class="accordion" id="accordionExample">
 
@@ -156,7 +93,7 @@
 
                             <div class="step-item">
 
-                                <button class="step-button text-center" type="button" data-bs-toggle="collapse"
+                                <button id="btn-server" class="step-button text-center" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#server" aria-expanded="true" aria-controls="server">
                                     1
                                 </button>
@@ -166,7 +103,7 @@
 
                             <div class="step-item">
 
-                                <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                                <button id="btn-license" class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#license" aria-expanded="false" aria-controls="license">
                                     2
                                 </button>
@@ -176,7 +113,7 @@
 
                             <div class="step-item">
 
-                                <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                                <button id="btn-database" class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#database" aria-expanded="false" aria-controls="database">
                                     3
                                 </button>
@@ -186,7 +123,7 @@
 
                             <div class="step-item">
 
-                                <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                                <button id="btn-start" class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#start" aria-expanded="false" aria-controls="start">
                                     4
                                 </button>
@@ -196,7 +133,7 @@
 
                             <div class="step-item">
 
-                                <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                                <button id="btn-code" class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#code" aria-expanded="false" aria-controls="code">
                                     5
                                 </button>
@@ -206,7 +143,7 @@
 
                             <div class="step-item">
 
-                                <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                                <button id="btn-final" class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#final" aria-expanded="false" aria-controls="final">
                                     6
                                 </button>
@@ -331,7 +268,7 @@
 
                                     <div class="card-footer">
 
-                                        <button class="btn btn-primary float-right" onclick="stepper.next()">Continue&nbsp;
+                                        <button class="btn btn-primary float-right" onclick="gotoStep('license')">Continue&nbsp;
                                             <i class="fas fa-arrow-right"></i>
                                         </button>
                                     </div>
@@ -358,9 +295,9 @@
 
                                 <div class="card-footer">
 
-                                    <button class="btn btn-primary" onclick="stepper.previous()"><i class="fas fa-arrow-left"></i> &nbsp;Cancel</button>
+                                    <button class="btn btn-primary" onclick="gotoStep('server')"><i class="fas fa-arrow-left"></i> &nbsp;Cancel</button>
 
-                                    <button class="btn btn-primary float-right" onclick="stepper.next()">Continue <i class="fas fa-arrow-right"></i></button>
+                                    <button class="btn btn-primary float-right" onclick="gotoStep('database')">Continue <i class="fas fa-arrow-right"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -479,13 +416,13 @@
 
                                 <div class="card-footer">
 
-                                    <button class="btn btn-primary" onclick="stepper.previous()"><i class="fas fa-arrow-left"></i>&nbsp; Previous</button>
+                                    <button class="btn btn-primary" onclick="gotoStep('license')"><i class="fas fa-arrow-left"></i>&nbsp; Previous</button>
 
                                     <button class="btn btn-primary float-right" onclick="validateData()" id="validate">Continue &nbsp;
                                         <i class="fas fa-arrow-right"></i>
                                     </button>
 
-                                    <button class="btn btn-primary float-right" onclick="stepper.next()" id="continue">Continue &nbsp;
+                                    <button class="btn btn-primary float-right" onclick="gotoStep('start')" id="continue">Continue &nbsp;
                                         <i class="fas fa-arrow-right"></i>
                                     </button>
                                 </div>
@@ -615,7 +552,7 @@
 
                                 <div class="card-footer">
 
-                                    <button class="btn btn-primary float-right" onclick="stepper.next()">Continue &nbsp;
+                                    <button class="btn btn-primary float-right" onclick="gotoStep('code')">Continue &nbsp;
                                         <i class="fas fa-arrow-right"></i>
                                     </button>
                                 </div>
@@ -648,7 +585,7 @@
 
                                 <div class="card-footer">
 
-                                    <button class="btn btn-primary float-right" onclick="stepper.next()">Continue &nbsp;
+                                    <button class="btn btn-primary float-right" onclick="gotoStep('final')">Continue &nbsp;
                                         <i class="fas fa-arrow-right"></i>
                                     </button>
                                 </div>
@@ -706,47 +643,184 @@
 
 <script src="../dist/js/adminlte.min.js"></script>
 
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>-->
 
 <script>
 
-    const stepButtons = document.querySelectorAll('.step-button');
+    validateData();
 
-    const progress = document.querySelector('#progress');
+    function validateData() {
 
-    Array.from(stepButtons).forEach((button,index) => {
+        var k = document.getElementById("validate");
 
-        button.addEventListener('click', () => {
+        var m = document.getElementById("continue");
 
-            progress.setAttribute('value', index * 100 /(stepButtons.length - 1) );//there are 3 buttons. 2 spaces.
+        var n = document.getElementById("db_fields");
 
-            stepButtons.forEach((item, secindex)=>{
+        var p = document.getElementById("db_config");
 
-                if(index === secindex) {
+        if (k.style.display == "block") {
 
-                    item.setAttribute('aria-expanded', true);
+            k.style.display = "none";
 
-                    item.classList.remove('done');
+            m.style.display = "block";
 
-                    document.getElementById(item.getAttribute('aria-controls')).classList.add('show')
-                } else {
+            n.style.display = "none";
 
-                    item.setAttribute('aria-expanded', false);
+            p.style.display = "block";
 
-                    document.getElementById(item.getAttribute('aria-controls')).classList.remove('show')
-                }
-                if(index > secindex){
+        } else {
 
-                    item.classList.add('done');
-                }
+            k.style.display = "block";
 
-                if(index < secindex){
+            m.style.display = "none";
 
-                    item.classList.remove('done');
-                }
-            })
-        })
-    })
+            n.style.display = "block";
+
+            p.style.display = "none";
+        }
+    }
+
+    function gotoStep(value) {
+
+        const progress = document.querySelector('#progress');
+
+        if(value === 'server') {
+            progress.setAttribute('value', 0);
+            document.getElementById('server').classList.add('show');
+            document.getElementById('btn-server').setAttribute('aria-expanded', true);
+            document.getElementById('license').classList.remove('show');
+            document.getElementById('btn-license').setAttribute('aria-expanded', false);
+            document.getElementById('database').classList.remove('show');
+            document.getElementById('btn-database').setAttribute('aria-expanded', false);
+            document.getElementById('start').classList.remove('show');
+            document.getElementById('btn-start').setAttribute('aria-expanded', false);
+            document.getElementById('code').classList.remove('show');
+            document.getElementById('btn-code').setAttribute('aria-expanded', false);
+            document.getElementById('final').classList.remove('show');
+            document.getElementById('btn-final').setAttribute('aria-expanded', false);
+        }
+
+        if(value === 'license') {
+            progress.setAttribute('value', 20);
+            document.getElementById('server').classList.remove('show');
+            document.getElementById('btn-server').setAttribute('aria-expanded', false);
+            document.getElementById('license').classList.add('show');
+            document.getElementById('btn-license').setAttribute('aria-expanded', true);
+            document.getElementById('database').classList.remove('show');
+            document.getElementById('btn-database').setAttribute('aria-expanded', false);
+            document.getElementById('start').classList.remove('show');
+            document.getElementById('btn-start').setAttribute('aria-expanded', false);
+            document.getElementById('code').classList.remove('show');
+            document.getElementById('btn-code').setAttribute('aria-expanded', false);
+            document.getElementById('final').classList.remove('show');
+            document.getElementById('btn-final').setAttribute('aria-expanded', false);
+        }
+
+        if(value === 'database') {
+            progress.setAttribute('value', 40);
+            document.getElementById('server').classList.remove('show');
+            document.getElementById('btn-server').setAttribute('aria-expanded', false);
+            document.getElementById('license').classList.remove('show');
+            document.getElementById('btn-license').setAttribute('aria-expanded', false);
+            document.getElementById('database').classList.add('show');
+            document.getElementById('btn-database').setAttribute('aria-expanded', true);
+            document.getElementById('start').classList.remove('show');
+            document.getElementById('btn-start').setAttribute('aria-expanded', false);
+            document.getElementById('code').classList.remove('show');
+            document.getElementById('btn-code').setAttribute('aria-expanded', false);
+            document.getElementById('final').classList.remove('show');
+            document.getElementById('btn-final').setAttribute('aria-expanded', false);
+        }
+
+        if(value === 'start') {
+            progress.setAttribute('value', 60);
+            document.getElementById('server').classList.remove('show');
+            document.getElementById('btn-server').setAttribute('aria-expanded', false);
+            document.getElementById('license').classList.remove('show');
+            document.getElementById('btn-license').setAttribute('aria-expanded', false);
+            document.getElementById('database').classList.remove('show');
+            document.getElementById('btn-database').setAttribute('aria-expanded', false);
+            document.getElementById('start').classList.add('show');
+            document.getElementById('btn-start').setAttribute('aria-expanded', true);
+            document.getElementById('code').classList.remove('show');
+            document.getElementById('btn-code').setAttribute('aria-expanded', false);
+            document.getElementById('final').classList.remove('show');
+            document.getElementById('btn-final').setAttribute('aria-expanded', false);
+        }
+
+        if(value === 'code') {
+            progress.setAttribute('value', 80);
+            document.getElementById('server').classList.remove('show');
+            document.getElementById('btn-server').setAttribute('aria-expanded', false);
+            document.getElementById('license').classList.remove('show');
+            document.getElementById('btn-license').setAttribute('aria-expanded', false);
+            document.getElementById('database').classList.remove('show');
+            document.getElementById('btn-database').setAttribute('aria-expanded', false);
+            document.getElementById('start').classList.remove('show');
+            document.getElementById('btn-start').setAttribute('aria-expanded', false);
+            document.getElementById('code').classList.add('show');
+            document.getElementById('btn-code').setAttribute('aria-expanded', true);
+            document.getElementById('final').classList.remove('show');
+            document.getElementById('btn-final').setAttribute('aria-expanded', false);
+        }
+
+        if(value === 'final') {
+            progress.setAttribute('value', 100);
+            document.getElementById('server').classList.remove('show');
+            document.getElementById('btn-server').setAttribute('aria-expanded', false);
+            document.getElementById('license').classList.remove('show');
+            document.getElementById('btn-license').setAttribute('aria-expanded', false);
+            document.getElementById('database').classList.remove('show');
+            document.getElementById('btn-database').setAttribute('aria-expanded', false);
+            document.getElementById('start').classList.remove('show');
+            document.getElementById('btn-start').setAttribute('aria-expanded', false);
+            document.getElementById('code').classList.remove('show');
+            document.getElementById('btn-code').setAttribute('aria-expanded', false);
+            document.getElementById('final').classList.add('show');
+            document.getElementById('btn-final').setAttribute('aria-expanded', true);
+        }
+    }
+
+    // const stepButtons = document.querySelectorAll('.step-button');
+    //
+    // const progress = document.querySelector('#progress');
+    //
+    // Array.from(stepButtons).forEach((button,index) => {
+    //
+    //     button.addEventListener('click', () => {
+    //
+    //         progress.setAttribute('value', index * 100 /(stepButtons.length - 1) );//there are 3 buttons. 2 spaces.
+    //
+    //         stepButtons.forEach((item, secindex)=>{
+    //
+    //             if(index === secindex) {
+    //
+    //                 item.setAttribute('aria-expanded', true);
+    //
+    //                 item.classList.remove('done');
+    //
+    //                 document.getElementById(item.getAttribute('aria-controls')).classList.add('show')
+    //             } else {
+    //
+    //                 item.setAttribute('aria-expanded', false);
+    //
+    //                 document.getElementById(item.getAttribute('aria-controls')).classList.remove('show')
+    //             }
+    //             if(index > secindex){
+    //
+    //                 item.classList.add('done');
+    //             }
+    //
+    //             if(index < secindex){
+    //
+    //                 item.classList.remove('done');
+    //             }
+    //         })
+    //     })
+    // })
 </script>
 
 <script>
