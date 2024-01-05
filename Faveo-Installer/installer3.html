@@ -108,7 +108,7 @@
                                 2
                             </button>
 
-                            <div class="step-title mt-2 text-bold">License Agreement</div>
+                            <div class="step-title mt-2">License Agreement</div>
                         </div>
 
                         <div class="step-item">
@@ -118,7 +118,7 @@
                                 3
                             </button>
 
-                            <div class="step-title mt-2 text-bold">Database Setup</div>
+                            <div class="step-title mt-2">Database Setup</div>
                         </div>
 
                         <div class="step-item">
@@ -128,7 +128,7 @@
                                 4
                             </button>
 
-                            <div class="step-title mt-2 text-bold">Getting Started</div>
+                            <div class="step-title mt-2">Getting Started</div>
                         </div>
 
                         <div class="step-item">
@@ -138,7 +138,7 @@
                                 5
                             </button>
 
-                            <div class="step-title mt-2 text-bold">License Code</div>
+                            <div class="step-title mt-2">License Code</div>
                         </div>
 
                         <div class="step-item">
@@ -148,7 +148,7 @@
                                 6
                             </button>
 
-                            <div class="step-title mt-2 text-bold">Entry Gateway</div>
+                            <div class="step-title mt-2">Entry Gateway</div>
                         </div>
                     </div>
 
@@ -701,6 +701,13 @@
             document.getElementById('btn-code').setAttribute('aria-expanded', false);
             document.getElementById('final').classList.remove('show');
             document.getElementById('btn-final').setAttribute('aria-expanded', false);
+
+            document.getElementById('btn-server').nextElementSibling.classList.add('text-bold');
+            document.getElementById('btn-license').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-database').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-start').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-code').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-final').nextElementSibling.classList.remove('text-bold');
         }
 
         if(value === 'license') {
@@ -717,6 +724,13 @@
             document.getElementById('btn-code').setAttribute('aria-expanded', false);
             document.getElementById('final').classList.remove('show');
             document.getElementById('btn-final').setAttribute('aria-expanded', false);
+
+            document.getElementById('btn-server').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-license').nextElementSibling.classList.add('text-bold');
+            document.getElementById('btn-database').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-start').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-code').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-final').nextElementSibling.classList.remove('text-bold');
         }
 
         if(value === 'database') {
@@ -733,6 +747,13 @@
             document.getElementById('btn-code').setAttribute('aria-expanded', false);
             document.getElementById('final').classList.remove('show');
             document.getElementById('btn-final').setAttribute('aria-expanded', false);
+
+            document.getElementById('btn-server').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-license').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-database').nextElementSibling.classList.add('text-bold');
+            document.getElementById('btn-start').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-code').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-final').nextElementSibling.classList.remove('text-bold');
         }
 
         if(value === 'start') {
@@ -749,6 +770,13 @@
             document.getElementById('btn-code').setAttribute('aria-expanded', false);
             document.getElementById('final').classList.remove('show');
             document.getElementById('btn-final').setAttribute('aria-expanded', false);
+
+            document.getElementById('btn-server').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-license').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-database').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-start').nextElementSibling.classList.add('text-bold');
+            document.getElementById('btn-code').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-final').nextElementSibling.classList.remove('text-bold');
         }
 
         if(value === 'code') {
@@ -765,6 +793,13 @@
             document.getElementById('btn-code').setAttribute('aria-expanded', true);
             document.getElementById('final').classList.remove('show');
             document.getElementById('btn-final').setAttribute('aria-expanded', false);
+
+            document.getElementById('btn-server').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-license').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-database').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-start').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-code').nextElementSibling.classList.add('text-bold');
+            document.getElementById('btn-final').nextElementSibling.classList.remove('text-bold');
         }
 
         if(value === 'final') {
@@ -781,6 +816,13 @@
             document.getElementById('btn-code').setAttribute('aria-expanded', false);
             document.getElementById('final').classList.add('show');
             document.getElementById('btn-final').setAttribute('aria-expanded', true);
+
+            document.getElementById('btn-server').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-license').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-database').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-start').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-code').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-final').nextElementSibling.classList.add('text-bold');
         }
     }
 
