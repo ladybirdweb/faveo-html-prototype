@@ -5,19 +5,37 @@
 	<head>
 		
 		<meta charset="utf-8">
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
 		<title>Faveo</title>
 
+		<meta name="keywords" content="Faveo" />
+
+		<meta name="description" content="Faveo">
+
+		<meta name="author" content="Sakthivel Munusami">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="../dist/img/favicon.ico" type="image/x-icon" />
+
+		<link rel="apple-touch-icon" href="../dist/img/faveo.png">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
 		<link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
 		
-		<link rel="stylesheet" href="../dist/css/adminlte.min.css">
+		<link rel="stylesheet" id="rtl-styles" href="../dist/css/adminlte-rtl.css">
 
-		<link rel="stylesheet" href="../plugins/bs-stepper/css/bs-stepper.min.css">
-		
+		<link rel="stylesheet" id="rtl-styles-1" href="../plugins/bs-stepper/css/bs-stepper-rtl.css">
+
+		<link rel="stylesheet" id="default-styles" href="../dist/css/adminlte.css">
+
+		<link rel="stylesheet" id="default-styles-1" href="../plugins/bs-stepper/css/bs-stepper.css">
+
+		<link rel="stylesheet" href="../plugins/flag-icon-css/css/flag-icon.min.css">
+
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
 		<style>
@@ -27,45 +45,84 @@
 			   height: 50px !important;
 			}
 
-			.bs-stepper .step-trigger { font-weight: normal !important; }
+			.bs-stepper .step-trigger {
+				font-weight: normal !important;
+				padding-right:10px !important;
+				padding-left:10px !important;
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+
+			.bs-stepper .line { min-height: 2px !important; }
 		</style>
 	</head>
 
-	<body class="layout-top-nav text-sm layout-navbar-fixed">
+	<body class="layout-top-nav text-sm layout-navbar-fixed" dir="ltr">
 		
 		<div class="wrapper">
 
-  			<nav class="main-header navbar navbar-expand-md navbar-light navbar-white" style="justify-content: center;">
-	 			
-	 			<div>
-					
+			<nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+
+				<div class="container">
+
 					<a href="javascript:;" class="navbar-brand" style="">
-		  				
-		  				<img src="../dist/img/faveo1.png" alt="Faveo Logo" class="brand-image img-circle install-img">
-		  					
-		  				<span class="brand-text font-weight-light">SUPPORT TICKET SYSTEM</span>
+
+						<img src="../dist/img/faveo1.png" alt="Faveo Logo" class="brand-image install-img">
+
+<!--						<span class="brand-text font-weight-light">SUPPORT TICKET SYSTEM</span>-->
 					</a>
-	 			</div>
-  			</nav>
-  			
+
+					<button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse order-3"></div>
+
+					<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+
+						<li class="nav-item dropdown">
+
+							<a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+
+								<i id="flagIcon" class="flag-icon flag-icon-us"></i>
+							</a>
+
+							<div class="dropdown-menu dropdown-menu-right p-0" style="left: inherit; right: 0px;">
+
+								<a href="javascript:;" class="dropdown-item" id="englishOption">
+
+									<i class="flag-icon flag-icon-us mr-2"></i> English
+								</a>
+
+								<a href="javascript:;" class="dropdown-item" id="arabicOption">
+
+									<i class="flag-icon flag-icon-ar mr-2"></i> Arabic
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
   			<div class="content-wrapper" style="margin-top: 80px;">
 	 			
 	 			<div class="content">
 					
 					<div class="container">
 		  				
-		  				<div class="row">
-			 				
+		  				<div class="">
+
 			 				<div class="bs-stepper">
-				
+
 								<div class="bs-stepper-header" role="tablist">
-									
+
 									<div class="step" data-target="#server">
 										
 										<button type="button" class="step-trigger" role="tab" aria-controls="server" id="server-trigger">
-											
+
 											<span class="bs-stepper-circle">1</span>
-											
+
 											<span class="bs-stepper-label">Server Requirements</span>
 										</button>
 									</div>
@@ -75,9 +132,9 @@
 									<div class="step" data-target="#license">
 										
 										<button type="button" class="step-trigger" role="tab" aria-controls="license" id="license-trigger">
-											
+
 											<span class="bs-stepper-circle">2</span>
-											
+
 											<span class="bs-stepper-label">License Agreement</span>
 										</button>
 									</div>
@@ -87,9 +144,9 @@
 									<div class="step" data-target="#database">
 										
 										<button type="button" class="step-trigger" role="tab" aria-controls="database" id="database-trigger">
-											
+
 											<span class="bs-stepper-circle">3</span>
-											
+
 											<span class="bs-stepper-label">Database Setup</span>
 										</button>
 									</div>
@@ -99,70 +156,70 @@
 									<div class="step" data-target="#start">
 										
 										<button type="button" class="step-trigger" role="tab" aria-controls="start" id="start-trigger">
-											
+
 											<span class="bs-stepper-circle">4</span>
-											
+
 											<span class="bs-stepper-label">Getting Started</span>
 										</button>
 									</div>
 
 									<div class="line"></div>
-									
+
 									<div class="step" data-target="#code">
-										
+
 										<button type="button" class="step-trigger" role="tab" aria-controls="code" id="code-trigger">
-											
+
 											<span class="bs-stepper-circle">5</span>
-											
+
 											<span class="bs-stepper-label">License Code</span>
 										</button>
 									</div>
 
 									<div class="line"></div>
-									
+
 									<div class="step" data-target="#final">
-										
+
 										<button type="button" class="step-trigger" role="tab" aria-controls="final" id="final-trigger">
-											
+
 											<span class="bs-stepper-circle">6</span>
-											
+
 											<span class="bs-stepper-label">Final</span>
 										</button>
 									</div>
 								</div>
 
-								<div class="bs-stepper-content">
+								<div class="bs-stepper-content p-0">
 									
 									<div id="server" class="content" role="tabpanel" aria-labelledby="server-trigger">
-										
+
 										<div class="card">
 
 											<div class="card-body">
-												
+
 												<p class="text-center lead">Server Requirements</p>
 
 												<div class="row">
-													
+
 													<table class="table table-bordered">
-                  						
+
 	                  							<thead style="background: #f5f5f5;">
-	                    								
+
 	                    								<tr><th style="width:50%;">Directory</th><th>Permissions</th></tr>
 	                  							</thead>
-	                  							
+
 	                  							<tbody>
-	                    								
+
 	                    								<tr>
-	                      								
+
 	                      								<td>C:\wamp64\www\sakthi-desk\storage</td>
-	                      								
+
 	                      								<td class="text-success">Read/Write</td>
 	                    								</tr>
 
 	                    								<tr>
-	                      								
+
 	                      								<td>C:\wamp64\www\sakthi-desk\bootstrap</td>
-	                      								
+
 	                      								<td class="text-success">Read/Write</td>
 	                    								</tr>
 	                  							</tbody>
@@ -170,34 +227,34 @@
 												</div>
 
                 							<div class="row">
-                								
+
                 								<table class="table table-bordered">
-                  						
+
 	                  							<thead style="background: #f5f5f5;">
-	                    								
+
 	                    								<tr><th style="width:50%;">Requisites</th><th>Status</th></tr>
 	                  							</thead>
-	                  							
+
 	                  							<tbody>
-	                    								
+
 	                    								<tr>
-	                      								
+
 	                      								<td>Establish connection to Helpdesk License Manager</td>
-	                      								
+
 	                      								<td class="text-success">Connection Successful</td>
 	                    								</tr>
 
 	                    								<tr>
-	                      								
+
 	                      								<td>PHP Version</td>
-	                      								
+
 	                      								<td class="text-success">7.3.21</td>
 	                    								</tr>
 
 	                    								<tr>
-	                      								
+
 	                      								<td>Maximum execution time</td>
-	                      								
+
 	                      								<td class="text-success">120 (Maximum execution time is as per requirement)</td>
 	                    								</tr>
 	                  							</tbody>
@@ -205,38 +262,38 @@
                 							</div>
 
                 							<div class="row">
-	                								
+
                 								<table class="table table-bordered">
-               						
+
 	                  							<thead style="background: #f5f5f5;">
-	                    								
+
 	                    								<tr><th style="width:50%;">PHP Extensions</th><th>Status</th></tr>
 	                  							</thead>
-	                  							
+
 	                  							<tbody>
-	                    								
+
 	                    								<tr>
-	                      								
+
 	                      								<td>ldap</td>
-	                      								
+
 	                      								<td class="text-success">Enabled</td>
 	                    								</tr>
 
 	                    								<tr>
-	                      								
+
 	                      								<td>mysqli</td>
-	                      								
+
 	                      								<td class="text-success">Enabled</td>
 	                    								</tr>
 
 	                    								<tr>
-	                      								
+
 	                      								<td>redis</td>
-	                      								
+
 	                      								<td>
-	                      									
+
 	                      									<p class="text-warning">Not Enabled</p>
-																		
+
 																	<p>To enable this, please install the extension on your server and update 'C:\wamp64\bin\apache\apache2.4.46\bin\php.ini' to enable redis</p>
 
 																	<a href="javascript:;">How to install PHP extensions on my server?</a>
@@ -248,8 +305,8 @@
 											</div>
 
 											<div class="card-footer">
-												
-												<button class="btn btn-primary float-right" onclick="stepper.next()">Continue&nbsp; 
+
+												<button class="btn btn-primary float-right" onclick="stepper.next()">Continue&nbsp;
 													<i class="fas fa-arrow-right"></i>
 												</button>
 											</div>
@@ -600,7 +657,7 @@
                   								
                   								<p class="lead">Next Step</p>
 
-                  								<div class="btn btn-primary btn-lg btn-block">Login to Helpdesk &nbsp;<i class="fas fa-arrow-right"></i></div>
+                  								<div class="btn btn-primary">Login to Helpdesk &nbsp;<i class="fas fa-arrow-right"></i></div>
                 								</div>
               								</div>
 											</div>
@@ -672,6 +729,52 @@
 			     	p.style.display = "none";
 			  	}
 			}
+		</script>
+
+		<script>
+
+			var body = document.body;
+			var currentDir = body.getAttribute('dir');
+
+			var defaultStyles = document.querySelectorAll('[id^="default-styles"]');
+			var rtlStyles = document.querySelectorAll('[id^="rtl-styles"]');
+
+			const flagIcon = document.getElementById('flagIcon');
+			const englishOption = document.getElementById('englishOption');
+			const arabicOption = document.getElementById('arabicOption');
+
+			englishOption.addEventListener('click', function() {
+				flagIcon.className = 'flag-icon flag-icon-us';
+				flagIcon.alt = 'English';
+				body.setAttribute('dir', 'ltr');
+
+				defaultStyles.forEach(function(link) {
+					link.disabled = false;
+				});
+				rtlStyles.forEach(function(link) {
+					link.disabled = true;
+				});
+			});
+
+			arabicOption.addEventListener('click', function() {
+				flagIcon.className = 'flag-icon flag-icon-ar';
+				flagIcon.alt = 'Arabic';
+				body.setAttribute('dir', 'rtl');
+
+				defaultStyles.forEach(function(link) {
+					link.disabled = true;
+				});
+				rtlStyles.forEach(function(link) {
+					link.disabled = false;
+				});
+			});
+
+			defaultStyles.forEach(function(link) {
+				link.disabled = false;
+			});
+			rtlStyles.forEach(function(link) {
+				link.disabled = true;
+			});
 		</script>
 	</body>
 </html>

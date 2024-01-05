@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Faveo Installer</title>
+
+    <link rel="shortcut icon" href="../dist/img/favicon.ico" type="image/x-icon" />
+
+    <link rel="apple-touch-icon" href="../dist/img/faveo.png">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+
+    <link rel="stylesheet" id="rtl-styles" href="../dist/css/adminlte-rtl.css">
+
+    <link rel="stylesheet" id="rtl-styles-1" href="./custom-rtl.css">
+
+    <link rel="stylesheet" id="rtl-styles-2" href="../plugins/bs-stepper/css/bs-stepper-rtl.css">
+
+    <link rel="stylesheet" id="default-styles" href="../dist/css/adminlte.css">
+
+    <link rel="stylesheet" id="default-styles-1" href="./custom.css">
+
+    <link rel="stylesheet" id="default-styles-2" href="../plugins/bs-stepper/css/bs-stepper.css">
+
+    <link rel="stylesheet" href="../plugins/flag-icon-css/css/flag-icon.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+
+<body class="layout-top-nav text-sm layout-navbar-fixed" dir="ltr">
+
+<div class="wrapper">
+
+    <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+
+        <div class="container">
+
+            <a href="javascript:;" class="navbar-brand" style="">
+
+                <img src="../dist/img/faveo1.png" alt="Faveo Logo" class="brand-image install-img">
+            </a>
+
+            <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse order-3"></div>
+
+            <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+
+                        <i id="flagIcon" class="flag-icon flag-icon-us"></i>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right p-0" style="left: inherit; right: 0px;">
+
+                        <a href="javascript:;" class="dropdown-item" id="englishOption">
+
+                            <i class="flag-icon flag-icon-us mr-2"></i> English
+                        </a>
+
+                        <a href="javascript:;" class="dropdown-item" id="arabicOption">
+
+                            <i class="flag-icon flag-icon-ar mr-2"></i> Arabic
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content-wrapper" style="margin-top: 80px;">
+
+        <div class="content">
+
+            <div class="container pt-3 pb-3">
+
+                <div class="accordion" id="accordionExample">
+
+                    <div class="steps">
+
+                        <progress id="progress" value=0 max=100></progress>
+
+                        <div class="step-item">
+
+                            <button id="btn-server" class="step-button text-center" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#server" aria-expanded="true" aria-controls="server">
+                                1
+                            </button>
+
+                            <div class="step-title mt-2 text-bold">Server Requirements</div>
+                        </div>
+
+                        <div class="step-item">
+
+                            <button id="btn-license" class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#license" aria-expanded="false" aria-controls="license">
+                                2
+                            </button>
+
+                            <div class="step-title mt-2">License Agreement</div>
+                        </div>
+
+                        <div class="step-item">
+
+                            <button id="btn-database" class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#database" aria-expanded="false" aria-controls="database">
+                                3
+                            </button>
+
+                            <div class="step-title mt-2">Database Setup</div>
+                        </div>
+
+                        <div class="step-item">
+
+                            <button id="btn-start" class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#start" aria-expanded="false" aria-controls="start">
+                                4
+                            </button>
+
+                            <div class="step-title mt-2">Getting Started</div>
+                        </div>
+
+                        <div class="step-item">
+
+                            <button id="btn-code" class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#code" aria-expanded="false" aria-controls="code">
+                                5
+                            </button>
+
+                            <div class="step-title mt-2">License Code</div>
+                        </div>
+
+                        <div class="step-item">
+
+                            <button id="btn-final" class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#final" aria-expanded="false" aria-controls="final">
+                                6
+                            </button>
+
+                            <div class="step-title mt-2">Entry Gateway</div>
+                        </div>
+                    </div>
+
+                    <div id="server" class="collapse show" role="tabpanel" data-bs-parent="#accordionExample">
+
+                        <div class="card">
+
+                            <div class="card-body">
+
+                                <p class="text-center lead text-bold">Server Requirements</p>
+
+                                <div class="row">
+
+                                    <table class="table table-bordered">
+
+                                        <thead style="background: #f5f5f5;">
+
+                                        <tr><th style="width:50%;">Directory</th><th>Permissions</th></tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                        <tr>
+
+                                            <td>C:\wamp64\www\sakthi-desk\storage</td>
+
+                                            <td class="text-success">Read/Write</td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>C:\wamp64\www\sakthi-desk\bootstrap</td>
+
+                                            <td class="text-success">Read/Write</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="row">
+
+                                    <table class="table table-bordered">
+
+                                        <thead style="background: #f5f5f5;">
+
+                                        <tr><th style="width:50%;">Requisites</th><th>Status</th></tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                        <tr>
+
+                                            <td>Establish connection to Helpdesk License Manager</td>
+
+                                            <td class="text-success">Connection Successful</td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>PHP Version</td>
+
+                                            <td class="text-success">7.3.21</td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>Maximum execution time</td>
+
+                                            <td class="text-success">120 (Maximum execution time is as per requirement)</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="row">
+
+                                    <table class="table table-bordered">
+
+                                        <thead style="background: #f5f5f5;">
+
+                                        <tr><th style="width:50%;">PHP Extensions</th><th>Status</th></tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                        <tr>
+
+                                            <td>ldap</td>
+
+                                            <td class="text-success">Enabled</td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>mysqli</td>
+
+                                            <td class="text-success">Enabled</td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>redis</td>
+
+                                            <td>
+
+                                                <p class="text-warning">Not Enabled</p>
+
+                                                <p>To enable this, please install the extension on your server and update 'C:\wamp64\bin\apache\apache2.4.46\bin\php.ini' to enable redis</p>
+
+                                                <a href="javascript:;">How to install PHP extensions on my server?</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+
+                                <button class="btn btn-primary float-right" onclick="gotoStep('license')">Continue&nbsp;
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="license" class="collapse" role="tabpanel" aria-labelledby="license-trigger">
+
+                        <div class="card">
+
+                            <div class="card-body mb-2">
+
+                                <p class="text-center lead text-bold">License Agreement</p>
+
+                                Please read this software license agreement carefully before proceeding or using the software. By clicking on the "accept" button, you are consenting to be bound by this agreement. If you do not agree to all of the terms of this agreement, stop the installation process and exit.
+
+                                <div class="form-check mt-3">
+
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+
+                                    <label class="form-check-label" for="exampleCheck1">I accept the <a href="javascript:;">License Agreement</a></label>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+
+                                <button class="btn btn-primary" onclick="gotoStep('server')"><i class="fas fa-arrow-left"></i> &nbsp;Cancel</button>
+
+                                <button class="btn btn-primary float-right" onclick="gotoStep('database')">Continue <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="database" class="collapse" role="tabpanel" aria-labelledby="database-trigger">
+
+                        <div class="card">
+
+                            <div class="card-body">
+
+                                <p class="text-center lead text-bold">Database Setup</p>
+
+                                <div id="db_fields">
+
+                                    <div class="form-group row">
+
+                                        <label for="inputEmail6" class="col-sm-2 col-form-label">Host</label>
+
+                                        <div class="col-sm-10">
+
+                                            <input type="text" class="form-control" id="inputEmail6" placeholder="Host">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+
+                                        <label for="inputEmail7" class="col-sm-2 col-form-label">Database name</label>
+
+                                        <div class="col-sm-10">
+
+                                            <input type="text" class="form-control" id="inputEmail7" placeholder="Databse">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+
+                                        <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
+
+                                        <div class="col-sm-10">
+
+                                            <input type="email" class="form-control" id="inputEmail3" placeholder="User name">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+
+                                        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+
+                                        <div class="col-sm-10">
+
+                                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+
+                                        <div class="offset-sm-2 col-sm-10">
+
+                                            <div class="form-check">
+
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck2">
+
+                                                <label class="form-check-label" for="exampleCheck2">Install with dummy data </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="db_config">
+
+                                    <h6 class="mt-1 mb-3">This test will check prerequisites required to install Helpdesk</h6>
+
+                                    <div class="timeline timeline-inverse">
+
+                                        <div>
+
+                                            <i class="fas fa-check bg-success" data-toggle="tooltip" title="All Ok"></i>
+
+                                            <div class="timeline-item">
+
+                                                <h3 class="timeline-header border-0">Connected to database as root@localhost</h3>
+                                            </div>
+                                        </div>
+
+                                        <div>
+
+                                            <i class="fas fa-check bg-success" data-toggle="tooltip" title="All Ok"></i>
+
+                                            <div class="timeline-item">
+
+                                                <h3 class="timeline-header border-0">Database "installer1" selected</h3>
+                                            </div>
+                                        </div>
+
+                                        <div>
+
+                                            <i class="fas fa-check bg-success" data-toggle="tooltip" title="All Ok"></i>
+
+                                            <div class="timeline-item">
+
+                                                <h3 class="timeline-header border-0">MySQL version is 5.7.31</h3>
+                                            </div>
+                                        </div>
+
+                                        <div><i class="fas fa-check bg-success" data-toggle="tooltip" title="All Ok"></i> <div class="timeline-item"> <h3 class="timeline-header border-0">Database is empty</h3></div></div>
+
+                                        <div><i class="fas fa-info bg-warning" data-toggle="tooltip" title="Not a deal breaker, but it's recommended to have this installed for some features to work"></i> <div class="timeline-item"> <h3 class="timeline-header border-0">Environment configuration file has not been created successfully</h3></div></div>
+
+                                        <div><i class="fas fa-info bg-warning" data-toggle="tooltip" title="Not a deal breaker, but it's recommended to have this installed for some features to work"></i> <div class="timeline-item"> <h3 class="timeline-header border-0">Pre migration has not been tested successfully</h3></div></div>
+
+                                        <div><i class="fas fa-times bg-danger" data-toggle="tooltip" title="HELPDESK require this feature and can't work without it"></i> <div class="timeline-item"> <h3 class="timeline-header border-0">Database setup failed</h3></div></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+
+                                <button class="btn btn-primary" onclick="gotoStep('license')"><i class="fas fa-arrow-left"></i>&nbsp; Previous</button>
+
+                                <button class="btn btn-primary float-right" onclick="validateData()" id="validate">Continue &nbsp;
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+
+                                <button class="btn btn-primary float-right" onclick="gotoStep('start')" id="continue">Continue &nbsp;
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="start" class="collapse" role="tabpanel" aria-labelledby="start-trigger">
+
+                        <div class="card">
+
+                            <div class="card-body">
+
+                                <p class="text-center lead text-bold">Getting Started</p>
+
+                                <div class="card card-light">
+
+                                    <div class="card-header">
+
+                                        <h3 class="card-title">Sign up as Admin</h3>
+                                    </div>
+
+                                    <div class="card-body">
+
+                                        <div class="form-group row">
+
+                                            <label class="col-sm-2 col-form-label">First Name</label>
+
+                                            <div class="col-sm-10">
+
+                                                <input type="text" class="form-control"  placeholder="First Name">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+
+                                            <label class="col-sm-2 col-form-label">Last Name</label>
+
+                                            <div class="col-sm-10">
+
+                                                <input type="text" class="form-control" placeholder="Last Name">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+
+                                            <label class="col-sm-2 col-form-label">Username</label>
+
+                                            <div class="col-sm-10">
+
+                                                <input type="email" class="form-control" placeholder="User name">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+
+                                            <label class="col-sm-2 col-form-label">Password</label>
+
+                                            <div class="col-sm-10">
+
+                                                <input type="password" class="form-control" placeholder="Password">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+
+                                            <label class="col-sm-2 col-form-label">Confirm Password</label>
+
+                                            <div class="col-sm-10">
+
+                                                <input type="password" class="form-control" placeholder="Confirm Password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card card-light">
+
+                                    <div class="card-header">
+
+                                        <h3 class="card-title">System Information</h3>
+                                    </div>
+
+                                    <div class="card-body">
+
+                                        <div class="form-group row">
+
+                                            <label class="col-sm-2 col-form-label">Timezone</label>
+
+                                            <div class="col-sm-10">
+
+                                                <input type="text" class="form-control"  placeholder="Timezone">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+
+                                            <label class="col-sm-2 col-form-label">Language</label>
+
+                                            <div class="col-sm-10">
+
+                                                <input type="text" class="form-control" placeholder="Language">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+
+                                            <label class="col-sm-2 col-form-label">Environment</label>
+
+                                            <div class="col-sm-10">
+
+                                                <input type="email" class="form-control" placeholder="Environment">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+
+                                            <label class="col-sm-2 col-form-label">Default Storage Driver</label>
+
+                                            <div class="col-sm-10">
+
+                                                <input type="password" class="form-control" placeholder="Default Storage Driver">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+
+                                <button class="btn btn-primary float-right" onclick="gotoStep('code')">Continue &nbsp;
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="code" class="collapse" role="tabpanel" aria-labelledby="code-trigger">
+
+                        <div class="card">
+
+                            <div class="card-body">
+
+                                <p class="text-center lead text-bold">Faveo Helpdesk License Code</p>
+
+                                <div class="form-group row">
+
+                                    <label class="col-sm-4 col-form-label">Please enter your License Code for Faveo Helpdesk</label>
+
+                                    <div class="col-sm-8" style="display:flex;">
+
+                                        <input type="text" class="form-control" style="width: 75px;"/> <span style="margin-top: 7px;">&nbsp;-&nbsp;</span>
+                                        <input type="text" class="form-control" style="width: 75px;"/> <span style="margin-top: 7px;">&nbsp;-&nbsp;</span>
+                                        <input type="text" class="form-control" style="width: 75px;"/> <span style="margin-top: 7px;">&nbsp;-&nbsp;</span>
+                                        <input type="text" class="form-control" style="width: 75px;"/>
+                                    </div>
+                                </div>
+
+                                <p>You can find your license code in our billing portal <a href="javascript:;">billing.faveohelpdesk.com</a></p>
+                            </div>
+
+                            <div class="card-footer">
+
+                                <button class="btn btn-primary float-right" onclick="gotoStep('final')">Continue &nbsp;
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="final" class="collapse" role="tabpanel" aria-labelledby="final-trigger">
+
+                        <div class="card">
+
+                            <div class="card-body">
+
+                                <p class="text-center lead text-bold">Your Helpdesk is Ready!</p>
+
+                                <div class="alert" style="background:#f5f5f5;">
+                                    All right, sparky! You’ve made it through the installation.
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <p class="lead">Learn More</p>
+
+                                        <p><i class="fas fa-video"></i>&nbsp;&nbsp;<a href="javascript:;">Video walk through</a></p>
+                                        <p><i class="fas fa-newspaper"></i>&nbsp;&nbsp;<a href="javascript:;">Knowledge base</a></p>
+                                        <p><i class="fas fa-envelope"></i>&nbsp;&nbsp;<a href="javascript:;">Email Support</a></p>
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <p class="lead">Next Step</p>
+
+                                        <div class="btn btn-primary">Login to Helpdesk &nbsp;<i class="fas fa-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+
+        <div class="float-right d-none d-sm-inline">Faveo Enterprise v4.6.2</div>
+
+        <strong>Copyright © 2014-2021 <a href="javascript:;">Ladybird Web Solution Pvt Ltd.</a>.</strong> All rights reserved.
+    </footer>
+</div>
+
+<script src="../plugins/jquery/jquery.min.js"></script>
+
+<script src="../dist/js/adminlte.min.js"></script>
+
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>-->
+
+<script>
+
+    validateData();
+
+    function validateData() {
+
+        var k = document.getElementById("validate");
+
+        var m = document.getElementById("continue");
+
+        var n = document.getElementById("db_fields");
+
+        var p = document.getElementById("db_config");
+
+        if (k.style.display == "block") {
+
+            k.style.display = "none";
+
+            m.style.display = "block";
+
+            n.style.display = "none";
+
+            p.style.display = "block";
+
+        } else {
+
+            k.style.display = "block";
+
+            m.style.display = "none";
+
+            n.style.display = "block";
+
+            p.style.display = "none";
+        }
+    }
+
+    function gotoStep(value) {
+
+        const progress = document.querySelector('#progress');
+
+        if(value === 'server') {
+            progress.setAttribute('value', 0);
+            document.getElementById('server').classList.add('show');
+            document.getElementById('btn-server').setAttribute('aria-expanded', true);
+            document.getElementById('license').classList.remove('show');
+            document.getElementById('btn-license').setAttribute('aria-expanded', false);
+            document.getElementById('database').classList.remove('show');
+            document.getElementById('btn-database').setAttribute('aria-expanded', false);
+            document.getElementById('start').classList.remove('show');
+            document.getElementById('btn-start').setAttribute('aria-expanded', false);
+            document.getElementById('code').classList.remove('show');
+            document.getElementById('btn-code').setAttribute('aria-expanded', false);
+            document.getElementById('final').classList.remove('show');
+            document.getElementById('btn-final').setAttribute('aria-expanded', false);
+
+            document.getElementById('btn-server').nextElementSibling.classList.add('text-bold');
+            document.getElementById('btn-license').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-database').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-start').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-code').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-final').nextElementSibling.classList.remove('text-bold');
+        }
+
+        if(value === 'license') {
+            progress.setAttribute('value', 20);
+            document.getElementById('server').classList.remove('show');
+            document.getElementById('btn-server').setAttribute('aria-expanded', false);
+            document.getElementById('license').classList.add('show');
+            document.getElementById('btn-license').setAttribute('aria-expanded', true);
+            document.getElementById('database').classList.remove('show');
+            document.getElementById('btn-database').setAttribute('aria-expanded', false);
+            document.getElementById('start').classList.remove('show');
+            document.getElementById('btn-start').setAttribute('aria-expanded', false);
+            document.getElementById('code').classList.remove('show');
+            document.getElementById('btn-code').setAttribute('aria-expanded', false);
+            document.getElementById('final').classList.remove('show');
+            document.getElementById('btn-final').setAttribute('aria-expanded', false);
+
+            document.getElementById('btn-server').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-license').nextElementSibling.classList.add('text-bold');
+            document.getElementById('btn-database').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-start').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-code').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-final').nextElementSibling.classList.remove('text-bold');
+        }
+
+        if(value === 'database') {
+            progress.setAttribute('value', 40);
+            document.getElementById('server').classList.remove('show');
+            document.getElementById('btn-server').setAttribute('aria-expanded', false);
+            document.getElementById('license').classList.remove('show');
+            document.getElementById('btn-license').setAttribute('aria-expanded', false);
+            document.getElementById('database').classList.add('show');
+            document.getElementById('btn-database').setAttribute('aria-expanded', true);
+            document.getElementById('start').classList.remove('show');
+            document.getElementById('btn-start').setAttribute('aria-expanded', false);
+            document.getElementById('code').classList.remove('show');
+            document.getElementById('btn-code').setAttribute('aria-expanded', false);
+            document.getElementById('final').classList.remove('show');
+            document.getElementById('btn-final').setAttribute('aria-expanded', false);
+
+            document.getElementById('btn-server').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-license').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-database').nextElementSibling.classList.add('text-bold');
+            document.getElementById('btn-start').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-code').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-final').nextElementSibling.classList.remove('text-bold');
+        }
+
+        if(value === 'start') {
+            progress.setAttribute('value', 60);
+            document.getElementById('server').classList.remove('show');
+            document.getElementById('btn-server').setAttribute('aria-expanded', false);
+            document.getElementById('license').classList.remove('show');
+            document.getElementById('btn-license').setAttribute('aria-expanded', false);
+            document.getElementById('database').classList.remove('show');
+            document.getElementById('btn-database').setAttribute('aria-expanded', false);
+            document.getElementById('start').classList.add('show');
+            document.getElementById('btn-start').setAttribute('aria-expanded', true);
+            document.getElementById('code').classList.remove('show');
+            document.getElementById('btn-code').setAttribute('aria-expanded', false);
+            document.getElementById('final').classList.remove('show');
+            document.getElementById('btn-final').setAttribute('aria-expanded', false);
+
+            document.getElementById('btn-server').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-license').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-database').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-start').nextElementSibling.classList.add('text-bold');
+            document.getElementById('btn-code').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-final').nextElementSibling.classList.remove('text-bold');
+        }
+
+        if(value === 'code') {
+            progress.setAttribute('value', 80);
+            document.getElementById('server').classList.remove('show');
+            document.getElementById('btn-server').setAttribute('aria-expanded', false);
+            document.getElementById('license').classList.remove('show');
+            document.getElementById('btn-license').setAttribute('aria-expanded', false);
+            document.getElementById('database').classList.remove('show');
+            document.getElementById('btn-database').setAttribute('aria-expanded', false);
+            document.getElementById('start').classList.remove('show');
+            document.getElementById('btn-start').setAttribute('aria-expanded', false);
+            document.getElementById('code').classList.add('show');
+            document.getElementById('btn-code').setAttribute('aria-expanded', true);
+            document.getElementById('final').classList.remove('show');
+            document.getElementById('btn-final').setAttribute('aria-expanded', false);
+
+            document.getElementById('btn-server').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-license').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-database').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-start').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-code').nextElementSibling.classList.add('text-bold');
+            document.getElementById('btn-final').nextElementSibling.classList.remove('text-bold');
+        }
+
+        if(value === 'final') {
+            progress.setAttribute('value', 100);
+            document.getElementById('server').classList.remove('show');
+            document.getElementById('btn-server').setAttribute('aria-expanded', false);
+            document.getElementById('license').classList.remove('show');
+            document.getElementById('btn-license').setAttribute('aria-expanded', false);
+            document.getElementById('database').classList.remove('show');
+            document.getElementById('btn-database').setAttribute('aria-expanded', false);
+            document.getElementById('start').classList.remove('show');
+            document.getElementById('btn-start').setAttribute('aria-expanded', false);
+            document.getElementById('code').classList.remove('show');
+            document.getElementById('btn-code').setAttribute('aria-expanded', false);
+            document.getElementById('final').classList.add('show');
+            document.getElementById('btn-final').setAttribute('aria-expanded', true);
+
+            document.getElementById('btn-server').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-license').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-database').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-start').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-code').nextElementSibling.classList.remove('text-bold');
+            document.getElementById('btn-final').nextElementSibling.classList.add('text-bold');
+        }
+    }
+
+    // const stepButtons = document.querySelectorAll('.step-button');
+    //
+    // const progress = document.querySelector('#progress');
+    //
+    // Array.from(stepButtons).forEach((button,index) => {
+    //
+    //     button.addEventListener('click', () => {
+    //
+    //         progress.setAttribute('value', index * 100 /(stepButtons.length - 1) );//there are 3 buttons. 2 spaces.
+    //
+    //         stepButtons.forEach((item, secindex)=>{
+    //
+    //             if(index === secindex) {
+    //
+    //                 item.setAttribute('aria-expanded', true);
+    //
+    //                 item.classList.remove('done');
+    //
+    //                 document.getElementById(item.getAttribute('aria-controls')).classList.add('show')
+    //             } else {
+    //
+    //                 item.setAttribute('aria-expanded', false);
+    //
+    //                 document.getElementById(item.getAttribute('aria-controls')).classList.remove('show')
+    //             }
+    //             if(index > secindex){
+    //
+    //                 item.classList.add('done');
+    //             }
+    //
+    //             if(index < secindex){
+    //
+    //                 item.classList.remove('done');
+    //             }
+    //         })
+    //     })
+    // })
+</script>
+
+<script>
+
+    var body = document.body;
+    var currentDir = body.getAttribute('dir');
+
+    var defaultStyles = document.querySelectorAll('[id^="default-styles"]');
+    var rtlStyles = document.querySelectorAll('[id^="rtl-styles"]');
+
+    const flagIcon = document.getElementById('flagIcon');
+    const englishOption = document.getElementById('englishOption');
+    const arabicOption = document.getElementById('arabicOption');
+
+    englishOption.addEventListener('click', function() {
+        flagIcon.className = 'flag-icon flag-icon-us';
+        flagIcon.alt = 'English';
+        body.setAttribute('dir', 'ltr');
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+    });
+
+    arabicOption.addEventListener('click', function() {
+        flagIcon.className = 'flag-icon flag-icon-ar';
+        flagIcon.alt = 'Arabic';
+        body.setAttribute('dir', 'rtl');
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+    });
+
+    defaultStyles.forEach(function(link) {
+        link.disabled = false;
+    });
+    rtlStyles.forEach(function(link) {
+        link.disabled = true;
+    });
+</script>
+</body>
+</html>

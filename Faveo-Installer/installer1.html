@@ -1,743 +1,817 @@
 <!DOCTYPE html>
-
 <html lang="en">
+<head>
+    <meta charset="utf-8">
 
-	<head>
-		
-		<meta charset="utf-8">
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-
-		<title>Faveo</title>
-
-		<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-		
-		<link rel="stylesheet" href="dist/css/adminlte.min.css">
-
-		<link rel="stylesheet" href="plugins/bs-stepper/css/bs-stepper.min.css">
-		
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
-		<style>
-			
-			.install-img {
-			   margin-top: 5px !important;
-			   height: 50px !important;
-			}
-
-			.bs-stepper .step-trigger { font-weight: normal !important; }
-		</style>
-	</head>
-
-	<body class="layout-top-nav text-sm layout-navbar-fixed">
-		
-		<div class="wrapper">
-
-  			<nav class="main-header navbar navbar-expand-md navbar-light navbar-white" style="justify-content: center;">
-	 			
-	 			<div>
-					
-					<a href="javascript:;" class="navbar-brand" style="">
-		  				
-		  				<img src="dist/img/faveo1.png" alt="Faveo Logo" class="brand-image img-circle install-img">
-		  					
-		  				<span class="brand-text font-weight-light">SUPPORT TICKET SYSTEM</span>
-					</a>
-	 			</div>
-  			</nav>
-  			
-  			<div class="content-wrapper" style="margin-top: 80px;">
-	 			
-	 			<div class="content">
-					
-					<div class="container">
-		  				
-		  				<div class="row">
-			 				
-			 				<div class="bs-stepper">
-				
-								<div class="bs-stepper-header" role="tablist">
-									
-									<div class="step" data-target="#server">
-										
-										<button type="button" class="step-trigger" role="tab" aria-controls="server" id="server-trigger">
-											
-											<span class="bs-stepper-circle">1</span>
-											
-											<span class="bs-stepper-label">Server Requirements</span>
-										</button>
-									</div>
-									
-									<div class="line"></div>
-									
-									<div class="step" data-target="#license">
-										
-										<button type="button" class="step-trigger" role="tab" aria-controls="license" id="license-trigger">
-											
-											<span class="bs-stepper-circle">2</span>
-											
-											<span class="bs-stepper-label">License Agreement</span>
-										</button>
-									</div>
-
-									<div class="line"></div>
-									
-									<div class="step" data-target="#database">
-										
-										<button type="button" class="step-trigger" role="tab" aria-controls="database" id="database-trigger">
-											
-											<span class="bs-stepper-circle">3</span>
-											
-											<span class="bs-stepper-label">Database Setup</span>
-										</button>
-									</div>
-
-									<div class="line"></div>
-									
-									<div class="step" data-target="#start">
-										
-										<button type="button" class="step-trigger" role="tab" aria-controls="start" id="start-trigger">
-											
-											<span class="bs-stepper-circle">4</span>
-											
-											<span class="bs-stepper-label">Getting Started</span>
-										</button>
-									</div>
-
-									<div class="line"></div>
-									
-									<div class="step" data-target="#code">
-										
-										<button type="button" class="step-trigger" role="tab" aria-controls="code" id="code-trigger">
-											
-											<span class="bs-stepper-circle">5</span>
-											
-											<span class="bs-stepper-label">License Code</span>
-										</button>
-									</div>
-
-									<div class="line"></div>
-									
-									<div class="step" data-target="#final">
-										
-										<button type="button" class="step-trigger" role="tab" aria-controls="final" id="final-trigger">
-											
-											<span class="bs-stepper-circle">6</span>
-											
-											<span class="bs-stepper-label">Final</span>
-										</button>
-									</div>
-								</div>
-
-								<div class="bs-stepper-content">
-									
-									<div id="server" class="content" role="tabpanel" aria-labelledby="server-trigger">
-										
-										<div class="card">
-
-											<div class="card-body">
-												
-												<p class="text-center lead">Server Requirements</p>
-
-												<div class="row">
-													
-													<div class="col-sm-1"></div>
-
-													<div class="col-sm-10">
-														
-														<div class="row">
-															
-															<table class="table table-bordered">
-		                  						
-			                  							<thead style="background: #f5f5f5;">
-			                    								
-			                    								<tr><th style="width:50%;">Directory</th><th>Permissions</th></tr>
-			                  							</thead>
-			                  							
-			                  							<tbody>
-			                    								
-			                    								<tr>
-			                      								
-			                      								<td>C:\wamp64\www\sakthi-desk\storage</td>
-			                      								
-			                      								<td class="text-success">Read/Write</td>
-			                    								</tr>
-
-			                    								<tr>
-			                      								
-			                      								<td>C:\wamp64\www\sakthi-desk\bootstrap</td>
-			                      								
-			                      								<td class="text-success">Read/Write</td>
-			                    								</tr>
-			                  							</tbody>
-			                							</table>
-														</div>
-
-		                							<div class="row">
-		                								
-		                								<table class="table table-bordered">
-		                  						
-			                  							<thead style="background: #f5f5f5;">
-			                    								
-			                    								<tr><th style="width:50%;">Requisites</th><th>Status</th></tr>
-			                  							</thead>
-			                  							
-			                  							<tbody>
-			                    								
-			                    								<tr>
-			                      								
-			                      								<td>Establish connection to Helpdesk License Manager</td>
-			                      								
-			                      								<td class="text-success">Connection Successful</td>
-			                    								</tr>
-
-			                    								<tr>
-			                      								
-			                      								<td>PHP Version</td>
-			                      								
-			                      								<td class="text-success">7.3.21</td>
-			                    								</tr>
-
-			                    								<tr>
-			                      								
-			                      								<td>Maximum execution time</td>
-			                      								
-			                      								<td class="text-success">120 (Maximum execution time is as per requirement)</td>
-			                    								</tr>
-			                  							</tbody>
-			                							</table>
-		                							</div>
-
-		                							<div class="row">
-			                								
-		                								<table class="table table-bordered">
-		               						
-			                  							<thead style="background: #f5f5f5;">
-			                    								
-			                    								<tr><th style="width:50%;">PHP Extensions</th><th>Status</th></tr>
-			                  							</thead>
-			                  							
-			                  							<tbody>
-			                    								
-			                    								<tr>
-			                      								
-			                      								<td>ldap</td>
-			                      								
-			                      								<td class="text-success">Enabled</td>
-			                    								</tr>
-
-			                    								<tr>
-			                      								
-			                      								<td>mysqli</td>
-			                      								
-			                      								<td class="text-success">Enabled</td>
-			                    								</tr>
-
-			                    								<tr>
-			                      								
-			                      								<td>redis</td>
-			                      								
-			                      								<td>
-			                      									
-			                      									<p class="text-warning">Not Enabled</p>
-																				
-																			<p>To enable this, please install the extension on your server and update 'C:\wamp64\bin\apache\apache2.4.46\bin\php.ini' to enable redis</p>
-
-																			<a href="javascript:;">How to install PHP extensions on my server?</a>
-			                      								</td>
-			                    								</tr>
-			                  							</tbody>
-			                							</table>
-		                							</div>
-													</div>	
-													
-													<div class="col-sm-1"></div>	
-												</div>
-											</div>
-
-											<div class="card-footer">
-												
-												<button class="btn btn-primary float-right" onclick="stepper.next()">Continue&nbsp; 
-													<i class="fas fa-arrow-right"></i>
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div id="license" class="content" role="tabpanel" aria-labelledby="license-trigger">
-										
-										<div class="card">
-
-						              	<div class="card-body">
-						               	
-						               	<p class="text-center lead">License Agreement</p>
-
-						               	<div class="row">
-						               		
-						               		<div class="col-sm-1"></div>
-
-						               		<div class="col-sm-10">
-						               			
-						               			Please read this software license agreement carefully before proceeding or using the software. By clicking on the "accept" button, you are consenting to be bound by this agreement. If you do not agree to all of the terms of this agreement, stop the installation process and exit.
-
-								               	<div class="form-check mt-3">
-
-								                    	<input type="checkbox" class="form-check-input" id="exampleCheck1">
-								                    
-								                    	<label class="form-check-label" for="exampleCheck1">I accept the <a href="javascript:;">License Agreement</a>
-								                    	</label>
-								                  </div>
-						               		</div>
-						               		
-						               		<div class="col-sm-1"></div>
-
-						               	</div>
-						               </div>
-
-						               <div class="card-footer">
-						               	
-						               	<button class="btn btn-primary" onclick="stepper.previous()"><i class="fas fa-arrow-left"></i> &nbsp;Cancel</button>
-
-												<button class="btn btn-primary float-right" onclick="stepper.next()">Continue <i class="fas fa-arrow-right"></i></button>
-						               </div>
-						             </div>
-									</div>
-
-									<div id="database" class="content" role="tabpanel" aria-labelledby="database-trigger">
-										
-										<div class="card">
-
-              							<div class="card-body">
-
-              								<div class="row">
-              									
-              									<div class="col-sm-3"></div>
-
-              									<div class="col-sm-6 card">
-              										
-              										<div id="db_fields" class="card-body">
-
-              											<p class="text-center lead">Database Setup</p>
-
-															<div class="form-group row">
-			                    							
-			                    							<label for="inputEmail6" class="col-sm-3 col-form-label">Host</label>
-			                    							
-			                    							<div class="col-sm-9">
-			                      							
-			                      							<input type="text" class="form-control" id="inputEmail6" placeholder="Host">
-			                    							</div>
-			                  						</div>
-
-			                  						<div class="form-group row">
-			                    							
-			                    							<label for="inputEmail7" class="col-sm-3 col-form-label">Database name</label>
-			                    							
-			                    							<div class="col-sm-9">
-			                      							
-			                      							<input type="text" class="form-control" id="inputEmail7" placeholder="Databse">
-			                    							</div>
-			                  						</div>
-
-			                  						<div class="form-group row">
-			                    							
-			                    							<label for="inputEmail3" class="col-sm-3 col-form-label">Username</label>
-			                    							
-			                    							<div class="col-sm-9">
-			                      							
-			                      							<input type="email" class="form-control" id="inputEmail3" placeholder="User name">
-			                    							</div>
-			                  						</div>
-			                  						
-			                  						<div class="form-group row">
-			                    							
-			                    							<label for="inputPassword3" class="col-sm-3 col-form-label">Password</label>
-			                    							
-			                    							<div class="col-sm-9">
-			                      							
-			                      							<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-			                    							</div>
-			                  						</div>
-			                  						
-			                  						<div class="form-group row">
-			                    							
-			                    							<div class="offset-sm-3 col-sm-9">
-			                      							
-			                      							<div class="form-check">
-			                        							
-			                        							<input type="checkbox" class="form-check-input" id="exampleCheck2">
-			                        							
-			                        							<label class="form-check-label" for="exampleCheck2">Install with dummy data </label>
-			                      							</div>
-			                    							</div>
-			                  						</div>
-		              								</div>
-              									</div>
-
-              									<div class="col-sm-3"></div>
-              								</div>
-
-              								<div class="row">
-              									
-              									<div class="col-sm-1"></div>
-
-              									<div class="col-sm-10">
-              										
-              										<div id="db_config">
-		              									
-		              									<h6 class="mt-1 mb-3">This test will check prerequisites required to install Helpdesk</h6>	
-
-		              									<div class="timeline timeline-inverse">
-		                      
-								                      	<div>
-								                        	
-								                        	<i class="fas fa-check bg-success" data-toggle="tooltip" title="All Ok"></i>
-
-								                        	<div class="timeline-item">
-								                          	
-								                          		<h3 class="timeline-header border-0">Connected to database as root@localhost</h3>
-								                        	</div>
-								                      	</div>
-
-								                      	<div>
-								                        	
-								                        	<i class="fas fa-check bg-success" data-toggle="tooltip" title="All Ok"></i>
-
-								                        	<div class="timeline-item">
-								                          	
-								                          		<h3 class="timeline-header border-0">Database "installer1" selected</h3>
-								                        	</div>
-								                      	</div>
-
-								                      	<div>
-								                        	
-								                        	<i class="fas fa-check bg-success" data-toggle="tooltip" title="All Ok"></i>
-
-								                        	<div class="timeline-item">
-								                          	
-								                          		<h3 class="timeline-header border-0">MySQL version is 5.7.31</h3>
-								                        	</div>
-								                      	</div>
-
-								                      	<div><i class="fas fa-check bg-success" data-toggle="tooltip" title="All Ok"></i> <div class="timeline-item"> <h3 class="timeline-header border-0">Database is empty</h3></div></div>
-
-								                      	<div><i class="fas fa-info bg-warning" data-toggle="tooltip" title="Not a deal breaker, but it's recommended to have this installed for some features to work"></i> <div class="timeline-item"> <h3 class="timeline-header border-0">Environment configuration file has not been created successfully</h3></div></div>
-
-								                      	<div><i class="fas fa-info bg-warning" data-toggle="tooltip" title="Not a deal breaker, but it's recommended to have this installed for some features to work"></i> <div class="timeline-item"> <h3 class="timeline-header border-0">Pre migration has not been tested successfully</h3></div></div>
-
-								                      	<div><i class="fas fa-times bg-danger" data-toggle="tooltip" title="HELPDESK require this feature and can't work without it"></i> <div class="timeline-item"> <h3 class="timeline-header border-0">Database setup failed</h3></div></div>
-								                    	</div>
-
-		              								</div>
-              									</div>
-
-              									<div class="col-sm-1"></div>
-              								</div>
-                						</div>
-				                		
-				                		<div class="card-footer">
-                  						
-                  						<button class="btn btn-primary" onclick="stepper.previous()"><i class="fas fa-arrow-left"></i>&nbsp; Previous</button>
-										
-												<button class="btn btn-primary float-right" onclick="validateData()" id="validate">Continue &nbsp;
-													<i class="fas fa-arrow-right"></i>
-												</button>
-
-												<button class="btn btn-primary float-right" onclick="stepper.next()" id="continue">Continue &nbsp;
-													<i class="fas fa-arrow-right"></i>
-												</button>
-                						</div>
-                					</div>
-									</div>
-
-									<div id="start" class="content" role="tabpanel" aria-labelledby="start-trigger">
-										
-										<div class="card">
-
-              							<div class="card-body">
-
-              								<p class="text-center lead">Getting Started</p>
-
-              								<div class="row">
-              									
-              									<div class="col-sm-3"></div>
-
-		              								<div class="col-sm-6">
-		              									
-		              									<div class="card">
-
-																<div class="card-body">
-																	
-																	<p class="text-center lead">Sign up as Admin</p>
-
-																	<div class="form-group row">
-					                    							
-					                    							<label class="col-sm-3 col-form-label">First Name</label>
-					                    							
-					                    							<div class="col-sm-9">
-					                      							
-					                      							<input type="text" class="form-control"  placeholder="First Name">
-					                    							</div>
-					                  						</div>
-
-					                  						<div class="form-group row">
-					                    							
-					                    							<label class="col-sm-3 col-form-label">Last Name</label>
-					                    							
-					                    							<div class="col-sm-9">
-					                      							
-					                      							<input type="text" class="form-control" placeholder="Last Name">
-					                    							</div>
-					                  						</div>
-
-					                  						<div class="form-group row">
-					                    							
-					                    							<label class="col-sm-3 col-form-label">Username</label>
-					                    							
-					                    							<div class="col-sm-9">
-					                      							
-					                      							<input type="email" class="form-control" placeholder="User name">
-					                    							</div>
-					                  						</div>
-					                  						
-					                  						<div class="form-group row">
-					                    							
-					                    							<label class="col-sm-3 col-form-label">Password</label>
-					                    							
-					                    							<div class="col-sm-9">
-					                      							
-					                      							<input type="password" class="form-control" placeholder="Password">
-					                    							</div>
-					                  						</div>
-
-					                  						<div class="form-group row">
-					                    							
-					                    							<label class="col-sm-3 col-form-label">Confirm Password</label>
-					                    							
-					                    							<div class="col-sm-9">
-					                      							
-					                      							<input type="password" class="form-control" placeholder="Confirm Password">
-					                    							</div>
-					                  						</div>
-																</div>
-			              								</div>
-
-			              								<div class="card">
-
-																<div class="card-body">
-																	
-																	<p class="text-center lead">System Information</p>
-
-																	<div class="form-group row">
-					                    							
-					                    							<label class="col-sm-3 col-form-label">Timezone</label>
-					                    							
-					                    							<div class="col-sm-9">
-					                      							
-					                      							<input type="text" class="form-control"  placeholder="Timezone">
-					                    							</div>
-					                  						</div>
-
-					                  						<div class="form-group row">
-					                    							
-					                    							<label class="col-sm-3 col-form-label">Language</label>
-					                    							
-					                    							<div class="col-sm-9">
-					                      							
-					                      							<input type="text" class="form-control" placeholder="Language">
-					                    							</div>
-					                  						</div>
-
-					                  						<div class="form-group row">
-					                    							
-					                    							<label class="col-sm-3 col-form-label">Environment</label>
-					                    							
-					                    							<div class="col-sm-9">
-					                      							
-					                      							<input type="email" class="form-control" placeholder="Environment">
-					                    							</div>
-					                  						</div>
-					                  						
-					                  						<div class="form-group row">
-					                    							
-					                    							<label class="col-sm-3 col-form-label">Default Storage Driver</label>
-					                    							
-					                    							<div class="col-sm-9">
-					                      							
-					                      							<input type="password" class="form-control" placeholder="Default Storage Driver">
-					                    							</div>
-					                  						</div>
-																</div>
-			              								</div>
-		              								</div>
-
-		              								<div class="col-sm-3"></div>
-              								</div>
-                						</div>
-				                		
-				                		<div class="card-footer">
-                  						
-												<button class="btn btn-primary float-right" onclick="stepper.next()">Continue &nbsp;
-													<i class="fas fa-arrow-right"></i>
-												</button>
-                						</div>
-                					</div>
-									</div>
-
-									<div id="code" class="content" role="tabpanel" aria-labelledby="code-trigger">
-										
-										<div class="card">
-
-											<div class="card-body">
-												
-												<p class="text-center lead">Faveo Helpdesk License Code</p>
-
-												<div class="row">
-													
-													<div class="col-sm-1"></div>
-
-													<div class="col-sm-10">
-														
-														<div class="form-group row">
-				                    							
-		                    							<label class="col-sm-4 col-form-label">Please enter your License Code for Faveo Helpdesk</label>
-		                    							
-		                    							<div class="col-sm-8" style="display:flex;">
-		                      							
-		                      							<input type="text" class="form-control" style="width: 75px;"/> <span style="margin-top: 7px;">&nbsp;-&nbsp;</span> 
-		                      							<input type="text" class="form-control" style="width: 75px;"/> <span style="margin-top: 7px;">&nbsp;-&nbsp;</span> 
-		                      							<input type="text" class="form-control" style="width: 75px;"/> <span style="margin-top: 7px;">&nbsp;-&nbsp;</span> 
-		                      							<input type="text" class="form-control" style="width: 75px;"/>
-		                    							</div>
-		                  						</div>
-
-		                  						<p>You can find your license code in our billing portal <a href="javascript:;">billing.faveohelpdesk.com</a></p>
-													</div>
-
-													<div class="col-sm-1"></div>
-												</div>
-											</div>
-
-											<div class="card-footer">
-												
-												<button class="btn btn-primary float-right" onclick="stepper.next()">Continue &nbsp;
-													<i class="fas fa-arrow-right"></i>
-												</button>
-											</div>
-										</div>
-									</div>
-
-									<div id="final" class="content" role="tabpanel" aria-labelledby="final-trigger">
-										
-										<div class="card">
-											
-											<div class="card-body">
-												
-												<p class="text-center lead">Your Helpdesk is Ready!</p>
-
-												<div class="row">
-													
-													<div class="col-sm-1"></div>
-
-													<div class="col-sm-10">
-														
-														<div class="alert" style="background:#f5f5f5;">
-									                  All right, sparky! You’ve made it through the installation.
-									               </div>
-
-									               <div class="row">
-			                							
-			                							<div class="col-6">
-		                  								
-		                  								<p class="lead">Learn More</p>
-
-		                  								<p><i class="fas fa-video"></i>&nbsp;&nbsp;<a href="javascript:;">Video walk through</a></p>
-		                  								<p><i class="fas fa-newspaper"></i>&nbsp;&nbsp;<a href="javascript:;">Knowledge base</a></p>
-		                  								<p><i class="fas fa-envelope"></i>&nbsp;&nbsp;<a href="javascript:;">Email Support</a></p>
-		                								</div>
-
-		                								<div class="col-6">
-		                  								
-		                  								<p class="lead">Next Step</p>
-
-		                  								<div class="btn btn-primary btn-lg btn-block">Login to Helpdesk &nbsp;<i class="fas fa-arrow-right"></i></div>
-		                								</div>
-		              								</div>
-													</div>
-
-													<div class="col-sm-1"></div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-			 			</div>
-		  			</div>
-		  		</div>
-	 		</div>
-  			
-  			<footer class="main-footer">
-	 			
-	 			<div class="float-right d-none d-sm-inline">Faveo Enterprise v4.6.2</div>
-	 			
-	 			<strong>Copyright © 2014-2021 <a href="javascript:;">Ladybird Web Solution Pvt Ltd.</a>.</strong> All rights reserved.
-  			</footer>
-		</div>
-
-		<script src="plugins/jquery/jquery.min.js"></script>
-		
-		<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-		
-		<script src="dist/js/adminlte.min.js"></script>
-
-		<script src="plugins/bs-stepper/js/bs-stepper.min.js"></script>
-
-		<script>
-			
-			$(document).ready(function(){
-			  $('[data-toggle="tooltip"]').tooltip();   
-			});
-
-			validateData();
-
-			document.addEventListener('DOMContentLoaded', function () {
-				window.stepper = new Stepper(document.querySelector('.bs-stepper'))
-			});
-
-			function validateData() {
-
-				var k = document.getElementById("validate");
-
-				var m = document.getElementById("continue");
-
-				var n = document.getElementById("db_fields");
-				
-				var p = document.getElementById("db_config");
-
-			  	if (k.style.display == "block") {
-
-			     	k.style.display = "none";
-
-			     	m.style.display = "block";
-
-			     	n.style.display = "none";
-			     	
-			     	p.style.display = "block";
-
-			  	} else {
-			    	
-			     	k.style.display = "block";
-
-			     	m.style.display = "none";
-
-			     	n.style.display = "block";
-			     	
-			     	p.style.display = "none";
-			  	}
-			}
-		</script>
-	</body>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Faveo</title>
+
+    <meta name="keywords" content="Faveo" />
+
+    <meta name="description" content="Faveo">
+
+    <meta name="author" content="Sakthivel Munusami">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../dist/img/favicon.ico" type="image/x-icon" />
+
+    <link rel="apple-touch-icon" href="../dist/img/faveo.png">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+
+    <link rel="stylesheet" id="rtl-styles" href="../dist/css/adminlte-rtl.css">
+
+    <link rel="stylesheet" id="rtl-styles-1" href="../plugins/bs-stepper/css/bs-stepper-rtl.css">
+
+    <link rel="stylesheet" id="default-styles" href="../dist/css/adminlte.css">
+
+    <link rel="stylesheet" id="default-styles-1" href="../plugins/bs-stepper/css/bs-stepper.css">
+
+    <link rel="stylesheet" href="../plugins/flag-icon-css/css/flag-icon.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+    <style>
+
+        .login-box {
+            width: 100%;
+            padding: 10%;
+        }
+
+        .login-card-body {
+            border-radius: .25rem !important;
+        }
+
+        .bs-stepper .step-trigger { font-weight: normal !important; }
+
+        .login-logo {
+            position: sticky;
+            z-index: 999;
+            background: #e9ecef;
+            padding-top: 10px;
+            top: 0;
+        }
+
+        .fixed-plugin{
+            position: fixed;
+            top:0px;
+            right: 50px;
+            z-index: 1031;
+        }
+
+        .fixed-plugin .fa-cog{
+            color: #2D2D2D;
+            background-color: rgba(0,0,0,.2);
+            padding: 10px;
+            border-radius: 0 0 6px 6px;
+        }
+    </style>
+</head>
+
+<body class="hold-transition login-page" dir="ltr">
+
+<div class="login-box">
+
+    <div class="login-logo">
+
+        <a href="#"><b>SUPPORT </b>TICKET SYSTEM</a>
+    </div>
+
+    <div class="card">
+
+        <div class="card-body login-card-body">
+
+            <div class="col-sm-12">
+
+                <div class="bs-stepper">
+
+                    <div class="bs-stepper-header" role="tablist">
+
+                        <div class="step" data-target="#server">
+
+                            <button type="button" class="step-trigger" role="tab" aria-controls="server" id="server-trigger">
+
+                                <span class="bs-stepper-circle">
+
+                                    <span class="fas fa-server" aria-hidden="true"></span>
+                                </span>
+
+                                <span class="bs-stepper-label">Server Requirements</span>
+                            </button>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="step" data-target="#license">
+
+                            <button type="button" class="step-trigger" role="tab" aria-controls="license" id="license-trigger">
+
+                                <span class="bs-stepper-circle">
+
+                                    <span class="fas fa-handshake" aria-hidden="true"></span>
+                                </span>
+
+                                <span class="bs-stepper-label">License Agreement</span>
+                            </button>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="step" data-target="#database">
+
+                            <button type="button" class="step-trigger" role="tab" aria-controls="database" id="database-trigger">
+
+                                <span class="bs-stepper-circle">
+
+                                    <span class="fas fa-database" aria-hidden="true"></span>
+                                </span>
+
+                                <span class="bs-stepper-label">Database Setup</span>
+                            </button>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="step" data-target="#start">
+
+                            <button type="button" class="step-trigger" role="tab" aria-controls="start" id="start-trigger">
+
+                                <span class="bs-stepper-circle">
+
+                                    <span class="fas fa-meteor" aria-hidden="true"></span>
+                                </span>
+
+                                <span class="bs-stepper-label">Getting Started</span>
+                            </button>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="step" data-target="#code">
+
+                            <button type="button" class="step-trigger" role="tab" aria-controls="code" id="code-trigger">
+
+                                <span class="bs-stepper-circle">
+
+                                    <span class="fas fa-wrench" aria-hidden="true"></span>
+                                </span>
+
+                                <span class="bs-stepper-label">License Code</span>
+                            </button>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="step" data-target="#final">
+
+                            <button type="button" class="step-trigger" role="tab" aria-controls="final" id="final-trigger">
+
+                                <span class="bs-stepper-circle">
+
+                                    <span class="far fa-grin-stars" aria-hidden="true"></span>
+                                </span>
+
+                                <span class="bs-stepper-label">Final</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bs-stepper-content p-0">
+
+                        <div id="server" class="content" role="tabpanel" aria-labelledby="server-trigger">
+
+                            <div class="card-body">
+
+                                <div class="row">
+
+                                    <table class="table table-bordered">
+
+                                        <thead style="background: #f5f5f5;">
+
+                                        <tr><th style="width:50%;">Directory</th><th>Permissions</th></tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                        <tr>
+
+                                            <td>C:\wamp64\www\sakthi-desk\storage</td>
+
+                                            <td class="text-success">Read/Write</td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>C:\wamp64\www\sakthi-desk\bootstrap</td>
+
+                                            <td class="text-success">Read/Write</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="row">
+
+                                    <table class="table table-bordered">
+
+                                        <thead style="background: #f5f5f5;">
+
+                                        <tr><th style="width:50%;">Requisites</th><th>Status</th></tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                        <tr>
+
+                                            <td>Establish connection to Helpdesk License Manager</td>
+
+                                            <td class="text-success">Connection Successful</td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>PHP Version</td>
+
+                                            <td class="text-success">7.3.21</td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>Maximum execution time</td>
+
+                                            <td class="text-success">120 (Maximum execution time is as per requirement)</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="row">
+
+                                    <table class="table table-bordered">
+
+                                        <thead style="background: #f5f5f5;">
+
+                                        <tr><th style="width:50%;">PHP Extensions</th><th>Status</th></tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                        <tr>
+
+                                            <td>ldap</td>
+
+                                            <td class="text-success">Enabled</td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>mysqli</td>
+
+                                            <td class="text-success">Enabled</td>
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>redis</td>
+
+                                            <td>
+
+                                                <p class="text-warning">Not Enabled</p>
+
+                                                <p>To enable this, please install the extension on your server and update 'C:\wamp64\bin\apache\apache2.4.46\bin\php.ini' to enable redis</p>
+
+                                                <a href="javascript:;">How to install PHP extensions on my server?</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="row justify-content-end">
+
+                                    <button class="btn btn-primary" onclick="stepper.next()">Continue&nbsp;
+
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="license" class="content" role="tabpanel" aria-labelledby="license-trigger">
+
+                            <div class="card-body">
+
+                                Please read this software license agreement carefully before proceeding or using the software. By clicking on the "accept" button, you are consenting to be bound by this agreement. If you do not agree to all of the terms of this agreement, stop the installation process and exit.
+
+                                <div class="form-check mt-3 mb-3">
+
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+
+                                    <label class="form-check-label" for="exampleCheck1">I accept the <a href="javascript:;">License Agreement</a></label>
+                                </div>
+
+                                <div class="row justify-content-between">
+
+                                    <button class="btn btn-danger" onclick="stepper.previous()"><i class="fas fa-arrow-left"></i> &nbsp;Cancel</button>
+
+                                    <button class="btn btn-primary float-right" onclick="stepper.next()">Continue <i class="fas fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="database" class="content" role="tabpanel" aria-labelledby="database-trigger">
+
+                            <div class="card-body">
+
+                                <div id="db_fields">
+
+                                    <div class="form-group row">
+
+                                        <label for="inputEmail6" class="col-sm-2 col-form-label">Host</label>
+
+                                        <div class="col-sm-10">
+
+                                            <input type="text" class="form-control" id="inputEmail6" placeholder="Host">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+
+                                        <label for="inputEmail7" class="col-sm-2 col-form-label">Database name</label>
+
+                                        <div class="col-sm-10">
+
+                                            <input type="text" class="form-control" id="inputEmail7" placeholder="Databse">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+
+                                        <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
+
+                                        <div class="col-sm-10">
+
+                                            <input type="email" class="form-control" id="inputEmail3" placeholder="User name">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+
+                                        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+
+                                        <div class="col-sm-10">
+
+                                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+
+                                        <div class="offset-sm-2 col-sm-10">
+
+                                            <div class="form-check">
+
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck2">
+
+                                                <label class="form-check-label" for="exampleCheck2">Install with dummy data </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="db_config">
+
+                                    <h6 class="mt-1 mb-3">This test will check prerequisites required to install Helpdesk</h6>
+
+                                    <div class="timeline timeline-inverse">
+
+                                        <div>
+
+                                            <i class="fas fa-check bg-success" data-toggle="tooltip" title="All Ok"></i>
+
+                                            <div class="timeline-item">
+
+                                                <h3 class="timeline-header border-0">Connected to database as root@localhost</h3>
+                                            </div>
+                                        </div>
+
+                                        <div>
+
+                                            <i class="fas fa-check bg-success" data-toggle="tooltip" title="All Ok"></i>
+
+                                            <div class="timeline-item">
+
+                                                <h3 class="timeline-header border-0">Database "installer1" selected</h3>
+                                            </div>
+                                        </div>
+
+                                        <div>
+
+                                            <i class="fas fa-check bg-success" data-toggle="tooltip" title="All Ok"></i>
+
+                                            <div class="timeline-item">
+
+                                                <h3 class="timeline-header border-0">MySQL version is 5.7.31</h3>
+                                            </div>
+                                        </div>
+
+                                        <div><i class="fas fa-check bg-success" data-toggle="tooltip" title="All Ok"></i> <div class="timeline-item"> <h3 class="timeline-header border-0">Database is empty</h3></div></div>
+
+                                        <div><i class="fas fa-info bg-warning" data-toggle="tooltip" title="Not a deal breaker, but it's recommended to have this installed for some features to work"></i> <div class="timeline-item"> <h3 class="timeline-header border-0">Environment configuration file has not been created successfully</h3></div></div>
+
+                                        <div><i class="fas fa-info bg-warning" data-toggle="tooltip" title="Not a deal breaker, but it's recommended to have this installed for some features to work"></i> <div class="timeline-item"> <h3 class="timeline-header border-0">Pre migration has not been tested successfully</h3></div></div>
+
+                                        <div><i class="fas fa-times bg-danger" data-toggle="tooltip" title="HELPDESK require this feature and can't work without it"></i> <div class="timeline-item"> <h3 class="timeline-header border-0">Database setup failed</h3></div></div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row justify-content-between">
+
+                                    <button class="btn btn-primary" onclick="stepper.previous()"><i class="fas fa-arrow-left"></i>&nbsp; Previous</button>
+
+                                    <button class="btn btn-primary float-right" onclick="validateData()" id="validate">Continue &nbsp;
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+
+                                    <button class="btn btn-primary float-right" onclick="stepper.next()" id="continue">Continue &nbsp;
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="start" class="content" role="tabpanel" aria-labelledby="start-trigger">
+
+                            <div class="card-body">
+
+                                <div class="row">
+
+                                    <div class="col-sm-12 p-0 mb-3">
+
+                                        <div class="card card-light">
+
+                                            <div class="card-header">
+
+                                                <h3 class="card-title">Sign up as Admin</h3>
+                                            </div>
+
+                                            <div class="card-body">
+
+                                                <div class="form-group row">
+
+                                                    <label class="col-sm-2 col-form-label">First Name</label>
+
+                                                    <div class="col-sm-10">
+
+                                                        <input type="text" class="form-control"  placeholder="First Name">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+
+                                                    <label class="col-sm-2 col-form-label">Last Name</label>
+
+                                                    <div class="col-sm-10">
+
+                                                        <input type="text" class="form-control" placeholder="Last Name">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+
+                                                    <label class="col-sm-2 col-form-label">Username</label>
+
+                                                    <div class="col-sm-10">
+
+                                                        <input type="email" class="form-control" placeholder="User name">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+
+                                                    <label class="col-sm-2 col-form-label">Password</label>
+
+                                                    <div class="col-sm-10">
+
+                                                        <input type="password" class="form-control" placeholder="Password">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+
+                                                    <label class="col-sm-2 col-form-label">Confirm Password</label>
+
+                                                    <div class="col-sm-10">
+
+                                                        <input type="password" class="form-control" placeholder="Confirm Password">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card card-light mt-3">
+
+                                            <div class="card-header">
+
+                                                <h3 class="card-title">System Information</h3>
+                                            </div>
+
+                                            <div class="card-body">
+
+                                                <div class="form-group row">
+
+                                                    <label class="col-sm-2 col-form-label">Timezone</label>
+
+                                                    <div class="col-sm-10">
+
+                                                        <input type="text" class="form-control"  placeholder="Timezone">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+
+                                                    <label class="col-sm-2 col-form-label">Language</label>
+
+                                                    <div class="col-sm-10">
+
+                                                        <input type="text" class="form-control" placeholder="Language">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+
+                                                    <label class="col-sm-2 col-form-label">Environment</label>
+
+                                                    <div class="col-sm-10">
+
+                                                        <input type="email" class="form-control" placeholder="Environment">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+
+                                                    <label class="col-sm-2 col-form-label">Default Storage Driver</label>
+
+                                                    <div class="col-sm-10">
+
+                                                        <input type="password" class="form-control" placeholder="Default Storage Driver">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-end">
+
+                                    <button class="btn btn-primary" onclick="stepper.next()">Continue &nbsp;
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="code" class="content" role="tabpanel" aria-labelledby="code-trigger">
+
+                            <div class="card-body">
+
+                                <div class="form-group row">
+
+                                    <label class="col-sm-4 col-form-label">Please enter your License Code for Faveo Helpdesk</label>
+
+                                    <div class="col-sm-8" style="display:flex;">
+
+                                        <input type="text" class="form-control" style="width: 75px;"/> <span style="margin-top: 7px;">&nbsp;-&nbsp;</span>
+                                        <input type="text" class="form-control" style="width: 75px;"/> <span style="margin-top: 7px;">&nbsp;-&nbsp;</span>
+                                        <input type="text" class="form-control" style="width: 75px;"/> <span style="margin-top: 7px;">&nbsp;-&nbsp;</span>
+                                        <input type="text" class="form-control" style="width: 75px;"/>
+                                    </div>
+                                </div>
+
+                                <p>You can find your license code in our billing portal <a href="javascript:;">billing.faveohelpdesk.com</a></p>
+
+
+                                <div class="row justify-content-end">
+
+                                    <button class="btn btn-primary" onclick="stepper.next()">Continue &nbsp;
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="final" class="content" role="tabpanel" aria-labelledby="final-trigger">
+
+                            <div class="card-body">
+
+                                <div class="alert" style="background:#f5f5f5;">
+                                    All right, sparky! You’ve made it through the installation.
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-6">
+
+                                        <p class="lead">Learn More</p>
+
+                                        <p><i class="fas fa-video"></i>&nbsp;&nbsp;<a href="javascript:;">Video walk through</a></p>
+                                        <p><i class="fas fa-newspaper"></i>&nbsp;&nbsp;<a href="javascript:;">Knowledge base</a></p>
+                                        <p><i class="fas fa-envelope"></i>&nbsp;&nbsp;<a href="javascript:;">Email Support</a></p>
+                                    </div>
+
+                                    <div class="col-6">
+
+                                        <p class="lead">Next Step</p>
+
+                                        <div class="btn btn-primary btn-lg btn-block">Login to Helpdesk &nbsp;<i class="fas fa-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.login-card-body -->
+    </div>
+
+    <div class="fixed-plugin">
+
+        <div class="dropdown">
+
+            <a href="#" data-toggle="dropdown" aria-expanded="false">
+
+                <i class="fa fa-cog fa-2x"> </i>
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right p-0" style="left: inherit; right: 0px;">
+
+                <a href="javascript:;" class="dropdown-item" id="englishOption">
+
+                    <i class="flag-icon flag-icon-us mr-2"></i> English
+                </a>
+
+                <a href="javascript:;" class="dropdown-item" id="arabicOption">
+
+                    <i class="flag-icon flag-icon-ar mr-2"></i> Arabic
+                </a>
+            </div>
+
+<!--            <ul class="dropdown-menu">-->
+<!--                <li class="header-title">Examples</li>-->
+<!--                <li class="active">-->
+<!--                    <a href="wizard-create-profile.html">-->
+<!--                        <img src="assets/img/wizard-create-profile.png">-->
+<!--                        Create Profile-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="wizard-find-desk.html">-->
+<!--                        <img src="assets/img/wizard-find-desk.png">-->
+<!--                        Find Desk-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="wizard-list-place.html">-->
+<!--                        <img src="assets/img/wizard-list-place.png">-->
+<!--                        List Your Place-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="header-title">Colors</li>-->
+<!--                <li class="adjustments-line">-->
+<!--                    <a href="javascript:void(0)" class="switch-trigger">-->
+<!--                        <div class="text-center">-->
+<!--                            <span class="badge filter badge-blue" data-color="blue"></span>-->
+<!--                            <span class="badge filter badge-azure" data-color="azure"></span>-->
+<!--                            <span class="badge filter badge-green" data-color="green"></span>-->
+<!--                            <span class="badge filter badge-orange active" data-color="orange"></span>-->
+<!--                            <span class="badge filter badge-red" data-color="red"></span>-->
+<!--                        </div>-->
+<!--                        <div class="clearfix"></div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="tutorial">-->
+<!--                    <div class="text-center">-->
+<!--                        <a href="documentation/elements.html" target="_blank" class="btn btn-default btn-fill btn-block">Documentation</a>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--                <li class="license">-->
+<!--                    Personal License-->
+<!--                    <div class="text-center">-->
+<!--                        <a href="https://www.creative-tim.com/product/paper-bootstrap-wizard" target="_blank" class="btn btn-info btn-fill btn-block">Download, it's free!</a>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--            </ul>-->
+        </div>
+    </div>
+</div>
+<!-- /.login-box -->
+
+<script src="../plugins/jquery/jquery.min.js"></script>
+
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="../dist/js/adminlte.min.js"></script>
+
+<script src="../plugins/bs-stepper/js/bs-stepper.min.js"></script>
+
+<script>
+
+    var body = document.body;
+    var currentDir = body.getAttribute('dir');
+
+    var defaultStyles = document.querySelectorAll('[id^="default-styles"]');
+    var rtlStyles = document.querySelectorAll('[id^="rtl-styles"]');
+
+    const flagIcon = document.getElementById('flagIcon');
+    const englishOption = document.getElementById('englishOption');
+    const arabicOption = document.getElementById('arabicOption');
+
+    englishOption.addEventListener('click', function() {
+        // flagIcon.className = 'flag-icon flag-icon-us';
+        // flagIcon.alt = 'English';
+        body.setAttribute('dir', 'ltr');
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+    });
+
+    arabicOption.addEventListener('click', function() {
+        // flagIcon.className = 'flag-icon flag-icon-ar';
+        // flagIcon.alt = 'Arabic';
+        body.setAttribute('dir', 'rtl');
+
+        defaultStyles.forEach(function(link) {
+            link.disabled = true;
+        });
+        rtlStyles.forEach(function(link) {
+            link.disabled = false;
+        });
+    });
+
+    defaultStyles.forEach(function(link) {
+        link.disabled = false;
+    });
+    rtlStyles.forEach(function(link) {
+        link.disabled = true;
+    });
+</script>
+
+<script>
+
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    validateData();
+
+    document.addEventListener('DOMContentLoaded', function () {
+        window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+    });
+
+    function validateData() {
+
+        var k = document.getElementById("validate");
+
+        var m = document.getElementById("continue");
+
+        var n = document.getElementById("db_fields");
+
+        var p = document.getElementById("db_config");
+
+        if (k.style.display === "block") {
+
+            k.style.display = "none";
+
+            m.style.display = "block";
+
+            n.style.display = "none";
+
+            p.style.display = "block";
+
+        } else {
+
+            k.style.display = "block";
+
+            m.style.display = "none";
+
+            n.style.display = "block";
+
+            p.style.display = "none";
+        }
+    }
+</script>
+</body>
 </html>
