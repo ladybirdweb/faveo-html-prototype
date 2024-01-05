@@ -37,11 +37,11 @@
 #progress {
     -webkit-appearance:none;
     position: absolute;
-    width: 93%;
+    width: 90%;
     z-index: 5;
     height: 4px;
     margin-left: 76px;
-    margin-bottom: 18px;
+    margin-bottom: 25px;
 }
 #progress::-webkit-progress-value {
     background-color: darkgrey;
