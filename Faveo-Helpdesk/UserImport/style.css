@@ -1,0 +1,31 @@
+.heading{
+    font-size: 1rem;
+}
+.thead-default{
+    background-color: #eee;
+    font-family: Tahoma;
+    font-weight: 100!important;
+}
+.admin-body{
+    display: flex;
+    
+}
+.text-sm{
+    font-size: .875rem!important;
+    margin-top: 18px;
+}
+.icon-text-item i{
+    color:#3c8dbc;
+    padding-right:7px ;
+    border: 5px solid #C4D8E4;
+    border-radius: 100px;
+    height: 80px;
+    padding-left: 8px;
+    padding-top: 3px;
+    width: 80px;
+}
+.new-class{
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5px;
+}
