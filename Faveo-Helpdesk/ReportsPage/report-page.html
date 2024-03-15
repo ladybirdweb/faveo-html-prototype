@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Faveo</title>
+
+    <link href="https://support.faveohelpdesk.com/themes/default/common/images/favicon.ico" rel="shortcut icon">
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+    <style>
+ .fa-size{
+    font-size: 2rem;
+ }
+
+ @media (max-width: 900px) {
+    .fa-size {
+        font-size: 1rem; /* Reset the minimum width for smaller screens */
+    }
+}
+
+    .report-body{
+            min-height: 120px !important;
+            max-height: 270px !important;
+        }
+
+    @media (max-width: 900px) {
+        .report-body {
+            min-height: 200px !important; /* Reset the minimum width for smaller screens */
+        }
+    }
+
+    .tools-option{
+            position: absolute;
+            will-change: transform; 
+            top: 0px; 
+            left: 0px; 
+            transform: translate3d(360px, 23px, 0px) !important;
+            min-width: 60px !important;
+            padding: 0px !important;
+        }
+
+    .tools-option .dropdown-item{
+            padding-left: 8px !important; 
+    }
+
+    .text-header{
+        vertical-align: bottom;
+        font-size: 18px;
+    }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+<div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="index3.html" class="brand-link text-center">
+            <span class="brand-text font-weight-light">Faveo</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Sidebar user panel (optional) -->
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                <div class="image">
+                    <img src="../../dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
+                </div>
+                <div class="info">
+                    <a href="#" class="d-block">Faveo</a>
+                </div>
+            </div>
+
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Simple Link
+                                <span class="right badge badge-danger">New</span>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Reports</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item active">Reports</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <div class="content">
+            <div class="container-fluid">
+
+                <div class="card">
+                    <div class="card-header">
+                        Helpdesk Analysis
+                    </div>
+                    <div class="card-body text-sm">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title">
+                                            <div class="fa-stack fa-1x" style="width: 32px !important">
+                                                <i class="fas fa-life-ring fa-stack-2x"></i>
+                                            </div>&nbsp;&nbsp;
+                                              
+                                              <b class="text-header">HELPDESK IN-DEPTH</b><sup>
+                                                <span class="badge badge-info">Default</span>
+                                            </sup>
+                                        </div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                            
+                                            </span>
+                                        </span>    
+                                    
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                            <!-- <div class="col-2 text-center">
+                                                
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title"><div class="fa-stack fa-1x" style="width: 32px !important">
+                                            <i class="fa fa-calendar fa-stack-2x"></i>
+                                        </div>&nbsp;&nbsp;<b class="text-header">TICKET VOLUME TRENDS</b>
+                                        <sup>
+                                            <span class="badge badge-info">Default</span>
+                                        </sup></div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                            
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title">
+                                            <div class="fa-stack fa-1x" style="width: 32px !important">
+                                                <i class="fa fa-user-secret fa-stack-2x"></i>
+                                            </div>&nbsp;&nbsp;<b class="text-header">MANAGEMENT REPORT</b>
+                                            <sup>
+                                                <span class="badge badge-info">Default</span>
+                                            </sup>
+                                        </div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                            
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title"><div class="fa-stack fa-1x" style="width: 32px !important">
+                                            <i class="fa fa-clock fa-stack-2x"></i>
+                                        </div>&nbsp;&nbsp;<b class="text-header">TURN AROUND TIME</b>
+                                        <sup>
+                                            <span class="badge badge-info">Default</span>
+                                        </sup></div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                            
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title"><div class="fa-stack fa-1x" style="width: 32px !important">
+                                            <i class="fas fa-life-ring fa-stack-2x"></i>
+                                        </div>&nbsp;&nbsp;<b class="text-header">PUBLIC FIRST REPORT</b>
+                                        <sup>
+                                            <span class="badge badge-success">Public</span>
+                                        </sup></div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-edit"></i>&nbsp;Edit</a>                                        
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-trash"></i>&nbsp;Delete</a>
+                                            
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                
+                                                </p>                                                  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title"><div class="fa-stack fa-1x" style="width: 32px !important">
+                                            <i class="fas fa-life-ring fa-stack-2x"></i>
+                                        </div>&nbsp;&nbsp;
+                                        <b class="text-header">SECOND REPORT PRIVATE</b>
+                                        <sup>
+                                            <span class="badge badge-danger">Private</span>
+                                        </sup></div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-edit"></i>&nbsp;Edit</a>                                        
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-trash"></i>&nbsp;Delete</a>
+                                            
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    private testing purpose
+                                                </p>                                                  
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        Productivity
+                    </div>
+                    <div class="card-body text-sm">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+
+                                        <div class="card-title">
+
+                                            <div class="fa-stack fa-1x" style="width: 32px !important">
+                                                <i class="fas fa-user fa-stack-2x"></i>
+                                            </div>&nbsp;&nbsp;
+                                            <b class="text-header"> AGENT PERFORMANCE</b>
+                                            <sup>
+                                                <span class="badge badge-info">Default</span>
+                                            </sup>
+                                        </div>
+                                        
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                            
+                                            </span>
+                                        </span>    
+                                    
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                            <div class="col-2 text-center">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+
+                                        <div class="card-title">
+                                            <div class="fa-stack fa-1x" style="width: 32px !important">
+                                                <i class="fa fa-building fa-stack-2x"></i>
+                                            </div>&nbsp;&nbsp;
+                                            <b class="text-header"> DEPARTMENT PERFORMANCE</b>
+                                            <sup>
+                                                <span class="badge badge-info">Default</span>
+                                            </sup>
+                                        </div>
+                                       
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                            
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title"> 
+                                        <div class="fa-stack fa-1x" style="width: 32px !important">
+                                            <i class="fa fa-users fa-stack-2x"></i>
+                                        </div> &nbsp;&nbsp;
+                                        <b class="text-header">&nbsp;TEAM PERFORMANCE</b>
+                                        <sup>
+                                            <span class="badge badge-info">Default</span>
+                                        </sup>
+                                    </div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                            
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title">
+                                            <div class="fa-stack fa-1x" style="width: 32px !important">
+                                                <i class="fa fa-cubes fa-stack-2x"></i>
+                                            </div>&nbsp;&nbsp;
+                                            <b class="text-header">PERFORMANCE DISTRIBUTION</b>
+                                            <sup>
+                                                <span class="badge badge-info">Default</span>
+                                            </sup>
+                                        </div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                        
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title">
+                                            <div class="fa-stack fa-1x" style="width: 32px !important">
+                                                <i class="fa fa-users fa-stack-2x"></i>
+                                            </div>&nbsp;&nbsp;
+                                            <b class="text-header">NEW REPORT ERTYUI</b>
+                                            <sup>
+                                                <span class="badge badge-success">Public</span>
+                                            </sup>
+                                        </div>
+                                       
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-edit"></i>&nbsp;Edit</a>                                           
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-trash"></i>&nbsp;Delete</a>
+                                            
+                                            
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                
+                                                </p>                                                  
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        Customer Happiness
+                    </div>
+                    <div class="card-body text-sm">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title">  
+
+                                            <div class="fa-stack fa-1x" style="width: 32px !important">
+                                                <i class="fas fa-university fa-stack-2x"></i>
+                                            </div>&nbsp;&nbsp;
+                                            <b class="text-header">TOP CUSTOMER ANALYSIS</b>
+                                            <sup>
+                                                <span class="badge badge-info">Default</span>
+                                            </sup>
+                                        </div>
+                                       
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                            
+                                            </span>
+                                        </span>    
+                                    
+                                    </div>
+                                    <div class="card-body report-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title">
+                                            <div class="fa-stack fa-1x" style="width: 32px !important">
+                                                <i class="fa fa-life-ring fa-stack-2x"></i>
+                                            </div>&nbsp;&nbsp;
+                                            <b class="text-header">FEEDBACK RATING ANALYSIS</b>
+                                            <sup>
+                                                <span class="badge badge-info">Default</span>
+                                            </sup>
+                                        </div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                            
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        Servicedesk Reports
+                    </div>
+                    <div class="card-body text-sm">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title">
+                                            <div class="fa-stack fa-1x" style="width: 32px !important">
+                                                <i class="fas fa-bug fa-stack-2x"></i>
+                                            </div>&nbsp;&nbsp;
+                                            <b class="text-header">PROBLEM REPORT</b>
+                                            <sup>
+                                                <span class="badge badge-info">Default</span>
+                                            </sup>
+                                        </div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                            
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class=" card-title">
+                                            <div class="fa-stack fa-1x" style="width: 32px !important">
+                                                <i class="fa fa-sync-alt fa-stack-2x"></i>
+                                            </div>&nbsp;&nbsp;
+                                            <b class="text-header">CHANGE REPORT</b>
+                                        <sup>
+                                            <span class="badge badge-info">Default</span>
+                                        </sup>
+                                        </div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                            
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title"> 
+                                            <div class="fa-stack fa-1x" style="width: 32px !important">
+                                                <i class="fa fa-newspaper fa-stack-2x"></i>
+                                            </div>&nbsp;&nbsp;
+                                            <b class="text-header">RELEASE REPORT</b>
+                                        <sup>
+                                            <span class="badge badge-info">Default</span>
+                                        </sup>
+                                        </div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                            
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-10 pr-0">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                            <div class="col-2 text-center">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title">
+                                            <div class="fa-stack fa-1x" style="width: 32px !important">
+                                                <i class="fas fa-server fa-stack-2x"></i>
+                                            </div>&nbsp;&nbsp;
+                                            <b class="text-header">ASSET REPORT</b>
+                                            <sup>
+                                                <span class="badge badge-info">Default</span>
+                                            </sup>
+                                        </div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                            
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title">
+                                            <div class="fa-stack fa-1x" style="width: 32px !important">
+                                                <i class="fas fa-paperclip fa-stack-2x"></i>
+                                            </div>&nbsp;&nbsp;
+                                            <b class="text-header">CONTRACT REPORT</b>
+                                            <sup>
+                                                <span class="badge badge-info">Default</span>
+                                            </sup>
+                                        </div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                            
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title">
+                                            <div class="fa-stack fa-2x" style="width: 32px !important">
+                                                <i class="fas fa-clipboard-list fa-stack-1x"></i>
+                                            </div>&nbsp;&nbsp;
+                                            <b class="text-header">SOFTWARE LICENSE REPORT</b>
+                                            <sup>
+                                                <span class="badge badge-info">Default</span>
+                                            </sup>
+                                        </div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                            
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12 pr-0">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title">
+                                            <div class="fa-stack fa-1x" style="width: 32px !important">
+                                                <i class="fas fa-bug fa-stack-2x"></i>
+                                            </div>&nbsp;&nbsp;
+                                            <b class="text-header">SD REPORT PUBLIC -1</b>
+                                            <sup>
+                                                <span class="badge badge-success">Public</span>
+                                            </sup>
+                                        </div>
+                                       
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-edit"></i>&nbsp;Edit</a>                                        
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-trash"></i>&nbsp;Delete</a>
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="card bg-light d-flex flex-fill">
+                                    <div class="card-header text-muted border-bottom-0">
+                                        <div class="card-title">
+                                            <div class="fa-stack fa-1x" style="width: 32px !important">
+                                                <i class="fa fa-server fa-stack-2x"></i>
+                                            </div>&nbsp;&nbsp;
+                                            <b class="text-header">Third REPORT PRIVATE</b>
+                                            <sup>
+                                                <span class="badge badge-danger">Private</span>
+                                            </sup>
+                                        </div>
+                                        
+                                        <span class="show float-right">
+                                            <span  data-toggle="dropdown" aria-expanded="true"> 
+                                                <i class="fas fa-ellipsis-v tool-icon"></i>
+                                            </span>
+                                            <span class="dropdown-menu dropdown-menu-left bg-light tools-option">
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-eye"></i>&nbsp;View</a>
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-edit"></i>&nbsp;Edit</a>                                        
+                                                <a class="dropdown-item" href="javascript:;"><i class="fas fa-trash"></i>&nbsp;Delete</a>
+                                            </span>
+                                        </span> 
+                                    </div>
+                                    <div class="card-body report-body pt-0">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                  
+                                                <p class="text-muted text-sm">
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                    Some quick example text to build on the card title and make up the bulk of the card's
+                                                    content.
+                                                </p>                                                  
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+        <div class="p-3">
+            <h5>Title</h5>
+            <p>Sidebar content</p>
+        </div>
+    </aside>
+    <!-- /.control-sidebar -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="float-right d-none d-sm-inline">
+            Version 1.0.0
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2023-2024 <a href="https://support.faveohelpdesk.com">Faveo</a>.</strong> All rights reserved.
+    </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+</body>
+</html>
