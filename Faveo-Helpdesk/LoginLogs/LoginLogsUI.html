@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Faveo | Login Logs</title>
+
+  <link href="https://support.faveohelpdesk.com/themes/default/common/images/favicon.ico" rel="shortcut icon">
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3s4Wz6iJgD/+ub2oU" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBud7TlRbs/ic4AwGcFZOxg5DpPt8EgeUIgIwzjWfXQKWA3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#statusInfoButton').click(function() {
+                // Show the modal on button click
+                $('#statusModal').modal('show');
+                $('#statusModal-1').modal('hide');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#statusInfoButton-1').click(function() {
+                // Show the modal on button click
+                $('#statusModal-1').modal('show');
+                $('#statusModal').modal('hide');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#closeButton').click(function() {
+                // Show the modal on button click
+                $('#statusModal').modal('hide');
+            });
+        });
+
+        $(document).ready(function() {
+            $('#closeButton-1').click(function() {
+                // Show the modal on button click
+                $('#statusModal-1').modal('hide');
+            });
+        });
+    </script>
+  <style>
+
+ .input-class{
+  max-width: 300px;
+ }
+
+ .select-class{
+  max-width: 60px;
+ }
+
+.modal-content{
+  width: 900px !important;
+ }
+
+.modal-dialog{
+  margin-left: 430px !important;
+  margin-top: 150px !important;
+}
+
+.btn-status{
+  background-color: rgb(221, 249, 221);
+  border-color: rgb(195, 251, 195);
+  border-radius: 25px;
+}
+
+.btn-success {
+    color: green;
+    background-color: #87e09b;
+    border-color: #87e09b;
+    box-shadow: none;
+}
+    
+
+
+  </style>
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link text-center">
+      <span class="brand-text font-weight-light">Faveo Help Desk</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../../dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Faveo</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+          <li class="nav-item">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Simple Link
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Profile</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Profile</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                            <h3 class="card-title">Login Logs</h3>
+                            <div class="card-tools">
+                                <button v-if="showBtn" class="btn btn-sm btn-danger" @click="showModal = true">
+
+                                    <i class="fas fa-power-off"> </i> Log out from all devices
+                                </button>
+
+                                <button type="button" class="btn btn-tool">
+
+                                    <i class="fas fa-sync-alt"></i>
+                                  </button>
+                            </div>
+                    </div>
+                    <div class="card-body">
+
+
+                      <div class="modal fade" id="statusModal" aria-labelledby="statusModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h4 class="modal-title fs-5" id="exampleModalLiveLabel">Log Session Detail</h4>
+                              <div type="button" class="btn-close" id="closeButton" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fas fa-times"></i>
+                              </div>
+                            </div>
+                            <div class="modal-body text-start">
+                              <section class="pl-3">
+
+                                <div class="row">
+                        
+                                  <div class="col-sm-12">
+                        
+                                    <div class="row pb-4">
+                        
+                                      <div class="col-sm-8">
+                        
+                                        <div class="row pt-2">
+                        
+                                          <div class="col-sm-2 pr-0">
+                        
+                                            <i class='fas fa-desktop fa-4x text-muted'></i>
+                                          </div>
+                                          <div class="col-sm-9">
+
+                                            <div class="row">
+
+                                              <div class="col-sm-3">
+                        
+                                              <h6> Linux PC</h6>
+                        
+                                              7 days ago 
+
+                                            </div>
+                                            <div class="col-sm-6">
+                                              <span class="btn btn-success float-right">Current Session</span>
+                                            </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        
+                                <div class="row">
+                        
+                                  <div class="col-sm-6 pb-4">
+                        
+                                    <h6 class="text-muted">Login at</h6>May 07, 2024 05:14 pm
+                                  </div>
+                        
+                                  <div class="col-sm-6 pb-4">
+                        
+                                    <h6 class="text-muted">Operating System</h6>
+                        
+                                    <div>
+                        
+                                      <i class="fab fa-ubuntu fa-2x text-muted"></i>&nbsp;
+                        
+                                      GNU/Linux (v)
+                                      
+                                    </div>
+                                  </div>
+                        
+                                  <div v-if="!loginLogsInfo.user_agent.includes('PostmanRun')" class="col-sm-6 pb-4">
+                        
+                                    <h6 class="text-muted">Browser</h6>
+                        
+                                    <div>
+                        
+                                      <i class="fab fa-chrome fa-2x text-muted"></i>&nbsp;
+                        
+                                      Chrome (v124)
+                                    </div>
+                                  </div>
+                        
+                                  <div class="col-sm-6 pb-4">
+                        
+                                    <h6 class="text-muted">IP Address</h6>
+                        
+                                    223.178.82.242
+                                  </div>
+                        
+                                  <div class="col-sm-6 pb-4">
+                        
+                                    <h6 class="text-muted">Location</h6>
+                        
+                                    <div>
+                        
+                                      Bengaluru, Karnataka, India
+                                    </div>
+                                  
+                                </div>
+                              </section>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="modal fade" id="statusModal-1" aria-labelledby="statusModalLabel-1" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h4 class="modal-title fs-5" id="exampleModalLiveLabel">Log Session Detail</h4>
+                              <div type="button" class="btn-close" id="closeButton-1" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fas fa-times"></i>
+                              </div>
+                            </div>
+                            <div class="modal-body text-start">
+                              <section class="pl-3">
+
+                                <div class="row">
+                        
+                                  <div class="col-sm-12">
+                        
+                                    <div class="row pb-4">
+                        
+                                      <div class="col-sm-8">
+                        
+                                        <div class="row pt-2">
+                        
+                                          <div class="col-sm-2 pr-0">
+                        
+                                            <i class='fas fa-desktop fa-4x text-muted'></i>
+                                          </div>
+                                          <div class="col-sm-9">
+                        
+                                            <h6> Windows PC</h6>
+                        
+                                            2 days ago
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        
+                                <div class="row">
+                        
+                                  <div class="col-sm-6 pb-4">
+                        
+                                    <h6 class="text-muted">Login at</h6>May 01, 2024 05:14 pm
+                                  </div>
+                        
+                                  <div class="col-sm-6 pb-4">
+                        
+                                    <h6 class="text-muted">Operating System</h6>
+                        
+                                    <div>
+                        
+                                      <i class="fab fa-windows fa-2x text-muted"></i>&nbsp;
+                        
+                                      Windows (v)
+                                      
+                                    </div>
+                                  </div>
+                        
+                                  <div v-if="!loginLogsInfo.user_agent.includes('PostmanRun')" class="col-sm-6 pb-4">
+                        
+                                    <h6 class="text-muted">Browser</h6>
+                        
+                                    <div>
+                        
+                                      <i class="fab fa-opera fa-2x text-muted"></i>&nbsp;
+                        
+                                      Opera (v124)
+                                    </div>
+                                  </div>
+                        
+                                  <div class="col-sm-6 pb-4">
+                        
+                                    <h6 class="text-muted">IP Address</h6>
+                        
+                                    223.172.82.232
+                                  </div>
+                        
+                                  <div class="col-sm-6 pb-4">
+                        
+                                    <h6 class="text-muted">Location</h6>
+                        
+                                    <div>
+                        
+                                      Chennai, Tamilnadu, India
+                                    </div>
+                                  
+                                </div>
+                              </section>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                
+                        <div class="mailbox-messages mailinbox">
+
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <div>
+                                      <div class="row pb-4">
+                                        <div class="col-sm-6">
+                                          <select class="form-select form-control select-class float-left p-1">
+
+                                            <option selected>10</option>
+                                            <option value="1">25</option>
+                                            <option value="2">50</option>
+                                            <option value="3">100</option>
+                                          
+                                        </select>
+                                        </div>
+                                        <div class="col-sm-6">
+                              
+                                            <input type="search" class="form-control float-right input-class" placeholder="Type and press enter to search...">
+                                        </div>
+                                        </div>
+                                      </div>
+                                      <table class="table table-bordered">
+                                        <thead class="thead-light">
+                                        <tr>
+                                          <th>Device</th>
+                                          <th>Platform/OS</th>
+                                          <th>Browser</th>
+                                          <th>Login at</th>
+                                          <th>Info</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                          <td><i class='fas fa-desktop fa-2x text-muted'></i>&nbsp;&nbsp;Linux PC</td>
+                                          <td><i class='fab fa-linux fa-2x text-muted' data-toggle="tooltip" data-placement="right" title="Linux OS"></i></td>
+                                          <td><i class='fab fa-chrome fa-2x text-muted' data-toggle="tooltip" data-placement="right" title="Chrome Browser"></i></td>
+                                          <td>04-05-2024 08:36:39</td>
+                                          <td><a data-bs-toggle="modal" href="javascript:;" id="statusInfoButton" data-bs-target="#statusModal"><i class='fas fa-info text-muted'></i></a></td>
+                                        </tr>
+                                        <tr>
+                                          <td><i class='fas fa-desktop fa-2x text-muted'></i>&nbsp;&nbsp;Windows PC</td>
+                                          <td><i class='fab fa-windows fa-2x text-muted' data-toggle="tooltip" data-placement="right" title="Windows OS"></i></td>
+                                          <td><i class='fab fa-opera fa-2x text-muted' data-toggle="tooltip" data-placement="right" title="Opera Browser"></i></td>
+                                          <td>01-05-2024 05:21:18</td>
+                                          <td><a data-bs-toggle="modal" href="javascript:;" id="statusInfoButton-1" data-bs-target="#statusModal"><i class='fas fa-info text-muted'></i></a></td>
+                                        </tr>
+                                        <tr>
+                                          <td><i class='fas fa-desktop fa-2x text-muted'></i>&nbsp;&nbsp;Linux PC</td>
+                                          <td><i class='fab fa-ubuntu fa-2x text-muted' data-toggle="tooltip" data-placement="right" title="Ubuntu OS"></i></td>
+                                          <td><i class='fab fa-edge fa-2x text-muted' data-toggle="tooltip" data-placement="right" title="Edge Browser"></i></td>
+                                          <td>25-04-2024 13:45:01</td>
+                                          <td><i class='fas fa-info text-muted'></i></td>
+                                        </tr>
+                                        <tr>
+                                          <td><i class='fas fa-desktop fa-2x text-muted'></i>&nbsp;&nbsp;Mac</td>
+                                          <td><i class='fab fa-apple fa-2x text-muted' data-toggle="tooltip" data-placement="right" title="Mac OS"></i></td>
+                                          <td><i class='fab fa-chrome fa-2x text-muted' data-toggle="tooltip" data-placement="right" title="Chrome Browser"></i></td>
+                                          <td>18-04-2024 02:10:56</td>
+                                          <td><i class='fas fa-info text-muted'></i></td>
+                                        </tr>
+                                        <tr>
+                                          <td><i class='fas fa-mobile fa-2x text-muted'></i>&nbsp;&nbsp;IOS Device</td>
+                                          <td><i class='fab fa-apple fa-2x text-muted' data-toggle="tooltip" data-placement="right" title="Mac OS"></i></td>
+                                          <td><i class='fab fa-safari fa-2x text-muted' data-toggle="tooltip" data-placement="right" title="Safari Browser"></i></td>
+                                          <td>12-04-2024 19:08:23</td>
+                                          <td><i class='fas fa-info text-muted'></i></td>
+                                        </tr>
+                                        <tr>
+                                          <td><i class='fas fa-mobile fa-2x text-muted'></i>&nbsp;&nbsp;Android Device</td>
+                                          <td><i class='fab fa-android fa-2x text-muted' data-toggle="tooltip" data-placement="right" title="Android OS"></i></td>
+                                          <td><i class='fab fa-firefox-browser fa-2x text-muted' data-toggle="tooltip" data-placement="right" title="Firefox Browser"></i></td>
+                                          <td>31-03-2024 11:56:05</td>
+                                          <td><i class='fas fa-info text-muted'></i></td>
+                                        </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="float-right d-none d-sm-inline">
+      Version 1.0.0
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2023-2024 <a href="https://support.faveohelpdesk.com">Faveo</a>.</strong> All rights reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<script>
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+</script>
+
+</body>
+
+</html>
