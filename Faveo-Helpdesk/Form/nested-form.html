@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Faveo</title>
+
+    <link href="https://support.faveohelpdesk.com/themes/default/common/images/favicon.ico" rel="shortcut icon">
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+    <style>
+
+        .sticky-top-menu {
+            position: sticky !important;
+            top: 45px !important;
+        }
+        .menu-border {
+            border: 1px solid #ddd;
+            border-bottom-left-radius: .25rem;
+            border-bottom-right-radius: .25rem;
+        }
+        .form_save_btn {
+            margin-left: 10px;
+            margin-top: -5px;
+        }
+        .sticky-fields {
+            position: sticky !important;
+            top: 100px !important;
+        }
+        .menu-info-box {
+            cursor: move;
+            min-height: 40px !important;
+            border: 1px dashed #c0c3c4;
+        }
+        .menu-icon {
+            font-size: 1.3rem !important;
+            width: 40px !important;
+        }
+        .card-form-label input {
+            font-weight: 600;
+            outline: none;
+            border: none;
+            background: none;
+            font-size: 14px;
+        }
+        .min-h-100 {
+            min-height: 100px !important;
+        }
+        .parent_field {
+            /* border: 1px dashed #ddd; */
+            /* border-radius: .25rem; */
+            padding: 0.25rem;
+        }
+        .form-field-element {
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 0 0.5rem 0.5rem;
+            -webkit-column-break-inside: avoid;
+        }
+        .form-field {
+            position: relative;
+        }
+        .mt_5 {
+            margin-top: 5px;
+        }
+        .drag-handle {
+            cursor: move;
+        }
+        .mt_3 {
+            margin-top: 3px;
+        }
+        .form-field-label input {
+            font-weight: 500;
+            width: 85%;
+            outline: none;
+            border: none;
+            background: none;
+            text-align: right;
+        }
+        .form-field-element {
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 0 0.5rem 0.5rem;
+            -webkit-column-break-inside: avoid;
+        }
+        .form-field-element:hover {
+            box-shadow: 0 -1px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+            background-color: #f9f9f9 !important;
+        }
+        .form_elem_btn:hover {
+            background-color: #eee !important;
+            border-radius: 0 !important;
+        }
+        .fe-select .btn-group {
+            display: none;
+        }
+
+        .fe-select:hover .btn-group {
+            display: block;
+        }
+        .fe-radio .btn-group {
+            display: none;
+        }
+
+        .fe-radio:hover .btn-group {
+            display: block;
+        }
+        .radio-align {
+            vertical-align: bottom;
+            position: relative;
+            top: -3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini text-sm">
+
+<div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="index3.html" class="brand-link text-center">
+            <span class="brand-text font-weight-light">Faveo</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Sidebar user panel (optional) -->
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                <div class="image">
+                    <img src="../../dist/img/avatar.png" class="img-circle elevation-2" alt="User Image">
+                </div>
+                <div class="info">
+                    <a href="#" class="d-block">Sakthivel Munusami</a>
+                </div>
+            </div>
+
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Nested Form
+                                <span class="right badge badge-danger">New</span>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Nested Form</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">Nested Form</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <div class="content">
+
+            <div class="container-fluid">
+            
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+                        <div class="card card-light shadow-none mb-0">
+
+                            <div class="card-header sticky-top menu-border sticky-top-menu">
+
+                                <h3 class="card-title">Form</h3>
+
+                                <div class="card-tools">
+                                    
+                                    <button class="btn btn-tool btn-default form-save-btn float-right form_save_btn">
+                                        
+                                        <i class="fas fa-save"></i> Save
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="card-body p-0 pt-2 bg-light">
+
+                                <div class="row">
+
+                                    <div class="col-sm-3">
+
+                                        <div class="card sticky-top sticky-fields mb-1">
+
+                                            <div class="card-body p-2">
+
+                                                <div class="row">
+
+                                                    <div class="col-12">
+
+                                                        <ul class="nav nav-tabs" role="tablist">
+                                                            
+                                                            <li class="nav-item">
+                                                                
+                                                                <a class="nav-link active" href="javascript:;" data-toggle="pill" role="tab">Form fields</a>
+                                                            </li>
+                                                            
+                                                            <li class="nav-item">
+                                                                
+                                                                <a class="nav-link" href="javascript:;" data-toggle="pill" role="tab">Default fields</a>
+                                                            </li>
+                                                            
+                                                            <li class="nav-item">
+                                                                
+                                                                <a class="nav-link" href="javascript:;" data-toggle="pill" role="tab">Shared fields</a>
+                                                            </li>
+                                                        </ul>
+
+                                                        <div class="menu mt-3">
+
+                                                            <div class="form__menulist row">
+
+                                                                <div class="col-sm-6">
+                                                                    
+                                                                    <div class="info-box menu-info-box bg-light">
+                                                                        
+                                                                        <span class="info-box-icon menu-icon">
+                                                                            
+                                                                            <i class="fas fa-text-width"></i>
+                                                                        </span>
+                                                                        
+                                                                        <div class="info-box-content">
+                                                                            
+                                                                            <span class="info-box-text">Single Line</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    
+                                                                    <div class="info-box menu-info-box bg-light">
+                                                                        
+                                                                        <span class="info-box-icon menu-icon">
+                                                                            
+                                                                            <i class="fas fa-paragraph"></i>
+                                                                        </span>
+                                                                        
+                                                                        <div class="info-box-content">
+                                                                            
+                                                                            <span class="info-box-text">Multi Line</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    
+                                                                    <div class="info-box menu-info-box bg-light">
+                                                                        
+                                                                        <span class="info-box-icon menu-icon">
+                                                                            
+                                                                            <i class="fas fa-list-alt"></i>
+                                                                        </span>
+                                                                        
+                                                                        <div class="info-box-content">
+                                                                            
+                                                                            <span class="info-box-text">Select</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    
+                                                                    <div class="info-box menu-info-box bg-light">
+                                                                        
+                                                                        <span class="info-box-icon menu-icon">
+                                                                            
+                                                                            <i class="fas fa-sort-numeric-down"></i>
+                                                                        </span>
+                                                                        
+                                                                        <div class="info-box-content">
+                                                                            
+                                                                            <span class="info-box-text">Number</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form__menulist row">
+                                                                
+                                                                <div class="col-sm-12 text-center">
+                                                                    
+                                                                    <div class="info-box menu-info-box bg-light">
+                                                                        
+                                                                        <div class="info-box-content">
+                                                                            
+                                                                            <span class="info-box-text">New Section</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-9">
+
+                                        <div class="card">
+
+                                            <div class="card-body p-2">
+
+                                                <div class="main-div__formbuilder">
+
+                                                    <div class="item-container">
+
+                                                        <div class="card mt-2 mb-2 section-card">
+
+                                                            <div class="card-header">
+                                                                
+                                                                <div class="row">
+                                                                    
+                                                                    <div class="col-sm-4">
+                                                                        
+                                                                        <div class="card-title card-form-label">
+                                                                            
+                                                                            <input type="text" name="null_51" class="" value="My form fields">
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-sm-8 text-right drag-handle">
+                                                                        
+                                                                        <div class="card-tools">
+                                                                            
+                                                                            <div class="btn-group">
+                                                                                
+                                                                                <button type="button" class="btn btn-tool dropdown-toggle text-dark" data-toggle="dropdown" aria-expanded="false">
+                                                                                    
+                                                                                    <i class="fas fa-cog"></i>
+                                                                                </button>
+                                                                                
+                                                                                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                                                                    
+                                                                                    <a href="javascript:;" class="dropdown-item">Single Column</a>
+                                                                                    
+                                                                                    <a href="javascript:;" class="dropdown-item">Double Column</a>
+                                                                                    
+                                                                                    <a href="javascript:;" class="dropdown-item">Edit</a>
+                                                                                    
+                                                                                    <a class="dropdown-item text-danger" href="javascript:;">Delete</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="card-body pt-2 pr-2 pl-2 min-h-100">
+
+                                                                <div class="row pl-1 pr-1">
+
+                                                                    <div class="col-sm-6">
+
+                                                                        <div class="main-div__formbuilder">
+
+                                                                            <div class="item-container">
+
+                                                                                <div class="parent_field fe-select">
+                                                                                    
+                                                                                    <div class="fe-select item-group form-field-element pr-2">
+
+                                                                                        <div class="row form-field">
+
+                                                                                            <div class="col-md-4 mt_5">
+
+                                                                                                <div class="form-field-label">
+
+                                                                                                    <input type="text" name="custom_353_353" class="" value="Select">
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="col-sm-5 drag-handle">
+
+                                                                                                <select id="select-field-id" class="form-control">
+                                                                                                    
+                                                                                                    <option>Select option</option>
+                                                                                                    
+                                                                                                    <option value="value">value</option>
+                                                                                                </select>
+                                                                                            </div>
+
+                                                                                            <div class="col-sm-3 mt_3">
+
+                                                                                                <div class="btn-group">
+                                                                                                    
+                                                                                                    <span class="btn btn-sm form_elem_btn">
+                                                                                                        
+                                                                                                        <i class="fas fa-cog text-gray " aria-hidden="true"></i>
+                                                                                                    </span>
+                                                                                                    
+                                                                                                    <span class="dropdown btn btn-sm form_elem_btn">
+                                                                                                       
+                                                                                                        <span data-toggle="dropdown">
+                                                                                                            <i class="fas fa-plus " aria-hidden="true"></i>
+                                                                                                        </span>
+                                                                                                       
+                                                                                                        <ul class="dropdown-menu form-drop" role="menu" aria-labelledby="dropdownMenu">
+                                                                                                          <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Single Line</a></li>
+                                                                                                          <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Multi Line</a></li>
+                                                                                                          <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Number</a></li>
+                                                                                                          <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Email</a></li>
+                                                                                                       </ul>
+                                                                                                    </span>
+
+                                                                                                    <span class="btn btn-sm form_elem_btn">
+                                                                                                        
+                                                                                                        <i class="far fa-trash-alt " aria-hidden="true"></i>
+                                                                                                    </span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+
+
+                                                                                <div class="main-div__formbuilder">
+
+                                                                                    <div class="item-container">
+
+                                                                                        <div class="parent_field fe-radio">
+
+                                                                                            <div class="item-group form-field-element pr-2">
+
+                                                                                                <div class="row form-field">
+
+                                                                                                    <div class="col-md-4">
+
+                                                                                                        <div class="form-field-label">
+
+                                                                                                            <img id="enter-arrow" width="16" height="16" src="../../dist/img/enterarrow.png" alt="" draggable="false">
+                                                                                                        
+                                                                                                            <input type="text" name="custom_353_35w3" class="" value="Radio">
+                                                                                                        </div>
+                                                                                                    </div>
+
+                                                                                                    <div class="col-sm-5 drag-handle">
+
+                                                                                                        <div class="radio">
+                                                                                                            
+                                                                                                            <label for="radio_16">
+                                                                                                                
+                                                                                                                <input type="radio" name="354" id="radio_16" class="radio-align" value="value"> value
+                                                                                                            </label>
+                                                                                                        </div>
+                                                                                                    </div>
+
+                                                                                                    <div class="col-sm-3">
+
+                                                                                                        <div class="btn-group">
+                                                                                                
+                                                                                                            <span class="btn btn-sm form_elem_btn">
+                                                                                                                
+                                                                                                                <i class="fas fa-cog text-gray " aria-hidden="true"></i>
+                                                                                                            </span>
+                                                                                                            
+                                                                                                            <span class="dropdown btn btn-sm form_elem_btn">
+                                                                                                               
+                                                                                                                <span data-toggle="dropdown">
+                                                                                                                    <i class="fas fa-plus " aria-hidden="true"></i>
+                                                                                                                </span>
+                                                                                                               
+                                                                                                                <ul class="dropdown-menu form-drop" role="menu" aria-labelledby="dropdownMenu">
+                                                                                                                  <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Single Line</a></li>
+                                                                                                                  <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Multi Line</a></li>
+                                                                                                                  <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Number</a></li>
+                                                                                                                  <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Email</a></li>
+                                                                                                               </ul>
+                                                                                                            </span>
+        
+                                                                                                            <span class="btn btn-sm form_elem_btn">
+                                                                                                                
+                                                                                                                <i class="far fa-trash-alt " aria-hidden="true"></i>
+                                                                                                            </span>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+        <div class="p-3">
+            <h5>Title</h5>
+            <p>Sidebar content</p>
+        </div>
+    </aside>
+    <!-- /.control-sidebar -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="float-right d-none d-sm-inline">
+            Version 1.0.0
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2024-2025 <a href="https://support.faveohelpdesk.com">Faveo</a>.</strong> All rights reserved.
+    </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+</body>
+</html>
