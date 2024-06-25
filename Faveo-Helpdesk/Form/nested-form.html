@@ -120,6 +120,9 @@
             top: -3px;
             cursor: pointer;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -414,7 +417,7 @@
 
                                                                             <div class="item-container">
 
-                                                                                <div class="parent_field fe-select">
+                                                                                <div class="parent_field">
                                                                                     
                                                                                     <div class="fe-select item-group form-field-element pr-2">
 
@@ -432,7 +435,7 @@
 
                                                                                                 <select id="select-field-id" class="form-control">
                                                                                                     
-                                                                                                    <option>Select option</option>
+                                                                                                    <option value="">Select option</option>
                                                                                                     
                                                                                                     <option value="value">value</option>
                                                                                                 </select>
@@ -469,68 +472,131 @@
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                </div>
 
+                                                                                    <div id="radio-container" class="main-div__formbuilder hidden">
 
+                                                                                        <div class="item-container">
 
-                                                                                <div class="main-div__formbuilder">
+                                                                                            <div class="parent_field">
 
-                                                                                    <div class="item-container">
+                                                                                                <div class="fe-radio item-group form-field-element pr-2">
 
-                                                                                        <div class="parent_field fe-radio">
+                                                                                                    <div class="row form-field">
 
-                                                                                            <div class="item-group form-field-element pr-2">
+                                                                                                        <div class="col-md-4">
 
-                                                                                                <div class="row form-field">
+                                                                                                            <div class="form-field-label">
 
-                                                                                                    <div class="col-md-4">
-
-                                                                                                        <div class="form-field-label">
-
-                                                                                                            <img id="enter-arrow" width="16" height="16" src="../../dist/img/enterarrow.png" alt="" draggable="false">
-                                                                                                        
-                                                                                                            <input type="text" name="custom_353_35w3" class="" value="Radio">
-                                                                                                        </div>
-                                                                                                    </div>
-
-                                                                                                    <div class="col-sm-5 drag-handle">
-
-                                                                                                        <div class="radio">
+                                                                                                                <img id="enter-arrow" width="16" height="16" src="../../dist/img/enterarrow.png" alt="" draggable="false">
                                                                                                             
-                                                                                                            <label for="radio_16">
-                                                                                                                
-                                                                                                                <input type="radio" name="354" id="radio_16" class="radio-align" value="value"> value
-                                                                                                            </label>
+                                                                                                                <input type="text" name="custom_353_35w3" class="" value="Radio">
+                                                                                                            </div>
                                                                                                         </div>
-                                                                                                    </div>
 
-                                                                                                    <div class="col-sm-3">
+                                                                                                        <div class="col-sm-5 drag-handle">
 
-                                                                                                        <div class="btn-group">
-                                                                                                
-                                                                                                            <span class="btn btn-sm form_elem_btn">
+                                                                                                            <div class="radio">
                                                                                                                 
-                                                                                                                <i class="fas fa-cog text-gray " aria-hidden="true"></i>
-                                                                                                            </span>
-                                                                                                            
-                                                                                                            <span class="dropdown btn btn-sm form_elem_btn">
-                                                                                                               
-                                                                                                                <span data-toggle="dropdown">
-                                                                                                                    <i class="fas fa-plus " aria-hidden="true"></i>
+                                                                                                                <label for="radio_16">
+                                                                                                                    
+                                                                                                                    <input type="radio" name="354" class="radio-align" value="value" id="radio_1"> value
+                                                                                                                </label>
+                                                                                                            </div>
+                                                                                                        </div>
+
+                                                                                                        <div class="col-sm-3">
+
+                                                                                                            <div class="btn-group">
+                                                                                                    
+                                                                                                                <span class="btn btn-sm form_elem_btn">
+                                                                                                                    
+                                                                                                                    <i class="fas fa-cog text-gray " aria-hidden="true"></i>
                                                                                                                 </span>
-                                                                                                               
-                                                                                                                <ul class="dropdown-menu form-drop" role="menu" aria-labelledby="dropdownMenu">
-                                                                                                                  <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Single Line</a></li>
-                                                                                                                  <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Multi Line</a></li>
-                                                                                                                  <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Number</a></li>
-                                                                                                                  <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Email</a></li>
-                                                                                                               </ul>
-                                                                                                            </span>
-        
-                                                                                                            <span class="btn btn-sm form_elem_btn">
                                                                                                                 
-                                                                                                                <i class="far fa-trash-alt " aria-hidden="true"></i>
-                                                                                                            </span>
+                                                                                                                <span class="dropdown btn btn-sm form_elem_btn">
+                                                                                                                
+                                                                                                                    <span data-toggle="dropdown">
+                                                                                                                        <i class="fas fa-plus " aria-hidden="true"></i>
+                                                                                                                    </span>
+                                                                                                                
+                                                                                                                    <ul class="dropdown-menu form-drop" role="menu" aria-labelledby="dropdownMenu">
+                                                                                                                    <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Single Line</a></li>
+                                                                                                                    <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Multi Line</a></li>
+                                                                                                                    <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Number</a></li>
+                                                                                                                    <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Email</a></li>
+                                                                                                                </ul>
+                                                                                                                </span>
+            
+                                                                                                                <span class="btn btn-sm form_elem_btn">
+                                                                                                                    
+                                                                                                                    <i class="far fa-trash-alt " aria-hidden="true"></i>
+                                                                                                                </span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+
+                                                                                                <div id="select-container" class="main-div__formbuilder hidden">
+
+                                                                                                    <div class="item-container">
+            
+                                                                                                        <div class="parent_field">
+
+                                                                                                            <div class="fe-select item-group form-field-element pr-2">
+
+                                                                                                                <div class="row form-field">
+
+                                                                                                                    <div class="col-md-4 mt_5">
+                        
+                                                                                                                        <div class="form-field-label">
+                        
+                                                                                                                            <img id="enter-arrow" width="16" height="16" src="../../dist/img/enterarrow.png" alt="" draggable="false">
+
+                                                                                                                            <input type="text" name="custom_353_353" class="" value="Select 1">
+                                                                                                                        </div>
+                                                                                                                    </div>
+                        
+                                                                                                                    <div class="col-sm-5 drag-handle">
+                        
+                                                                                                                        <select id="select-field-1-id" class="form-control">
+                                                                                                                            
+                                                                                                                            <option>Select option</option>
+                                                                                                                            
+                                                                                                                            <option value="value 1">value 1</option>
+                                                                                                                        </select>
+                                                                                                                    </div>
+                        
+                                                                                                                    <div class="col-sm-3 mt_3">
+                        
+                                                                                                                        <div class="btn-group">
+                                                                                                                            
+                                                                                                                            <span class="btn btn-sm form_elem_btn">
+                                                                                                                                
+                                                                                                                                <i class="fas fa-cog text-gray " aria-hidden="true"></i>
+                                                                                                                            </span>
+                                                                                                                            
+                                                                                                                            <span class="dropdown btn btn-sm form_elem_btn">
+                                                                                                                               
+                                                                                                                                <span data-toggle="dropdown">
+                                                                                                                                    <i class="fas fa-plus " aria-hidden="true"></i>
+                                                                                                                                </span>
+                                                                                                                               
+                                                                                                                                <ul class="dropdown-menu form-drop" role="menu" aria-labelledby="dropdownMenu">
+                                                                                                                                  <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Single Line</a></li>
+                                                                                                                                  <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Multi Line</a></li>
+                                                                                                                                  <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Number</a></li>
+                                                                                                                                  <li class="nav-item"><a class="nav-link text-dark" href="javascript:void(0);">Email</a></li>
+                                                                                                                               </ul>
+                                                                                                                            </span>
+                        
+                                                                                                                            <span class="btn btn-sm form_elem_btn">
+                                                                                                                                
+                                                                                                                                <i class="far fa-trash-alt " aria-hidden="true"></i>
+                                                                                                                            </span>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
@@ -591,5 +657,31 @@
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
+
+<script>
+    
+    document.getElementById('select-field-id').addEventListener('change', function() {
+        var radioContainer = document.getElementById('radio-container');
+        console.log(this.value,'this.value')
+        if (this.value) {
+            radioContainer.classList.remove('hidden');
+        } else {
+            radioContainer.classList.add('hidden');
+        }
+    });
+
+    if(document.getElementById('radio_1')){
+
+        document.getElementById('radio_1').addEventListener('change', function() {
+            var selectContainer = document.getElementById('select-container');
+            console.log(this.checked)
+            if (this.checked) {
+                selectContainer.classList.remove('hidden');
+            } else {
+                selectContainer.classList.add('hidden');
+            }
+        });
+    }
+</script>
 </body>
 </html>
