@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Faveo | GlobalSearch</title>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
+<style>
+body{
+     font-size: 0.87rem;
+    }
+    .text-primary{
+      color: #17a2b8 !important;
+    }
+ .btn-act{
+    background: #dcdcdc !important;
+}
+th{
+  min-width: 180px;
+}
+table{
+  overflow-x: scroll;
+}
+.buttons-excel{
+  background: #f3f3f3;;
+    color: #000;
+    border: 1px solid lightgrey;
+}
+.buttons-print{
+  background: #f3f3f3;;
+    color: #000;
+    border: 1px solid lightgrey;
+}
+.buttons-pdf{
+  background: #f3f3f3;;
+    color: #000;
+    border: 1px solid lightgrey;
+}
+.card-header{
+    background-color: #ebebeb;
+}
+.nav-link{
+    color: #000;
+}
+</style>
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+  <div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" role="button"><i
+                    class="fas fa-bars"></i>
+                </a>
+            </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="#"
+                class="nav-link">Home</a></li>
+    </ul>
+    <ul class="navbar-nav ml-auto"><li class="nav-item user-menu"><a class="nav-link" data-toggle="dropdown" aria-expanded="true"><img src="../product/uploads/download (4).jpg" class="user-image img-circle elevation-2" alt="User Image"><span class="d-none d-md-inline">Ladybird Administrator</span></a></li><li class="nav-item"><a class="nav-link v-popper--has-tooltip" href="javascript:;" role="button"><i class="fas fa-power-off"></i></a></li></ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link text-center">
+        <!-- <img src="Uploads/faveo.png" alt="AdminLTE Logo" class="brand-image  " style="opacity: .8"> -->
+        <span class="brand-text  ">Agora License Manager</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="../product/uploads/download (4).jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Ladybird Administrator</a>
+          </div>
+        </div>
+
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item menu-open">
+              <a href="https://leela.faveodemo.com/faveo-html-prototype/Faveo-Helpdesk/product/dashboard.html" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-cart-arrow-down"></i>
+                <p>
+                  Products
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Product</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://leela.faveodemo.com/faveo-html-prototype/Faveo-Helpdesk/product/allproducts.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Products</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-solid fa-cart-arrow-down"></i>
+                  <p>
+                    Versions
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>New Version</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://leela.faveodemo.com/faveo-html-prototype/Faveo-Helpdesk/product/allversions.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>All Versions</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-users"></i>
+                <p>
+                  Contacts
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Contact</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://leela.faveodemo.com/faveo-html-prototype/Faveo-Helpdesk/product/allcontacts.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Contacts</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-id-card"></i>
+                <p>
+                  Licenses
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New License</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://leela.faveodemo.com/faveo-html-prototype/Faveo-Helpdesk/product/alllicenses.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Licenses</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-download"></i>
+                <p>
+                  Installations
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Installation</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://leela.faveodemo.com/faveo-html-prototype/Faveo-Helpdesk/product/allinstallations.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Installations</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link active">
+                <i class="nav-icon fas fa-solid fa-phone"></i>
+                <p>
+                  Callbacks
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Callback</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://leela.faveodemo.com/faveo-html-prototype/Faveo-Helpdesk/product/allcallbacks.html" class="nav-link active">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Callbacks</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+             <li class="nav-item">
+              <a href="#" class="nav-link">
+                <!-- <i class="nav-icon fas fa-solid fa-chart-column"></i> -->
+                <i class="nav-icon fas fa-chart-bar"></i>
+                <p>
+                  Reports
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="https://leela.faveodemo.com/faveo-html-prototype/Faveo-Helpdesk/product/licensereports.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>License Reports</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>System Reports</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://leela.faveodemo.com/faveo-html-prototype/Faveo-Helpdesk/product/updatereports.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Update Reports</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Cracking Reports</p>
+                  </a>
+                </li>
+               
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-flag"></i>
+                <p>
+                  Server Notifications
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Server Notifications</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Server Notifications</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <!-- <i class="nav-icon fas fa-solid fa-gears"></i> -->
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Software Settings
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Software Settings</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Software Settings</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-key"></i>
+                <p>
+                  API Keys
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New API Keys</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>API Keys</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-ban"></i>
+                <p>
+                  Banned Hosts
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Banned Hosts</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Banned Hosts</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-wrench"></i>
+                <p>
+                  Extra Tools
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Extra Tools</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Extra Tools</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Callbacks</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a class="text-primary" href="#">Home</a></li>
+                <li class="breadcrumb-item active">Callbacks</li>
+              </ol>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid">
+
+
+          <div class="col-md-12">
+            <div class="card  card-tabs">
+              <div class="card-header p-0 pt-1">
+                <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">License Callbacks</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Update Callbacks</a>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="card-body">
+                <div class="tab-content" id="custom-tabs-one-tabContent">
+                  <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
+                
+                    <table id="example1" class="table table-bordered table-striped table-responsive">
+                      <thead>
+                      <tr>
+                        <th>Product</th>
+                        <th>License Code</th>
+                        <th>IP Address</th>
+                        <th>Domain</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td><a href="#" class="text-primary">Faveo Cloud Helpdesk</a></td>
+                        <td><a href="#" class="text-primary">KJMF-VHBG-LGER-0002</a></td>
+                        <td><a href="#" class="text-primary">198.27.0.2</a></td>
+                        <td><a href="#" class="text-primary">faveo.com/faveo/public</a></td>
+                        <td>2024-03-23</td>
+                        <td class="text-success">Active</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#" class="text-primary">Faveo Cloud</a></td>
+                        <td><a href="#" class="text-primary">QTZ0-DNZW-MDJX-0000</a></td>
+                        <td><a href="#" class="text-primary">198.27.0.2</a></td>
+                        <td><a href="#" class="text-primary">faveo.com/faveo/public</a></td>
+                        <td>2024-01-09</td>
+                        <td class="text-success">Active</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#" class="text-primary">Faveo Cloud Servicedesk</a></td>
+                        <td><a href="#" class="text-primary">OSVP-J2KZ-KYJF-0000</a></td>
+                        <td><a href="#" class="text-primary">198.27.0.2</a></td>
+                        <td><a href="#" class="text-primary">faveo.com/faveo/public</a></td>
+                        <td>2023-11-20</td>
+                        <td class="text-success">Active</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#" class="text-primary">Faveo Cloud-1</a></td>
+                        <td><a href="#" class="text-primary">OSVP-J2KZ-KYJF-0000</a></td>
+                        <td><a href="#" class="text-primary">198.27.0.2</a></td>
+                        <td><a href="#" class="text-primary">faveo.com/faveo/public</a></td>
+                        <td>2024-09-12</td>
+                        <td class="text-danger">Inactive</td>
+                      </tr>
+                      
+                      </tbody>
+                    </table>
+                </div>
+                  <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
+                    <table id="example2" class="table table-bordered table-striped table-responsive">
+                      <thead>
+                      <tr>
+                        <th>Product</th>
+                        <th>Version</th>
+                        <th>IP Address</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td><a href="#" class="text-primary">Faveo Cloud Helpdesk</a></td>
+                            <td><a href="#" class="text-primary">V8.2.0</a></td>
+                            <td><a href="#" class="text-primary">198.27.0.2</a></td>
+                            <td>Installation</td>
+                            <td>2024-03-23</td>
+                            <td class="text-success">Active</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-primary">Faveo Cloud</a></td>
+                            <td><a href="#" class="text-primary">8.1.4</a></td>
+                            <td><a href="#" class="text-primary">198.27.0.2</a></td>
+                            <td>Version Check</td>
+                            <td>2024-01-09</td>
+                            <td class="text-success">Active</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-primary">Faveo Cloud Servicedesk</a></td>
+                            <td><a href="#" class="text-primary">8.1.1</a></td>
+                            <td><a href="#" class="text-primary">198.27.0.2</a></td>
+                            <td>Upgrade</td>
+                            <td>2023-11-20</td>
+                            <td class="text-success">Active</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="text-primary">Faveo Cloud-1</a></td>
+                            <td><a href="#" class="text-primary">7.8.0</a></td>
+                            <td><a href="#" class="text-primary">198.27.0.2</a></td>
+                            <td>Installation</td>
+                            <td>2024-09-12</td>
+                            <td class="text-danger">Inactive</td>
+                          </tr>
+                      
+                      </tbody>
+                    </table>
+                </div>
+                
+                </div>
+              </div>
+              <!-- /.card -->
+            </div>
+          </div>
+
+          <!-- /.col -->
+          <!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+      <div class="p-3">
+        <h5>Title</h5>
+        <p>Sidebar content</p>
+      </div>
+    </aside>
+    <!-- /.control-sidebar -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <!-- To the right -->
+      <div class="float-right d-none d-sm-inline">
+        Version 1.0.0
+      </div>
+      <!-- Default to the left -->
+      <strong>Copyright &copy; 2023-2024 <a href="https://support.faveohelpdesk.com">Faveo</a>.</strong> All rights
+      reserved.
+    </footer>
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED SCRIPTS -->
+
+  <!-- jQuery -->
+
+  <script src="../../plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="../../plugins/jszip/jszip.min.js"></script>
+  <script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+  <!-- AdminLTE App -->
+  <script src="../../dist/js/adminlte.min.js"></script>
+
+  <script>
+     $(function () {
+    $("#example1").DataTable({
+      "responsive": true, 
+      "lengthChange": true, 
+      "autoWidth": false,
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      // "ordering": true,
+      "info": true,
+    //   "buttons": ["excel", "pdf", "print"],
+    //   order: [
+    //     [0, 'desc']
+    // ],
+    columnDefs: [
+      { orderable: false, targets: [ 2, 5 ]  } 
+    ],
+      // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+   
+  });
+
+  $(function () {
+    $("#example2").DataTable({
+      "responsive": true, 
+      "lengthChange": true, 
+      "autoWidth": false,
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      // "ordering": true,
+      "info": true,
+    //   "buttons": ["excel", "pdf", "print"],
+    //   order: [
+    //     [0, 'desc']
+    // ],
+    columnDefs: [
+      { orderable: false, targets: [2,  5 ]  } 
+    ],
+      // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
+   
+  });
+
+</script>
+</body>
+
+</html>
