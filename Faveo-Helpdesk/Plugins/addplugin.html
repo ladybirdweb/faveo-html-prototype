@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Faveo | GlobalSearch</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+ 
+  <style>
+     body{
+     font-size: 0.87rem;
+    }
+    td{
+      max-width: 300px;
+    }
+    .text-primary{
+      color: #17a2b8 !important;
+    }
+    
+  </style>
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+  <div class="wrapper">
+
+ <!-- Navbar -->
+ <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <!-- Left navbar links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" role="button"><i
+                class="fas fa-bars"></i>
+            </a>
+        </li>
+    <li class="nav-item d-none d-sm-inline-block">
+        <a href="#"
+            class="nav-link">Home</a></li>
+</ul>
+<ul class="navbar-nav ml-auto"><li class="nav-item user-menu"><a class="nav-link" data-toggle="dropdown" aria-expanded="true"><img src="../plugins/uploads/download (4).jpg" class="user-image img-circle elevation-2" alt="User Image"><span class="d-none d-md-inline">Ladybird Administrator</span></a></li><li class="nav-item"><a class="nav-link v-popper--has-tooltip" href="javascript:;" role="button"><i class="fas fa-power-off"></i></a></li></ul>
+</nav>
+<!-- /.navbar -->
+
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link text-center">
+        <!-- <img src="Uploads/faveo.png" alt="AdminLTE Logo" class="brand-image  " style="opacity: .8"> -->
+        <span class="brand-text  ">Agora License Manager</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="../plugins/uploads/download (4).jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Alexandria Pierce</a>
+          </div>
+        </div>
+
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item menu-open">
+              <a href="#" class="nav-link active">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-cart-arrow-down"></i>
+                <p>
+                  Products
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Product</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Products</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-users"></i>
+                <p>
+                  Contacts
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Product</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Products</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-id-card"></i>
+                <p>
+                  Licenses
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Product</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Products</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-download"></i>
+                <p>
+                  Installations
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Product</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Products</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-phone"></i>
+                <p>
+                  Callbacks
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Product</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Products</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <!-- <i class="nav-icon fas fa-solid fa-chart-column"></i> -->
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Reports
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Product</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Products</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-flag"></i>
+                <p>
+                  Server Notifications
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Product</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Products</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <!-- <i class="nav-icon fas fa-solid fa-gears"></i> -->
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                  Software Settings
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Product</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Products</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-key"></i>
+                <p>
+                  API Keys
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Product</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Products</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-ban"></i>
+                <p>
+                  Banned Hosts
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Product</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Products</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-solid fa-wrench"></i>
+                <p>
+                  Axtra Tools
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Product</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All Products</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-3">
+            <div class="col-sm-6 d-flex">
+              <h1 class="px-3">Plugins</h1>
+              <!-- <a class="btn btn-outline-info btn-sm">Add New Plugin</a> -->
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Starter Page</li>
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+
+      </div>
+      <!-- /.content-header -->
+
+      <!-- License -->
+
+      <div class="content">
+        <div class="container-fluid">
+          <!-- row -->
+          <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card card-light">
+                    <div class="card-header">
+                      <h3 class="card-title">Upload plugins</h3>
+                    </div>
+                    <div class="card-body text-center p-5">
+
+                         <h5 class="text-gray">If you have a plugin in a .zip format, you may install or update it by uploading it here.</h5>
+                         <div class="container mt-5">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <form action="#" method="post" class="d-flex flex-column">
+                                        <input class="form-control mb-3" type="file" name="fileInput" id="fileInput" />
+                                        <input type="submit" value="Install" class="" disabled />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div id="result"></div> -->
+
+                     
+                    </div>
+                   
+                  </div>
+
+                <!-- </div> -->
+              <!-- </div> -->
+            </div>
+          </div>
+          <!-- /row -->
+        </div><!-- /container-fluid -->
+      </div>
+
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+      <div class="p-3">
+        <h5>Title</h5>
+        <p>Sidebar content</p>
+      </div>
+    </aside>
+    <!-- /.control-sidebar -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <!-- To the right -->
+      <div class="float-right d-none d-sm-inline">
+        Version 1.0.0
+      </div>
+      <!-- Default to the left -->
+      <strong>Copyright &copy; 2023-2024 <a href="https://support.faveohelpdesk.com">Faveo</a>.</strong> All rights
+      reserved.
+    </footer>
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED SCRIPTS -->
+
+  <!-- jQuery -->
+
+  <script src="../../plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../../plugins/jszip/jszip.min.js"></script>
+<script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+  
+  <!-- AdminLTE App -->
+  <script src="../../dist/js/adminlte.min.js"></script>
+ 
+  <script>
+      $(function () {
+    $("#example1").DataTable({
+      "responsive": true, 
+      "autoWidth": false,
+      "paging": false,
+      // "lengthChange": true,
+      "searching": true,
+      order: [
+        [0, 'desc']
+    ],
+    columnDefs: [
+      { orderable: false, targets: [0, 1, 2, 3, 4]  } 
+      // This will disable sorting for the third column (index starts at 0)
+    ],
+    "ordering": false,
+    "info": true,
+    
+    // "pageLength": 5,
+        // "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]]
+      
+      // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+   
+  });
+</script>
+<script>
+
+  function showAll() {
+    const allContents = document.querySelector('.all');
+    const allTickets = document.querySelector('.ticket');
+    const allContacts = document.querySelector('.contact');
+    const allArticles = document.querySelector('.article');
+    allContents.style.display = 'block';
+    allTickets.style.display = 'none';
+    allContacts.style.display = 'none';
+    allArticles.style.display = 'none';
+
+    const button1 = document.querySelector('.select-filter1');
+    button1.classList.replace('btn-outline-primary', 'btn-primary');
+
+    const button2 = document.querySelector('.select-filter2');
+    button2.classList.replace('btn-primary', 'btn-outline-primary');
+
+    const button3 = document.querySelector('.select-filter3');
+    button3.classList.replace('btn-primary', 'btn-outline-primary');
+
+    const button4 = document.querySelector('.select-filter4');
+    button4.classList.replace('btn-primary', 'btn-outline-primary');
+  }
+
+  function showTicket() {
+    const allContents = document.querySelector('.all');
+    const allTickets = document.querySelector('.ticket');
+    const allContacts = document.querySelector('.contact');
+    const allArticles = document.querySelector('.article');
+    allContents.style.display = 'none';
+    allTickets.style.display = 'block';
+    allContacts.style.display = 'none';
+    allArticles.style.display = 'none';
+
+    const button1 = document.querySelector('.select-filter1');
+    button1.classList.replace('btn-primary', 'btn-outline-primary');
+
+    const button2 = document.querySelector('.select-filter2');
+    button2.classList.replace('btn-outline-primary', 'btn-primary');
+
+    const button3 = document.querySelector('.select-filter3');
+    button3.classList.replace('btn-primary', 'btn-outline-primary');
+
+    const button4 = document.querySelector('.select-filter4');
+    button4.classList.replace('btn-primary', 'btn-outline-primary');
+  }
+
+  function showContact() {
+    const allContents = document.querySelector('.all');
+    const allTickets = document.querySelector('.ticket');
+    const allContacts = document.querySelector('.contact');
+    const allArticles = document.querySelector('.article');
+    allContents.style.display = 'none';
+    allTickets.style.display = 'none';
+    allContacts.style.display = 'block';
+    allArticles.style.display = 'none';
+
+    const button1 = document.querySelector('.select-filter1');
+    button1.classList.replace('btn-primary', 'btn-outline-primary');
+
+    const button2 = document.querySelector('.select-filter2');
+    button2.classList.replace('btn-primary', 'btn-outline-primary');
+
+    const button3 = document.querySelector('.select-filter3');
+    button3.classList.replace('btn-outline-primary', 'btn-primary');
+
+    const button4 = document.querySelector('.select-filter4');
+    button4.classList.replace('btn-primary', 'btn-outline-primary');
+  }
+
+  function showArticle() {
+    const allContents = document.querySelector('.all');
+    const allTickets = document.querySelector('.ticket');
+    const allContacts = document.querySelector('.contact');
+    const allArticles = document.querySelector('.article');
+    allContents.style.display = 'none';
+    allTickets.style.display = 'none';
+    allContacts.style.display = 'none';
+    allArticles.style.display = 'block';
+
+    const button1 = document.querySelector('.select-filter1');
+    button1.classList.replace('btn-primary', 'btn-outline-primary');
+
+    const button2 = document.querySelector('.select-filter2');
+    button2.classList.replace('btn-primary', 'btn-outline-primary');
+
+    const button3 = document.querySelector('.select-filter3');
+    button3.classList.replace('btn-primary', 'btn-outline-primary');
+
+    const button4 = document.querySelector('.select-filter4');
+    button4.classList.replace('btn-outline-primary', 'btn-primary');
+
+  }
+
+  function openInitial() {
+    const searchBlock = document.querySelector('.searchbar');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const searchBy = document.querySelector('.search_by')
+
+    const button1 = document.querySelector('.select-filter1');
+    button1.classList.replace('btn-outline-primary', 'btn-primary');
+
+    const button2 = document.querySelector('.select-filter2');
+    button2.classList.replace('btn-primary', 'btn-outline-primary');
+
+    const button3 = document.querySelector('.select-filter3');
+    button3.classList.replace('btn-primary', 'btn-outline-primary');
+
+    const button4 = document.querySelector('.select-filter4');
+    button4.classList.replace('btn-primary', 'btn-outline-primary');
+
+    const allContents = document.querySelector('.all');
+    const allTickets = document.querySelector('.ticket');
+    const allContacts = document.querySelector('.contact');
+    const allArticles = document.querySelector('.article');
+    allContents.style.display = 'block';
+    allTickets.style.display = 'none';
+    allContacts.style.display = 'none';
+    allArticles.style.display = 'none';
+
+    searchBlock.style.display = 'block';
+    searchBy.classList.remove('show');
+    dropdownMenu.classList.add('show');
+    searchBlock.classList.add('show');
+
+    const initialCard = document.querySelector(".initial_card");
+    const initial = document.querySelector('.dropdown-menu');
+
+    if (initialCard.style.display === "none") {
+      initialCard.style.display = "block";
+      searchBy.style.display = "none";
+    }
+
+
+  }
+
+  function openCategories() {
+    const initialCard = document.querySelector(".initial_card");
+    const searchBy = document.querySelector(".search_by");
+    const initial = document.querySelector('.dropdown-menu');
+
+    if (initialCard.style.display === "none") {
+      initialCard.style.display = "block";
+      initial.addEventListener('load', () => {
+        initialCard.style.display = "block";
+        searchBy.style.display = "none";
+      });
+    } else {
+      initialCard.style.display = "none";
+      searchBy.style.display = "block";
+    }
+  }
+
+  function closeSearchBy() {
+    const searchByDiv = document.querySelector(".search_by");
+    searchByDiv.style.display = "none";
+    const initialCardDiv = document.querySelector(".initial_card");
+    initialCardDiv.style.display = "block";
+  }
+
+  function closeDropdown() {
+    const searchBlock = document.querySelector('.searchbar');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    searchBlock.style.display = 'none';
+    dropdownMenu.classList.remove('show');
+  }
+
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+
+</script>
+
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script>tinymce.init({ selector:'textarea' });</script>
+
+<!-- Select2 -->
+<script src="../../plugins/select2/js/select2.full.min.js"></script>
+
+<script>
+$('.select2bs4').select2({
+    theme: 'bootstrap4'
+  })
+</script>
+
+<script>
+  // Select the first checkbox element with the id 'customSwitch1'
+  const heroCheckbox = document.getElementById('customSwitch1');
+  // Select all other checkbox elements with the class 'form-check-input'
+  const otherCheckboxes = document.querySelectorAll('.form-check-input:not(#customSwitch1)');
+
+
+  // const toggleButton = document.getElementById('customToggle');  
+
+
+  // Add an event listener to the hero checkbox
+  heroCheckbox.addEventListener('change', () => {
+      if (heroCheckbox.checked) {
+          // If the hero checkbox is checked, check all other checkboxes
+          otherCheckboxes.forEach(cb => cb.checked = true);
+      } else {
+          // If the hero checkbox is unchecked, uncheck all other checkboxes
+          otherCheckboxes.forEach(cb => cb.checked = false);
+      }
+  });
+
+  // Add an event listener to each of the other checkboxes
+  otherCheckboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+          // The other checkboxes do not affect each other or the hero checkbox
+          // So, no action is needed here
+      });
+  });
+</script>
+
+<script>
+  // Function to handle applying bulk action
+  function applyBulkAction() {
+      // Get the selected action from the dropdown
+      const selectedAction = document.getElementById('bulkActionsDropdown').value;
+      
+      // Perform the selected action
+      switch (selectedAction) {
+          case 'delete':
+              // Handle delete action
+              console.log('Delete action');
+              break;
+          case 'archive':
+              // Handle archive action
+              console.log('Archive action');
+              break;
+          case 'export':
+              // Handle export action
+              console.log('Export action');
+              break;
+          default:
+              // No action selected
+              console.log('No action selected');
+              break;
+      }
+  }
+
+  // Add event listener to the Apply button
+  document.getElementById('applyBulkActionBtn').addEventListener('click', applyBulkAction);
+</script>
+
+<script>
+    $(document).ready(
+    function(){
+        $('input:file').change(
+            function(){
+                if ($(this).val()) {
+                    $('input:submit').attr('disabled',false);
+                    // or, as has been pointed out elsewhere:
+                    // $('input:submit').removeAttr('disabled'); 
+                } 
+            }
+            );
+    });
+</script>
+</body>
+
+</html>
