@@ -35,7 +35,7 @@
     border-radius: 8px;
     border: none;
     background: transparent;
-    text-align: left;
+    text-align: start;
     text-decoration: none;
     transition: background 0.15s;
   }

@@ -1,0 +1,30 @@
+/* ══════════════════════════════════════════════════════════════
+   RTL — overrides Tailwind's logical-property utilities can't reach
+   Most of the RTL mirror is done via ms-/me-, ps-/pe-, start-/end-,
+   text-start/end, rounded-s-/e- utilities directly in markup — those
+   already respect [dir="rtl"] natively. This file only covers the
+   handful of cases with no logical Tailwind equivalent.
+   ══════════════════════════════════════════════════════════════ */
+
+/* Directional icons (chevrons/arrows whose glyph points toward a screen
+   edge) — mirror horizontally so they still point the correct way. */
+[dir="rtl"] .icon-flip {
+  transform: scaleX(-1);
+}
+
+/* Right-docked drawers (edit ticket, time track, SD associates) — their
+   shadow is cast toward the page content on their inline-start side.
+   Tailwind has no logical box-shadow utility, so this flips the x-offset
+   to match wherever `justify-end` (already logical) re-docks the drawer. */
+[dir="rtl"] .drawer-shadow {
+  box-shadow: 4px 0px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Filter panel <select> — custom caret painted via `background-image` +
+   `background-position` (there's no logical value for background-position),
+   pinned to the physical right edge. The select's own padding was switched
+   to ps-3/pe-8 (logical) to keep the reserved caret gutter on the correct
+   side, but the caret image itself still needs to move there explicitly. */
+[dir="rtl"] .filter-select {
+  background-position: left 10px center;
+}

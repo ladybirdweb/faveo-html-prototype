@@ -5,8 +5,49 @@ import $ from 'jquery'
 //        <div id="my-menu" class="... hidden">...</div>
 //
 // Options (on the menu element):
-//   data-persistent  — only closes when the toggle button is clicked again;
-//                      clicking outside keeps it open (e.g. contact info panel)
+//   data-persistent       — only closes when the toggle button is clicked
+//                           again; clicking outside keeps it open (e.g. the
+//                           contact info panel)
+//   data-escape-overflow  — menu sits inside an `overflow` ancestor (e.g. the
+//                           horizontally-scrolling inner toolbar) that would
+//                           clip it. Switches it to `position: fixed`,
+//                           positioned in JS from the trigger's nearest
+//                           `.dropdown-anchor` ancestor, so it escapes the
+//                           clip. Pair with data-anchor="start"|"end"
+//                           (defaults to "start") to say which logical edge
+//                           it was originally pinned to, and data-gap="N"
+//                           (px, above the anchor's bottom edge, default 4).
+
+function positionEscapedMenu($menu, $trigger) {
+  const $anchor = $trigger.closest('.dropdown-anchor')
+  if (!$anchor.length) return
+  const rect = $anchor[0].getBoundingClientRect()
+  const gap = Number($menu.data('gap')) || 4
+  const rtl = document.documentElement.getAttribute('dir') === 'rtl'
+  const alignLeft = ($menu.data('anchor') || 'start') === 'start' ? !rtl : rtl
+  $menu.css({ position: 'fixed', top: rect.bottom + gap, left: '', right: '' })
+  if (alignLeft) {
+    $menu.css('left', rect.left)
+  } else {
+    $menu.css('right', window.innerWidth - rect.right)
+  }
+}
+
+// ── Tooltips that must escape an `overflow` ancestor ────────────────
+// Usage: <button data-tooltip-anchor class="relative ...">
+//          <span data-tooltip-escape class="absolute ... opacity-0
+//                group-hover:opacity-100 transition-opacity">Label</span>
+//        </button>
+// The fade itself stays pure CSS (group-hover opacity); this only supplies
+// `position: fixed` coordinates on hover so the tooltip isn't clipped by a
+// scrolling/overflow ancestor (e.g. the horizontally-scrolling inner
+// toolbar) the way `absolute` positioning would be.
+$(document).on('mouseenter', '[data-tooltip-anchor]', function () {
+  const $tip = $(this).find('[data-tooltip-escape]').first()
+  if (!$tip.length) return
+  const r = this.getBoundingClientRect()
+  $tip.css({ position: 'fixed', top: r.bottom + 8, left: r.left + r.width / 2, right: '', margin: 0, transform: 'translateX(-50%)' })
+})
 
 $(document).on('click', '[data-toggle="dropdown"]', function (e) {
   e.stopPropagation()
@@ -22,6 +63,7 @@ $(document).on('click', '[data-toggle="dropdown"]', function (e) {
   })
   $menu.toggleClass('hidden')
   const isOpen = !$menu.hasClass('hidden')
+  if (isOpen && $menu.is('[data-escape-overflow]')) positionEscapedMenu($menu, $(this))
   $(this).toggleClass('dropdown-open', isOpen)
   $(this).attr('aria-expanded', isOpen ? 'true' : 'false')
   // Optional icon swap: data-icon-open / data-icon-closed on the button

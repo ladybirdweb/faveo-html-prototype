@@ -23,7 +23,7 @@
 
   /* Filter panel selects */
   .filter-select {
-    @apply w-full rounded-[6px] px-3 text-xs outline-none cursor-pointer;
+    @apply w-full rounded-[6px] ps-3 pe-8 text-xs outline-none cursor-pointer;
     height: 37px;
     appearance: none;
     border: 1px solid var(--c-border);
@@ -91,4 +91,16 @@
   content: attr(data-placeholder);
   color: #90a1b9;
   pointer-events: none;
+}
+
+/* Scrollbar hidden, scrolling still works (mouse wheel / touch / drag) —
+   for `overflow-x-auto` rows that should scroll on narrow screens without
+   showing scrollbar chrome. Also sidesteps a browser quirk where dir="rtl"
+   flex containers with `gap` can report a few px of phantom scrollWidth
+   even with no real overflow, which would otherwise show a stray scrollbar. */
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }

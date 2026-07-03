@@ -20,12 +20,12 @@
             if (tc && tc !== 'default') document.documentElement.setAttribute('data-topnav-color', tc)
         })()
     </script>
-  <script type="module" crossorigin src="../../assets/main-BzrBKlCB.js"></script>
-  <link rel="stylesheet" crossorigin href="../../assets/main-D1PxhUyV.css">
+  <script type="module" crossorigin src="../../assets/main-CyoEmTmm.js"></script>
+  <link rel="stylesheet" crossorigin href="../../assets/main-iv7xuEy8.css">
 </head>
 <body class="flex flex-col h-screen overflow-hidden bg-white font-sans">
 
-<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:bg-white focus:text-[#3da6d7] focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-sm focus:font-medium">Skip to main content</a>
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:start-2 focus:z-[9999] focus:bg-white focus:text-[#3da6d7] focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-sm focus:font-medium">Skip to main content</a>
 
 <!-- Red subscription banner -->
 <div id="banner-red" role="alert" aria-label="Subscription expiry notification" class="bg-[#ffe9ee] flex items-center justify-center px-4 py-2.5 relative shrink-0">
@@ -33,11 +33,11 @@
     <div class="flex items-center gap-2">
         <i class="fa-solid fa-triangle-exclamation text-red-500 text-sm" aria-hidden="true"></i>
         <span class="text-red-500 font-medium text-sm hidden sm:inline">Your subscription expires in 3 days.</span>
-        <div class="pl-2">
+        <div class="ps-2">
             <button data-toggle="modal" data-target="#panel-renew" class="bg-[rgba(255,0,0,0.8)] text-white text-xs font-bold px-4 py-1 rounded-[6px] cursor-pointer">Renew Now</button>
         </div>
     </div>
-    <button data-dismiss="#banner-red" aria-label="Dismiss alert" class="absolute right-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
+    <button data-dismiss="#banner-red" aria-label="Dismiss alert" class="absolute end-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
         <i class="fa-solid fa-xmark text-[10px] text-gray-500" aria-hidden="true"></i>
     </button>
 </div>
@@ -48,7 +48,7 @@
     <div class="flex items-center gap-2">
         <i class="fa-solid fa-circle-info text-black text-base" aria-hidden="true"></i>
         <span class="text-black font-medium text-sm hidden sm:inline">Connect with an expert get an advice on Faveo helpdesk</span>
-        <div class="pl-2 relative">
+        <div class="ps-2 relative">
             <button data-toggle="dropdown" data-target="#contact-dropdown"
                     class="bg-[#cda206] text-white text-xs font-bold px-4 py-1 rounded-[6px] cursor-pointer">Contact</button>
 
@@ -74,13 +74,13 @@
                 <div class="p-4 flex flex-col gap-2.5">
                     <button class="flex items-center gap-2.5 w-full px-2.5 py-1.5 border border-[#d2d2d2] rounded-[6px] text-[#4a5565] text-[12px] hover:bg-[#f1f5f9] transition-colors bg-white cursor-pointer">
                         <i class="fa-solid fa-circle-play text-sm shrink-0"></i>
-                        <span class="flex-1 text-left">Book a 1:1 product demo</span>
-                        <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                        <span class="flex-1 text-start">Book a 1:1 product demo</span>
+                        <i class="fa-solid fa-chevron-right icon-flip text-[9px]"></i>
                     </button>
                     <button class="flex items-center gap-2.5 w-full px-2.5 py-1.5 border border-[#d2d2d2] rounded-[6px] text-[#4a5565] text-[12px] hover:bg-[#f1f5f9] transition-colors bg-white cursor-pointer">
                         <i class="fa-solid fa-calendar-days text-sm shrink-0"></i>
-                        <span class="flex-1 text-left">Schedule a meeting with faveo</span>
-                        <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                        <span class="flex-1 text-start">Schedule a meeting with faveo</span>
+                        <i class="fa-solid fa-chevron-right icon-flip text-[9px]"></i>
                     </button>
                     <p class="text-[#99a1af] text-[12px] px-0.5 mt-0.5">Or contact me via</p>
                     <div class="flex items-center gap-2.5 px-2.5 py-1.5 border border-[#d2d2d2] rounded-[6px] text-[#4a5565] text-[12px]">
@@ -102,7 +102,7 @@
             </div>
         </div>
     </div>
-    <button data-dismiss="#banner-yellow" aria-label="Dismiss alert" class="absolute right-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
+    <button data-dismiss="#banner-yellow" aria-label="Dismiss alert" class="absolute end-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
         <i class="fa-solid fa-xmark text-[10px] text-gray-500" aria-hidden="true"></i>
     </button>
 </div>
@@ -113,7 +113,7 @@
     <!-- Icon rail (69px, always in flow — content never moves) -->
     <nav id="sidebar" aria-label="Main navigation" class="w-[69px] bg-[#f7f9fa] hidden md:flex flex-col items-center shrink-0 overflow-x-hidden py-2">
         <div class="w-full h-[55px] flex items-center justify-center px-[7px] shrink-0">
-            <img src="https://www.figma.com/api/mcp/asset/0ddd257e-9caf-45c6-ab67-16591d4578b4"
+            <img src="../../faveo-logo.png"
                  alt="Faveo" class="max-w-[50px] max-h-[31px] object-contain" />
         </div>
         <div class="sidebar-scroll flex flex-col w-full items-center pt-[10px] gap-y-[10px] flex-1 overflow-y-auto">
@@ -137,15 +137,15 @@
         <div class="mt-auto flex flex-col items-center w-full">
             <div class="w-[49px] border-t border-gray-200 my-2"></div>
             <button id="btn-toggle-sidebar" class="sidebar-nav mb-1" title="Expand sidebar" aria-label="Expand navigation sidebar" aria-expanded="false" aria-controls="sidebar-expanded">
-                <i class="fa-solid fa-indent" aria-hidden="true"></i>
+                <i class="fa-solid fa-indent icon-flip" aria-hidden="true"></i>
             </button>
         </div>
     </nav>
 
     <!-- Expanded sidebar (absolute overlay — same bg as rail, content stays put) -->
-    <nav id="sidebar-expanded" aria-label="Expanded navigation" class="absolute left-0 top-0 bottom-0 w-[295px] bg-[#f7f9fa] flex flex-col z-50 py-2 hidden">
+    <nav id="sidebar-expanded" aria-label="Expanded navigation" class="absolute start-0 top-0 bottom-0 w-[295px] bg-[#f7f9fa] flex flex-col z-50 py-2 hidden">
         <div class="w-full h-[55px] flex items-center justify-center px-3 shrink-0">
-            <img id="sidebar-logo" src="https://www.figma.com/api/mcp/asset/0ddd257e-9caf-45c6-ab67-16591d4578b4"
+            <img id="sidebar-logo" src="../../faveo-logo.png"
                  alt="Faveo" class="max-h-[31px] max-w-[55px] object-contain" />
             <!-- Shown only when logo fails to load -->
             <span id="sidebar-logo-fallback" class="hidden text-[#3a4a5a] text-[19px] font-semibold leading-none whitespace-nowrap sidebar-adaptive">Support Center</span>
@@ -177,7 +177,7 @@
         <div class="px-3 mt-auto">
             <div class="border-t border-gray-200 my-2"></div>
             <button id="btn-collapse-sidebar" aria-label="Collapse navigation sidebar" class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[14px] font-medium mb-1">
-                <i class="fa-solid fa-outdent w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Collapse</span>
+                <i class="fa-solid fa-outdent icon-flip w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Collapse</span>
             </button>
         </div>
     </nav>
@@ -187,7 +187,7 @@
 
         <!-- Toolbar -->
         <header class="bg-[#f7f9fa] h-[55px] flex items-center gap-2 px-5 shrink-0" aria-label="Page toolbar">
-            <button id="btn-mobile-menu" class="md:hidden sidebar-nav mr-1" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar-expanded">
+            <button id="btn-mobile-menu" class="md:hidden sidebar-nav me-1" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar-expanded">
                 <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </button>
             <!-- Filter icon (toggles views panel inside content) + title -->
@@ -210,38 +210,38 @@
                         New
                         <i class="fa-solid fa-chevron-down text-[9px]" aria-hidden="true"></i>
                     </button>
-                    <div id="new-dropdown" role="menu" aria-label="Create new item" class="absolute right-0 top-[calc(100%+2px)] z-50 min-w-[160px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] p-1.5 hidden">
-                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                    <div id="new-dropdown" role="menu" aria-label="Create new item" class="absolute end-0 top-[calc(100%+2px)] z-50 min-w-[160px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] p-1.5 hidden">
+                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                             <i class="fas fa-ticket text-sm shrink-0" aria-hidden="true"></i><span>Ticket</span>
                         </button>
-                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                             <i class="fa-regular fa-envelope text-sm shrink-0" aria-hidden="true"></i><span>Email</span>
                         </button>
-                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                             <i class="fa-regular fa-message text-sm shrink-0" aria-hidden="true"></i><span>Message</span>
                         </button>
-                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                             <i class="fa-regular fa-address-card text-sm shrink-0" aria-hidden="true"></i><span>Contact</span>
                         </button>
-                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                             <i class="fa-regular fa-building text-sm shrink-0" aria-hidden="true"></i><span>Company</span>
                         </button>
                     </div>
                 </div>
                 <!-- Search -->
                 <div class="relative shrink-0 hidden sm:block">
-                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs" aria-hidden="true"></i>
+                    <i class="fa-solid fa-magnifying-glass absolute start-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs" aria-hidden="true"></i>
                     <input id="search-trigger" type="text" placeholder="Search" aria-label="Search tickets" readonly
-                           class="bg-white border border-[#d1d5dc] rounded-[4px] pl-8 pr-3 py-1.5 text-xs text-[#0a0a0a] w-32 outline-none focus:border-sky-400 cursor-pointer" />
+                           class="bg-white border border-[#d1d5dc] rounded-[4px] ps-8 pe-3 py-1.5 text-xs text-[#0a0a0a] w-32 outline-none focus:border-sky-400 cursor-pointer" />
 
                     <!-- Search panel (single) -->
-                    <div id="search-overlay" role="dialog" aria-label="Search" class="hidden absolute top-0 right-0 w-[400px] bg-white rounded-[10px] shadow-[0_0_8px_rgba(0,0,0,0.2)] z-50 overflow-hidden">
+                    <div id="search-overlay" role="dialog" aria-label="Search" class="hidden absolute top-0 end-0 w-[400px] bg-white rounded-[10px] shadow-[0_0_8px_rgba(0,0,0,0.2)] z-50 overflow-hidden">
                         <!-- Search input — always visible -->
                         <div class="p-3">
                             <div class="relative">
-                                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" aria-hidden="true"></i>
+                                <i class="fa-solid fa-magnifying-glass absolute start-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" aria-hidden="true"></i>
                                 <input id="search-overlay-input" type="text" placeholder="Search" aria-label="Search"
-                                       class="w-full border border-[#d1d5dc] rounded-[10px] pl-8 pr-3 py-1.5 text-xs text-[#0a0a0a] outline-none focus:border-sky-400" />
+                                       class="w-full border border-[#d1d5dc] rounded-[10px] ps-8 pe-3 py-1.5 text-xs text-[#0a0a0a] outline-none focus:border-sky-400" />
                             </div>
                         </div>
 
@@ -252,7 +252,7 @@
                                 <button data-toggle="tab" data-tab="tickets" data-target="#recently-viewed-list" class="search-tab px-2 py-0.5 text-xs border border-[#d1d5dc] rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors">Tickets</button>
                                 <button data-toggle="tab" data-tab="contacts" data-target="#recently-viewed-list" class="search-tab px-2 py-0.5 text-xs border border-[#d1d5dc] rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors">Contacts</button>
                                 <button data-toggle="tab" data-tab="forums" data-target="#recently-viewed-list" class="search-tab px-2 py-0.5 text-xs border border-[#d1d5dc] rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors">Forums</button>
-                                <button id="btn-search-prefs" aria-label="Search preferences" class="ml-auto flex items-center justify-center w-7 h-7 rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors cursor-pointer">
+                                <button id="btn-search-prefs" aria-label="Search preferences" class="ms-auto flex items-center justify-center w-7 h-7 rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors cursor-pointer">
                                     <i class="fa-solid fa-gear text-base" aria-hidden="true"></i>
                                 </button>
                             </div>
@@ -393,10 +393,10 @@
                 <div class="relative shrink-0">
                     <button data-toggle="dropdown" data-target="#notifications-dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="notifications-dropdown" aria-label="Notifications" class="relative flex items-center justify-center w-8 h-8 rounded-[6px] text-[#525252] cursor-pointer hover:bg-[#f1f5f9] transition-colors topnav-adaptive">
                         <i class="fa-solid fa-bell text-sm" aria-hidden="true"></i>
-                        <span class="absolute top-1 right-1.5 w-1.5 h-1.5 bg-red-500 rounded-full border border-white block"></span>
+                        <span class="absolute top-1 end-1.5 w-1.5 h-1.5 bg-red-500 rounded-full border border-white block"></span>
                     </button>
 
-                    <div id="notifications-dropdown" role="dialog" aria-label="Notifications" class="absolute right-0 top-[calc(100%+4px)] z-50 w-[360px] bg-white rounded-[10px] shadow-[0_4px_20px_rgba(0,0,0,0.15)] border border-[#e5e7eb] overflow-hidden hidden">
+                    <div id="notifications-dropdown" role="dialog" aria-label="Notifications" class="absolute end-0 top-[calc(100%+4px)] z-50 w-[360px] bg-white rounded-[10px] shadow-[0_4px_20px_rgba(0,0,0,0.15)] border border-[#e5e7eb] overflow-hidden hidden">
                         <!-- Header -->
                         <div class="flex items-center justify-between px-4 py-3 border-b border-[#e5e7eb]">
                             <span class="text-sm font-semibold text-[#0a0a0a]">Notifications</span>
@@ -501,6 +501,91 @@
                         </div>
                     </div>
                 </div>
+                <!-- Language dropdown -->
+                <div class="relative shrink-0">
+                    <button id="topnav-language-trigger" data-toggle="dropdown" data-target="#topnav-language-dropdown" aria-haspopup="menu" aria-expanded="false" aria-controls="topnav-language-dropdown" aria-label="Change language (currently English)" class="flex items-center justify-center w-8 h-8 rounded-[6px] hover:bg-[#f1f5f9] transition-colors cursor-pointer topnav-adaptive">
+                        <img id="topnav-language-flag" src="../../flags/en-us.png" alt="Current language" class="w-6 h-4 rounded-[3px] object-cover shrink-0" />
+                    </button>
+                    <div id="topnav-language-dropdown" role="menu" aria-label="Language options" class="absolute end-0 top-[calc(100%+4px)] z-50 w-[314px] max-h-[420px] overflow-y-auto bg-white rounded-[10px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] py-1 hidden">
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="ar" data-dir="rtl" data-short="Arabic" data-flag="/flags/arabic.png">
+                            <img src="../../flags/arabic.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Arabic (العربية)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="bs" data-dir="ltr" data-short="Bosnian" data-flag="/flags/bosnian.png">
+                            <img src="../../flags/bosnian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Bosnian (bosanski)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="zh-Hans" data-dir="ltr" data-short="Chinese (Simplified)" data-flag="/flags/chinese.png">
+                            <img src="../../flags/chinese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Chinese (中文 [Simplified])</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="zh-Hant" data-dir="ltr" data-short="Chinese (Traditional)" data-flag="/flags/chinese.png">
+                            <img src="../../flags/chinese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Chinese (中文 [Traditional])</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="nl" data-dir="ltr" data-short="Dutch" data-flag="/flags/dutch.png">
+                            <img src="../../flags/dutch.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Dutch (Vlaams)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-[#f1f5f9] transition-colors" data-lang="en-US" data-dir="ltr" data-short="English" data-flag="/flags/en-us.png">
+                            <img src="../../flags/en-us.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">English - United States (English)</span>
+                            <i class="fa-solid fa-check text-[10px] text-[#3da6d7] shrink-0" aria-hidden="true"></i>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="en-GB" data-dir="ltr" data-short="English (UK)" data-flag="/flags/en-gb.png">
+                            <img src="../../flags/en-gb.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">English - United Kingdom (English)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="fr" data-dir="ltr" data-short="French" data-flag="/flags/french.png">
+                            <img src="../../flags/french.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">French (français)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="de" data-dir="ltr" data-short="German" data-flag="/flags/german.png">
+                            <img src="../../flags/german.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">German (Deutsch)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="id" data-dir="ltr" data-short="Indonesian" data-flag="/flags/indonesian.png">
+                            <img src="../../flags/indonesian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Indonesian (Bahasa Indonesia)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="it" data-dir="ltr" data-short="Italian" data-flag="/flags/italian.png">
+                            <img src="../../flags/italian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Italian (Italiano)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="ko" data-dir="ltr" data-short="Korean" data-flag="/flags/korean.png">
+                            <img src="../../flags/korean.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Korean (한국어)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="mt" data-dir="ltr" data-short="Maltese" data-flag="/flags/maltese.png">
+                            <img src="../../flags/maltese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Maltese (Malti)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="no" data-dir="ltr" data-short="Norwegian" data-flag="/flags/norwegian.png">
+                            <img src="../../flags/norwegian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Norwegian (Norsk)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="pt" data-dir="ltr" data-short="Portuguese" data-flag="/flags/portuguese.png">
+                            <img src="../../flags/portuguese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Portuguese (Português)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="ru" data-dir="ltr" data-short="Russian" data-flag="/flags/russian.png">
+                            <img src="../../flags/russian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Russian (Русский)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="es" data-dir="ltr" data-short="Spanish" data-flag="/flags/spanish.png">
+                            <img src="../../flags/spanish.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Spanish (Español)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="tr" data-dir="ltr" data-short="Turkish" data-flag="/flags/turkish.png">
+                            <img src="../../flags/turkish.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Turkish (Türkçe)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="vi" data-dir="ltr" data-short="Vietnamese" data-flag="/flags/vietnamese.png">
+                            <img src="../../flags/vietnamese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Vietnamese (Tiếng Việt)</span>
+                        </button>
+                    </div>
+                </div>
                 <!-- Apps button + dropdown -->
                 <div class="relative shrink-0 hidden sm:block">
                     <button data-toggle="dropdown" data-target="#apps-dropdown" aria-haspopup="menu" aria-expanded="false" aria-controls="apps-dropdown" aria-label="Apps marketplace" class="bg-white border border-[#d1d5dc] rounded-[6px] flex items-center gap-1.5 px-2.5 py-1.5 text-[#525252] text-xs font-medium cursor-pointer hover:bg-[#f1f5f9] transition-colors">
@@ -508,7 +593,7 @@
                         Apps
                     </button>
 
-                    <div id="apps-dropdown" role="dialog" aria-label="Apps marketplace" class="absolute right-0 top-[calc(100%+2px)] z-50 w-[343px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] overflow-hidden hidden">
+                    <div id="apps-dropdown" role="dialog" aria-label="Apps marketplace" class="absolute end-0 top-[calc(100%+2px)] z-50 w-[343px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] overflow-hidden hidden">
 
                         <!-- Apps nav list -->
                         <ul role="list" class="flex flex-col">
@@ -520,7 +605,7 @@
                                 <div class="flex flex-col gap-0.5 flex-1">
                                     <div class="flex items-center gap-1">
                                         <span class="text-[#1e2939] text-[14px] font-semibold">Explore Marketplace Apps</span>
-                                        <i class="fa-solid fa-chevron-right text-[#1e2939] text-[10px]"></i>
+                                        <i class="fa-solid fa-chevron-right icon-flip text-[#1e2939] text-[10px]"></i>
                                     </div>
                                     <p class="text-[#6a7282] text-[12px] leading-4">Explore apps that enhance your work experience</p>
                                 </div>
@@ -601,7 +686,7 @@
                                 <div class="flex flex-col gap-0.5 flex-1">
                                     <div class="flex items-center gap-1">
                                         <span class="text-[#1e2939] text-[14px] font-semibold">Manage Apps</span>
-                                        <i class="fa-solid fa-chevron-right text-[#1e2939] text-[10px]"></i>
+                                        <i class="fa-solid fa-chevron-right icon-flip text-[#1e2939] text-[10px]"></i>
                                     </div>
                                     <p class="text-[#6a7282] text-[12px] leading-4">Easily manage, upgrade, and configure your apps</p>
                                 </div>
@@ -615,7 +700,7 @@
                                 <div class="flex flex-col gap-0.5 flex-1">
                                     <div class="flex items-center gap-1">
                                         <span class="text-[#1e2939] text-[14px] font-semibold">Developer Portal</span>
-                                        <i class="fa-solid fa-chevron-right text-[#1e2939] text-[10px]"></i>
+                                        <i class="fa-solid fa-chevron-right icon-flip text-[#1e2939] text-[10px]"></i>
                                     </div>
                                     <p class="text-[#6a7282] text-[12px] leading-4">Build tools to help thousands of businesses worldwide</p>
                                 </div>
@@ -630,7 +715,7 @@
                         <i class="fa-solid fa-user text-[#0a0a0a] text-xs" aria-hidden="true"></i>
                     </button>
 
-                    <div id="profile-dropdown" role="dialog" aria-label="User profile menu" class="absolute right-0 top-[calc(100%+4px)] z-50 w-[260px] bg-white rounded-[10px] shadow-[0_0_10px_rgba(0,0,0,0.2)] overflow-hidden hidden">
+                    <div id="profile-dropdown" role="dialog" aria-label="User profile menu" class="absolute end-0 top-[calc(100%+4px)] z-50 w-[260px] bg-white rounded-[10px] shadow-[0_0_10px_rgba(0,0,0,0.2)] overflow-hidden hidden">
 
                         <!-- Main panel -->
                         <div id="profile-main" class="flex flex-col">
@@ -647,14 +732,14 @@
                             <!-- Theme -->
                             <button id="btn-profile-theme" class="px-4 py-3 flex items-center gap-3 w-full hover:bg-[#f1f5f9] transition-colors cursor-pointer border-b border-[#e5e7eb]">
                                 <i class="fa-solid fa-circle-half-stroke text-[#444] text-xs w-4 text-center shrink-0" aria-hidden="true"></i>
-                                <span class="text-xs text-[#333] flex-1 text-left">Theme</span>
-                                <i class="fa-solid fa-chevron-right text-[#9ca3af] text-xs" aria-hidden="true"></i>
+                                <span class="text-xs text-[#333] flex-1 text-start">Theme</span>
+                                <i class="fa-solid fa-chevron-right icon-flip text-[#9ca3af] text-xs" aria-hidden="true"></i>
                             </button>
                             <!-- Color scheme -->
                             <button id="btn-profile-color" class="px-4 py-3 flex items-center gap-3 w-full hover:bg-[#f1f5f9] transition-colors cursor-pointer border-b border-[#e5e7eb]">
                                 <i class="fa-solid fa-palette text-[#444] text-xs w-4 text-center shrink-0" aria-hidden="true"></i>
-                                <span class="text-xs text-[#333] flex-1 text-left">Color scheme</span>
-                                <i class="fa-solid fa-chevron-right text-[#9ca3af] text-xs" aria-hidden="true"></i>
+                                <span class="text-xs text-[#333] flex-1 text-start">Color scheme</span>
+                                <i class="fa-solid fa-chevron-right icon-flip text-[#9ca3af] text-xs" aria-hidden="true"></i>
                             </button>
                             <!-- Go to customer portal -->
                             <a href="#" class="px-4 py-3 flex items-center gap-3 hover:bg-[#f1f5f9] transition-colors no-underline border-b border-[#e5e7eb]">
@@ -677,7 +762,7 @@
                         <div id="profile-theme-panel" class="hidden flex-col">
                             <!-- Back header -->
                             <button id="btn-profile-theme-back" class="flex items-center gap-2.5 px-4 py-3 border-b border-[rgba(0,0,0,0.1)] w-full cursor-pointer">
-                                <i class="fa-solid fa-arrow-left text-[#0a0a0a] text-xs" aria-hidden="true"></i>
+                                <i class="fa-solid fa-arrow-left icon-flip text-[#0a0a0a] text-xs" aria-hidden="true"></i>
                                 <span class="text-sm font-medium text-[#0a0a0a]">Back</span>
                             </button>
                             <!-- Theme options -->
@@ -790,7 +875,7 @@
                         <!-- Color scheme panel -->
                         <div id="profile-color-panel" class="hidden flex-col overflow-y-auto max-h-[420px]">
                             <button id="btn-profile-color-back" class="flex items-center gap-2.5 px-4 py-3 border-b border-[rgba(0,0,0,0.1)] w-full shrink-0">
-                                <i class="fa-solid fa-arrow-left text-[#0a0a0a] text-xs" aria-hidden="true"></i>
+                                <i class="fa-solid fa-arrow-left icon-flip text-[#0a0a0a] text-xs" aria-hidden="true"></i>
                                 <span class="text-sm font-medium text-[#0a0a0a]">Back</span>
                             </button>
                             <!-- Sidebar color -->
@@ -887,15 +972,15 @@
         </header>
 
         <!-- Content body: views panel (inside) + ticket area -->
-        <main id="main-content" class="relative flex flex-1 overflow-hidden border-t border-l border-r border-[#d1d5dc] rounded-t-[10px]">
+        <main id="main-content" class="relative flex flex-1 overflow-hidden border-t border-s border-e border-[#d1d5dc] rounded-t-[10px]">
 
             <!-- Views panel — opens INSIDE content when filter icon clicked -->
-            <div id="views-panel" role="region" aria-label="Ticket views" class="w-72 bg-white border-r border-gray-100 flex flex-col shrink-0 overflow-hidden hidden">
+            <div id="views-panel" role="region" aria-label="Ticket views" class="w-72 bg-white border-e border-gray-100 flex flex-col shrink-0 overflow-hidden hidden">
                 <div class="px-3 py-3">
                     <div class="relative">
-                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs" aria-hidden="true"></i>
+                        <i class="fa-solid fa-magnifying-glass absolute start-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs" aria-hidden="true"></i>
                         <input id="views-search" type="text" placeholder="Search views…" aria-label="Search views"
-                               class="w-full text-sm border border-gray-200 rounded-[6px] pl-8 pr-3 py-2 outline-none focus:border-sky-400 bg-gray-50" />
+                               class="w-full text-sm border border-gray-200 rounded-[6px] ps-8 pe-3 py-2 outline-none focus:border-sky-400 bg-gray-50" />
                     </div>
                 </div>
                 <div id="views-content" class="flex-1 overflow-y-auto p-2 flex flex-col gap-px"></div>
@@ -915,7 +1000,7 @@
                             <button id="btn-bulk-assign" aria-haspopup="menu" aria-expanded="false" aria-controls="panel-bulk-assign" class="flex items-center gap-1.5 border border-[#d1d5dc] rounded-[6px] px-2.5 py-1.5 text-[#525252] text-xs font-medium bg-white hover:bg-[#f1f5f9] transition-colors cursor-pointer whitespace-nowrap">
                                 <i class="fa-solid fa-user-plus text-[10px]" aria-hidden="true"></i>Assign
                             </button>
-                            <div id="panel-bulk-assign" role="menu" aria-label="Assign tickets" class="absolute left-0 top-[calc(100%+4px)] z-50 w-[280px] bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] overflow-hidden hidden">
+                            <div id="panel-bulk-assign" role="menu" aria-label="Assign tickets" class="absolute start-0 top-[calc(100%+4px)] z-50 w-[280px] bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] overflow-hidden hidden">
                                 <!-- Tabs -->
                                 <div class="px-2.5 pt-2.5 pb-0 border-b border-[#e5e7eb]">
                                     <div class="flex gap-4 text-[10px] font-bold uppercase tracking-wide">
@@ -929,22 +1014,22 @@
                                     <input id="bulk-assign-search" type="text" placeholder="Search..." aria-label="Search agents"
                                            class="w-full px-3 py-2 text-[13px] border border-[#d1d5dc] rounded-[6px] outline-none focus:border-blue-500 mb-1">
                                     <div id="bulk-assign-agent-list" class="max-h-[200px] overflow-y-auto flex flex-col">
-                                        <button class="bulk-assign-agent-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-left font-medium">
+                                        <button class="bulk-assign-agent-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-start font-medium">
                                             Assign to me
                                         </button>
-                                        <button class="bulk-assign-agent-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-left">
+                                        <button class="bulk-assign-agent-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-start">
                                             <span class="w-6 h-6 rounded-full bg-blue-400 flex items-center justify-center text-[10px] text-white font-semibold shrink-0">AJ</span>Alice Johnson
                                         </button>
-                                        <button class="bulk-assign-agent-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-left">
+                                        <button class="bulk-assign-agent-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-start">
                                             <span class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-[10px] text-white font-semibold shrink-0">AP</span>Alex P.
                                         </button>
-                                        <button class="bulk-assign-agent-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-left">
+                                        <button class="bulk-assign-agent-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-start">
                                             <span class="w-6 h-6 rounded-full bg-purple-400 flex items-center justify-center text-[10px] text-white font-semibold shrink-0">BC</span>Ben Carter
                                         </button>
-                                        <button class="bulk-assign-agent-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-left">
+                                        <button class="bulk-assign-agent-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-start">
                                             <span class="w-6 h-6 rounded-full bg-orange-400 flex items-center justify-center text-[10px] text-white font-semibold shrink-0">LM</span>Lisa M.
                                         </button>
-                                        <button class="bulk-assign-agent-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-left">
+                                        <button class="bulk-assign-agent-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-start">
                                             <span class="w-6 h-6 rounded-full bg-pink-400 flex items-center justify-center text-[10px] text-white font-semibold shrink-0">SP</span>Sam Patel
                                         </button>
                                     </div>
@@ -955,16 +1040,16 @@
                                     <input id="bulk-assign-group-search" type="text" placeholder="Search..." aria-label="Search groups"
                                            class="w-full px-3 py-2 text-[13px] border border-[#d1d5dc] rounded-[6px] outline-none focus:border-blue-500 mb-1">
                                     <div id="bulk-assign-group-list" class="max-h-[200px] overflow-y-auto flex flex-col">
-                                        <button class="bulk-assign-group-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-left">
+                                        <button class="bulk-assign-group-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-start">
                                             <span class="w-6 h-6 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[10px] text-[#6a7282] font-semibold shrink-0">--</span>Support
                                         </button>
-                                        <button class="bulk-assign-group-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-left">
+                                        <button class="bulk-assign-group-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-start">
                                             <span class="w-6 h-6 rounded-full bg-blue-400 flex items-center justify-center text-[10px] text-white font-semibold shrink-0">SA</span>Sales
                                         </button>
-                                        <button class="bulk-assign-group-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-left">
+                                        <button class="bulk-assign-group-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-start">
                                             <span class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-[10px] text-white font-semibold shrink-0">TC</span>Technical
                                         </button>
-                                        <button class="bulk-assign-group-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-left">
+                                        <button class="bulk-assign-group-opt flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] text-[#1e2939] hover:bg-[#f1f5f9] transition-colors cursor-pointer border-none bg-transparent text-start">
                                             <span class="w-6 h-6 rounded-full bg-purple-400 flex items-center justify-center text-[10px] text-white font-semibold shrink-0">BI</span>Billing
                                         </button>
                                     </div>
@@ -984,18 +1069,18 @@
                             <button data-toggle="dropdown" data-target="#bulk-more-dropdown" aria-haspopup="menu" aria-expanded="false" aria-controls="bulk-more-dropdown" aria-label="More actions" class="flex items-center justify-center w-[28px] h-[28px] border border-[#d1d5dc] rounded-[6px] bg-white text-[#525252] hover:bg-[#f1f5f9] transition-colors cursor-pointer">
                                 <i class="fa-solid fa-ellipsis-vertical text-xs" aria-hidden="true"></i>
                             </button>
-                            <div id="bulk-more-dropdown" role="menu" aria-label="More actions" class="absolute left-0 top-[calc(100%+4px)] z-50 min-w-[160px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] p-1.5 hidden">
-                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                            <div id="bulk-more-dropdown" role="menu" aria-label="More actions" class="absolute start-0 top-[calc(100%+4px)] z-50 min-w-[160px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] p-1.5 hidden">
+                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                                     <i class="fa-solid fa-tag text-xs shrink-0" aria-hidden="true"></i><span>Add label</span>
                                 </button>
-                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                                     <i class="fa-solid fa-share text-xs shrink-0" aria-hidden="true"></i><span>Re-assign group</span>
                                 </button>
-                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                                     <i class="fa-solid fa-ban text-xs shrink-0" aria-hidden="true"></i><span>Mark as spam</span>
                                 </button>
                                 <div class="border-t border-[#e5e7eb] my-1"></div>
-                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-red-500 text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-red-500 text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                                     <i class="fa-solid fa-trash text-xs shrink-0" aria-hidden="true"></i><span>Delete</span>
                                 </button>
                             </div>
@@ -1014,24 +1099,24 @@
                                 <span>Date created</span>
                                 <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
                             </button>
-                            <div id="sort-dropdown" role="menu" aria-label="Sort options" class="absolute left-0 top-[calc(100%+2px)] z-50 min-w-[200px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] p-1.5 hidden">
+                            <div id="sort-dropdown" role="menu" aria-label="Sort options" class="absolute start-0 top-[calc(100%+2px)] z-50 min-w-[200px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] p-1.5 hidden">
                                 <div data-sort-group="field">
-                                    <button role="menuitem" class="sort-item sort-active flex items-center justify-between w-full px-2.5 py-1.5 rounded-[4px] text-[12px] font-medium cursor-pointer border-none text-left transition-colors bg-[#cfcfcf] text-[#4a5565]">
+                                    <button role="menuitem" class="sort-item sort-active flex items-center justify-between w-full px-2.5 py-1.5 rounded-[4px] text-[12px] font-medium cursor-pointer border-none text-start transition-colors bg-[#cfcfcf] text-[#4a5565]">
                                         <span>Date created</span><i class="fa-solid fa-check text-[10px]" aria-hidden="true"></i>
                                     </button>
-                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">Due by time</button>
-                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">Last modified</button>
-                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">Priority</button>
-                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">Status</button>
-                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">Sentiment</button>
-                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">First response due</button>
-                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">Next response due</button>
-                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">Closed time</button>
+                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">Due by time</button>
+                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">Last modified</button>
+                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">Priority</button>
+                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">Status</button>
+                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">Sentiment</button>
+                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">First response due</button>
+                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">Next response due</button>
+                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">Closed time</button>
                                 </div>
                                 <div class="border-t border-[#e5e7eb] my-1"></div>
                                 <div data-sort-group="direction">
-                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">Ascending</button>
-                                    <button role="menuitem" class="sort-item sort-active flex items-center justify-between w-full px-2.5 py-1.5 rounded-[4px] text-[12px] font-medium cursor-pointer border-none text-left transition-colors bg-[#cfcfcf] text-[#4a5565]">
+                                    <button role="menuitem" class="sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">Ascending</button>
+                                    <button role="menuitem" class="sort-item sort-active flex items-center justify-between w-full px-2.5 py-1.5 rounded-[4px] text-[12px] font-medium cursor-pointer border-none text-start transition-colors bg-[#cfcfcf] text-[#4a5565]">
                                         <span>Descending</span><i class="fa-solid fa-check text-[10px]" aria-hidden="true"></i>
                                     </button>
                                 </div>
@@ -1052,15 +1137,15 @@
                                     <span>Card</span>
                                     <i class="fa-solid fa-chevron-down text-[10px]" aria-hidden="true"></i>
                                 </button>
-                                <div id="layout-dropdown" role="menu" aria-label="Layout options" class="absolute right-0 top-[calc(100%+2px)] z-50 min-w-[130px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] p-1.5 hidden">
-                                    <button role="menuitem" class="flex items-center justify-between w-full px-2.5 py-1.5 rounded-[4px] text-[12px] font-medium cursor-pointer border-none text-left transition-colors bg-[#cfcfcf] text-[#4a5565]">
+                                <div id="layout-dropdown" role="menu" aria-label="Layout options" class="absolute end-0 top-[calc(100%+2px)] z-50 min-w-[130px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] p-1.5 hidden">
+                                    <button role="menuitem" class="flex items-center justify-between w-full px-2.5 py-1.5 rounded-[4px] text-[12px] font-medium cursor-pointer border-none text-start transition-colors bg-[#cfcfcf] text-[#4a5565]">
                                         <span class="flex items-center gap-2"><i class="fa-solid fa-table-cells-large text-xs" aria-hidden="true"></i>Card</span>
                                         <i class="fa-solid fa-check text-[10px]" aria-hidden="true"></i>
                                     </button>
-                                    <button role="menuitem" class="flex items-center gap-2 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                                    <button role="menuitem" class="flex items-center gap-2 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                                         <i class="fa-solid fa-list text-xs" aria-hidden="true"></i>Inbox
                                     </button>
-                                    <button role="menuitem" class="flex items-center gap-2 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                                    <button role="menuitem" class="flex items-center gap-2 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                                         <i class="fa-solid fa-table-list text-xs" aria-hidden="true"></i>Table
                                     </button>
                                 </div>
@@ -1075,10 +1160,10 @@
                         <!-- Pagination -->
                         <span class="hidden sm:inline whitespace-nowrap text-[#4a5565] text-xs px-1">1 - 3 of 3</span>
                         <button class="hidden sm:flex bg-white border border-[#d1d5dc] rounded-[6px] w-[28px] h-[28px] items-center justify-center text-[#4a5565] hover:bg-[#f1f5f9] transition-colors cursor-pointer" aria-label="Previous page">
-                            <i class="fa-solid fa-chevron-left text-xs" aria-hidden="true"></i>
+                            <i class="fa-solid fa-chevron-left icon-flip text-xs" aria-hidden="true"></i>
                         </button>
                         <button class="hidden sm:flex bg-white border border-[#d1d5dc] rounded-[6px] w-[28px] h-[28px] items-center justify-center text-[#4a5565] hover:bg-[#f1f5f9] transition-colors cursor-pointer" aria-label="Next page">
-                            <i class="fa-solid fa-chevron-right text-xs" aria-hidden="true"></i>
+                            <i class="fa-solid fa-chevron-right icon-flip text-xs" aria-hidden="true"></i>
                         </button>
 
                         <!-- Filters -->
@@ -1095,16 +1180,15 @@
 
                         <!-- Row 1: Authentication failure #3 — Low, Closed -->
                         <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] bg-[#f7f9fa] hover:bg-[#eef0f3] transition-colors cursor-pointer list-none py-3" role="listitem">
-                            <div class="flex items-center justify-center w-[23px] shrink-0 ml-6 pt-1">
+                            <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
-                            <div class="ml-[15px] relative shrink-0">
-                                <img src="https://www.figma.com/api/mcp/asset/6a1efae7-11d0-4fb8-9de3-f36fbc4b435f"
+                            <div class="ms-[15px] relative shrink-0">
+                                <img src="https://i.pravatar.cc/48?img=13"
                                      alt="User avatar" class="w-12 h-12 rounded-full object-cover" />
-                                <img src="https://www.figma.com/api/mcp/asset/ecf15187-d62d-498e-b7f3-85b0417c6545"
-                                     alt="User avatar" class="absolute -bottom-0 -right-0 w-3 h-3 rounded-full border border-white object-cover" />
+                                <span class="absolute -bottom-0 -end-0 w-3.5 h-3.5 rounded-full border border-white bg-white flex items-center justify-center text-[8px] leading-none" aria-hidden="true">🙂</span>
                             </div>
-                            <div class="ml-7 flex flex-col gap-0.5 flex-1 min-w-0">
+                            <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
                                 <div>
                                     <span class="bg-[#dcfce7] text-[#166534] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">SLA met</span>
                                 </div>
@@ -1125,34 +1209,33 @@
                   </span>
                                 </div>
                             </div>
-                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 mr-6 min-w-[280px] pt-3">
+                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
                                 <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-green-500 inline-block shrink-0"></span>
-                                    <span class="priority-label">Low</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Low</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
                                     <i class="status-icon fa-solid fa-check text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Closed</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="status-label">Closed</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 2: Authentication failure #2 — Medium, Open -->
                         <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] bg-[#f7f9fa] hover:bg-[#eef0f3] transition-colors cursor-pointer list-none py-3" role="listitem">
-                            <div class="flex items-center justify-center w-[23px] shrink-0 ml-6 pt-1">
+                            <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
-                            <div class="ml-[15px] relative shrink-0">
-                                <img src="https://www.figma.com/api/mcp/asset/3233e0ea-8d42-437d-9b14-79c5423cbbed"
+                            <div class="ms-[15px] relative shrink-0">
+                                <img src="https://i.pravatar.cc/48?img=33"
                                      alt="User avatar" class="w-12 h-12 rounded-full object-cover" />
-                                <img src="https://www.figma.com/api/mcp/asset/ecf15187-d62d-498e-b7f3-85b0417c6545"
-                                     alt="User avatar" class="absolute -bottom-0 -right-0 w-3 h-3 rounded-full border border-white object-cover" />
+                                <span class="absolute -bottom-0 -end-0 w-3.5 h-3.5 rounded-full border border-white bg-white flex items-center justify-center text-[8px] leading-none" aria-hidden="true">🙂</span>
                             </div>
-                            <div class="ml-7 flex flex-col gap-0.5 flex-1 min-w-0">
+                            <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
                                 <div class="flex items-center gap-1.5 flex-wrap">
                                     <span class="bg-[#ffe2e2] text-[#cd2629] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">First response overdue</span>
                                     <span class="bg-[#fff3cd] text-[#856404] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">Resolution: 4h left</span>
@@ -1174,34 +1257,33 @@
                   </span>
                                 </div>
                             </div>
-                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 mr-6 min-w-[280px] pt-3">
+                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
                                 <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-blue-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
                                     <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 3: 404 error #1 — High, Open — TWO LABELS -->
                         <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] bg-[#f7f9fa] hover:bg-[#eef0f3] transition-colors cursor-pointer list-none py-3" role="listitem">
-                            <div class="flex items-center justify-center w-[23px] shrink-0 ml-6 pt-1">
+                            <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
-                            <div class="ml-[15px] relative shrink-0">
-                                <img src="https://www.figma.com/api/mcp/asset/f4875b4d-1346-488a-af80-d9adcd8ea081"
+                            <div class="ms-[15px] relative shrink-0">
+                                <img src="https://i.pravatar.cc/48?img=51"
                                      alt="User avatar" class="w-12 h-12 rounded-full object-cover" />
-                                <img src="https://www.figma.com/api/mcp/asset/75bf14d1-6055-40d0-96c8-fed4a97cb493"
-                                     alt="User avatar" class="absolute -bottom-0 -right-0 w-3 h-3 rounded-[6px] border border-white object-cover" />
+                                <span class="absolute -bottom-0 -end-0 w-3.5 h-3.5 rounded-[6px] border border-white bg-white flex items-center justify-center text-[8px] leading-none" aria-hidden="true">🙂</span>
                             </div>
-                            <div class="ml-7 flex flex-col gap-0.5 flex-1 min-w-0">
+                            <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
                                 <div class="flex items-center gap-1.5 flex-wrap">
                                     <span class="bg-[#ffe2e2] text-[#cd2629] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">First response overdue</span>
                                     <span class="bg-[#ffe2e2] text-[#cd2629] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">Resolution overdue</span>
@@ -1223,31 +1305,31 @@
                   </span>
                                 </div>
                             </div>
-                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 mr-6 min-w-[280px] pt-3">
+                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
                                 <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-yellow-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
                                     <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4a: Login page crashes on Safari — Medium, Pending -->
                         <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
-                            <div class="flex items-center justify-center w-[23px] shrink-0 ml-6 pt-1">
+                            <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
-                            <div class="ml-[15px] relative shrink-0">
+                            <div class="ms-[15px] relative shrink-0">
                                 <div class="w-12 h-12 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[#6a7282] font-semibold text-base">R</div>
                             </div>
-                            <div class="ml-7 flex flex-col gap-0.5 flex-1 min-w-0">
+                            <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
                                 <div><span class="bg-[#dbeafe] text-[#1d4ed8] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">SLA paused</span></div>
                                 <div class="text-[#404040] text-[13px] font-bold">Login page crashes on Safari</div>
                                 <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
@@ -1266,31 +1348,31 @@
                   </span>
                                 </div>
                             </div>
-                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 mr-6 min-w-[280px] pt-3">
+                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
                                 <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-blue-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
                                     <i class="status-icon fa-solid fa-pause text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Pending</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="status-label">Pending</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4b: Email notifications not sent — High, Open -->
                         <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
-                            <div class="flex items-center justify-center w-[23px] shrink-0 ml-6 pt-1">
+                            <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
-                            <div class="ml-[15px] relative shrink-0">
+                            <div class="ms-[15px] relative shrink-0">
                                 <div class="w-12 h-12 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[#6a7282] font-semibold text-base">M</div>
                             </div>
-                            <div class="ml-7 flex flex-col gap-0.5 flex-1 min-w-0">
+                            <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
                                 <div><span class="bg-[#ffe2e2] text-[#cd2629] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">First response overdue</span></div>
                                 <div class="text-[#404040] text-[13px] font-bold">Email notifications not being sent to customers</div>
                                 <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
@@ -1309,31 +1391,31 @@
                   </span>
                                 </div>
                             </div>
-                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 mr-6 min-w-[280px] pt-3">
+                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
                                 <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-yellow-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / John D.</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / John D.</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
                                     <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4c: API rate limit exceeded — Urgent, Open -->
                         <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
-                            <div class="flex items-center justify-center w-[23px] shrink-0 ml-6 pt-1">
+                            <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
-                            <div class="ml-[15px] relative shrink-0">
+                            <div class="ms-[15px] relative shrink-0">
                                 <div class="w-12 h-12 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[#6a7282] font-semibold text-base">K</div>
                             </div>
-                            <div class="ml-7 flex flex-col gap-0.5 flex-1 min-w-0">
+                            <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
                                 <div class="flex items-center gap-1.5 flex-wrap">
                                     <span class="bg-[#ffe2e2] text-[#cd2629] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">First response overdue</span>
                                     <span class="bg-[#ffe2e2] text-[#cd2629] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">Resolution overdue</span>
@@ -1356,31 +1438,31 @@
                   </span>
                                 </div>
                             </div>
-                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 mr-6 min-w-[280px] pt-3">
+                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
                                 <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-red-500 inline-block shrink-0"></span>
-                                    <span class="priority-label">Urgent</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Urgent</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Sara K.</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Sara K.</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
                                     <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4d: Password reset not working — Low, Resolved -->
                         <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
-                            <div class="flex items-center justify-center w-[23px] shrink-0 ml-6 pt-1">
+                            <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
-                            <div class="ml-[15px] relative shrink-0">
+                            <div class="ms-[15px] relative shrink-0">
                                 <div class="w-12 h-12 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[#6a7282] font-semibold text-base">A</div>
                             </div>
-                            <div class="ml-7 flex flex-col gap-0.5 flex-1 min-w-0">
+                            <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
 
                                 <div class="text-[#404040] text-[13px] font-bold">Password reset link not working for new users</div>
                                 <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
@@ -1399,31 +1481,31 @@
                   </span>
                                 </div>
                             </div>
-                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 mr-6 min-w-[280px] pt-3">
+                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
                                 <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-green-500 inline-block shrink-0"></span>
-                                    <span class="priority-label">Low</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Low</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Alex P.</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Alex P.</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
                                     <i class="status-icon fa-solid fa-circle-check text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Resolved</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="status-label">Resolved</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4e: Billing discrepancy — High, Open -->
                         <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
-                            <div class="flex items-center justify-center w-[23px] shrink-0 ml-6 pt-1">
+                            <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
-                            <div class="ml-[15px] relative shrink-0">
+                            <div class="ms-[15px] relative shrink-0">
                                 <div class="w-12 h-12 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[#6a7282] font-semibold text-base">S</div>
                             </div>
-                            <div class="ml-7 flex flex-col gap-0.5 flex-1 min-w-0">
+                            <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
                                 <div><span class="bg-[#ffedd5] text-[#c2410c] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">Due in 1h</span></div>
                                 <div class="text-[#404040] text-[13px] font-bold">Billing discrepancy in last month's invoice</div>
                                 <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
@@ -1442,31 +1524,31 @@
                   </span>
                                 </div>
                             </div>
-                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 mr-6 min-w-[280px] pt-3">
+                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
                                 <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-yellow-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
                                     <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4f: Dashboard slow loading — Medium, Pending -->
                         <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
-                            <div class="flex items-center justify-center w-[23px] shrink-0 ml-6 pt-1">
+                            <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
-                            <div class="ml-[15px] relative shrink-0">
+                            <div class="ms-[15px] relative shrink-0">
                                 <div class="w-12 h-12 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[#6a7282] font-semibold text-base">T</div>
                             </div>
-                            <div class="ml-7 flex flex-col gap-0.5 flex-1 min-w-0">
+                            <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
 
                                 <div class="text-[#404040] text-[13px] font-bold">Dashboard taking too long to load</div>
                                 <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
@@ -1485,31 +1567,31 @@
                   </span>
                                 </div>
                             </div>
-                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 mr-6 min-w-[280px] pt-3">
+                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
                                 <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-blue-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Tom R.</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Tom R.</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
                                     <i class="status-icon fa-solid fa-pause text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Pending</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="status-label">Pending</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4g: CSV export broken — Low, Closed -->
                         <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
-                            <div class="flex items-center justify-center w-[23px] shrink-0 ml-6 pt-1">
+                            <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
-                            <div class="ml-[15px] relative shrink-0">
+                            <div class="ms-[15px] relative shrink-0">
                                 <div class="w-12 h-12 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[#6a7282] font-semibold text-base">L</div>
                             </div>
-                            <div class="ml-7 flex flex-col gap-0.5 flex-1 min-w-0">
+                            <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
 
                                 <div class="text-[#404040] text-[13px] font-bold">CSV export not generating correct data</div>
                                 <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
@@ -1528,31 +1610,31 @@
                   </span>
                                 </div>
                             </div>
-                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 mr-6 min-w-[280px] pt-3">
+                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
                                 <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-green-500 inline-block shrink-0"></span>
-                                    <span class="priority-label">Low</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Low</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Lisa M.</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Lisa M.</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
                                     <i class="status-icon fa-solid fa-check text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Closed</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="status-label">Closed</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4h: 2FA setup failing — Urgent, Open -->
                         <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
-                            <div class="flex items-center justify-center w-[23px] shrink-0 ml-6 pt-1">
+                            <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
-                            <div class="ml-[15px] relative shrink-0">
+                            <div class="ms-[15px] relative shrink-0">
                                 <div class="w-12 h-12 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[#6a7282] font-semibold text-base">N</div>
                             </div>
-                            <div class="ml-7 flex flex-col gap-0.5 flex-1 min-w-0">
+                            <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
                                 <div><span class="bg-[#ffedd5] text-[#c2410c] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">Due in 30 min</span></div>
                                 <div class="text-[#404040] text-[13px] font-bold">Two-factor authentication setup keeps failing</div>
                                 <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
@@ -1571,31 +1653,31 @@
                   </span>
                                 </div>
                             </div>
-                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 mr-6 min-w-[280px] pt-3">
+                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
                                 <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-red-500 inline-block shrink-0"></span>
-                                    <span class="priority-label">Urgent</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Urgent</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
                                     <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4i: Webhook not triggering — High, Open -->
                         <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
-                            <div class="flex items-center justify-center w-[23px] shrink-0 ml-6 pt-1">
+                            <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
-                            <div class="ml-[15px] relative shrink-0">
+                            <div class="ms-[15px] relative shrink-0">
                                 <div class="w-12 h-12 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[#6a7282] font-semibold text-base">J</div>
                             </div>
-                            <div class="ml-7 flex flex-col gap-0.5 flex-1 min-w-0">
+                            <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
                                 <div><span class="bg-[#fff3cd] text-[#856404] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">Resolution: 3h left</span></div>
                                 <div class="text-[#404040] text-[13px] font-bold">Webhook events not triggering on order completion</div>
                                 <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
@@ -1614,31 +1696,31 @@
                   </span>
                                 </div>
                             </div>
-                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 mr-6 min-w-[280px] pt-3">
+                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
                                 <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-yellow-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / James W.</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / James W.</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
                                     <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4j: Mobile app sync issue — Medium, Pending -->
                         <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
-                            <div class="flex items-center justify-center w-[23px] shrink-0 ml-6 pt-1">
+                            <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
-                            <div class="ml-[15px] relative shrink-0">
+                            <div class="ms-[15px] relative shrink-0">
                                 <div class="w-12 h-12 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[#6a7282] font-semibold text-base">P</div>
                             </div>
-                            <div class="ml-7 flex flex-col gap-0.5 flex-1 min-w-0">
+                            <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
 
                                 <div class="text-[#404040] text-[13px] font-bold">Mobile app not syncing with web dashboard</div>
                                 <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
@@ -1657,34 +1739,33 @@
                   </span>
                                 </div>
                             </div>
-                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 mr-6 min-w-[280px] pt-3">
+                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
                                 <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-blue-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Priya S.</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Priya S.</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
                                     <i class="status-icon fa-solid fa-pause text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Pending</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="status-label">Pending</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4: 404 error #1 — Urgent, Open -->
                         <li class="flex items-start md:items-center min-h-[98px] shrink-0 hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
-                            <div class="flex items-center justify-center w-[23px] shrink-0 ml-6 pt-1">
+                            <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
-                            <div class="ml-[15px] relative shrink-0">
-                                <img src="https://www.figma.com/api/mcp/asset/f70ca40a-4aad-442a-8909-22973a7825a1"
+                            <div class="ms-[15px] relative shrink-0">
+                                <img src="https://i.pravatar.cc/48?img=60"
                                      alt="User avatar" class="w-12 h-12 rounded-full object-cover" />
-                                <img src="https://www.figma.com/api/mcp/asset/75bf14d1-6055-40d0-96c8-fed4a97cb493"
-                                     alt="User avatar" class="absolute -bottom-0 -right-0 w-3 h-3 rounded-[6px] border border-white object-cover" />
+                                <span class="absolute -bottom-0 -end-0 w-3.5 h-3.5 rounded-[6px] border border-white bg-white flex items-center justify-center text-[8px] leading-none" aria-hidden="true">🙂</span>
                             </div>
-                            <div class="ml-7 flex flex-col gap-0.5 flex-1 min-w-0">
+                            <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
                                 <div class="flex items-center gap-1.5 flex-wrap">
                                     <span class="bg-[#ffe2e2] text-[#cd2629] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">First response overdue</span>
                                     <span class="bg-[#fff3cd] text-[#856404] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">Resolution: 2h left</span>
@@ -1706,24 +1787,24 @@
                   </span>
                                 </div>
                             </div>
-                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 mr-6 min-w-[280px] pt-3">
+                            <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
                                 <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-red-500 inline-block shrink-0"></span>
-                                    <span class="priority-label">Urgent</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Urgent</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
                                     <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                                 <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
                                     <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ml-px" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                     </ul>
-                    <aside id="filter-aside" class="w-[260px] bg-white border-l border-[#d1d5dc] shrink-0 hidden flex-col overflow-hidden" aria-label="Ticket filters">
+                    <aside id="filter-aside" class="w-[260px] bg-white border-s border-[#d1d5dc] shrink-0 hidden flex-col overflow-hidden" aria-label="Ticket filters">
 
                         <!-- Scrollable area -->
                         <div class="overflow-y-auto flex-1 flex flex-col">
@@ -1771,7 +1852,7 @@
                                         Add filters
                                     </button>
                                     <!-- Dropdown -->
-                                    <div id="add-filter-dropdown" class="hidden absolute left-0 top-[calc(100%+4px)] w-full bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.12)] border border-[#e5e7eb] z-20">
+                                    <div id="add-filter-dropdown" class="hidden absolute start-0 top-[calc(100%+4px)] w-full bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.12)] border border-[#e5e7eb] z-20">
                                         <div class="p-2">
                                             <input id="filter-option-search" type="text" placeholder="Search..." aria-label="Search filter fields"
                                                    class="w-full border border-[#d1d5dc] rounded-[6px] px-3 py-1.5 text-xs outline-none focus:border-sky-400" />
@@ -1970,7 +2051,7 @@
 <!-- ── Renew flyout panel ────────────────────────────────────────
      position:fixed, top set by JS to bottom of #banner-red
      Drops right below the red alert, overlays everything below it  -->
-<div id="panel-renew" role="dialog" aria-modal="true" aria-label="Subscription renewal" class="fixed left-0 right-0 bottom-0 z-[200] hidden flex flex-col">
+<div id="panel-renew" role="dialog" aria-modal="true" aria-label="Subscription renewal" class="fixed start-0 end-0 bottom-0 z-[200] hidden flex flex-col">
     <!-- Content panel -->
     <div class="w-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.12)] overflow-y-auto max-h-[80vh] md:max-h-none md:overflow-visible">
         <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[rgba(219,219,219,0.5)]">
@@ -2057,7 +2138,7 @@
                 <span class="font-semibold cursor-pointer">Choose a plan</span>
                 to continue using Faveo Helpdesk
             </p>
-            <button data-dismiss="#panel-renew" aria-label="Close renewal panel" class="absolute right-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
+            <button data-dismiss="#panel-renew" aria-label="Close renewal panel" class="absolute end-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
                 <i class="fa-solid fa-xmark text-[10px] text-gray-500" aria-hidden="true"></i>
             </button>
         </div>
@@ -2080,19 +2161,19 @@
 <div id="panel-priority" class="fixed z-[300] hidden bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] p-1 min-w-[120px]">
     <button class="priority-opt flex items-center gap-2 w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="Low" data-color="bg-green-500">
         <span class="w-2.5 h-2.5 rounded-sm bg-green-500 shrink-0"></span>
-        <span class="flex-1 text-left">Low</span>
+        <span class="flex-1 text-start">Low</span>
     </button>
     <button class="priority-opt flex items-center gap-2 w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="Medium" data-color="bg-blue-400">
         <span class="w-2.5 h-2.5 rounded-sm bg-blue-400 shrink-0"></span>
-        <span class="flex-1 text-left">Medium</span>
+        <span class="flex-1 text-start">Medium</span>
     </button>
     <button class="priority-opt flex items-center gap-2 w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="High" data-color="bg-yellow-400">
         <span class="w-2.5 h-2.5 rounded-sm bg-yellow-400 shrink-0"></span>
-        <span class="flex-1 text-left">High</span>
+        <span class="flex-1 text-start">High</span>
     </button>
     <button class="priority-opt flex items-center gap-2 w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="Urgent" data-color="bg-red-500">
         <span class="w-2.5 h-2.5 rounded-sm bg-red-500 shrink-0"></span>
-        <span class="flex-1 text-left">Urgent</span>
+        <span class="flex-1 text-start">Urgent</span>
     </button>
 </div>
 
@@ -2119,8 +2200,8 @@
     <div id="agent-section">
         <div class="px-1.5 py-1.5 border-b border-[#e5e7eb]">
             <div class="relative">
-                <input id="agent-search-input" type="text" placeholder="Search agent" class="w-full pl-2.5 pr-7 py-1 text-[11px] rounded-[5px] border border-[#e5e7eb] focus:outline-none focus:border-blue-400 bg-transparent">
-                <i class="fa-solid fa-magnifying-glass absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-[9px]" aria-hidden="true"></i>
+                <input id="agent-search-input" type="text" placeholder="Search agent" class="w-full ps-2.5 pe-7 py-1 text-[11px] rounded-[5px] border border-[#e5e7eb] focus:outline-none focus:border-blue-400 bg-transparent">
+                <i class="fa-solid fa-magnifying-glass absolute end-2 top-1/2 -translate-y-1/2 text-gray-400 text-[9px]" aria-hidden="true"></i>
             </div>
         </div>
         <div id="agent-list" class="p-1 max-h-[160px] overflow-y-auto">
@@ -2167,8 +2248,8 @@
     <div id="group-section" class="hidden">
         <div class="px-1.5 py-1.5 border-b border-[#e5e7eb]">
             <div class="relative">
-                <input id="group-search-input" type="text" placeholder="Search group" class="w-full pl-2.5 pr-7 py-1 text-[11px] rounded-[5px] border border-[#e5e7eb] focus:outline-none focus:border-blue-400 bg-transparent">
-                <i class="fa-solid fa-magnifying-glass absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-[9px]" aria-hidden="true"></i>
+                <input id="group-search-input" type="text" placeholder="Search group" class="w-full ps-2.5 pe-7 py-1 text-[11px] rounded-[5px] border border-[#e5e7eb] focus:outline-none focus:border-blue-400 bg-transparent">
+                <i class="fa-solid fa-magnifying-glass absolute end-2 top-1/2 -translate-y-1/2 text-gray-400 text-[9px]" aria-hidden="true"></i>
             </div>
         </div>
         <div id="group-list" class="p-1 max-h-[160px] overflow-y-auto">
@@ -2561,6 +2642,58 @@
         });
     });
 })();
+
+// ── Top-nav language dropdown selection (+ RTL toggle) ──────────────────
+;(function () {
+    var dropdown = document.getElementById('topnav-language-dropdown')
+    var trigger  = document.getElementById('topnav-language-trigger')
+    var flag     = document.getElementById('topnav-language-flag')
+    if (!dropdown || !trigger || !flag) return
+
+    function selectLanguage(btn, closeMenu) {
+        // Update trigger flag + accessible name
+        flag.src = btn.getAttribute('data-flag')
+        trigger.setAttribute('aria-label', 'Change language (currently ' + btn.getAttribute('data-short') + ')')
+        // Reset all options
+        dropdown.querySelectorAll('.topnav-lang-option').forEach(function (opt) {
+            opt.classList.remove('bg-[#f1f5f9]')
+            opt.classList.add('hover:bg-[#f1f5f9]')
+            var chk = opt.querySelector('i.fa-check')
+            if (chk) chk.remove()
+        })
+        // Mark selected
+        btn.classList.add('bg-[#f1f5f9]')
+        btn.classList.remove('hover:bg-[#f1f5f9]')
+        var icon = document.createElement('i')
+        icon.className = 'fa-solid fa-check text-[10px] text-[#3da6d7]'
+        icon.setAttribute('aria-hidden', 'true')
+        btn.appendChild(icon)
+        // Flip document direction
+        document.documentElement.setAttribute('dir', btn.getAttribute('data-dir'))
+        localStorage.setItem('faveo-lang', btn.getAttribute('data-lang'))
+        if (closeMenu) {
+            dropdown.classList.add('hidden')
+            trigger.classList.remove('dropdown-open')
+            trigger.setAttribute('aria-expanded', 'false')
+        }
+    }
+
+    dropdown.addEventListener('click', function (e) {
+        var btn = e.target.closest('.topnav-lang-option')
+        if (!btn) return
+        selectLanguage(btn, true)
+    })
+
+    // Restore a previously chosen language (defaults to the English - United
+    // States option already marked selected in the markup, so do nothing if
+    // there's no saved preference or it matches the default).
+    var savedLang = localStorage.getItem('faveo-lang')
+    if (savedLang && savedLang !== 'en-US') {
+        var savedBtn = dropdown.querySelector('.topnav-lang-option[data-lang="' + savedLang + '"]')
+        if (savedBtn) selectLanguage(savedBtn, false)
+    }
+})()
+
 </script>
 </body>
 </html>

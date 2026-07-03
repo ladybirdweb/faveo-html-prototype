@@ -15,8 +15,16 @@ function showSubmenu($el, navKey) {
   }
   const r = $el[0].getBoundingClientRect()
   const $panel = $('#sidebar-expanded').hasClass('hidden') ? $('#sidebar') : $('#sidebar-expanded')
-  const panelRight = $panel[0].getBoundingClientRect().right
-  $menu.css({ left: panelRight, top: r.top, visibility: 'hidden' }).removeClass('hidden')
+  const panelRect = $panel[0].getBoundingClientRect()
+  const rtl = document.documentElement.getAttribute('dir') === 'rtl'
+  // The panel sits at the trailing edge of the reading direction (right in
+  // LTR, left in RTL) — the submenu opens on the opposite (leading) side.
+  $menu.css({ left: '', right: '', top: r.top, visibility: 'hidden' }).removeClass('hidden')
+  if (rtl) {
+    $menu.css('right', window.innerWidth - panelRect.left)
+  } else {
+    $menu.css('left', panelRect.right)
+  }
   const menuH = $menu[0].offsetHeight
   const top = Math.min(r.top, window.innerHeight - menuH - 8)
   $menu.css({ top: Math.max(8, top), visibility: '' })
@@ -59,7 +67,7 @@ $(document).on('click', '[data-nav]', function () {
       const items = $submenu.find('.submenu-item').map(function () { return $(this).text().trim() }).get()
       const html = '<div class="mobile-subnav flex flex-col pb-1">' +
         items.map(label =>
-          '<button class="mobile-subnav-item text-left text-[12px] text-[#4a5565] py-2 pl-14 pr-3 rounded-[8px] hover:bg-[#e8e8e8] bg-transparent border-none w-full cursor-pointer font-medium">' + label + '</button>'
+          '<button class="mobile-subnav-item text-start text-[12px] text-[#4a5565] py-2 ps-14 pe-3 rounded-[8px] hover:bg-[#e8e8e8] bg-transparent border-none w-full cursor-pointer font-medium">' + label + '</button>'
         ).join('') +
         '</div>'
       $(this).after(html)
