@@ -884,9 +884,9 @@
         <main id="main-content" class="flex flex-col flex-1 overflow-hidden border-t border-l border-r border-[#d1d5dc] rounded-t-[10px] bg-white">
 
             <!-- ── Inner action toolbar ── -->
-            <div class="shrink-0 bg-white border-b border-[#d1d5dc] flex items-center gap-3 px-5 h-[57px]">
+            <div class="shrink-0 bg-white border-b border-[#d1d5dc] flex items-center gap-3 px-5 h-[57px] overflow-x-auto">
                 <!-- Left: action buttons + ellipsis -->
-                <div class="flex items-center gap-2 flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-1 shrink-0">
                     <button data-scroll-to="#reply-composer" class="flex items-center gap-1.5 border border-[#d1d5dc] rounded-[6px] px-2.5 py-1.5 text-[#525252] text-xs font-medium bg-white hover:bg-[#f1f5f9] transition-colors cursor-pointer whitespace-nowrap">
                         <i class="fa-solid fa-reply text-[10px]" aria-hidden="true"></i> Reply
                     </button>
@@ -923,6 +923,12 @@
                     </button>
                     <button id="btn-requester-analysis" class="flex items-center gap-1.5 border border-[#d1d5dc] rounded-[6px] px-2.5 py-1.5 text-[#525252] text-xs font-medium bg-white hover:bg-[#f1f5f9] transition-colors cursor-pointer whitespace-nowrap">
                         <i class="fa-solid fa-chart-bar text-[10px]" aria-hidden="true"></i> <span>Requester Analysis</span>
+                    </button>
+                    <button data-toggle="modal" data-target="#panel-time-track" class="flex items-center gap-1.5 border border-[#d1d5dc] rounded-[6px] px-2.5 py-1.5 text-[#525252] text-xs font-medium bg-white hover:bg-[#f1f5f9] transition-colors cursor-pointer whitespace-nowrap">
+                        <i class="fa-regular fa-clock text-[10px]" aria-hidden="true"></i> <span>Time Track</span>
+                    </button>
+                    <button data-toggle="modal" data-target="#panel-sd-associates" class="flex items-center gap-1.5 border border-[#d1d5dc] rounded-[6px] px-2.5 py-1.5 text-[#525252] text-xs font-medium bg-white hover:bg-[#f1f5f9] transition-colors cursor-pointer whitespace-nowrap">
+                        <i class="fa-solid fa-link text-[10px]" aria-hidden="true"></i> <span>SD Associates</span> <span class="text-[#94a3b8] font-normal">(5)</span>
                     </button>
                     <div class="relative shrink-0">
                         <div class="flex items-center border border-[#e2e8f0] rounded-[8px] bg-white">
@@ -1752,8 +1758,8 @@
 
                 </div><!-- /conversation column -->
 
-                <!-- ── Properties panel (220px, toggleable) ── -->
-                <div id="panel-properties" data-companion="#btn-expand-props" class="flex flex-col w-[230px] shrink-0 overflow-hidden bg-white">
+                <!-- ── Properties panel (220px, toggleable; full-screen overlay on mobile) ── -->
+                <div id="panel-properties" data-companion="#btn-expand-props" class="flex flex-col fixed lg:static inset-0 lg:inset-auto z-40 lg:z-auto w-full max-w-[360px] lg:max-w-none lg:w-[230px] shrink-0 overflow-hidden bg-white">
                 <div class="flex-1 overflow-y-auto relative">
 
                     <!-- ── Status + SLA section ── -->
@@ -1902,8 +1908,16 @@
 
                 </div><!-- /properties panel -->
 
-                <!-- ── Contact info panel (200px, toggled by ≡ button) ── -->
-                <div id="panel-contact-info" data-persistent class="flex flex-col w-[270px] shrink-0 border-l border-[#d1d5dc] overflow-y-auto bg-white">
+                <!-- ── Contact info panel (200px, toggled by ≡ button; full-screen overlay on mobile) ── -->
+                <div id="panel-contact-info" data-persistent class="flex flex-col fixed lg:static inset-0 lg:inset-auto z-40 lg:z-auto w-full max-w-[360px] lg:max-w-none lg:w-[270px] shrink-0 border-l border-[#d1d5dc] overflow-y-auto bg-white">
+
+                    <!-- Mobile-only header (desktop closes via the toolbar toggle) -->
+                    <div class="lg:hidden flex items-center justify-between px-3 py-3 border-b border-[#d1d5dc] shrink-0">
+                        <span class="text-[13px] font-bold text-[#374151]">Contact info</span>
+                        <button data-toggle="dropdown" data-target="#panel-contact-info" aria-label="Close contact info" class="flex items-center justify-center w-7 h-7 rounded-full text-[#6a7282] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent transition-colors">
+                            <i class="fa-solid fa-xmark text-[15px]" aria-hidden="true"></i>
+                        </button>
+                    </div>
 
                     <!-- Accordion: Contact Info -->
                     <div class="border-b border-[#d1d5dc]">
@@ -2042,8 +2056,8 @@
 
                 </div><!-- /panel-contact-info -->
 
-                <!-- ── Icon strip (40px) ── -->
-                <div id="ci-icon-strip" class="flex flex-col w-10 shrink-0 border-l border-[#d1d5dc] bg-white py-3 px-1 gap-0.5">
+                <!-- ── Icon strip (40px, desktop only — mobile uses the full-screen overlay toggle) ── -->
+                <div id="ci-icon-strip" class="hidden lg:flex flex-col w-10 shrink-0 border-l border-[#d1d5dc] bg-white py-3 px-1 gap-0.5">
                     <button data-open-ci-acc="#csec-contact"
                             class="w-full aspect-square flex items-center justify-center text-[#6a7282] hover:bg-[#f1f5f9] hover:text-[#374151] transition-colors cursor-pointer bg-transparent border-none rounded-[6px]" title="Contact Info">
                         <i class="fa-solid fa-user text-sm" aria-hidden="true"></i>
@@ -2281,16 +2295,16 @@
 </div>
 
 <!-- ── Edit Ticket panel (fixed right drawer) ── -->
-<div id="panel-edit-ticket" role="dialog" aria-modal="true" aria-label="Edit contact" class="hidden fixed inset-0 z-[150] flex justify-end">
+<div id="panel-edit-ticket" role="dialog" aria-modal="true" aria-label="Edit ticket details" class="hidden fixed inset-0 z-[150] flex justify-end">
     <!-- Transparent backdrop — blocks clicks on the page, no color -->
     <div class="flex-1"></div>
     <!-- Drawer -->
-    <div class="flex flex-col w-[610px] h-full bg-white rounded-tl-[20px] shadow-[-4px_0px_16px_rgba(0,0,0,0.15)]">
+    <div class="flex flex-col w-full max-w-[610px] h-full bg-white rounded-tl-[20px] shadow-[-4px_0px_16px_rgba(0,0,0,0.15)]">
 
     <!-- Header -->
     <div class="flex items-center gap-3 px-6 py-4 border-b border-[#e5e7eb] shrink-0">
         <i class="fa-solid fa-user text-[#6a7282] text-[16px]" aria-hidden="true"></i>
-        <h2 class="flex-1 text-[16px] font-semibold text-[#1e293b] mb-0">Edit contact</h2>
+        <h2 class="flex-1 text-[16px] font-semibold text-[#1e293b] mb-0">Edit ticket details</h2>
         <button data-dismiss="#panel-edit-ticket" aria-label="Close" class="w-7 h-7 flex items-center justify-center rounded-full text-[#6a7282] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent transition-colors">
             <i class="fa-solid fa-xmark text-[15px]" aria-hidden="true"></i>
         </button>
@@ -2413,6 +2427,392 @@
 
     </div><!-- /drawer -->
 </div><!-- /panel-edit-ticket -->
+
+<!-- ── Time Track flyout ── -->
+<div id="panel-time-track" role="dialog" aria-modal="true" aria-label="Time track" class="hidden fixed inset-0 z-[150] flex justify-end">
+    <!-- Transparent backdrop — blocks clicks on the page, no color -->
+    <div class="flex-1" data-dismiss="#panel-time-track"></div>
+    <!-- Drawer -->
+    <div class="flex flex-col w-full max-w-[560px] h-full bg-white rounded-tl-[20px] shadow-[-4px_0px_16px_rgba(0,0,0,0.15)]">
+
+        <!-- Header -->
+        <div class="flex items-center gap-3 px-6 py-4 border-b border-[#e5e7eb] shrink-0">
+            <i class="fa-regular fa-clock text-[#6a7282] text-[16px]" aria-hidden="true"></i>
+            <h2 class="flex-1 text-[16px] font-semibold text-[#1e293b] mb-0">Time Track</h2>
+            <button data-dismiss="#panel-time-track" aria-label="Close" class="w-7 h-7 flex items-center justify-center rounded-full text-[#6a7282] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent transition-colors">
+                <i class="fa-solid fa-xmark text-[15px]" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <!-- Scrollable body -->
+        <div class="flex-1 overflow-y-auto px-6 py-4 flex flex-col gap-4">
+
+            <!-- Entry 1 -->
+            <div class="flex gap-3 items-start group relative">
+                <div class="w-7 h-7 rounded-full bg-[#dbeafe] flex items-center justify-center shrink-0 text-xs font-bold text-[#2563eb] select-none mt-0.5">S</div>
+                <div class="flex-1 min-w-0 bg-[#f3f3f3] rounded-[10px] p-3">
+                    <p class="text-[13px] leading-[20px] mb-1.5">
+                        <span class="font-bold text-[#3da6d7]">Sakthivel Munusamy</span>
+                        <span class="font-normal text-[#4a5565]"> logged </span>
+                        <span class="font-bold text-[#3da6d7]">Work Time</span>
+                        <span class="font-normal text-[#4a5565]"> (hr:min): </span>
+                        <span class="font-bold text-[#1e293b]">120:59</span>
+                    </p>
+                    <p class="text-[13px] text-[#4a5565] mb-1.5">This time is tracked from reply</p>
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-[#94a3b8]">
+                        <span>Created Jul 02, 2026, 05:08 pm</span>
+                        <span>Modified Jul 02, 2026, 05:08 pm</span>
+                        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#dbeafe] text-[#2563eb] font-medium">Research</span>
+                    </div>
+                </div>
+
+                <!-- Hover actions (matches thread message hover toolbar) -->
+                <div class="invisible group-hover:visible absolute top-2 right-2 flex items-center rounded-[6px] shadow-md ring-1 ring-[#e2e8f0] bg-white z-10">
+                    <button data-open-edit-timelog class="relative group/btn-edit w-[26px] h-[26px] flex items-center justify-center rounded-l-[6px] bg-white text-[#4a5565] cursor-pointer hover:bg-[#f1f5f9] transition-colors border-none">
+                        <i class="fa-regular fa-pen-to-square text-[11px]" aria-hidden="true"></i>
+                        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#1e3a5f] text-white text-[11px] px-2 py-1 rounded-[4px] whitespace-nowrap opacity-0 group-hover/btn-edit:opacity-100 transition-opacity pointer-events-none z-20">Edit</span>
+                    </button>
+                    <span class="w-px self-stretch bg-[#e2e8f0]"></span>
+                    <button data-open-delete-timelog class="relative group/btn-del w-[26px] h-[26px] flex items-center justify-center rounded-r-[6px] bg-white text-[#4a5565] cursor-pointer hover:bg-[#f1f5f9] transition-colors border-none">
+                        <i class="fa-regular fa-trash-can text-[11px]" aria-hidden="true"></i>
+                        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#1e3a5f] text-white text-[11px] px-2 py-1 rounded-[4px] whitespace-nowrap opacity-0 group-hover/btn-del:opacity-100 transition-opacity pointer-events-none z-20">Delete</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Entry 2 -->
+            <div class="flex gap-3 items-start group relative">
+                <div class="w-7 h-7 rounded-full bg-[#dcfce7] flex items-center justify-center shrink-0 text-xs font-bold text-[#16a34a] select-none mt-0.5">S</div>
+                <div class="flex-1 min-w-0 bg-[#f3f3f3] rounded-[10px] p-3">
+                    <p class="text-[13px] leading-[20px] mb-1.5">
+                        <span class="font-bold text-[#3da6d7]">Sakthivel Munusamy</span>
+                        <span class="font-normal text-[#4a5565]"> logged </span>
+                        <span class="font-bold text-[#3da6d7]">Work Time</span>
+                        <span class="font-normal text-[#4a5565]"> (hr:min): </span>
+                        <span class="font-bold text-[#1e293b]">01:01</span>
+                    </p>
+                    <p class="text-[13px] text-[#4a5565] mb-1.5">This time is tracked from reply</p>
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-[#94a3b8]">
+                        <span>Created Jul 02, 2026, 05:07 pm</span>
+                        <span>Modified Jul 02, 2026, 05:07 pm</span>
+                        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#dbeafe] text-[#2563eb] font-medium">Research</span>
+                    </div>
+                </div>
+
+                <!-- Hover actions -->
+                <div class="invisible group-hover:visible absolute top-2 right-2 flex items-center rounded-[6px] shadow-md ring-1 ring-[#e2e8f0] bg-white z-10">
+                    <button data-open-edit-timelog class="relative group/btn-edit w-[26px] h-[26px] flex items-center justify-center rounded-l-[6px] bg-white text-[#4a5565] cursor-pointer hover:bg-[#f1f5f9] transition-colors border-none">
+                        <i class="fa-regular fa-pen-to-square text-[11px]" aria-hidden="true"></i>
+                        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#1e3a5f] text-white text-[11px] px-2 py-1 rounded-[4px] whitespace-nowrap opacity-0 group-hover/btn-edit:opacity-100 transition-opacity pointer-events-none z-20">Edit</span>
+                    </button>
+                    <span class="w-px self-stretch bg-[#e2e8f0]"></span>
+                    <button data-open-delete-timelog class="relative group/btn-del w-[26px] h-[26px] flex items-center justify-center rounded-r-[6px] bg-white text-[#4a5565] cursor-pointer hover:bg-[#f1f5f9] transition-colors border-none">
+                        <i class="fa-regular fa-trash-can text-[11px]" aria-hidden="true"></i>
+                        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#1e3a5f] text-white text-[11px] px-2 py-1 rounded-[4px] whitespace-nowrap opacity-0 group-hover/btn-del:opacity-100 transition-opacity pointer-events-none z-20">Delete</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Entry 3 -->
+            <div class="flex gap-3 items-start group relative">
+                <div class="w-7 h-7 rounded-full bg-[#fef9c3] flex items-center justify-center shrink-0 text-xs font-bold text-[#ca8a04] select-none mt-0.5">D</div>
+                <div class="flex-1 min-w-0 bg-[#f3f3f3] rounded-[10px] p-3">
+                    <p class="text-[13px] leading-[20px] mb-1.5">
+                        <span class="font-bold text-[#3da6d7]">Demo Admin</span>
+                        <span class="font-normal text-[#4a5565]"> logged </span>
+                        <span class="font-bold text-[#3da6d7]">Work Time</span>
+                        <span class="font-normal text-[#4a5565]"> (hr:min): </span>
+                        <span class="font-bold text-[#1e293b]">00:45</span>
+                    </p>
+                    <p class="text-[13px] text-[#4a5565] mb-1.5">Investigated checkout limit configuration</p>
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-[#94a3b8]">
+                        <span>Created Mar 30, 2026, 05:07 am</span>
+                        <span>Modified Mar 30, 2026, 05:07 am</span>
+                        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#fef9c3] text-[#ca8a04] font-medium">Support</span>
+                    </div>
+                </div>
+
+                <!-- Hover actions -->
+                <div class="invisible group-hover:visible absolute top-2 right-2 flex items-center rounded-[6px] shadow-md ring-1 ring-[#e2e8f0] bg-white z-10">
+                    <button data-open-edit-timelog class="relative group/btn-edit w-[26px] h-[26px] flex items-center justify-center rounded-l-[6px] bg-white text-[#4a5565] cursor-pointer hover:bg-[#f1f5f9] transition-colors border-none">
+                        <i class="fa-regular fa-pen-to-square text-[11px]" aria-hidden="true"></i>
+                        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#1e3a5f] text-white text-[11px] px-2 py-1 rounded-[4px] whitespace-nowrap opacity-0 group-hover/btn-edit:opacity-100 transition-opacity pointer-events-none z-20">Edit</span>
+                    </button>
+                    <span class="w-px self-stretch bg-[#e2e8f0]"></span>
+                    <button data-open-delete-timelog class="relative group/btn-del w-[26px] h-[26px] flex items-center justify-center rounded-r-[6px] bg-white text-[#4a5565] cursor-pointer hover:bg-[#f1f5f9] transition-colors border-none">
+                        <i class="fa-regular fa-trash-can text-[11px]" aria-hidden="true"></i>
+                        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#1e3a5f] text-white text-[11px] px-2 py-1 rounded-[4px] whitespace-nowrap opacity-0 group-hover/btn-del:opacity-100 transition-opacity pointer-events-none z-20">Delete</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Entry 4 -->
+            <div class="flex gap-3 items-start group relative">
+                <div class="w-7 h-7 rounded-full bg-[#ffe4e6] flex items-center justify-center shrink-0 text-xs font-bold text-[#e11d48] select-none mt-0.5">S</div>
+                <div class="flex-1 min-w-0 bg-[#f3f3f3] rounded-[10px] p-3">
+                    <p class="text-[13px] leading-[20px] mb-1.5">
+                        <span class="font-bold text-[#3da6d7]">Samual John</span>
+                        <span class="font-normal text-[#4a5565]"> logged </span>
+                        <span class="font-bold text-[#3da6d7]">Work Time</span>
+                        <span class="font-normal text-[#4a5565]"> (hr:min): </span>
+                        <span class="font-bold text-[#1e293b]">02:15</span>
+                    </p>
+                    <p class="text-[13px] text-[#4a5565] mb-1.5">Follow-up call with requester</p>
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-[#94a3b8]">
+                        <span>Created Mar 30, 2026, 05:35 pm</span>
+                        <span>Modified Mar 30, 2026, 05:35 pm</span>
+                        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#ffe4e6] text-[#e11d48] font-medium">Call</span>
+                    </div>
+                </div>
+
+                <!-- Hover actions -->
+                <div class="invisible group-hover:visible absolute top-2 right-2 flex items-center rounded-[6px] shadow-md ring-1 ring-[#e2e8f0] bg-white z-10">
+                    <button data-open-edit-timelog class="relative group/btn-edit w-[26px] h-[26px] flex items-center justify-center rounded-l-[6px] bg-white text-[#4a5565] cursor-pointer hover:bg-[#f1f5f9] transition-colors border-none">
+                        <i class="fa-regular fa-pen-to-square text-[11px]" aria-hidden="true"></i>
+                        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#1e3a5f] text-white text-[11px] px-2 py-1 rounded-[4px] whitespace-nowrap opacity-0 group-hover/btn-edit:opacity-100 transition-opacity pointer-events-none z-20">Edit</span>
+                    </button>
+                    <span class="w-px self-stretch bg-[#e2e8f0]"></span>
+                    <button data-open-delete-timelog class="relative group/btn-del w-[26px] h-[26px] flex items-center justify-center rounded-r-[6px] bg-white text-[#4a5565] cursor-pointer hover:bg-[#f1f5f9] transition-colors border-none">
+                        <i class="fa-regular fa-trash-can text-[11px]" aria-hidden="true"></i>
+                        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#1e3a5f] text-white text-[11px] px-2 py-1 rounded-[4px] whitespace-nowrap opacity-0 group-hover/btn-del:opacity-100 transition-opacity pointer-events-none z-20">Delete</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Entry 5 -->
+            <div class="flex gap-3 items-start group relative">
+                <div class="w-7 h-7 rounded-full bg-[#dbeafe] flex items-center justify-center shrink-0 text-xs font-bold text-[#2563eb] select-none mt-0.5">S</div>
+                <div class="flex-1 min-w-0 bg-[#f3f3f3] rounded-[10px] p-3">
+                    <p class="text-[13px] leading-[20px] mb-1.5">
+                        <span class="font-bold text-[#3da6d7]">Sakthivel Munusamy</span>
+                        <span class="font-normal text-[#4a5565]"> logged </span>
+                        <span class="font-bold text-[#3da6d7]">Work Time</span>
+                        <span class="font-normal text-[#4a5565]"> (hr:min): </span>
+                        <span class="font-bold text-[#1e293b]">00:30</span>
+                    </p>
+                    <p class="text-[13px] text-[#4a5565] mb-1.5">This time is tracked from reply</p>
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-[#94a3b8]">
+                        <span>Created Jul 01, 2026, 11:20 am</span>
+                        <span>Modified Jul 01, 2026, 11:20 am</span>
+                        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#dbeafe] text-[#2563eb] font-medium">Research</span>
+                    </div>
+                </div>
+
+                <!-- Hover actions -->
+                <div class="invisible group-hover:visible absolute top-2 right-2 flex items-center rounded-[6px] shadow-md ring-1 ring-[#e2e8f0] bg-white z-10">
+                    <button data-open-edit-timelog class="relative group/btn-edit w-[26px] h-[26px] flex items-center justify-center rounded-l-[6px] bg-white text-[#4a5565] cursor-pointer hover:bg-[#f1f5f9] transition-colors border-none">
+                        <i class="fa-regular fa-pen-to-square text-[11px]" aria-hidden="true"></i>
+                        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#1e3a5f] text-white text-[11px] px-2 py-1 rounded-[4px] whitespace-nowrap opacity-0 group-hover/btn-edit:opacity-100 transition-opacity pointer-events-none z-20">Edit</span>
+                    </button>
+                    <span class="w-px self-stretch bg-[#e2e8f0]"></span>
+                    <button data-open-delete-timelog class="relative group/btn-del w-[26px] h-[26px] flex items-center justify-center rounded-r-[6px] bg-white text-[#4a5565] cursor-pointer hover:bg-[#f1f5f9] transition-colors border-none">
+                        <i class="fa-regular fa-trash-can text-[11px]" aria-hidden="true"></i>
+                        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#1e3a5f] text-white text-[11px] px-2 py-1 rounded-[4px] whitespace-nowrap opacity-0 group-hover/btn-del:opacity-100 transition-opacity pointer-events-none z-20">Delete</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Entry 6 -->
+            <div class="flex gap-3 items-start group relative">
+                <div class="w-7 h-7 rounded-full bg-[#fef9c3] flex items-center justify-center shrink-0 text-xs font-bold text-[#ca8a04] select-none mt-0.5">D</div>
+                <div class="flex-1 min-w-0 bg-[#f3f3f3] rounded-[10px] p-3">
+                    <p class="text-[13px] leading-[20px] mb-1.5">
+                        <span class="font-bold text-[#3da6d7]">Demo Admin</span>
+                        <span class="font-normal text-[#4a5565]"> logged </span>
+                        <span class="font-bold text-[#3da6d7]">Work Time</span>
+                        <span class="font-normal text-[#4a5565]"> (hr:min): </span>
+                        <span class="font-bold text-[#1e293b]">01:10</span>
+                    </p>
+                    <p class="text-[13px] text-[#4a5565] mb-1.5">Reviewed logs for recurring failure</p>
+                    <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-[#94a3b8]">
+                        <span>Created Jun 29, 2026, 09:45 am</span>
+                        <span>Modified Jun 29, 2026, 09:45 am</span>
+                        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#fef9c3] text-[#ca8a04] font-medium">Support</span>
+                    </div>
+                </div>
+
+                <!-- Hover actions -->
+                <div class="invisible group-hover:visible absolute top-2 right-2 flex items-center rounded-[6px] shadow-md ring-1 ring-[#e2e8f0] bg-white z-10">
+                    <button data-open-edit-timelog class="relative group/btn-edit w-[26px] h-[26px] flex items-center justify-center rounded-l-[6px] bg-white text-[#4a5565] cursor-pointer hover:bg-[#f1f5f9] transition-colors border-none">
+                        <i class="fa-regular fa-pen-to-square text-[11px]" aria-hidden="true"></i>
+                        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#1e3a5f] text-white text-[11px] px-2 py-1 rounded-[4px] whitespace-nowrap opacity-0 group-hover/btn-edit:opacity-100 transition-opacity pointer-events-none z-20">Edit</span>
+                    </button>
+                    <span class="w-px self-stretch bg-[#e2e8f0]"></span>
+                    <button data-open-delete-timelog class="relative group/btn-del w-[26px] h-[26px] flex items-center justify-center rounded-r-[6px] bg-white text-[#4a5565] cursor-pointer hover:bg-[#f1f5f9] transition-colors border-none">
+                        <i class="fa-regular fa-trash-can text-[11px]" aria-hidden="true"></i>
+                        <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-[#1e3a5f] text-white text-[11px] px-2 py-1 rounded-[4px] whitespace-nowrap opacity-0 group-hover/btn-del:opacity-100 transition-opacity pointer-events-none z-20">Delete</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sticky Total footer (matches Properties panel's sticky Update button pattern) -->
+        <div class="shrink-0 bg-white border-t border-[#e2e8f0] px-6 py-3.5 flex items-center justify-between">
+            <p class="text-[13px] font-semibold text-[#1e293b] mb-0">Total Work Time (hr:min)</p>
+            <p class="text-[15px] font-bold text-[#1e293b] mb-0">126:40</p>
+        </div>
+
+    </div><!-- /drawer -->
+</div><!-- /panel-time-track -->
+
+<!-- ── SD Associates flyout ── -->
+<div id="panel-sd-associates" role="dialog" aria-modal="true" aria-label="SD Associates" class="hidden fixed inset-0 z-[150] flex justify-end">
+    <!-- Transparent backdrop — blocks clicks on the page, no color -->
+    <div class="flex-1" data-dismiss="#panel-sd-associates"></div>
+    <!-- Drawer -->
+    <div class="flex flex-col w-full max-w-[640px] h-full bg-white rounded-tl-[20px] shadow-[-4px_0px_16px_rgba(0,0,0,0.15)]">
+
+        <!-- Header -->
+        <div class="flex items-center gap-3 px-6 py-4 border-b border-[#e5e7eb] shrink-0">
+            <i class="fa-solid fa-link text-[#6a7282] text-[16px]" aria-hidden="true"></i>
+            <h2 class="flex-1 text-[16px] font-semibold text-[#1e293b] mb-0">SD Associates <span class="text-[#94a3b8] font-normal">(5)</span></h2>
+            <button data-dismiss="#panel-sd-associates" aria-label="Close" class="w-7 h-7 flex items-center justify-center rounded-full text-[#6a7282] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent transition-colors">
+                <i class="fa-solid fa-xmark text-[15px]" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex items-center gap-4 px-6 border-b border-[#e5e7eb] shrink-0">
+            <button data-sd-tab="assets" class="sd-tab px-1 py-3 text-[13px] font-medium border-b-2 border-[#3da6d7] text-[#1e293b] bg-transparent cursor-pointer transition-colors">
+                Associated Assets
+            </button>
+            <button data-sd-tab="changes" class="sd-tab px-1 py-3 text-[13px] font-medium border-b-2 border-transparent text-[#6a7282] hover:text-[#1e293b] bg-transparent cursor-pointer transition-colors">
+                Associated Changes <span class="ml-1 text-[11px] text-[#94a3b8]">1</span>
+            </button>
+            <button data-sd-tab="contracts" class="sd-tab px-1 py-3 text-[13px] font-medium border-b-2 border-transparent text-[#6a7282] hover:text-[#1e293b] bg-transparent cursor-pointer transition-colors">
+                Associated Contracts <span class="ml-1 text-[11px] text-[#94a3b8]">0</span>
+            </button>
+        </div>
+
+        <!-- Scrollable body -->
+        <div class="flex-1 overflow-y-auto">
+
+            <!-- Associated Assets -->
+            <div data-sd-panel="assets" class="px-6 py-4">
+                <div class="relative mb-3">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs" aria-hidden="true"></i>
+                    <input type="text" placeholder="Type and press enter to search..." class="w-full bg-white border border-[#d1d5dc] rounded-[6px] pl-8 pr-3 py-2 text-xs text-[#0a0a0a] outline-none focus:border-sky-400 transition-colors" />
+                </div>
+                <div class="overflow-x-auto border border-[#e5e7eb] rounded-[8px]">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-[#f8fafc] text-[11px] text-[#6a7282] uppercase tracking-wide">
+                                <th class="px-3 py-2 font-semibold">
+                                    <span class="inline-flex items-center gap-1">Name <i class="fa-solid fa-chevron-up text-[8px]" aria-hidden="true"></i></span>
+                                </th>
+                                <th class="px-3 py-2 font-semibold">Managed by</th>
+                                <th class="px-3 py-2 font-semibold">Used by</th>
+                                <th class="px-3 py-2 font-semibold">Contracts</th>
+                                <th class="px-3 py-2 font-semibold text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-[12px] text-[#334155]">
+                            <tr class="border-t border-[#f1f5f9] hover:bg-[#f8fafc] transition-colors">
+                                <td class="px-3 py-2.5"><a href="#" class="text-[#3da6d7] font-medium hover:underline">Dell Latitude 5420</a></td>
+                                <td class="px-3 py-2.5 text-[#94a3b8]">--</td>
+                                <td class="px-3 py-2.5 text-[#94a3b8]">--</td>
+                                <td class="px-3 py-2.5 text-[#94a3b8]">--</td>
+                                <td class="px-3 py-2.5 text-right">
+                                    <button title="Remove association" class="w-7 h-7 inline-flex items-center justify-center rounded-[6px] border border-[#d1d5dc] bg-white text-[#6a7282] hover:bg-[#fff1f1] hover:text-[#ef4444] hover:border-[#fecaca] transition-colors cursor-pointer">
+                                        <i class="fa-solid fa-link-slash text-[11px]" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="border-t border-[#f1f5f9] hover:bg-[#f8fafc] transition-colors">
+                                <td class="px-3 py-2.5"><a href="#" class="text-[#3da6d7] font-medium hover:underline">HP LaserJet Pro M404</a></td>
+                                <td class="px-3 py-2.5 text-[#94a3b8]">--</td>
+                                <td class="px-3 py-2.5 text-[#94a3b8]">--</td>
+                                <td class="px-3 py-2.5 text-[#94a3b8]">--</td>
+                                <td class="px-3 py-2.5 text-right">
+                                    <button title="Remove association" class="w-7 h-7 inline-flex items-center justify-center rounded-[6px] border border-[#d1d5dc] bg-white text-[#6a7282] hover:bg-[#fff1f1] hover:text-[#ef4444] hover:border-[#fecaca] transition-colors cursor-pointer">
+                                        <i class="fa-solid fa-link-slash text-[11px]" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="border-t border-[#f1f5f9] hover:bg-[#f8fafc] transition-colors">
+                                <td class="px-3 py-2.5"><a href="#" class="text-[#3da6d7] font-medium hover:underline">Cisco Catalyst 2960 Switch</a></td>
+                                <td class="px-3 py-2.5 text-[#94a3b8]">--</td>
+                                <td class="px-3 py-2.5 text-[#94a3b8]">--</td>
+                                <td class="px-3 py-2.5 text-[#94a3b8]">--</td>
+                                <td class="px-3 py-2.5 text-right">
+                                    <button title="Remove association" class="w-7 h-7 inline-flex items-center justify-center rounded-[6px] border border-[#d1d5dc] bg-white text-[#6a7282] hover:bg-[#fff1f1] hover:text-[#ef4444] hover:border-[#fecaca] transition-colors cursor-pointer">
+                                        <i class="fa-solid fa-link-slash text-[11px]" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="border-t border-[#f1f5f9] hover:bg-[#f8fafc] transition-colors">
+                                <td class="px-3 py-2.5"><a href="#" class="text-[#3da6d7] font-medium hover:underline">Office Wi-Fi Router - AP12</a></td>
+                                <td class="px-3 py-2.5 text-[#94a3b8]">--</td>
+                                <td class="px-3 py-2.5 text-[#94a3b8]">--</td>
+                                <td class="px-3 py-2.5 text-[#94a3b8]">--</td>
+                                <td class="px-3 py-2.5 text-right">
+                                    <button title="Remove association" class="w-7 h-7 inline-flex items-center justify-center rounded-[6px] border border-[#d1d5dc] bg-white text-[#6a7282] hover:bg-[#fff1f1] hover:text-[#ef4444] hover:border-[#fecaca] transition-colors cursor-pointer">
+                                        <i class="fa-solid fa-link-slash text-[11px]" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Associated Changes -->
+            <div data-sd-panel="changes" class="hidden px-6 py-4">
+                <div class="flex items-center justify-between gap-3 p-3 rounded-[8px] border border-[#e2e8f0] hover:bg-[#f8fafc] transition-colors cursor-pointer">
+                    <div class="flex items-center gap-2.5 min-w-0">
+                        <div class="w-8 h-8 rounded-[6px] bg-[#fef3c7] flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-arrows-rotate text-[12px] text-[#d97706]" aria-hidden="true"></i>
+                        </div>
+                        <div class="min-w-0">
+                            <p class="text-[12px] font-medium text-[#374151] truncate mb-0">CHG-0089 · Upgrade checkout service to v2.3</p>
+                            <p class="text-[12px] text-[#6a7282] mb-0">Change · <span class="text-[#d97706] font-medium">Scheduled</span></p>
+                        </div>
+                    </div>
+                    <button title="Remove association" class="w-7 h-7 inline-flex items-center justify-center rounded-[6px] border border-[#d1d5dc] bg-white text-[#6a7282] hover:bg-[#fff1f1] hover:text-[#ef4444] hover:border-[#fecaca] transition-colors cursor-pointer shrink-0">
+                        <i class="fa-solid fa-link-slash text-[11px]" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Associated Contracts (empty state) -->
+            <div data-sd-panel="contracts" class="hidden px-6 py-14 flex flex-col items-center justify-center text-center gap-2">
+                <i class="fa-solid fa-file-contract text-[26px] text-[#cbd5e1]" aria-hidden="true"></i>
+                <p class="text-[13px] text-[#94a3b8] mb-0">No contracts associated with this ticket</p>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="shrink-0 bg-white border-t border-[#e2e8f0] px-6 py-3.5 flex justify-end">
+            <button class="flex items-center gap-1.5 border border-[#d1d5dc] rounded-[6px] px-2.5 py-1.5 text-[#525252] text-xs font-medium bg-white hover:bg-[#f1f5f9] transition-colors cursor-pointer">
+                <i class="fa-solid fa-plus text-[10px]" aria-hidden="true"></i> Associate
+            </button>
+        </div>
+
+    </div><!-- /drawer -->
+</div><!-- /panel-sd-associates -->
+<script>
+(function () {
+    var tabs   = document.querySelectorAll('#panel-sd-associates [data-sd-tab]')
+    var panels = document.querySelectorAll('#panel-sd-associates [data-sd-panel]')
+    tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+            var key = tab.getAttribute('data-sd-tab')
+            tabs.forEach(function (t) {
+                var active = t === tab
+                t.classList.toggle('border-[#3da6d7]', active)
+                t.classList.toggle('text-[#1e293b]', active)
+                t.classList.toggle('border-transparent', !active)
+                t.classList.toggle('text-[#6a7282]', !active)
+            })
+            panels.forEach(function (p) {
+                p.classList.toggle('hidden', p.getAttribute('data-sd-panel') !== key)
+            })
+        })
+    })
+})()
+</script>
 
 <script>
 (function () {
@@ -2582,6 +2982,38 @@
     })
 })()
 
+// ── Mobile: Properties / Contact-info panels start closed (they render as
+//    full-screen overlays below the `lg` breakpoint — see their classes) ──
+;(function () {
+    var MOBILE_BREAKPOINT = 1024 // matches Tailwind `lg`
+    if (window.innerWidth >= MOBILE_BREAKPOINT) return
+
+    var props   = document.getElementById('panel-properties')
+    var contact = document.getElementById('panel-contact-info')
+    if (props) props.classList.add('hidden')
+    if (contact) contact.classList.add('hidden')
+
+    var propsBtn = document.getElementById('btn-expand-props')
+    if (propsBtn) {
+        propsBtn.classList.remove('hidden')
+        propsBtn.classList.add('flex')
+        propsBtn.setAttribute('aria-expanded', 'false')
+    }
+
+    var contactBtn = document.querySelector('[data-toggle="dropdown"][data-target="#panel-contact-info"]')
+    if (contactBtn) {
+        contactBtn.classList.remove('dropdown-open')
+        contactBtn.setAttribute('aria-expanded', 'false')
+        var iconOpen   = contactBtn.getAttribute('data-icon-open')
+        var iconClosed = contactBtn.getAttribute('data-icon-closed')
+        var icon = contactBtn.querySelector('i')
+        if (icon && iconOpen && iconClosed) {
+            icon.classList.remove(iconOpen)
+            icon.classList.add(iconClosed)
+        }
+    }
+})()
+
 // ── Contact info icon strip ───────────────────────────────────────────
 ;(function () {
     var panel = document.getElementById('panel-contact-info')
@@ -2628,9 +3060,9 @@ document.addEventListener('click', function (e) {
     panel.classList.toggle('hidden', !isHidden)
 })
 
-// ── Close dropdowns when Edit contact panel opens ─────────────────────
-;(function () {
-    var panel = document.getElementById('panel-edit-ticket')
+// ── Close dropdowns when a side panel opens ───────────────────────────────
+;['panel-edit-ticket', 'panel-time-track', 'panel-sd-associates'].forEach(function (id) {
+    var panel = document.getElementById(id)
     if (!panel) return
     new MutationObserver(function (mutations) {
         mutations.forEach(function (m) {
@@ -2647,7 +3079,7 @@ document.addEventListener('click', function (e) {
             }
         })
     }).observe(panel, { attributes: true })
-})()
+})
 
 // ── Language dropdown selection ───────────────────────────────────────
 ;(function () {
@@ -2687,7 +3119,7 @@ document.addEventListener('click', function (e) {
     <!-- Transparent backdrop — blocks clicks, no colour -->
     <div id="modal-delete-backdrop" class="absolute inset-0"></div>
     <!-- Card -->
-    <div id="modal-delete-card" class="modal-slide-down relative z-10 w-[530px] bg-white rounded-[10px] shadow-[0px_4px_24px_rgba(0,0,0,0.18)] p-6">
+    <div id="modal-delete-card" class="modal-slide-down relative z-10 w-full max-w-[530px] mx-4 bg-white rounded-[10px] shadow-[0px_4px_24px_rgba(0,0,0,0.18)] p-6">
         <!-- Header -->
         <div class="flex items-center justify-between mb-3">
             <h3 class="text-[18px] font-semibold text-[#1e293b] mb-0">Delete</h3>
@@ -2730,6 +3162,141 @@ document.addEventListener('click', function (e) {
     function closeModal() { modal.classList.add('hidden') }
 
     if (openBtn)   openBtn.addEventListener('click', openModal)
+    if (closeBtn)  closeBtn.addEventListener('click', closeModal)
+    if (cancelBtn) cancelBtn.addEventListener('click', closeModal)
+    if (backdrop)  backdrop.addEventListener('click', closeModal)
+})()
+</script>
+
+<!-- ── Edit Time Log modal ── -->
+<div id="modal-edit-timelog" class="hidden fixed inset-0 z-[200] flex justify-center items-start pt-0" role="dialog" aria-modal="true" aria-label="Edit time log">
+    <!-- Transparent backdrop — blocks clicks, no colour -->
+    <div id="modal-edit-timelog-backdrop" class="absolute inset-0"></div>
+    <!-- Card -->
+    <div id="modal-edit-timelog-card" class="modal-slide-down relative z-10 w-full max-w-[600px] mx-4 bg-white rounded-[10px] shadow-[0px_4px_24px_rgba(0,0,0,0.18)] p-6">
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-4">
+            <h3 class="text-[18px] font-semibold text-[#1e293b] mb-0">Edit Time Log</h3>
+            <button id="btn-close-edit-timelog" aria-label="Close" class="w-7 h-7 flex items-center justify-center rounded-full text-[#6a7282] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent transition-colors">
+                <i class="fa-solid fa-xmark text-[15px]" aria-hidden="true"></i>
+            </button>
+        </div>
+        <!-- Body -->
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-4">
+            <!-- Work Time -->
+            <div class="flex-1">
+                <label class="block text-[13px] font-semibold text-[#1e293b] mb-2">Work Time <span class="text-[#e43538]">*</span></label>
+                <div class="flex items-center gap-2">
+                    <input type="text" value="120" aria-label="Hours" class="w-[80px] border border-[#d1d5dc] rounded-[8px] px-3 h-[38px] text-[13px] text-[#1e293b] bg-white outline-none focus:border-[#3da6d7] transition-colors" />
+                    <span class="text-[13px] text-[#4a5565]">Hrs</span>
+                    <input type="text" value="59" aria-label="Minutes" class="w-[80px] border border-[#d1d5dc] rounded-[8px] px-3 h-[38px] text-[13px] text-[#1e293b] bg-white outline-none focus:border-[#3da6d7] transition-colors" />
+                    <span class="text-[13px] text-[#4a5565]">Mins</span>
+                </div>
+            </div>
+            <!-- Worktime Type -->
+            <div class="flex-1">
+                <label class="block text-[13px] font-semibold text-[#1e293b] mb-2">Worktime Type</label>
+                <div class="flex items-center justify-between border border-[#d1d5dc] rounded-[8px] px-3 h-[38px] cursor-pointer">
+                    <span class="text-[13px] text-[#1e293b]">Research</span>
+                    <div class="flex items-center gap-2.5">
+                        <i class="fa-solid fa-xmark text-[12px] text-[#94a3b8] hover:text-[#4a5565] transition-colors" aria-hidden="true"></i>
+                        <i class="fa-solid fa-chevron-down text-[10px] text-[#94a3b8]" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Description -->
+        <div class="mb-2">
+            <label class="block text-[13px] font-semibold text-[#1e293b] mb-2">Description <span class="text-[#e43538]">*</span></label>
+            <textarea rows="3" class="w-full border border-[#d1d5dc] rounded-[8px] px-3 py-2.5 text-[13px] text-[#1e293b] bg-white outline-none focus:border-[#3da6d7] transition-colors resize-none leading-relaxed">This time is tracked from reply</textarea>
+        </div>
+        <!-- Footer -->
+        <div class="flex items-center justify-end gap-2 bg-[#f8fafc] -mx-6 -mb-6 px-4 py-3 mt-4 rounded-b-[10px] border-t border-[#e5e7eb]">
+            <button id="btn-cancel-edit-timelog" class="px-4 py-1.5 border border-[#d1d5dc] rounded-[6px] text-[#374151] text-[12px] font-medium cursor-pointer bg-white hover:bg-[#f1f5f9] transition-colors">Cancel</button>
+            <button class="px-4 py-1.5 bg-[#3da6d7] rounded-[6px] text-white text-[12px] font-medium cursor-pointer border-none hover:bg-[#2d8fb8] transition-colors">Save</button>
+        </div>
+    </div>
+</div>
+<script>
+;(function () {
+    var modal     = document.getElementById('modal-edit-timelog')
+    var card      = document.getElementById('modal-edit-timelog-card')
+    var openBtns  = document.querySelectorAll('[data-open-edit-timelog]')
+    var closeBtn  = document.getElementById('btn-close-edit-timelog')
+    var cancelBtn = document.getElementById('btn-cancel-edit-timelog')
+    var backdrop  = document.getElementById('modal-edit-timelog-backdrop')
+    if (!modal || !card) return
+
+    function openModal() {
+        document.querySelectorAll('[data-toggle="dropdown"]').forEach(function (btn) {
+            var menuId = btn.getAttribute('data-target')
+            if (menuId) { var m = document.querySelector(menuId); if (m) m.classList.add('hidden') }
+            btn.classList.remove('dropdown-open')
+            btn.setAttribute('aria-expanded', 'false')
+        })
+        card.classList.remove('modal-slide-down')
+        void card.offsetWidth
+        card.classList.add('modal-slide-down')
+        modal.classList.remove('hidden')
+    }
+
+    function closeModal() { modal.classList.add('hidden') }
+
+    openBtns.forEach(function (btn) { btn.addEventListener('click', openModal) })
+    if (closeBtn)  closeBtn.addEventListener('click', closeModal)
+    if (cancelBtn) cancelBtn.addEventListener('click', closeModal)
+    if (backdrop)  backdrop.addEventListener('click', closeModal)
+})()
+</script>
+
+<!-- ── Delete Time Log modal ── -->
+<div id="modal-delete-timelog" class="hidden fixed inset-0 z-[200] flex justify-center items-start pt-0" role="dialog" aria-modal="true" aria-label="Delete time log">
+    <!-- Transparent backdrop — blocks clicks, no colour -->
+    <div id="modal-delete-timelog-backdrop" class="absolute inset-0"></div>
+    <!-- Card -->
+    <div id="modal-delete-timelog-card" class="modal-slide-down relative z-10 w-full max-w-[460px] mx-4 bg-white rounded-[10px] shadow-[0px_4px_24px_rgba(0,0,0,0.18)] p-6">
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-3">
+            <h3 class="text-[18px] font-semibold text-[#1e293b] mb-0">Delete</h3>
+            <button id="btn-close-delete-timelog" aria-label="Close" class="w-7 h-7 flex items-center justify-center rounded-full text-[#6a7282] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent transition-colors">
+                <i class="fa-solid fa-xmark text-[15px]" aria-hidden="true"></i>
+            </button>
+        </div>
+        <!-- Body -->
+        <p class="text-[14px] text-[#4a5565] mb-6">Are you sure you want to delete this time log entry?</p>
+        <!-- Footer -->
+        <div class="flex items-center justify-end gap-2 bg-[#f8fafc] -mx-6 -mb-6 px-4 py-2.5 mt-2 rounded-b-[10px] border-t border-[#e5e7eb]">
+            <button id="btn-cancel-delete-timelog" class="px-4 py-1.5 border border-[#d1d5dc] rounded-[6px] text-[#374151] text-[12px] font-medium cursor-pointer bg-white hover:bg-[#f1f5f9] transition-colors">Cancel</button>
+            <button class="px-4 py-1.5 bg-[#3da6d7] rounded-[6px] text-white text-[12px] font-medium cursor-pointer border-none hover:bg-[#2d8fb8] transition-colors">Delete</button>
+        </div>
+    </div>
+</div>
+<script>
+;(function () {
+    var modal     = document.getElementById('modal-delete-timelog')
+    var card      = document.getElementById('modal-delete-timelog-card')
+    var openBtns  = document.querySelectorAll('[data-open-delete-timelog]')
+    var closeBtn  = document.getElementById('btn-close-delete-timelog')
+    var cancelBtn = document.getElementById('btn-cancel-delete-timelog')
+    var backdrop  = document.getElementById('modal-delete-timelog-backdrop')
+    if (!modal || !card) return
+
+    function openModal() {
+        document.querySelectorAll('[data-toggle="dropdown"]').forEach(function (btn) {
+            var menuId = btn.getAttribute('data-target')
+            if (menuId) { var m = document.querySelector(menuId); if (m) m.classList.add('hidden') }
+            btn.classList.remove('dropdown-open')
+            btn.setAttribute('aria-expanded', 'false')
+        })
+        card.classList.remove('modal-slide-down')
+        void card.offsetWidth
+        card.classList.add('modal-slide-down')
+        modal.classList.remove('hidden')
+    }
+
+    function closeModal() { modal.classList.add('hidden') }
+
+    openBtns.forEach(function (btn) { btn.addEventListener('click', openModal) })
     if (closeBtn)  closeBtn.addEventListener('click', closeModal)
     if (cancelBtn) cancelBtn.addEventListener('click', closeModal)
     if (backdrop)  backdrop.addEventListener('click', closeModal)
