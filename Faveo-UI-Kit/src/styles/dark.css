@@ -64,6 +64,46 @@ html[data-theme="dark"] .topnav-adaptive  { color: var(--c-text-2); }
 [data-theme="dark"] .bg-\[\#c8d3e0\],
 [data-theme="dark"] .bg-\[\#d0d8e4\]  { background-color: var(--c-active); }
 
+/* Colored status/badge/avatar/banner pastels (ticket-timeline) — darken each
+   pastel fill to a deep shade of the same hue, keep the existing saturated
+   text/icon color as-is (matches the dbeafe→#1e3a5f / green-100→#14532d precedent) */
+[data-theme="dark"] .bg-\[\#def0ff\]  { background-color: #1e3a5f; } /* blue */
+[data-theme="dark"] .bg-\[\#f0f9ff\]  { background-color: #0c4a6e; } /* sky */
+[data-theme="dark"] .bg-\[\#dcfce7\],
+[data-theme="dark"] .bg-\[\#f0fdf4\]  { background-color: #14532d; } /* green */
+[data-theme="dark"] .bg-\[\#fef9c3\],
+[data-theme="dark"] .bg-\[\#fef3c7\],
+[data-theme="dark"] .bg-\[\#fff3cd\]  { background-color: #713f12; } /* yellow/amber */
+[data-theme="dark"] .bg-\[\#fff7ed\],
+[data-theme="dark"] .bg-\[\#fff6e4\],
+[data-theme="dark"] .bg-\[\#fef3e2\],
+[data-theme="dark"] .bg-\[\#ffedd4\],
+[data-theme="dark"] .bg-\[\#ffedd5\],
+[data-theme="dark"] .bg-\[\#f5cba7\],
+[data-theme="dark"] .bg-\[\#f5d0a9\]  { background-color: #7c2d12; } /* orange/brown */
+[data-theme="dark"] .bg-\[\#ffe4e6\],
+[data-theme="dark"] .bg-\[\#fee2e2\],
+[data-theme="dark"] .bg-\[\#ffe2e2\],
+[data-theme="dark"] .bg-\[\#ffe9ee\],
+[data-theme="dark"] .bg-\[\#ffdfdf\]  { background-color: #7f1d1d; } /* red/rose */
+[data-theme="dark"] .bg-\[\#f3e8ff\],
+[data-theme="dark"] .bg-\[\#ede9fe\],
+[data-theme="dark"] .bg-\[\#f5f3ff\]  { background-color: #4c1d95; } /* purple */
+[data-theme="dark"] .bg-\[\#f3fbff\]  { background-color: var(--c-hover); } /* subtle section tint, not a badge */
+[data-theme="dark"] .hover\:bg-\[\#fff1f1\]:hover { background-color: rgba(239,68,68,0.18); }
+[data-theme="dark"] .hover\:bg-\[\#eef0f3\]:hover { background-color: var(--c-hover); } /* ticket-inbox row hover */
+[data-theme="dark"] .bg-\[\#eef6ff\]  { background-color: rgba(61,166,215,0.16); } /* ticket-inbox row-selection highlight (JS-toggled) */
+
+/* Theme-swatch color pickers must always show their true color, regardless of active theme */
+[data-theme="dark"] .swatch-circle.bg-white         { background-color: #fff; }
+[data-theme="dark"] .swatch-circle.bg-\[\#f7f9fa\]  { background-color: #f7f9fa; }
+[data-theme="dark"] .swatch-circle.bg-\[\#dbeafe\]  { background-color: #dbeafe; }
+[data-theme="dark"] .swatch-circle.bg-\[\#dcfce7\]  { background-color: #dcfce7; }
+[data-theme="dark"] .swatch-circle.bg-\[\#fee2e2\]  { background-color: #fee2e2; }
+[data-theme="dark"] .swatch-circle.bg-\[\#f3e8ff\]  { background-color: #f3e8ff; }
+[data-theme="dark"] .swatch-circle.bg-\[\#fef9c3\]  { background-color: #fef9c3; }
+[data-theme="dark"] .swatch-circle.bg-\[\#ffedd5\]  { background-color: #ffedd5; }
+
 /* ── Text utilities ── */
 [data-theme="dark"] .text-\[\#0a0a0a\],
 [data-theme="dark"] .text-\[\#333\],
@@ -73,7 +113,8 @@ html[data-theme="dark"] .topnav-adaptive  { color: var(--c-text-2); }
 [data-theme="dark"] .text-\[\#1e293b\],
 [data-theme="dark"] .text-\[\#374151\],
 [data-theme="dark"] .text-\[\#111827\],
-[data-theme="dark"] .text-\[\#334155\] { color: var(--c-text-1); }
+[data-theme="dark"] .text-\[\#334155\],
+[data-theme="dark"] .text-\[\#364153\] { color: var(--c-text-1); }
 
 [data-theme="dark"] .text-\[\#444\],
 [data-theme="dark"] .text-\[\#525252\],
@@ -84,6 +125,7 @@ html[data-theme="dark"] .topnav-adaptive  { color: var(--c-text-2); }
 [data-theme="dark"] .text-\[\#777\],
 [data-theme="dark"] .text-\[\#64748b\],
 [data-theme="dark"] .text-\[\#99a1af\],
+[data-theme="dark"] .text-\[\#717182\],
 [data-theme="dark"] .text-gray-600,
 [data-theme="dark"] .text-gray-700  { color: var(--c-text-3); }
 
@@ -91,7 +133,31 @@ html[data-theme="dark"] .topnav-adaptive  { color: var(--c-text-2); }
 [data-theme="dark"] .text-\[\#94a3b8\],
 [data-theme="dark"] .text-\[\#cbd5e1\],
 [data-theme="dark"] .text-\[\#cbcbcb\],
+[data-theme="dark"] .text-\[\#d4d4d4\],
 [data-theme="dark"] .text-gray-500  { color: var(--c-text-4); }
+
+/* Badge/avatar text & icon colors — these were authored as -600/-700/-800-level
+   shades meant to sit on a near-white pastel background (good contrast in light
+   mode). Now that the matching bg-[#...] pastel above is darkened to a -900-level
+   shade of the same hue, these same dark-on-dark text colors drop below 2:1
+   contrast and become unreadable. Lighten each to a -200/-300-level tint of the
+   same hue instead of leaving it untouched. */
+[data-theme="dark"] .text-\[\#1d4ed8\],
+[data-theme="dark"] .text-\[\#2563eb\],
+[data-theme="dark"] .text-\[\#276cf0\]  { color: #93c5fd; } /* blue */
+[data-theme="dark"] .text-\[\#0284c7\]  { color: #7dd3fc; } /* sky */
+[data-theme="dark"] .text-\[\#166534\],
+[data-theme="dark"] .text-\[\#16a34a\]  { color: #86efac; } /* green */
+[data-theme="dark"] .text-\[\#ca8a04\],
+[data-theme="dark"] .text-\[\#856404\]  { color: #fcd34d; } /* yellow/amber */
+[data-theme="dark"] .text-\[\#ea580c\],
+[data-theme="dark"] .text-\[\#c2410c\]  { color: #fdba74; } /* orange */
+[data-theme="dark"] .text-\[\#a0522d\]  { color: #e0a878; } /* avatar tan */
+[data-theme="dark"] .text-\[\#7c5c3a\]  { color: #d4b48a; } /* avatar tan */
+[data-theme="dark"] .text-\[\#e11d48\],
+[data-theme="dark"] .text-\[\#ef4444\],
+[data-theme="dark"] .text-\[\#cd2629\]  { color: #fca5a5; } /* red/rose */
+[data-theme="dark"] .text-\[\#7c3aed\]  { color: #d8b4fe; } /* purple */
 [data-theme="dark"] .text-gray-400  { color: var(--c-text-3); }
 
 /* ── Border utilities ── */
