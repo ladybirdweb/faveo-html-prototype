@@ -3,7 +3,10 @@
 button, [role="button"] { cursor: pointer; }
 a:hover { text-decoration: none; }
 
-:focus-visible { outline: 2px solid var(--c-brand); outline-offset: 2px; border-radius: 4px; }
-button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+/* No blue outline on form fields (text inputs match :focus-visible even on
+   mouse click) — fields signal focus via their own border styles. Buttons and
+   links keep a keyboard-only outline for accessibility. */
+input:focus, textarea:focus, select:focus, [contenteditable]:focus { outline: none; }
+button:focus-visible, a:focus-visible {
   outline: 2px solid var(--c-brand); outline-offset: 2px;
 }

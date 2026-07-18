@@ -1,3 +1,5 @@
+/* Source Sans Pro — classic Faveo's font (single import instead of per-page links) */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700&display=fallback");
 @import "tailwindcss";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 

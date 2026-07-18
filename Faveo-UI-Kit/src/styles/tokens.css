@@ -1,6 +1,7 @@
 /* ── Faveo design tokens ── */
 @theme {
-  --font-sans: 'Inter', sans-serif;
+  /* native system UI stack (2026-07-17, Freshdesk parity) — replaces Inter */
+  --font-sans: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, 'Helvetica Neue', sans-serif;
 }
 
 :root {

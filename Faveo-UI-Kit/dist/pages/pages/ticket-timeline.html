@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ticket Timeline — Faveo</title>
     <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <!-- Apply theme + nav color before first paint to prevent flash -->
     <script>
         (function () {
@@ -20,8 +17,8 @@
             if (tc && tc !== 'default') document.documentElement.setAttribute('data-topnav-color', tc)
         })()
     </script>
-  <script type="module" crossorigin src="../../assets/main-DP7JxiJK.js"></script>
-  <link rel="stylesheet" crossorigin href="../../assets/main-Dd4GkFY7.css">
+  <script type="module" crossorigin src="../../assets/main-DnxgPx21.js"></script>
+  <link rel="stylesheet" crossorigin href="../../assets/main-BIPvWU7i.css">
 </head>
 <body class="flex flex-col h-screen overflow-hidden bg-white font-sans">
 
@@ -1851,7 +1848,7 @@
                     <!-- ── Status + SLA section ── -->
                     <div class="px-4 pt-4 pb-3">
                         <!-- Status row -->
-                        <div class="flex items-center justify-between mb-3">
+                        <div class="-mx-6 mb-4 flex items-center justify-between border-b border-[#e5e7eb] px-6 pb-4">
                             <span class="text-[16px] font-semibold text-[#1e293b]">Open</span>
                             <button data-toggle="panel" data-target="#panel-properties"
                                     class="flex items-center justify-center w-6 h-6 text-[#6a7282] hover:text-[#333] cursor-pointer bg-transparent border-none transition-colors" title="Collapse properties" aria-expanded="true">
@@ -3252,13 +3249,13 @@ document.addEventListener('click', function (e) {
 </script>
 
 <!-- ── Delete confirmation modal ──────────────────────────────────── -->
-<div id="modal-delete-ticket" class="hidden fixed inset-0 z-[200] flex justify-center items-start pt-0" role="dialog" aria-modal="true" aria-label="Delete ticket">
-    <!-- Transparent backdrop — blocks clicks, no colour -->
-    <div id="modal-delete-backdrop" class="absolute inset-0"></div>
+<div id="modal-delete-ticket" class="hidden fixed inset-0 z-[200] flex justify-center items-start overflow-y-auto py-6" role="dialog" aria-modal="true" aria-label="Delete ticket">
+    <!-- Soft scrim — focuses the dialog, page stays readable behind it -->
+    <div id="modal-delete-backdrop" class="fixed inset-0 bg-black/35"></div>
     <!-- Card -->
-    <div id="modal-delete-card" class="modal-slide-down relative z-10 w-full max-w-[530px] mx-4 bg-white rounded-[10px] shadow-[0px_4px_24px_rgba(0,0,0,0.18)] p-6">
+    <div id="modal-delete-card" class="modal-slide-down relative z-10 w-full max-w-[530px] mx-4 my-auto bg-white rounded-[10px] shadow-[0px_4px_24px_rgba(0,0,0,0.18)] p-6">
         <!-- Header -->
-        <div class="flex items-center justify-between mb-3">
+        <div class="-mx-6 mb-4 flex items-center justify-between border-b border-[#e5e7eb] px-6 pb-4">
             <h3 class="text-[18px] font-semibold text-[#1e293b] mb-0">Delete</h3>
             <button id="btn-close-delete-modal" aria-label="Close" class="w-7 h-7 flex items-center justify-center rounded-full text-[#6a7282] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent transition-colors">
                 <i class="fa-solid fa-xmark text-[15px]" aria-hidden="true"></i>
@@ -3306,9 +3303,9 @@ document.addEventListener('click', function (e) {
 </script>
 
 <!-- ── Edit Time Log modal ── -->
-<div id="modal-edit-timelog" class="hidden fixed inset-0 z-[200] flex justify-center items-start pt-0" role="dialog" aria-modal="true" aria-label="Edit time log">
+<div id="modal-edit-timelog" class="hidden fixed inset-0 z-[200] flex justify-center items-start overflow-y-auto py-6" role="dialog" aria-modal="true" aria-label="Edit time log">
     <!-- Transparent backdrop — blocks clicks, no colour -->
-    <div id="modal-edit-timelog-backdrop" class="absolute inset-0"></div>
+    <div id="modal-edit-timelog-backdrop" class="fixed inset-0 bg-black/35"></div>
     <!-- Card -->
     <div id="modal-edit-timelog-card" class="modal-slide-down relative z-10 w-full max-w-[600px] mx-4 bg-white rounded-[10px] shadow-[0px_4px_24px_rgba(0,0,0,0.18)] p-6">
         <!-- Header -->
@@ -3387,13 +3384,13 @@ document.addEventListener('click', function (e) {
 </script>
 
 <!-- ── Delete Time Log modal ── -->
-<div id="modal-delete-timelog" class="hidden fixed inset-0 z-[200] flex justify-center items-start pt-0" role="dialog" aria-modal="true" aria-label="Delete time log">
+<div id="modal-delete-timelog" class="hidden fixed inset-0 z-[200] flex justify-center items-start overflow-y-auto py-6" role="dialog" aria-modal="true" aria-label="Delete time log">
     <!-- Transparent backdrop — blocks clicks, no colour -->
-    <div id="modal-delete-timelog-backdrop" class="absolute inset-0"></div>
+    <div id="modal-delete-timelog-backdrop" class="fixed inset-0 bg-black/35"></div>
     <!-- Card -->
     <div id="modal-delete-timelog-card" class="modal-slide-down relative z-10 w-full max-w-[460px] mx-4 bg-white rounded-[10px] shadow-[0px_4px_24px_rgba(0,0,0,0.18)] p-6">
         <!-- Header -->
-        <div class="flex items-center justify-between mb-3">
+        <div class="-mx-6 mb-4 flex items-center justify-between border-b border-[#e5e7eb] px-6 pb-4">
             <h3 class="text-[18px] font-semibold text-[#1e293b] mb-0">Delete</h3>
             <button id="btn-close-delete-timelog" aria-label="Close" class="w-7 h-7 flex items-center justify-center rounded-full text-[#6a7282] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent transition-colors">
                 <i class="fa-solid fa-xmark text-[15px]" aria-hidden="true"></i>

@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Faveo — All Tickets</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <script type="module" src="/src/main.js"></script>
     <!-- Apply theme + nav color before first paint to prevent flash -->
     <script>
@@ -1175,10 +1172,10 @@
 
                 <!-- Ticket rows + filter panel -->
                 <div class="flex flex-1 overflow-hidden">
-                    <ul class="overflow-y-auto flex-1 flex flex-col" role="list" aria-label="Ticket list">
+                    <ul class="overflow-y-auto flex-1 flex flex-col gap-2.5 p-3" role="list" aria-label="Ticket list">
 
                         <!-- Row 1: Authentication failure #3 — Low, Closed -->
-                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] bg-[#f7f9fa] hover:bg-[#eef0f3] transition-colors cursor-pointer list-none py-3" role="listitem">
+                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 rounded-[4px] border border-[#e5e7eb] bg-[#f7f9fa] hover:bg-[#eef0f3] transition-all hover:shadow-[0_2px_6px_rgba(0,0,0,0.06)] cursor-pointer list-none py-3" role="listitem">
                             <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
@@ -1191,41 +1188,41 @@
                                 <div>
                                     <span class="bg-[#dcfce7] text-[#166534] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">SLA met</span>
                                 </div>
-                                <div class="text-[#404040] text-[13px] font-bold">Authentication failure #3</div>
-                                <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
+                                <div class="text-[#404040] text-[14px] font-bold">Authentication failure #3</div>
+                                <div class="flex items-center gap-1.5 text-[13px] text-[#404040] font-medium flex-wrap">
                   <span class="inline-flex items-center gap-1 shrink-0">
-                    <i class="fa-solid fa-building text-[9px]" aria-hidden="true"></i>
+                    <i class="fa-solid fa-building text-[10px]" aria-hidden="true"></i>
                     <span>Test (Faveohelpdesk)</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
                     <span>Agent responded 21 hours ago</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
-                    <i class="fa-regular fa-clock text-[9px]" aria-hidden="true"></i>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
+                    <i class="fa-regular fa-clock text-[10px]" aria-hidden="true"></i>
                     <span>Resolution due in 6 days</span>
                   </span>
                                 </div>
                             </div>
                             <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
-                                <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
+                                <button class="priority-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-green-500 inline-block shrink-0"></span>
-                                    <span class="priority-label">Low</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Low</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
-                                    <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="agent-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
+                                    <i class="fa-solid fa-user text-[11px]" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
-                                    <i class="status-icon fa-solid fa-check text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Closed</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="status-btn flex items-center gap-1 text-[13px] text-[#404040] font-medium whitespace-nowrap">
+                                    <i class="status-icon fa-solid fa-check text-[10px]" aria-hidden="true"></i>
+                                    <span class="status-label">Closed</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 2: Authentication failure #2 — Medium, Open -->
-                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] bg-[#f7f9fa] hover:bg-[#eef0f3] transition-colors cursor-pointer list-none py-3" role="listitem">
+                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 rounded-[4px] border border-[#e5e7eb] bg-[#f7f9fa] hover:bg-[#eef0f3] transition-all hover:shadow-[0_2px_6px_rgba(0,0,0,0.06)] cursor-pointer list-none py-3" role="listitem">
                             <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
@@ -1239,41 +1236,41 @@
                                     <span class="bg-[#ffe2e2] text-[#cd2629] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">First response overdue</span>
                                     <span class="bg-[#fff3cd] text-[#856404] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">Resolution: 4h left</span>
                                 </div>
-                                <div class="text-[#404040] text-[13px] font-bold">Authentication failure #2</div>
-                                <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
+                                <div class="text-[#404040] text-[14px] font-bold">Authentication failure #2</div>
+                                <div class="flex items-center gap-1.5 text-[13px] text-[#404040] font-medium flex-wrap">
                   <span class="inline-flex items-center gap-1 shrink-0">
-                    <i class="fa-solid fa-building text-[9px]" aria-hidden="true"></i>
+                    <i class="fa-solid fa-building text-[10px]" aria-hidden="true"></i>
                     <span>Test name (company)</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
                     <span>Created 21 hours ago</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
-                    <i class="fa-solid fa-reply icon-flip text-[9px]" aria-hidden="true"></i>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
+                    <i class="fa-solid fa-reply icon-flip text-[10px]" aria-hidden="true"></i>
                     <span>First response overdue by 20 hours</span>
                   </span>
                                 </div>
                             </div>
                             <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
-                                <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
+                                <button class="priority-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-blue-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
-                                    <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="agent-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
+                                    <i class="fa-solid fa-user text-[11px]" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
-                                    <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="status-btn flex items-center gap-1 text-[13px] text-[#404040] font-medium whitespace-nowrap">
+                                    <i class="status-icon fa-solid fa-envelope-open text-[10px]" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 3: 404 error #1 — High, Open — TWO LABELS -->
-                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] bg-[#f7f9fa] hover:bg-[#eef0f3] transition-colors cursor-pointer list-none py-3" role="listitem">
+                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 rounded-[4px] border border-[#e5e7eb] bg-[#f7f9fa] hover:bg-[#eef0f3] transition-all hover:shadow-[0_2px_6px_rgba(0,0,0,0.06)] cursor-pointer list-none py-3" role="listitem">
                             <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
@@ -1287,41 +1284,41 @@
                                     <span class="bg-[#ffe2e2] text-[#cd2629] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">First response overdue</span>
                                     <span class="bg-[#ffe2e2] text-[#cd2629] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">Resolution overdue</span>
                                 </div>
-                                <div class="text-[#404040] text-[13px] font-bold">404 error when on a specific page #1</div>
-                                <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
+                                <div class="text-[#404040] text-[14px] font-bold">404 error when on a specific page #1</div>
+                                <div class="flex items-center gap-1.5 text-[13px] text-[#404040] font-medium flex-wrap">
                   <span class="inline-flex items-center gap-1 shrink-0">
-                    <i class="fa-solid fa-building text-[9px]" aria-hidden="true"></i>
+                    <i class="fa-solid fa-building text-[10px]" aria-hidden="true"></i>
                     <span>Test name (company)</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
                     <span>Created 21 hours ago</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
-                    <i class="fa-solid fa-reply icon-flip text-[9px]" aria-hidden="true"></i>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
+                    <i class="fa-solid fa-reply icon-flip text-[10px]" aria-hidden="true"></i>
                     <span>First response overdue by 20 hours</span>
                   </span>
                                 </div>
                             </div>
                             <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
-                                <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
+                                <button class="priority-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-yellow-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
-                                    <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="agent-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
+                                    <i class="fa-solid fa-user text-[11px]" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
-                                    <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="status-btn flex items-center gap-1 text-[13px] text-[#404040] font-medium whitespace-nowrap">
+                                    <i class="status-icon fa-solid fa-envelope-open text-[10px]" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4a: Login page crashes on Safari — Medium, Pending -->
-                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
+                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 rounded-[4px] border border-[#e5e7eb] bg-white hover:bg-gray-50 transition-all hover:shadow-[0_2px_6px_rgba(0,0,0,0.06)] cursor-pointer list-none py-3" role="listitem">
                             <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
@@ -1330,41 +1327,41 @@
                             </div>
                             <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
                                 <div><span class="bg-[#dbeafe] text-[#1d4ed8] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">SLA paused</span></div>
-                                <div class="text-[#404040] text-[13px] font-bold">Login page crashes on Safari</div>
-                                <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
+                                <div class="text-[#404040] text-[14px] font-bold">Login page crashes on Safari</div>
+                                <div class="flex items-center gap-1.5 text-[13px] text-[#404040] font-medium flex-wrap">
                   <span class="inline-flex items-center gap-1 shrink-0">
-                    <i class="fa-solid fa-building text-[9px]" aria-hidden="true"></i>
+                    <i class="fa-solid fa-building text-[10px]" aria-hidden="true"></i>
                     <span>Acme Corp</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
                     <span>Created 2 hours ago</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
-                    <i class="fa-regular fa-clock text-[9px]" aria-hidden="true"></i>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
+                    <i class="fa-regular fa-clock text-[10px]" aria-hidden="true"></i>
                     <span>Resolution due in 2 days</span>
                   </span>
                                 </div>
                             </div>
                             <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
-                                <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
+                                <button class="priority-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-blue-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
-                                    <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="agent-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
+                                    <i class="fa-solid fa-user text-[11px]" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
-                                    <i class="status-icon fa-solid fa-pause text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Pending</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="status-btn flex items-center gap-1 text-[13px] text-[#404040] font-medium whitespace-nowrap">
+                                    <i class="status-icon fa-solid fa-pause text-[10px]" aria-hidden="true"></i>
+                                    <span class="status-label">Pending</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4b: Email notifications not sent — High, Open -->
-                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
+                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 rounded-[4px] border border-[#e5e7eb] bg-white hover:bg-gray-50 transition-all hover:shadow-[0_2px_6px_rgba(0,0,0,0.06)] cursor-pointer list-none py-3" role="listitem">
                             <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
@@ -1373,41 +1370,41 @@
                             </div>
                             <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
                                 <div><span class="bg-[#ffe2e2] text-[#cd2629] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">First response overdue</span></div>
-                                <div class="text-[#404040] text-[13px] font-bold">Email notifications not being sent to customers</div>
-                                <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
+                                <div class="text-[#404040] text-[14px] font-bold">Email notifications not being sent to customers</div>
+                                <div class="flex items-center gap-1.5 text-[13px] text-[#404040] font-medium flex-wrap">
                   <span class="inline-flex items-center gap-1 shrink-0">
-                    <i class="fa-solid fa-building text-[9px]" aria-hidden="true"></i>
+                    <i class="fa-solid fa-building text-[10px]" aria-hidden="true"></i>
                     <span>GlobalTech Ltd</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
                     <span>Created 5 hours ago</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
-                    <i class="fa-solid fa-reply icon-flip text-[9px]" aria-hidden="true"></i>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
+                    <i class="fa-solid fa-reply icon-flip text-[10px]" aria-hidden="true"></i>
                     <span>First response overdue by 3 hours</span>
                   </span>
                                 </div>
                             </div>
                             <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
-                                <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
+                                <button class="priority-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-yellow-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
-                                    <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / John D.</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="agent-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
+                                    <i class="fa-solid fa-user text-[11px]" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / John D.</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
-                                    <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="status-btn flex items-center gap-1 text-[13px] text-[#404040] font-medium whitespace-nowrap">
+                                    <i class="status-icon fa-solid fa-envelope-open text-[10px]" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4c: API rate limit exceeded — Urgent, Open -->
-                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
+                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 rounded-[4px] border border-[#e5e7eb] bg-white hover:bg-gray-50 transition-all hover:shadow-[0_2px_6px_rgba(0,0,0,0.06)] cursor-pointer list-none py-3" role="listitem">
                             <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
@@ -1420,41 +1417,41 @@
                                     <span class="bg-[#ffe2e2] text-[#cd2629] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">Resolution overdue</span>
                                     <span class="bg-[#f3e8ff] text-[#7c3aed] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">Escalated</span>
                                 </div>
-                                <div class="text-[#404040] text-[13px] font-bold">API rate limit exceeded — integration broken</div>
-                                <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
+                                <div class="text-[#404040] text-[14px] font-bold">API rate limit exceeded — integration broken</div>
+                                <div class="flex items-center gap-1.5 text-[13px] text-[#404040] font-medium flex-wrap">
                   <span class="inline-flex items-center gap-1 shrink-0">
-                    <i class="fa-solid fa-building text-[9px]" aria-hidden="true"></i>
+                    <i class="fa-solid fa-building text-[10px]" aria-hidden="true"></i>
                     <span>DevStream Inc</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
                     <span>Created 1 day ago</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
-                    <i class="fa-regular fa-clock text-[9px]" aria-hidden="true"></i>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
+                    <i class="fa-regular fa-clock text-[10px]" aria-hidden="true"></i>
                     <span>Resolution overdue by 4 hours</span>
                   </span>
                                 </div>
                             </div>
                             <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
-                                <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
+                                <button class="priority-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-red-500 inline-block shrink-0"></span>
-                                    <span class="priority-label">Urgent</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Urgent</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
-                                    <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Sara K.</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="agent-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
+                                    <i class="fa-solid fa-user text-[11px]" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Sara K.</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
-                                    <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="status-btn flex items-center gap-1 text-[13px] text-[#404040] font-medium whitespace-nowrap">
+                                    <i class="status-icon fa-solid fa-envelope-open text-[10px]" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4d: Password reset not working — Low, Resolved -->
-                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
+                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 rounded-[4px] border border-[#e5e7eb] bg-white hover:bg-gray-50 transition-all hover:shadow-[0_2px_6px_rgba(0,0,0,0.06)] cursor-pointer list-none py-3" role="listitem">
                             <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
@@ -1463,41 +1460,41 @@
                             </div>
                             <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
 
-                                <div class="text-[#404040] text-[13px] font-bold">Password reset link not working for new users</div>
-                                <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
+                                <div class="text-[#404040] text-[14px] font-bold">Password reset link not working for new users</div>
+                                <div class="flex items-center gap-1.5 text-[13px] text-[#404040] font-medium flex-wrap">
                   <span class="inline-flex items-center gap-1 shrink-0">
-                    <i class="fa-solid fa-building text-[9px]" aria-hidden="true"></i>
+                    <i class="fa-solid fa-building text-[10px]" aria-hidden="true"></i>
                     <span>Bright Solutions</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
                     <span>Agent responded 3 days ago</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
-                    <i class="fa-regular fa-clock text-[9px]" aria-hidden="true"></i>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
+                    <i class="fa-regular fa-clock text-[10px]" aria-hidden="true"></i>
                     <span>Resolved</span>
                   </span>
                                 </div>
                             </div>
                             <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
-                                <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
+                                <button class="priority-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-green-500 inline-block shrink-0"></span>
-                                    <span class="priority-label">Low</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Low</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
-                                    <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Alex P.</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="agent-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
+                                    <i class="fa-solid fa-user text-[11px]" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Alex P.</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
-                                    <i class="status-icon fa-solid fa-circle-check text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Resolved</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="status-btn flex items-center gap-1 text-[13px] text-[#404040] font-medium whitespace-nowrap">
+                                    <i class="status-icon fa-solid fa-circle-check text-[10px]" aria-hidden="true"></i>
+                                    <span class="status-label">Resolved</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4e: Billing discrepancy — High, Open -->
-                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
+                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 rounded-[4px] border border-[#e5e7eb] bg-white hover:bg-gray-50 transition-all hover:shadow-[0_2px_6px_rgba(0,0,0,0.06)] cursor-pointer list-none py-3" role="listitem">
                             <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
@@ -1506,41 +1503,41 @@
                             </div>
                             <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
                                 <div><span class="bg-[#ffedd5] text-[#c2410c] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">Due in 1h</span></div>
-                                <div class="text-[#404040] text-[13px] font-bold">Billing discrepancy in last month's invoice</div>
-                                <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
+                                <div class="text-[#404040] text-[14px] font-bold">Billing discrepancy in last month's invoice</div>
+                                <div class="flex items-center gap-1.5 text-[13px] text-[#404040] font-medium flex-wrap">
                   <span class="inline-flex items-center gap-1 shrink-0">
-                    <i class="fa-solid fa-building text-[9px]" aria-hidden="true"></i>
+                    <i class="fa-solid fa-building text-[10px]" aria-hidden="true"></i>
                     <span>FinServe Group</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
                     <span>Created 6 hours ago</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
-                    <i class="fa-solid fa-reply icon-flip text-[9px]" aria-hidden="true"></i>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
+                    <i class="fa-solid fa-reply icon-flip text-[10px]" aria-hidden="true"></i>
                     <span>First response overdue by 1 hour</span>
                   </span>
                                 </div>
                             </div>
                             <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
-                                <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
+                                <button class="priority-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-yellow-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
-                                    <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="agent-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
+                                    <i class="fa-solid fa-user text-[11px]" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
-                                    <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="status-btn flex items-center gap-1 text-[13px] text-[#404040] font-medium whitespace-nowrap">
+                                    <i class="status-icon fa-solid fa-envelope-open text-[10px]" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4f: Dashboard slow loading — Medium, Pending -->
-                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
+                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 rounded-[4px] border border-[#e5e7eb] bg-white hover:bg-gray-50 transition-all hover:shadow-[0_2px_6px_rgba(0,0,0,0.06)] cursor-pointer list-none py-3" role="listitem">
                             <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
@@ -1549,41 +1546,41 @@
                             </div>
                             <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
 
-                                <div class="text-[#404040] text-[13px] font-bold">Dashboard taking too long to load</div>
-                                <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
+                                <div class="text-[#404040] text-[14px] font-bold">Dashboard taking too long to load</div>
+                                <div class="flex items-center gap-1.5 text-[13px] text-[#404040] font-medium flex-wrap">
                   <span class="inline-flex items-center gap-1 shrink-0">
-                    <i class="fa-solid fa-building text-[9px]" aria-hidden="true"></i>
+                    <i class="fa-solid fa-building text-[10px]" aria-hidden="true"></i>
                     <span>NexaCloud</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
                     <span>Agent responded 8 hours ago</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
-                    <i class="fa-regular fa-clock text-[9px]" aria-hidden="true"></i>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
+                    <i class="fa-regular fa-clock text-[10px]" aria-hidden="true"></i>
                     <span>Resolution due in 1 day</span>
                   </span>
                                 </div>
                             </div>
                             <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
-                                <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
+                                <button class="priority-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-blue-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
-                                    <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Tom R.</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="agent-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
+                                    <i class="fa-solid fa-user text-[11px]" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Tom R.</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
-                                    <i class="status-icon fa-solid fa-pause text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Pending</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="status-btn flex items-center gap-1 text-[13px] text-[#404040] font-medium whitespace-nowrap">
+                                    <i class="status-icon fa-solid fa-pause text-[10px]" aria-hidden="true"></i>
+                                    <span class="status-label">Pending</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4g: CSV export broken — Low, Closed -->
-                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
+                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 rounded-[4px] border border-[#e5e7eb] bg-white hover:bg-gray-50 transition-all hover:shadow-[0_2px_6px_rgba(0,0,0,0.06)] cursor-pointer list-none py-3" role="listitem">
                             <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
@@ -1592,41 +1589,41 @@
                             </div>
                             <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
 
-                                <div class="text-[#404040] text-[13px] font-bold">CSV export not generating correct data</div>
-                                <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
+                                <div class="text-[#404040] text-[14px] font-bold">CSV export not generating correct data</div>
+                                <div class="flex items-center gap-1.5 text-[13px] text-[#404040] font-medium flex-wrap">
                   <span class="inline-flex items-center gap-1 shrink-0">
-                    <i class="fa-solid fa-building text-[9px]" aria-hidden="true"></i>
+                    <i class="fa-solid fa-building text-[10px]" aria-hidden="true"></i>
                     <span>DataPulse</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
                     <span>Agent responded 2 days ago</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
-                    <i class="fa-solid fa-check text-[9px]" aria-hidden="true"></i>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
+                    <i class="fa-solid fa-check text-[10px]" aria-hidden="true"></i>
                     <span>Closed</span>
                   </span>
                                 </div>
                             </div>
                             <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
-                                <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
+                                <button class="priority-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-green-500 inline-block shrink-0"></span>
-                                    <span class="priority-label">Low</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Low</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
-                                    <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Lisa M.</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="agent-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
+                                    <i class="fa-solid fa-user text-[11px]" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Lisa M.</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
-                                    <i class="status-icon fa-solid fa-check text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Closed</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="status-btn flex items-center gap-1 text-[13px] text-[#404040] font-medium whitespace-nowrap">
+                                    <i class="status-icon fa-solid fa-check text-[10px]" aria-hidden="true"></i>
+                                    <span class="status-label">Closed</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4h: 2FA setup failing — Urgent, Open -->
-                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
+                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 rounded-[4px] border border-[#e5e7eb] bg-white hover:bg-gray-50 transition-all hover:shadow-[0_2px_6px_rgba(0,0,0,0.06)] cursor-pointer list-none py-3" role="listitem">
                             <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
@@ -1635,41 +1632,41 @@
                             </div>
                             <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
                                 <div><span class="bg-[#ffedd5] text-[#c2410c] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">Due in 30 min</span></div>
-                                <div class="text-[#404040] text-[13px] font-bold">Two-factor authentication setup keeps failing</div>
-                                <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
+                                <div class="text-[#404040] text-[14px] font-bold">Two-factor authentication setup keeps failing</div>
+                                <div class="flex items-center gap-1.5 text-[13px] text-[#404040] font-medium flex-wrap">
                   <span class="inline-flex items-center gap-1 shrink-0">
-                    <i class="fa-solid fa-building text-[9px]" aria-hidden="true"></i>
+                    <i class="fa-solid fa-building text-[10px]" aria-hidden="true"></i>
                     <span>SecureOps</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
                     <span>Created 30 minutes ago</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
-                    <i class="fa-solid fa-reply icon-flip text-[9px]" aria-hidden="true"></i>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
+                    <i class="fa-solid fa-reply icon-flip text-[10px]" aria-hidden="true"></i>
                     <span>First response overdue by 30 min</span>
                   </span>
                                 </div>
                             </div>
                             <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
-                                <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
+                                <button class="priority-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-red-500 inline-block shrink-0"></span>
-                                    <span class="priority-label">Urgent</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Urgent</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
-                                    <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="agent-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
+                                    <i class="fa-solid fa-user text-[11px]" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
-                                    <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="status-btn flex items-center gap-1 text-[13px] text-[#404040] font-medium whitespace-nowrap">
+                                    <i class="status-icon fa-solid fa-envelope-open text-[10px]" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4i: Webhook not triggering — High, Open -->
-                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
+                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 rounded-[4px] border border-[#e5e7eb] bg-white hover:bg-gray-50 transition-all hover:shadow-[0_2px_6px_rgba(0,0,0,0.06)] cursor-pointer list-none py-3" role="listitem">
                             <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
@@ -1678,41 +1675,41 @@
                             </div>
                             <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
                                 <div><span class="bg-[#fff3cd] text-[#856404] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">Resolution: 3h left</span></div>
-                                <div class="text-[#404040] text-[13px] font-bold">Webhook events not triggering on order completion</div>
-                                <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
+                                <div class="text-[#404040] text-[14px] font-bold">Webhook events not triggering on order completion</div>
+                                <div class="flex items-center gap-1.5 text-[13px] text-[#404040] font-medium flex-wrap">
                   <span class="inline-flex items-center gap-1 shrink-0">
-                    <i class="fa-solid fa-building text-[9px]" aria-hidden="true"></i>
+                    <i class="fa-solid fa-building text-[10px]" aria-hidden="true"></i>
                     <span>ShopEase</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
                     <span>Created 12 hours ago</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
-                    <i class="fa-regular fa-clock text-[9px]" aria-hidden="true"></i>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
+                    <i class="fa-regular fa-clock text-[10px]" aria-hidden="true"></i>
                     <span>Resolution due in 3 hours</span>
                   </span>
                                 </div>
                             </div>
                             <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
-                                <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
+                                <button class="priority-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-yellow-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                    <span class="priority-label">High</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
-                                    <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / James W.</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="agent-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
+                                    <i class="fa-solid fa-user text-[11px]" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / James W.</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
-                                    <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="status-btn flex items-center gap-1 text-[13px] text-[#404040] font-medium whitespace-nowrap">
+                                    <i class="status-icon fa-solid fa-envelope-open text-[10px]" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4j: Mobile app sync issue — Medium, Pending -->
-                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 border-b border-[#d1d5dc] hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
+                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 rounded-[4px] border border-[#e5e7eb] bg-white hover:bg-gray-50 transition-all hover:shadow-[0_2px_6px_rgba(0,0,0,0.06)] cursor-pointer list-none py-3" role="listitem">
                             <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
@@ -1721,41 +1718,41 @@
                             </div>
                             <div class="ms-7 flex flex-col gap-0.5 flex-1 min-w-0">
 
-                                <div class="text-[#404040] text-[13px] font-bold">Mobile app not syncing with web dashboard</div>
-                                <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
+                                <div class="text-[#404040] text-[14px] font-bold">Mobile app not syncing with web dashboard</div>
+                                <div class="flex items-center gap-1.5 text-[13px] text-[#404040] font-medium flex-wrap">
                   <span class="inline-flex items-center gap-1 shrink-0">
-                    <i class="fa-solid fa-building text-[9px]" aria-hidden="true"></i>
+                    <i class="fa-solid fa-building text-[10px]" aria-hidden="true"></i>
                     <span>MobileFirst Co</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
                     <span>Agent responded 4 hours ago</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
-                    <i class="fa-regular fa-clock text-[9px]" aria-hidden="true"></i>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
+                    <i class="fa-regular fa-clock text-[10px]" aria-hidden="true"></i>
                     <span>Resolution due in 5 hours</span>
                   </span>
                                 </div>
                             </div>
                             <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
-                                <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
+                                <button class="priority-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-blue-400 inline-block shrink-0"></span>
-                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Medium</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
-                                    <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Priya S.</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="agent-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
+                                    <i class="fa-solid fa-user text-[11px]" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Priya S.</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
-                                    <i class="status-icon fa-solid fa-pause text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Pending</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="status-btn flex items-center gap-1 text-[13px] text-[#404040] font-medium whitespace-nowrap">
+                                    <i class="status-icon fa-solid fa-pause text-[10px]" aria-hidden="true"></i>
+                                    <span class="status-label">Pending</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>
 
                         <!-- Row 4: 404 error #1 — Urgent, Open -->
-                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 hover:bg-gray-50 transition-colors cursor-pointer list-none py-3" role="listitem">
+                        <li class="flex items-start md:items-center min-h-[98px] shrink-0 rounded-[4px] border border-[#e5e7eb] bg-white hover:bg-gray-50 transition-all hover:shadow-[0_2px_6px_rgba(0,0,0,0.06)] cursor-pointer list-none py-3" role="listitem">
                             <div class="flex items-center justify-center w-[23px] shrink-0 ms-6 pt-1">
                                 <input type="checkbox" aria-label="Select ticket" class="ticket-checkbox w-3.5 h-3.5 border-gray-300 rounded accent-[#6b7280]" />
                             </div>
@@ -1769,35 +1766,35 @@
                                     <span class="bg-[#ffe2e2] text-[#cd2629] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">First response overdue</span>
                                     <span class="bg-[#fff3cd] text-[#856404] text-[11px] font-semibold px-[5px] py-[4px] rounded-[6px]">Resolution: 2h left</span>
                                 </div>
-                                <div class="text-[#404040] text-[13px] font-bold">404 error when on a specific page #1</div>
-                                <div class="flex items-center gap-1.5 text-[11px] text-[#404040] font-medium flex-wrap">
+                                <div class="text-[#404040] text-[14px] font-bold">404 error when on a specific page #1</div>
+                                <div class="flex items-center gap-1.5 text-[13px] text-[#404040] font-medium flex-wrap">
                   <span class="inline-flex items-center gap-1 shrink-0">
-                    <i class="fa-solid fa-building text-[9px]" aria-hidden="true"></i>
+                    <i class="fa-solid fa-building text-[10px]" aria-hidden="true"></i>
                     <span>Test name (company)</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
                     <span>Created 21 hours ago</span>
                   </span>
                                     <span class="inline-flex items-center gap-1 shrink-0">
-                    <span class="text-[#d4d4d4] text-base leading-none">•</span>
-                    <i class="fa-solid fa-reply icon-flip text-[9px]" aria-hidden="true"></i>
+                    <span class="text-[#d4d4d4] text-[17px] leading-none">•</span>
+                    <i class="fa-solid fa-reply icon-flip text-[10px]" aria-hidden="true"></i>
                     <span>First response overdue by 20 hours</span>
                   </span>
                                 </div>
                             </div>
                             <div class="ticket-right-col hidden md:flex flex-col gap-1.5 items-start self-start shrink-0 me-6 min-w-[280px] pt-3">
-                                <button class="priority-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
+                                <button class="priority-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
                                     <span class="priority-dot w-2.5 h-2.5 rounded-full bg-red-500 inline-block shrink-0"></span>
-                                    <span class="priority-label">Urgent</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                    <span class="priority-label">Urgent</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="agent-btn flex items-center gap-1 text-[11px] text-[#525252] font-medium whitespace-nowrap">
-                                    <i class="fa-solid fa-user text-[10px]" aria-hidden="true"></i>
-                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="agent-btn flex items-center gap-1 text-[13px] text-[#525252] font-medium whitespace-nowrap">
+                                    <i class="fa-solid fa-user text-[11px]" aria-hidden="true"></i>
+                                    <span class="agent-label">-- / Unassigned</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
-                                <button class="status-btn flex items-center gap-1 text-[11px] text-[#404040] font-medium whitespace-nowrap">
-                                    <i class="status-icon fa-solid fa-envelope-open text-[9px]" aria-hidden="true"></i>
-                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[9px] ms-px" aria-hidden="true"></i>
+                                <button class="status-btn flex items-center gap-1 text-[13px] text-[#404040] font-medium whitespace-nowrap">
+                                    <i class="status-icon fa-solid fa-envelope-open text-[10px]" aria-hidden="true"></i>
+                                    <span class="status-label">Open</span> <i class="fa-solid fa-chevron-down text-[10px] ms-px" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </li>

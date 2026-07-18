@@ -73,13 +73,15 @@
   }
 }
 
-/* Modal slide-down entrance */
+/* Modal slide-down entrance. NO fill mode: a running-or-filling transform
+   animation makes the card a containing block for fixed descendants (toasts),
+   even at transform:none. No delay → no fill needed. */
 @keyframes modal-slide-down {
   from { transform: translateY(-48px); opacity: 0; }
-  to   { transform: translateY(0);     opacity: 1; }
+  to   { transform: none;              opacity: 1; }
 }
 .modal-slide-down {
-  animation: modal-slide-down 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: modal-slide-down 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Contenteditable editor */
