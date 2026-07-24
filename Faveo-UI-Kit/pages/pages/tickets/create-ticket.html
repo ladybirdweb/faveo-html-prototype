@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-commerce — Faveo</title>
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    <title>Faveo — Create Ticket</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <script type="module" src="/src/main.js"></script>
     <!-- Apply theme + nav color before first paint to prevent flash -->
     <script>
         (function () {
@@ -17,12 +18,10 @@
             if (tc && tc !== 'default') document.documentElement.setAttribute('data-topnav-color', tc)
         })()
     </script>
-  <script type="module" crossorigin src="../../assets/main-DnxgPx21.js"></script>
-  <link rel="stylesheet" crossorigin href="../../assets/main-BIPvWU7i.css">
 </head>
 <body class="flex flex-col h-screen overflow-hidden bg-white font-sans">
 
-<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:bg-white focus:text-[#3da6d7] focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-sm focus:font-medium">Skip to main content</a>
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:start-2 focus:z-[9999] focus:bg-white focus:text-[#3da6d7] focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-sm focus:font-medium">Skip to main content</a>
 
 <!-- Red subscription banner -->
 <div id="banner-red" role="alert" aria-label="Subscription expiry notification" class="bg-[#ffe9ee] flex items-center justify-center px-4 py-2.5 relative shrink-0">
@@ -30,11 +29,11 @@
     <div class="flex items-center gap-2">
         <i class="fa-solid fa-triangle-exclamation text-red-500 text-sm" aria-hidden="true"></i>
         <span class="text-red-500 font-medium text-sm hidden sm:inline">Your subscription expires in 3 days.</span>
-        <div class="pl-2">
+        <div class="ps-2">
             <button data-toggle="modal" data-target="#panel-renew" class="bg-[rgba(255,0,0,0.8)] text-white text-xs font-bold px-4 py-1 rounded-[6px] cursor-pointer">Renew Now</button>
         </div>
     </div>
-    <button data-dismiss="#banner-red" aria-label="Dismiss alert" class="absolute right-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
+    <button data-dismiss="#banner-red" aria-label="Dismiss alert" class="absolute end-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
         <i class="fa-solid fa-xmark text-[10px] text-gray-500" aria-hidden="true"></i>
     </button>
 </div>
@@ -45,7 +44,7 @@
     <div class="flex items-center gap-2">
         <i class="fa-solid fa-circle-info text-black text-base" aria-hidden="true"></i>
         <span class="text-black font-medium text-sm hidden sm:inline">Connect with an expert get an advice on Faveo helpdesk</span>
-        <div class="pl-2 relative">
+        <div class="ps-2 relative">
             <button data-toggle="dropdown" data-target="#contact-dropdown"
                     class="bg-[#cda206] text-white text-xs font-bold px-4 py-1 rounded-[6px] cursor-pointer">Contact</button>
 
@@ -71,13 +70,13 @@
                 <div class="p-4 flex flex-col gap-2.5">
                     <button class="flex items-center gap-2.5 w-full px-2.5 py-1.5 border border-[#d2d2d2] rounded-[6px] text-[#4a5565] text-[12px] hover:bg-[#f1f5f9] transition-colors bg-white cursor-pointer">
                         <i class="fa-solid fa-circle-play text-sm shrink-0"></i>
-                        <span class="flex-1 text-left">Book a 1:1 product demo</span>
-                        <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                        <span class="flex-1 text-start">Book a 1:1 product demo</span>
+                        <i class="fa-solid fa-chevron-right icon-flip text-[9px]"></i>
                     </button>
                     <button class="flex items-center gap-2.5 w-full px-2.5 py-1.5 border border-[#d2d2d2] rounded-[6px] text-[#4a5565] text-[12px] hover:bg-[#f1f5f9] transition-colors bg-white cursor-pointer">
                         <i class="fa-solid fa-calendar-days text-sm shrink-0"></i>
-                        <span class="flex-1 text-left">Schedule a meeting with faveo</span>
-                        <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                        <span class="flex-1 text-start">Schedule a meeting with faveo</span>
+                        <i class="fa-solid fa-chevron-right icon-flip text-[9px]"></i>
                     </button>
                     <p class="text-[#99a1af] text-[12px] px-0.5 mt-0.5">Or contact me via</p>
                     <div class="flex items-center gap-2.5 px-2.5 py-1.5 border border-[#d2d2d2] rounded-[6px] text-[#4a5565] text-[12px]">
@@ -99,7 +98,7 @@
             </div>
         </div>
     </div>
-    <button data-dismiss="#banner-yellow" aria-label="Dismiss alert" class="absolute right-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
+    <button data-dismiss="#banner-yellow" aria-label="Dismiss alert" class="absolute end-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
         <i class="fa-solid fa-xmark text-[10px] text-gray-500" aria-hidden="true"></i>
     </button>
 </div>
@@ -110,62 +109,62 @@
     <!-- Icon rail (69px, always in flow — content never moves) -->
     <nav id="sidebar" aria-label="Main navigation" class="w-[69px] bg-[#f7f9fa] hidden md:flex flex-col items-center shrink-0 overflow-x-hidden py-2">
         <div class="w-full h-[55px] flex items-center justify-center px-[7px] shrink-0">
-            <img src="../../faveo-logo.png"
+            <img src="/faveo-logo.png"
                  alt="Faveo" class="max-w-[50px] max-h-[31px] object-contain" />
         </div>
         <div class="sidebar-scroll flex flex-col w-full items-center pt-[10px] gap-y-[10px] flex-1 overflow-y-auto">
             <button class="sidebar-nav" data-nav="nav-dashboard" title="Dashboard" aria-label="Dashboard"><i class="fas fa-tachometer-alt" aria-hidden="true"></i></button>
-            <a class="sidebar-nav" href="../widgets.html" title="Widgets" aria-label="Widgets"><i class="fas fa-th" aria-hidden="true"></i></a>
+            <a class="sidebar-nav" href="../../widgets.html" title="Widgets" aria-label="Widgets"><i class="fas fa-th" aria-hidden="true"></i></a>
             <button class="sidebar-nav" data-nav="nav-layout" title="Layout Options" aria-label="Layout Options"><i class="fas fa-copy" aria-hidden="true"></i></button>
             <button class="sidebar-nav" data-nav="nav-charts" title="Charts" aria-label="Charts"><i class="fas fa-chart-pie" aria-hidden="true"></i></button>
             <button class="sidebar-nav" data-nav="nav-ui" title="UI Elements" aria-label="UI Elements"><i class="fas fa-tree" aria-hidden="true"></i></button>
             <button class="sidebar-nav" data-nav="nav-forms" title="Forms" aria-label="Forms"><i class="fas fa-edit" aria-hidden="true"></i></button>
             <button class="sidebar-nav" data-nav="nav-tables" title="Tables" aria-label="Tables"><i class="fas fa-table" aria-hidden="true"></i></button>
-            <a class="sidebar-nav" href="../calendar.html" title="Calendar" aria-label="Calendar"><i class="far fa-calendar-alt" aria-hidden="true"></i></a>
-            <a class="sidebar-nav" href="../gallery.html" title="Gallery" aria-label="Gallery"><i class="far fa-image" aria-hidden="true"></i></a>
-            <a class="sidebar-nav" href="../kanban.html" title="Kanban Board" aria-label="Kanban Board"><i class="fas fa-columns" aria-hidden="true"></i></a>
+            <a class="sidebar-nav" href="../../calendar.html" title="Calendar" aria-label="Calendar"><i class="far fa-calendar-alt" aria-hidden="true"></i></a>
+            <a class="sidebar-nav" href="../../gallery.html" title="Gallery" aria-label="Gallery"><i class="far fa-image" aria-hidden="true"></i></a>
+            <a class="sidebar-nav" href="../../kanban.html" title="Kanban Board" aria-label="Kanban Board"><i class="fas fa-columns" aria-hidden="true"></i></a>
             <button class="sidebar-nav" data-nav="nav-mailbox" title="Mailbox" aria-label="Mailbox"><i class="far fa-envelope" aria-hidden="true"></i></button>
             <button class="sidebar-nav active" data-nav="nav-pages" title="Pages" aria-label="Pages"><i class="fas fa-book" aria-hidden="true"></i></button>
             <button class="sidebar-nav" data-nav="nav-extras" title="Extras" aria-label="Extras"><i class="far fa-plus-square" aria-hidden="true"></i></button>
             <button class="sidebar-nav" data-nav="nav-search" title="Search" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></button>
-            <a class="sidebar-nav" href="../iframe.html" title="Tabbed IFrame Plugin" aria-label="Tabbed IFrame Plugin"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></a>
-            <a class="sidebar-nav" href="../documentation.html" title="Documentation" aria-label="Documentation"><i class="fas fa-file" aria-hidden="true"></i></a>
+            <a class="sidebar-nav" href="../../iframe.html" title="Tabbed IFrame Plugin" aria-label="Tabbed IFrame Plugin"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></a>
+            <a class="sidebar-nav" href="../../documentation.html" title="Documentation" aria-label="Documentation"><i class="fas fa-file" aria-hidden="true"></i></a>
         </div>
         <div class="mt-auto flex flex-col items-center w-full">
             <div class="w-[49px] border-t border-gray-200 my-2"></div>
             <button id="btn-toggle-sidebar" class="sidebar-nav mb-1" title="Expand sidebar" aria-label="Expand navigation sidebar" aria-expanded="false" aria-controls="sidebar-expanded">
-                <i class="fa-solid fa-indent" aria-hidden="true"></i>
+                <i class="fa-solid fa-indent icon-flip" aria-hidden="true"></i>
             </button>
         </div>
     </nav>
 
     <!-- Expanded sidebar (absolute overlay — same bg as rail, content stays put) -->
-    <nav id="sidebar-expanded" aria-label="Expanded navigation" class="absolute left-0 top-0 bottom-0 w-[295px] bg-[#f7f9fa] flex flex-col z-50 py-2 hidden">
+    <nav id="sidebar-expanded" aria-label="Expanded navigation" class="absolute start-0 top-0 bottom-0 w-[295px] bg-[#f7f9fa] flex flex-col z-50 py-2 hidden">
         <div class="w-full h-[55px] flex items-center justify-center px-3 shrink-0">
-            <img id="sidebar-logo" src="../../faveo-logo.png"
+            <img id="sidebar-logo" src="/faveo-logo.png"
                  alt="Faveo" class="max-h-[31px] max-w-[55px] object-contain" />
             <!-- Shown only when logo fails to load -->
             <span id="sidebar-logo-fallback" class="hidden text-[#3a4a5a] text-[19px] font-semibold leading-none whitespace-nowrap sidebar-adaptive">Support Center</span>
         </div>
         <div class="sidebar-scroll flex flex-col flex-1 overflow-y-auto px-3 gap-y-[10px] pt-[10px]">
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-dashboard" aria-label="Dashboard"><i class="fas fa-tachometer-alt w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Dashboard</span></button>
-            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../widgets.html" aria-label="Widgets"><i class="fas fa-th w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Widgets</span></a>
+            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../../widgets.html" aria-label="Widgets"><i class="fas fa-th w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Widgets</span></a>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-layout" aria-label="Layout Options"><i class="fas fa-copy w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Layout Options</span></button>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-charts" aria-label="Charts"><i class="fas fa-chart-pie w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Charts</span></button>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-ui" aria-label="UI Elements"><i class="fas fa-tree w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">UI Elements</span></button>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-forms" aria-label="Forms"><i class="fas fa-edit w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Forms</span></button>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-tables" aria-label="Tables"><i class="fas fa-table w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Tables</span></button>
             <p class="px-[10px] pt-1 pb-0 text-[10px] font-semibold uppercase tracking-wider text-[#99a1af]">Examples</p>
-            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../calendar.html" aria-label="Calendar"><i class="far fa-calendar-alt w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Calendar</span></a>
-            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../gallery.html" aria-label="Gallery"><i class="far fa-image w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Gallery</span></a>
-            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../kanban.html" aria-label="Kanban Board"><i class="fas fa-columns w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Kanban Board</span></a>
+            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../../calendar.html" aria-label="Calendar"><i class="far fa-calendar-alt w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Calendar</span></a>
+            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../../gallery.html" aria-label="Gallery"><i class="far fa-image w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Gallery</span></a>
+            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../../kanban.html" aria-label="Kanban Board"><i class="fas fa-columns w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Kanban Board</span></a>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-mailbox" aria-label="Mailbox"><i class="far fa-envelope w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Mailbox</span></button>
             <button class="sidebar-nav active w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-pages" aria-label="Pages"><i class="fas fa-book w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Pages</span></button>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-extras" aria-label="Extras"><i class="far fa-plus-square w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Extras</span></button>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-search" aria-label="Search"><i class="fas fa-search w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Search</span></button>
             <p class="px-[10px] pt-1 pb-0 text-[10px] font-semibold uppercase tracking-wider text-[#99a1af]">Miscellaneous</p>
-            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../iframe.html" aria-label="Tabbed IFrame Plugin"><i class="fas fa-ellipsis-h w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Tabbed IFrame Plugin</span></a>
-            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../documentation.html" aria-label="Documentation"><i class="fas fa-file w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Documentation</span></a>
+            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../../iframe.html" aria-label="Tabbed IFrame Plugin"><i class="fas fa-ellipsis-h w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Tabbed IFrame Plugin</span></a>
+            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../../documentation.html" aria-label="Documentation"><i class="fas fa-file w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Documentation</span></a>
             <p class="px-[10px] pt-1 pb-0 text-[10px] font-semibold uppercase tracking-wider text-[#99a1af]">Labels</p>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" aria-label="Important"><i class="far fa-circle w-[41px] text-center shrink-0 text-[16px] text-[#dc2626]" aria-hidden="true"></i><span class="whitespace-nowrap">Important</span></button>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" aria-label="Warning"><i class="far fa-circle w-[41px] text-center shrink-0 text-[16px] text-[#d97706]" aria-hidden="true"></i><span class="whitespace-nowrap">Warning</span></button>
@@ -174,7 +173,7 @@
         <div class="px-3 mt-auto">
             <div class="border-t border-gray-200 my-2"></div>
             <button id="btn-collapse-sidebar" aria-label="Collapse navigation sidebar" class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[14px] font-medium mb-1">
-                <i class="fa-solid fa-outdent w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Collapse</span>
+                <i class="fa-solid fa-outdent icon-flip w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Collapse</span>
             </button>
         </div>
     </nav>
@@ -184,12 +183,15 @@
 
         <!-- Toolbar -->
         <header class="bg-[#f7f9fa] h-[55px] flex items-center gap-2 px-5 shrink-0" aria-label="Page toolbar">
-            <button id="btn-mobile-menu" class="md:hidden sidebar-nav mr-1" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar-expanded">
+            <button id="btn-mobile-menu" class="md:hidden sidebar-nav me-1" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar-expanded">
                 <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </button>
-            <div class="flex items-center gap-2 min-w-0 shrink">
-                <span class="text-[#333] text-base font-semibold topnav-adaptive">E-commerce</span>
-            </div>
+            <!-- Page title as breadcrumb: parent module links back, current page is plain -->
+            <nav aria-label="Breadcrumb" class="flex items-center gap-2 min-w-0 shrink">
+                <a href="ticket-inbox.html" class="text-[#3da6d7] text-base font-semibold no-underline hover:underline truncate topnav-adaptive">Tickets</a>
+                <i class="fa-solid fa-chevron-right icon-flip text-[10px] text-[#9ca3af] shrink-0" aria-hidden="true"></i>
+                <span class="text-[#333] text-base font-semibold truncate topnav-adaptive" aria-current="page">New ticket</span>
+            </nav>
 
             <!-- Right controls -->
             <div class="flex items-center gap-2.5 flex-1 justify-end min-w-0">
@@ -200,38 +202,38 @@
                         New
                         <i class="fa-solid fa-chevron-down text-[9px]" aria-hidden="true"></i>
                     </button>
-                    <div id="new-dropdown" role="menu" aria-label="Create new item" class="absolute right-0 top-[calc(100%+2px)] z-50 min-w-[160px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] p-1.5 hidden">
-                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                    <div id="new-dropdown" role="menu" aria-label="Create new item" class="absolute end-0 top-[calc(100%+2px)] z-50 min-w-[160px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] p-1.5 hidden">
+                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                             <i class="fas fa-ticket text-sm shrink-0" aria-hidden="true"></i><span>Ticket</span>
                         </button>
-                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                             <i class="fa-regular fa-envelope text-sm shrink-0" aria-hidden="true"></i><span>Email</span>
                         </button>
-                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                             <i class="fa-regular fa-message text-sm shrink-0" aria-hidden="true"></i><span>Message</span>
                         </button>
-                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                             <i class="fa-regular fa-address-card text-sm shrink-0" aria-hidden="true"></i><span>Contact</span>
                         </button>
-                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
+                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-start hover:bg-[#f1f5f9] transition-colors">
                             <i class="fa-regular fa-building text-sm shrink-0" aria-hidden="true"></i><span>Company</span>
                         </button>
                     </div>
                 </div>
                 <!-- Search -->
                 <div class="relative shrink-0 hidden sm:block">
-                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs" aria-hidden="true"></i>
+                    <i class="fa-solid fa-magnifying-glass absolute start-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs" aria-hidden="true"></i>
                     <input id="search-trigger" type="text" placeholder="Search" aria-label="Search tickets" readonly
-                           class="bg-white border border-[#d1d5dc] rounded-[4px] pl-8 pr-3 py-1.5 text-xs text-[#0a0a0a] w-32 outline-none focus:border-sky-400 cursor-pointer" />
+                           class="bg-white border border-[#d1d5dc] rounded-[4px] ps-8 pe-3 py-1.5 text-xs text-[#0a0a0a] w-32 outline-none focus:border-sky-400 cursor-pointer" />
 
                     <!-- Search panel (single) -->
-                    <div id="search-overlay" role="dialog" aria-label="Search" class="hidden absolute top-0 right-0 w-[400px] bg-white rounded-[10px] shadow-[0_0_8px_rgba(0,0,0,0.2)] z-50 overflow-hidden">
+                    <div id="search-overlay" role="dialog" aria-label="Search" class="hidden absolute top-0 end-0 w-[400px] bg-white rounded-[10px] shadow-[0_0_8px_rgba(0,0,0,0.2)] z-50 overflow-hidden">
                         <!-- Search input — always visible -->
                         <div class="p-3">
                             <div class="relative">
-                                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" aria-hidden="true"></i>
+                                <i class="fa-solid fa-magnifying-glass absolute start-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" aria-hidden="true"></i>
                                 <input id="search-overlay-input" type="text" placeholder="Search" aria-label="Search"
-                                       class="w-full border border-[#d1d5dc] rounded-[10px] pl-8 pr-3 py-1.5 text-xs text-[#0a0a0a] outline-none focus:border-sky-400" />
+                                       class="w-full border border-[#d1d5dc] rounded-[10px] ps-8 pe-3 py-1.5 text-xs text-[#0a0a0a] outline-none focus:border-sky-400" />
                             </div>
                         </div>
 
@@ -242,7 +244,7 @@
                                 <button data-toggle="tab" data-tab="tickets" data-target="#recently-viewed-list" class="search-tab px-2 py-0.5 text-xs border border-[#d1d5dc] rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors">Tickets</button>
                                 <button data-toggle="tab" data-tab="contacts" data-target="#recently-viewed-list" class="search-tab px-2 py-0.5 text-xs border border-[#d1d5dc] rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors">Contacts</button>
                                 <button data-toggle="tab" data-tab="forums" data-target="#recently-viewed-list" class="search-tab px-2 py-0.5 text-xs border border-[#d1d5dc] rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors">Forums</button>
-                                <button id="btn-search-prefs" aria-label="Search preferences" class="ml-auto flex items-center justify-center w-7 h-7 rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors cursor-pointer">
+                                <button id="btn-search-prefs" aria-label="Search preferences" class="ms-auto flex items-center justify-center w-7 h-7 rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors cursor-pointer">
                                     <i class="fa-solid fa-gear text-base" aria-hidden="true"></i>
                                 </button>
                             </div>
@@ -383,10 +385,10 @@
                 <div class="relative shrink-0">
                     <button data-toggle="dropdown" data-target="#notifications-dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="notifications-dropdown" aria-label="Notifications" class="relative flex items-center justify-center w-8 h-8 rounded-[6px] text-[#525252] cursor-pointer hover:bg-[#f1f5f9] transition-colors topnav-adaptive">
                         <i class="fa-solid fa-bell text-sm" aria-hidden="true"></i>
-                        <span class="absolute top-1 right-1.5 w-1.5 h-1.5 bg-red-500 rounded-full border border-white block"></span>
+                        <span class="absolute top-1 end-1.5 w-1.5 h-1.5 bg-red-500 rounded-full border border-white block"></span>
                     </button>
 
-                    <div id="notifications-dropdown" role="dialog" aria-label="Notifications" class="absolute right-0 top-[calc(100%+4px)] z-50 w-[360px] bg-white rounded-[10px] shadow-[0_4px_20px_rgba(0,0,0,0.15)] border border-[#e5e7eb] overflow-hidden hidden">
+                    <div id="notifications-dropdown" role="dialog" aria-label="Notifications" class="absolute end-0 top-[calc(100%+4px)] z-50 w-[360px] bg-white rounded-[10px] shadow-[0_4px_20px_rgba(0,0,0,0.15)] border border-[#e5e7eb] overflow-hidden hidden">
                         <!-- Header -->
                         <div class="flex items-center justify-between px-4 py-3 border-b border-[#e5e7eb]">
                             <span class="text-sm font-semibold text-[#0a0a0a]">Notifications</span>
@@ -491,6 +493,91 @@
                         </div>
                     </div>
                 </div>
+                <!-- Language dropdown -->
+                <div class="relative shrink-0">
+                    <button id="topnav-language-trigger" data-toggle="dropdown" data-target="#topnav-language-dropdown" aria-haspopup="menu" aria-expanded="false" aria-controls="topnav-language-dropdown" aria-label="Change language (currently English)" class="flex items-center justify-center w-8 h-8 rounded-[6px] hover:bg-[#f1f5f9] transition-colors cursor-pointer topnav-adaptive">
+                        <img id="topnav-language-flag" src="/flags/en-us.png" alt="Current language" class="w-6 h-4 rounded-[3px] object-cover shrink-0" />
+                    </button>
+                    <div id="topnav-language-dropdown" role="menu" aria-label="Language options" class="absolute end-0 top-[calc(100%+4px)] z-50 w-[314px] max-h-[420px] overflow-y-auto bg-white rounded-[10px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] py-1 hidden">
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="ar" data-dir="rtl" data-short="Arabic" data-flag="/flags/arabic.png">
+                            <img src="/flags/arabic.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Arabic (العربية)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="bs" data-dir="ltr" data-short="Bosnian" data-flag="/flags/bosnian.png">
+                            <img src="/flags/bosnian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Bosnian (bosanski)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="zh-Hans" data-dir="ltr" data-short="Chinese (Simplified)" data-flag="/flags/chinese.png">
+                            <img src="/flags/chinese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Chinese (中文 [Simplified])</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="zh-Hant" data-dir="ltr" data-short="Chinese (Traditional)" data-flag="/flags/chinese.png">
+                            <img src="/flags/chinese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Chinese (中文 [Traditional])</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="nl" data-dir="ltr" data-short="Dutch" data-flag="/flags/dutch.png">
+                            <img src="/flags/dutch.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Dutch (Vlaams)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-[#f1f5f9] transition-colors" data-lang="en-US" data-dir="ltr" data-short="English" data-flag="/flags/en-us.png">
+                            <img src="/flags/en-us.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">English - United States (English)</span>
+                            <i class="fa-solid fa-check text-[10px] text-[#3da6d7] shrink-0" aria-hidden="true"></i>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="en-GB" data-dir="ltr" data-short="English (UK)" data-flag="/flags/en-gb.png">
+                            <img src="/flags/en-gb.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">English - United Kingdom (English)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="fr" data-dir="ltr" data-short="French" data-flag="/flags/french.png">
+                            <img src="/flags/french.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">French (français)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="de" data-dir="ltr" data-short="German" data-flag="/flags/german.png">
+                            <img src="/flags/german.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">German (Deutsch)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="id" data-dir="ltr" data-short="Indonesian" data-flag="/flags/indonesian.png">
+                            <img src="/flags/indonesian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Indonesian (Bahasa Indonesia)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="it" data-dir="ltr" data-short="Italian" data-flag="/flags/italian.png">
+                            <img src="/flags/italian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Italian (Italiano)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="ko" data-dir="ltr" data-short="Korean" data-flag="/flags/korean.png">
+                            <img src="/flags/korean.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Korean (한국어)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="mt" data-dir="ltr" data-short="Maltese" data-flag="/flags/maltese.png">
+                            <img src="/flags/maltese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Maltese (Malti)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="no" data-dir="ltr" data-short="Norwegian" data-flag="/flags/norwegian.png">
+                            <img src="/flags/norwegian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Norwegian (Norsk)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="pt" data-dir="ltr" data-short="Portuguese" data-flag="/flags/portuguese.png">
+                            <img src="/flags/portuguese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Portuguese (Português)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="ru" data-dir="ltr" data-short="Russian" data-flag="/flags/russian.png">
+                            <img src="/flags/russian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Russian (Русский)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="es" data-dir="ltr" data-short="Spanish" data-flag="/flags/spanish.png">
+                            <img src="/flags/spanish.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Spanish (Español)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="tr" data-dir="ltr" data-short="Turkish" data-flag="/flags/turkish.png">
+                            <img src="/flags/turkish.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Turkish (Türkçe)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="vi" data-dir="ltr" data-short="Vietnamese" data-flag="/flags/vietnamese.png">
+                            <img src="/flags/vietnamese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Vietnamese (Tiếng Việt)</span>
+                        </button>
+                    </div>
+                </div>
                 <!-- Apps button + dropdown -->
                 <div class="relative shrink-0 hidden sm:block">
                     <button data-toggle="dropdown" data-target="#apps-dropdown" aria-haspopup="menu" aria-expanded="false" aria-controls="apps-dropdown" aria-label="Apps marketplace" class="bg-white border border-[#d1d5dc] rounded-[6px] flex items-center gap-1.5 px-2.5 py-1.5 text-[#525252] text-xs font-medium cursor-pointer hover:bg-[#f1f5f9] transition-colors">
@@ -498,7 +585,7 @@
                         Apps
                     </button>
 
-                    <div id="apps-dropdown" role="dialog" aria-label="Apps marketplace" class="absolute right-0 top-[calc(100%+2px)] z-50 w-[343px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] overflow-hidden hidden">
+                    <div id="apps-dropdown" role="dialog" aria-label="Apps marketplace" class="absolute end-0 top-[calc(100%+2px)] z-50 w-[343px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] overflow-hidden hidden">
 
                         <!-- Apps nav list -->
                         <ul role="list" class="flex flex-col">
@@ -510,7 +597,7 @@
                                 <div class="flex flex-col gap-0.5 flex-1">
                                     <div class="flex items-center gap-1">
                                         <span class="text-[#1e2939] text-[14px] font-semibold">Explore Marketplace Apps</span>
-                                        <i class="fa-solid fa-chevron-right text-[#1e2939] text-[10px]"></i>
+                                        <i class="fa-solid fa-chevron-right icon-flip text-[#1e2939] text-[10px]"></i>
                                     </div>
                                     <p class="text-[#6a7282] text-[12px] leading-4">Explore apps that enhance your work experience</p>
                                 </div>
@@ -591,7 +678,7 @@
                                 <div class="flex flex-col gap-0.5 flex-1">
                                     <div class="flex items-center gap-1">
                                         <span class="text-[#1e2939] text-[14px] font-semibold">Manage Apps</span>
-                                        <i class="fa-solid fa-chevron-right text-[#1e2939] text-[10px]"></i>
+                                        <i class="fa-solid fa-chevron-right icon-flip text-[#1e2939] text-[10px]"></i>
                                     </div>
                                     <p class="text-[#6a7282] text-[12px] leading-4">Easily manage, upgrade, and configure your apps</p>
                                 </div>
@@ -605,7 +692,7 @@
                                 <div class="flex flex-col gap-0.5 flex-1">
                                     <div class="flex items-center gap-1">
                                         <span class="text-[#1e2939] text-[14px] font-semibold">Developer Portal</span>
-                                        <i class="fa-solid fa-chevron-right text-[#1e2939] text-[10px]"></i>
+                                        <i class="fa-solid fa-chevron-right icon-flip text-[#1e2939] text-[10px]"></i>
                                     </div>
                                     <p class="text-[#6a7282] text-[12px] leading-4">Build tools to help thousands of businesses worldwide</p>
                                 </div>
@@ -620,7 +707,7 @@
                         <i class="fa-solid fa-user text-[#0a0a0a] text-xs" aria-hidden="true"></i>
                     </button>
 
-                    <div id="profile-dropdown" role="dialog" aria-label="User profile menu" class="absolute right-0 top-[calc(100%+4px)] z-50 w-[260px] bg-white rounded-[10px] shadow-[0_0_10px_rgba(0,0,0,0.2)] overflow-hidden hidden">
+                    <div id="profile-dropdown" role="dialog" aria-label="User profile menu" class="absolute end-0 top-[calc(100%+4px)] z-50 w-[260px] bg-white rounded-[10px] shadow-[0_0_10px_rgba(0,0,0,0.2)] overflow-hidden hidden">
 
                         <!-- Main panel -->
                         <div id="profile-main" class="flex flex-col">
@@ -637,14 +724,14 @@
                             <!-- Theme -->
                             <button id="btn-profile-theme" class="px-4 py-3 flex items-center gap-3 w-full hover:bg-[#f1f5f9] transition-colors cursor-pointer border-b border-[#e5e7eb]">
                                 <i class="fa-solid fa-circle-half-stroke text-[#444] text-xs w-4 text-center shrink-0" aria-hidden="true"></i>
-                                <span class="text-xs text-[#333] flex-1 text-left">Theme</span>
-                                <i class="fa-solid fa-chevron-right text-[#9ca3af] text-xs" aria-hidden="true"></i>
+                                <span class="text-xs text-[#333] flex-1 text-start">Theme</span>
+                                <i class="fa-solid fa-chevron-right icon-flip text-[#9ca3af] text-xs" aria-hidden="true"></i>
                             </button>
                             <!-- Color scheme -->
                             <button id="btn-profile-color" class="px-4 py-3 flex items-center gap-3 w-full hover:bg-[#f1f5f9] transition-colors cursor-pointer border-b border-[#e5e7eb]">
                                 <i class="fa-solid fa-palette text-[#444] text-xs w-4 text-center shrink-0" aria-hidden="true"></i>
-                                <span class="text-xs text-[#333] flex-1 text-left">Color scheme</span>
-                                <i class="fa-solid fa-chevron-right text-[#9ca3af] text-xs" aria-hidden="true"></i>
+                                <span class="text-xs text-[#333] flex-1 text-start">Color scheme</span>
+                                <i class="fa-solid fa-chevron-right icon-flip text-[#9ca3af] text-xs" aria-hidden="true"></i>
                             </button>
                             <!-- Go to customer portal -->
                             <a href="#" class="px-4 py-3 flex items-center gap-3 hover:bg-[#f1f5f9] transition-colors no-underline border-b border-[#e5e7eb]">
@@ -667,7 +754,7 @@
                         <div id="profile-theme-panel" class="hidden flex-col">
                             <!-- Back header -->
                             <button id="btn-profile-theme-back" class="flex items-center gap-2.5 px-4 py-3 border-b border-[rgba(0,0,0,0.1)] w-full cursor-pointer">
-                                <i class="fa-solid fa-arrow-left text-[#0a0a0a] text-xs" aria-hidden="true"></i>
+                                <i class="fa-solid fa-arrow-left icon-flip text-[#0a0a0a] text-xs" aria-hidden="true"></i>
                                 <span class="text-sm font-medium text-[#0a0a0a]">Back</span>
                             </button>
                             <!-- Theme options -->
@@ -780,7 +867,7 @@
                         <!-- Color scheme panel -->
                         <div id="profile-color-panel" class="hidden flex-col overflow-y-auto max-h-[420px]">
                             <button id="btn-profile-color-back" class="flex items-center gap-2.5 px-4 py-3 border-b border-[rgba(0,0,0,0.1)] w-full shrink-0">
-                                <i class="fa-solid fa-arrow-left text-[#0a0a0a] text-xs" aria-hidden="true"></i>
+                                <i class="fa-solid fa-arrow-left icon-flip text-[#0a0a0a] text-xs" aria-hidden="true"></i>
                                 <span class="text-sm font-medium text-[#0a0a0a]">Back</span>
                             </button>
                             <!-- Sidebar color -->
@@ -876,12 +963,241 @@
             </div>
         </header>
 
-        <main id="main-content" class="flex flex-1 overflow-hidden border-t border-l border-r border-[#d1d5dc] rounded-t-[10px]">
-            <div class="flex-1 bg-white flex flex-col items-center justify-center gap-3 text-center overflow-y-auto">
-                <i class="fa-solid fa-layer-group text-4xl text-gray-200" aria-hidden="true"></i>
-                <p class="text-[#4a5565] text-sm font-medium">E-commerce</p>
-                <p class="text-[#99a1af] text-xs">Content coming soon</p>
-            </div>        </main>
+        <!-- Content body: views panel (inside) + ticket area -->
+        <main id="main-content" class="relative flex flex-1 overflow-hidden border-t border-s border-e border-[#d1d5dc] rounded-t-[10px]">
+            <!-- ── New-ticket form column (Figma "New ticket" 1946-24981) ── -->
+            <section aria-label="New ticket form" class="flex-1 min-w-0 bg-white flex flex-col overflow-y-auto">
+
+                <form class="flex flex-col gap-10 px-5 sm:px-10 pt-8 w-full max-w-[900px] mx-auto" novalidate>
+
+                    <section aria-labelledby="sec-custom">
+                        <div class="flex items-center gap-3 mb-5">
+                            <h2 id="sec-custom" class="text-[15px] font-semibold text-[#1e2939] mb-0 whitespace-nowrap">New Section</h2>
+                            <span class="h-px flex-1 bg-[#e5e7eb]" aria-hidden="true"></span>
+                        </div>
+                        <div class="grid gap-x-6 gap-y-5 sm:grid-cols-2">
+                            <div>
+                                <label for="ct-single-1" class="block text-[13px] font-medium text-[#4a5565] mb-[7px]">Single Line<span class="text-red-500">*</span></label>
+                                <input id="ct-single-1" type="text" required aria-required="true" class="w-full h-10 rounded-[10px] border border-[#d1d5dc] bg-white px-3 text-[14px] font-medium text-[#525252] outline-none transition-colors hover:border-[#9ca3af] focus:border-sky-400">
+                            </div>
+
+                            <div>
+                                <label for="ct-single-2" class="block text-[13px] font-medium text-[#4a5565] mb-[7px]">Single Line<span class="text-red-500">*</span></label>
+                                <input id="ct-single-2" type="text" required aria-required="true" class="w-full h-10 rounded-[10px] border border-[#d1d5dc] bg-white px-3 text-[14px] font-medium text-[#525252] outline-none transition-colors hover:border-[#9ca3af] focus:border-sky-400">
+                            </div>
+
+                            <div>
+                                <label for="ct-email" class="block text-[13px] font-medium text-[#4a5565] mb-[7px]">Email<span class="text-red-500">*</span></label>
+                                <input id="ct-email" type="email" required aria-required="true" class="w-full h-10 rounded-[10px] border border-[#d1d5dc] bg-white px-3 text-[14px] font-medium text-[#525252] outline-none transition-colors hover:border-[#9ca3af] focus:border-sky-400">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section aria-labelledby="sec-props">
+                        <div class="flex items-center gap-3 mb-5">
+                            <h2 id="sec-props" class="text-[15px] font-semibold text-[#1e2939] mb-0 whitespace-nowrap">Ticket Properties</h2>
+                            <span class="h-px flex-1 bg-[#e5e7eb]" aria-hidden="true"></span>
+                        </div>
+                        <div class="grid gap-x-6 gap-y-5 sm:grid-cols-2">
+                            <div class="sm:col-span-2">
+                                <label id="lbl-requester" class="block text-[13px] font-medium text-[#4a5565] mb-[7px]">Requester<span class="text-red-500">*</span></label>
+                                <div class="flex flex-col sm:flex-row gap-2.5">
+                                    <div class="flex-1 min-w-0"><div class="ct-select relative">
+                                    <button type="button" data-toggle="dropdown" data-target="#sel-requester" aria-labelledby="lbl-requester"
+                                            aria-haspopup="listbox" aria-expanded="false" aria-controls="sel-requester"
+                                            class="w-full h-10 flex items-center justify-between gap-2.5 rounded-[10px] border border-[#d1d5dc] bg-white px-3 text-[14px] font-medium text-[#525252] cursor-pointer transition-colors hover:border-[#9ca3af]">
+                                        <span class="ct-value truncate">Select</span>
+                                        <i class="fa-solid fa-chevron-down text-[9px] shrink-0" aria-hidden="true"></i>
+                                    </button>
+                                    <div id="sel-requester" role="listbox" aria-label="Requester options" class="absolute start-0 end-0 top-[calc(100%+4px)] z-50 bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] p-1 max-h-[240px] overflow-y-auto hidden">
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="w-[26px] h-[26px] rounded-full border border-[#d4d4d4] flex items-center justify-center shrink-0"><i class="fa-regular fa-user text-[11px] text-[#9ca3af]" aria-hidden="true"></i></span><span class="ct-opt-label truncate">jdaft@communityfirstc.org</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="w-[26px] h-[26px] rounded-full border border-[#d4d4d4] flex items-center justify-center shrink-0"><i class="fa-regular fa-user text-[11px] text-[#9ca3af]" aria-hidden="true"></i></span><span class="ct-opt-label truncate">info.opzura@gmail.com</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="w-[26px] h-[26px] rounded-full border border-[#d4d4d4] flex items-center justify-center shrink-0"><i class="fa-regular fa-user text-[11px] text-[#9ca3af]" aria-hidden="true"></i></span><span class="ct-opt-label truncate">test@mail.com</span></button>
+                                    </div>
+                                </div></div>
+                                    <button type="button" class="h-10 px-4 shrink-0 rounded-[10px] border border-[#d1d5dc] bg-white text-[13px] font-medium text-[#525252] cursor-pointer hover:bg-[#f1f5f9] transition-colors whitespace-nowrap">Create user</button>
+                                </div>
+                                <label class="mt-2 flex items-center gap-1.5 cursor-pointer w-fit">
+                                    <input type="checkbox" class="w-3.5 h-3.5 shrink-0 accent-[#3da6d7]">
+                                    <span class="text-[12px] font-medium text-[#555]">Add multiple requester</span>
+                                </label>
+                            </div>
+
+                            <div>
+                                <label id="lbl-cc" class="block text-[13px] font-medium text-[#4a5565] mb-[7px]">CC</label>
+                                <div class="ct-select relative">
+                                    <button type="button" data-toggle="dropdown" data-target="#sel-cc" aria-labelledby="lbl-cc"
+                                            aria-haspopup="listbox" aria-expanded="false" aria-controls="sel-cc"
+                                            class="w-full h-10 flex items-center justify-between gap-2.5 rounded-[10px] border border-[#d1d5dc] bg-white px-3 text-[14px] font-medium text-[#525252] cursor-pointer transition-colors hover:border-[#9ca3af]">
+                                        <span class="ct-value truncate">Select</span>
+                                        <i class="fa-solid fa-chevron-down text-[9px] shrink-0" aria-hidden="true"></i>
+                                    </button>
+                                    <div id="sel-cc" role="listbox" aria-label="CC options" class="absolute start-0 end-0 top-[calc(100%+4px)] z-50 bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] p-1 max-h-[240px] overflow-y-auto hidden">
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="w-[26px] h-[26px] rounded-full border border-[#d4d4d4] flex items-center justify-center shrink-0"><i class="fa-regular fa-user text-[11px] text-[#9ca3af]" aria-hidden="true"></i></span><span class="ct-opt-label truncate">jdaft@communityfirstc.org</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="w-[26px] h-[26px] rounded-full border border-[#d4d4d4] flex items-center justify-center shrink-0"><i class="fa-regular fa-user text-[11px] text-[#9ca3af]" aria-hidden="true"></i></span><span class="ct-opt-label truncate">info.opzura@gmail.com</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="w-[26px] h-[26px] rounded-full border border-[#d4d4d4] flex items-center justify-center shrink-0"><i class="fa-regular fa-user text-[11px] text-[#9ca3af]" aria-hidden="true"></i></span><span class="ct-opt-label truncate">test@mail.com</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="ct-subject" class="block text-[13px] font-medium text-[#4a5565] mb-[7px]">Subject<span class="text-red-500">*</span></label>
+                                <input id="ct-subject" type="text" required aria-required="true" class="w-full h-10 rounded-[10px] border border-[#d1d5dc] bg-white px-3 text-[14px] font-medium text-[#525252] outline-none transition-colors hover:border-[#9ca3af] focus:border-sky-400">
+                            </div>
+
+                            <div>
+                                <label id="lbl-priority" class="block text-[13px] font-medium text-[#4a5565] mb-[7px]">Priority</label>
+                                <div class="ct-select relative">
+                                    <button type="button" data-toggle="dropdown" data-target="#sel-priority" aria-labelledby="lbl-priority"
+                                            aria-haspopup="listbox" aria-expanded="false" aria-controls="sel-priority"
+                                            class="w-full h-10 flex items-center justify-between gap-2.5 rounded-[10px] border border-[#d1d5dc] bg-white px-3 text-[14px] font-medium text-[#525252] cursor-pointer transition-colors hover:border-[#9ca3af]">
+                                        <span class="ct-value truncate">Select</span>
+                                        <i class="fa-solid fa-chevron-down text-[9px] shrink-0" aria-hidden="true"></i>
+                                    </button>
+                                    <div id="sel-priority" role="listbox" aria-label="Priority options" class="absolute start-0 end-0 top-[calc(100%+4px)] z-50 bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] p-1 max-h-[240px] overflow-y-auto hidden">
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Emergency</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">High</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Low</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Normal</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label id="lbl-department" class="block text-[13px] font-medium text-[#4a5565] mb-[7px]">Department</label>
+                                <div class="ct-select relative">
+                                    <button type="button" data-toggle="dropdown" data-target="#sel-department" aria-labelledby="lbl-department"
+                                            aria-haspopup="listbox" aria-expanded="false" aria-controls="sel-department"
+                                            class="w-full h-10 flex items-center justify-between gap-2.5 rounded-[10px] border border-[#d1d5dc] bg-white px-3 text-[14px] font-medium text-[#525252] cursor-pointer transition-colors hover:border-[#9ca3af]">
+                                        <span class="ct-value truncate">Select</span>
+                                        <i class="fa-solid fa-chevron-down text-[9px] shrink-0" aria-hidden="true"></i>
+                                    </button>
+                                    <div id="sel-department" role="listbox" aria-label="Department options" class="absolute start-0 end-0 top-[calc(100%+4px)] z-50 bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] p-1 max-h-[240px] overflow-y-auto hidden">
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Account management</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Customization</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Developer</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Finance</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Graphics designer</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label id="lbl-helptopic" class="block text-[13px] font-medium text-[#4a5565] mb-[7px]">Help Topic</label>
+                                <div class="ct-select relative">
+                                    <button type="button" data-toggle="dropdown" data-target="#sel-helptopic" aria-labelledby="lbl-helptopic"
+                                            aria-haspopup="listbox" aria-expanded="false" aria-controls="sel-helptopic"
+                                            class="w-full h-10 flex items-center justify-between gap-2.5 rounded-[10px] border border-[#d1d5dc] bg-white px-3 text-[14px] font-medium text-[#525252] cursor-pointer transition-colors hover:border-[#9ca3af]">
+                                        <span class="ct-value truncate">Select</span>
+                                        <i class="fa-solid fa-chevron-down text-[9px] shrink-0" aria-hidden="true"></i>
+                                    </button>
+                                    <div id="sel-helptopic" role="listbox" aria-label="Help topic options" class="absolute start-0 end-0 top-[calc(100%+4px)] z-50 bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] p-1 max-h-[240px] overflow-y-auto hidden">
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Customization request</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Enhancement request</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Enquiry</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Installation</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Internal requirement</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Questions</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label id="lbl-assigned" class="block text-[13px] font-medium text-[#4a5565] mb-[7px]">Assigned</label>
+                                <div class="ct-select relative">
+                                    <button type="button" data-toggle="dropdown" data-target="#sel-assigned" aria-labelledby="lbl-assigned"
+                                            aria-haspopup="listbox" aria-expanded="false" aria-controls="sel-assigned"
+                                            class="w-full h-10 flex items-center justify-between gap-2.5 rounded-[10px] border border-[#d1d5dc] bg-white px-3 text-[14px] font-medium text-[#525252] cursor-pointer transition-colors hover:border-[#9ca3af]">
+                                        <span class="ct-value truncate">Select</span>
+                                        <i class="fa-solid fa-chevron-down text-[9px] shrink-0" aria-hidden="true"></i>
+                                    </button>
+                                    <div id="sel-assigned" role="listbox" aria-label="Assignee options" class="absolute start-0 end-0 top-[calc(100%+4px)] z-50 bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] p-1 max-h-[240px] overflow-y-auto hidden">
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="w-5 h-5 rounded-full bg-orange-400 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">LM</span><span class="ct-opt-label truncate">Lisa M.</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="w-5 h-5 rounded-full bg-pink-400 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">SP</span><span class="ct-opt-label truncate">Sam Patel</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sm:col-span-2">
+                                <span class="block text-[13px] font-medium text-[#4a5565] mb-[7px]">Description<span class="text-red-500">*</span></span>
+                                <div class="rounded-[10px] border border-[#d1d5dc] overflow-hidden transition-colors focus-within:border-sky-400">
+                                    <div class="flex items-center gap-0.5 flex-wrap bg-[#f8fafc] border-b border-[#e5e7eb] px-2 py-1.5" role="toolbar" aria-label="Formatting">
+                                        <button type="button" aria-label="Bold" class="flex items-center justify-center w-7 h-7 rounded-[6px] border-none bg-transparent text-[#4a5565] cursor-pointer hover:bg-[#e8eef3] transition-colors"><i class="fa-solid fa-bold text-[12px]" aria-hidden="true"></i></button>
+                                        <button type="button" aria-label="Italic" class="flex items-center justify-center w-7 h-7 rounded-[6px] border-none bg-transparent text-[#4a5565] cursor-pointer hover:bg-[#e8eef3] transition-colors"><i class="fa-solid fa-italic text-[12px]" aria-hidden="true"></i></button>
+                                        <button type="button" aria-label="Underline" class="flex items-center justify-center w-7 h-7 rounded-[6px] border-none bg-transparent text-[#4a5565] cursor-pointer hover:bg-[#e8eef3] transition-colors"><i class="fa-solid fa-underline text-[12px]" aria-hidden="true"></i></button>
+                                        <button type="button" aria-label="Strikethrough" class="flex items-center justify-center w-7 h-7 rounded-[6px] border-none bg-transparent text-[#4a5565] cursor-pointer hover:bg-[#e8eef3] transition-colors"><i class="fa-solid fa-strikethrough text-[12px]" aria-hidden="true"></i></button>
+<span class="inline-block w-px h-4 bg-[#d1d5dc] mx-1 shrink-0" aria-hidden="true"></span>
+                                        <button type="button" aria-label="Bulleted list" class="flex items-center justify-center w-7 h-7 rounded-[6px] border-none bg-transparent text-[#4a5565] cursor-pointer hover:bg-[#e8eef3] transition-colors"><i class="fa-solid fa-list-ul text-[12px]" aria-hidden="true"></i></button>
+                                        <button type="button" aria-label="Numbered list" class="flex items-center justify-center w-7 h-7 rounded-[6px] border-none bg-transparent text-[#4a5565] cursor-pointer hover:bg-[#e8eef3] transition-colors"><i class="fa-solid fa-list-ol text-[12px]" aria-hidden="true"></i></button>
+<span class="inline-block w-px h-4 bg-[#d1d5dc] mx-1 shrink-0" aria-hidden="true"></span>
+                                        <button type="button" aria-label="Insert link" class="flex items-center justify-center w-7 h-7 rounded-[6px] border-none bg-transparent text-[#4a5565] cursor-pointer hover:bg-[#e8eef3] transition-colors"><i class="fa-solid fa-link text-[12px]" aria-hidden="true"></i></button>
+                                        <button type="button" aria-label="Insert image" class="flex items-center justify-center w-7 h-7 rounded-[6px] border-none bg-transparent text-[#4a5565] cursor-pointer hover:bg-[#e8eef3] transition-colors"><i class="fa-regular fa-image text-[12px]" aria-hidden="true"></i></button>
+                                        <button type="button" aria-label="Insert table" class="flex items-center justify-center w-7 h-7 rounded-[6px] border-none bg-transparent text-[#4a5565] cursor-pointer hover:bg-[#e8eef3] transition-colors"><i class="fa-solid fa-table text-[12px]" aria-hidden="true"></i></button>
+                                        <button type="button" aria-label="Source code" class="flex items-center justify-center w-7 h-7 rounded-[6px] border-none bg-transparent text-[#4a5565] cursor-pointer hover:bg-[#e8eef3] transition-colors"><i class="fa-solid fa-code text-[12px]" aria-hidden="true"></i></button>
+<span class="inline-block w-px h-4 bg-[#d1d5dc] mx-1 shrink-0" aria-hidden="true"></span>
+                                        <button type="button" aria-label="Emoticons" class="flex items-center justify-center w-7 h-7 rounded-[6px] border-none bg-transparent text-[#4a5565] cursor-pointer hover:bg-[#e8eef3] transition-colors"><i class="fa-regular fa-face-smile text-[12px]" aria-hidden="true"></i></button>
+                                        <button type="button" aria-label="Add media" class="flex items-center justify-center w-7 h-7 rounded-[6px] border-none bg-transparent text-[#4a5565] cursor-pointer hover:bg-[#e8eef3] transition-colors"><i class="fa-solid fa-photo-film text-[12px]" aria-hidden="true"></i></button>
+                                    </div>
+                                    <div contenteditable="true" role="textbox" aria-multiline="true" aria-required="true" aria-label="Ticket description"
+                                         class="min-h-[160px] max-h-[320px] overflow-y-auto bg-white px-3.5 py-2.5 text-[13px] text-[#333] outline-none"></div>
+                                </div>
+                            </div>
+
+                            <div class="sm:col-span-2">
+                                <span class="block text-[13px] font-medium text-[#4a5565] mb-[7px]">Attachments</span>
+                                <input id="ct-file-input" type="file" multiple class="sr-only">
+                                <label for="ct-file-input"
+                                       class="flex flex-col items-center justify-center gap-1.5 rounded-[10px] border border-dashed border-[#c4ccd6] bg-[#fafbfc] py-6 cursor-pointer hover:border-[#3da6d7] hover:bg-[#f4fafd] transition-colors">
+                                    <span id="ct-file-label" class="text-[13px] font-medium text-[#4a5565] px-4 text-center">Click to upload or drag &amp; drop</span>
+                                    <span class="text-[11px] text-[#8e8e8e]">Maximum file size supported is: 20 Mb</span>
+                                </label>
+                            </div>
+
+                            <div>
+                                <label id="lbl-assets" class="block text-[13px] font-medium text-[#4a5565] mb-[7px]">Assets</label>
+                                <div class="flex gap-2.5">
+                                    <div class="flex-1 min-w-0"><div class="ct-select relative">
+                                    <button type="button" data-toggle="dropdown" data-target="#sel-assets" aria-labelledby="lbl-assets"
+                                            aria-haspopup="listbox" aria-expanded="false" aria-controls="sel-assets"
+                                            class="w-full h-10 flex items-center justify-between gap-2.5 rounded-[10px] border border-[#d1d5dc] bg-white px-3 text-[14px] font-medium text-[#525252] cursor-pointer transition-colors hover:border-[#9ca3af]">
+                                        <span class="ct-value truncate">Select</span>
+                                        <i class="fa-solid fa-chevron-down text-[9px] shrink-0" aria-hidden="true"></i>
+                                    </button>
+                                    <div id="sel-assets" role="listbox" aria-label="Asset options" class="absolute start-0 end-0 top-[calc(100%+4px)] z-50 bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] p-1 max-h-[240px] overflow-y-auto hidden">
+                                        <p class="px-2.5 py-1.5 text-[12.5px] text-[#9ca3af] mb-0">No assets found</p>
+                                    </div>
+                                </div></div>
+                                    <button type="button" class="h-10 px-4 shrink-0 rounded-[10px] border border-[#d1d5dc] bg-white text-[13px] font-medium text-[#525252] cursor-pointer hover:bg-[#f1f5f9] transition-colors">Filter</button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label id="lbl-adhoc" class="block text-[13px] font-medium text-[#4a5565] mb-[7px]">AdHoc Approvers</label>
+                                <div class="ct-select relative">
+                                    <button type="button" data-toggle="dropdown" data-target="#sel-adhoc" aria-labelledby="lbl-adhoc"
+                                            aria-haspopup="listbox" aria-expanded="false" aria-controls="sel-adhoc"
+                                            class="w-full h-10 flex items-center justify-between gap-2.5 rounded-[10px] border border-[#d1d5dc] bg-white px-3 text-[14px] font-medium text-[#525252] cursor-pointer transition-colors hover:border-[#9ca3af]">
+                                        <span class="ct-value truncate">Select</span>
+                                        <i class="fa-solid fa-chevron-down text-[9px] shrink-0" aria-hidden="true"></i>
+                                    </button>
+                                    <div id="sel-adhoc" role="listbox" aria-label="AdHoc approver options" class="absolute start-0 end-0 top-[calc(100%+4px)] z-50 bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] p-1 max-h-[240px] overflow-y-auto hidden">
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="w-5 h-5 rounded-full bg-orange-400 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">LM</span><span class="ct-opt-label truncate">Lisa M.</span></button>
+                                        <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="w-5 h-5 rounded-full bg-pink-400 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">SP</span><span class="ct-opt-label truncate">Sam Patel</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Submit — sticky at the bottom of the scrolling form column -->
+                    <div class="sticky bottom-0 z-10 bg-white border-t border-[#e5e7eb] py-3 flex items-center justify-between gap-3">
+                        <p class="text-[12px] text-[#8e8e8e] mb-0"><span class="text-red-500">*</span> Required fields</p>
+                        <button type="submit" class="w-[204px] max-w-full py-2 rounded-[10px] bg-[#3da6d7] text-white text-[14px] font-semibold cursor-pointer border-none hover:bg-[#2d8fb8] transition-colors">Submit</button>
+                    </div>
+                </form>
+            </section>
+
+        </main>
     </div>
 </div>
 
@@ -919,81 +1235,73 @@
     <button class="submenu-item">Integrations</button>
 </div>
 <div id="submenu-nav-dashboard" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../dashboard/v1.html">Dashboard v1</a>
-    <a class="submenu-item" href="../dashboard/v2.html">Dashboard v2</a>
-    <a class="submenu-item" href="../dashboard/v3.html">Dashboard v3</a>
+    <a class="submenu-item" href="../../dashboard/v1.html">Dashboard v1</a>
+    <a class="submenu-item" href="../../dashboard/v2.html">Dashboard v2</a>
+    <a class="submenu-item" href="../../dashboard/v3.html">Dashboard v3</a>
 </div>
 <div id="submenu-nav-layout" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../layout/top-navigation.html">Top Navigation</a>
-    <a class="submenu-item" href="../layout/top-nav-sidebar.html">Top Navigation + Sidebar</a>
-    <a class="submenu-item" href="../layout/boxed.html">Boxed</a>
-    <a class="submenu-item" href="../layout/fixed-sidebar.html">Fixed Sidebar</a>
-    <a class="submenu-item" href="../layout/fixed-sidebar-custom.html">Fixed Sidebar + Custom Area</a>
-    <a class="submenu-item" href="../layout/fixed-navbar.html">Fixed Navbar</a>
-    <a class="submenu-item" href="../layout/fixed-footer.html">Fixed Footer</a>
-    <a class="submenu-item" href="../layout/sidebar-collapsed.html">Collapsed Sidebar</a>
+    <a class="submenu-item" href="../../layout/top-navigation.html">Top Navigation</a>
+    <a class="submenu-item" href="../../layout/top-nav-sidebar.html">Top Navigation + Sidebar</a>
+    <a class="submenu-item" href="../../layout/boxed.html">Boxed</a>
+    <a class="submenu-item" href="../../layout/fixed-sidebar.html">Fixed Sidebar</a>
+    <a class="submenu-item" href="../../layout/fixed-sidebar-custom.html">Fixed Sidebar + Custom Area</a>
+    <a class="submenu-item" href="../../layout/fixed-navbar.html">Fixed Navbar</a>
+    <a class="submenu-item" href="../../layout/fixed-footer.html">Fixed Footer</a>
+    <a class="submenu-item" href="../../layout/sidebar-collapsed.html">Collapsed Sidebar</a>
 </div>
 <div id="submenu-nav-charts" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../charts/chartjs.html">ChartJS</a>
-    <a class="submenu-item" href="../charts/flot.html">Flot</a>
-    <a class="submenu-item" href="../charts/inline.html">Inline</a>
-    <a class="submenu-item" href="../charts/uplot.html">uPlot</a>
+    <a class="submenu-item" href="../../charts/chartjs.html">ChartJS</a>
+    <a class="submenu-item" href="../../charts/flot.html">Flot</a>
+    <a class="submenu-item" href="../../charts/inline.html">Inline</a>
+    <a class="submenu-item" href="../../charts/uplot.html">uPlot</a>
 </div>
 <div id="submenu-nav-ui" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../ui/general.html">General</a>
-    <a class="submenu-item" href="../ui/icons.html">Icons</a>
-    <a class="submenu-item" href="../ui/buttons.html">Buttons</a>
-    <a class="submenu-item" href="../ui/sliders.html">Sliders</a>
-    <a class="submenu-item" href="../ui/modals.html">Modals &amp; Alerts</a>
-    <a class="submenu-item" href="../ui/navbar-tabs.html">Navbar &amp; Tabs</a>
-    <a class="submenu-item" href="../ui/timeline.html">Timeline</a>
-    <a class="submenu-item" href="../ui/ribbons.html">Ribbons</a>
+    <a class="submenu-item" href="../../ui/general.html">General</a>
+    <a class="submenu-item" href="../../ui/icons.html">Icons</a>
+    <a class="submenu-item" href="../../ui/buttons.html">Buttons</a>
+    <a class="submenu-item" href="../../ui/sliders.html">Sliders</a>
+    <a class="submenu-item" href="../../ui/modals.html">Modals &amp; Alerts</a>
+    <a class="submenu-item" href="../../ui/navbar-tabs.html">Navbar &amp; Tabs</a>
+    <a class="submenu-item" href="../../ui/timeline.html">Timeline</a>
+    <a class="submenu-item" href="../../ui/ribbons.html">Ribbons</a>
 </div>
 <div id="submenu-nav-forms" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../forms/general.html">General Elements</a>
-    <a class="submenu-item" href="../forms/advanced.html">Advanced Elements</a>
-    <a class="submenu-item" href="../forms/editors.html">Editors</a>
-    <a class="submenu-item" href="../forms/validation.html">Validation</a>
+    <a class="submenu-item" href="../../forms/general.html">General Elements</a>
+    <a class="submenu-item" href="../../forms/advanced.html">Advanced Elements</a>
+    <a class="submenu-item" href="../../forms/editors.html">Editors</a>
+    <a class="submenu-item" href="../../forms/validation.html">Validation</a>
 </div>
 <div id="submenu-nav-tables" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../tables/simple.html">Simple Tables</a>
-    <a class="submenu-item" href="../tables/datatables.html">DataTables</a>
-    <a class="submenu-item" href="../tables/jsgrid.html">jsGrid</a>
+    <a class="submenu-item" href="../../tables/simple.html">Simple Tables</a>
+    <a class="submenu-item" href="../../tables/datatables.html">DataTables</a>
+    <a class="submenu-item" href="../../tables/jsgrid.html">jsGrid</a>
 </div>
 <div id="submenu-nav-mailbox" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../mailbox/inbox.html">Inbox</a>
-    <a class="submenu-item" href="../mailbox/compose.html">Compose</a>
-    <a class="submenu-item" href="../mailbox/read.html">Read</a>
+    <a class="submenu-item" href="../../mailbox/inbox.html">Inbox</a>
+    <a class="submenu-item" href="../../mailbox/compose.html">Compose</a>
+    <a class="submenu-item" href="../../mailbox/read.html">Read</a>
 </div>
 <div id="submenu-nav-pages" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../pages/ticket-inbox.html">Ticket Inbox</a>
-    <a class="submenu-item" href="../pages/invoice.html">Invoice</a>
-    <a class="submenu-item" href="../pages/profile.html">Profile</a>
-    <a class="submenu-item" href="../pages/ecommerce.html">E-commerce</a>
-    <a class="submenu-item" href="../pages/projects.html">Projects</a>
-    <a class="submenu-item" href="../pages/project-add.html">Project Add</a>
-    <a class="submenu-item" href="../pages/project-edit.html">Project Edit</a>
-    <a class="submenu-item" href="../pages/project-detail.html">Project Detail</a>
-    <a class="submenu-item" href="../pages/contacts.html">Contacts</a>
-    <a class="submenu-item" href="../pages/faq.html">FAQ</a>
-    <a class="submenu-item" href="../pages/contact-us.html">Contact us</a>
+    <a class="submenu-item" href="ticket-inbox.html">Ticket Inbox</a>
+    <a class="submenu-item active" href="create-ticket.html">Create Ticket</a>
+    <a class="submenu-item" href="ticket-timeline.html">Ticket Timeline</a>
 </div>
 <div id="submenu-nav-extras" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../extras/login-v1.html">Login v1</a>
-    <a class="submenu-item" href="../extras/register-v1.html">Register v1</a>
-    <a class="submenu-item" href="../extras/forgot-password-v1.html">Forgot Password v1</a>
-    <a class="submenu-item" href="../extras/login-v2.html">Login v2</a>
-    <a class="submenu-item" href="../extras/register-v2.html">Register v2</a>
-    <a class="submenu-item" href="../extras/forgot-password-v2.html">Forgot Password v2</a>
-    <a class="submenu-item" href="../extras/lockscreen.html">Lockscreen</a>
-    <a class="submenu-item" href="../extras/error-404.html">Error 404</a>
-    <a class="submenu-item" href="../extras/error-500.html">Error 500</a>
-    <a class="submenu-item" href="../extras/blank.html">Blank Page</a>
-    <a class="submenu-item" href="../extras/starter-page.html">Starter Page</a>
+    <a class="submenu-item" href="../../extras/login-v1.html">Login v1</a>
+    <a class="submenu-item" href="../../extras/register-v1.html">Register v1</a>
+    <a class="submenu-item" href="../../extras/forgot-password-v1.html">Forgot Password v1</a>
+    <a class="submenu-item" href="../../extras/login-v2.html">Login v2</a>
+    <a class="submenu-item" href="../../extras/register-v2.html">Register v2</a>
+    <a class="submenu-item" href="../../extras/forgot-password-v2.html">Forgot Password v2</a>
+    <a class="submenu-item" href="../../extras/lockscreen.html">Lockscreen</a>
+    <a class="submenu-item" href="../../extras/error-404.html">Error 404</a>
+    <a class="submenu-item" href="../../extras/error-500.html">Error 500</a>
+    <a class="submenu-item" href="../../extras/blank.html">Blank Page</a>
+    <a class="submenu-item" href="../../extras/starter-page.html">Starter Page</a>
 </div>
 <div id="submenu-nav-search" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../search/simple.html">Simple Search</a>
-    <a class="submenu-item" href="../search/enhanced.html">Enhanced</a>
+    <a class="submenu-item" href="../../search/simple.html">Simple Search</a>
+    <a class="submenu-item" href="../../search/enhanced.html">Enhanced</a>
 </div>
 
 <!-- Footer -->
@@ -1005,7 +1313,7 @@
 <!-- ── Renew flyout panel ────────────────────────────────────────
      position:fixed, top set by JS to bottom of #banner-red
      Drops right below the red alert, overlays everything below it  -->
-<div id="panel-renew" role="dialog" aria-modal="true" aria-label="Subscription renewal" class="fixed left-0 right-0 bottom-0 z-[200] hidden flex flex-col">
+<div id="panel-renew" role="dialog" aria-modal="true" aria-label="Subscription renewal" class="fixed start-0 end-0 bottom-0 z-[200] hidden flex flex-col">
     <!-- Content panel -->
     <div class="w-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.12)] overflow-y-auto max-h-[80vh] md:max-h-none md:overflow-visible">
         <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[rgba(219,219,219,0.5)]">
@@ -1092,7 +1400,7 @@
                 <span class="font-semibold cursor-pointer">Choose a plan</span>
                 to continue using Faveo Helpdesk
             </p>
-            <button data-dismiss="#panel-renew" aria-label="Close renewal panel" class="absolute right-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
+            <button data-dismiss="#panel-renew" aria-label="Close renewal panel" class="absolute end-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
                 <i class="fa-solid fa-xmark text-[10px] text-gray-500" aria-hidden="true"></i>
             </button>
         </div>
@@ -1101,5 +1409,36 @@
     <div data-dismiss="#panel-renew" class="flex-1 bg-black/20"></div>
 </div>
 
+<!-- ── Close action toast ─────────────────────────────────────────── -->
+<script>
+(function () {
+    // ── Custom selects: picking an option sets the trigger label. Menu open/close,
+    //    outside-click and Escape are handled globally by ui.js (data-toggle="dropdown").
+    document.addEventListener('click', function (e) {
+        var opt = e.target.closest('.ct-opt')
+        if (opt) {
+            var wrap = opt.closest('.ct-select')
+            var label = opt.querySelector('.ct-opt-label')
+            wrap.querySelector('.ct-value').textContent = label ? label.textContent : ''
+            wrap.querySelector('[role="listbox"]').classList.add('hidden')
+            var trigger = wrap.querySelector('[data-toggle="dropdown"]')
+            trigger.setAttribute('aria-expanded', 'false')
+            trigger.classList.remove('dropdown-open')
+            return
+        }
+    })
+
+    // ── Attachments: show picked file names in the Choose File label
+    var fileInput = document.getElementById('ct-file-input')
+    fileInput.addEventListener('change', function () {
+        var names = Array.prototype.map.call(fileInput.files, function (f) { return f.name }).join(', ')
+        document.getElementById('ct-file-label').textContent = names || 'Click to upload or drag & drop'
+    })
+
+    // ── Prototype form: block real submission
+    document.querySelector('section[aria-label="New ticket form"] form')
+        .addEventListener('submit', function (e) { e.preventDefault() })
+})()
+</script>
 </body>
 </html>

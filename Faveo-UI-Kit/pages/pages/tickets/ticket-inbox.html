@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Faveo — All Tickets</title>
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <script type="module" src="/src/main.js"></script>
     <!-- Apply theme + nav color before first paint to prevent flash -->
     <script>
         (function () {
@@ -17,8 +18,6 @@
             if (tc && tc !== 'default') document.documentElement.setAttribute('data-topnav-color', tc)
         })()
     </script>
-  <script type="module" crossorigin src="../../assets/main-DnxgPx21.js"></script>
-  <link rel="stylesheet" crossorigin href="../../assets/main-BIPvWU7i.css">
 </head>
 <body class="flex flex-col h-screen overflow-hidden bg-white font-sans">
 
@@ -110,26 +109,26 @@
     <!-- Icon rail (69px, always in flow — content never moves) -->
     <nav id="sidebar" aria-label="Main navigation" class="w-[69px] bg-[#f7f9fa] hidden md:flex flex-col items-center shrink-0 overflow-x-hidden py-2">
         <div class="w-full h-[55px] flex items-center justify-center px-[7px] shrink-0">
-            <img src="../../faveo-logo.png"
+            <img src="/faveo-logo.png"
                  alt="Faveo" class="max-w-[50px] max-h-[31px] object-contain" />
         </div>
         <div class="sidebar-scroll flex flex-col w-full items-center pt-[10px] gap-y-[10px] flex-1 overflow-y-auto">
             <button class="sidebar-nav" data-nav="nav-dashboard" title="Dashboard" aria-label="Dashboard"><i class="fas fa-tachometer-alt" aria-hidden="true"></i></button>
-            <a class="sidebar-nav" href="../widgets.html" title="Widgets" aria-label="Widgets"><i class="fas fa-th" aria-hidden="true"></i></a>
+            <a class="sidebar-nav" href="../../widgets.html" title="Widgets" aria-label="Widgets"><i class="fas fa-th" aria-hidden="true"></i></a>
             <button class="sidebar-nav" data-nav="nav-layout" title="Layout Options" aria-label="Layout Options"><i class="fas fa-copy" aria-hidden="true"></i></button>
             <button class="sidebar-nav" data-nav="nav-charts" title="Charts" aria-label="Charts"><i class="fas fa-chart-pie" aria-hidden="true"></i></button>
             <button class="sidebar-nav" data-nav="nav-ui" title="UI Elements" aria-label="UI Elements"><i class="fas fa-tree" aria-hidden="true"></i></button>
             <button class="sidebar-nav" data-nav="nav-forms" title="Forms" aria-label="Forms"><i class="fas fa-edit" aria-hidden="true"></i></button>
             <button class="sidebar-nav" data-nav="nav-tables" title="Tables" aria-label="Tables"><i class="fas fa-table" aria-hidden="true"></i></button>
-            <a class="sidebar-nav" href="../calendar.html" title="Calendar" aria-label="Calendar"><i class="far fa-calendar-alt" aria-hidden="true"></i></a>
-            <a class="sidebar-nav" href="../gallery.html" title="Gallery" aria-label="Gallery"><i class="far fa-image" aria-hidden="true"></i></a>
-            <a class="sidebar-nav" href="../kanban.html" title="Kanban Board" aria-label="Kanban Board"><i class="fas fa-columns" aria-hidden="true"></i></a>
+            <a class="sidebar-nav" href="../../calendar.html" title="Calendar" aria-label="Calendar"><i class="far fa-calendar-alt" aria-hidden="true"></i></a>
+            <a class="sidebar-nav" href="../../gallery.html" title="Gallery" aria-label="Gallery"><i class="far fa-image" aria-hidden="true"></i></a>
+            <a class="sidebar-nav" href="../../kanban.html" title="Kanban Board" aria-label="Kanban Board"><i class="fas fa-columns" aria-hidden="true"></i></a>
             <button class="sidebar-nav" data-nav="nav-mailbox" title="Mailbox" aria-label="Mailbox"><i class="far fa-envelope" aria-hidden="true"></i></button>
             <button class="sidebar-nav active" data-nav="nav-pages" title="Pages" aria-label="Pages"><i class="fas fa-book" aria-hidden="true"></i></button>
             <button class="sidebar-nav" data-nav="nav-extras" title="Extras" aria-label="Extras"><i class="far fa-plus-square" aria-hidden="true"></i></button>
             <button class="sidebar-nav" data-nav="nav-search" title="Search" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></button>
-            <a class="sidebar-nav" href="../iframe.html" title="Tabbed IFrame Plugin" aria-label="Tabbed IFrame Plugin"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></a>
-            <a class="sidebar-nav" href="../documentation.html" title="Documentation" aria-label="Documentation"><i class="fas fa-file" aria-hidden="true"></i></a>
+            <a class="sidebar-nav" href="../../iframe.html" title="Tabbed IFrame Plugin" aria-label="Tabbed IFrame Plugin"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></a>
+            <a class="sidebar-nav" href="../../documentation.html" title="Documentation" aria-label="Documentation"><i class="fas fa-file" aria-hidden="true"></i></a>
         </div>
         <div class="mt-auto flex flex-col items-center w-full">
             <div class="w-[49px] border-t border-gray-200 my-2"></div>
@@ -142,30 +141,30 @@
     <!-- Expanded sidebar (absolute overlay — same bg as rail, content stays put) -->
     <nav id="sidebar-expanded" aria-label="Expanded navigation" class="absolute start-0 top-0 bottom-0 w-[295px] bg-[#f7f9fa] flex flex-col z-50 py-2 hidden">
         <div class="w-full h-[55px] flex items-center justify-center px-3 shrink-0">
-            <img id="sidebar-logo" src="../../faveo-logo.png"
+            <img id="sidebar-logo" src="/faveo-logo.png"
                  alt="Faveo" class="max-h-[31px] max-w-[55px] object-contain" />
             <!-- Shown only when logo fails to load -->
             <span id="sidebar-logo-fallback" class="hidden text-[#3a4a5a] text-[19px] font-semibold leading-none whitespace-nowrap sidebar-adaptive">Support Center</span>
         </div>
         <div class="sidebar-scroll flex flex-col flex-1 overflow-y-auto px-3 gap-y-[10px] pt-[10px]">
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-dashboard" aria-label="Dashboard"><i class="fas fa-tachometer-alt w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Dashboard</span></button>
-            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../widgets.html" aria-label="Widgets"><i class="fas fa-th w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Widgets</span></a>
+            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../../widgets.html" aria-label="Widgets"><i class="fas fa-th w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Widgets</span></a>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-layout" aria-label="Layout Options"><i class="fas fa-copy w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Layout Options</span></button>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-charts" aria-label="Charts"><i class="fas fa-chart-pie w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Charts</span></button>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-ui" aria-label="UI Elements"><i class="fas fa-tree w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">UI Elements</span></button>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-forms" aria-label="Forms"><i class="fas fa-edit w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Forms</span></button>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-tables" aria-label="Tables"><i class="fas fa-table w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Tables</span></button>
             <p class="px-[10px] pt-1 pb-0 text-[10px] font-semibold uppercase tracking-wider text-[#99a1af]">Examples</p>
-            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../calendar.html" aria-label="Calendar"><i class="far fa-calendar-alt w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Calendar</span></a>
-            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../gallery.html" aria-label="Gallery"><i class="far fa-image w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Gallery</span></a>
-            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../kanban.html" aria-label="Kanban Board"><i class="fas fa-columns w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Kanban Board</span></a>
+            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../../calendar.html" aria-label="Calendar"><i class="far fa-calendar-alt w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Calendar</span></a>
+            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../../gallery.html" aria-label="Gallery"><i class="far fa-image w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Gallery</span></a>
+            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../../kanban.html" aria-label="Kanban Board"><i class="fas fa-columns w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Kanban Board</span></a>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-mailbox" aria-label="Mailbox"><i class="far fa-envelope w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Mailbox</span></button>
             <button class="sidebar-nav active w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-pages" aria-label="Pages"><i class="fas fa-book w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Pages</span></button>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-extras" aria-label="Extras"><i class="far fa-plus-square w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Extras</span></button>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="nav-search" aria-label="Search"><i class="fas fa-search w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Search</span></button>
             <p class="px-[10px] pt-1 pb-0 text-[10px] font-semibold uppercase tracking-wider text-[#99a1af]">Miscellaneous</p>
-            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../iframe.html" aria-label="Tabbed IFrame Plugin"><i class="fas fa-ellipsis-h w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Tabbed IFrame Plugin</span></a>
-            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../documentation.html" aria-label="Documentation"><i class="fas fa-file w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Documentation</span></a>
+            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../../iframe.html" aria-label="Tabbed IFrame Plugin"><i class="fas fa-ellipsis-h w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Tabbed IFrame Plugin</span></a>
+            <a class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" href="../../documentation.html" aria-label="Documentation"><i class="fas fa-file w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Documentation</span></a>
             <p class="px-[10px] pt-1 pb-0 text-[10px] font-semibold uppercase tracking-wider text-[#99a1af]">Labels</p>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" aria-label="Important"><i class="far fa-circle w-[41px] text-center shrink-0 text-[16px] text-[#dc2626]" aria-hidden="true"></i><span class="whitespace-nowrap">Important</span></button>
             <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" aria-label="Warning"><i class="far fa-circle w-[41px] text-center shrink-0 text-[16px] text-[#d97706]" aria-hidden="true"></i><span class="whitespace-nowrap">Warning</span></button>
@@ -501,84 +500,84 @@
                 <!-- Language dropdown -->
                 <div class="relative shrink-0">
                     <button id="topnav-language-trigger" data-toggle="dropdown" data-target="#topnav-language-dropdown" aria-haspopup="menu" aria-expanded="false" aria-controls="topnav-language-dropdown" aria-label="Change language (currently English)" class="flex items-center justify-center w-8 h-8 rounded-[6px] hover:bg-[#f1f5f9] transition-colors cursor-pointer topnav-adaptive">
-                        <img id="topnav-language-flag" src="../../flags/en-us.png" alt="Current language" class="w-6 h-4 rounded-[3px] object-cover shrink-0" />
+                        <img id="topnav-language-flag" src="/flags/en-us.png" alt="Current language" class="w-6 h-4 rounded-[3px] object-cover shrink-0" />
                     </button>
                     <div id="topnav-language-dropdown" role="menu" aria-label="Language options" class="absolute end-0 top-[calc(100%+4px)] z-50 w-[314px] max-h-[420px] overflow-y-auto bg-white rounded-[10px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] py-1 hidden">
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="ar" data-dir="rtl" data-short="Arabic" data-flag="/flags/arabic.png">
-                            <img src="../../flags/arabic.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/arabic.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Arabic (العربية)</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="bs" data-dir="ltr" data-short="Bosnian" data-flag="/flags/bosnian.png">
-                            <img src="../../flags/bosnian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/bosnian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Bosnian (bosanski)</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="zh-Hans" data-dir="ltr" data-short="Chinese (Simplified)" data-flag="/flags/chinese.png">
-                            <img src="../../flags/chinese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/chinese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Chinese (中文 [Simplified])</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="zh-Hant" data-dir="ltr" data-short="Chinese (Traditional)" data-flag="/flags/chinese.png">
-                            <img src="../../flags/chinese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/chinese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Chinese (中文 [Traditional])</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="nl" data-dir="ltr" data-short="Dutch" data-flag="/flags/dutch.png">
-                            <img src="../../flags/dutch.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/dutch.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Dutch (Vlaams)</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-[#f1f5f9] transition-colors" data-lang="en-US" data-dir="ltr" data-short="English" data-flag="/flags/en-us.png">
-                            <img src="../../flags/en-us.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/en-us.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">English - United States (English)</span>
                             <i class="fa-solid fa-check text-[10px] text-[#3da6d7] shrink-0" aria-hidden="true"></i>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="en-GB" data-dir="ltr" data-short="English (UK)" data-flag="/flags/en-gb.png">
-                            <img src="../../flags/en-gb.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/en-gb.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">English - United Kingdom (English)</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="fr" data-dir="ltr" data-short="French" data-flag="/flags/french.png">
-                            <img src="../../flags/french.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/french.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">French (français)</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="de" data-dir="ltr" data-short="German" data-flag="/flags/german.png">
-                            <img src="../../flags/german.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/german.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">German (Deutsch)</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="id" data-dir="ltr" data-short="Indonesian" data-flag="/flags/indonesian.png">
-                            <img src="../../flags/indonesian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/indonesian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Indonesian (Bahasa Indonesia)</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="it" data-dir="ltr" data-short="Italian" data-flag="/flags/italian.png">
-                            <img src="../../flags/italian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/italian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Italian (Italiano)</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="ko" data-dir="ltr" data-short="Korean" data-flag="/flags/korean.png">
-                            <img src="../../flags/korean.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/korean.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Korean (한국어)</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="mt" data-dir="ltr" data-short="Maltese" data-flag="/flags/maltese.png">
-                            <img src="../../flags/maltese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/maltese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Maltese (Malti)</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="no" data-dir="ltr" data-short="Norwegian" data-flag="/flags/norwegian.png">
-                            <img src="../../flags/norwegian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/norwegian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Norwegian (Norsk)</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="pt" data-dir="ltr" data-short="Portuguese" data-flag="/flags/portuguese.png">
-                            <img src="../../flags/portuguese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/portuguese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Portuguese (Português)</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="ru" data-dir="ltr" data-short="Russian" data-flag="/flags/russian.png">
-                            <img src="../../flags/russian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/russian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Russian (Русский)</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="es" data-dir="ltr" data-short="Spanish" data-flag="/flags/spanish.png">
-                            <img src="../../flags/spanish.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/spanish.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Spanish (Español)</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="tr" data-dir="ltr" data-short="Turkish" data-flag="/flags/turkish.png">
-                            <img src="../../flags/turkish.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/turkish.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Turkish (Türkçe)</span>
                         </button>
                         <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="vi" data-dir="ltr" data-short="Vietnamese" data-flag="/flags/vietnamese.png">
-                            <img src="../../flags/vietnamese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <img src="/flags/vietnamese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
                             <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Vietnamese (Tiếng Việt)</span>
                         </button>
                     </div>
@@ -1961,82 +1960,73 @@
     <button class="submenu-item">Integrations</button>
 </div>
 <div id="submenu-nav-dashboard" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../dashboard/v1.html">Dashboard v1</a>
-    <a class="submenu-item" href="../dashboard/v2.html">Dashboard v2</a>
-    <a class="submenu-item" href="../dashboard/v3.html">Dashboard v3</a>
+    <a class="submenu-item" href="../../dashboard/v1.html">Dashboard v1</a>
+    <a class="submenu-item" href="../../dashboard/v2.html">Dashboard v2</a>
+    <a class="submenu-item" href="../../dashboard/v3.html">Dashboard v3</a>
 </div>
 <div id="submenu-nav-layout" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../layout/top-navigation.html">Top Navigation</a>
-    <a class="submenu-item" href="../layout/top-nav-sidebar.html">Top Navigation + Sidebar</a>
-    <a class="submenu-item" href="../layout/boxed.html">Boxed</a>
-    <a class="submenu-item" href="../layout/fixed-sidebar.html">Fixed Sidebar</a>
-    <a class="submenu-item" href="../layout/fixed-sidebar-custom.html">Fixed Sidebar + Custom Area</a>
-    <a class="submenu-item" href="../layout/fixed-navbar.html">Fixed Navbar</a>
-    <a class="submenu-item" href="../layout/fixed-footer.html">Fixed Footer</a>
-    <a class="submenu-item" href="../layout/sidebar-collapsed.html">Collapsed Sidebar</a>
+    <a class="submenu-item" href="../../layout/top-navigation.html">Top Navigation</a>
+    <a class="submenu-item" href="../../layout/top-nav-sidebar.html">Top Navigation + Sidebar</a>
+    <a class="submenu-item" href="../../layout/boxed.html">Boxed</a>
+    <a class="submenu-item" href="../../layout/fixed-sidebar.html">Fixed Sidebar</a>
+    <a class="submenu-item" href="../../layout/fixed-sidebar-custom.html">Fixed Sidebar + Custom Area</a>
+    <a class="submenu-item" href="../../layout/fixed-navbar.html">Fixed Navbar</a>
+    <a class="submenu-item" href="../../layout/fixed-footer.html">Fixed Footer</a>
+    <a class="submenu-item" href="../../layout/sidebar-collapsed.html">Collapsed Sidebar</a>
 </div>
 <div id="submenu-nav-charts" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../charts/chartjs.html">ChartJS</a>
-    <a class="submenu-item" href="../charts/flot.html">Flot</a>
-    <a class="submenu-item" href="../charts/inline.html">Inline</a>
-    <a class="submenu-item" href="../charts/uplot.html">uPlot</a>
+    <a class="submenu-item" href="../../charts/chartjs.html">ChartJS</a>
+    <a class="submenu-item" href="../../charts/flot.html">Flot</a>
+    <a class="submenu-item" href="../../charts/inline.html">Inline</a>
+    <a class="submenu-item" href="../../charts/uplot.html">uPlot</a>
 </div>
 <div id="submenu-nav-ui" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../ui/general.html">General</a>
-    <a class="submenu-item" href="../ui/icons.html">Icons</a>
-    <a class="submenu-item" href="../ui/buttons.html">Buttons</a>
-    <a class="submenu-item" href="../ui/sliders.html">Sliders</a>
-    <a class="submenu-item" href="../ui/modals.html">Modals &amp; Alerts</a>
-    <a class="submenu-item" href="../ui/navbar-tabs.html">Navbar &amp; Tabs</a>
-    <a class="submenu-item" href="../ui/timeline.html">Timeline</a>
-    <a class="submenu-item" href="../ui/ribbons.html">Ribbons</a>
+    <a class="submenu-item" href="../../ui/general.html">General</a>
+    <a class="submenu-item" href="../../ui/icons.html">Icons</a>
+    <a class="submenu-item" href="../../ui/buttons.html">Buttons</a>
+    <a class="submenu-item" href="../../ui/sliders.html">Sliders</a>
+    <a class="submenu-item" href="../../ui/modals.html">Modals &amp; Alerts</a>
+    <a class="submenu-item" href="../../ui/navbar-tabs.html">Navbar &amp; Tabs</a>
+    <a class="submenu-item" href="../../ui/timeline.html">Timeline</a>
+    <a class="submenu-item" href="../../ui/ribbons.html">Ribbons</a>
 </div>
 <div id="submenu-nav-forms" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../forms/general.html">General Elements</a>
-    <a class="submenu-item" href="../forms/advanced.html">Advanced Elements</a>
-    <a class="submenu-item" href="../forms/editors.html">Editors</a>
-    <a class="submenu-item" href="../forms/validation.html">Validation</a>
+    <a class="submenu-item" href="../../forms/general.html">General Elements</a>
+    <a class="submenu-item" href="../../forms/advanced.html">Advanced Elements</a>
+    <a class="submenu-item" href="../../forms/editors.html">Editors</a>
+    <a class="submenu-item" href="../../forms/validation.html">Validation</a>
 </div>
 <div id="submenu-nav-tables" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../tables/simple.html">Simple Tables</a>
-    <a class="submenu-item" href="../tables/datatables.html">DataTables</a>
-    <a class="submenu-item" href="../tables/jsgrid.html">jsGrid</a>
+    <a class="submenu-item" href="../../tables/simple.html">Simple Tables</a>
+    <a class="submenu-item" href="../../tables/datatables.html">DataTables</a>
+    <a class="submenu-item" href="../../tables/jsgrid.html">jsGrid</a>
 </div>
 <div id="submenu-nav-mailbox" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../mailbox/inbox.html">Inbox</a>
-    <a class="submenu-item" href="../mailbox/compose.html">Compose</a>
-    <a class="submenu-item" href="../mailbox/read.html">Read</a>
+    <a class="submenu-item" href="../../mailbox/inbox.html">Inbox</a>
+    <a class="submenu-item" href="../../mailbox/compose.html">Compose</a>
+    <a class="submenu-item" href="../../mailbox/read.html">Read</a>
 </div>
 <div id="submenu-nav-pages" class="nav-submenu-panel hidden">
     <a class="submenu-item active" href="ticket-inbox.html">Ticket Inbox</a>
+    <a class="submenu-item" href="create-ticket.html">Create Ticket</a>
     <a class="submenu-item" href="ticket-timeline.html">Ticket Timeline</a>
-    <a class="submenu-item" href="../pages/invoice.html">Invoice</a>
-    <a class="submenu-item" href="../pages/profile.html">Profile</a>
-    <a class="submenu-item" href="../pages/ecommerce.html">E-commerce</a>
-    <a class="submenu-item" href="../pages/projects.html">Projects</a>
-    <a class="submenu-item" href="../pages/project-add.html">Project Add</a>
-    <a class="submenu-item" href="../pages/project-edit.html">Project Edit</a>
-    <a class="submenu-item" href="../pages/project-detail.html">Project Detail</a>
-    <a class="submenu-item" href="../pages/contacts.html">Contacts</a>
-    <a class="submenu-item" href="../pages/faq.html">FAQ</a>
-    <a class="submenu-item" href="../pages/contact-us.html">Contact us</a>
 </div>
 <div id="submenu-nav-extras" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../extras/login-v1.html">Login v1</a>
-    <a class="submenu-item" href="../extras/register-v1.html">Register v1</a>
-    <a class="submenu-item" href="../extras/forgot-password-v1.html">Forgot Password v1</a>
-    <a class="submenu-item" href="../extras/login-v2.html">Login v2</a>
-    <a class="submenu-item" href="../extras/register-v2.html">Register v2</a>
-    <a class="submenu-item" href="../extras/forgot-password-v2.html">Forgot Password v2</a>
-    <a class="submenu-item" href="../extras/lockscreen.html">Lockscreen</a>
-    <a class="submenu-item" href="../extras/error-404.html">Error 404</a>
-    <a class="submenu-item" href="../extras/error-500.html">Error 500</a>
-    <a class="submenu-item" href="../extras/blank.html">Blank Page</a>
-    <a class="submenu-item" href="../extras/starter-page.html">Starter Page</a>
+    <a class="submenu-item" href="../../extras/login-v1.html">Login v1</a>
+    <a class="submenu-item" href="../../extras/register-v1.html">Register v1</a>
+    <a class="submenu-item" href="../../extras/forgot-password-v1.html">Forgot Password v1</a>
+    <a class="submenu-item" href="../../extras/login-v2.html">Login v2</a>
+    <a class="submenu-item" href="../../extras/register-v2.html">Register v2</a>
+    <a class="submenu-item" href="../../extras/forgot-password-v2.html">Forgot Password v2</a>
+    <a class="submenu-item" href="../../extras/lockscreen.html">Lockscreen</a>
+    <a class="submenu-item" href="../../extras/error-404.html">Error 404</a>
+    <a class="submenu-item" href="../../extras/error-500.html">Error 500</a>
+    <a class="submenu-item" href="../../extras/blank.html">Blank Page</a>
+    <a class="submenu-item" href="../../extras/starter-page.html">Starter Page</a>
 </div>
 <div id="submenu-nav-search" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../search/simple.html">Simple Search</a>
-    <a class="submenu-item" href="../search/enhanced.html">Enhanced</a>
+    <a class="submenu-item" href="../../search/simple.html">Simple Search</a>
+    <a class="submenu-item" href="../../search/enhanced.html">Enhanced</a>
 </div>
 
 <!-- Footer -->
