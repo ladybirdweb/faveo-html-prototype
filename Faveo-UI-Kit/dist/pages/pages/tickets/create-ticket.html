@@ -17,8 +17,8 @@
             if (tc && tc !== 'default') document.documentElement.setAttribute('data-topnav-color', tc)
         })()
     </script>
-  <script type="module" crossorigin src="../../../assets/main-CD0sMl49.js"></script>
-  <link rel="stylesheet" crossorigin href="../../../assets/main-CNEiYdj4.css">
+  <script type="module" crossorigin src="../../../assets/main-BkmxZ63Y.js"></script>
+  <link rel="stylesheet" crossorigin href="../../../assets/main-DiuFvdOV.css">
 </head>
 <body class="flex flex-col h-screen overflow-hidden bg-white font-sans">
 
@@ -1191,12 +1191,114 @@
                     </section>
 
                     <!-- Submit — sticky at the bottom of the scrolling form column -->
-                    <div class="sticky bottom-0 z-10 bg-white border-t border-[#e5e7eb] py-3 flex items-center justify-between gap-3">
+                    <div class="sticky bottom-0 z-10 bg-white shadow-[0_-4px_12px_rgba(0,0,0,0.08)] py-3 flex items-center justify-between gap-3">
                         <p class="text-[12px] text-[#8e8e8e] mb-0"><span class="text-red-500">*</span> Required fields</p>
                         <button type="submit" class="w-[204px] max-w-full py-2 rounded-[10px] bg-[#3da6d7] text-white text-[14px] font-semibold cursor-pointer border-none hover:bg-[#2d8fb8] transition-colors">Submit</button>
                     </div>
                 </form>
             </section>
+
+            <!-- ── Create-ticket assist panel (templates / contact / recent timeline) ── -->
+            <aside id="panel-create-aside" data-persistent aria-label="Ticket assist panel"
+                   class="flex flex-col fixed lg:static inset-0 lg:inset-auto z-40 lg:z-auto w-full max-w-[360px] lg:max-w-none lg:w-[300px] shrink-0 border-s border-[#d1d5dc] overflow-y-auto bg-white">
+
+                <!-- Mobile-only header (desktop closes via the icon-strip toggle) -->
+                <div class="lg:hidden flex items-center justify-between px-3 py-3 border-b border-[#d1d5dc] shrink-0">
+                    <span class="text-[13px] font-bold text-[#374151]">Ticket assist</span>
+                    <button data-toggle="dropdown" data-target="#panel-create-aside" aria-label="Close panel" class="flex items-center justify-center w-7 h-7 rounded-full text-[#6a7282] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent transition-colors">
+                        <i class="fa-solid fa-xmark text-[15px]" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <!-- Accordion: Ticket Templates -->
+                <div class="border-b border-[#d1d5dc]">
+                    <button data-acc-toggle data-acc-target="#ctsec-templates"
+                            class="w-full flex items-center justify-between px-3 py-3 cursor-pointer bg-transparent border-none text-start" aria-expanded="true">
+                        <div class="flex items-center gap-1.5 min-w-0">
+                            <i class="fa-solid fa-clipboard-list text-[11px] text-[#6a7282] shrink-0" aria-hidden="true"></i>
+                            <span class="text-[13px] font-bold text-[#374151] truncate">Ticket Templates</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-up text-[9px] text-[#6a7282] acc-chevron shrink-0" aria-hidden="true"></i>
+                    </button>
+                    <div id="ctsec-templates" class="px-3 pt-1 pb-4">
+                        <div class="ct-select relative">
+                            <button type="button" data-toggle="dropdown" data-target="#sel-ct-template" aria-haspopup="listbox" aria-expanded="false" aria-controls="sel-ct-template"
+                                    class="w-full h-9 flex items-center justify-between gap-2.5 rounded-[8px] border border-[#d1d5dc] bg-white px-3 text-[13px] font-medium text-[#9ca3af] cursor-pointer transition-colors hover:border-[#9ca3af]">
+                                <span class="ct-value truncate">Pick a template</span>
+                                <i class="fa-solid fa-chevron-down text-[9px] shrink-0 text-[#6a7282]" aria-hidden="true"></i>
+                            </button>
+                            <div id="sel-ct-template" role="listbox" aria-label="Ticket templates" class="absolute start-0 end-0 top-[calc(100%+4px)] z-50 bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] p-1 max-h-[240px] overflow-y-auto hidden">
+                                <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Initiate a Refund</span></button>
+                                <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Password Reset Request</span></button>
+                                <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Hardware Replacement</span></button>
+                            </div>
+                        </div>
+                        <p class="text-[12px] text-[#6a7282] mt-3 mb-1.5">Recently used:</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-[13px] font-medium text-[#3da6d7] no-underline hover:underline">
+                            <i class="fa-regular fa-file-lines text-[12px]" aria-hidden="true"></i>
+                            Initiate a Refund
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Accordion: Contact info -->
+                <div class="border-b border-[#d1d5dc]">
+                    <button data-acc-toggle data-acc-target="#ctsec-contact"
+                            class="w-full flex items-center justify-between px-3 py-3 cursor-pointer bg-transparent border-none text-start" aria-expanded="true">
+                        <div class="flex items-center gap-1.5 min-w-0">
+                            <i class="fa-solid fa-user text-[11px] text-[#6a7282] shrink-0" aria-hidden="true"></i>
+                            <span class="text-[13px] font-bold text-[#374151] truncate">Contact info</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-up text-[9px] text-[#6a7282] acc-chevron shrink-0" aria-hidden="true"></i>
+                    </button>
+                    <div id="ctsec-contact" class="px-3 pt-1 pb-6">
+                        <!-- Empty state until a requester is picked -->
+                        <div class="flex flex-col items-center text-center py-6">
+                            <i class="fa-regular fa-circle-user text-[64px] text-[#e5e7eb] mb-4" aria-hidden="true"></i>
+                            <p class="text-[14px] font-bold text-[#374151] mb-1">Pick a contact</p>
+                            <p class="text-[12px] text-[#9ca3af] mb-0 max-w-[220px]">Their details and recent conversations will appear here</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion: Recent timeline -->
+                <div class="border-b border-[#d1d5dc]">
+                    <button data-acc-toggle data-acc-target="#ctsec-timeline"
+                            class="w-full flex items-center justify-between px-3 py-3 cursor-pointer bg-transparent border-none text-start" aria-expanded="true">
+                        <div class="flex items-center gap-1.5 min-w-0">
+                            <i class="fa-solid fa-ticket text-[11px] text-[#6a7282] shrink-0" aria-hidden="true"></i>
+                            <span class="text-[13px] font-bold text-[#374151] truncate">Recent timeline</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-up text-[9px] text-[#6a7282] acc-chevron shrink-0" aria-hidden="true"></i>
+                    </button>
+                    <div id="ctsec-timeline" class="px-3 pt-1 pb-6">
+                        <p class="text-[13px] text-[#4a5565] mb-0">No conversations. It's pretty quiet here!</p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ── Icon strip (40px, desktop only — mobile uses the full-screen overlay) ── -->
+            <div id="ct-icon-strip" class="hidden lg:flex flex-col w-10 shrink-0 border-s border-[#d1d5dc] bg-white py-3 px-1 gap-0.5">
+                <button data-toggle="dropdown" data-target="#panel-create-aside"
+                        data-icon-open="fa-outdent" data-icon-closed="fa-indent"
+                        aria-expanded="true" aria-controls="panel-create-aside"
+                        class="w-full aspect-square flex items-center justify-center text-[#6a7282] hover:bg-[#f1f5f9] hover:text-[#374151] transition-colors cursor-pointer bg-transparent border-none rounded-[6px] dropdown-open" title="Toggle panel">
+                    <i class="fa-solid fa-outdent text-sm" aria-hidden="true"></i>
+                </button>
+                <div class="h-px bg-[#e5e7eb] my-1.5 mx-1" aria-hidden="true"></div>
+                <button data-open-ct-acc="#ctsec-templates"
+                        class="w-full aspect-square flex items-center justify-center text-[#6a7282] hover:bg-[#f1f5f9] hover:text-[#374151] transition-colors cursor-pointer bg-transparent border-none rounded-[6px]" title="Ticket Templates">
+                    <i class="fa-solid fa-clipboard-list text-sm" aria-hidden="true"></i>
+                </button>
+                <button data-open-ct-acc="#ctsec-contact"
+                        class="w-full aspect-square flex items-center justify-center text-[#6a7282] hover:bg-[#f1f5f9] hover:text-[#374151] transition-colors cursor-pointer bg-transparent border-none rounded-[6px]" title="Contact info">
+                    <i class="fa-solid fa-user text-sm" aria-hidden="true"></i>
+                </button>
+                <button data-open-ct-acc="#ctsec-timeline"
+                        class="w-full aspect-square flex items-center justify-center text-[#6a7282] hover:bg-[#f1f5f9] hover:text-[#374151] transition-colors cursor-pointer bg-transparent border-none rounded-[6px]" title="Recent timeline">
+                    <i class="fa-solid fa-ticket text-sm" aria-hidden="true"></i>
+                </button>
+            </div>
 
         </main>
     </div>
@@ -1439,6 +1541,56 @@
     // ── Prototype form: block real submission
     document.querySelector('section[aria-label="New ticket form"] form')
         .addEventListener('submit', function (e) { e.preventDefault() })
+
+    // ── Assist panel: starts closed on mobile (renders as a full-screen overlay
+    //    below the `lg` breakpoint — see #panel-create-aside classes); the strip
+    //    toggle flips to its closed state (fa-indent), same as ticket-timeline
+    if (window.innerWidth < 1024) {
+        var createAside = document.getElementById('panel-create-aside')
+        if (createAside) createAside.classList.add('hidden')
+
+        var asideToggle = document.querySelector('[data-toggle="dropdown"][data-target="#panel-create-aside"][data-icon-open]')
+        if (asideToggle) {
+            asideToggle.classList.remove('dropdown-open')
+            asideToggle.setAttribute('aria-expanded', 'false')
+            var asideIcon = asideToggle.querySelector('i')
+            if (asideIcon) {
+                asideIcon.classList.remove(asideToggle.getAttribute('data-icon-open'))
+                asideIcon.classList.add(asideToggle.getAttribute('data-icon-closed'))
+            }
+        }
+    }
+
+    // ── Assist panel icon strip: opens the panel (if collapsed) + expands and
+    //    scrolls to the clicked section (same pattern as ticket-timeline.html)
+    var ctPanel = document.getElementById('panel-create-aside')
+    var ctStrip = document.getElementById('ct-icon-strip')
+    if (ctPanel && ctStrip) {
+        ctStrip.addEventListener('click', function (e) {
+            var btn = e.target.closest('[data-open-ct-acc]')
+            if (!btn) return
+            var accId = btn.getAttribute('data-open-ct-acc')
+
+            if (ctPanel.classList.contains('hidden')) {
+                var toggleBtn = document.querySelector('[data-toggle="dropdown"][data-target="#panel-create-aside"][data-icon-open]')
+                if (toggleBtn) toggleBtn.click()
+            }
+
+            setTimeout(function () {
+                var accBody = document.querySelector(accId)
+                var accBtn  = document.querySelector('[data-acc-target="' + accId + '"]')
+                if (accBody && accBody.classList.contains('hidden') && accBtn) {
+                    accBtn.click()
+                }
+                if (accBtn) {
+                    var targetTop = accBtn.getBoundingClientRect().top
+                        - ctPanel.getBoundingClientRect().top
+                        + ctPanel.scrollTop
+                    ctPanel.scrollTo({ top: targetTop, behavior: 'smooth' })
+                }
+            }, 50)
+        })
+    }
 })()
 </script>
 </body>

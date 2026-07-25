@@ -1018,7 +1018,8 @@
                                     <button type="button" class="h-10 px-4 shrink-0 rounded-[10px] border border-[#d1d5dc] bg-white text-[13px] font-medium text-[#525252] cursor-pointer hover:bg-[#f1f5f9] transition-colors whitespace-nowrap">Create user</button>
                                 </div>
                                 <label class="mt-2 flex items-center gap-1.5 cursor-pointer w-fit">
-                                    <input type="checkbox" class="w-3.5 h-3.5 shrink-0 accent-[#3da6d7]">
+                                    <!-- custom-drawn: accent-color with light brand blue gets a black glyph from Chrome -->
+                                    <input type="checkbox" class="w-3.5 h-3.5 shrink-0 cursor-pointer appearance-none rounded-[3px] border border-[#d1d5dc] bg-white bg-center bg-no-repeat transition-colors checked:border-[#3da6d7] checked:bg-[#3da6d7] checked:bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2016%2016%22%20fill=%22white%22%3E%3Cpath%20d=%22M12.7%205.1a1%201%200%200%201%200%201.4l-4.8%204.8a1%201%200%200%201-1.4%200L4.1%208.9a1%201%200%201%201%201.4-1.4l1.7%201.7%204.1-4.1a1%201%200%200%201%201.4%200z%22/%3E%3C/svg%3E')]">
                                     <span class="text-[12px] font-medium text-[#555]">Add multiple requester</span>
                                 </label>
                             </div>
@@ -1146,11 +1147,13 @@
                             <div class="sm:col-span-2">
                                 <span class="block text-[13px] font-medium text-[#4a5565] mb-[7px]">Attachments</span>
                                 <input id="ct-file-input" type="file" multiple class="sr-only">
+                                <!-- compact field-height picker — same size as the other fields -->
                                 <label for="ct-file-input"
-                                       class="flex flex-col items-center justify-center gap-1.5 rounded-[10px] border border-dashed border-[#c4ccd6] bg-[#fafbfc] py-6 cursor-pointer hover:border-[#3da6d7] hover:bg-[#f4fafd] transition-colors">
-                                    <span id="ct-file-label" class="text-[13px] font-medium text-[#4a5565] px-4 text-center">Click to upload or drag &amp; drop</span>
-                                    <span class="text-[11px] text-[#8e8e8e]">Maximum file size supported is: 20 Mb</span>
+                                       class="flex items-center justify-center gap-1.5 rounded-[6px] border border-dashed border-[#d1d5dc] bg-[#f8fafc] px-3 py-2 text-[13px] font-medium text-[#4a5565] cursor-pointer hover:bg-[#f1f5f9] transition-colors">
+                                    <i class="fa-regular fa-file" aria-hidden="true"></i>
+                                    <span id="ct-file-label" class="truncate">Choose File</span>
                                 </label>
+                                <p class="mt-1 mb-0 text-[12px] italic text-[#6a7282]">Maximum file size supported is: 20 Mb</p>
                             </div>
 
                             <div>
@@ -1190,12 +1193,108 @@
                     </section>
 
                     <!-- Submit — sticky at the bottom of the scrolling form column -->
-                    <div class="sticky bottom-0 z-10 bg-white border-t border-[#e5e7eb] py-3 flex items-center justify-between gap-3">
-                        <p class="text-[12px] text-[#8e8e8e] mb-0"><span class="text-red-500">*</span> Required fields</p>
-                        <button type="submit" class="w-[204px] max-w-full py-2 rounded-[10px] bg-[#3da6d7] text-white text-[14px] font-semibold cursor-pointer border-none hover:bg-[#2d8fb8] transition-colors">Submit</button>
+                    <div class="sticky bottom-0 z-10 bg-white py-3 flex items-center justify-end gap-3">
+                        <button type="submit" class="inline-flex items-center justify-center gap-1.5 w-[204px] max-w-full py-2 rounded-[10px] bg-[#3da6d7] text-white text-[14px] font-semibold cursor-pointer border-none hover:bg-[#2d8fb8] transition-colors"><i class="fa fa-save" aria-hidden="true"></i> Submit</button>
                     </div>
                 </form>
             </section>
+
+            <!-- ── Create-ticket assist panel (templates / contact / recent timeline) ── -->
+            <aside id="panel-create-aside" data-persistent aria-label="Ticket assist panel"
+                   class="flex flex-col fixed lg:static inset-0 lg:inset-auto z-40 lg:z-auto w-full max-w-[360px] lg:max-w-none lg:w-[300px] shrink-0 border-s border-[#d1d5dc] overflow-y-auto bg-white">
+
+                <!-- Mobile-only header (desktop closes via the icon-strip toggle) -->
+                <div class="lg:hidden flex items-center justify-between px-3 py-3 border-b border-[#d1d5dc] shrink-0">
+                    <span class="text-[13px] font-bold text-[#374151]">Ticket assist</span>
+                    <button data-toggle="dropdown" data-target="#panel-create-aside" aria-label="Close panel" class="flex items-center justify-center w-7 h-7 rounded-full text-[#6a7282] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent transition-colors">
+                        <i class="fa-solid fa-xmark text-[15px]" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <!-- Accordion: Forms (multi-form picker) -->
+                <div class="border-b border-[#d1d5dc]">
+                    <button data-acc-toggle data-acc-target="#ctsec-forms"
+                            class="w-full flex items-center justify-between px-3 py-3 cursor-pointer bg-transparent border-none text-start" aria-expanded="true">
+                        <div class="flex items-center gap-1.5 min-w-0">
+                            <i class="fa-solid fa-file-lines text-[11px] text-[#6a7282] shrink-0" aria-hidden="true"></i>
+                            <span class="text-[13px] font-bold text-[#374151] truncate">Forms</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-up text-[9px] text-[#6a7282] acc-chevron shrink-0" aria-hidden="true"></i>
+                    </button>
+                    <div id="ctsec-forms" class="px-3 pt-1 pb-4">
+                        <div class="ct-select relative">
+                            <button type="button" data-toggle="dropdown" data-target="#sel-ct-form" aria-haspopup="listbox" aria-expanded="false" aria-controls="sel-ct-form"
+                                    class="w-full h-9 flex items-center justify-between gap-2.5 rounded-[8px] border border-[#d1d5dc] bg-white px-3 text-[13px] font-medium text-[#525252] cursor-pointer transition-colors hover:border-[#9ca3af]">
+                                <span class="ct-value truncate">Default form</span>
+                                <i class="fa-solid fa-chevron-down text-[9px] shrink-0 text-[#6a7282]" aria-hidden="true"></i>
+                            </button>
+                            <div id="sel-ct-form" role="listbox" aria-label="Forms" class="absolute start-0 end-0 top-[calc(100%+4px)] z-50 bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] p-1 max-h-[240px] overflow-y-auto hidden">
+                                <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Default form</span></button>
+                                <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Order issue</span></button>
+                                <button type="button" role="option" class="ct-opt w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-[4px] text-[12.5px] font-medium text-[#4a5565] hover:bg-[#f1f5f9] cursor-pointer border-none bg-transparent text-start transition-colors"><span class="ct-opt-label truncate">Hardware request</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion: Contact info -->
+                <div class="border-b border-[#d1d5dc]">
+                    <button data-acc-toggle data-acc-target="#ctsec-contact"
+                            class="w-full flex items-center justify-between px-3 py-3 cursor-pointer bg-transparent border-none text-start" aria-expanded="true">
+                        <div class="flex items-center gap-1.5 min-w-0">
+                            <i class="fa-solid fa-user text-[11px] text-[#6a7282] shrink-0" aria-hidden="true"></i>
+                            <span class="text-[13px] font-bold text-[#374151] truncate">Contact info</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-up text-[9px] text-[#6a7282] acc-chevron shrink-0" aria-hidden="true"></i>
+                    </button>
+                    <div id="ctsec-contact" class="px-3 pt-1 pb-6">
+                        <!-- Empty state until a requester is picked -->
+                        <div class="flex flex-col items-center text-center py-6">
+                            <i class="fa-regular fa-circle-user text-[64px] text-[#e5e7eb] mb-4" aria-hidden="true"></i>
+                            <p class="text-[14px] font-bold text-[#374151] mb-1">Pick a contact</p>
+                            <p class="text-[12px] text-[#9ca3af] mb-0 max-w-[220px]">Their details and recent conversations will appear here</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion: Recent timeline -->
+                <div class="border-b border-[#d1d5dc]">
+                    <button data-acc-toggle data-acc-target="#ctsec-timeline"
+                            class="w-full flex items-center justify-between px-3 py-3 cursor-pointer bg-transparent border-none text-start" aria-expanded="true">
+                        <div class="flex items-center gap-1.5 min-w-0">
+                            <i class="fa-solid fa-ticket text-[11px] text-[#6a7282] shrink-0" aria-hidden="true"></i>
+                            <span class="text-[13px] font-bold text-[#374151] truncate">Recent timeline</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-up text-[9px] text-[#6a7282] acc-chevron shrink-0" aria-hidden="true"></i>
+                    </button>
+                    <div id="ctsec-timeline" class="px-3 pt-1 pb-6">
+                        <p class="text-[13px] text-[#4a5565] mb-0">No conversations. It's pretty quiet here!</p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ── Icon strip (40px, desktop only — mobile uses the full-screen overlay) ── -->
+            <div id="ct-icon-strip" class="hidden lg:flex flex-col w-10 shrink-0 border-s border-[#d1d5dc] bg-white py-3 px-1 gap-0.5">
+                <button data-toggle="dropdown" data-target="#panel-create-aside"
+                        data-icon-open="fa-outdent" data-icon-closed="fa-indent"
+                        aria-expanded="true" aria-controls="panel-create-aside"
+                        class="w-full aspect-square flex items-center justify-center text-[#6a7282] hover:bg-[#f1f5f9] hover:text-[#374151] transition-colors cursor-pointer bg-transparent border-none rounded-[6px] dropdown-open" title="Toggle panel">
+                    <i class="fa-solid fa-outdent text-sm" aria-hidden="true"></i>
+                </button>
+                <div class="h-px bg-[#e5e7eb] my-1.5 mx-1" aria-hidden="true"></div>
+                <button data-open-ct-acc="#ctsec-forms"
+                        class="w-full aspect-square flex items-center justify-center text-[#6a7282] hover:bg-[#f1f5f9] hover:text-[#374151] transition-colors cursor-pointer bg-transparent border-none rounded-[6px]" title="Forms">
+                    <i class="fa-solid fa-file-lines text-sm" aria-hidden="true"></i>
+                </button>
+                <button data-open-ct-acc="#ctsec-contact"
+                        class="w-full aspect-square flex items-center justify-center text-[#6a7282] hover:bg-[#f1f5f9] hover:text-[#374151] transition-colors cursor-pointer bg-transparent border-none rounded-[6px]" title="Contact info">
+                    <i class="fa-solid fa-user text-sm" aria-hidden="true"></i>
+                </button>
+                <button data-open-ct-acc="#ctsec-timeline"
+                        class="w-full aspect-square flex items-center justify-center text-[#6a7282] hover:bg-[#f1f5f9] hover:text-[#374151] transition-colors cursor-pointer bg-transparent border-none rounded-[6px]" title="Recent timeline">
+                    <i class="fa-solid fa-ticket text-sm" aria-hidden="true"></i>
+                </button>
+            </div>
 
         </main>
     </div>
@@ -1432,12 +1531,62 @@
     var fileInput = document.getElementById('ct-file-input')
     fileInput.addEventListener('change', function () {
         var names = Array.prototype.map.call(fileInput.files, function (f) { return f.name }).join(', ')
-        document.getElementById('ct-file-label').textContent = names || 'Click to upload or drag & drop'
+        document.getElementById('ct-file-label').textContent = names || 'Choose File'
     })
 
     // ── Prototype form: block real submission
     document.querySelector('section[aria-label="New ticket form"] form')
         .addEventListener('submit', function (e) { e.preventDefault() })
+
+    // ── Assist panel: starts closed on mobile (renders as a full-screen overlay
+    //    below the `lg` breakpoint — see #panel-create-aside classes); the strip
+    //    toggle flips to its closed state (fa-indent), same as ticket-timeline
+    if (window.innerWidth < 1024) {
+        var createAside = document.getElementById('panel-create-aside')
+        if (createAside) createAside.classList.add('hidden')
+
+        var asideToggle = document.querySelector('[data-toggle="dropdown"][data-target="#panel-create-aside"][data-icon-open]')
+        if (asideToggle) {
+            asideToggle.classList.remove('dropdown-open')
+            asideToggle.setAttribute('aria-expanded', 'false')
+            var asideIcon = asideToggle.querySelector('i')
+            if (asideIcon) {
+                asideIcon.classList.remove(asideToggle.getAttribute('data-icon-open'))
+                asideIcon.classList.add(asideToggle.getAttribute('data-icon-closed'))
+            }
+        }
+    }
+
+    // ── Assist panel icon strip: opens the panel (if collapsed) + expands and
+    //    scrolls to the clicked section (same pattern as ticket-timeline.html)
+    var ctPanel = document.getElementById('panel-create-aside')
+    var ctStrip = document.getElementById('ct-icon-strip')
+    if (ctPanel && ctStrip) {
+        ctStrip.addEventListener('click', function (e) {
+            var btn = e.target.closest('[data-open-ct-acc]')
+            if (!btn) return
+            var accId = btn.getAttribute('data-open-ct-acc')
+
+            if (ctPanel.classList.contains('hidden')) {
+                var toggleBtn = document.querySelector('[data-toggle="dropdown"][data-target="#panel-create-aside"][data-icon-open]')
+                if (toggleBtn) toggleBtn.click()
+            }
+
+            setTimeout(function () {
+                var accBody = document.querySelector(accId)
+                var accBtn  = document.querySelector('[data-acc-target="' + accId + '"]')
+                if (accBody && accBody.classList.contains('hidden') && accBtn) {
+                    accBtn.click()
+                }
+                if (accBtn) {
+                    var targetTop = accBtn.getBoundingClientRect().top
+                        - ctPanel.getBoundingClientRect().top
+                        + ctPanel.scrollTop
+                    ctPanel.scrollTo({ top: targetTop, behavior: 'smooth' })
+                }
+            }, 50)
+        })
+    }
 })()
 </script>
 </body>
