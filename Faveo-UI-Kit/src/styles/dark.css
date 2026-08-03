@@ -16,7 +16,7 @@ html[data-theme="dark"] header { background: var(--c-page); border-color: var(--
 /* Sidebar nav: override color-scheme text rules so icons/text stay visible in dark mode */
 html[data-theme="dark"] .sidebar-nav { color: var(--c-text-3); }
 html[data-theme="dark"] .sidebar-nav:hover  { background: var(--c-hover); color: var(--c-text-1); }
-html[data-theme="dark"] .sidebar-nav.active { background: var(--c-active); color: var(--c-text-1); }
+html[data-theme="dark"] .sidebar-nav.active { background: var(--c-active); border-color: var(--c-border); color: var(--c-text-1); }
 html[data-theme="dark"] #sidebar .bg-gray-200,
 html[data-theme="dark"] #sidebar-expanded .bg-gray-200 { background-color: var(--c-border); }
 html[data-theme="dark"] .sidebar-adaptive { color: var(--c-text-2); }
@@ -91,6 +91,7 @@ html[data-theme="dark"] .topnav-adaptive  { color: var(--c-text-2); }
 [data-theme="dark"] .bg-\[\#f5f3ff\]  { background-color: #4c1d95; } /* purple */
 [data-theme="dark"] .bg-\[\#f3fbff\]  { background-color: var(--c-hover); } /* subtle section tint, not a badge */
 [data-theme="dark"] .hover\:bg-\[\#fff1f1\]:hover { background-color: rgba(239,68,68,0.18); }
+[data-theme="dark"] .hover\:bg-\[\#f5f7f9\]:hover { background-color: var(--c-hover); }
 [data-theme="dark"] .hover\:bg-\[\#eef0f3\]:hover { background-color: var(--c-hover); } /* ticket-inbox row hover */
 [data-theme="dark"] .bg-\[\#eef6ff\]  { background-color: rgba(61,166,215,0.16); } /* ticket-inbox row-selection highlight (JS-toggled) */
 
@@ -119,8 +120,11 @@ html[data-theme="dark"] .topnav-adaptive  { color: var(--c-text-2); }
 [data-theme="dark"] .text-\[\#444\],
 [data-theme="dark"] .text-\[\#525252\],
 [data-theme="dark"] .text-\[\#4a5565\],
+[data-theme="dark"] .text-\[\#3d3d3d\],
+[data-theme="dark"] .text-\[\#4b5563\],
 [data-theme="dark"] .text-\[\#3a4a5a\] { color: var(--c-text-2); }
 
+[data-theme="dark"] .text-\[\#6b7280\],
 [data-theme="dark"] .text-\[\#6a7282\],
 [data-theme="dark"] .text-\[\#777\],
 [data-theme="dark"] .text-\[\#64748b\],
@@ -143,20 +147,24 @@ html[data-theme="dark"] .topnav-adaptive  { color: var(--c-text-2); }
    contrast and become unreadable. Lighten each to a -200/-300-level tint of the
    same hue instead of leaving it untouched. */
 [data-theme="dark"] .text-\[\#1d4ed8\],
+[data-theme="dark"] .text-\[\#1e40af\],
 [data-theme="dark"] .text-\[\#2563eb\],
 [data-theme="dark"] .text-\[\#276cf0\]  { color: #93c5fd; } /* blue */
 [data-theme="dark"] .text-\[\#0284c7\]  { color: #7dd3fc; } /* sky */
 [data-theme="dark"] .text-\[\#166534\],
 [data-theme="dark"] .text-\[\#16a34a\]  { color: #86efac; } /* green */
 [data-theme="dark"] .text-\[\#ca8a04\],
+[data-theme="dark"] .text-\[\#854d0e\],
 [data-theme="dark"] .text-\[\#856404\]  { color: #fcd34d; } /* yellow/amber */
 [data-theme="dark"] .text-\[\#ea580c\],
 [data-theme="dark"] .text-\[\#c2410c\]  { color: #fdba74; } /* orange */
 [data-theme="dark"] .text-\[\#a0522d\]  { color: #e0a878; } /* avatar tan */
 [data-theme="dark"] .text-\[\#7c5c3a\]  { color: #d4b48a; } /* avatar tan */
+[data-theme="dark"] .text-\[\#b91c1c\],
 [data-theme="dark"] .text-\[\#e11d48\],
 [data-theme="dark"] .text-\[\#ef4444\],
 [data-theme="dark"] .text-\[\#cd2629\]  { color: #fca5a5; } /* red/rose */
+[data-theme="dark"] .text-\[\#d92d20\]  { color: #f97066; } /* overdue red */
 [data-theme="dark"] .text-\[\#7c3aed\]  { color: #d8b4fe; } /* purple */
 [data-theme="dark"] .text-gray-400  { color: var(--c-text-3); }
 
@@ -209,3 +217,12 @@ html[data-theme="dark"] .topnav-adaptive  { color: var(--c-text-2); }
 /* ── Scrollbar (WebKit) ── */
 [data-theme="dark"] ::-webkit-scrollbar       { background: var(--c-surface); width: 6px; height: 6px; }
 [data-theme="dark"] ::-webkit-scrollbar-thumb { background: var(--c-border); border-radius: 3px; }
+
+/* ── Dashboard (D0 2026-07-30) — fills with no dark equivalent ── */
+[data-theme="dark"] .bg-\[\#efefef\]  { background-color: var(--c-raised); }   /* card-head icon tile */
+[data-theme="dark"] .bg-\[\#f9fafb\]  { background-color: var(--c-raised); }   /* empty widget slot */
+[data-theme="dark"] .bg-\[\#fdc700\]  { background-color: #8a6d00; color: #fef9c3; } /* reopened pill: darkened amber, pale text */
+
+/* ── Dashboards panel gray cards (2026-07-31) ── */
+[data-theme="dark"] .bg-\[\#f5f7f9\]  { background-color: var(--c-raised); }
+[data-theme="dark"] .text-\[\#2c5cc5\] { color: var(--c-brand); }

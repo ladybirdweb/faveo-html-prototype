@@ -27,32 +27,32 @@
 <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:bg-white focus:text-[#3da6d7] focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-sm focus:font-medium">Skip to main content</a>
 
 <!-- Red subscription banner -->
-<div id="banner-red" role="alert" aria-label="Subscription expiry notification" class="bg-[#ffe9ee] flex items-center justify-center px-4 py-2.5 relative shrink-0">
+<div id="banner-red" role="alert" aria-label="Subscription expiry notification" class="bg-[#fdf1f2] border-b border-black/5 flex items-center justify-center px-4 py-2 relative shrink-0">
   <div class="absolute inset-0 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)] bg-transparent pointer-events-none"></div>
   <div class="flex items-center gap-2">
-    <i class="fa-solid fa-triangle-exclamation text-red-500 text-sm" aria-hidden="true"></i>
-    <span class="text-red-500 font-medium text-sm hidden sm:inline">Your subscription expires in 3 days.</span>
+    <svg class="m-icon m-triangle-exclamation text-[#b42318] text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+    <span class="text-[#b42318] font-normal text-[13px] hidden sm:inline">Your subscription expires in 3 days.</span>
     <div class="pl-2">
-      <button data-toggle="modal" data-target="#panel-renew" class="bg-[rgba(255,0,0,0.8)] text-white text-xs font-bold px-4 py-1 rounded-[6px] cursor-pointer">Renew Now</button>
+      <button data-toggle="modal" data-target="#panel-renew" class="bg-[#d92d20] text-white text-xs font-medium px-3 py-1 rounded-[4px] cursor-pointer">Renew Now</button>
     </div>
   </div>
   <button data-dismiss="#banner-red" aria-label="Dismiss alert" class="absolute right-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
-    <i class="fa-solid fa-xmark text-[10px] text-gray-500" aria-hidden="true"></i>
+    <svg class="m-icon m-xmark text-[10px] text-gray-500" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
   </button>
 </div>
 
 <!-- Yellow expert banner -->
-<div id="banner-yellow" role="alert" aria-label="Expert contact offer" class="bg-[#ffce1b] flex items-center justify-center px-4 py-2.5 relative shrink-0">
+<div id="banner-yellow" role="alert" aria-label="Expert contact offer" class="bg-[#fff8e1] border-b border-black/5 flex items-center justify-center px-4 py-2 relative shrink-0">
   <div class="absolute inset-0 shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)] bg-transparent pointer-events-none"></div>
   <div class="flex items-center gap-2">
-    <i class="fa-solid fa-circle-info text-black text-base" aria-hidden="true"></i>
-    <span class="text-black font-medium text-sm hidden sm:inline">Connect with an expert get an advice on Faveo helpdesk</span>
+    <svg class="m-icon m-circle-info text-black text-base" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+    <span class="text-[#333] font-normal text-[13px] hidden sm:inline">Connect with an expert get an advice on Faveo helpdesk</span>
     <div class="pl-2 relative">
       <button data-toggle="dropdown" data-target="#contact-dropdown"
-              class="bg-[#cda206] text-white text-xs font-bold px-4 py-1 rounded-[6px] cursor-pointer">Contact</button>
+              class="bg-[#b7791f] text-white text-xs font-medium px-3 py-1 rounded-[4px] cursor-pointer">Contact</button>
 
       <!-- Contact dropdown -->
-      <div id="contact-dropdown" data-persistent class="absolute left-1/2 -translate-x-1/2 top-[calc(100%+2px)] z-50 w-[303px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] overflow-hidden hidden">
+      <div id="contact-dropdown" data-persistent class="absolute left-1/2 -translate-x-1/2 top-[calc(100%+2px)] z-50 w-[303px] bg-white rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] border border-[#e5e7eb] overflow-hidden hidden">
 
         <!-- Bot header (orange/cream) -->
         <div class="bg-[#fef3e2] border-b border-[#d2d2d2]/30 p-3">
@@ -71,29 +71,29 @@
 
         <!-- Actions -->
         <div class="p-4 flex flex-col gap-2.5">
-          <button class="flex items-center gap-2.5 w-full px-2.5 py-1.5 border border-[#d2d2d2] rounded-[6px] text-[#4a5565] text-[12px] hover:bg-[#f1f5f9] transition-colors bg-white cursor-pointer">
-            <i class="fa-solid fa-circle-play text-sm shrink-0"></i>
+          <button class="flex items-center gap-2.5 w-full px-3 py-2 border border-[#d2d2d2] rounded-[6px] text-[#333] text-[13px] hover:bg-[#f5f7f9] transition-colors bg-white cursor-pointer">
+            <svg class="m-icon m-circle-play text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2.5-3.5 7-4.5-7-4.5v9z"/></svg>
             <span class="flex-1 text-left">Book a 1:1 product demo</span>
-            <i class="fa-solid fa-chevron-right text-[9px]"></i>
+            <svg class="m-icon m-chevron-right text-[9px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
           </button>
-          <button class="flex items-center gap-2.5 w-full px-2.5 py-1.5 border border-[#d2d2d2] rounded-[6px] text-[#4a5565] text-[12px] hover:bg-[#f1f5f9] transition-colors bg-white cursor-pointer">
-            <i class="fa-solid fa-calendar-days text-sm shrink-0"></i>
+          <button class="flex items-center gap-2.5 w-full px-3 py-2 border border-[#d2d2d2] rounded-[6px] text-[#333] text-[13px] hover:bg-[#f5f7f9] transition-colors bg-white cursor-pointer">
+            <svg class="m-icon m-calendar-days text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
             <span class="flex-1 text-left">Schedule a meeting with faveo</span>
-            <i class="fa-solid fa-chevron-right text-[9px]"></i>
+            <svg class="m-icon m-chevron-right text-[9px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
           </button>
           <p class="text-[#99a1af] text-[12px] px-0.5 mt-0.5">Or contact me via</p>
           <div class="flex items-center gap-2.5 px-2.5 py-1.5 border border-[#d2d2d2] rounded-[6px] text-[#4a5565] text-[12px]">
-            <i class="fa-solid fa-phone text-sm shrink-0"></i>
+            <svg class="m-icon m-phone text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.54 5c.06.89.21 1.76.45 2.59l-1.2 1.2c-.41-1.2-.67-2.47-.76-3.79h1.51m9.86 12.02c.85.24 1.72.39 2.6.45v1.49c-1.32-.09-2.59-.35-3.8-.75l1.2-1.19M7.5 3H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1-1.24 0-2.45-.2-3.57-.57a.84.84 0 0 0-.31-.05c-.26 0-.51.1-.71.29l-2.2 2.2a15.149 15.149 0 0 1-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1z"/></svg>
             <input readonly value="+91 1234567809" class="flex-1 bg-transparent outline-none cursor-default text-[12px] text-[#4a5565]">
             <button class="text-[#99a1af] hover:text-gray-500 transition-colors cursor-pointer">
-              <i class="fa-regular fa-copy text-xs"></i>
+              <svg class="m-icon m-copy text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
             </button>
           </div>
           <div class="flex items-center gap-2.5 px-2.5 py-1.5 border border-[#d2d2d2] rounded-[6px] text-[#4a5565] text-[12px]">
-            <i class="fa-solid fa-envelope text-sm shrink-0"></i>
+            <svg class="m-icon m-envelope text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0-8 4.99L4 6h16zm0 12H4V8l8 5 8-5v10z"/></svg>
             <input readonly value="sakthi@faveo.com" class="flex-1 bg-transparent outline-none cursor-default text-[12px] text-[#4a5565]">
             <button class="text-[#99a1af] hover:text-gray-500 transition-colors cursor-pointer">
-              <i class="fa-regular fa-copy text-xs"></i>
+              <svg class="m-icon m-copy text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
             </button>
           </div>
         </div>
@@ -102,7 +102,7 @@
     </div>
   </div>
   <button data-dismiss="#banner-yellow" aria-label="Dismiss alert" class="absolute right-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
-    <i class="fa-solid fa-xmark text-[10px] text-gray-500" aria-hidden="true"></i>
+    <svg class="m-icon m-xmark text-[10px] text-gray-500" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
   </button>
 </div>
 
@@ -116,26 +116,26 @@
            alt="Faveo" class="max-w-[50px] max-h-[31px] object-contain" />
     </div>
     <div class="sidebar-scroll flex flex-col w-full items-center pt-[10px] gap-y-[10px] flex-1 overflow-y-auto">
-      <button class="sidebar-nav" data-nav="dashboard" title="AI Insights" aria-label="AI Insights"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></button>
-      <button class="sidebar-nav" data-nav="views" title="Dashboard" aria-label="Dashboard"><i class="fa-solid fa-gauge-high" aria-hidden="true"></i></button>
-      <button class="sidebar-nav" data-nav="tickets" title="Tickets" aria-label="Tickets"><i class="fa-solid fa-ticket" aria-hidden="true"></i></button>
-      <button class="sidebar-nav" data-nav="contacts" title="Contacts" aria-label="Contacts"><i class="fa-solid fa-users" aria-hidden="true"></i></button>
-      <button class="sidebar-nav" data-nav="chat" title="Chat" aria-label="Chat"><i class="fa-solid fa-comment" aria-hidden="true"></i></button>
-      <button class="sidebar-nav" data-nav="kb" title="Solutions" aria-label="Solutions"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></button>
-      <button class="sidebar-nav" data-nav="tasks" title="Tasks" aria-label="Tasks"><i class="fa-solid fa-list-check" aria-hidden="true"></i></button>
-      <button class="sidebar-nav" data-nav="automations" title="Automations" aria-label="Automations"><i class="fa-solid fa-bolt" aria-hidden="true"></i></button>
-      <button class="sidebar-nav" data-nav="canned" title="Canned Responses" aria-label="Canned Responses"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i></button>
-      <button class="sidebar-nav" data-nav="sla" title="SLA" aria-label="SLA"><i class="fa-solid fa-clock" aria-hidden="true"></i></button>
-      <button class="sidebar-nav" data-nav="reports" title="Reporting" aria-label="Reporting"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i></button>
-      <button class="sidebar-nav" data-nav="agents" title="AI Agent Studio" aria-label="AI Agent Studio"><i class="fa-solid fa-user-plus" aria-hidden="true"></i></button>
-      <button class="sidebar-nav" data-nav="analytics" title="Analytics" aria-label="Analytics"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></button>
-      <button class="sidebar-nav" data-nav="survey" title="Survey / CSAT" aria-label="Survey / CSAT"><i class="fa-solid fa-star" aria-hidden="true"></i></button>
-      <button class="sidebar-nav" data-nav="admin" title="Admin" aria-label="Admin"><i class="fa-solid fa-gear" aria-hidden="true"></i></button>
+      <button class="sidebar-nav" data-nav="dashboard" title="AI Insights" aria-label="AI Insights"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m20 7 .94-2.06L23 4l-2.06-.94L20 1l-.94 2.06L17 4l2.06.94zM8.5 7l.94-2.06L11.5 4l-2.06-.94L8.5 1l-.94 2.06L5.5 4l2.06.94zM20 12.5l-.94 2.06-2.06.94 2.06.94.94 2.06.94-2.06L23 15.5l-2.06-.94zm-2.29-3.38-2.83-2.83c-.2-.19-.45-.29-.71-.29-.26 0-.51.1-.71.29L2.29 17.46a.996.996 0 0 0 0 1.41l2.83 2.83c.2.2.45.3.71.3s.51-.1.71-.29l11.17-11.17c.39-.39.39-1.03 0-1.42zm-3.54-.7 1.41 1.41L14.41 11 13 9.59l1.17-1.17zM5.83 19.59l-1.41-1.41L11.59 11 13 12.41l-7.17 7.18z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.5 5.6 10 7 8.6 4.5 10 2 7.5 3.4 5 2l1.4 2.5L5 7zm12 9.8L17 14l1.4 2.5L17 19l2.5-1.4L22 19l-1.4-2.5L22 14zM22 2l-2.5 1.4L17 2l1.4 2.5L17 7l2.5-1.4L22 7l-1.4-2.5zm-7.63 5.29a.996.996 0 0 0-1.41 0L1.29 18.96a.996.996 0 0 0 0 1.41l2.34 2.34c.39.39 1.02.39 1.41 0L16.7 11.05a.996.996 0 0 0 0-1.41l-2.33-2.35zm-1.03 5.49-2.12-2.12 2.44-2.44 2.12 2.12-2.44 2.44z"/></svg></button>
+      <button class="sidebar-nav" data-nav="views" title="Dashboard" aria-label="Dashboard"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m20.38 8.57-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 15.58 6.85l1.85-1.23A10 10 0 0 0 3.35 19a2 2 0 0 0 1.72 1h13.85a2 2 0 0 0 1.74-1 10 10 0 0 0-.27-10.44z"/><path d="M10.59 15.41a2 2 0 0 0 2.83 0l5.66-8.49-8.49 5.66a2 2 0 0 0 0 2.83z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m20.38 8.57-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 15.58 6.85l1.85-1.23A10 10 0 0 0 3.35 19a2 2 0 0 0 1.72 1h13.85a2 2 0 0 0 1.74-1 10 10 0 0 0-.27-10.44zm-9.79 6.84a2 2 0 0 0 2.83 0l5.66-8.49-8.49 5.66a2 2 0 0 0 0 2.83z"/></svg></button>
+      <button class="sidebar-nav" data-nav="tickets" title="Tickets" aria-label="Tickets"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 10V6a2 2 0 0 0-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 10V6a2 2 0 0 0-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-9 7.5h-2v-2h2v2zm0-4.5h-2v-2h2v2zm0-4.5h-2v-2h2v2z"/></svg></button>
+      <button class="sidebar-nav" data-nav="contacts" title="Contacts" aria-label="Contacts"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 13.75c-2.34 0-7 1.17-7 3.5V19h14v-1.75c0-2.33-4.66-3.5-7-3.5zM4.34 17c.84-.58 2.87-1.25 4.66-1.25s3.82.67 4.66 1.25H4.34zM9 12c1.93 0 3.5-1.57 3.5-3.5S10.93 5 9 5 5.5 6.57 5.5 8.5 7.07 12 9 12zm0-5c.83 0 1.5.67 1.5 1.5S9.83 10 9 10s-1.5-.67-1.5-1.5S8.17 7 9 7zm7.04 6.81c1.16.84 1.96 1.96 1.96 3.44V19h4v-1.75c0-2.02-3.5-3.17-5.96-3.44zM15 12c1.93 0 3.5-1.57 3.5-3.5S16.93 5 15 5c-.54 0-1.04.13-1.5.35.63.89 1 1.98 1 3.15s-.37 2.26-1 3.15c.46.22.96.35 1.5.35z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></button>
+      <button class="sidebar-nav" data-nav="chat" title="Chat" aria-label="Chat"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></button>
+      <button class="sidebar-nav" data-nav="kb" title="Solutions" aria-label="Solutions"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"/></svg></button>
+      <button class="sidebar-nav" data-nav="tasks" title="Tasks" aria-label="Tasks"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 7h-9v2h9V7zm0 8h-9v2h9v-2zM5.54 11 2 7.46l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41L5.54 11zm0 8L2 15.46l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41L5.54 19z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 7h-9v2h9V7zm0 8h-9v2h9v-2zM5.54 11 2 7.46l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41L5.54 11zm0 8L2 15.46l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41L5.54 19z"/></svg></button>
+      <button class="sidebar-nav" data-nav="automations" title="Automations" aria-label="Automations"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11 21h-1l1-7H7.5c-.88 0-.33-.75-.31-.78C8.48 10.94 10.42 7.54 13.01 3h1l-1 7h3.51c.4 0 .62.19.4.66C12.97 17.55 11 21 11 21z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66.19-.34.05-.08.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/></svg></button>
+      <button class="sidebar-nav" data-nav="canned" title="Canned Responses" aria-label="Canned Responses"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4 4h16v12H5.17L4 17.17V4m0-2c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2H4zm2 10h8v2H6v-2zm0-3h12v2H6V9zm0-3h12v2H6V6z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg></button>
+      <button class="sidebar-nav" data-nav="sla" title="SLA" aria-label="SLA"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></button>
+      <button class="sidebar-nav" data-nav="reports" title="Reporting" aria-label="Reporting"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7 15h7v2H7zm0-4h10v2H7zm0-4h10v2H7zm12-4h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-.14 0-.27.01-.4.04a2.008 2.008 0 0 0-1.44 1.19c-.1.23-.16.49-.16.77v14c0 .27.06.54.16.78s.25.45.43.64c.27.27.62.47 1.01.55.13.02.26.03.4.03h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7-.25c.41 0 .75.34.75.75s-.34.75-.75.75-.75-.34-.75-.75.34-.75.75-.75zM19 19H5V5h14v14z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></button>
+      <button class="sidebar-nav" data-nav="agents" title="AI Agent Studio" aria-label="AI Agent Studio"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 8c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm-6 4c.22-.72 3.31-2 6-2 2.7 0 5.8 1.29 6 2H9zm-3-3v-3h3v-2H6V7H4v3H1v2h3v3z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></button>
+      <button class="sidebar-nav" data-nav="analytics" title="Analytics" aria-label="Analytics"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m3.5 18.49 6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99l1.5 1.5z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m3.5 18.49 6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg></button>
+      <button class="sidebar-nav" data-nav="survey" title="Survey / CSAT" aria-label="Survey / CSAT"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></button>
+      <button class="sidebar-nav" data-nav="admin" title="Admin" aria-label="Admin"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65A.488.488 0 0 0 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1a.566.566 0 0 0-.18-.03c-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46a.5.5 0 0 0 .61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></button>
     </div>
     <div class="mt-auto flex flex-col items-center w-full">
       <div class="w-[49px] border-t border-gray-200 my-2"></div>
       <button id="btn-toggle-sidebar" class="sidebar-nav mb-1" title="Expand sidebar" aria-label="Expand navigation sidebar" aria-expanded="false" aria-controls="sidebar-expanded">
-        <i class="fa-solid fa-indent" aria-hidden="true"></i>
+        <svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M3 21h18v-2H3v2zM3 8v8l4-4-4-4zm8 9h10v-2H11v2zM3 3v2h18V3H3zm8 6h10V7H11v2zm0 4h10v-2H11v2z"/></svg>
       </button>
     </div>
   </nav>
@@ -149,21 +149,21 @@
       <span id="sidebar-logo-fallback" class="hidden text-[#3a4a5a] text-[19px] font-semibold leading-none whitespace-nowrap sidebar-adaptive">Support Center</span>
     </div>
     <div class="sidebar-scroll flex flex-col flex-1 overflow-y-auto px-3 gap-y-[10px] pt-[10px]">
-      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="dashboard" aria-label="AI Insights"><i class="fa-solid fa-wand-magic-sparkles w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">AI Insights</span></button>
-      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="views" aria-label="Dashboard"><i class="fa-solid fa-gauge-high w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Dashboard</span></button>
-      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="tickets" aria-label="Tickets"><i class="fa-solid fa-ticket w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Tickets</span></button>
-      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="contacts" aria-label="Contacts"><i class="fa-solid fa-users w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Contacts</span></button>
-      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="chat" aria-label="Chat"><i class="fa-solid fa-comment w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Chat</span></button>
-      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="kb" aria-label="Solutions"><i class="fa-solid fa-lightbulb w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Solutions</span></button>
-      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="tasks" aria-label="Tasks"><i class="fa-solid fa-list-check w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Tasks</span></button>
-      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="automations" aria-label="Automations"><i class="fa-solid fa-bolt w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Automations</span></button>
-      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="canned" aria-label="Canned Responses"><i class="fa-solid fa-comment-dots w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Canned Responses</span></button>
-      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="sla" aria-label="SLA"><i class="fa-solid fa-clock w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">SLA</span></button>
-      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="reports" aria-label="Reporting"><i class="fa-solid fa-clipboard-list w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Reporting</span></button>
-      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="agents" aria-label="AI Agent Studio"><i class="fa-solid fa-user-plus w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">AI Agent Studio</span></button>
-      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="analytics" aria-label="Analytics"><i class="fa-solid fa-chart-line w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Analytics</span></button>
-      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="survey" aria-label="Survey / CSAT"><i class="fa-solid fa-star w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Survey / CSAT</span></button>
-      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="admin" aria-label="Admin"><i class="fa-solid fa-gear w-[41px] text-center shrink-0 text-[16px]" aria-hidden="true"></i><span class="whitespace-nowrap">Admin</span></button>
+      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="dashboard" aria-label="AI Insights"><svg class="m-icon m-wand-magic-sparkles w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m20 7 .94-2.06L23 4l-2.06-.94L20 1l-.94 2.06L17 4l2.06.94zM8.5 7l.94-2.06L11.5 4l-2.06-.94L8.5 1l-.94 2.06L5.5 4l2.06.94zM20 12.5l-.94 2.06-2.06.94 2.06.94.94 2.06.94-2.06L23 15.5l-2.06-.94zm-2.29-3.38-2.83-2.83c-.2-.19-.45-.29-.71-.29-.26 0-.51.1-.71.29L2.29 17.46a.996.996 0 0 0 0 1.41l2.83 2.83c.2.2.45.3.71.3s.51-.1.71-.29l11.17-11.17c.39-.39.39-1.03 0-1.42zm-3.54-.7 1.41 1.41L14.41 11 13 9.59l1.17-1.17zM5.83 19.59l-1.41-1.41L11.59 11 13 12.41l-7.17 7.18z"/></svg><span class="whitespace-nowrap">AI Insights</span></button>
+      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="views" aria-label="Dashboard"><svg class="m-icon m-gauge-high w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m20.38 8.57-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 15.58 6.85l1.85-1.23A10 10 0 0 0 3.35 19a2 2 0 0 0 1.72 1h13.85a2 2 0 0 0 1.74-1 10 10 0 0 0-.27-10.44z"/><path d="M10.59 15.41a2 2 0 0 0 2.83 0l5.66-8.49-8.49 5.66a2 2 0 0 0 0 2.83z"/></svg><span class="whitespace-nowrap">Dashboard</span></button>
+      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="tickets" aria-label="Tickets"><svg class="m-icon m-ticket w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 10V6a2 2 0 0 0-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg><span class="whitespace-nowrap">Tickets</span></button>
+      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="contacts" aria-label="Contacts"><svg class="m-icon m-users w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 13.75c-2.34 0-7 1.17-7 3.5V19h14v-1.75c0-2.33-4.66-3.5-7-3.5zM4.34 17c.84-.58 2.87-1.25 4.66-1.25s3.82.67 4.66 1.25H4.34zM9 12c1.93 0 3.5-1.57 3.5-3.5S10.93 5 9 5 5.5 6.57 5.5 8.5 7.07 12 9 12zm0-5c.83 0 1.5.67 1.5 1.5S9.83 10 9 10s-1.5-.67-1.5-1.5S8.17 7 9 7zm7.04 6.81c1.16.84 1.96 1.96 1.96 3.44V19h4v-1.75c0-2.02-3.5-3.17-5.96-3.44zM15 12c1.93 0 3.5-1.57 3.5-3.5S16.93 5 15 5c-.54 0-1.04.13-1.5.35.63.89 1 1.98 1 3.15s-.37 2.26-1 3.15c.46.22.96.35 1.5.35z"/></svg><span class="whitespace-nowrap">Contacts</span></button>
+      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="chat" aria-label="Chat"><svg class="m-icon m-comment w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 17.17 18.83 16H4V4h16v13.17zM20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2z"/></svg><span class="whitespace-nowrap">Chat</span></button>
+      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="kb" aria-label="Solutions"><svg class="m-icon m-lightbulb w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg><span class="whitespace-nowrap">Solutions</span></button>
+      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="tasks" aria-label="Tasks"><svg class="m-icon m-list-check w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 7h-9v2h9V7zm0 8h-9v2h9v-2zM5.54 11 2 7.46l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41L5.54 11zm0 8L2 15.46l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41L5.54 19z"/></svg><span class="whitespace-nowrap">Tasks</span></button>
+      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="automations" aria-label="Automations"><svg class="m-icon m-bolt w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11 21h-1l1-7H7.5c-.88 0-.33-.75-.31-.78C8.48 10.94 10.42 7.54 13.01 3h1l-1 7h3.51c.4 0 .62.19.4.66C12.97 17.55 11 21 11 21z"/></svg><span class="whitespace-nowrap">Automations</span></button>
+      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="canned" aria-label="Canned Responses"><svg class="m-icon m-comment-dots w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4 4h16v12H5.17L4 17.17V4m0-2c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2H4zm2 10h8v2H6v-2zm0-3h12v2H6V9zm0-3h12v2H6V6z"/></svg><span class="whitespace-nowrap">Canned Responses</span></button>
+      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="sla" aria-label="SLA"><svg class="m-icon m-clock w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg><span class="whitespace-nowrap">SLA</span></button>
+      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="reports" aria-label="Reporting"><svg class="m-icon m-clipboard-list w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7 15h7v2H7zm0-4h10v2H7zm0-4h10v2H7zm12-4h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-.14 0-.27.01-.4.04a2.008 2.008 0 0 0-1.44 1.19c-.1.23-.16.49-.16.77v14c0 .27.06.54.16.78s.25.45.43.64c.27.27.62.47 1.01.55.13.02.26.03.4.03h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7-.25c.41 0 .75.34.75.75s-.34.75-.75.75-.75-.34-.75-.75.34-.75.75-.75zM19 19H5V5h14v14z"/></svg><span class="whitespace-nowrap">Reporting</span></button>
+      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="agents" aria-label="AI Agent Studio"><svg class="m-icon m-user-plus w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 8c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm-6 4c.22-.72 3.31-2 6-2 2.7 0 5.8 1.29 6 2H9zm-3-3v-3h3v-2H6V7H4v3H1v2h3v3z"/></svg><span class="whitespace-nowrap">AI Agent Studio</span></button>
+      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="analytics" aria-label="Analytics"><svg class="m-icon m-chart-line w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m3.5 18.49 6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99l1.5 1.5z"/></svg><span class="whitespace-nowrap">Analytics</span></button>
+      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="survey" aria-label="Survey / CSAT"><svg class="m-icon m-star w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"/></svg><span class="whitespace-nowrap">Survey / CSAT</span></button>
+      <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="admin" aria-label="Admin"><svg class="m-icon m-gear w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65A.488.488 0 0 0 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1a.566.566 0 0 0-.18-.03c-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46a.5.5 0 0 0 .61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg><span class="whitespace-nowrap">Admin</span></button>
     </div>
     <div class="px-3 mt-auto">
       <div class="border-t border-gray-200 my-2"></div>
@@ -179,14 +179,14 @@
     <!-- Toolbar -->
     <header class="bg-[#f7f9fa] h-[55px] flex items-center gap-2 px-5 shrink-0" role="toolbar" aria-label="Page toolbar">
       <button id="btn-mobile-menu" class="md:hidden sidebar-nav mr-1" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar-expanded">
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        <svg class="m-icon m-bars" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
       </button>
       <!-- Filter icon (toggles views panel inside content) + title -->
       <div class="flex items-center gap-2 min-w-0 shrink">
         <button id="btn-toggle-views"
                 aria-label="Toggle views panel" aria-expanded="false" aria-controls="views-panel"
                 class="flex items-center justify-center w-[30px] h-[30px] rounded-[6px] border border-[#d1d5dc] bg-white cursor-pointer text-[#525252] hover:bg-[#f1f5f9] transition-colors shrink-0">
-          <i class="fa-solid fa-filter text-xs" aria-hidden="true"></i>
+          <svg class="m-icon m-filter text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7 6h10l-5.01 6.3L7 6zm-2.75-.39C6.27 8.2 10 13 10 13v6c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-6s3.72-4.8 5.74-7.39A.998.998 0 0 0 18.95 4H5.04c-.83 0-1.3.95-.79 1.61z"/></svg>
         </button>
         <span class="text-[#333] text-base font-semibold truncate topnav-adaptive">All tickets</span>
         <span class="text-[#333] text-base font-semibold shrink-0 topnav-adaptive">3</span>
@@ -196,32 +196,32 @@
       <div class="flex items-center gap-2.5 flex-1 justify-end min-w-0">
         <!-- New dropdown -->
         <div class="relative shrink-0 hidden sm:block">
-          <button data-toggle="dropdown" data-target="#new-dropdown" aria-haspopup="menu" aria-expanded="false" aria-controls="new-dropdown" aria-label="Create new" class="bg-white border border-[#d1d5dc] rounded-[6px] flex items-center gap-1.5 px-2.5 py-1.5 text-[#525252] text-xs font-medium whitespace-nowrap cursor-pointer hover:bg-[#f1f5f9] transition-colors">
-            <i class="fa-solid fa-plus text-[10px]" aria-hidden="true"></i>
+          <button data-toggle="dropdown" data-target="#new-dropdown" aria-haspopup="menu" aria-expanded="false" aria-controls="new-dropdown" aria-label="Create new" class="flex h-8 cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-[4px] border border-[#d1d5dc] bg-white px-3 text-[13px] leading-4 font-medium text-[#333] transition-colors hover:bg-[#f5f7f9]">
+            <svg class="m-icon m-plus text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
             New
-            <i class="fa-solid fa-chevron-down text-[9px]" aria-hidden="true"></i>
+            <svg class="m-icon m-chevron-down text-[9px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
           </button>
-          <div id="new-dropdown" role="menu" aria-label="Create new item" class="absolute right-0 top-[calc(100%+2px)] z-50 min-w-[160px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] p-1.5 hidden">
-            <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
-              <i class="fas fa-ticket text-sm shrink-0" aria-hidden="true"></i><span>Ticket</span>
+          <div id="new-dropdown" role="menu" aria-label="Create new item" class="absolute right-0 top-[calc(100%+2px)] z-50 min-w-[160px] bg-white rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] border border-[#e5e7eb] p-2 hidden">
+            <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-left hover:bg-[#f5f7f9] transition-colors">
+              <svg class="m-icon m-ticket text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 10V6a2 2 0 0 0-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg><span>Ticket</span>
             </button>
-            <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
-              <i class="fa-regular fa-envelope text-sm shrink-0" aria-hidden="true"></i><span>Email</span>
+            <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-left hover:bg-[#f5f7f9] transition-colors">
+              <svg class="m-icon m-envelope text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0-8 4.99L4 6h16zm0 12H4V8l8 5 8-5v10z"/></svg><span>Email</span>
             </button>
-            <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
-              <i class="fa-regular fa-message text-sm shrink-0" aria-hidden="true"></i><span>Message</span>
+            <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-left hover:bg-[#f5f7f9] transition-colors">
+              <svg class="m-icon m-message text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><span>Message</span>
             </button>
-            <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
-              <i class="fa-regular fa-address-card text-sm shrink-0" aria-hidden="true"></i><span>Contact</span>
+            <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-left hover:bg-[#f5f7f9] transition-colors">
+              <svg class="m-icon m-address-card text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 12h4v1.5h-4zm0 3h4v1.5h-4z"/><path d="M20 7h-5V4c0-1.1-.9-2-2-2h-2c-1.1 0-2 .9-2 2v3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-9 0V4h2v5h-2V7zm9 13H4V9h5c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2h5v11z"/><path d="M11.08 16.18c-.64-.28-1.34-.43-2.08-.43s-1.44.15-2.08.43c-.56.24-.92.78-.92 1.39V18h6v-.43c0-.61-.36-1.15-.92-1.39z"/></svg><span>Contact</span>
             </button>
-            <button role="menuitem" class="flex items-center gap-2.5 w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors">
-              <i class="fa-regular fa-building text-sm shrink-0" aria-hidden="true"></i><span>Company</span>
+            <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-left hover:bg-[#f5f7f9] transition-colors">
+              <svg class="m-icon m-building text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17 11V3H7v4H3v14h8v-4h2v4h8V11h-4zM7 19H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm4 4H9v-2h2v2zm0-4H9V9h2v2zm0-4H9V5h2v2zm4 8h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm4 12h-2v-2h2v2zm0-4h-2v-2h2v2z"/></svg><span>Company</span>
             </button>
           </div>
         </div>
         <!-- Search -->
         <div class="relative shrink-0 hidden sm:block">
-          <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs" aria-hidden="true"></i>
+          <svg class="m-icon m-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
           <input id="search-trigger" type="text" placeholder="Search" aria-label="Search tickets" readonly
                  class="bg-white border border-[#d1d5dc] rounded-[4px] pl-8 pr-3 py-1.5 text-xs text-[#0a0a0a] w-32 outline-none focus:border-sky-400 cursor-pointer" />
 
@@ -230,7 +230,7 @@
             <!-- Search input — always visible -->
             <div class="p-3">
               <div class="relative">
-                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" aria-hidden="true"></i>
+                <svg class="m-icon m-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
                 <input id="search-overlay-input" type="text" placeholder="Search" aria-label="Search"
                        class="w-full border border-[#d1d5dc] rounded-[10px] pl-8 pr-3 py-1.5 text-xs text-[#0a0a0a] outline-none focus:border-sky-400" />
               </div>
@@ -244,7 +244,7 @@
                 <button data-toggle="tab" data-tab="contacts" data-target="#recently-viewed-list" class="search-tab px-2 py-0.5 text-xs border border-[#d1d5dc] rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors">Contacts</button>
                 <button data-toggle="tab" data-tab="forums" data-target="#recently-viewed-list" class="search-tab px-2 py-0.5 text-xs border border-[#d1d5dc] rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors">Forums</button>
                 <button id="btn-search-prefs" aria-label="Search preferences" class="ml-auto flex items-center justify-center w-7 h-7 rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors cursor-pointer">
-                  <i class="fa-solid fa-gear text-base" aria-hidden="true"></i>
+                  <svg class="m-icon m-gear text-base" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65A.488.488 0 0 0 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1a.566.566 0 0 0-.18-.03c-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46a.5.5 0 0 0 .61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
                 </button>
               </div>
               <div class="px-4 pt-2 pb-1 flex items-center justify-between">
@@ -254,13 +254,13 @@
               <ul id="recently-viewed-list" role="list" aria-label="Recently viewed items" class="overflow-y-auto max-h-[260px] flex flex-col">
                 <li data-item-type="tickets" class="flex items-center gap-3 px-4 py-2 hover:bg-[#f1f5f9] cursor-pointer transition-colors list-none">
                   <div class="w-8 h-8 rounded-full bg-[#f8f9fa] flex items-center justify-center shrink-0">
-                    <i class="fa-solid fa-ticket text-[#525252] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-ticket text-[#525252] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 10V6a2 2 0 0 0-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg>
                   </div>
                   <span class="text-xs text-[#525252] font-medium">Issues with reports #3</span>
                 </li>
                 <li data-item-type="contacts" class="flex items-center gap-3 px-4 py-2 hover:bg-[#f1f5f9] cursor-pointer transition-colors list-none">
                   <div class="w-8 h-8 rounded-full bg-[#f8f9fa] flex items-center justify-center shrink-0">
-                    <i class="fa-solid fa-user text-[#525252] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-user text-[#525252] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                   </div>
                   <div class="flex flex-col gap-0.5">
                     <span class="text-xs text-[#525252] font-medium">Bob Tree</span>
@@ -270,19 +270,19 @@
                 </li>
                 <li data-item-type="tickets" class="flex items-center gap-3 px-4 py-2 hover:bg-[#f1f5f9] cursor-pointer transition-colors list-none">
                   <div class="w-8 h-8 rounded-full bg-[#f8f9fa] flex items-center justify-center shrink-0">
-                    <i class="fa-solid fa-ticket text-[#525252] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-ticket text-[#525252] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 10V6a2 2 0 0 0-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg>
                   </div>
                   <span class="text-xs text-[#525252] font-medium">Authentication failure #3</span>
                 </li>
                 <li data-item-type="tickets" class="flex items-center gap-3 px-4 py-2 hover:bg-[#f1f5f9] cursor-pointer transition-colors list-none">
                   <div class="w-8 h-8 rounded-full bg-[#f8f9fa] flex items-center justify-center shrink-0">
-                    <i class="fa-solid fa-ticket text-[#525252] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-ticket text-[#525252] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 10V6a2 2 0 0 0-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg>
                   </div>
                   <span class="text-xs text-[#525252] font-medium">Login page crashes on Safari</span>
                 </li>
                 <li data-item-type="contacts" class="flex items-center gap-3 px-4 py-2 hover:bg-[#f1f5f9] cursor-pointer transition-colors list-none">
                   <div class="w-8 h-8 rounded-full bg-[#f8f9fa] flex items-center justify-center shrink-0">
-                    <i class="fa-solid fa-user text-[#525252] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-user text-[#525252] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                   </div>
                   <div class="flex flex-col gap-0.5">
                     <span class="text-xs text-[#525252] font-medium">Alice Johnson</span>
@@ -292,13 +292,13 @@
                 </li>
                 <li data-item-type="tickets" class="flex items-center gap-3 px-4 py-2 hover:bg-[#f1f5f9] cursor-pointer transition-colors list-none">
                   <div class="w-8 h-8 rounded-full bg-[#f8f9fa] flex items-center justify-center shrink-0">
-                    <i class="fa-solid fa-ticket text-[#525252] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-ticket text-[#525252] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 10V6a2 2 0 0 0-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg>
                   </div>
                   <span class="text-xs text-[#525252] font-medium">Email notifications not being sent</span>
                 </li>
                 <li data-item-type="contacts" class="flex items-center gap-3 px-4 py-2 hover:bg-[#f1f5f9] cursor-pointer transition-colors list-none">
                   <div class="w-8 h-8 rounded-full bg-[#f8f9fa] flex items-center justify-center shrink-0">
-                    <i class="fa-solid fa-user text-[#525252] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-user text-[#525252] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                   </div>
                   <div class="flex flex-col gap-0.5">
                     <span class="text-xs text-[#525252] font-medium">Mark Spencer</span>
@@ -308,13 +308,13 @@
                 </li>
                 <li data-item-type="forums" class="flex items-center gap-3 px-4 py-2 hover:bg-[#f1f5f9] cursor-pointer transition-colors list-none">
                   <div class="w-8 h-8 rounded-full bg-[#f8f9fa] flex items-center justify-center shrink-0">
-                    <i class="fa-solid fa-comments text-[#525252] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-comments text-[#525252] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15 4v7H5.17L4 12.17V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z"/></svg>
                   </div>
                   <span class="text-xs text-[#525252] font-medium">How to reset API keys</span>
                 </li>
                 <li data-item-type="forums" class="flex items-center gap-3 px-4 py-2 hover:bg-[#f1f5f9] cursor-pointer transition-colors list-none">
                   <div class="w-8 h-8 rounded-full bg-[#f8f9fa] flex items-center justify-center shrink-0">
-                    <i class="fa-solid fa-comments text-[#525252] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-comments text-[#525252] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15 4v7H5.17L4 12.17V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z"/></svg>
                   </div>
                   <span class="text-xs text-[#525252] font-medium">Best practices for SLA configuration</span>
                 </li>
@@ -383,7 +383,7 @@
         <!-- Notification bell -->
         <div class="relative shrink-0">
           <button data-toggle="dropdown" data-target="#notifications-dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="notifications-dropdown" aria-label="Notifications" class="relative flex items-center justify-center w-8 h-8 rounded-[6px] text-[#525252] cursor-pointer hover:bg-[#f1f5f9] transition-colors topnav-adaptive">
-            <i class="fa-solid fa-bell text-sm" aria-hidden="true"></i>
+            <svg class="m-icon m-bell text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
             <span class="absolute top-1 right-1.5 w-1.5 h-1.5 bg-red-500 rounded-full border border-white block"></span>
           </button>
 
@@ -400,7 +400,7 @@
               <!-- Unread -->
               <li class="flex items-start gap-3 px-4 py-3 hover:bg-[#f1f5f9] cursor-pointer transition-colors border-b border-[#f1f5f9] bg-[#f8fbfe] list-none">
                   <span class="w-8 h-8 rounded-full bg-[#dbeafe] flex items-center justify-center shrink-0 mt-0.5">
-                    <i class="fa-solid fa-ticket text-[#3da6d7] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-ticket text-[#3da6d7] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 10V6a2 2 0 0 0-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg>
                   </span>
                 <div class="flex-1 min-w-0">
                   <p class="text-xs font-semibold text-[#0a0a0a] leading-snug">New ticket assigned to you</p>
@@ -413,7 +413,7 @@
               <!-- Unread -->
               <li class="flex items-start gap-3 px-4 py-3 hover:bg-[#f1f5f9] cursor-pointer transition-colors border-b border-[#f1f5f9] bg-[#f8fbfe] list-none">
                   <span class="w-8 h-8 rounded-full bg-[#dcfce7] flex items-center justify-center shrink-0 mt-0.5">
-                    <i class="fa-solid fa-comment text-[#22c55e] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-comment text-[#22c55e] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 17.17 18.83 16H4V4h16v13.17zM20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2z"/></svg>
                   </span>
                 <div class="flex-1 min-w-0">
                   <p class="text-xs font-semibold text-[#0a0a0a] leading-snug">New reply on ticket #1042</p>
@@ -426,7 +426,7 @@
               <!-- Unread -->
               <li class="flex items-start gap-3 px-4 py-3 hover:bg-[#f1f5f9] cursor-pointer transition-colors border-b border-[#f1f5f9] bg-[#f8fbfe] list-none">
                   <span class="w-8 h-8 rounded-full bg-[#fef9c3] flex items-center justify-center shrink-0 mt-0.5">
-                    <i class="fa-solid fa-clock text-[#eab308] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-clock text-[#eab308] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
                   </span>
                 <div class="flex-1 min-w-0">
                   <p class="text-xs font-semibold text-[#0a0a0a] leading-snug">Ticket #987 is overdue</p>
@@ -439,7 +439,7 @@
               <!-- Read -->
               <li class="flex items-start gap-3 px-4 py-3 hover:bg-[#f1f5f9] cursor-pointer transition-colors border-b border-[#f1f5f9] list-none">
                   <span class="w-8 h-8 rounded-full bg-[#f3f4f6] flex items-center justify-center shrink-0 mt-0.5">
-                    <i class="fa-solid fa-user-plus text-[#9ca3af] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-user-plus text-[#9ca3af] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 8c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm-6 4c.22-.72 3.31-2 6-2 2.7 0 5.8 1.29 6 2H9zm-3-3v-3h3v-2H6V7H4v3H1v2h3v3z"/></svg>
                   </span>
                 <div class="flex-1 min-w-0">
                   <p class="text-xs font-medium text-[#525252] leading-snug">Agent Alice added to your team</p>
@@ -451,7 +451,7 @@
               <!-- Read -->
               <li class="flex items-start gap-3 px-4 py-3 hover:bg-[#f1f5f9] cursor-pointer transition-colors border-b border-[#f1f5f9] list-none">
                   <span class="w-8 h-8 rounded-full bg-[#f3f4f6] flex items-center justify-center shrink-0 mt-0.5">
-                    <i class="fa-solid fa-circle-check text-[#9ca3af] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-circle-check text-[#9ca3af] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/></svg>
                   </span>
                 <div class="flex-1 min-w-0">
                   <p class="text-xs font-medium text-[#525252] leading-snug">Ticket #1038 resolved</p>
@@ -463,7 +463,7 @@
               <!-- Read -->
               <li class="flex items-start gap-3 px-4 py-3 hover:bg-[#f1f5f9] cursor-pointer transition-colors border-b border-[#f1f5f9] list-none">
                   <span class="w-8 h-8 rounded-full bg-[#f3f4f6] flex items-center justify-center shrink-0 mt-0.5">
-                    <i class="fa-solid fa-at text-[#9ca3af] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-at text-[#9ca3af] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 1.95c-5.52 0-10 4.48-10 10s4.48 10 10 10h5v-2h-5c-4.34 0-8-3.66-8-8s3.66-8 8-8 8 3.66 8 8v1.43c0 .79-.71 1.57-1.5 1.57s-1.5-.78-1.5-1.57v-1.43c0-2.76-2.24-5-5-5s-5 2.24-5 5 2.24 5 5 5c1.38 0 2.64-.56 3.54-1.47.65.89 1.77 1.47 2.96 1.47 1.97 0 3.5-1.6 3.5-3.57v-1.43c0-5.52-4.48-10-10-10zm0 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg>
                   </span>
                 <div class="flex-1 min-w-0">
                   <p class="text-xs font-medium text-[#525252] leading-snug">You were mentioned in ticket #1031</p>
@@ -475,7 +475,7 @@
               <!-- Read -->
               <li class="flex items-start gap-3 px-4 py-3 hover:bg-[#f1f5f9] cursor-pointer transition-colors list-none">
                   <span class="w-8 h-8 rounded-full bg-[#f3f4f6] flex items-center justify-center shrink-0 mt-0.5">
-                    <i class="fa-solid fa-rotate text-[#9ca3af] text-xs" aria-hidden="true"></i>
+                    <svg class="m-icon m-rotate text-[#9ca3af] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
                   </span>
                 <div class="flex-1 min-w-0">
                   <p class="text-xs font-medium text-[#525252] leading-snug">Ticket #1025 reopened</p>
@@ -494,24 +494,24 @@
         </div>
         <!-- Apps button + dropdown -->
         <div class="relative shrink-0 hidden sm:block">
-          <button data-toggle="dropdown" data-target="#apps-dropdown" aria-haspopup="menu" aria-expanded="false" aria-controls="apps-dropdown" aria-label="Apps marketplace" class="bg-white border border-[#d1d5dc] rounded-[6px] flex items-center gap-1.5 px-2.5 py-1.5 text-[#525252] text-xs font-medium cursor-pointer hover:bg-[#f1f5f9] transition-colors">
-            <i class="fa-solid fa-store text-[#525252] text-sm" aria-hidden="true"></i>
+          <button data-toggle="dropdown" data-target="#apps-dropdown" aria-haspopup="menu" aria-expanded="false" aria-controls="apps-dropdown" aria-label="Apps marketplace" class="bg-white border border-[#d1d5dc] rounded-[4px] flex items-center gap-1.5 h-8 px-3 text-[#333] text-[13px] font-medium cursor-pointer hover:bg-[#f5f7f9] transition-colors">
+            <svg class="m-icon m-store text-[#525252] text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m21.9 8.89-1.05-4.37c-.22-.9-1-1.52-1.91-1.52H5.05c-.9 0-1.69.63-1.9 1.52L2.1 8.89c-.24 1.02-.02 2.06.62 2.88.08.11.19.19.28.29V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6.94c.09-.09.2-.18.28-.28.64-.82.87-1.87.62-2.89zm-2.99-3.9 1.05 4.37c.1.42.01.84-.25 1.17-.14.18-.44.47-.94.47-.61 0-1.14-.49-1.21-1.14L16.98 5l1.93-.01zM13 5h1.96l.54 4.52c.05.39-.07.78-.33 1.07-.22.26-.54.41-.95.41-.67 0-1.22-.59-1.22-1.31V5zM8.49 9.52 9.04 5H11v4.69c0 .72-.55 1.31-1.29 1.31-.34 0-.65-.15-.89-.41a1.42 1.42 0 0 1-.33-1.07zm-4.45-.16L5.05 5h1.97l-.58 4.86c-.08.65-.6 1.14-1.21 1.14-.49 0-.8-.29-.93-.47-.27-.32-.36-.75-.26-1.17zM5 19v-6.03c.08.01.15.03.23.03.87 0 1.66-.36 2.24-.95.6.6 1.4.95 2.31.95.87 0 1.65-.36 2.23-.93.59.57 1.39.93 2.29.93.84 0 1.64-.35 2.24-.95.58.59 1.37.95 2.24.95.08 0 .15-.02.23-.03V19H5z"/></svg>
             Apps
           </button>
 
-          <div id="apps-dropdown" role="dialog" aria-label="Apps marketplace" class="absolute right-0 top-[calc(100%+2px)] z-50 w-[343px] bg-white rounded-[6px] shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-[#e5e7eb] overflow-hidden hidden">
+          <div id="apps-dropdown" role="dialog" aria-label="Apps marketplace" class="absolute right-0 top-[calc(100%+2px)] z-50 w-[343px] bg-white rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] border border-[#e5e7eb] overflow-hidden hidden">
 
             <!-- Apps nav list -->
             <ul role="list" class="flex flex-col">
               <!-- Explore Marketplace Apps -->
               <li class="flex gap-3 items-start px-4 py-4 border-b border-[#f3f4f6] cursor-pointer hover:bg-[#f1f5f9] transition-colors list-none">
                 <div class="w-10 h-10 bg-[#f3f4f6] rounded-[14px] flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-grip text-[#4a5565] text-lg"></i>
+                  <svg class="m-icon m-grip text-[#4a5565] text-lg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg>
                 </div>
                 <div class="flex flex-col gap-0.5 flex-1">
                   <div class="flex items-center gap-1">
                     <span class="text-[#1e2939] text-[14px] font-semibold">Explore Marketplace Apps</span>
-                    <i class="fa-solid fa-chevron-right text-[#1e2939] text-[10px]"></i>
+                    <svg class="m-icon m-chevron-right text-[#1e2939] text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
                   </div>
                   <p class="text-[#6a7282] text-[12px] leading-4">Explore apps that enhance your work experience</p>
                 </div>
@@ -527,13 +527,13 @@
                     <span class="text-white text-[12px] font-bold leading-none">D</span>
                   </div>
                   <span class="flex-1 text-[#4a5565] text-[12px] font-medium">App name</span>
-                  <i class="fa-regular fa-circle-check text-green-500 text-[14px] shrink-0"></i>
+                  <svg class="m-icon m-circle-check text-green-500 text-[14px] shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/></svg>
                   <div class="border border-[#e5e7eb] rounded flex items-center gap-0.5 px-1.5 py-0.5 shrink-0">
-                    <i class="fa-solid fa-arrow-down text-[#99a1af] text-[10px]"></i>
+                    <svg class="m-icon m-arrow-down text-[#99a1af] text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m20 12-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/></svg>
                     <span class="text-[#99a1af] text-[11px]">700+</span>
                   </div>
                   <div class="flex items-center gap-0.5 shrink-0">
-                    <i class="fa-solid fa-star text-yellow-400 text-[11px]"></i>
+                    <svg class="m-icon m-star text-yellow-400 text-[11px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"/></svg>
                     <span class="text-[#4a5565] text-[12px]">4.4</span>
                   </div>
                 </li>
@@ -542,13 +542,13 @@
                     <span class="text-white text-[12px] font-bold leading-none">D</span>
                   </div>
                   <span class="flex-1 text-[#4a5565] text-[12px] font-medium">App name</span>
-                  <i class="fa-regular fa-circle-check text-green-500 text-[14px] shrink-0"></i>
+                  <svg class="m-icon m-circle-check text-green-500 text-[14px] shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/></svg>
                   <div class="border border-[#e5e7eb] rounded flex items-center gap-0.5 px-1.5 py-0.5 shrink-0">
-                    <i class="fa-solid fa-arrow-down text-[#99a1af] text-[10px]"></i>
+                    <svg class="m-icon m-arrow-down text-[#99a1af] text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m20 12-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/></svg>
                     <span class="text-[#99a1af] text-[11px]">700+</span>
                   </div>
                   <div class="flex items-center gap-0.5 shrink-0">
-                    <i class="fa-solid fa-star text-yellow-400 text-[11px]"></i>
+                    <svg class="m-icon m-star text-yellow-400 text-[11px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"/></svg>
                     <span class="text-[#4a5565] text-[12px]">4.4</span>
                   </div>
                 </li>
@@ -557,13 +557,13 @@
                     <span class="text-white text-[12px] font-bold leading-none">D</span>
                   </div>
                   <span class="flex-1 text-[#4a5565] text-[12px] font-medium">App name</span>
-                  <i class="fa-regular fa-circle-check text-green-500 text-[14px] shrink-0"></i>
+                  <svg class="m-icon m-circle-check text-green-500 text-[14px] shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/></svg>
                   <div class="border border-[#e5e7eb] rounded flex items-center gap-0.5 px-1.5 py-0.5 shrink-0">
-                    <i class="fa-solid fa-arrow-down text-[#99a1af] text-[10px]"></i>
+                    <svg class="m-icon m-arrow-down text-[#99a1af] text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m20 12-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/></svg>
                     <span class="text-[#99a1af] text-[11px]">700+</span>
                   </div>
                   <div class="flex items-center gap-0.5 shrink-0">
-                    <i class="fa-solid fa-star text-yellow-400 text-[11px]"></i>
+                    <svg class="m-icon m-star text-yellow-400 text-[11px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"/></svg>
                     <span class="text-[#4a5565] text-[12px]">4.4</span>
                   </div>
                 </li>
@@ -572,13 +572,13 @@
                     <span class="text-white text-[12px] font-bold leading-none">D</span>
                   </div>
                   <span class="flex-1 text-[#4a5565] text-[12px] font-medium">App name</span>
-                  <i class="fa-regular fa-circle-check text-green-500 text-[14px] shrink-0"></i>
+                  <svg class="m-icon m-circle-check text-green-500 text-[14px] shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/></svg>
                   <div class="border border-[#e5e7eb] rounded flex items-center gap-0.5 px-1.5 py-0.5 shrink-0">
-                    <i class="fa-solid fa-arrow-down text-[#99a1af] text-[10px]"></i>
+                    <svg class="m-icon m-arrow-down text-[#99a1af] text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m20 12-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/></svg>
                     <span class="text-[#99a1af] text-[11px]">700+</span>
                   </div>
                   <div class="flex items-center gap-0.5 shrink-0">
-                    <i class="fa-solid fa-star text-yellow-400 text-[11px]"></i>
+                    <svg class="m-icon m-star text-yellow-400 text-[11px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"/></svg>
                     <span class="text-[#4a5565] text-[12px]">4.4</span>
                   </div>
                 </li>
@@ -587,12 +587,12 @@
               <!-- Manage Apps -->
               <li class="flex gap-4 items-center px-4 py-4 border-t border-[#f3f4f6] cursor-pointer hover:bg-[#f1f5f9] transition-colors list-none">
                 <div class="w-10 h-10 bg-[#f3f4f6] rounded-[14px] flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-sliders text-[#4a5565] text-lg"></i>
+                  <svg class="m-icon m-sliders text-[#4a5565] text-lg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg>
                 </div>
                 <div class="flex flex-col gap-0.5 flex-1">
                   <div class="flex items-center gap-1">
                     <span class="text-[#1e2939] text-[14px] font-semibold">Manage Apps</span>
-                    <i class="fa-solid fa-chevron-right text-[#1e2939] text-[10px]"></i>
+                    <svg class="m-icon m-chevron-right text-[#1e2939] text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
                   </div>
                   <p class="text-[#6a7282] text-[12px] leading-4">Easily manage, upgrade, and configure your apps</p>
                 </div>
@@ -601,12 +601,12 @@
               <!-- Developer Portal -->
               <li class="flex gap-4 items-center px-4 py-4 border-t border-[#f3f4f6] cursor-pointer hover:bg-[#f1f5f9] transition-colors list-none">
                 <div class="w-10 h-10 bg-[#f3f4f6] rounded-[14px] flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-code text-[#4a5565] text-lg"></i>
+                  <svg class="m-icon m-code text-[#4a5565] text-lg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0 4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
                 </div>
                 <div class="flex flex-col gap-0.5 flex-1">
                   <div class="flex items-center gap-1">
                     <span class="text-[#1e2939] text-[14px] font-semibold">Developer Portal</span>
-                    <i class="fa-solid fa-chevron-right text-[#1e2939] text-[10px]"></i>
+                    <svg class="m-icon m-chevron-right text-[#1e2939] text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
                   </div>
                   <p class="text-[#6a7282] text-[12px] leading-4">Build tools to help thousands of businesses worldwide</p>
                 </div>
@@ -618,7 +618,7 @@
         <!-- Avatar -->
         <div class="relative shrink-0">
           <button data-toggle="dropdown" data-target="#profile-dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="profile-dropdown" aria-label="User profile" class="w-7 h-7 rounded-full bg-amber-100 border border-amber-300 flex items-center justify-center overflow-hidden cursor-pointer transition-colors">
-            <i class="fa-solid fa-user text-[#0a0a0a] text-xs" aria-hidden="true"></i>
+            <svg class="m-icon m-user text-[#0a0a0a] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
           </button>
 
           <div id="profile-dropdown" role="dialog" aria-label="User profile menu" class="absolute right-0 top-[calc(100%+4px)] z-50 w-[260px] bg-white rounded-[10px] shadow-[0_0_10px_rgba(0,0,0,0.2)] overflow-hidden hidden">
@@ -632,34 +632,34 @@
               </div>
               <!-- Profile settings -->
               <a href="#" class="px-4 py-3 flex items-center gap-3 hover:bg-[#f1f5f9] transition-colors no-underline border-b border-[#e5e7eb]">
-                <i class="fa-solid fa-user-gear text-[#444] text-xs w-4 text-center shrink-0" aria-hidden="true"></i>
+                <svg class="m-icon m-user-gear text-[#444] text-xs w-4 text-center shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4 18v-.65c0-.34.16-.66.41-.81C6.1 15.53 8.03 15 10 15c.03 0 .05 0 .08.01.1-.7.3-1.37.59-1.98-.22-.02-.44-.03-.67-.03-2.42 0-4.68.67-6.61 1.82-.88.52-1.39 1.5-1.39 2.53V20h9.26c-.42-.6-.75-1.28-.97-2H4zm6-6c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm10.75 10c0-.22-.03-.42-.06-.63l1.14-1.01-1-1.73-1.45.49c-.32-.27-.68-.48-1.08-.63L18 11h-2l-.3 1.49c-.4.15-.76.36-1.08.63l-1.45-.49-1 1.73 1.14 1.01c-.03.21-.06.41-.06.63s.03.42.06.63l-1.14 1.01 1 1.73 1.45-.49c.32.27.68.48 1.08.63L16 21h2l.3-1.49c.4-.15.76-.36 1.08-.63l1.45.49 1-1.73-1.14-1.01c.03-.21.06-.41.06-.63zM17 18c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
                 <span class="text-xs text-[#333]">Profile settings</span>
               </a>
               <!-- Theme -->
               <button id="btn-profile-theme" class="px-4 py-3 flex items-center gap-3 w-full hover:bg-[#f1f5f9] transition-colors cursor-pointer border-b border-[#e5e7eb]">
-                <i class="fa-solid fa-circle-half-stroke text-[#444] text-xs w-4 text-center shrink-0" aria-hidden="true"></i>
+                <svg class="m-icon m-circle-half-stroke text-[#444] text-xs w-4 text-center shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zm1-17.93c3.94.49 7 3.85 7 7.93s-3.05 7.44-7 7.93V4.07z"/></svg>
                 <span class="text-xs text-[#333] flex-1 text-left">Theme</span>
-                <i class="fa-solid fa-chevron-right text-[#9ca3af] text-xs" aria-hidden="true"></i>
+                <svg class="m-icon m-chevron-right text-[#9ca3af] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
               </button>
               <!-- Color scheme -->
               <button id="btn-profile-color" class="px-4 py-3 flex items-center gap-3 w-full hover:bg-[#f1f5f9] transition-colors cursor-pointer border-b border-[#e5e7eb]">
-                <i class="fa-solid fa-palette text-[#444] text-xs w-4 text-center shrink-0" aria-hidden="true"></i>
+                <svg class="m-icon m-palette text-[#444] text-xs w-4 text-center shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 22C6.49 22 2 17.51 2 12S6.49 2 12 2s10 4.04 10 9c0 3.31-2.69 6-6 6h-1.77c-.28 0-.5.22-.5.5 0 .12.05.23.13.33.41.47.64 1.06.64 1.67A2.5 2.5 0 0 1 12 22zm0-18c-4.41 0-8 3.59-8 8s3.59 8 8 8c.28 0 .5-.22.5-.5a.54.54 0 0 0-.14-.35c-.41-.46-.63-1.05-.63-1.65a2.5 2.5 0 0 1 2.5-2.5H16c2.21 0 4-1.79 4-4 0-3.86-3.59-7-8-7z"/></svg>
                 <span class="text-xs text-[#333] flex-1 text-left">Color scheme</span>
-                <i class="fa-solid fa-chevron-right text-[#9ca3af] text-xs" aria-hidden="true"></i>
+                <svg class="m-icon m-chevron-right text-[#9ca3af] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
               </button>
               <!-- Go to customer portal -->
               <a href="#" class="px-4 py-3 flex items-center gap-3 hover:bg-[#f1f5f9] transition-colors no-underline border-b border-[#e5e7eb]">
-                <i class="fa-solid fa-arrow-up-right-from-square text-[#6a7282] text-sm w-4 text-center" aria-hidden="true"></i>
+                <svg class="m-icon m-arrow-up-right-from-square text-[#6a7282] text-sm w-4 text-center" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
                 <span class="text-xs text-[#333]">Go to customer portal</span>
               </a>
               <!-- Schedule out of office -->
               <a href="#" class="px-4 py-3 flex items-center gap-3 hover:bg-[#f1f5f9] transition-colors no-underline border-b border-[#e5e7eb]">
-                <i class="fa-solid fa-calendar-days text-[#444] text-xs w-4 text-center shrink-0" aria-hidden="true"></i>
+                <svg class="m-icon m-calendar-days text-[#444] text-xs w-4 text-center shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
                 <span class="text-xs text-[#333]">Schedule out of office</span>
               </a>
               <!-- Sign out -->
               <a href="#" class="px-4 py-3 flex items-center gap-3 hover:bg-[#f1f5f9] transition-colors no-underline">
-                <i class="fa-solid fa-right-from-bracket text-[#444] text-xs w-4 text-center shrink-0" aria-hidden="true"></i>
+                <svg class="m-icon m-right-from-bracket text-[#444] text-xs w-4 text-center shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m17 8-1.41 1.41L17.17 11H9v2h8.17l-1.58 1.58L17 16l4-4-4-4zM5 5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h7v-2H5V5z"/></svg>
                 <span class="text-xs text-[#333]">Sign out</span>
               </a>
             </div>
@@ -668,7 +668,7 @@
             <div id="profile-theme-panel" class="hidden flex-col">
               <!-- Back header -->
               <button id="btn-profile-theme-back" class="flex items-center gap-2.5 px-4 py-3 border-b border-[rgba(0,0,0,0.1)] w-full cursor-pointer">
-                <i class="fa-solid fa-arrow-left text-[#0a0a0a] text-xs" aria-hidden="true"></i>
+                <svg class="m-icon m-arrow-left text-[#0a0a0a] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
                 <span class="text-sm font-medium text-[#0a0a0a]">Back</span>
               </button>
               <!-- Theme options -->
@@ -781,7 +781,7 @@
             <!-- Color scheme panel -->
             <div id="profile-color-panel" class="hidden flex-col overflow-y-auto max-h-[420px]">
               <button id="btn-profile-color-back" class="flex items-center gap-2.5 px-4 py-3 border-b border-[rgba(0,0,0,0.1)] w-full shrink-0">
-                <i class="fa-solid fa-arrow-left text-[#0a0a0a] text-xs" aria-hidden="true"></i>
+                <svg class="m-icon m-arrow-left text-[#0a0a0a] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
                 <span class="text-sm font-medium text-[#0a0a0a]">Back</span>
               </button>
               <!-- Sidebar color -->
@@ -789,39 +789,39 @@
                 <p class="text-[11px] font-semibold text-[#525252] uppercase tracking-wide mb-2.5">Sidebar</p>
                 <div class="grid grid-cols-4 gap-3" data-swatch-group="sidebar">
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="sidebar" data-color="default" aria-label="Default">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#f7f9fa] border-2 border-[#d1d5dc] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#f7f9fa] border-2 border-[#d1d5dc] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Default</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="sidebar" data-color="black" aria-label="Black">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#111827] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-white opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#111827] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-white opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Black</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="sidebar" data-color="white" aria-label="White">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-white border-2 border-[#d1d5dc] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-white border-2 border-[#d1d5dc] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">White</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="sidebar" data-color="blue" aria-label="Blue">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#dbeafe] border-2 border-[#bfdbfe] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#dbeafe] border-2 border-[#bfdbfe] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Blue</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="sidebar" data-color="green" aria-label="Green">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#dcfce7] border-2 border-[#bbf7d0] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#dcfce7] border-2 border-[#bbf7d0] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Green</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="sidebar" data-color="red" aria-label="Red">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#fee2e2] border-2 border-[#fecaca] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#fee2e2] border-2 border-[#fecaca] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Red</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="sidebar" data-color="purple" aria-label="Purple">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#f3e8ff] border-2 border-[#e9d5ff] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#f3e8ff] border-2 border-[#e9d5ff] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Purple</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="sidebar" data-color="orange" aria-label="Orange">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#ffedd5] border-2 border-[#fed7aa] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#ffedd5] border-2 border-[#fed7aa] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Orange</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="sidebar" data-color="yellow" aria-label="Yellow">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#fef9c3] border-2 border-[#fde68a] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#fef9c3] border-2 border-[#fde68a] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Yellow</span>
                   </button>
                 </div>
@@ -833,39 +833,39 @@
                 <p class="text-[11px] font-semibold text-[#525252] uppercase tracking-wide mb-2.5">Top navigation</p>
                 <div class="grid grid-cols-4 gap-3" data-swatch-group="topnav">
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="topnav" data-color="default" aria-label="Default">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#f7f9fa] border-2 border-[#d1d5dc] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#f7f9fa] border-2 border-[#d1d5dc] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Default</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="topnav" data-color="black" aria-label="Black">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#111827] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-white opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#111827] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-white opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Black</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="topnav" data-color="white" aria-label="White">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-white border-2 border-[#d1d5dc] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-white border-2 border-[#d1d5dc] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">White</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="topnav" data-color="blue" aria-label="Blue">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#dbeafe] border-2 border-[#bfdbfe] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#dbeafe] border-2 border-[#bfdbfe] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Blue</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="topnav" data-color="green" aria-label="Green">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#dcfce7] border-2 border-[#bbf7d0] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#dcfce7] border-2 border-[#bbf7d0] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Green</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="topnav" data-color="red" aria-label="Red">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#fee2e2] border-2 border-[#fecaca] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#fee2e2] border-2 border-[#fecaca] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Red</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="topnav" data-color="purple" aria-label="Purple">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#f3e8ff] border-2 border-[#e9d5ff] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#f3e8ff] border-2 border-[#e9d5ff] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Purple</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="topnav" data-color="orange" aria-label="Orange">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#ffedd5] border-2 border-[#fed7aa] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#ffedd5] border-2 border-[#fed7aa] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Orange</span>
                   </button>
                   <button class="color-swatch flex flex-col items-center gap-1.5" data-target="topnav" data-color="yellow" aria-label="Yellow">
-                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#fef9c3] border-2 border-[#fde68a] flex items-center justify-center"><i class="fa-solid fa-check text-[9px] text-[#333] opacity-0" aria-hidden="true"></i></span>
+                    <span class="swatch-circle w-8 h-8 rounded-full bg-[#fef9c3] border-2 border-[#fde68a] flex items-center justify-center"><svg class="m-icon m-check text-[9px] text-[#333] opacity-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></span>
                     <span class="text-[10px] text-[#6a7282]">Yellow</span>
                   </button>
                 </div>
@@ -939,13 +939,13 @@
         <div class="mt-4 flex flex-col gap-2">
           <div class="bg-white border border-[rgba(219,219,219,0.87)] rounded-[6px] flex items-center gap-2 px-3 py-2">
             <div class="bg-[#ededed] rounded-[4px] w-5 h-5 flex items-center justify-center shrink-0">
-              <i class="fa-solid fa-comment-slash text-[7px] text-[#6a7282]"></i>
+              <svg class="m-icon m-comment-slash text-[7px] text-[#6a7282]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 4v12h-1.34l1.91 1.91A2.01 2.01 0 0 0 22 16V4c0-1.1-.9-2-2-2H4.66l2 2H20zM6 12h2v2H6zm12-3h-6.34l2 2H18zm0-3h-8v1.34l.66.66H18zM1.41 1.59 0 3l2.01 2.01L2 22l4-4h9l5.73 5.73 1.41-1.41L1.41 1.59zM5.17 16 4 17.17V7l2 2v2h2l5 5H5.17z"/></svg>
             </div>
             <p class="text-[10px] text-[#4a5565]">Your team won't be able to respond to customer questions</p>
           </div>
           <div class="bg-white border border-[rgba(219,219,219,0.87)] rounded-[6px] flex items-center gap-2 px-3 py-2">
             <div class="bg-[#ededed] rounded-[4px] w-5 h-5 flex items-center justify-center shrink-0">
-              <i class="fa-solid fa-circle-pause text-[7px] text-[#6a7282]"></i>
+              <svg class="m-icon m-circle-pause text-[7px] text-[#6a7282]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16h2V8H9v8zm3-14C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-4h2V8h-2v8z"/></svg>
             </div>
             <p class="text-[10px] text-[#4a5565]">Any configured workflows will be paused</p>
           </div>
@@ -958,7 +958,7 @@
         <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4">
           <div class="flex items-start gap-2">
             <div class="bg-[#dbeafe] rounded-full w-6 h-6 flex items-center justify-center shrink-0 mt-px">
-              <i class="fa-solid fa-bolt text-[8px] text-blue-500"></i>
+              <svg class="m-icon m-bolt text-[8px] text-blue-500" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11 21h-1l1-7H7.5c-.88 0-.33-.75-.31-.78C8.48 10.94 10.42 7.54 13.01 3h1l-1 7h3.51c.4 0 .62.19.4.66C12.97 17.55 11 21 11 21z"/></svg>
             </div>
             <div>
               <p class="font-bold text-[#1e2939] text-sm leading-5">10s</p>
@@ -967,7 +967,7 @@
           </div>
           <div class="flex items-start gap-2">
             <div class="bg-[#dcfce7] rounded-full w-6 h-6 flex items-center justify-center shrink-0 mt-px">
-              <i class="fa-solid fa-check text-[8px] text-green-500"></i>
+              <svg class="m-icon m-check text-[8px] text-green-500" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
             </div>
             <div>
               <p class="font-bold text-[#1e2939] text-sm leading-5">~2mins</p>
@@ -976,7 +976,7 @@
           </div>
           <div class="flex items-start gap-2">
             <div class="bg-[#f3e8ff] rounded-full w-6 h-6 flex items-center justify-center shrink-0 mt-px">
-              <i class="fa-solid fa-brain text-[8px] text-purple-500"></i>
+              <svg class="m-icon m-brain text-[8px] text-purple-500" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m15.82 7.22-1 .4c-.21-.16-.43-.29-.67-.39L14 6.17c-.02-.1-.1-.17-.2-.17h-1.6c-.1 0-.18.07-.19.17l-.15 1.06c-.24.1-.47.23-.67.39l-1-.4c-.09-.03-.2 0-.24.09l-.8 1.38a.2.2 0 0 0 .05.26l.85.66c-.03.12-.05.26-.05.39s.01.26.03.39l-.84.66a.19.19 0 0 0-.05.25l.8 1.39c.05.09.15.12.25.09l.99-.4c.21.16.43.29.68.39l.14 1.06c.02.1.1.17.2.17h1.6c.1 0 .18-.07.2-.17l.15-1.06c.24-.1.47-.23.67-.39l.99.4c.09.04.2 0 .24-.09l.8-1.39c.05-.09.03-.19-.05-.25l-.83-.66a2.561 2.561 0 0 0 0-.78l.85-.66a.2.2 0 0 0 .05-.26l-.8-1.38c-.05-.09-.16-.12-.25-.09zM13 11.43a1.43 1.43 0 1 1 0-2.86 1.43 1.43 0 0 1 0 2.86z"/><path d="M19.94 9.06c-.43-3.27-3.23-5.86-6.53-6.05C13.27 3 13.14 3 13 3 9.47 3 6.57 5.61 6.08 9l-1.93 3.48c-.41.66.07 1.52.85 1.52h1v2c0 1.1.9 2 2 2h1v3h7v-4.68a7.016 7.016 0 0 0 3.94-7.26zm-5.05 5.57-.89.42V19h-3v-3H8v-4H6.7l1.33-2.33C8.21 7.06 10.35 5 13 5c2.76 0 5 2.24 5 5 0 2.09-1.29 3.88-3.11 4.63z"/></svg>
             </div>
             <div>
               <p class="font-bold text-[#1e2939] text-sm leading-5">75% improved</p>
@@ -985,7 +985,7 @@
           </div>
           <div class="flex items-start gap-2">
             <div class="bg-[#ffedd4] rounded-full w-6 h-6 flex items-center justify-center shrink-0 mt-px">
-              <i class="fa-solid fa-robot text-[8px] text-orange-400"></i>
+              <svg class="m-icon m-robot text-[8px] text-orange-400" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 9V7c0-1.1-.9-2-2-2h-3c0-1.66-1.34-3-3-3S9 3.34 9 5H6c-1.1 0-2 .9-2 2v2c-1.66 0-3 1.34-3 3s1.34 3 3 3v4c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-4c1.66 0 3-1.34 3-3s-1.34-3-3-3zm-2 10H6V7h12v12zm-9-6c-.83 0-1.5-.67-1.5-1.5S8.17 10 9 10s1.5.67 1.5 1.5S9.83 13 9 13zm7.5-1.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5zM8 15h8v2H8v-2z"/></svg>
             </div>
             <div>
               <p class="font-bold text-[#1e2939] text-sm leading-5">Upto 65%</p>
@@ -1015,7 +1015,7 @@
         to continue using Faveo Helpdesk
       </p>
       <button data-dismiss="#panel-renew" aria-label="Close renewal panel" class="absolute right-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
-        <i class="fa-solid fa-xmark text-[10px] text-gray-500" aria-hidden="true"></i>
+        <svg class="m-icon m-xmark text-[10px] text-gray-500" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </div>
   </div>
@@ -1025,36 +1025,36 @@
 
 <!-- ── Shared ticket dropdown panels ─────────────────────────────── -->
 <!-- Priority panel -->
-<div id="panel-priority" class="fixed z-[300] hidden bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] p-1 min-w-[120px]">
-  <button class="priority-opt flex items-center gap-2 w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="Low" data-color="bg-green-500">
+<div id="panel-priority" class="fixed z-[300] hidden bg-white rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] border border-[#e5e7eb] p-1 min-w-[120px]">
+  <button class="priority-opt flex items-center gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Low" data-color="bg-green-500">
     <span class="w-2.5 h-2.5 rounded-sm bg-green-500 shrink-0"></span>
     <span class="flex-1 text-left">Low</span>
   </button>
-  <button class="priority-opt flex items-center gap-2 w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="Medium" data-color="bg-blue-400">
+  <button class="priority-opt flex items-center gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Medium" data-color="bg-blue-400">
     <span class="w-2.5 h-2.5 rounded-sm bg-blue-400 shrink-0"></span>
     <span class="flex-1 text-left">Medium</span>
   </button>
-  <button class="priority-opt flex items-center gap-2 w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="High" data-color="bg-yellow-400">
+  <button class="priority-opt flex items-center gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="High" data-color="bg-yellow-400">
     <span class="w-2.5 h-2.5 rounded-sm bg-yellow-400 shrink-0"></span>
     <span class="flex-1 text-left">High</span>
   </button>
-  <button class="priority-opt flex items-center gap-2 w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="Urgent" data-color="bg-red-500">
+  <button class="priority-opt flex items-center gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Urgent" data-color="bg-red-500">
     <span class="w-2.5 h-2.5 rounded-sm bg-red-500 shrink-0"></span>
     <span class="flex-1 text-left">Urgent</span>
   </button>
 </div>
 
 <!-- Status panel -->
-<div id="panel-status" class="fixed z-[300] hidden bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] p-1 min-w-[150px]">
-  <button class="status-opt flex items-center w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="Open" data-icon="fa-envelope-open">Open</button>
-  <button class="status-opt flex items-center w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="Pending" data-icon="fa-pause">Pending</button>
-  <button class="status-opt flex items-center w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="Resolved" data-icon="fa-circle-check">Resolved</button>
-  <button class="status-opt flex items-center w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="Closed" data-icon="fa-check">Closed</button>
-  <button class="status-opt flex items-center w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="Waiting on Customer" data-icon="fa-hourglass-half">Waiting on Customer</button>
+<div id="panel-status" class="fixed z-[300] hidden bg-white rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] border border-[#e5e7eb] p-1 min-w-[150px]">
+  <button class="status-opt flex items-center w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Open" data-icon="fa-envelope-open">Open</button>
+  <button class="status-opt flex items-center w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Pending" data-icon="fa-pause">Pending</button>
+  <button class="status-opt flex items-center w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Resolved" data-icon="fa-circle-check">Resolved</button>
+  <button class="status-opt flex items-center w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Closed" data-icon="fa-check">Closed</button>
+  <button class="status-opt flex items-center w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Waiting on Customer" data-icon="fa-hourglass-half">Waiting on Customer</button>
 </div>
 
 <!-- Agent panel -->
-<div id="panel-agent" class="fixed z-[300] hidden bg-white rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.14)] border border-[#e5e7eb] min-w-[210px]">
+<div id="panel-agent" class="fixed z-[300] hidden bg-white rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] border border-[#e5e7eb] min-w-[210px]">
   <div class="px-2.5 pt-2.5 pb-0 border-b border-[#e5e7eb]">
     <div class="flex gap-4 text-[10px] font-bold uppercase tracking-wide">
       <span class="text-[#9ca3af] pb-2 cursor-pointer">Group</span>
@@ -1064,41 +1064,41 @@
   <div class="px-1.5 py-1.5 border-b border-[#e5e7eb]">
     <div class="relative">
       <input id="agent-search-input" type="text" placeholder="Search agent" class="w-full pl-2.5 pr-7 py-1 text-[11px] rounded-[5px] border border-[#e5e7eb] focus:outline-none focus:border-blue-400 bg-transparent">
-      <i class="fa-solid fa-magnifying-glass absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-[9px]" aria-hidden="true"></i>
+      <svg class="m-icon m-magnifying-glass absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-[9px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
     </div>
   </div>
   <div id="agent-list" class="p-1 max-h-[160px] overflow-y-auto">
-    <button class="agent-opt flex items-center justify-between gap-2 w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="-- / Unassigned">
+    <button class="agent-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="-- / Unassigned">
       <div class="flex items-center gap-1.5">
         <span class="w-5 h-5 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[9px] text-[#6a7282] font-semibold shrink-0">--</span>
         <span>Unassigned</span>
       </div>
     </button>
-    <button class="agent-opt flex items-center justify-between gap-2 w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="-- / Alice Johnson">
+    <button class="agent-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="-- / Alice Johnson">
       <div class="flex items-center gap-1.5">
         <span class="w-5 h-5 rounded-full bg-blue-400 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">AJ</span>
         <span>Alice Johnson</span>
       </div>
     </button>
-    <button class="agent-opt flex items-center justify-between gap-2 w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="-- / Alex P.">
+    <button class="agent-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="-- / Alex P.">
       <div class="flex items-center gap-1.5">
         <span class="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">AP</span>
         <span>Alex P.</span>
       </div>
     </button>
-    <button class="agent-opt flex items-center justify-between gap-2 w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="-- / Ben Carter">
+    <button class="agent-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="-- / Ben Carter">
       <div class="flex items-center gap-1.5">
         <span class="w-5 h-5 rounded-full bg-purple-400 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">BC</span>
         <span>Ben Carter</span>
       </div>
     </button>
-    <button class="agent-opt flex items-center justify-between gap-2 w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="-- / Lisa M.">
+    <button class="agent-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="-- / Lisa M.">
       <div class="flex items-center gap-1.5">
         <span class="w-5 h-5 rounded-full bg-orange-400 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">LM</span>
         <span>Lisa M.</span>
       </div>
     </button>
-    <button class="agent-opt flex items-center justify-between gap-2 w-full px-2.5 py-1.5 rounded-[6px] text-[12px] font-medium text-[#1e2939] hover:bg-[#f1f5f9] transition-colors" data-value="-- / Sam Patel">
+    <button class="agent-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="-- / Sam Patel">
       <div class="flex items-center gap-1.5">
         <span class="w-5 h-5 rounded-full bg-pink-400 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">SP</span>
         <span>Sam Patel</span>

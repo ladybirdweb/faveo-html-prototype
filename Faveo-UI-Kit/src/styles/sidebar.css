@@ -4,13 +4,21 @@
   .sidebar-nav {
     @apply flex items-center justify-center rounded-[10px] cursor-pointer
            border-none bg-transparent outline-none no-underline shrink-0
-           transition-colors duration-150 text-[18px];
+           transition-colors duration-150 text-[20px];
     height: 40px;
     width: 48px;
-    color: var(--c-text-3);
   }
-  .sidebar-nav:hover  { background: var(--c-hover); }
-  .sidebar-nav.active { background: var(--c-active); }
+  .sidebar-nav:hover  { background: var(--c-hover); color: #000; }
+  .sidebar-nav.active {
+    background: #c5cdd3b3;
+    border: 1px solid #c5cdd3;
+    color: #000;
+  }
+
+  /* Material Symbols pair per item: outline by default, filled when active */
+  .sidebar-nav .nav-ico-fill        { display: none; }
+  .sidebar-nav.active .nav-ico-line { display: none; }
+  .sidebar-nav.active .nav-ico-fill { display: block; }
 
   .nav-submenu-panel {
     position: fixed;

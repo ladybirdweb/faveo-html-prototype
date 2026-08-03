@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import { matIcon } from './js/mat-icons.js'
 
 // ── Dropdown ──────────────────────────────────────────────────────
 // Usage: <button data-toggle="dropdown" data-target="#my-menu">
@@ -167,7 +168,7 @@ $(document).on('click', '[data-acc-toggle]', function () {
   var $chevron = $btn.find('.acc-chevron')
   var closing  = !$body.hasClass('hidden')
   $body.toggleClass('hidden', closing)
-  $chevron.toggleClass('fa-chevron-down', closing).toggleClass('fa-chevron-up', !closing)
+  $chevron.toggleClass('rotate-180', !closing)
   $btn.attr('aria-expanded', closing ? 'false' : 'true')
 })
 
@@ -193,19 +194,19 @@ $(document).on('click', '[data-scroll-to]', function () {
 // Moves active highlight within each group (field / direction) independently.
 // Updates the trigger button label when a field is selected.
 
-const SORT_INACTIVE = 'sort-item flex items-center w-full px-2.5 py-1.5 rounded-[4px] text-[#4a5565] text-[12px] font-medium cursor-pointer border-none bg-transparent text-left hover:bg-[#f1f5f9] transition-colors'
-const SORT_ACTIVE   = 'sort-item sort-active flex items-center justify-between w-full px-2.5 py-1.5 rounded-[4px] text-[12px] font-medium cursor-pointer border-none text-left transition-colors bg-[#cfcfcf] text-[#4a5565]'
+const SORT_INACTIVE = 'sort-item flex items-center w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-left hover:bg-[#f5f7f9] transition-colors'
+const SORT_ACTIVE   = 'sort-item sort-active flex items-center justify-between w-full px-3 py-2 rounded-[6px] text-[13px] font-normal cursor-pointer border-none text-left transition-colors bg-[#cfcfcf] text-[#333]'
 
 $(document).on('click', '#sort-dropdown .sort-item', function () {
   const $item  = $(this)
   const $group = $item.closest('[data-sort-group]')
 
   $group.find('.sort-item').each(function () {
-    $(this).attr('class', SORT_INACTIVE).find('.fa-check').remove()
+    $(this).attr('class', SORT_INACTIVE).find('.m-check').remove()
   })
 
   $item.attr('class', SORT_ACTIVE)
-  $item.append('<i class="fa-solid fa-check text-[10px]" aria-hidden="true"></i>')
+  $item.append(matIcon('fa-check', 'text-[10px]'))
 
   if ($group.data('sort-group') === 'field') {
     $('[data-target="#sort-dropdown"] span').text($item.text().trim())

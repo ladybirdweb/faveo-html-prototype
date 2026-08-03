@@ -14,7 +14,7 @@
   /* Views panel item */
   .view-item {
     @apply flex items-center gap-2.5 h-9 px-2.5 rounded-[10px]
-           text-sm font-normal no-underline w-full transition-colors duration-150;
+           text-[13px] font-normal no-underline w-full transition-colors duration-150;
     background: var(--c-surface);
     color: var(--c-text-3);
   }
@@ -105,4 +105,26 @@
 }
 .scrollbar-none::-webkit-scrollbar {
   display: none;
+}
+
+/* ── Dashboard cards (Figma dashboard redesign, D0 2026-07-30) ──
+   token-only so light/dark both resolve from tokens.css */
+@layer components {
+  /* widget card shell — 3+ repeats on both dashboard pages.
+     Freshdesk-flat variant (2026-07-31): hairline border, small radius, NO shadow. */
+  .fv-card {
+    @apply flex flex-col rounded-[6px] p-4;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+  }
+  /* KPI stat tile — flat label-over-number (no icon square) */
+  .fv-stat-tile {
+    @apply flex flex-col items-start justify-center gap-1 rounded-[6px] px-4 h-20;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+  }
+  /* card header row (title/subtitle + trailing action; no icon tile) */
+  .fv-card-head {
+    @apply flex items-center gap-2.5 shrink-0;
+  }
 }

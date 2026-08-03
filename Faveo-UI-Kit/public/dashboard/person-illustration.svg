@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="PersonIllustration" clip-path="url(#clip0_0_888)">
+<path id="Vector" d="M40 73C52.1503 73 62 70.7614 62 68C62 65.2386 52.1503 63 40 63C27.8497 63 18 65.2386 18 68C18 70.7614 27.8497 73 40 73Z" fill="#F3F4F6"/>
+<path id="Vector_2" d="M40 32C45.5228 32 50 27.5228 50 22C50 16.4772 45.5228 12 40 12C34.4772 12 30 16.4772 30 22C30 27.5228 34.4772 32 40 32Z" stroke="#D1D5DB" stroke-width="1.5"/>
+<path id="Vector_3" d="M24 62C24 53.2 31.2 46 40 46C48.8 46 56 53.2 56 62" stroke="#D1D5DB" stroke-width="1.5" stroke-linecap="round"/>
+<path id="Vector_4" d="M40 82C49.9411 82 58 73.9411 58 64C58 54.0589 49.9411 46 40 46C30.0589 46 22 54.0589 22 64C22 73.9411 30.0589 82 40 82Z" stroke="#E5E7EB" stroke-dasharray="3 3"/>
+</g>
+<defs>
+<clipPath id="clip0_0_888">
+<rect width="80" height="80" fill="white"/>
+</clipPath>
+</defs>
+</svg>

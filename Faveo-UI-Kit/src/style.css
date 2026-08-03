@@ -1,5 +1,7 @@
-/* Source Sans Pro — classic Faveo's font (single import instead of per-page links) */
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700&display=fallback");
+/* Roboto webfont — Freshdesk parity: the font stack is the native system one,
+   Roboto is loaded so its stack entry resolves on platforms without it
+   (Linux, older Windows). Mac/Win still render SF / Segoe UI first. */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=fallback");
 @import "tailwindcss";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -8,6 +10,7 @@
 @import "./styles/sidebar.css";
 @import "./styles/topnav.css";
 @import "./styles/components.css";
+@import "./styles/refine.css";
 @import "./styles/color-scheme.css";
 @import "./styles/dark.css";
 @import "./styles/rtl.css";

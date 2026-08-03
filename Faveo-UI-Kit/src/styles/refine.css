@@ -1,0 +1,55 @@
+/* ══════════════════════════════════════════════════════════════
+   REFINE — Freshdesk-style navy text temperature + soft borders
+   (2026-07-28). The prototype colors text via hard-coded arbitrary
+   utilities, so this remaps the recurring families onto the navy
+   token scale — same unlayered-override technique as dark.css.
+   Import order: after components.css, BEFORE dark.css (dark wins).
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Primary text: near-blacks → dark navy ── */
+.text-\[\#0a0a0a\],
+.text-\[\#333\],
+.text-\[\#404040\],
+.text-\[\#1a2332\],
+.text-\[\#1e2939\],
+.text-\[\#1e293b\],
+.text-\[\#374151\],
+.text-\[\#111827\],
+.text-\[\#334155\],
+.text-\[\#364153\] { color: var(--c-text-1); }
+
+/* ── Secondary text: mid grays → blue-gray ── */
+.text-\[\#444\],
+.text-\[\#525252\],
+.text-\[\#4a5565\],
+.text-\[\#3a4a5a\] { color: var(--c-text-2); }
+
+/* ── Muted text ── */
+.text-\[\#6a7282\],
+.text-\[\#777\],
+.text-\[\#64748b\],
+.text-\[\#99a1af\],
+.text-\[\#717182\],
+.text-gray-600,
+.text-gray-700 { color: var(--c-text-3); }
+
+/* ── Faint text ── */
+.text-\[\#9ca3af\],
+.text-\[\#94a3b8\],
+.text-gray-500 { color: var(--c-text-4); }
+
+/* ── Borders: neutral grays → soft blue-grays ── */
+.border-\[\#d1d5dc\] { border-color: var(--c-border); }
+.border-\[\#e5e7eb\],
+.border-gray-200 { border-color: var(--c-border-lt); }
+
+/* ── Brand accents: hard-coded Faveo cyan utilities → brand tokens
+      (user call 2026-07-28: Freshdesk deep blue) ── */
+.text-\[\#3da6d7\]   { color: var(--c-brand); }
+.bg-\[\#3da6d7\]     { background-color: var(--c-brand); }
+.border-\[\#3da6d7\] { border-color: var(--c-brand); }
+.focus\:border-\[\#3da6d7\]:focus { border-color: var(--c-brand); }
+.accent-\[\#3da6d7\] { accent-color: var(--c-brand); }
+.hover\:bg-\[\#2d96c7\]:hover,
+.hover\:bg-\[\#2d8fb8\]:hover { background-color: var(--c-brand-hov); }
+.hover\:text-\[\#2d8fb8\]:hover { color: var(--c-brand-hov); }

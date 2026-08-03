@@ -12,6 +12,13 @@
   transform: scaleX(-1);
 }
 
+/* Sidebar collapse («) / expand (») double chevrons — baked SVG pairs on
+   every page, so mirror them via their buttons instead of per-svg classes. */
+[dir="rtl"] #btn-collapse-sidebar svg,
+[dir="rtl"] #btn-toggle-sidebar svg {
+  transform: scaleX(-1);
+}
+
 /* Right-docked drawers (edit ticket, time track, SD associates) — their
    shadow is cast toward the page content on their inline-start side.
    Tailwind has no logical box-shadow utility, so this flips the x-offset

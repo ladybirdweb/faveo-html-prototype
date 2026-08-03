@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import { matIcon } from './mat-icons.js'
 
 const navData = {
   dashboard: {
@@ -123,14 +124,14 @@ export function renderViews(navKey) {
     if (idx > 0) html += '<div class="h-px bg-gray-200 my-1"></div>'
     html += `<button class="view-section-header">
       <span>${section.title}</span>
-      <i class="fa-solid fa-chevron-down text-zinc-500 text-[8px] transition-transform duration-200"></i>
+      ${matIcon('fa-chevron-down', 'text-zinc-500 text-[8px] transition-transform duration-200')}
     </button>`
     if (section.items.length > 0) {
       html += '<div class="section-items flex flex-col gap-px hidden">'
       section.items.forEach(item => {
         html += `<a href="#" class="view-item">
           <span class="size-6 flex items-center justify-center flex-shrink-0">
-            <i class="fa-solid ${item.icon} text-xs text-gray-600"></i>
+            ${matIcon(item.icon, 'text-xs text-gray-600')}
           </span>
           <span class="flex-1 text-[13px] text-gray-600">${item.label}</span>
         </a>`
@@ -143,7 +144,7 @@ export function renderViews(navKey) {
 
   $('#views-content').off('click.accordion').on('click.accordion', '.view-section-header', function () {
     const $items = $(this).next('.section-items')
-    const $icon  = $(this).find('.fa-chevron-down')
+    const $icon  = $(this).find('.m-chevron-down')
     $items.toggleClass('hidden')
     $icon.toggleClass('rotate-180')
   })

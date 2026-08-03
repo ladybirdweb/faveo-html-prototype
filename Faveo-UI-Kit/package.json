@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^7.2.0",
+    "@material-design-icons/svg": "^0.14.15",
     "@tailwindcss/vite": "^4.3.1",
     "tailwindcss": "^4.3.1",
     "vite": "^8.1.0"

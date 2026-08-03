@@ -10,3 +10,8 @@ input:focus, textarea:focus, select:focus, [contenteditable]:focus { outline: no
 button:focus-visible, a:focus-visible {
   outline: 2px solid var(--c-brand); outline-offset: 2px;
 }
+
+/* Material Icons inline SVGs (page-wide FA replacement) — Tailwind's preflight
+   sets svg to display:block; these replaced inline <i> font icons, so restore
+   inline flow + FA's baseline alignment */
+.m-icon { display: inline-block; vertical-align: -0.125em; }
