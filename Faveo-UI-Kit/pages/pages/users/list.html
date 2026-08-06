@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Dashboard — Faveo</title>
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+    <title>Faveo — All Contacts</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <script type="module" src="/src/main.js"></script>
     <!-- Apply theme + nav color before first paint to prevent flash -->
     <script>
         (function () {
@@ -17,23 +18,21 @@
             if (tc && tc !== 'default') document.documentElement.setAttribute('data-topnav-color', tc)
         })()
     </script>
-  <script type="module" crossorigin src="../../assets/main-CQVf_0Ip.js"></script>
-  <link rel="stylesheet" crossorigin href="../../assets/main-Bs0rzDdA.css">
 </head>
 <body class="flex flex-col h-screen overflow-hidden bg-white font-sans">
 
-<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:bg-white focus:text-[#3da6d7] focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-sm focus:font-medium">Skip to main content</a>
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:start-2 focus:z-[9999] focus:bg-white focus:text-[#3da6d7] focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-sm focus:font-medium">Skip to main content</a>
 
 <!-- Red subscription banner -->
 <div id="banner-red" role="alert" aria-label="Subscription expiry notification" class="bg-[#fdf1f2] border-b border-black/5 flex items-center justify-center px-4 py-2 relative shrink-0">
     <div class="flex items-center gap-2">
         <svg class="m-icon m-triangle-exclamation text-[#b42318] text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
         <span class="text-[#b42318] font-normal text-[13px] hidden sm:inline">Your subscription expires in 3 days.</span>
-        <div class="pl-2">
+        <div class="ps-2">
             <button data-toggle="modal" data-target="#panel-renew" class="bg-[#d92d20] text-white text-xs font-medium px-3 py-1 rounded-[4px] cursor-pointer">Renew Now</button>
         </div>
     </div>
-    <button data-dismiss="#banner-red" aria-label="Dismiss alert" class="absolute right-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
+    <button data-dismiss="#banner-red" aria-label="Dismiss alert" class="absolute end-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
         <svg class="m-icon m-xmark text-[10px] text-gray-500" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
     </button>
 </div>
@@ -43,7 +42,7 @@
     <div class="flex items-center gap-2">
         <svg class="m-icon m-circle-info text-black text-base" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
         <span class="text-[#333] font-normal text-[13px] hidden sm:inline">Connect with an expert get an advice on Faveo helpdesk</span>
-        <div class="pl-2 relative">
+        <div class="ps-2 relative">
             <button data-toggle="dropdown" data-target="#contact-dropdown"
                     class="bg-[#b7791f] text-white text-xs font-medium px-3 py-1 rounded-[4px] cursor-pointer">Contact</button>
 
@@ -69,13 +68,13 @@
                 <div class="p-4 flex flex-col gap-2.5">
                     <button class="flex items-center gap-2.5 w-full px-3 py-2 border border-[#d2d2d2] rounded-[6px] text-[#333] text-[13px] hover:bg-[#f5f7f9] transition-colors bg-white cursor-pointer">
                         <svg class="m-icon m-circle-play text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2.5-3.5 7-4.5-7-4.5v9z"/></svg>
-                        <span class="flex-1 text-left">Book a 1:1 product demo</span>
-                        <svg class="m-icon m-chevron-right text-[9px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                        <span class="flex-1 text-start">Book a 1:1 product demo</span>
+                        <svg class="m-icon m-chevron-right icon-flip text-[9px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
                     </button>
                     <button class="flex items-center gap-2.5 w-full px-3 py-2 border border-[#d2d2d2] rounded-[6px] text-[#333] text-[13px] hover:bg-[#f5f7f9] transition-colors bg-white cursor-pointer">
                         <svg class="m-icon m-calendar-days text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>
-                        <span class="flex-1 text-left">Schedule a meeting with faveo</span>
-                        <svg class="m-icon m-chevron-right text-[9px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                        <span class="flex-1 text-start">Schedule a meeting with faveo</span>
+                        <svg class="m-icon m-chevron-right icon-flip text-[9px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
                     </button>
                     <p class="text-[#99a1af] text-[12px] px-0.5 mt-0.5">Or contact me via</p>
                     <div class="flex items-center gap-2.5 px-2.5 py-1.5 border border-[#d2d2d2] rounded-[6px] text-[#4a5565] text-[12px]">
@@ -97,7 +96,7 @@
             </div>
         </div>
     </div>
-    <button data-dismiss="#banner-yellow" aria-label="Dismiss alert" class="absolute right-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
+    <button data-dismiss="#banner-yellow" aria-label="Dismiss alert" class="absolute end-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
         <svg class="m-icon m-xmark text-[10px] text-gray-500" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
     </button>
 </div>
@@ -108,13 +107,13 @@
     <!-- Icon rail (69px, always in flow — content never moves) -->
     <nav id="sidebar" aria-label="Main navigation" class="w-[69px] bg-[#f7f9fa] hidden md:flex flex-col items-center shrink-0 overflow-x-hidden py-2">
       <div class="w-full h-[55px] flex items-center justify-center px-[7px] shrink-0">
-        <img src="../../faveo-logo.png"
+        <img src="/faveo-logo.png"
              alt="Faveo" class="w-full max-h-[31px] object-contain" />
       </div>
       <div class="flex flex-col w-full items-center pt-[10px] gap-y-[10px] flex-1 overflow-y-auto">
-        <button class="sidebar-nav active" data-nav="dashboard" title="Dashboard"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m20.38 8.57-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 15.58 6.85l1.85-1.23A10 10 0 0 0 3.35 19a2 2 0 0 0 1.72 1h13.85a2 2 0 0 0 1.74-1 10 10 0 0 0-.27-10.44z"/><path d="M10.59 15.41a2 2 0 0 0 2.83 0l5.66-8.49-8.49 5.66a2 2 0 0 0 0 2.83z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m20.38 8.57-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 15.58 6.85l1.85-1.23A10 10 0 0 0 3.35 19a2 2 0 0 0 1.72 1h13.85a2 2 0 0 0 1.74-1 10 10 0 0 0-.27-10.44zm-9.79 6.84a2 2 0 0 0 2.83 0l5.66-8.49-8.49 5.66a2 2 0 0 0 0 2.83z"/></svg></button>
+        <button class="sidebar-nav" data-nav="dashboard" title="Dashboard"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m20.38 8.57-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 15.58 6.85l1.85-1.23A10 10 0 0 0 3.35 19a2 2 0 0 0 1.72 1h13.85a2 2 0 0 0 1.74-1 10 10 0 0 0-.27-10.44z"/><path d="M10.59 15.41a2 2 0 0 0 2.83 0l5.66-8.49-8.49 5.66a2 2 0 0 0 0 2.83z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m20.38 8.57-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 15.58 6.85l1.85-1.23A10 10 0 0 0 3.35 19a2 2 0 0 0 1.72 1h13.85a2 2 0 0 0 1.74-1 10 10 0 0 0-.27-10.44zm-9.79 6.84a2 2 0 0 0 2.83 0l5.66-8.49-8.49 5.66a2 2 0 0 0 0 2.83z"/></svg></button>
         <button class="sidebar-nav" data-nav="tickets"   title="Tickets">  <svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 10V6a2 2 0 0 0-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 10V6a2 2 0 0 0-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-9 7.5h-2v-2h2v2zm0-4.5h-2v-2h2v2zm0-4.5h-2v-2h2v2z"/></svg></button>
-        <button class="sidebar-nav" data-nav="contacts"  title="Contacts"> <svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 13.75c-2.34 0-7 1.17-7 3.5V19h14v-1.75c0-2.33-4.66-3.5-7-3.5zM4.34 17c.84-.58 2.87-1.25 4.66-1.25s3.82.67 4.66 1.25H4.34zM9 12c1.93 0 3.5-1.57 3.5-3.5S10.93 5 9 5 5.5 6.57 5.5 8.5 7.07 12 9 12zm0-5c.83 0 1.5.67 1.5 1.5S9.83 10 9 10s-1.5-.67-1.5-1.5S8.17 7 9 7zm7.04 6.81c1.16.84 1.96 1.96 1.96 3.44V19h4v-1.75c0-2.02-3.5-3.17-5.96-3.44zM15 12c1.93 0 3.5-1.57 3.5-3.5S16.93 5 15 5c-.54 0-1.04.13-1.5.35.63.89 1 1.98 1 3.15s-.37 2.26-1 3.15c.46.22.96.35 1.5.35z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></button>
+        <button class="sidebar-nav active" data-nav="contacts"  title="Contacts"> <svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 13.75c-2.34 0-7 1.17-7 3.5V19h14v-1.75c0-2.33-4.66-3.5-7-3.5zM4.34 17c.84-.58 2.87-1.25 4.66-1.25s3.82.67 4.66 1.25H4.34zM9 12c1.93 0 3.5-1.57 3.5-3.5S10.93 5 9 5 5.5 6.57 5.5 8.5 7.07 12 9 12zm0-5c.83 0 1.5.67 1.5 1.5S9.83 10 9 10s-1.5-.67-1.5-1.5S8.17 7 9 7zm7.04 6.81c1.16.84 1.96 1.96 1.96 3.44V19h4v-1.75c0-2.02-3.5-3.17-5.96-3.44zM15 12c1.93 0 3.5-1.57 3.5-3.5S16.93 5 15 5c-.54 0-1.04.13-1.5.35.63.89 1 1.98 1 3.15s-.37 2.26-1 3.15c.46.22.96.35 1.5.35z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></button>
         <button class="sidebar-nav" data-nav="kb"        title="Solutions"><svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"/></svg></button>
         <button class="sidebar-nav" data-nav="reports"   title="Reports">  <svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7 15h7v2H7zm0-4h10v2H7zm0-4h10v2H7zm12-4h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-.14 0-.27.01-.4.04a2.008 2.008 0 0 0-1.44 1.19c-.1.23-.16.49-.16.77v14c0 .27.06.54.16.78s.25.45.43.64c.27.27.62.47 1.01.55.13.02.26.03.4.03h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7-.25c.41 0 .75.34.75.75s-.34.75-.75.75-.75-.34-.75-.75.34-.75.75-.75zM19 19H5V5h14v14z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></button>
         <button class="sidebar-nav" data-nav="admin"     title="Admin">    <svg class="nav-ico-line" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65A.488.488 0 0 0 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1a.566.566 0 0 0-.18-.03c-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46a.5.5 0 0 0 .61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg><svg class="nav-ico-fill" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></button>
@@ -128,18 +127,18 @@
     </nav>
 
     <!-- Expanded sidebar (absolute overlay — same bg as rail, content stays put) -->
-    <nav id="sidebar-expanded" aria-label="Expanded navigation" class="absolute left-0 top-0 bottom-0 w-[295px] bg-[#f7f9fa] flex flex-col z-50 py-2 hidden">
+    <nav id="sidebar-expanded" aria-label="Expanded navigation" class="absolute start-0 top-0 bottom-0 w-[295px] bg-[#f7f9fa] flex flex-col z-50 py-2 hidden">
       <div class="w-full h-[55px] flex items-center px-[7px] shrink-0">
         <div class="w-[55px] flex items-center justify-center shrink-0">
-          <img src="../../faveo-logo.png"
+          <img src="/faveo-logo.png"
                alt="Faveo" class="w-full max-h-[31px] object-contain" />
         </div>
         <span class="ml-2 text-[#3a4a5a] text-[19px] font-semibold leading-none whitespace-nowrap">Support Center</span>
       </div>
       <div class="flex flex-col flex-1 overflow-y-auto px-3 gap-y-[10px] pt-[10px]">
-        <button class="sidebar-nav active w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="dashboard"><svg class="m-icon m-gauge-high w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m20.38 8.57-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 15.58 6.85l1.85-1.23A10 10 0 0 0 3.35 19a2 2 0 0 0 1.72 1h13.85a2 2 0 0 0 1.74-1 10 10 0 0 0-.27-10.44z"/><path d="M10.59 15.41a2 2 0 0 0 2.83 0l5.66-8.49-8.49 5.66a2 2 0 0 0 0 2.83z"/></svg><span class="whitespace-nowrap">Dashboard</span></button>
+        <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="dashboard"><svg class="m-icon m-gauge-high w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m20.38 8.57-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 15.58 6.85l1.85-1.23A10 10 0 0 0 3.35 19a2 2 0 0 0 1.72 1h13.85a2 2 0 0 0 1.74-1 10 10 0 0 0-.27-10.44z"/><path d="M10.59 15.41a2 2 0 0 0 2.83 0l5.66-8.49-8.49 5.66a2 2 0 0 0 0 2.83z"/></svg><span class="whitespace-nowrap">Dashboard</span></button>
         <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="tickets">  <svg class="m-icon m-ticket w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 10V6a2 2 0 0 0-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg><span class="whitespace-nowrap">Tickets</span></button>
-        <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="contacts"> <svg class="m-icon m-users w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 13.75c-2.34 0-7 1.17-7 3.5V19h14v-1.75c0-2.33-4.66-3.5-7-3.5zM4.34 17c.84-.58 2.87-1.25 4.66-1.25s3.82.67 4.66 1.25H4.34zM9 12c1.93 0 3.5-1.57 3.5-3.5S10.93 5 9 5 5.5 6.57 5.5 8.5 7.07 12 9 12zm0-5c.83 0 1.5.67 1.5 1.5S9.83 10 9 10s-1.5-.67-1.5-1.5S8.17 7 9 7zm7.04 6.81c1.16.84 1.96 1.96 1.96 3.44V19h4v-1.75c0-2.02-3.5-3.17-5.96-3.44zM15 12c1.93 0 3.5-1.57 3.5-3.5S16.93 5 15 5c-.54 0-1.04.13-1.5.35.63.89 1 1.98 1 3.15s-.37 2.26-1 3.15c.46.22.96.35 1.5.35z"/></svg><span class="whitespace-nowrap">Contacts</span></button>
+        <button class="sidebar-nav active w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="contacts"> <svg class="m-icon m-users w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 13.75c-2.34 0-7 1.17-7 3.5V19h14v-1.75c0-2.33-4.66-3.5-7-3.5zM4.34 17c.84-.58 2.87-1.25 4.66-1.25s3.82.67 4.66 1.25H4.34zM9 12c1.93 0 3.5-1.57 3.5-3.5S10.93 5 9 5 5.5 6.57 5.5 8.5 7.07 12 9 12zm0-5c.83 0 1.5.67 1.5 1.5S9.83 10 9 10s-1.5-.67-1.5-1.5S8.17 7 9 7zm7.04 6.81c1.16.84 1.96 1.96 1.96 3.44V19h4v-1.75c0-2.02-3.5-3.17-5.96-3.44zM15 12c1.93 0 3.5-1.57 3.5-3.5S16.93 5 15 5c-.54 0-1.04.13-1.5.35.63.89 1 1.98 1 3.15s-.37 2.26-1 3.15c.46.22.96.35 1.5.35z"/></svg><span class="whitespace-nowrap">Contacts</span></button>
         <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="kb">       <svg class="m-icon m-lightbulb w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg><span class="whitespace-nowrap">Solutions</span></button>
         <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="reports">  <svg class="m-icon m-clipboard-list w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7 15h7v2H7zm0-4h10v2H7zm0-4h10v2H7zm12-4h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-.14 0-.27.01-.4.04a2.008 2.008 0 0 0-1.44 1.19c-.1.23-.16.49-.16.77v14c0 .27.06.54.16.78s.25.45.43.64c.27.27.62.47 1.01.55.13.02.26.03.4.03h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7-.25c.41 0 .75.34.75.75s-.34.75-.75.75-.75-.34-.75-.75.34-.75.75-.75zM19 19H5V5h14v14z"/></svg><span class="whitespace-nowrap">Reports</span></button>
         <button class="sidebar-nav w-full justify-start px-[10px] gap-[5px] text-[13px] font-medium" data-nav="admin">    <svg class="m-icon m-gear w-[41px] text-center shrink-0 text-[16px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65A.488.488 0 0 0 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1a.566.566 0 0 0-.18-.03c-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46a.5.5 0 0 0 .61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg><span class="whitespace-nowrap">Admin</span></button>
@@ -157,17 +156,13 @@
 
         <!-- Toolbar -->
         <header class="bg-[#f7f9fa] h-[55px] flex items-center gap-2 px-5 shrink-0" aria-label="Page toolbar">
-            <button id="btn-mobile-menu" class="md:hidden sidebar-nav mr-1" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar-expanded">
+            <button id="btn-mobile-menu" class="md:hidden sidebar-nav me-1" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar-expanded">
                 <svg class="m-icon m-bars" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
             </button>
-            <!-- Panel toggle (same recipe as the inbox views toggle) + dashboard title -->
+            <!-- Title (views-panel toggle moved into the list toolbar) -->
             <div class="flex items-center gap-2 min-w-0 shrink">
-                <button id="btn-toggle-dashboards"
-                        aria-label="Toggle dashboards panel" aria-expanded="true" aria-controls="dashboards-panel"
-                        class="flex items-center justify-center w-[30px] h-[30px] rounded-[6px] border border-[#d1d5dc] bg-white cursor-pointer text-[#525252] hover:bg-[#f1f5f9] transition-colors shrink-0">
-                    <svg class="m-icon m-filter text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7 6h10l-5.01 6.3L7 6zm-2.75-.39C6.27 8.2 10 13 10 13v6c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-6s3.72-4.8 5.74-7.39A.998.998 0 0 0 18.95 4H5.04c-.83 0-1.3.95-.79 1.61z"/></svg>
-                </button>
-                <span class="text-[#333] text-base font-semibold truncate topnav-adaptive">My Dashboard</span>
+                <span class="text-[#333] text-base font-semibold truncate topnav-adaptive">All contacts</span>
+                <span class="text-[#333] text-base font-semibold shrink-0 topnav-adaptive">7</span>
             </div>
 
             <!-- Right controls -->
@@ -179,38 +174,38 @@
                         New
                         <svg class="m-icon m-chevron-down text-[9px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
                     </button>
-                    <div id="new-dropdown" role="menu" aria-label="Create new item" class="absolute right-0 top-[calc(100%+2px)] z-50 min-w-[160px] bg-white rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] border border-[#e5e7eb] p-2 hidden">
-                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-left hover:bg-[#f5f7f9] transition-colors">
+                    <div id="new-dropdown" role="menu" aria-label="Create new item" class="absolute end-0 top-[calc(100%+2px)] z-50 min-w-[230px] bg-white rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] border border-[#e5e7eb] p-2 hidden">
+                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-start hover:bg-[#f5f7f9] transition-colors">
                             <svg class="m-icon m-ticket text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 10V6a2 2 0 0 0-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM11 15h2v2h-2zm0-4h2v2h-2zm0-4h2v2h-2z"/></svg><span>Ticket</span>
                         </button>
-                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-left hover:bg-[#f5f7f9] transition-colors">
+                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-start hover:bg-[#f5f7f9] transition-colors">
                             <svg class="m-icon m-envelope text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0-8 4.99L4 6h16zm0 12H4V8l8 5 8-5v10z"/></svg><span>Email</span>
                         </button>
-                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-left hover:bg-[#f5f7f9] transition-colors">
+                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-start hover:bg-[#f5f7f9] transition-colors">
                             <svg class="m-icon m-message text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><span>Message</span>
                         </button>
-                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-left hover:bg-[#f5f7f9] transition-colors">
+                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-start hover:bg-[#f5f7f9] transition-colors">
                             <svg class="m-icon m-address-card text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M14 12h4v1.5h-4zm0 3h4v1.5h-4z"/><path d="M20 7h-5V4c0-1.1-.9-2-2-2h-2c-1.1 0-2 .9-2 2v3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-9 0V4h2v5h-2V7zm9 13H4V9h5c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2h5v11z"/><path d="M11.08 16.18c-.64-.28-1.34-.43-2.08-.43s-1.44.15-2.08.43c-.56.24-.92.78-.92 1.39V18h6v-.43c0-.61-.36-1.15-.92-1.39z"/></svg><span>Contact</span>
                         </button>
-                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-left hover:bg-[#f5f7f9] transition-colors">
+                        <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[#333] text-[13px] font-normal cursor-pointer border-none bg-transparent text-start hover:bg-[#f5f7f9] transition-colors">
                             <svg class="m-icon m-building text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17 11V3H7v4H3v14h8v-4h2v4h8V11h-4zM7 19H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm4 4H9v-2h2v2zm0-4H9V9h2v2zm0-4H9V5h2v2zm4 8h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm4 12h-2v-2h2v2zm0-4h-2v-2h2v2z"/></svg><span>Company</span>
                         </button>
                     </div>
                 </div>
                 <!-- Search -->
                 <div class="relative shrink-0 hidden sm:block">
-                    <svg class="m-icon m-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    <svg class="m-icon m-magnifying-glass absolute start-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
                     <input id="search-trigger" type="text" placeholder="Search" aria-label="Search tickets" readonly
-                           class="bg-white border border-[#d1d5dc] rounded-[4px] pl-8 pr-3 py-1.5 text-xs text-[#0a0a0a] w-32 outline-none focus:border-sky-400 cursor-pointer" />
+                           class="h-8 w-28 cursor-pointer rounded-[4px] border-none bg-transparent ps-8 pe-3 text-[13px] font-medium text-[#333] outline-none transition-colors placeholder:text-[#333] hover:bg-[#f5f7f9]" />
 
                     <!-- Search panel (single) -->
-                    <div id="search-overlay" role="dialog" aria-label="Search" class="hidden absolute top-0 right-0 w-[400px] bg-white rounded-[10px] shadow-[0_0_8px_rgba(0,0,0,0.2)] z-50 overflow-hidden">
+                    <div id="search-overlay" role="dialog" aria-label="Search" class="hidden absolute top-0 end-0 w-[400px] bg-white rounded-[10px] shadow-[0_0_8px_rgba(0,0,0,0.2)] z-50 overflow-hidden">
                         <!-- Search input — always visible -->
                         <div class="p-3">
                             <div class="relative">
-                                <svg class="m-icon m-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                                <svg class="m-icon m-magnifying-glass absolute start-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
                                 <input id="search-overlay-input" type="text" placeholder="Search" aria-label="Search"
-                                       class="w-full border border-[#d1d5dc] rounded-[10px] pl-8 pr-3 py-1.5 text-xs text-[#0a0a0a] outline-none focus:border-sky-400" />
+                                       class="w-full border border-[#d1d5dc] rounded-[10px] ps-8 pe-3 py-1.5 text-xs text-[#0a0a0a] outline-none focus:border-sky-400" />
                             </div>
                         </div>
 
@@ -221,7 +216,7 @@
                                 <button data-toggle="tab" data-tab="tickets" data-target="#recently-viewed-list" class="search-tab px-2 py-0.5 text-xs border border-[#d1d5dc] rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors">Tickets</button>
                                 <button data-toggle="tab" data-tab="contacts" data-target="#recently-viewed-list" class="search-tab px-2 py-0.5 text-xs border border-[#d1d5dc] rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors">Contacts</button>
                                 <button data-toggle="tab" data-tab="forums" data-target="#recently-viewed-list" class="search-tab px-2 py-0.5 text-xs border border-[#d1d5dc] rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors">Forums</button>
-                                <button id="btn-search-prefs" aria-label="Search preferences" class="ml-auto flex items-center justify-center w-7 h-7 rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors cursor-pointer">
+                                <button id="btn-search-prefs" aria-label="Search preferences" class="ms-auto flex items-center justify-center w-7 h-7 rounded-[4px] text-[#525252] hover:bg-[#f1f5f9] transition-colors cursor-pointer">
                                     <svg class="m-icon m-gear text-base" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46a.5.5 0 0 0-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65A.488.488 0 0 0 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1a.566.566 0 0 0-.18-.03c-.17 0-.34.09-.43.25l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46a.5.5 0 0 0 .61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.06.02.12.03.18.03.17 0 .34-.09.43-.25l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zm-1.98-1.71c.04.31.05.52.05.73 0 .21-.02.43-.05.73l-.14 1.13.89.7 1.08.84-.7 1.21-1.27-.51-1.04-.42-.9.68c-.43.32-.84.56-1.25.73l-1.06.43-.16 1.13-.2 1.35h-1.4l-.19-1.35-.16-1.13-1.06-.43c-.43-.18-.83-.41-1.23-.71l-.91-.7-1.06.43-1.27.51-.7-1.21 1.08-.84.89-.7-.14-1.13c-.03-.31-.05-.54-.05-.74s.02-.43.05-.73l.14-1.13-.89-.7-1.08-.84.7-1.21 1.27.51 1.04.42.9-.68c.43-.32.84-.56 1.25-.73l1.06-.43.16-1.13.2-1.35h1.39l.19 1.35.16 1.13 1.06.43c.43.18.83.41 1.23.71l.91.7 1.06-.43 1.27-.51.7 1.21-1.07.85-.89.7.14 1.13zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
                                 </button>
                             </div>
@@ -362,10 +357,10 @@
                 <div class="relative shrink-0">
                     <button data-toggle="dropdown" data-target="#notifications-dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="notifications-dropdown" aria-label="Notifications" class="relative flex items-center justify-center w-8 h-8 rounded-[6px] text-[#525252] cursor-pointer hover:bg-[#f1f5f9] transition-colors topnav-adaptive">
                         <svg class="m-icon m-bell text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/></svg>
-                        <span class="absolute top-1 right-1.5 w-1.5 h-1.5 bg-red-500 rounded-full border border-white block"></span>
+                        <span class="absolute top-1 end-1.5 w-1.5 h-1.5 bg-red-500 rounded-full border border-white block"></span>
                     </button>
 
-                    <div id="notifications-dropdown" role="dialog" aria-label="Notifications" class="absolute right-0 top-[calc(100%+4px)] z-50 w-[360px] bg-white rounded-[10px] shadow-[0_4px_20px_rgba(0,0,0,0.15)] border border-[#e5e7eb] overflow-hidden hidden">
+                    <div id="notifications-dropdown" role="dialog" aria-label="Notifications" class="absolute end-0 top-[calc(100%+4px)] z-50 w-[360px] bg-white rounded-[10px] shadow-[0_4px_20px_rgba(0,0,0,0.15)] border border-[#e5e7eb] overflow-hidden hidden">
                         <!-- Header -->
                         <div class="flex items-center justify-between px-4 py-3 border-b border-[#e5e7eb]">
                             <span class="text-sm font-semibold text-[#0a0a0a]">Notifications</span>
@@ -470,6 +465,91 @@
                         </div>
                     </div>
                 </div>
+                <!-- Language dropdown -->
+                <div class="relative shrink-0">
+                    <button id="topnav-language-trigger" data-toggle="dropdown" data-target="#topnav-language-dropdown" aria-haspopup="menu" aria-expanded="false" aria-controls="topnav-language-dropdown" aria-label="Change language (currently English)" class="flex items-center justify-center w-8 h-8 rounded-[6px] hover:bg-[#f1f5f9] transition-colors cursor-pointer topnav-adaptive">
+                        <img id="topnav-language-flag" src="/flags/en-us.png" alt="Current language" class="w-6 h-4 rounded-[3px] object-cover shrink-0" />
+                    </button>
+                    <div id="topnav-language-dropdown" role="menu" aria-label="Language options" class="absolute end-0 top-[calc(100%+4px)] z-50 w-[314px] max-h-[420px] overflow-y-auto bg-white rounded-[10px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] border border-[#e5e7eb] py-1 hidden">
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="ar" data-dir="rtl" data-short="Arabic" data-flag="/flags/arabic.png">
+                            <img src="/flags/arabic.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Arabic (العربية)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="bs" data-dir="ltr" data-short="Bosnian" data-flag="/flags/bosnian.png">
+                            <img src="/flags/bosnian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Bosnian (bosanski)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="zh-Hans" data-dir="ltr" data-short="Chinese (Simplified)" data-flag="/flags/chinese.png">
+                            <img src="/flags/chinese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Chinese (中文 [Simplified])</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="zh-Hant" data-dir="ltr" data-short="Chinese (Traditional)" data-flag="/flags/chinese.png">
+                            <img src="/flags/chinese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Chinese (中文 [Traditional])</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="nl" data-dir="ltr" data-short="Dutch" data-flag="/flags/dutch.png">
+                            <img src="/flags/dutch.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Dutch (Vlaams)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-[#f1f5f9] transition-colors" data-lang="en-US" data-dir="ltr" data-short="English" data-flag="/flags/en-us.png">
+                            <img src="/flags/en-us.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">English - United States (English)</span>
+                            <svg class="m-icon m-check text-[10px] text-[#3da6d7] shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="en-GB" data-dir="ltr" data-short="English (UK)" data-flag="/flags/en-gb.png">
+                            <img src="/flags/en-gb.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">English - United Kingdom (English)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="fr" data-dir="ltr" data-short="French" data-flag="/flags/french.png">
+                            <img src="/flags/french.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">French (français)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="de" data-dir="ltr" data-short="German" data-flag="/flags/german.png">
+                            <img src="/flags/german.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">German (Deutsch)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="id" data-dir="ltr" data-short="Indonesian" data-flag="/flags/indonesian.png">
+                            <img src="/flags/indonesian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Indonesian (Bahasa Indonesia)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="it" data-dir="ltr" data-short="Italian" data-flag="/flags/italian.png">
+                            <img src="/flags/italian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Italian (Italiano)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="ko" data-dir="ltr" data-short="Korean" data-flag="/flags/korean.png">
+                            <img src="/flags/korean.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Korean (한국어)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="mt" data-dir="ltr" data-short="Maltese" data-flag="/flags/maltese.png">
+                            <img src="/flags/maltese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Maltese (Malti)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="no" data-dir="ltr" data-short="Norwegian" data-flag="/flags/norwegian.png">
+                            <img src="/flags/norwegian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Norwegian (Norsk)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="pt" data-dir="ltr" data-short="Portuguese" data-flag="/flags/portuguese.png">
+                            <img src="/flags/portuguese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Portuguese (Português)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="ru" data-dir="ltr" data-short="Russian" data-flag="/flags/russian.png">
+                            <img src="/flags/russian.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Russian (Русский)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="es" data-dir="ltr" data-short="Spanish" data-flag="/flags/spanish.png">
+                            <img src="/flags/spanish.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Spanish (Español)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="tr" data-dir="ltr" data-short="Turkish" data-flag="/flags/turkish.png">
+                            <img src="/flags/turkish.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Turkish (Türkçe)</span>
+                        </button>
+                        <button role="menuitem" class="topnav-lang-option flex items-center gap-3 w-full px-4 py-2 text-start cursor-pointer border-none bg-transparent hover:bg-[#f1f5f9] transition-colors" data-lang="vi" data-dir="ltr" data-short="Vietnamese" data-flag="/flags/vietnamese.png">
+                            <img src="/flags/vietnamese.png" alt="" class="w-6 h-4 rounded-[6px] object-cover shrink-0" />
+                            <span class="flex-1 min-w-0 truncate text-[12px] leading-4 text-[#525252]">Vietnamese (Tiếng Việt)</span>
+                        </button>
+                    </div>
+                </div>
                 <!-- Apps button + dropdown -->
                 <div class="relative shrink-0 hidden sm:block">
                     <button data-toggle="dropdown" data-target="#apps-dropdown" aria-haspopup="menu" aria-expanded="false" aria-controls="apps-dropdown" aria-label="Apps marketplace" class="bg-white border border-[#d1d5dc] rounded-[4px] flex items-center gap-1.5 h-8 px-3 text-[#333] text-[13px] font-medium cursor-pointer hover:bg-[#f5f7f9] transition-colors">
@@ -477,7 +557,7 @@
                         Apps
                     </button>
 
-                    <div id="apps-dropdown" role="dialog" aria-label="Apps marketplace" class="absolute right-0 top-[calc(100%+2px)] z-50 w-[343px] bg-white rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] border border-[#e5e7eb] overflow-hidden hidden">
+                    <div id="apps-dropdown" role="dialog" aria-label="Apps marketplace" class="absolute end-0 top-[calc(100%+2px)] z-50 w-[343px] bg-white rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] border border-[#e5e7eb] overflow-hidden hidden">
 
                         <!-- Apps nav list -->
                         <ul role="list" class="flex flex-col">
@@ -489,7 +569,7 @@
                                 <div class="flex flex-col gap-0.5 flex-1">
                                     <div class="flex items-center gap-1">
                                         <span class="text-[#1e2939] text-[14px] font-semibold">Explore Marketplace Apps</span>
-                                        <svg class="m-icon m-chevron-right text-[#1e2939] text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                                        <svg class="m-icon m-chevron-right icon-flip text-[#1e2939] text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
                                     </div>
                                     <p class="text-[#6a7282] text-[12px] leading-4">Explore apps that enhance your work experience</p>
                                 </div>
@@ -570,7 +650,7 @@
                                 <div class="flex flex-col gap-0.5 flex-1">
                                     <div class="flex items-center gap-1">
                                         <span class="text-[#1e2939] text-[14px] font-semibold">Manage Apps</span>
-                                        <svg class="m-icon m-chevron-right text-[#1e2939] text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                                        <svg class="m-icon m-chevron-right icon-flip text-[#1e2939] text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
                                     </div>
                                     <p class="text-[#6a7282] text-[12px] leading-4">Easily manage, upgrade, and configure your apps</p>
                                 </div>
@@ -584,7 +664,7 @@
                                 <div class="flex flex-col gap-0.5 flex-1">
                                     <div class="flex items-center gap-1">
                                         <span class="text-[#1e2939] text-[14px] font-semibold">Developer Portal</span>
-                                        <svg class="m-icon m-chevron-right text-[#1e2939] text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                                        <svg class="m-icon m-chevron-right icon-flip text-[#1e2939] text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
                                     </div>
                                     <p class="text-[#6a7282] text-[12px] leading-4">Build tools to help thousands of businesses worldwide</p>
                                 </div>
@@ -599,7 +679,7 @@
                         <svg class="m-icon m-user text-[#0a0a0a] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                     </button>
 
-                    <div id="profile-dropdown" role="dialog" aria-label="User profile menu" class="absolute right-0 top-[calc(100%+4px)] z-50 w-[260px] bg-white rounded-[10px] shadow-[0_0_10px_rgba(0,0,0,0.2)] overflow-hidden hidden">
+                    <div id="profile-dropdown" role="dialog" aria-label="User profile menu" class="absolute end-0 top-[calc(100%+4px)] z-50 w-[260px] bg-white rounded-[10px] shadow-[0_0_10px_rgba(0,0,0,0.2)] overflow-hidden hidden">
 
                         <!-- Main panel -->
                         <div id="profile-main" class="flex flex-col">
@@ -616,14 +696,14 @@
                             <!-- Theme -->
                             <button id="btn-profile-theme" class="px-4 py-3 flex items-center gap-3 w-full hover:bg-[#f1f5f9] transition-colors cursor-pointer border-b border-[#e5e7eb]">
                                 <svg class="m-icon m-circle-half-stroke text-[#444] text-xs w-4 text-center shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zm1-17.93c3.94.49 7 3.85 7 7.93s-3.05 7.44-7 7.93V4.07z"/></svg>
-                                <span class="text-xs text-[#333] flex-1 text-left">Theme</span>
-                                <svg class="m-icon m-chevron-right text-[#9ca3af] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                                <span class="text-xs text-[#333] flex-1 text-start">Theme</span>
+                                <svg class="m-icon m-chevron-right icon-flip text-[#9ca3af] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
                             </button>
                             <!-- Color scheme -->
                             <button id="btn-profile-color" class="px-4 py-3 flex items-center gap-3 w-full hover:bg-[#f1f5f9] transition-colors cursor-pointer border-b border-[#e5e7eb]">
                                 <svg class="m-icon m-palette text-[#444] text-xs w-4 text-center shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 22C6.49 22 2 17.51 2 12S6.49 2 12 2s10 4.04 10 9c0 3.31-2.69 6-6 6h-1.77c-.28 0-.5.22-.5.5 0 .12.05.23.13.33.41.47.64 1.06.64 1.67A2.5 2.5 0 0 1 12 22zm0-18c-4.41 0-8 3.59-8 8s3.59 8 8 8c.28 0 .5-.22.5-.5a.54.54 0 0 0-.14-.35c-.41-.46-.63-1.05-.63-1.65a2.5 2.5 0 0 1 2.5-2.5H16c2.21 0 4-1.79 4-4 0-3.86-3.59-7-8-7z"/></svg>
-                                <span class="text-xs text-[#333] flex-1 text-left">Color scheme</span>
-                                <svg class="m-icon m-chevron-right text-[#9ca3af] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                                <span class="text-xs text-[#333] flex-1 text-start">Color scheme</span>
+                                <svg class="m-icon m-chevron-right icon-flip text-[#9ca3af] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
                             </button>
                             <!-- Go to customer portal -->
                             <a href="#" class="px-4 py-3 flex items-center gap-3 hover:bg-[#f1f5f9] transition-colors no-underline border-b border-[#e5e7eb]">
@@ -646,7 +726,7 @@
                         <div id="profile-theme-panel" class="hidden flex-col">
                             <!-- Back header -->
                             <button id="btn-profile-theme-back" class="flex items-center gap-2.5 px-4 py-3 border-b border-[rgba(0,0,0,0.1)] w-full cursor-pointer">
-                                <svg class="m-icon m-arrow-left text-[#0a0a0a] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                                <svg class="m-icon m-arrow-left icon-flip text-[#0a0a0a] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
                                 <span class="text-sm font-medium text-[#0a0a0a]">Back</span>
                             </button>
                             <!-- Theme options -->
@@ -759,7 +839,7 @@
                         <!-- Color scheme panel -->
                         <div id="profile-color-panel" class="hidden flex-col overflow-y-auto max-h-[420px]">
                             <button id="btn-profile-color-back" class="flex items-center gap-2.5 px-4 py-3 border-b border-[rgba(0,0,0,0.1)] w-full shrink-0">
-                                <svg class="m-icon m-arrow-left text-[#0a0a0a] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                                <svg class="m-icon m-arrow-left icon-flip text-[#0a0a0a] text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
                                 <span class="text-sm font-medium text-[#0a0a0a]">Back</span>
                             </button>
                             <!-- Sidebar color -->
@@ -855,399 +935,433 @@
             </div>
         </header>
 
-        <main id="main-content" class="relative flex flex-1 overflow-hidden border-t border-l border-r border-[#d1d5dc] rounded-t-[10px] bg-white">
+        <!-- Content body: views panel (inside) + ticket area -->
+        <main id="main-content" class="relative flex flex-1 overflow-hidden border-t border-s border-e border-[#d1d5dc] rounded-t-[10px]">
 
-            <!-- Dashboards panel (inbox views-panel pattern; overlay below lg) -->
-            <div id="dashboards-panel" role="region" aria-label="Dashboards"
-                 class="w-72 bg-white flex-col gap-3 shrink-0 overflow-y-auto flex p-3 border-e border-gray-100 max-lg:absolute max-lg:inset-y-0 max-lg:start-0 max-lg:z-30 max-lg:shadow-[0_0_24px_rgba(0,0,0,0.18)]">
-                <section class="shrink-0 rounded-[12px] bg-[#f5f7f9] p-4" aria-labelledby="default-dashboards-heading">
-                    <h2 id="default-dashboards-heading" class="m-0 pb-3 text-[13px] text-(--c-text-1)">Default dashboards</h2>
-                    <nav aria-label="Default dashboards">
-                        <ul class="m-0 flex list-none flex-col p-0">
-                            <li><a href="./v1.html" aria-current="page" class="flex items-center gap-2 rounded-[6px] bg-[#e4efff] px-3 py-2.5 text-[13px] font-medium text-[#2c5cc5] no-underline"><span class="flex-1 truncate">My Dashboard</span><svg class="m-icon m-check text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></a></li>
-                            <li><a href="./v2.html" class="flex items-center gap-2 rounded-[6px] px-3 py-2.5 text-[13px] text-(--c-text-1) no-underline transition-colors hover:text-[#2c5cc5]"><span class="flex-1 truncate">Operations Dashboard</span></a></li>
-                            <li><a href="#" class="flex items-center gap-2 rounded-[6px] px-3 py-2.5 text-[13px] text-(--c-text-1) no-underline transition-colors hover:text-[#2c5cc5]"><span class="flex-1 truncate">Knowledge Base Dashboard</span></a></li>
-                            <li><a href="#" class="flex items-center gap-2 rounded-[6px] px-3 py-2.5 text-[13px] text-(--c-text-1) no-underline transition-colors hover:text-[#2c5cc5]"><span class="flex-1 truncate">Agent Availability</span></a></li>
-                            <li><a href="#" class="flex items-center gap-2 rounded-[6px] px-3 py-2.5 text-[13px] text-(--c-text-1) no-underline transition-colors hover:text-[#2c5cc5]"><span class="flex-1 truncate">Agent Performance Report</span></a></li>
-                        </ul>
-                    </nav>
-                </section>
-                <section class="shrink-0 rounded-[12px] bg-[#f5f7f9] p-4">
-                    <a href="#" class="flex items-center gap-2 text-[13px] font-medium text-[#2c5cc5] no-underline hover:underline"><svg class="m-icon m-plus text-[13px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>New custom dashboard</a>
-                    <p class="m-0 pt-2 ps-6 text-[13px] text-[#6a7282]">4 more to go before you use them all</p>
-                </section>
-                <section class="shrink-0 rounded-[12px] bg-[#f5f7f9] p-4" aria-labelledby="custom-dashboards-heading">
-                    <h2 id="custom-dashboards-heading" class="m-0 pb-3 text-[13px] text-(--c-text-1)">Custom dashboards</h2>
-                    <nav aria-label="Custom dashboards">
-                        <ul class="m-0 flex list-none flex-col p-0">
-                            <li><a href="#" class="flex items-center gap-2 rounded-[6px] px-3 py-2.5 text-[13px] text-(--c-text-1) no-underline transition-colors hover:text-[#2c5cc5]"><span class="flex-1 truncate">New dashboard</span></a></li>
-                            <li><a href="#" class="flex items-center gap-2 rounded-[6px] px-3 py-2.5 text-[13px] text-(--c-text-1) no-underline transition-colors hover:text-[#2c5cc5]"><span class="flex-1 truncate">New dashboard 1</span></a></li>
-                            <li><a href="#" class="flex items-center gap-2 rounded-[6px] px-3 py-2.5 text-[13px] text-(--c-text-1) no-underline transition-colors hover:text-[#2c5cc5]"><span class="flex-1 truncate">New dashboard 3</span></a></li>
-                        </ul>
-                    </nav>
-                </section>
-            </div>
+            <!-- Views panel (contacts views; views.js renderViews('contacts') fills #views-content) -->
+            <div id="views-panel" role="region" aria-label="Contact views" class="w-72 bg-white border-e border-gray-100 flex flex-col shrink-0 overflow-hidden hidden">
 
-            <div class="flex-1 min-w-0 flex flex-col overflow-hidden bg-[#f7f9fa]">
+                <!-- Contacts | Companies tabs -->
+                <div class="flex items-stretch shrink-0 border-b border-[#e5e7eb]" role="tablist" aria-label="Contact views tabs">
+                    <button id="views-tab-contacts" role="tab" aria-selected="true" aria-controls="views-list-contacts"
+                            class="views-tab flex-1 flex items-center justify-center gap-1.5 py-3 text-[13px] font-medium cursor-pointer border-b-2 -mb-px transition-colors text-[#2c5cc5] border-[#2c5cc5]">
+                        <svg class="m-icon m-users text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 13.75c-2.34 0-7 1.17-7 3.5V19h14v-1.75c0-2.33-4.66-3.5-7-3.5zM4.34 17c.84-.58 2.87-1.25 4.66-1.25s3.82.67 4.66 1.25H4.34zM9 12c1.93 0 3.5-1.57 3.5-3.5S10.93 5 9 5 5.5 6.57 5.5 8.5 7.07 12 9 12zm0-5c.83 0 1.5.67 1.5 1.5S9.83 10 9 10s-1.5-.67-1.5-1.5S8.17 7 9 7zm7.04 6.81c1.16.84 1.96 1.96 1.96 3.44V19h4v-1.75c0-2.02-3.5-3.17-5.96-3.44zM15 12c1.93 0 3.5-1.57 3.5-3.5S16.93 5 15 5c-.54 0-1.04.13-1.5.35.63.89 1 1.98 1 3.15s-.37 2.26-1 3.15c.46.22.96.35 1.5.35z"/></svg>Contacts
+                    </button>
+                    <div class="w-px bg-[#e5e7eb] my-2.5"></div>
+                    <button id="views-tab-companies" role="tab" aria-selected="false" aria-controls="views-list-companies"
+                            class="views-tab flex-1 flex items-center justify-center gap-1.5 py-3 text-[13px] font-medium cursor-pointer border-b-2 -mb-px transition-colors text-[#4a5565] border-transparent hover:text-[#2c5cc5]">
+                        <svg class="m-icon m-building text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>Companies
+                    </button>
+                </div>
 
-                <!-- Filters toolbar -->
-                <div class="flex items-center gap-2 flex-wrap px-5 py-2.5 bg-white border-b border-gray-100 shrink-0">
-                    <div id="dashboard-filters" class="flex items-center gap-3 flex-wrap">
-                        <!-- Freshdesk-flat: quiet label:value text filters, no boxes -->
-                        <button class="flex items-center gap-1 bg-transparent border-none rounded px-1.5 py-1 text-[13px] text-[#6a7282] cursor-pointer hover:bg-[#f1f5f9] transition-colors">
-                            Date: <span class="font-medium text-(--c-text-1)">All time</span>
-                            <svg class="m-icon m-chevron-down text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
-                        </button>
-                        <button class="flex items-center gap-1 bg-transparent border-none rounded px-1.5 py-1 text-[13px] text-[#6a7282] cursor-pointer hover:bg-[#f1f5f9] transition-colors">
-                            Teams: <span class="font-medium text-(--c-text-1)">All teams</span>
-                            <svg class="m-icon m-chevron-down text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
-                        </button>
-                        <button class="flex items-center gap-1 bg-transparent border-none rounded px-1.5 py-1 text-[13px] text-[#6a7282] cursor-pointer hover:bg-[#f1f5f9] transition-colors">
-                            Departments: <span class="font-medium text-(--c-text-1)">All departments</span>
-                            <svg class="m-icon m-chevron-down text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
-                        </button>
-                        <button class="flex items-center gap-1 bg-transparent border-none rounded px-1.5 py-1 text-[13px] text-[#6a7282] cursor-pointer hover:bg-[#f1f5f9] transition-colors">
-                            Sources: <span class="font-medium text-(--c-text-1)">All sources</span>
-                            <svg class="m-icon m-chevron-down text-[10px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
-                        </button>
-                    </div>
-                    <div class="ms-auto">
-                        <button class="flex h-8 cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-[4px] border border-[#d1d5dc] bg-white px-3 text-[13px] leading-4 font-medium text-[#333] transition-colors hover:bg-[#f5f7f9]">
-                            <svg class="m-icon m-clock-rotate-left text-[13px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.954 8.954 0 0 0 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
-                            Activities
-                        </button>
+                <div class="px-3 py-3">
+                    <div class="relative">
+                        <svg class="m-icon m-magnifying-glass absolute start-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        <input id="views-search" type="text" placeholder="Search views…" aria-label="Search views"
+                               class="w-full text-sm border border-gray-200 rounded-[6px] ps-8 pe-3 py-2 outline-none focus:border-sky-400 bg-gray-50" />
                     </div>
                 </div>
 
-                <!-- Widget canvas -->
-                <div class="flex-1 overflow-y-auto p-5 flex flex-col gap-5">
+                <!-- Contacts views -->
+                <div id="views-list-contacts" role="tabpanel" class="flex-1 overflow-y-auto px-3 pb-3 flex flex-col">
+                    <a href="#" class="views-row flex items-center gap-2 rounded-[6px] px-2 py-2.5 text-[13px] font-medium text-[#2c5cc5] no-underline" aria-current="true">
+                        <span class="flex-1 truncate">All contacts</span>
+                        <svg class="m-icon m-check text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                    </a>
+                    <div class="my-1 border-t border-[#f3f4f6]"></div>
+                    <a href="#" class="views-row flex items-center gap-2 rounded-[6px] px-2 py-2.5 text-[13px] text-[#333] no-underline transition-colors hover:text-[#2c5cc5]">
+                        <span class="flex-1 truncate">Blocked contacts</span>
+                    </a>
+                    <a href="#" class="views-row flex items-center gap-2 rounded-[6px] px-2 py-2.5 text-[13px] text-[#333] no-underline transition-colors hover:text-[#2c5cc5]">
+                        <span class="flex-1 truncate">Deleted contacts</span>
+                    </a>
+                    <a href="#" class="views-row flex items-center gap-2 rounded-[6px] px-2 py-2.5 text-[13px] text-[#333] no-underline transition-colors hover:text-[#2c5cc5]">
+                        <span class="flex-1 truncate">Unverified contacts</span>
+                    </a>
+                    <a href="#" class="views-row flex items-center gap-2 rounded-[6px] px-2 py-2.5 text-[13px] text-[#333] no-underline transition-colors hover:text-[#2c5cc5]">
+                        <span class="flex-1 truncate">Verified contacts</span>
+                    </a>
+                </div>
 
-                    <!-- KPI stat tiles (top-widget API: one tile per dashboard-visible filter).
-                         Icon square + stacked label/count; color tints only the glyph. -->
-                    <div class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-5" role="list" aria-label="Ticket counters">
-                        <a href="#" role="listitem" class="fv-stat-tile no-underline min-w-0">
-                            <span class="fv-stat-ico bg-[#f5f7f9]"><svg class="m-icon text-xl shrink-0" style="color: #3da6d7" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z"/></svg></span>
-                            <span class="flex flex-col gap-1.5 min-w-0">
-                                <span class="text-[13px] text-[#333] truncate">Unresolved</span>
-                                <span class="text-[15px] leading-4 font-bold text-(--c-text-1)">6</span>
-                            </span>
-                        </a>
-                        <a href="#" role="listitem" class="fv-stat-tile no-underline min-w-0">
-                            <span class="fv-stat-ico bg-[#f5f7f9]"><svg class="m-icon text-xl shrink-0" style="color: #d92d20" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></span>
-                            <span class="flex flex-col gap-1.5 min-w-0">
-                                <span class="text-[13px] text-[#333] truncate">Overdue</span>
-                                <span class="text-[15px] leading-4 font-bold text-(--c-text-1)">4</span>
-                            </span>
-                        </a>
-                        <a href="#" role="listitem" class="fv-stat-tile no-underline min-w-0">
-                            <span class="fv-stat-ico bg-[#f5f7f9]"><svg class="m-icon text-xl shrink-0" style="color: #f59e0b" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg></span>
-                            <span class="flex flex-col gap-1.5 min-w-0">
-                                <span class="text-[13px] text-[#333] truncate">Due today</span>
-                                <span class="text-[15px] leading-4 font-bold text-(--c-text-1)">1</span>
-                            </span>
-                        </a>
-                        <a href="#" role="listitem" class="fv-stat-tile no-underline min-w-0">
-                            <span class="fv-stat-ico bg-[#f5f7f9]"><svg class="m-icon text-xl shrink-0" style="color: #16a34a" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/></svg></span>
-                            <span class="flex flex-col gap-1.5 min-w-0">
-                                <span class="text-[13px] text-[#333] truncate">Open</span>
-                                <span class="text-[15px] leading-4 font-bold text-(--c-text-1)">5</span>
-                            </span>
-                        </a>
-                        <a href="#" role="listitem" class="fv-stat-tile no-underline min-w-0">
-                            <span class="fv-stat-ico bg-[#f5f7f9]"><svg class="m-icon text-xl shrink-0" style="color: #8b5cf6" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg></span>
-                            <span class="flex flex-col gap-1.5 min-w-0">
-                                <span class="text-[13px] text-[#333] truncate">On hold</span>
-                                <span class="text-[15px] leading-4 font-bold text-(--c-text-1)">1</span>
-                            </span>
-                        </a>
-                        <a href="#" role="listitem" class="fv-stat-tile no-underline min-w-0">
-                            <span class="fv-stat-ico bg-[#f5f7f9]"><svg class="m-icon text-xl shrink-0" style="color: #6a7282" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></span>
-                            <span class="flex flex-col gap-1.5 min-w-0">
-                                <span class="text-[13px] text-[#333] truncate">Unassigned</span>
-                                <span class="text-[15px] leading-4 font-bold text-(--c-text-1)">0</span>
-                            </span>
-                        </a>
+                <!-- Companies views -->
+                <div id="views-list-companies" role="tabpanel" class="flex-1 overflow-y-auto px-3 pb-3 flex-col hidden">
+                    <a href="#" class="views-row flex items-center gap-2 rounded-[6px] px-2 py-2.5 text-[13px] font-medium text-[#2c5cc5] no-underline" aria-current="true">
+                        <span class="flex-1 truncate">All companies</span>
+                        <svg class="m-icon m-check text-sm shrink-0" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact area -->
+            <div class="flex-1 bg-white flex flex-col overflow-hidden min-w-0">
+
+                <!-- Toolbar -->
+                <div role="toolbar" aria-label="Contact list controls" class="flex items-center gap-3 px-4 border-b border-[#d1d5dc] h-[57px] shrink-0">
+                    <!-- Views-panel toggle -->
+                    <button id="btn-toggle-views" aria-label="Toggle views panel" aria-expanded="false" aria-controls="views-panel"
+                            class="flex items-center justify-center w-8 h-8 rounded-[4px] border border-[#d1d5dc] bg-white cursor-pointer text-[#333] hover:bg-[#f5f7f9] transition-colors shrink-0">
+                        <svg class="m-icon m-angles-right text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.41 6 5 7.41 9.58 12 5 16.59 6.41 18l6-6z"/><path d="m13 6-1.41 1.41L16.17 12l-4.58 4.59L13 18l6-6z"/></svg>
+                        <svg class="m-icon m-angles-left text-xs hidden" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.59 18 19 16.59 14.42 12 19 7.41 17.59 6l-6 6z"/><path d="m11 18 1.41-1.41L7.83 12l4.58-4.59L11 6l-6 6z"/></svg>
+                    </button>
+
+                    <!-- Select all -->
+                    <label class="flex items-center gap-2 shrink-0 cursor-pointer">
+                        <input type="checkbox" id="select-all-contacts" aria-label="Select all contacts" class="w-4 h-4 border-gray-300 rounded shrink-0 accent-[#3da6d7]" />
+                        <span class="text-[13px] text-[#333] hidden sm:inline">Select all</span>
+                    </label>
+
+                    <!-- Search -->
+                    <div id="contact-search-wrap" class="relative hidden md:block w-72">
+                        <svg class="m-icon m-magnifying-glass absolute start-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        <input id="contact-search" type="text" placeholder="Search all contacts" aria-label="Search all contacts"
+                               class="w-full h-8 text-[13px] border border-[#d1d5dc] rounded-[4px] ps-8 pe-3 outline-none focus:border-sky-400 bg-white" />
                     </div>
 
-                    <!-- Today's trends + Requires Immediate Action -->
-                    <div class="grid xl:grid-cols-2 gap-5 items-stretch">
-
-                        <section class="fv-card h-[322px]" aria-label="Today's trends">
-                            <div class="flex items-center gap-2 pb-3 shrink-0">
-                                <h2 class="text-sm font-semibold text-(--c-text-1) m-0">Today's trends</h2>
-                            </div>
-                            <div class="flex flex-1 min-h-0">
-                                <!-- chart area — empty state (design shows the no-data day) -->
-                                <div class="flex-1 min-w-0 border-e border-[#f3f4f6] pe-6 flex flex-col gap-3 items-center justify-center">
-                                    <div class="border-2 border-[#e5e7eb] rounded-[14px] p-5">
-                                        <svg class="m-icon m-chart-line text-4xl text-[#d1d5dc]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m3.5 18.49 6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
-                                    </div>
-                                    <p class="text-[13px] text-[#9ca3af] m-0">No data!</p>
-                                </div>
-                                <!-- side stats (dashboard-data trends fields) -->
-                                <div class="w-[260px] shrink-0 ps-7 py-2 flex flex-col justify-between overflow-y-auto">
-                                    <div>
-                                        <p class="text-[11px] text-[#9ca3af] m-0">Resolved</p>
-                                        <p class="text-[22px] leading-[26px] font-semibold text-(--c-text-1) m-0 pt-1">0</p>
-                                    </div>
-                                    <div>
-                                        <p class="text-[11px] text-[#9ca3af] m-0">Received</p>
-                                        <p class="text-[22px] leading-[26px] font-semibold text-(--c-text-1) m-0 pt-1">0</p>
-                                    </div>
-                                    <div>
-                                        <p class="text-[11px] text-[#9ca3af] m-0 max-w-[233px]">Average First response time in business hours</p>
-                                        <p class="text-[22px] leading-[26px] font-semibold text-(--c-text-1) m-0 pt-1">0</p>
-                                    </div>
-                                    <div>
-                                        <p class="text-[11px] text-[#9ca3af] m-0">Resolution within SLA</p>
-                                        <p class="text-[22px] leading-[26px] font-semibold text-(--c-text-1) m-0 pt-1">0%</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="fv-card h-[322px]" aria-label="Requires immediate action">
-                            <div class="flex items-center gap-2.5 pb-2 shrink-0">
-                                <h2 class="flex-1 text-sm font-semibold text-(--c-text-1) m-0">Requires Immediate Action</h2>
-                                <button aria-label="Refresh list" class="flex items-center justify-center w-6 h-6 rounded cursor-pointer text-[#525252] hover:bg-[#f1f5f9] transition-colors">
-                                    <svg class="m-icon m-arrows-rotate text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
-                                </button>
-                            </div>
-                            <div class="flex-1 overflow-y-auto divide-y divide-[#f3f4f6]">
-                                <div class="flex flex-wrap items-start gap-x-3 gap-y-1 rounded-[6px] px-1.5 py-2.5 transition-colors hover:bg-[#f5f7f9]">
-                                    <div class="flex min-w-0 flex-1 basis-48 flex-wrap items-center gap-x-2 gap-y-1">
-                                        <a href="../pages/tickets/ticket-timeline.html" class="min-w-0 truncate text-xs font-medium text-(--c-text-1) no-underline transition-colors hover:text-[#3da6d7]"><span class="font-normal text-[#6a7282]">HDSK-AAAD-3904</span> Issue with translation</a>
-                                        <span class="bg-[#fef3c7] text-[#854d0e] text-[11px] font-medium rounded-full px-2 py-0.5 whitespace-nowrap">Reopened</span>
-                                    </div>
-                                    <span class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full bg-[#fee2e2] px-2 py-[3px] text-[11px] font-medium text-[#b91c1c]">
-                                        <svg class="m-icon m-clock text-[11px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                                        Overdue &middot; July 13, 2026 3:30 pm
-                                    </span>
-                                </div>
-                                <div class="flex flex-wrap items-start gap-x-3 gap-y-1 rounded-[6px] px-1.5 py-2.5 transition-colors hover:bg-[#f5f7f9]">
-                                    <div class="flex min-w-0 flex-1 basis-48 flex-wrap items-center gap-x-2 gap-y-1">
-                                        <a href="../pages/tickets/ticket-timeline.html" class="min-w-0 truncate text-xs font-medium text-(--c-text-1) no-underline transition-colors hover:text-[#3da6d7]"><span class="font-normal text-[#6a7282]">HDSK-AAAD-5063</span> Rating report</a>
-                                        <span class="bg-[#fef3c7] text-[#854d0e] text-[11px] font-medium rounded-full px-2 py-0.5 whitespace-nowrap">Reopened</span>
-                                        <span class="bg-[#dbeafe] text-[#1e40af] text-[11px] font-medium rounded-full px-2 py-0.5 whitespace-nowrap">Assigned to me</span>
-                                    </div>
-                                    <span class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full bg-[#fee2e2] px-2 py-[3px] text-[11px] font-medium text-[#b91c1c]">
-                                        <svg class="m-icon m-clock text-[11px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                                        Overdue &middot; July 6, 2026 7:30 am
-                                    </span>
-                                </div>
-                                <div class="flex flex-wrap items-start gap-x-3 gap-y-1 rounded-[6px] px-1.5 py-2.5 transition-colors hover:bg-[#f5f7f9]">
-                                    <div class="flex min-w-0 flex-1 basis-48 flex-wrap items-center gap-x-2 gap-y-1">
-                                        <a href="../pages/tickets/ticket-timeline.html" class="min-w-0 truncate text-xs font-medium text-(--c-text-1) no-underline transition-colors hover:text-[#3da6d7]"><span class="font-normal text-[#6a7282]">HDSK-AAAD-5985</span> Require clarity on the functionality.</a>
-                                    </div>
-                                    <span class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full bg-[#fee2e2] px-2 py-[3px] text-[11px] font-medium text-[#b91c1c]">
-                                        <svg class="m-icon m-clock text-[11px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                                        Overdue &middot; June 8, 2026 6:30 am
-                                    </span>
-                                </div>
-                                <div class="flex flex-wrap items-start gap-x-3 gap-y-1 rounded-[6px] px-1.5 py-2.5 transition-colors hover:bg-[#f5f7f9]">
-                                    <div class="flex min-w-0 flex-1 basis-48 flex-wrap items-center gap-x-2 gap-y-1">
-                                        <a href="../pages/tickets/ticket-timeline.html" class="min-w-0 truncate text-xs font-medium text-(--c-text-1) no-underline transition-colors hover:text-[#3da6d7]"><span class="font-normal text-[#6a7282]">HDSK-AAAD-6439</span> Ticketing Tool -VAPT FY 24-25 (Password)</a>
-                                    </div>
-                                    <span class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full bg-[#fee2e2] px-2 py-[3px] text-[11px] font-medium text-[#b91c1c]">
-                                        <svg class="m-icon m-clock text-[11px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                                        Overdue &middot; July 3, 2026 4:37 pm
-                                    </span>
-                                </div>
-                                <div class="flex flex-wrap items-start gap-x-3 gap-y-1 rounded-[6px] px-1.5 py-2.5 transition-colors hover:bg-[#f5f7f9]">
-                                    <div class="flex min-w-0 flex-1 basis-48 flex-wrap items-center gap-x-2 gap-y-1">
-                                        <a href="../pages/tickets/ticket-timeline.html" class="min-w-0 truncate text-xs font-medium text-(--c-text-1) no-underline transition-colors hover:text-[#3da6d7]"><span class="font-normal text-[#6a7282]">HDSK-AAAD-7258</span> Mail reply to ticket created as a new ticket.</a>
-                                        <span class="bg-[#dbeafe] text-[#1e40af] text-[11px] font-medium rounded-full px-2 py-0.5 whitespace-nowrap">Assigned to me</span>
-                                    </div>
-                                    <span class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full bg-[#f3f4f6] px-2 py-[3px] text-[11px] font-medium text-[#4b5563]">Due At: August 11, 2026 1:37 pm</span>
-                                </div>
-                                <div class="flex flex-wrap items-start gap-x-3 gap-y-1 rounded-[6px] px-1.5 py-2.5 transition-colors hover:bg-[#f5f7f9]">
-                                    <div class="flex min-w-0 flex-1 basis-48 flex-wrap items-center gap-x-2 gap-y-1">
-                                        <a href="../pages/tickets/ticket-timeline.html" class="min-w-0 truncate text-xs font-medium text-(--c-text-1) no-underline transition-colors hover:text-[#3da6d7]"><span class="font-normal text-[#6a7282]">HDSK-AAAD-8686</span> Request clarity on the Failed exception</a>
-                                        <span class="bg-[#fef3c7] text-[#854d0e] text-[11px] font-medium rounded-full px-2 py-0.5 whitespace-nowrap">Reopened</span>
-                                    </div>
-                                    <span class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full bg-[#fee2e2] px-2 py-[3px] text-[11px] font-medium text-[#b91c1c]">
-                                        <svg class="m-icon m-clock text-[11px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                                        Overdue &middot; July 15, 2026 2:37 pm
-                                    </span>
-                                </div>
-                                <div class="flex flex-wrap items-start gap-x-3 gap-y-1 rounded-[6px] px-1.5 py-2.5 transition-colors hover:bg-[#f5f7f9]">
-                                    <div class="flex min-w-0 flex-1 basis-48 flex-wrap items-center gap-x-2 gap-y-1">
-                                        <a href="../pages/tickets/ticket-timeline.html" class="min-w-0 truncate text-xs font-medium text-(--c-text-1) no-underline transition-colors hover:text-[#3da6d7]"><span class="font-normal text-[#6a7282]">HDSK-AAAD-9012</span> Attachment fails on reply from mobile app</a>
-                                    </div>
-                                    <span class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full bg-[#f3f4f6] px-2 py-[3px] text-[11px] font-medium text-[#4b5563]">Due At: August 20, 2026 10:00 am</span>
-                                </div>
-                                <div class="flex flex-wrap items-start gap-x-3 gap-y-1 rounded-[6px] px-1.5 py-2.5 transition-colors hover:bg-[#f5f7f9]">
-                                    <div class="flex min-w-0 flex-1 basis-48 flex-wrap items-center gap-x-2 gap-y-1">
-                                        <a href="../pages/tickets/ticket-timeline.html" class="min-w-0 truncate text-xs font-medium text-(--c-text-1) no-underline transition-colors hover:text-[#3da6d7]"><span class="font-normal text-[#6a7282]">HDSK-AAAD-9247</span> SLA timer continues during holidays</a>
-                                        <span class="bg-[#fef3c7] text-[#854d0e] text-[11px] font-medium rounded-full px-2 py-0.5 whitespace-nowrap">Reopened</span>
-                                    </div>
-                                    <span class="inline-flex shrink-0 items-center gap-1 whitespace-nowrap rounded-full bg-[#fee2e2] px-2 py-[3px] text-[11px] font-medium text-[#b91c1c]">
-                                        <svg class="m-icon m-clock text-[11px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                                        Overdue &middot; July 29, 2026 9:15 am
-                                    </span>
-                                </div>
-                            </div>
-                        </section>
+                    <!-- Bulk actions (shown when contacts are selected) -->
+                    <div id="bulk-actions" class="hidden items-center gap-2">
+                        <button class="flex h-8 cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-[4px] border border-[#d1d5dc] bg-white px-3 text-[13px] leading-4 font-medium text-[#333] transition-colors hover:bg-[#f5f7f9]"><svg class="m-icon m-user-slash text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8.65 5.82A3.999 3.999 0 0 1 12 4c2.21 0 4 1.79 4 4 0 1.35-.68 2.55-1.7 3.27l1.43 1.43A5.99 5.99 0 0 0 18 8c0-3.31-2.69-6-6-6-1.66 0-3.16.68-4.25 1.77l.9 1.05zM21.19 21.19 2.81 2.81 1.39 4.22l6.6 6.6C5.18 11.99 3 13.44 3 16v2h13.17l3.61 3.61 1.41-1.42zM5 16c.22-.72 3.31-2 6-2 .48 0 .97.04 1.45.12L14.17 16H5z"/></svg>Deactivate</button>
+                        <button class="flex h-8 cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-[4px] border border-[#d1d5dc] bg-white px-3 text-[13px] leading-4 font-medium text-[#333] transition-colors hover:bg-[#f5f7f9]"><svg class="m-icon m-rotate-left text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13 3a9 9 0 0 0-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.954 8.954 0 0 0 13 21a9 9 0 0 0 0-18z"/></svg>Restore</button>
+                        <button class="flex h-8 cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-[4px] border border-[#d1d5dc] bg-white px-3 text-[13px] leading-4 font-medium text-[#333] transition-colors hover:bg-[#f5f7f9]"><svg class="m-icon m-merge text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17 20.41 18.41 19 15 15.59 13.59 17 17 20.41zM7.5 8H11v5.59L5.59 19 7 20.41l6-6V8h3.5L12 3.5 7.5 8z"/></svg>Merge</button>
                     </div>
 
-                    <!-- Unresolved tickets / Undelivered emails / Customer satisfaction -->
-                    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-5 items-stretch">
+                    <div class="flex-1 min-w-0"></div>
 
-                        <section class="fv-card min-h-[270px]" aria-label="Unresolved tickets by group">
-                            <div class="fv-card-head">
-                                <div class="flex-1 min-w-0">
-                                    <h2 class="text-sm font-semibold text-(--c-text-1) m-0 truncate">Unresolved tickets</h2>
-                                    <p class="text-xs text-[#9ca3af] m-0 truncate">Across helpdesk</p>
-                                </div>
-                                <a href="#" class="text-[13px] font-medium text-[#3da6d7] no-underline hover:underline shrink-0">View details</a>
-                            </div>
-                            <div class="pt-3">
-                                <div class="border-t border-[#f3f4f6] pt-3">
-                                    <div class="flex items-center justify-between border-b border-[#f3f4f6] pb-2.5 pt-2.5">
-                                        <span class="text-[13px] text-[#6b7280]">Group</span>
-                                        <span class="text-[13px] text-[#6b7280]">Open</span>
-                                    </div>
-                                    <div class="flex items-center justify-between py-2.5">
-                                        <span class="text-[13px] font-semibold text-(--c-text-1)">Unassigned</span>
-                                        <span class="text-[13px] font-semibold text-(--c-text-1)">5</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                    <!-- Create user -->
+                    <a href="#" class="flex h-8 cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-[4px] bg-[#3da6d7] px-3 text-[13px] leading-4 font-medium text-white transition-colors hover:bg-[#2d96c7] no-underline">
+                        <svg class="m-icon m-user-plus text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm0 8c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm-6 4c.22-.72 3.31-2 6-2 2.7 0 5.8 1.29 6 2H9zm-3-3v-3h3v-2H6V7H4v3H1v2h3v3z"/></svg>Create user
+                    </a>
 
-                        <section class="fv-card min-h-[270px]" aria-label="Undelivered emails">
-                            <div class="fv-card-head">
-                                <div class="flex-1 min-w-0">
-                                    <h2 class="text-sm font-semibold text-(--c-text-1) m-0 truncate">Undelivered emails</h2>
-                                    <p class="text-xs text-[#9ca3af] m-0 truncate">Across helpdesk</p>
-                                </div>
-                                <a href="#" class="text-[13px] font-medium text-[#3da6d7] no-underline hover:underline shrink-0">View details</a>
-                            </div>
-                            <div class="flex-1 flex flex-col gap-3 items-center justify-center py-6">
-                                <img src="../../dashboard/person-illustration.svg" alt="" width="80" height="80" class="w-20 h-20">
-                                <p class="text-[13px] text-[#9ca3af] m-0">No undelivered emails</p>
-                            </div>
-                        </section>
+                    <!-- Export -->
+                    <button class="hidden sm:flex h-8 cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-[4px] border border-[#d1d5dc] bg-white px-3 text-[13px] leading-4 font-medium text-[#333] transition-colors hover:bg-[#f5f7f9]">
+                        <svg class="m-icon m-file-export text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="m16 5-1.42 1.42-1.59-1.59V16h-1.98V4.83L9.42 6.42 8 5l4-4 4 4zm4 5v11c0 1.1-.9 2-2 2H6a2 2 0 0 1-2-2V10c0-1.11.89-2 2-2h3v2H6v11h12V10h-3V8h3a2 2 0 0 1 2 2z"/></svg>Export
+                    </button>
 
-                        <section class="fv-card min-h-[270px]" aria-label="Customer satisfaction">
-                            <div class="fv-card-head">
-                                <div class="flex-1 min-w-0">
-                                    <h2 class="text-sm font-semibold text-(--c-text-1) m-0 truncate">Customer satisfaction</h2>
-                                </div>
-                            </div>
-                            <div class="pt-4 flex items-baseline gap-2">
-                                <span class="text-[28px] leading-[42px] font-semibold text-(--c-text-1)">0</span>
-                                <span class="text-[13px] text-[#6b7280]">Responses received</span>
-                            </div>
-                            <div class="pt-5 grid grid-cols-3 gap-3 text-center">
-                                <div class="flex flex-col gap-1.5 items-center">
-                                    <span class="text-2xl" aria-hidden="true">😊</span>
-                                    <span class="text-xs font-medium text-[#16a34a]">Positive</span>
-                                    <span class="text-lg font-semibold text-(--c-text-1)">0%</span>
-                                </div>
-                                <div class="flex flex-col gap-1.5 items-center">
-                                    <span class="text-2xl" aria-hidden="true">😐</span>
-                                    <span class="text-xs font-medium text-[#d97706]">Neutral</span>
-                                    <span class="text-lg font-semibold text-(--c-text-1)">0%</span>
-                                </div>
-                                <div class="flex flex-col gap-1.5 items-center">
-                                    <span class="text-2xl" aria-hidden="true">😞</span>
-                                    <span class="text-xs font-medium text-[#dc2626]">Negative</span>
-                                    <span class="text-lg font-semibold text-(--c-text-1)">0%</span>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
+                    <!-- Pagination -->
+                    <span class="hidden sm:inline whitespace-nowrap text-[#4a5565] text-xs px-1">1 - 7 of 7</span>
+                    <button class="hidden sm:flex h-8 w-8 cursor-pointer items-center justify-center rounded-[4px] border border-[#d1d5dc] bg-white text-[#4a5565] transition-colors hover:bg-[#f5f7f9]" aria-label="Previous page">
+                        <svg class="m-icon m-chevron-left icon-flip text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"/></svg>
+                    </button>
+                    <button class="hidden sm:flex h-8 w-8 cursor-pointer items-center justify-center rounded-[4px] border border-[#d1d5dc] bg-white text-[#4a5565] transition-colors hover:bg-[#f5f7f9]" aria-label="Next page">
+                        <svg class="m-icon m-chevron-right icon-flip text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6-6-6z"/></svg>
+                    </button>
 
-                    <!-- Forums / To-do / empty widget slot -->
-                    <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-5 items-stretch">
+                    <!-- Filters -->
+                    <button id="btn-toggle-filters" aria-controls="filter-aside" aria-expanded="false" class="flex h-8 cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-[4px] border border-[#d1d5dc] bg-white px-3 text-[13px] leading-4 font-medium text-[#333] transition-colors hover:bg-[#f5f7f9]">
+                        <svg class="m-icon m-filter text-xs" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7 6h10l-5.01 6.3L7 6zm-2.75-.39C6.27 8.2 10 13 10 13v6c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-6s3.72-4.8 5.74-7.39A.998.998 0 0 0 18.95 4H5.04c-.83 0-1.3.95-.79 1.61z"/></svg>
+                        <span>Filters</span>
+                    </button>
+                </div>
 
-                        <section class="fv-card min-h-[222px]" aria-label="Forums">
-                            <div class="fv-card-head">
-                                <div class="flex-1 min-w-0">
-                                    <h2 class="text-sm font-semibold text-(--c-text-1) m-0 truncate">Forums</h2>
-                                    <p class="text-xs text-[#9ca3af] m-0 truncate">Across helpdesk</p>
-                                </div>
-                            </div>
-                            <div class="pt-3">
-                                <div class="border-t border-[#f3f4f6] pt-3 flex flex-col gap-4">
-                                    <div>
-                                        <div class="flex items-center gap-2 pb-1">
-                                            <svg class="m-icon m-clock text-[13px] text-[#6b7280]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                                            <span class="text-[13px] text-[#6b7280]">Waiting for approval</span>
+                <!-- Table + filter panel -->
+                <div class="flex flex-1 overflow-hidden">
+
+                    <div class="flex-1 overflow-auto min-w-0">
+                        <table class="w-full min-w-[980px] border-collapse" aria-label="Contact list">
+                            <thead class="sticky top-0 z-10 bg-white">
+                                <tr>
+                                    <th class="w-14 border-b border-[#e5e7eb] ps-6 pe-2 py-3"></th>
+                                    <th class="border-b border-[#e5e7eb] px-2 py-3 text-start text-xs font-semibold text-[#333] whitespace-nowrap">Contact</th>
+                                    <th class="border-b border-[#e5e7eb] px-2 py-3 text-start text-xs font-semibold text-[#333] whitespace-nowrap">Title</th>
+                                    <th class="border-b border-[#e5e7eb] px-2 py-3 text-start text-xs font-semibold text-[#333] whitespace-nowrap">Company</th>
+                                    <th class="border-b border-[#e5e7eb] px-2 py-3 text-start text-xs font-semibold text-[#333] whitespace-nowrap">Email address</th>
+                                    <th class="border-b border-[#e5e7eb] px-2 py-3 text-start text-xs font-semibold text-[#333] whitespace-nowrap">Mobile phone</th>
+                                    <th class="border-b border-[#e5e7eb] px-2 py-3 text-start text-xs font-semibold text-[#333] whitespace-nowrap">Work phone</th>
+                                    <th class="border-b border-[#e5e7eb] px-2 py-3 text-start text-xs font-semibold text-[#333] whitespace-nowrap">Social Handle</th>
+                                    <th class="w-14 border-b border-[#e5e7eb] px-2 pe-4 py-3"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="transition-colors hover:bg-[#f5f7f9]">
+                                    <td class="border-b border-[#f3f4f6] ps-6 pe-2 py-3"><input type="checkbox" class="contact-checkbox w-4 h-4 border-gray-300 rounded accent-[#3da6d7]" aria-label="Select Bob Tree" /></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3">
+                                        <div class="flex items-center gap-2.5 min-w-0">
+                                            <img src="https://i.pravatar.cc/48?img=13" alt="" class="w-8 h-8 rounded-full object-cover shrink-0" />
+                                            <a href="#" class="text-[13px] font-medium text-[#2c5cc5] no-underline hover:underline truncate">Bob Tree</a>
                                         </div>
-                                        <p class="text-[22px] leading-[39px] font-semibold text-(--c-text-1) m-0 ps-6">0</p>
-                                    </div>
-                                    <div class="border-t border-[#f3f4f6] pt-3 flex items-center gap-2">
-                                        <svg class="m-icon m-ban text-[13px] text-[#6b7280]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9A7.902 7.902 0 0 1 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1A7.902 7.902 0 0 1 20 12c0 4.42-3.58 8-8 8z"/></svg>
-                                        <span class="text-[13px] text-[#6b7280]">Spam</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="fv-card min-h-[222px]" aria-label="To-do">
-                            <div class="fv-card-head">
-                                <div class="flex-1 min-w-0">
-                                    <h2 class="text-sm font-semibold text-(--c-text-1) m-0 truncate">To-do</h2>
-                                    <p class="text-xs text-[#9ca3af] m-0 truncate">Across helpdesk</p>
-                                </div>
-                            </div>
-                            <div class="pt-3 flex-1 flex flex-col">
-                                <div class="border-t border-[#f3f4f6] pt-3 flex-1 flex flex-col">
-                                    <button class="flex items-center gap-2 text-[13px] font-medium text-[#3da6d7] cursor-pointer hover:underline self-start">
-                                        <svg class="m-icon m-plus text-[13px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-                                        Add a to-do
-                                    </button>
-                                    <div class="flex-1 flex items-center justify-center py-4">
-                                        <img src="../../dashboard/calendar-illustration.svg" alt="" width="56" height="56" class="w-14 h-14">
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Custom-widget slot (dashboard builder drop target) -->
-                        <section class="min-h-[222px] rounded-[6px] border border-dashed border-[#cfd7df] bg-[#f9fafb] flex items-center justify-center" aria-label="Empty widget slot">
-                            <div class="flex flex-col gap-2 items-center">
-                                <svg class="m-icon m-grip text-[28px] text-[#d1d5db]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg>
-                                <p class="text-xs text-[#d1d5db] m-0">No widget</p>
-                            </div>
-                        </section>
+                                    </td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[180px]"><span class="text-[13px] text-[#333]">CEO</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[200px]"><span class="text-[13px] text-[#333]">Freshworks</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[220px]"><div class="truncate"><span class="text-[13px] text-[#333]">bob.tree@freshdesk.com</span></div></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#333]">8295701297</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 pe-4 py-3">
+                                        <div class="relative">
+                                            <button data-toggle="dropdown" data-target="#row-menu-1" aria-haspopup="menu" aria-expanded="false" aria-controls="row-menu-1" aria-label="Actions for Bob Tree"
+                                                    class="flex h-7 w-7 items-center justify-center rounded-[4px] text-[#6a7282] cursor-pointer hover:bg-[#f1f5f9] transition-colors"><svg class="m-icon m-ellipsis-vertical text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></button>
+                                            <div id="row-menu-1" role="menu" aria-label="Contact actions" class="hidden absolute end-0 top-[calc(100%+2px)] z-50 min-w-[150px] bg-white border border-[#e5e7eb] rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] p-2">
+                                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#333] cursor-pointer text-start border-none bg-transparent hover:bg-[#f5f7f9] transition-colors">Edit</button>
+                                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#d92d20] cursor-pointer text-start border-none bg-transparent hover:bg-[#f5f7f9] transition-colors">Deactivate</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="transition-colors hover:bg-[#f5f7f9]">
+                                    <td class="border-b border-[#f3f4f6] ps-6 pe-2 py-3"><input type="checkbox" class="contact-checkbox w-4 h-4 border-gray-300 rounded accent-[#3da6d7]" aria-label="Select Emily Garcia" /></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3">
+                                        <div class="flex items-center gap-2.5 min-w-0">
+                                            <img src="https://i.pravatar.cc/48?img=33" alt="" class="w-8 h-8 rounded-full object-cover shrink-0" />
+                                            <a href="#" class="text-[13px] font-medium text-[#2c5cc5] no-underline hover:underline truncate">Emily Garcia</a>
+                                        </div>
+                                    </td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[180px]"><span class="text-[13px] text-[#333]">Associate Director</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[200px]"><span class="text-[13px] text-[#333]">Acme Inc</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[220px]"><div class="truncate"><span class="text-[13px] text-[#333]">emily.garcia@acme.com</span></div></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#333]">+91 9876543201</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 pe-4 py-3">
+                                        <div class="relative">
+                                            <button data-toggle="dropdown" data-target="#row-menu-2" aria-haspopup="menu" aria-expanded="false" aria-controls="row-menu-2" aria-label="Actions for Emily Garcia"
+                                                    class="flex h-7 w-7 items-center justify-center rounded-[4px] text-[#6a7282] cursor-pointer hover:bg-[#f1f5f9] transition-colors"><svg class="m-icon m-ellipsis-vertical text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></button>
+                                            <div id="row-menu-2" role="menu" aria-label="Contact actions" class="hidden absolute end-0 top-[calc(100%+2px)] z-50 min-w-[150px] bg-white border border-[#e5e7eb] rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] p-2">
+                                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#333] cursor-pointer text-start border-none bg-transparent hover:bg-[#f5f7f9] transition-colors">Edit</button>
+                                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#d92d20] cursor-pointer text-start border-none bg-transparent hover:bg-[#f5f7f9] transition-colors">Deactivate</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="transition-colors hover:bg-[#f5f7f9]">
+                                    <td class="border-b border-[#f3f4f6] ps-6 pe-2 py-3"><input type="checkbox" class="contact-checkbox w-4 h-4 border-gray-300 rounded accent-[#3da6d7]" aria-label="Select Emily Dean" /></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3">
+                                        <div class="flex items-center gap-2.5 min-w-0">
+                                            <img src="https://i.pravatar.cc/48?img=51" alt="" class="w-8 h-8 rounded-full object-cover shrink-0" />
+                                            <a href="#" class="text-[13px] font-medium text-[#2c5cc5] no-underline hover:underline truncate">Emily Dean</a>
+                                        </div>
+                                    </td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[180px]"><span class="text-[13px] text-[#333]">Chartered Accountant</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[200px]"><span class="text-[13px] text-[#333]">Global Learning Inc</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[220px]"><div class="truncate"><span class="text-[13px] text-[#333]">emily.dean@globallearning.org</span></div></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#333]">257715491</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 pe-4 py-3">
+                                        <div class="relative">
+                                            <button data-toggle="dropdown" data-target="#row-menu-3" aria-haspopup="menu" aria-expanded="false" aria-controls="row-menu-3" aria-label="Actions for Emily Dean"
+                                                    class="flex h-7 w-7 items-center justify-center rounded-[4px] text-[#6a7282] cursor-pointer hover:bg-[#f1f5f9] transition-colors"><svg class="m-icon m-ellipsis-vertical text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></button>
+                                            <div id="row-menu-3" role="menu" aria-label="Contact actions" class="hidden absolute end-0 top-[calc(100%+2px)] z-50 min-w-[150px] bg-white border border-[#e5e7eb] rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] p-2">
+                                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#333] cursor-pointer text-start border-none bg-transparent hover:bg-[#f5f7f9] transition-colors">Edit</button>
+                                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#d92d20] cursor-pointer text-start border-none bg-transparent hover:bg-[#f5f7f9] transition-colors">Deactivate</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="transition-colors hover:bg-[#f5f7f9]">
+                                    <td class="border-b border-[#f3f4f6] ps-6 pe-2 py-3"><input type="checkbox" class="contact-checkbox w-4 h-4 border-gray-300 rounded accent-[#3da6d7]" aria-label="Select Johnny Appleseed" /></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3">
+                                        <div class="flex items-center gap-2.5 min-w-0">
+                                            <img src="https://i.pravatar.cc/48?img=60" alt="" class="w-8 h-8 rounded-full object-cover shrink-0" />
+                                            <a href="#" class="text-[13px] font-medium text-[#2c5cc5] no-underline hover:underline truncate">Johnny Appleseed</a>
+                                        </div>
+                                    </td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[180px]"><span class="text-[13px] text-[#333]">Manager Customer Support</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[200px]"><span class="text-[13px] text-[#333]">Jet Propulsion Laboratory , NASA</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[220px]"><div class="truncate"><span class="text-[13px] text-[#333]">johnny.appleseed@jpl.gov</span></div></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#333]">123412834</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 pe-4 py-3">
+                                        <div class="relative">
+                                            <button data-toggle="dropdown" data-target="#row-menu-4" aria-haspopup="menu" aria-expanded="false" aria-controls="row-menu-4" aria-label="Actions for Johnny Appleseed"
+                                                    class="flex h-7 w-7 items-center justify-center rounded-[4px] text-[#6a7282] cursor-pointer hover:bg-[#f1f5f9] transition-colors"><svg class="m-icon m-ellipsis-vertical text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></button>
+                                            <div id="row-menu-4" role="menu" aria-label="Contact actions" class="hidden absolute end-0 top-[calc(100%+2px)] z-50 min-w-[150px] bg-white border border-[#e5e7eb] rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] p-2">
+                                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#333] cursor-pointer text-start border-none bg-transparent hover:bg-[#f5f7f9] transition-colors">Edit</button>
+                                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#d92d20] cursor-pointer text-start border-none bg-transparent hover:bg-[#f5f7f9] transition-colors">Deactivate</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="transition-colors hover:bg-[#f5f7f9]">
+                                    <td class="border-b border-[#f3f4f6] ps-6 pe-2 py-3"><input type="checkbox" class="contact-checkbox w-4 h-4 border-gray-300 rounded accent-[#3da6d7]" aria-label="Select Sarah James" /></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3">
+                                        <div class="flex items-center gap-2.5 min-w-0">
+                                            <img src="https://i.pravatar.cc/48?img=25" alt="" class="w-8 h-8 rounded-full object-cover shrink-0" />
+                                            <a href="#" class="text-[13px] font-medium text-[#2c5cc5] no-underline hover:underline truncate">Sarah James</a>
+                                        </div>
+                                    </td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[180px]"><span class="text-[13px] text-[#333]">Manager Public relations</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[200px]"><span class="text-[13px] text-[#333]">Advanced Machinery</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[220px]"><div class="truncate"><span class="text-[13px] text-[#333]">sarah.james@advancedmachinery.com</span></div></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#333]">1855747676</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 pe-4 py-3">
+                                        <div class="relative">
+                                            <button data-toggle="dropdown" data-target="#row-menu-5" aria-haspopup="menu" aria-expanded="false" aria-controls="row-menu-5" aria-label="Actions for Sarah James"
+                                                    class="flex h-7 w-7 items-center justify-center rounded-[4px] text-[#6a7282] cursor-pointer hover:bg-[#f1f5f9] transition-colors"><svg class="m-icon m-ellipsis-vertical text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></button>
+                                            <div id="row-menu-5" role="menu" aria-label="Contact actions" class="hidden absolute end-0 top-[calc(100%+2px)] z-50 min-w-[150px] bg-white border border-[#e5e7eb] rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] p-2">
+                                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#333] cursor-pointer text-start border-none bg-transparent hover:bg-[#f5f7f9] transition-colors">Edit</button>
+                                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#d92d20] cursor-pointer text-start border-none bg-transparent hover:bg-[#f5f7f9] transition-colors">Deactivate</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="transition-colors hover:bg-[#f5f7f9]">
+                                    <td class="border-b border-[#f3f4f6] ps-6 pe-2 py-3"><input type="checkbox" class="contact-checkbox w-4 h-4 border-gray-300 rounded accent-[#3da6d7]" aria-label="Select Sivakumar Rajagopalan" /></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3">
+                                        <div class="flex items-center gap-2.5 min-w-0">
+                                            <span class="w-8 h-8 rounded-full bg-[#e8f0fe] text-[#2c5cc5] flex items-center justify-center text-xs font-semibold shrink-0">S</span>
+                                            <a href="#" class="text-[13px] font-medium text-[#2c5cc5] no-underline hover:underline truncate">Sivakumar Rajagopalan</a>
+                                        </div>
+                                    </td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[180px]"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[200px]"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[220px]"><div class="truncate"><span class="text-[13px] text-[#333]">sivakumar.rajagopalan@enterprise-organization.example.co.in</span></div></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 pe-4 py-3">
+                                        <div class="relative">
+                                            <button data-toggle="dropdown" data-target="#row-menu-6" aria-haspopup="menu" aria-expanded="false" aria-controls="row-menu-6" aria-label="Actions for Sivakumar Rajagopalan"
+                                                    class="flex h-7 w-7 items-center justify-center rounded-[4px] text-[#6a7282] cursor-pointer hover:bg-[#f1f5f9] transition-colors"><svg class="m-icon m-ellipsis-vertical text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></button>
+                                            <div id="row-menu-6" role="menu" aria-label="Contact actions" class="hidden absolute end-0 top-[calc(100%+2px)] z-50 min-w-[150px] bg-white border border-[#e5e7eb] rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] p-2">
+                                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#333] cursor-pointer text-start border-none bg-transparent hover:bg-[#f5f7f9] transition-colors">Edit</button>
+                                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#d92d20] cursor-pointer text-start border-none bg-transparent hover:bg-[#f5f7f9] transition-colors">Deactivate</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="transition-colors hover:bg-[#f5f7f9]">
+                                    <td class="border-b border-[#f3f4f6] ps-6 pe-2 py-3"><input type="checkbox" class="contact-checkbox w-4 h-4 border-gray-300 rounded accent-[#3da6d7]" aria-label="Select Priya N" /></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3">
+                                        <div class="flex items-center gap-2.5 min-w-0">
+                                            <img src="https://i.pravatar.cc/48?img=44" alt="" class="w-8 h-8 rounded-full object-cover shrink-0" />
+                                            <a href="#" class="text-[13px] font-medium text-[#2c5cc5] no-underline hover:underline truncate">Priya N</a>
+                                        </div>
+                                    </td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[180px]"><span class="text-[13px] text-[#333]">Senior Technical Support Engineer — EMEA & APAC</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[200px]"><span class="text-[13px] text-[#333]">Tata Consultancy Services</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 max-w-[220px]"><div class="truncate"><span class="text-[13px] text-[#333]">priya.n@tcs.com</span></div></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#333]">+91 98765 43210</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#99a1af]">- -</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 py-3 whitespace-nowrap"><span class="text-[13px] text-[#333]">@priya_n</span></td>
+                                    <td class="border-b border-[#f3f4f6] px-2 pe-4 py-3">
+                                        <div class="relative">
+                                            <button data-toggle="dropdown" data-target="#row-menu-7" aria-haspopup="menu" aria-expanded="false" aria-controls="row-menu-7" aria-label="Actions for Priya N"
+                                                    class="flex h-7 w-7 items-center justify-center rounded-[4px] text-[#6a7282] cursor-pointer hover:bg-[#f1f5f9] transition-colors"><svg class="m-icon m-ellipsis-vertical text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg></button>
+                                            <div id="row-menu-7" role="menu" aria-label="Contact actions" class="hidden absolute end-0 top-[calc(100%+2px)] z-50 min-w-[150px] bg-white border border-[#e5e7eb] rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] p-2">
+                                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#333] cursor-pointer text-start border-none bg-transparent hover:bg-[#f5f7f9] transition-colors">Edit</button>
+                                                <button role="menuitem" class="flex items-center gap-2.5 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#d92d20] cursor-pointer text-start border-none bg-transparent hover:bg-[#f5f7f9] transition-colors">Deactivate</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+
+                    <!-- Filter aside (opens by default on xl+; overlay below) -->
+                    <aside id="filter-aside" class="w-[260px] bg-white border-s border-[#d1d5dc] shrink-0 hidden flex-col overflow-hidden" aria-label="Contact filters">
+
+                        <!-- Scrollable area -->
+                        <div class="overflow-y-auto flex-1 flex flex-col">
+
+                            <!-- Header -->
+                            <div class="px-4 py-3 border-b border-[#d1d5dc] flex items-center justify-between shrink-0">
+                                <span class="text-[#333] text-sm font-semibold">Filters</span>
+                                <div class="flex items-center gap-2">
+                                    <button id="btn-show-all-filters" class="text-[#3da6d7] text-xs font-medium">Show applied filters</button>
+                                    <button id="btn-close-filters" aria-label="Close filters" class="xl:hidden flex items-center justify-center w-6 h-6 rounded text-[#6a7282] hover:bg-[#f1f5f9] transition-colors">
+                                        <svg class="m-icon m-xmark text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Applied filters view (default) -->
+                            <div id="applied-filters-view" class="hidden flex-col flex-1 px-4 py-3 gap-4">
+
+                                <!-- Applied filter rows (dynamic) -->
+                                <div id="applied-filters-list" class="flex flex-col gap-4">
+                                    <!-- Default: Role row -->
+                                    <div class="filter-row flex flex-col gap-1.5" data-filter="role">
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-xs font-medium text-[#4a5565]">Role</span>
+                                            <button class="btn-remove-filter text-red-400 hover:text-red-600 transition-colors" aria-label="Remove filter">
+                                                <svg class="m-icon m-circle-minus text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"/></svg>
+                                            </button>
+                                        </div>
+                                        <select class="filter-select focus:border-sky-400"><option>Any role</option><option>Agent</option><option>Admin</option><option>User</option></select>
+                                    </div>
+                                </div>
+
+                                <!-- Add filters button + dropdown -->
+                                <div class="relative mt-2">
+                                    <button id="btn-add-filter" class="flex items-center gap-1.5 px-3 py-1.5 rounded-[6px] border border-[#d1d5dc] text-[#3da6d7] text-xs font-medium hover:bg-[#f1f5f9] transition-colors cursor-pointer">
+                                        <svg class="m-icon m-circle-plus" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                                        Add filters
+                                    </button>
+                                    <!-- Dropdown -->
+                                    <div id="add-filter-dropdown" class="hidden absolute start-0 top-[calc(100%+4px)] w-full bg-white rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] border border-[#e5e7eb] z-20">
+                                        <div class="p-2">
+                                            <input id="filter-option-search" type="text" placeholder="Search..." aria-label="Search filter fields"
+                                                   class="w-full border border-[#d1d5dc] rounded-[6px] px-3 py-1.5 text-xs outline-none focus:border-sky-400" />
+                                        </div>
+                                        <ul id="filter-options-list" role="listbox" class="flex flex-col py-1 max-h-48 overflow-y-auto">
+                                            <li role="option" data-filter="role"         class="filter-option px-4 py-2 text-xs text-[#333] hover:bg-[#f1f5f9] cursor-pointer">Role</li>
+                                            <li role="option" data-filter="department"   class="filter-option px-4 py-2 text-xs text-[#333] hover:bg-[#f1f5f9] cursor-pointer">Department</li>
+                                            <li role="option" data-filter="organization" class="filter-option px-4 py-2 text-xs text-[#333] hover:bg-[#f1f5f9] cursor-pointer">Organization</li>
+                                            <li role="option" data-filter="team"         class="filter-option px-4 py-2 text-xs text-[#333] hover:bg-[#f1f5f9] cursor-pointer">Team</li>
+                                            <li role="option" data-filter="label"        class="filter-option px-4 py-2 text-xs text-[#333] hover:bg-[#f1f5f9] cursor-pointer">Label</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- All filters view (hidden by default) -->
+                            <div id="all-filters-view" class="flex flex-1 flex-col px-4 py-4 gap-4">
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex flex-col gap-1.5">
+                                        <span class="text-xs font-medium text-[#4a5565]">Role</span>
+                                        <select class="filter-select focus:border-sky-400"><option>Any role</option><option>Agent</option><option>Admin</option><option>User</option></select>
+                                    </div>
+                                    <div class="flex flex-col gap-1.5">
+                                        <span class="text-xs font-medium text-[#4a5565]">Department</span>
+                                        <select class="filter-select focus:border-sky-400"><option>Any department</option><option>Support</option><option>Sales</option><option>Billing</option></select>
+                                    </div>
+                                    <div class="flex flex-col gap-1.5">
+                                        <span class="text-xs font-medium text-[#4a5565]">Organization</span>
+                                        <select class="filter-select focus:border-sky-400"><option>Any organization</option><option>Freshworks</option><option>Acme Inc</option><option>Advanced Machinery</option></select>
+                                    </div>
+                                    <div class="flex flex-col gap-1.5">
+                                        <span class="text-xs font-medium text-[#4a5565]">Team</span>
+                                        <select class="filter-select focus:border-sky-400"><option>Any team</option><option>L1 Support</option><option>L2 Support</option><option>Escalations</option></select>
+                                    </div>
+                                    <div class="flex flex-col gap-1.5">
+                                        <span class="text-xs font-medium text-[#4a5565]">Label</span>
+                                        <select class="filter-select focus:border-sky-400"><option>Any label</option><option>VIP</option><option>Partner</option><option>Blocked</option></select>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div><!-- end scrollable -->
+
+                        <!-- Sticky footer: Reset + Apply -->
+                        <div class="px-4 py-3 shrink-0 flex gap-2 border-t border-[#e5e7eb]">
+                            <button aria-label="Reset filters" class="flex-1 bg-[#e5e7eb] hover:bg-[#d1d5dc] text-[#525252] text-xs font-medium py-2.5 rounded-[6px] transition-colors">Reset</button>
+                            <button aria-label="Apply filters" class="flex-1 bg-[#3da6d7] hover:bg-[#2d96c7] text-white text-xs font-medium py-2.5 rounded-[6px] transition-colors">Apply</button>
+                        </div>
+
+                    </aside>
                 </div>
             </div>
-        </main>
 
-        <!-- Panel + filter toggles (must sit after the markup they wire up) -->
-        <script>
-        (function () {
-            function wireToggle(btnId, targetId) {
-                var btn = document.getElementById(btnId);
-                var target = document.getElementById(targetId);
-                if (!btn || !target) return;
-                btn.addEventListener('click', function () {
-                    var hidden = target.classList.toggle('hidden');
-                    btn.setAttribute('aria-expanded', String(!hidden));
-                });
-            }
-            wireToggle('btn-toggle-dashboards', 'dashboards-panel');
-        })();
-        </script>
+        </main>
     </div>
 </div>
 
 <!-- Nav second-level submenus (static HTML, JS only positions + shows/hides) -->
 <div id="submenu-dashboard" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="./v1.html">My Dashboard</a>
-    <a class="submenu-item" href="./v2.html">Operations Dashboard</a>
+    <a class="submenu-item" href="../../dashboard/v1.html">My Dashboard</a>
+    <a class="submenu-item" href="../../dashboard/v2.html">Operations Dashboard</a>
 </div>
 <div id="submenu-tickets" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../pages/tickets/ticket-inbox.html">Ticket Inbox</a>
-    <a class="submenu-item" href="../pages/tickets/create-ticket.html">Create Ticket</a>
-    <a class="submenu-item" href="../pages/tickets/ticket-timeline.html">Ticket Timeline</a>
+    <a class="submenu-item" href="../tickets/ticket-inbox.html">Ticket Inbox</a>
+    <a class="submenu-item" href="../tickets/create-ticket.html">Create Ticket</a>
+    <a class="submenu-item" href="../tickets/ticket-timeline.html">Ticket Timeline</a>
 </div>
 <div id="submenu-contacts" class="nav-submenu-panel hidden">
-    <a class="submenu-item" href="../pages/users/list.html">Contacts</a>
+    <a class="submenu-item" href="./list.html">Contacts</a>
     <button class="submenu-item">Companies</button>
 </div>
 <div id="submenu-kb" class="nav-submenu-panel hidden">
@@ -1288,7 +1402,7 @@
 <!-- ── Renew flyout panel ────────────────────────────────────────
      position:fixed, top set by JS to bottom of #banner-red
      Drops right below the red alert, overlays everything below it  -->
-<div id="panel-renew" role="dialog" aria-modal="true" aria-label="Subscription renewal" class="fixed left-0 right-0 bottom-0 z-[200] hidden flex flex-col">
+<div id="panel-renew" role="dialog" aria-modal="true" aria-label="Subscription renewal" class="fixed start-0 end-0 bottom-0 z-[200] hidden flex flex-col">
     <!-- Content panel -->
     <div class="w-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.12)] overflow-y-auto max-h-[80vh] md:max-h-none md:overflow-visible">
         <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[rgba(219,219,219,0.5)]">
@@ -1375,7 +1489,7 @@
                 <span class="font-semibold cursor-pointer">Choose a plan</span>
                 to continue using Faveo Helpdesk
             </p>
-            <button data-dismiss="#panel-renew" aria-label="Close renewal panel" class="absolute right-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
+            <button data-dismiss="#panel-renew" aria-label="Close renewal panel" class="absolute end-5 bg-white shadow-[0_0_2px_rgba(0,0,0,0.2)] rounded-full w-[22px] h-[22px] flex items-center justify-center cursor-pointer">
                 <svg class="m-icon m-xmark text-[10px] text-gray-500" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
             </button>
         </div>
@@ -1384,5 +1498,362 @@
     <div data-dismiss="#panel-renew" class="flex-1 bg-black/20"></div>
 </div>
 
+<!-- ── Close action toast ─────────────────────────────────────────── -->
+
+
+<!-- ── Shared ticket dropdown panels ─────────────────────────────── -->
+<!-- Priority panel -->
+<div id="panel-priority" class="fixed z-[300] hidden bg-white rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] border border-[#e5e7eb] p-1 min-w-[120px]">
+    <button class="priority-opt flex items-center gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Low" data-color="bg-green-500">
+        <span class="w-2.5 h-2.5 rounded-sm bg-green-500 shrink-0"></span>
+        <span class="flex-1 text-start">Low</span>
+    </button>
+    <button class="priority-opt flex items-center gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Medium" data-color="bg-blue-400">
+        <span class="w-2.5 h-2.5 rounded-sm bg-blue-400 shrink-0"></span>
+        <span class="flex-1 text-start">Medium</span>
+    </button>
+    <button class="priority-opt flex items-center gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="High" data-color="bg-yellow-400">
+        <span class="w-2.5 h-2.5 rounded-sm bg-yellow-400 shrink-0"></span>
+        <span class="flex-1 text-start">High</span>
+    </button>
+    <button class="priority-opt flex items-center gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Urgent" data-color="bg-red-500">
+        <span class="w-2.5 h-2.5 rounded-sm bg-red-500 shrink-0"></span>
+        <span class="flex-1 text-start">Urgent</span>
+    </button>
+</div>
+
+<!-- Status panel -->
+<div id="panel-status" class="fixed z-[300] hidden bg-white rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] border border-[#e5e7eb] p-1 min-w-[150px]">
+    <button class="status-opt flex items-center w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Open" data-icon="fa-envelope-open">Open</button>
+    <button class="status-opt flex items-center w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Pending" data-icon="fa-pause">Pending</button>
+    <button class="status-opt flex items-center w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Resolved" data-icon="fa-circle-check">Resolved</button>
+    <button class="status-opt flex items-center w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Closed" data-icon="fa-check">Closed</button>
+    <button class="status-opt flex items-center w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Waiting on Customer" data-icon="fa-hourglass-half">Waiting on Customer</button>
+</div>
+
+<!-- Agent panel -->
+<div id="panel-agent" class="fixed z-[300] hidden bg-white rounded-[8px] shadow-[0_5px_24px_rgba(18,52,77,0.14)] border border-[#e5e7eb] min-w-[210px]">
+    <!-- Tabs -->
+    <div class="px-2.5 pt-2.5 pb-0 border-b border-[#e5e7eb]">
+        <div class="flex gap-4 text-[10px] font-bold uppercase tracking-wide">
+            <button id="agent-tab-group" class="pb-2 cursor-pointer text-[#9ca3af] transition-colors">Group</button>
+            <button id="agent-tab-agent" class="pb-2 cursor-pointer text-blue-600 border-b-2 border-blue-600 transition-colors">Agent</button>
+        </div>
+    </div>
+
+    <!-- Agent section -->
+    <div id="agent-section">
+        <div class="px-1.5 py-1.5 border-b border-[#e5e7eb]">
+            <div class="relative">
+                <input id="agent-search-input" type="text" placeholder="Search agent" class="w-full ps-2.5 pe-7 py-1 text-[11px] rounded-[5px] border border-[#e5e7eb] focus:outline-none focus:border-blue-400 bg-transparent">
+                <svg class="m-icon m-magnifying-glass absolute end-2 top-1/2 -translate-y-1/2 text-gray-400 text-[9px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </div>
+        </div>
+        <div id="agent-list" class="p-1 max-h-[160px] overflow-y-auto">
+            <button class="agent-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="-- / Unassigned">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[9px] text-[#6a7282] font-semibold shrink-0">--</span>
+                    <span>Unassigned</span>
+                </div>
+            </button>
+            <button class="agent-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="-- / Alice Johnson">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-blue-400 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">AJ</span>
+                    <span>Alice Johnson</span>
+                </div>
+            </button>
+            <button class="agent-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="-- / Alex P.">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">AP</span>
+                    <span>Alex P.</span>
+                </div>
+            </button>
+            <button class="agent-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="-- / Ben Carter">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-purple-400 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">BC</span>
+                    <span>Ben Carter</span>
+                </div>
+            </button>
+            <button class="agent-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="-- / Lisa M.">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-orange-400 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">LM</span>
+                    <span>Lisa M.</span>
+                </div>
+            </button>
+            <button class="agent-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="-- / Sam Patel">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-pink-400 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">SP</span>
+                    <span>Sam Patel</span>
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <!-- Group section -->
+    <div id="group-section" class="hidden">
+        <div class="px-1.5 py-1.5 border-b border-[#e5e7eb]">
+            <div class="relative">
+                <input id="group-search-input" type="text" placeholder="Search group" class="w-full ps-2.5 pe-7 py-1 text-[11px] rounded-[5px] border border-[#e5e7eb] focus:outline-none focus:border-blue-400 bg-transparent">
+                <svg class="m-icon m-magnifying-glass absolute end-2 top-1/2 -translate-y-1/2 text-gray-400 text-[9px]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </div>
+        </div>
+        <div id="group-list" class="p-1 max-h-[160px] overflow-y-auto">
+            <button class="group-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Support / --">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[9px] text-[#6a7282] font-semibold shrink-0">--</span>
+                    <span>Support</span>
+                </div>
+            </button>
+            <button class="group-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Sales / --">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-blue-400 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">SA</span>
+                    <span>Sales</span>
+                </div>
+            </button>
+            <button class="group-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Technical / --">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">TC</span>
+                    <span>Technical</span>
+                </div>
+            </button>
+            <button class="group-opt flex items-center justify-between gap-2 w-full px-3 py-2 rounded-[6px] text-[13px] font-normal text-[#1e2939] hover:bg-[#f5f7f9] transition-colors" data-value="Billing / --">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-5 h-5 rounded-full bg-purple-400 flex items-center justify-center text-[9px] text-white font-semibold shrink-0">BI</span>
+                    <span>Billing</span>
+                </div>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function () {
+    // ── Filters panel ─────────────────────────────────────────────────
+    const filterAside = document.getElementById('filter-aside');
+    const btnToggleFilters = document.getElementById('btn-toggle-filters');
+
+    function showFilterPanel() {
+        filterAside.classList.remove('hidden');
+        filterAside.classList.add('flex');
+        btnToggleFilters.setAttribute('aria-expanded', 'true');
+    }
+    function hideFilterPanel() {
+        filterAside.classList.remove('flex');
+        filterAside.classList.add('hidden');
+        btnToggleFilters.setAttribute('aria-expanded', 'false');
+    }
+
+    if (window.innerWidth >= 1280) showFilterPanel();
+
+    btnToggleFilters.addEventListener('click', function () {
+        filterAside.classList.contains('hidden') ? showFilterPanel() : hideFilterPanel();
+    });
+    document.getElementById('btn-close-filters').addEventListener('click', hideFilterPanel);
+
+    document.getElementById('btn-show-all-filters').addEventListener('click', function () {
+        const allView = document.getElementById('all-filters-view');
+        const appliedView = document.getElementById('applied-filters-view');
+        const allVisible = !allView.classList.contains('hidden');
+        if (allVisible) {
+            allView.classList.add('hidden');
+            allView.classList.remove('flex');
+            appliedView.classList.remove('hidden');
+            this.textContent = 'Show all filters';
+        } else {
+            appliedView.classList.add('hidden');
+            allView.classList.remove('hidden');
+            allView.classList.add('flex');
+            this.textContent = 'Show applied filters';
+        }
+    });
+
+    const filterDefs = {
+        role:         { label: 'Role',         options: ['Any role', 'Agent', 'Admin', 'User'] },
+        department:   { label: 'Department',   options: ['Any department', 'Support', 'Sales', 'Billing'] },
+        organization: { label: 'Organization', options: ['Any organization', 'Freshworks', 'Acme Inc', 'Advanced Machinery'] },
+        team:         { label: 'Team',         options: ['Any team', 'L1 Support', 'L2 Support', 'Escalations'] },
+        label:        { label: 'Label',        options: ['Any label', 'VIP', 'Partner', 'Blocked'] },
+    };
+
+    document.getElementById('btn-add-filter').addEventListener('click', function (e) {
+        e.stopPropagation();
+        document.getElementById('add-filter-dropdown').classList.toggle('hidden');
+        const search = document.getElementById('filter-option-search');
+        search.value = '';
+        search.dispatchEvent(new Event('input'));
+        search.focus();
+    });
+
+    document.getElementById('filter-option-search').addEventListener('input', function () {
+        const q = this.value.toLowerCase();
+        document.querySelectorAll('#filter-options-list .filter-option').forEach(function (opt) {
+            opt.classList.toggle('hidden', !opt.textContent.toLowerCase().includes(q));
+        });
+    });
+
+    document.addEventListener('click', function (e) {
+        const opt = e.target.closest('.filter-option');
+        if (!opt) return;
+        const key = opt.dataset.filter;
+        if (document.querySelector(`#applied-filters-list .filter-row[data-filter="${key}"]`)) {
+            document.getElementById('add-filter-dropdown').classList.add('hidden');
+            return;
+        }
+        const def = filterDefs[key];
+        if (!def) return;
+        const row = document.createElement('div');
+        row.className = 'filter-row flex flex-col gap-1.5';
+        row.dataset.filter = key;
+        row.innerHTML = `<div class="flex items-center justify-between">
+            <span class="text-xs font-medium text-[#4a5565]">${def.label}</span>
+            <button class="btn-remove-filter text-red-400 hover:text-red-600 transition-colors" aria-label="Remove filter">
+                <svg class="m-icon m-circle-minus text-sm" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"/></svg>
+            </button>
+        </div>
+        <select class="filter-select focus:border-sky-400">${def.options.map(o => `<option>${o}</option>`).join('')}</select>`;
+        document.getElementById('applied-filters-list').appendChild(row);
+        document.getElementById('add-filter-dropdown').classList.add('hidden');
+    });
+
+    document.addEventListener('click', function (e) {
+        const btn = e.target.closest('.btn-remove-filter');
+        if (!btn) return;
+        btn.closest('.filter-row').remove();
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('#btn-add-filter, #add-filter-dropdown')) {
+            document.getElementById('add-filter-dropdown').classList.add('hidden');
+        }
+    });
+
+    // ── Views panel tabs (Contacts | Companies) + views search ────────
+    (function () {
+        const tabs = [
+            { btn: document.getElementById('views-tab-contacts'),  list: document.getElementById('views-list-contacts') },
+            { btn: document.getElementById('views-tab-companies'), list: document.getElementById('views-list-companies') },
+        ];
+        const ACTIVE = ['text-[#2c5cc5]', 'border-[#2c5cc5]'];
+        const IDLE = ['text-[#4a5565]', 'border-transparent', 'hover:text-[#2c5cc5]'];
+
+        tabs.forEach(function (tab) {
+            tab.btn.addEventListener('click', function () {
+                tabs.forEach(function (other) {
+                    const on = other === tab;
+                    other.btn.setAttribute('aria-selected', String(on));
+                    other.btn.classList.remove.apply(other.btn.classList, on ? IDLE : ACTIVE);
+                    other.btn.classList.add.apply(other.btn.classList, on ? ACTIVE : IDLE);
+                    other.list.classList.toggle('hidden', !on);
+                    other.list.classList.toggle('flex', on);
+                });
+                const search = document.getElementById('views-search');
+                search.value = '';
+                search.dispatchEvent(new Event('input'));
+            });
+        });
+
+        document.getElementById('views-search').addEventListener('input', function () {
+            const q = this.value.toLowerCase().trim();
+            document.querySelectorAll('[role="tabpanel"]:not(.hidden) .views-row').forEach(function (r) {
+                r.classList.toggle('hidden', !!q && !r.textContent.toLowerCase().includes(q));
+            });
+        });
+    })();
+
+    // ── Select all + bulk actions ─────────────────────────────────────
+    document.addEventListener('DOMContentLoaded', function () {
+        const selectAll = document.getElementById('select-all-contacts');
+        const contactTable = document.querySelector('[aria-label="Contact list"]');
+        const bulkActions = document.getElementById('bulk-actions');
+        const searchWrap = document.getElementById('contact-search-wrap');
+
+        function updateBulkBar() {
+            const checkedCount = contactTable.querySelectorAll('.contact-checkbox:checked').length;
+            if (checkedCount > 0) {
+                bulkActions.classList.remove('hidden');
+                bulkActions.classList.add('flex');
+                searchWrap.classList.add('!hidden');
+            } else {
+                bulkActions.classList.add('hidden');
+                bulkActions.classList.remove('flex');
+                searchWrap.classList.remove('!hidden');
+            }
+        }
+
+        function setRowHighlight(cb) {
+            const row = cb.closest('tr');
+            if (row) row.classList.toggle('bg-[#fdf6e3]', cb.checked);
+        }
+
+        selectAll.addEventListener('change', function () {
+            contactTable.querySelectorAll('.contact-checkbox').forEach(function (cb) {
+                cb.checked = selectAll.checked;
+                setRowHighlight(cb);
+            });
+            updateBulkBar();
+        });
+
+        contactTable.addEventListener('change', function (e) {
+            if (!e.target.classList.contains('contact-checkbox')) return;
+            setRowHighlight(e.target);
+            const checkboxes = contactTable.querySelectorAll('.contact-checkbox');
+            const checkedCount = contactTable.querySelectorAll('.contact-checkbox:checked').length;
+            selectAll.checked = checkedCount === checkboxes.length;
+            selectAll.indeterminate = checkedCount > 0 && checkedCount < checkboxes.length;
+            updateBulkBar();
+        });
+    });
+})();
+
+// ── Top-nav language dropdown selection (+ RTL toggle) ──────────────────
+;(function () {
+    var dropdown = document.getElementById('topnav-language-dropdown')
+    var trigger  = document.getElementById('topnav-language-trigger')
+    var flag     = document.getElementById('topnav-language-flag')
+    if (!dropdown || !trigger || !flag) return
+
+    function selectLanguage(btn, closeMenu) {
+        // Update trigger flag + accessible name
+        flag.src = btn.getAttribute('data-flag')
+        trigger.setAttribute('aria-label', 'Change language (currently ' + btn.getAttribute('data-short') + ')')
+        // Reset all options
+        dropdown.querySelectorAll('.topnav-lang-option').forEach(function (opt) {
+            opt.classList.remove('bg-[#f1f5f9]')
+            opt.classList.add('hover:bg-[#f1f5f9]')
+            var chk = opt.querySelector('.m-check')
+            if (chk) chk.remove()
+        })
+        // Mark selected
+        btn.classList.add('bg-[#f1f5f9]')
+        btn.classList.remove('hover:bg-[#f1f5f9]')
+        btn.insertAdjacentHTML('beforeend', '<svg class="m-icon m-check text-[10px] text-[#3da6d7]" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>')
+        // Flip document direction
+        document.documentElement.setAttribute('dir', btn.getAttribute('data-dir'))
+        localStorage.setItem('faveo-lang', btn.getAttribute('data-lang'))
+        if (closeMenu) {
+            dropdown.classList.add('hidden')
+            trigger.classList.remove('dropdown-open')
+            trigger.setAttribute('aria-expanded', 'false')
+        }
+    }
+
+    dropdown.addEventListener('click', function (e) {
+        var btn = e.target.closest('.topnav-lang-option')
+        if (!btn) return
+        selectLanguage(btn, true)
+    })
+
+    // Restore a previously chosen language (defaults to the English - United
+    // States option already marked selected in the markup, so do nothing if
+    // there's no saved preference or it matches the default).
+    var savedLang = localStorage.getItem('faveo-lang')
+    if (savedLang && savedLang !== 'en-US') {
+        var savedBtn = dropdown.querySelector('.topnav-lang-option[data-lang="' + savedLang + '"]')
+        if (savedBtn) selectLanguage(savedBtn, false)
+    }
+})()
+
+</script>
 </body>
 </html>

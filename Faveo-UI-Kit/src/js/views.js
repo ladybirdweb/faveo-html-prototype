@@ -119,35 +119,26 @@ export function renderViews(navKey) {
   const data = navData[navKey]
   if (!data) return
 
+  // soft-gray section cards (same recipe as the dashboards side panel);
+  // active item = brand blue + trailing check (shown via .view-item.active css)
   let html = ''
-  data.sections.forEach((section, idx) => {
-    if (idx > 0) html += '<div class="h-px bg-gray-200 my-1"></div>'
-    html += `<button class="view-section-header">
-      <span>${section.title}</span>
-      ${matIcon('fa-chevron-down', 'text-zinc-500 text-[8px] transition-transform duration-200')}
-    </button>`
-    if (section.items.length > 0) {
-      html += '<div class="section-items flex flex-col gap-px hidden">'
-      section.items.forEach(item => {
-        html += `<a href="#" class="view-item">
-          <span class="size-6 flex items-center justify-center flex-shrink-0">
-            ${matIcon(item.icon, 'text-xs text-gray-600')}
-          </span>
-          <span class="flex-1 text-[13px] text-gray-600">${item.label}</span>
-        </a>`
-      })
-      html += '</div>'
-    }
+  data.sections.forEach(section => {
+    html += `<section class="shrink-0 rounded-[12px] bg-[#f5f7f9] p-4">
+      <h2 class="m-0 pb-3 text-[13px] font-normal text-(--c-text-1)">${section.title}</h2>
+      <div class="section-items flex flex-col">`
+    section.items.forEach(item => {
+      html += `<a href="#" class="view-item">
+        <span class="w-4 flex items-center justify-center flex-shrink-0">
+          ${matIcon(item.icon, 'text-[13px]')}
+        </span>
+        <span class="flex-1 min-w-0 truncate">${item.label}</span>
+        ${matIcon('fa-check', 'view-item-check text-sm')}
+      </a>`
+    })
+    html += '</div></section>'
   })
 
   $('#views-content').html(html)
-
-  $('#views-content').off('click.accordion').on('click.accordion', '.view-section-header', function () {
-    const $items = $(this).next('.section-items')
-    const $icon  = $(this).find('.m-chevron-down')
-    $items.toggleClass('hidden')
-    $icon.toggleClass('rotate-180')
-  })
 }
 
 // Views search
@@ -168,7 +159,10 @@ $(document).on('click', '.view-item', function () {
   $(this).addClass('active')
 })
 
-// Filter icon → toggle views panel
+// Toolbar toggle → views panel (angles icon flips with open state)
 $('#btn-toggle-views').on('click', function () {
-  $('#views-panel').toggleClass('hidden')
+  var hidden = $('#views-panel').toggleClass('hidden').hasClass('hidden')
+  $(this).attr('aria-expanded', String(!hidden))
+  $(this).find('.m-angles-right').toggleClass('hidden', !hidden)
+  $(this).find('.m-angles-left').toggleClass('hidden', hidden)
 })

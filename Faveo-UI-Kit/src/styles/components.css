@@ -1,25 +1,17 @@
 /* ── Shared UI components ── */
 
 @layer components {
-  /* Views panel section header */
-  .view-section-header {
-    @apply flex items-center justify-between p-2.5 rounded-[10px]
-           text-sm font-semibold cursor-pointer w-full border-none
-           outline-none transition-colors duration-150;
-    background: var(--c-surface);
+  /* Views panel item (dashboards-panel card recipe: quiet row, brand-blue
+     active with trailing check — colors ride tokens, auto dark) */
+  .view-item {
+    @apply flex items-center gap-2 rounded-[6px] px-3 py-2.5
+           text-[13px] font-normal no-underline w-full transition-colors duration-150;
     color: var(--c-text-1);
   }
-  .view-section-header:hover { background: var(--c-hover); }
-
-  /* Views panel item */
-  .view-item {
-    @apply flex items-center gap-2.5 h-9 px-2.5 rounded-[10px]
-           text-[13px] font-normal no-underline w-full transition-colors duration-150;
-    background: var(--c-surface);
-    color: var(--c-text-3);
-  }
-  .view-item:hover  { background: var(--c-hover); }
-  .view-item.active { background: var(--c-active); color: var(--c-text-2); }
+  .view-item:hover  { color: var(--c-brand); }
+  .view-item.active { color: var(--c-brand); font-weight: 500; background: #e4efff; }
+  .view-item .view-item-check { display: none; color: var(--c-brand); }
+  .view-item.active .view-item-check { display: inline-block; }
 
   /* Filter panel selects */
   .filter-select {
@@ -117,11 +109,16 @@
     background: var(--c-surface);
     border: 1px solid var(--c-border);
   }
-  /* KPI stat tile — flat label-over-number (no icon square) */
+  /* KPI stat tile — neutral icon square + stacked label/count (2026-08-04) */
   .fv-stat-tile {
-    @apply flex flex-col items-start justify-center gap-1 rounded-[6px] px-4 h-20;
+    @apply flex items-center gap-3.5 rounded-[8px] px-4 h-[88px];
     background: var(--c-surface);
     border: 1px solid var(--c-border);
+    box-shadow: 0 2px 4px rgba(18, 52, 77, 0.06);
+  }
+  /* icon square inside a stat tile (bg utility stays in markup for the dark remap) */
+  .fv-stat-ico {
+    @apply flex h-12 w-12 shrink-0 items-center justify-center rounded-[8px];
   }
   /* card header row (title/subtitle + trailing action; no icon tile) */
   .fv-card-head {

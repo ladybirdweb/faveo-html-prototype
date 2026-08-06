@@ -25,6 +25,8 @@ html[data-theme="dark"] .topnav-adaptive  { color: var(--c-text-2); }
 /* Main layout containers */
 [data-theme="dark"] #main-content { border-color: var(--c-border); }
 [data-theme="dark"] #views-panel  { background: var(--c-surface); border-color: var(--c-border); }
+[data-theme="dark"] .view-item.active { background: #1e3a5f; }
+[data-theme="dark"] .bg-\[\#e4efff\] { background-color: #1e3a5f; }
 [data-theme="dark"] #filter-aside { background: var(--c-surface); border-color: var(--c-border); }
 
 /* Dropdowns & overlays */

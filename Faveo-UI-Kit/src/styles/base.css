@@ -13,5 +13,9 @@ button:focus-visible, a:focus-visible {
 
 /* Material Icons inline SVGs (page-wide FA replacement) — Tailwind's preflight
    sets svg to display:block; these replaced inline <i> font icons, so restore
-   inline flow + FA's baseline alignment */
-.m-icon { display: inline-block; vertical-align: -0.125em; }
+   inline flow + FA's baseline alignment. MUST be layered: unlayered CSS beats
+   Tailwind v4's layered utilities, which would break `hidden` on icons
+   (JS-toggled icon swaps like the views-panel angles). */
+@layer base {
+  .m-icon { display: inline-block; vertical-align: -0.125em; }
+}
